@@ -1,0 +1,28 @@
+name: Generate AI editorial outlines
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate review-only drafts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/generate_drafts.py
+      - name: Commit public outlines if generated
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -f public/data/drafts.json ]; then
+            git add public/data/drafts.json
+            if ! git diff --staged --quiet; then
+              git commit -m "data: update AI editorial review outlines"
+              git push
+            fi
+          fi
