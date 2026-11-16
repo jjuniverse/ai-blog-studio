@@ -1,33 +1,7 @@
 {
-  "generatedAt": "2026-11-16T06:50:38.997144+00:00",
-  "disclaimer": "Headline-only clusters and heuristic editorial priorities; not facts or measured revenue. Human verification required.",
+  "generatedAt": "2026-11-16T08:12:37.073Z",
+  "disclaimer": "Editorial-only heuristics; no measured traffic, revenue or factual verification. Promotional topics excluded from recommendations.",
   "candidates": [
-    {
-      "id": "5a507c9528c4a3",
-      "title": "Gamsgo Promo Code \"MYPSR\" – How to Find Affordable Digital Subscription Plans",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Gamsgo Promo Code \"MYPSR\" – How to Find Affordable Digital Subscription Plans - Steady",
-          "publisher": "Steady",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWUxlbVdqVGpRNU84R0dZaXNJM0tTTmtPQXhSRkl0RnVKd0RtNDdpaHhGUGhmbUJuenh4LWVMTHNmZGk2Y3ZhU2ZmNmZJdE81dV9QOU9iMlgzNjdmcUVIeVBvd0RQcE0zVlZnckt5d3FKSnFNNFdSUjM0dmZiTzI2Qm5ZMldyZmFjOGh3YXJQcTljdHBZM2tSenluMGhTYlFrZUd3Ng?oc=5",
-          "publishedAt": "2026-11-13T15:24:07+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 62,
-        "commercialFitHeuristic": 70,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
     {
       "id": "cf7a59d3a6de3a",
       "title": "Adobe, Google Expand AI Partnership Across Creative and Productivity Tools",
@@ -48,641 +22,22 @@
         }
       ],
       "scores": {
-        "editorialPriority": 59,
-        "commercialFitHeuristic": 70,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 55,
+        "editorialPriority": 34,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 45,
         "independentPublisherCount": 2,
         "riskFlag": false,
         "measuredTraffic": null,
         "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
       },
-      "status": "research_required"
-    },
-    {
-      "id": "3e4ad71da92091",
-      "title": "앤스로픽, 클로드에 스프레드시트 기능 탑재—'클로드 시트'가 바꾸는 업무 생산성의 출발점",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "앤스로픽, 클로드에 스프레드시트 기능 탑재—'클로드 시트'가 바꾸는 업무 생산성의 출발점 - 유스연합",
-          "publisher": "유스연합",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBrQTNxb0NFM0E5ZmVXZ2VGMFpHV2c5WE9aMXU0VF84YUtYQVgxODZva19uYnlmYzI5STlRYTNIU2Z3OHJtcXc5WnBmTHVIdktQZGxF?oc=5",
-          "publishedAt": "2026-11-13T17:07:38+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 57,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "13085e4d27aef7",
-      "title": "Tech Talk | Multiplayer AI: Moving From Individual Productivity to Team Results",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Tech Talk | Multiplayer AI: Moving From Individual Productivity to Team Results - ADTmag",
-          "publisher": "ADTmag",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMVNaSmgxWWF1ZXNraF92SlpCRWxDb0hoVkU1M3VGemp4Rl9lcW41alEycGF3emtROEE2OXV2SF9GQlo0MDYyYUN6c3VqUU5ocmN2QkQwSUZEMy16Smx6SUJnc0ZUSGtQVm93RnJsLWhPekMzN3M0LXNNOTQyV2x0VDBfbHplM0plVWcxZ0Jnd0dIUXMyb0FPdE5qYXJPZVBPSmg1MjlvLW5xYXRxeU4xeGlrRW55ckVfN2swSnV4Q3RxcG96?oc=5",
-          "publishedAt": "2026-11-15T17:17:06+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 56,
-        "commercialFitHeuristic": 70,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "3130f2b6a23639",
-      "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity - KoreaTechDesk",
-          "publisher": "KoreaTechDesk",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1VY05RaW10Ui1WSkRVR2pqV3p5b0JvV3pVb0tSckJJMDk2WU1FMDQyU3dKcU0zeEttWUIwVW5LZzMxVndnS3NjWFozNVI3X0dKQVVYd3MwQS1PbWwzNTZ2ZG5ERDl3ZzFOTzZ5b294LUJISzFNcjJ6Sg?oc=5",
-          "publishedAt": "2026-11-13T23:35:29+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 56,
-        "commercialFitHeuristic": 70,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "9b8d04dce9297a",
-      "title": "AI’s big buildout has yet to deliver a productivity boom (AIQ:NASDAQ)",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "AI’s big buildout has yet to deliver a productivity boom (AIQ:NASDAQ) - Seeking Alpha",
-          "publisher": "Seeking Alpha",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeVh4ODRFeGFMbjdpX1M4djBwRU95VDdBeDh5eU5ud2RiT1ZhV0ZKcWk0c09BZ2lna1RxODhObC04X1R1QlRDYWY3MlhIcWdwRVU1QWlGbzJqRTFtWmNrczJ2YTBuNmgzV2NYRndWQ2tjNmdTZWx2dUk5cFZ0X09qZm9US0wwZ2JuT1FBUEt3N1dwZDdnWVh5Uw?oc=5",
-          "publishedAt": "2026-11-13T10:20:16+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 56,
-        "commercialFitHeuristic": 70,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "6e0122dba94488",
-      "title": "Building confidence in AI can help Europe’s SMEs boost productivity and drive growth",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Building confidence in AI can help Europe’s SMEs boost productivity and drive growth - The Parliament Magazine",
-          "publisher": "The Parliament Magazine",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQM2RpaDVQUy00QkoxcUFiaEtBUGFleTNObTc1YkdINlUyTXVGTFIyVUhPMW1yS2djYWxGMkQyZG0xX1pfMENOV2VzVXBRNE9kNVhYTXNVYUtNc0ZESjZUMGEzR1pRVTZvQ0hmZDV5NDFBcXpLSmloTWpEZVJwN2xqbnY5RDh0UFVRUGNlMjBtM1E0ci1qSzdWbGRmc1lGLUNQNjdSbUdObGJjMTBINEpXWDNOTlhHRjRha2hUOG1oYnMwd3UxcDhNZDhOZ0sxejgtUXl3?oc=5",
-          "publishedAt": "2026-11-13T07:29:51+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 56,
-        "commercialFitHeuristic": 70,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "06c4a8f059c67b",
-      "title": "AI-NATIVE SOFTWARE COMPANIES LEAD ON GROWTH, BUT STRONGER ECONOMICS HAVE NOT YET FOLLOWED",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "AI-NATIVE SOFTWARE COMPANIES LEAD ON GROWTH, BUT STRONGER ECONOMICS HAVE NOT YET FOLLOWED - PR Newswire",
-          "publisher": "PR Newswire",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNLUVJb2tSYkp2enVFWUZPdE5GQTd4dEpUV01Pc0VONnBzbTVGOVgtMndkeE03VWdTTjlqWXJjNUJVYmhXTVdhOUNneS14UGFHV2hlOHVZb1ZSY3d0MVh5WnlpMW80VHhvcTBYdEs0SWc1NHQ0alpPMjRhU3k5X1ZSSzFpMU5YSXBoelB0LVY5Tk9ad2p4T1ZzOVFLa0lRSVJwSkxmV0FKRXJOQmtwclZfRFhKa1ItWU5xTWN2UEhnM0pqc29uLUxxaDhESVI4d01LTTJQRU9VeWNpZ2ps?oc=5",
-          "publishedAt": "2026-11-13T20:04:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 56,
-        "commercialFitHeuristic": 70,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "e74266ab86778c",
-      "title": "AI's anti-change agents",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "AI's anti-change agents - Axios",
-          "publisher": "Axios",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ldUJGUWpQTWRUUU9MMnJ1Ty1obmhRTUpzZkwyZWZrUEp2Vkg5VkNIY1ZIc2NCZVp4YTd5Q1VBUXlVeXhDdS1TRnNxT1RjVkRYS2R4TDRVUkNYUDgwNGFDbkNVN3hIZkk3OTROVldfd2cwcE5xM0E?oc=5",
-          "publishedAt": "2026-11-14T11:30:14+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "c49b25a857f189",
-      "title": "Hood College Partners With Workforce Group for AI Analytics Training",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Hood College Partners With Workforce Group for AI Analytics Training - GovTech",
-          "publisher": "GovTech",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTjJrWGJ4V3ZqeGJrZDB5MkpNZW9leTl1NFV6VGNWeFBWRUNlYXEwT3FVYk1zQVdqVHdHUkU4TEw5bGg3eUhCOU54Mzk5SV9LNDBVVm9IWFpRZDNpbFpKdjdiYnNqaEFlZlNqMHh5VEF1M3NRUzhPRDE1bElhVVNqQnZzbHlqejI3LWVRRDZPS3M0Tl9GVVk2N1ROSU5YUUpORjl3ejFUMW5Sa2d3Z09MNXJn?oc=5",
-          "publishedAt": "2026-11-13T21:29:44+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "8d81f74925e127",
-      "title": "Anthropic's Lofty Valuation Points to Rising Enterprise AI Bills",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Anthropic's Lofty Valuation Points to Rising Enterprise AI Bills - CX Today",
-          "publisher": "CX Today",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNcGhqT2tSdXBvVGxrd050Z0tOWnplOWE4VkJXWTlVWWZ5YldtbGdLSUVNNWdYVUtYLVdpdFFZVmxPMGY4Y05PSE52Y2NsaTRoTy01RHZRdWJudGtuS0dMWUpuNHhYek1sT3hFemdPVUJ2WDNDWkhYbmQyVDB1OGtjVGRONDl2RmViREQ4?oc=5",
-          "publishedAt": "2026-11-13T09:01:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "c247c6bb0c6608",
-      "title": "Nebuly raises $21 million to measure the value of AI agents",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Nebuly raises $21 million to measure the value of AI agents - news.lavx.hu",
-          "publisher": "news.lavx.hu",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPU1JKMnFuY1dLZ2Jrb3Y4U0NkMEthUjBPNmhPR1dzZ2RXOXNpeElaR2tXaG9FRFZCRWp1V1kxYWoxT3R0R3RERlgzemtFeUxRS3dUbVFkYnlRSU1URjhVQlpINndWZDlQTk1FMmU3MkhoNjJvMFJiT1BzSFlNU3MyS0RGR2ZNd2d3TmZEOHJES18?oc=5",
-          "publishedAt": "2026-11-15T08:56:35+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "e731d1f8e4e9e6",
-      "title": "마이크로소프트, 기술적 지표가 10% 넘는 추가 하락을 경고함에 따라 사상 최고치 대비 8% 후퇴",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "마이크로소프트, 기술적 지표가 10% 넘는 추가 하락을 경고함에 따라 사상 최고치 대비 8% 후퇴 - TradingKey",
-          "publisher": "TradingKey",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTXdwUVBjSjB2azVQclNTZEJsTWtET1l5MV9qenhBbmR2Sms5SVA5TElQeFpaTDVCeWhIbHByVmF1MDFkazVkRU92ZlUtQzVOMjRzWTBEazUzcTNFazVnYVkzRmlMSV9jZTN0b0hobGhJQWg5ekx6ZkxYTnNtZmxnc05DN3JWSGk5NnpESXFFd2FIelB6bjV1RWNWb3NBSTJsU2tzY3FtbjBwVU9PVWRaRkZTTUViUjFnbEN4b1ZWdEg0Nl83czQ5VEdsTQ?oc=5",
-          "publishedAt": "2026-11-15T21:10:15+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "6dec3a6257e5b7",
-      "title": "AI 그림 사과했던 펄어비스...이젠 개발 전체에 AI",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "AI 그림 사과했던 펄어비스...이젠 개발 전체에 AI - 게임와이",
-          "publisher": "게임와이",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HM2IzR2pzRHlsbEt3NHhEcFk3WkNMbURZSWdwZzlxeS1UT0d1ckd5enBNenVnRzFzRDJXNXZMUzNxVlptTGE1RlRHUEFoZl9JeWduZ0NxN0hGMldLQlhnSUs3NjdmbTJQbGfSAWpBVV95cUxORzNiM0dqc0R5bGxLdzR4RHBZN1pDTG1EWUlncGc5cXktVE9HdXJHeXpwTXp1Z0cxc0QyVzV2TFMzcVZabUxhNUZUR1BBaGZfSXlnbmdDcTdIRjJXS0JYZ0lLNzY3Zm0yUGxn?oc=5",
-          "publishedAt": "2026-11-14T04:29:34+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "23a1ca526c3717",
-      "title": "IBM과 마이크로소프트, 6,000개 이상의 사전 구축된 AI 에이전트 및 자산을 포함한 Imagine Enterprise 출시",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "IBM과 마이크로소프트, 6,000개 이상의 사전 구축된 AI 에이전트 및 자산을 포함한 Imagine Enterprise 출시 - StorageReview.com",
-          "publisher": "StorageReview.com",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMVp5NElORnllNUZRMUxfZm5pVVBXVjRHWUtFb3NONjMydC1YZ0x4VjdnTW55QmxYd2Y0SUN6dk1maHlqU0pWamZTUURlVHo2cWZZWVlrOFNZSEYyRmQ1T2d3cl94NEFld2ptMFBXVTBtUlhVcFVnN1hfQzlPWFFVRTVuSFpYak5FTndBQnk2di1rZU11NW5Z0gGXAUFVX3lxTFAxWnk0SU5GeWU1RlExTF9mbmlVUFdWNEdZS0Vvc042MzJ0LVhnTHhWN2dNbnlCbFh3ZjRJQ3p2TWZoeWpTSlZqZlNRRGVUejZxZllZWWs4U1lIRjJGZDVPZ3dyX3g0QWV3am0wUFdVMG1SWFVwVWc3WF9DOU9YUVVFNW5IWlhqTkVOd0FCeTZ2LWtlTXU1blk?oc=5",
-          "publishedAt": "2026-11-13T19:18:25+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "d7e70d40def110",
-      "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다 - 뉴스N연합",
-          "publisher": "뉴스N연합",
-          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1NOTl1VUZZTW5IV1JpQUlxaGxEc0x4ckNjRVQ3elpiLVVaQnZGbGx2d09LSHZpOVBidXlBa0hqQ1NUck85ZlFXY0hR?oc=5",
-          "publishedAt": "2026-11-13T19:44:05+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "edf37736215e63",
-      "title": "Sino Biological, AI 설계 단백질 결합체 검증 서비스 4RISE 출시",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "Sino Biological, AI 설계 단백질 결합체 검증 서비스 4RISE 출시 - Unite.AI",
-          "publisher": "Unite.AI",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOU3U2UUJWbWhZSHFUQmV3WG5CdUxlUV95M3lUdzdGcklIZHp2TEdXcnpDVGNzRVozVUVMdFYxWW1QU3lXQXQ1Rk5waTBsTHVYbmpuWG1CRGVPM3dENUlXaE5kUE1iZU5GOUNHMHFYRDJZU2xzY3hMUm9OT1B0dU4yZ0hoSVRTNjhVb2lHS3VLZGlvV3U0dHlEWFAzQQ?oc=5",
-          "publishedAt": "2026-11-13T15:28:03+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "9bcbb9767d5b88",
-      "title": "베트남에서 새로운 젠북 14 출시: 얇고 가벼우며 배터리 수명이 길다.",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "베트남에서 새로운 젠북 14 출시: 얇고 가벼우며 배터리 수명이 길다. - Vietnam.vn",
-          "publisher": "Vietnam.vn",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQeGVLU3QxQlZxMldQWVhzOXljUERVY01NcHcxcGxIWkxXaEFyYndrZmg2U3N3cWR6VzBXd090QXNPdTkzVi1ySk5HTFN5RnRZb2lTc1dGNUV4cHpRNmpCc2JtQlJncjFTeUxrcEhMSlVWdHgxWjRjY0FCcW9sc3dhN3FkeFZ2UlFBM1BGU3RhU0Y?oc=5",
-          "publishedAt": "2026-11-15T08:36:38+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "303afa6c2fced3",
-      "title": "OpenAI, 에이전트 지원 구매를 위한 ChatGPT Wallet 출시",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "OpenAI, 에이전트 지원 구매를 위한 ChatGPT Wallet 출시 - Unite.AI",
-          "publisher": "Unite.AI",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcTU1RDJwZl9UOVpob2V1Z3k2UTdGNHdvMkt1YTcwTXRUZExhZEFFaEJQVUZGQjlLU28xajAxckx6OVY0a1F1YmpTYnVlSUxZMjJpcGFpclFabVY0WHg1SUYyOUV0dC12aklhUUo5d1o0WG9SUE1hMnFhTUZpRzlnQy1GMG15RldLN0tpaA?oc=5",
-          "publishedAt": "2026-11-13T15:28:07+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "a6c1f45934da35",
-      "title": "BESTie’s ‘Love Options’ climbs to No. 5 on Melon after viral comeback",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "BESTie’s ‘Love Options’ climbs to No. 5 on Melon after viral comeback - Korea JoongAng Daily",
-          "publisher": "Korea JoongAng Daily",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQnlvNENRSmx2WF9JVFZvdnVRX25TaUpzMldPMEExZ2VRa3dJRW1yTTlJT2Q1Mnd1SjBQV25Yam9OVEtBYzVkcmZnckZTdXFwWUFOTjNrTjZENTA2dGJsRFpTUmpBWHRIbnJQdDl3eHhUQ3EwU2JCV3BWWWVsbmRUeTVJblN6NlZfSlo5REgwb1ZLci00VnNtZWc5VXh6Skg1TWYtdnpDZ1FyTlpFSjRjT1dtblhGQk5ZRWRYUG1VWjk?oc=5",
-          "publishedAt": "2026-11-16T03:38:55+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "61f380178aaa90",
-      "title": "Netflix's KPop Demon Hunters is going on a world tour — 150 cities, one epic live show",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Netflix's KPop Demon Hunters is going on a world tour — 150 cities, one epic live show - Latin Times",
-          "publisher": "Latin Times",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOVpQY0hON3hzVzFLWmx5WmxUajNLODdVbk53MnQ5TlgzVXFZcF9DUEdCWDN3YW9fbFhuQlFUbjd4R2JkVk1lNlFRVUEtTTdEN1paaG9lSExWd2lHeXR6NHluVE1KY2lnS3dhUXZTOExwam9oYVNGd1NsdjZRWl85UVl0YnFIT0M4M0thbXZXSkZhY1ZPX18wNmJoZFBhVE1uYk9FOGc1dnZveHNS?oc=5",
-          "publishedAt": "2026-11-15T02:49:47+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "698d2d18ab40b1",
-      "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA - Inquirer.net",
-          "publisher": "Inquirer.net",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmg5UnFIaHJKUlF6d21MS3RXV2thOTRXSW5vUjloZEI5bU5aOVd2TjdnM1lSTkR3cVVqcWlscHZ3QUJiSzBBSjF4Z1dmcnVOUnNLRThvc0plV1FPdE9TQnR3aXotb01OZXUwOF9vWC1TdjRvNHhpdl9seVpJeUx3b1JFNWdUVUpjbHhodVFqYkhBc0RTQkl6R0dMVdIBoAFBVV95cUxOSjlhMWRTckUyQnpaY1JtaGdSZXVCcE1lTXBqS0J4b1dHTFliZzQzbExfakl3NEl5b2FJVWFsbGFhcDZLSjk4Y3NoTXlEaEw4c3M1U3pJT1hkak02RExsY2RjQkF1a0lweUwyeVRwZkxJSlV0d2xxM0E1MFd6dkhGNDhKcTJJeXBZREt3T0hKdHU5TDFSaUlpcUFfNlV4NTdp?oc=5",
-          "publishedAt": "2026-11-16T04:37:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "0ae64b75f646ec",
-      "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY - Spotify",
-          "publisher": "Spotify",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbHVaOEpFZzVuOXZOaWR1cFV2elBpN0JPLU1rckFOZlRvTDg0dTVXRlJ5TzBySmdlRzZRVmEwYVNPbkRUbHFvM29ZR3A1anpGSDlIYUJBOGtBSkJVaWhMTmU4LS1OcWFTR2cxR0w2X2NqbFRGQ2RhV09ER2ZJYmMyQ2R0RjM?oc=5",
-          "publishedAt": "2026-11-16T01:29:33+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "2a81d04ccae88a",
-      "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify - 스타뉴스",
-          "publisher": "스타뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5pbE05SFNQLUc1REdiazBuN09wX3Nrenlrd21DT3JVR1h1d0xCM2t3UDFWVGd5VlF3TnBYaFd1TjdjUDVRQVU0bTBDU21NaEtjVnE3bjM0dktYT0RIX2xraWw0c2JXZDQxZWl5dmplNG9FQVNXS0IzNg?oc=5",
-          "publishedAt": "2026-11-16T00:41:59+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "2120a5a1bc2bcf",
-      "title": "KPop Demon Hunters Officially Returns Next Year, Netflix Reveals Details & Gives Statement",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "KPop Demon Hunters Officially Returns Next Year, Netflix Reveals Details & Gives Statement - ComingSoon.net",
-          "publisher": "ComingSoon.net",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOUWl4LTJaNVFNZTdicnh4ZVhQM0RzOFZ4VElqc1pFSVV4YU1zdnRIb1dWdzRQVEQ0akMyYXNrZ0hXTU1kejRWWFpzWFEzRnluTE13dTdfaUFVRmZrVFdkZkd3VTA0dlhpY3NRaXc4Tk5DS0p2QklFdEdZM2xZY0hIYXpTUVlsTXJ3VnMyaHBB0gGTAUFVX3lxTFA5Z014VG40OFpmQVNuaW9HS1hSamdjMkFWTTJBdFhvby1WTEhsdDc0Ym80S3ZLeWlJY01sRGlMUTBtcjMwa0oxM1g5RFRqTWJYb1d6Qkl6XzNZN1NVVldrdk5KdjdzZUdKYkhULV8wQlZZQmlGanpCVFRrZE1UQzNRZ3V2WnBVLW1zeG0tQ21MX3Qwcw?oc=5",
-          "publishedAt": "2026-11-13T17:35:18+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "4625917e36512c",
-      "title": "CL sets November 20 comeback date with first teaser for new single 'ICONIC'",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "CL sets November 20 comeback date with first teaser for new single 'ICONIC' - allkpop",
-          "publisher": "allkpop",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUmlhV0xLaWpwUEFLQ3VtSkZWd0hZMHhNUUVQMnMzZ21URkl4a016MXFmbzdKS2FnVFkwMlFENG9yYW1aUGJSdy0zaHFlOGtVWDBZS2NabWtQQkxKWnVudTdaYllTdE9TeUZaYmZNeS1RR2lXSFBFeWctSlVxeFZHTWZPQ3ZxanpuRHQ4OE9qNGdPYWpnWUFmaWdmd2s1OUNqdnNDd3lERkRya0Nrd25wdA?oc=5",
-          "publishedAt": "2026-11-15T20:35:08+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
+      "status": "research_required",
+      "reasons": [
+        "복수 매체 헤드라인 확인: 원문 및 공식 발표 추가 검증 필요",
+        "도구·생산성 관련 키워드"
+      ]
     },
     {
       "id": "00f076667ac5b5",
@@ -698,17 +53,749 @@
         }
       ],
       "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
+        "editorialPriority": 36,
+        "commercialFitHeuristic": 26,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
         "measuredTraffic": null,
         "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
       },
-      "status": "research_required"
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "사용법·비교 등 정보 탐색 의도 단서"
+      ]
+    },
+    {
+      "id": "3e4ad71da92091",
+      "title": "앤스로픽, 클로드에 스프레드시트 기능 탑재—'클로드 시트'가 바꾸는 업무 생산성의 출발점",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "앤스로픽, 클로드에 스프레드시트 기능 탑재—'클로드 시트'가 바꾸는 업무 생산성의 출발점 - 유스연합",
+          "publisher": "유스연합",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBrQTNxb0NFM0E5ZmVXZ2VGMFpHV2c5WE9aMXU0VF84YUtYQVgxODZva19uYnlmYzI5STlRYTNIU2Z3OHJtcXc5WnBmTHVIdktQZGxF?oc=5",
+          "publishedAt": "2026-11-13T17:07:38+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 33,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 52,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "23a1ca526c3717",
+      "title": "IBM과 마이크로소프트, 6,000개 이상의 사전 구축된 AI 에이전트 및 자산을 포함한 Imagine Enterprise 출시",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "IBM과 마이크로소프트, 6,000개 이상의 사전 구축된 AI 에이전트 및 자산을 포함한 Imagine Enterprise 출시 - StorageReview.com",
+          "publisher": "StorageReview.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMVp5NElORnllNUZRMUxfZm5pVVBXVjRHWUtFb3NONjMydC1YZ0x4VjdnTW55QmxYd2Y0SUN6dk1maHlqU0pWamZTUURlVHo2cWZZWVlrOFNZSEYyRmQ1T2d3cl94NEFld2ptMFBXVTBtUlhVcFVnN1hfQzlPWFFVRTVuSFpYak5FTndBQnk2di1rZU11NW5Z0gGXAUFVX3lxTFAxWnk0SU5GeWU1RlExTF9mbmlVUFdWNEdZS0Vvc042MzJ0LVhnTHhWN2dNbnlCbFh3ZjRJQ3p2TWZoeWpTSlZqZlNRRGVUejZxZllZWWs4U1lIRjJGZDVPZ3dyX3g0QWV3am0wUFdVMG1SWFVwVWc3WF9DOU9YUVVFNW5IWlhqTkVOd0FCeTZ2LWtlTXU1blk?oc=5",
+          "publishedAt": "2026-11-13T19:18:25+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 30,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "사용법·비교 등 정보 탐색 의도 단서"
+      ]
+    },
+    {
+      "id": "61f380178aaa90",
+      "title": "Netflix's KPop Demon Hunters is going on a world tour — 150 cities, one epic live show",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Netflix's KPop Demon Hunters is going on a world tour — 150 cities, one epic live show - Latin Times",
+          "publisher": "Latin Times",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOVpQY0hON3hzVzFLWmx5WmxUajNLODdVbk53MnQ5TlgzVXFZcF9DUEdCWDN3YW9fbFhuQlFUbjd4R2JkVk1lNlFRVUEtTTdEN1paaG9lSExWd2lHeXR6NHluVE1KY2lnS3dhUXZTOExwam9oYVNGd1NsdjZRWl85UVl0YnFIT0M4M0thbXZXSkZhY1ZPX18wNmJoZFBhVE1uYk9FOGc1dnZveHNS?oc=5",
+          "publishedAt": "2026-11-15T02:49:47+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "2120a5a1bc2bcf",
+      "title": "KPop Demon Hunters Officially Returns Next Year, Netflix Reveals Details & Gives Statement",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "KPop Demon Hunters Officially Returns Next Year, Netflix Reveals Details & Gives Statement - ComingSoon.net",
+          "publisher": "ComingSoon.net",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOUWl4LTJaNVFNZTdicnh4ZVhQM0RzOFZ4VElqc1pFSVV4YU1zdnRIb1dWdzRQVEQ0akMyYXNrZ0hXTU1kejRWWFpzWFEzRnluTE13dTdfaUFVRmZrVFdkZkd3VTA0dlhpY3NRaXc4Tk5DS0p2QklFdEdZM2xZY0hIYXpTUVlsTXJ3VnMyaHBB0gGTAUFVX3lxTFA5Z014VG40OFpmQVNuaW9HS1hSamdjMkFWTTJBdFhvby1WTEhsdDc0Ym80S3ZLeWlJY01sRGlMUTBtcjMwa0oxM1g5RFRqTWJYb1d6Qkl6XzNZN1NVVldrdk5KdjdzZUdKYkhULV8wQlZZQmlGanpCVFRrZE1UQzNRZ3V2WnBVLW1zeG0tQ21MX3Qwcw?oc=5",
+          "publishedAt": "2026-11-13T17:35:18+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "13085e4d27aef7",
+      "title": "Tech Talk | Multiplayer AI: Moving From Individual Productivity to Team Results",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Tech Talk | Multiplayer AI: Moving From Individual Productivity to Team Results - ADTmag",
+          "publisher": "ADTmag",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMVNaSmgxWWF1ZXNraF92SlpCRWxDb0hoVkU1M3VGemp4Rl9lcW41alEycGF3emtROEE2OXV2SF9GQlo0MDYyYUN6c3VqUU5ocmN2QkQwSUZEMy16Smx6SUJnc0ZUSGtQVm93RnJsLWhPekMzN3M0LXNNOTQyV2x0VDBfbHplM0plVWcxZ0Jnd0dIUXMyb0FPdE5qYXJPZVBPSmg1MjlvLW5xYXRxeU4xeGlrRW55ckVfN2swSnV4Q3RxcG96?oc=5",
+          "publishedAt": "2026-11-15T17:17:06+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "3130f2b6a23639",
+      "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity - KoreaTechDesk",
+          "publisher": "KoreaTechDesk",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1VY05RaW10Ui1WSkRVR2pqV3p5b0JvV3pVb0tSckJJMDk2WU1FMDQyU3dKcU0zeEttWUIwVW5LZzMxVndnS3NjWFozNVI3X0dKQVVYd3MwQS1PbWwzNTZ2ZG5ERDl3ZzFOTzZ5b294LUJISzFNcjJ6Sg?oc=5",
+          "publishedAt": "2026-11-13T23:35:29+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "9b8d04dce9297a",
+      "title": "AI’s big buildout has yet to deliver a productivity boom (AIQ:NASDAQ)",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "AI’s big buildout has yet to deliver a productivity boom (AIQ:NASDAQ) - Seeking Alpha",
+          "publisher": "Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeVh4ODRFeGFMbjdpX1M4djBwRU95VDdBeDh5eU5ud2RiT1ZhV0ZKcWk0c09BZ2lna1RxODhObC04X1R1QlRDYWY3MlhIcWdwRVU1QWlGbzJqRTFtWmNrczJ2YTBuNmgzV2NYRndWQ2tjNmdTZWx2dUk5cFZ0X09qZm9US0wwZ2JuT1FBUEt3N1dwZDdnWVh5Uw?oc=5",
+          "publishedAt": "2026-11-13T10:20:16+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "6e0122dba94488",
+      "title": "Building confidence in AI can help Europe’s SMEs boost productivity and drive growth",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Building confidence in AI can help Europe’s SMEs boost productivity and drive growth - The Parliament Magazine",
+          "publisher": "The Parliament Magazine",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQM2RpaDVQUy00QkoxcUFiaEtBUGFleTNObTc1YkdINlUyTXVGTFIyVUhPMW1yS2djYWxGMkQyZG0xX1pfMENOV2VzVXBRNE9kNVhYTXNVYUtNc0ZESjZUMGEzR1pRVTZvQ0hmZDV5NDFBcXpLSmloTWpEZVJwN2xqbnY5RDh0UFVRUGNlMjBtM1E0ci1qSzdWbGRmc1lGLUNQNjdSbUdObGJjMTBINEpXWDNOTlhHRjRha2hUOG1oYnMwd3UxcDhNZDhOZ0sxejgtUXl3?oc=5",
+          "publishedAt": "2026-11-13T07:29:51+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "06c4a8f059c67b",
+      "title": "AI-NATIVE SOFTWARE COMPANIES LEAD ON GROWTH, BUT STRONGER ECONOMICS HAVE NOT YET FOLLOWED",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "AI-NATIVE SOFTWARE COMPANIES LEAD ON GROWTH, BUT STRONGER ECONOMICS HAVE NOT YET FOLLOWED - PR Newswire",
+          "publisher": "PR Newswire",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNLUVJb2tSYkp2enVFWUZPdE5GQTd4dEpUV01Pc0VONnBzbTVGOVgtMndkeE03VWdTTjlqWXJjNUJVYmhXTVdhOUNneS14UGFHV2hlOHVZb1ZSY3d0MVh5WnlpMW80VHhvcTBYdEs0SWc1NHQ0alpPMjRhU3k5X1ZSSzFpMU5YSXBoelB0LVY5Tk9ad2p4T1ZzOVFLa0lRSVJwSkxmV0FKRXJOQmtwclZfRFhKa1ItWU5xTWN2UEhnM0pqc29uLUxxaDhESVI4d01LTTJQRU9VeWNpZ2ps?oc=5",
+          "publishedAt": "2026-11-13T20:04:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "e74266ab86778c",
+      "title": "AI's anti-change agents",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "AI's anti-change agents - Axios",
+          "publisher": "Axios",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ldUJGUWpQTWRUUU9MMnJ1Ty1obmhRTUpzZkwyZWZrUEp2Vkg5VkNIY1ZIc2NCZVp4YTd5Q1VBUXlVeXhDdS1TRnNxT1RjVkRYS2R4TDRVUkNYUDgwNGFDbkNVN3hIZkk3OTROVldfd2cwcE5xM0E?oc=5",
+          "publishedAt": "2026-11-14T11:30:14+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "c49b25a857f189",
+      "title": "Hood College Partners With Workforce Group for AI Analytics Training",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Hood College Partners With Workforce Group for AI Analytics Training - GovTech",
+          "publisher": "GovTech",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTjJrWGJ4V3ZqeGJrZDB5MkpNZW9leTl1NFV6VGNWeFBWRUNlYXEwT3FVYk1zQVdqVHdHUkU4TEw5bGg3eUhCOU54Mzk5SV9LNDBVVm9IWFpRZDNpbFpKdjdiYnNqaEFlZlNqMHh5VEF1M3NRUzhPRDE1bElhVVNqQnZzbHlqejI3LWVRRDZPS3M0Tl9GVVk2N1ROSU5YUUpORjl3ejFUMW5Sa2d3Z09MNXJn?oc=5",
+          "publishedAt": "2026-11-13T21:29:44+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "8d81f74925e127",
+      "title": "Anthropic's Lofty Valuation Points to Rising Enterprise AI Bills",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Anthropic's Lofty Valuation Points to Rising Enterprise AI Bills - CX Today",
+          "publisher": "CX Today",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNcGhqT2tSdXBvVGxrd050Z0tOWnplOWE4VkJXWTlVWWZ5YldtbGdLSUVNNWdYVUtYLVdpdFFZVmxPMGY4Y05PSE52Y2NsaTRoTy01RHZRdWJudGtuS0dMWUpuNHhYek1sT3hFemdPVUJ2WDNDWkhYbmQyVDB1OGtjVGRONDl2RmViREQ4?oc=5",
+          "publishedAt": "2026-11-13T09:01:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "c247c6bb0c6608",
+      "title": "Nebuly raises $21 million to measure the value of AI agents",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Nebuly raises $21 million to measure the value of AI agents - news.lavx.hu",
+          "publisher": "news.lavx.hu",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPU1JKMnFuY1dLZ2Jrb3Y4U0NkMEthUjBPNmhPR1dzZ2RXOXNpeElaR2tXaG9FRFZCRWp1V1kxYWoxT3R0R3RERlgzemtFeUxRS3dUbVFkYnlRSU1URjhVQlpINndWZDlQTk1FMmU3MkhoNjJvMFJiT1BzSFlNU3MyS0RGR2ZNd2d3TmZEOHJES18?oc=5",
+          "publishedAt": "2026-11-15T08:56:35+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "e731d1f8e4e9e6",
+      "title": "마이크로소프트, 기술적 지표가 10% 넘는 추가 하락을 경고함에 따라 사상 최고치 대비 8% 후퇴",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "마이크로소프트, 기술적 지표가 10% 넘는 추가 하락을 경고함에 따라 사상 최고치 대비 8% 후퇴 - TradingKey",
+          "publisher": "TradingKey",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTXdwUVBjSjB2azVQclNTZEJsTWtET1l5MV9qenhBbmR2Sms5SVA5TElQeFpaTDVCeWhIbHByVmF1MDFkazVkRU92ZlUtQzVOMjRzWTBEazUzcTNFazVnYVkzRmlMSV9jZTN0b0hobGhJQWg5ekx6ZkxYTnNtZmxnc05DN3JWSGk5NnpESXFFd2FIelB6bjV1RWNWb3NBSTJsU2tzY3FtbjBwVU9PVWRaRkZTTUViUjFnbEN4b1ZWdEg0Nl83czQ5VEdsTQ?oc=5",
+          "publishedAt": "2026-11-15T21:10:15+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "6dec3a6257e5b7",
+      "title": "AI 그림 사과했던 펄어비스...이젠 개발 전체에 AI",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "AI 그림 사과했던 펄어비스...이젠 개발 전체에 AI - 게임와이",
+          "publisher": "게임와이",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HM2IzR2pzRHlsbEt3NHhEcFk3WkNMbURZSWdwZzlxeS1UT0d1ckd5enBNenVnRzFzRDJXNXZMUzNxVlptTGE1RlRHUEFoZl9JeWduZ0NxN0hGMldLQlhnSUs3NjdmbTJQbGfSAWpBVV95cUxORzNiM0dqc0R5bGxLdzR4RHBZN1pDTG1EWUlncGc5cXktVE9HdXJHeXpwTXp1Z0cxc0QyVzV2TFMzcVZabUxhNUZUR1BBaGZfSXlnbmdDcTdIRjJXS0JYZ0lLNzY3Zm0yUGxn?oc=5",
+          "publishedAt": "2026-11-14T04:29:34+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "d7e70d40def110",
+      "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다 - 뉴스N연합",
+          "publisher": "뉴스N연합",
+          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1NOTl1VUZZTW5IV1JpQUlxaGxEc0x4ckNjRVQ3elpiLVVaQnZGbGx2d09LSHZpOVBidXlBa0hqQ1NUck85ZlFXY0hR?oc=5",
+          "publishedAt": "2026-11-13T19:44:05+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "edf37736215e63",
+      "title": "Sino Biological, AI 설계 단백질 결합체 검증 서비스 4RISE 출시",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "Sino Biological, AI 설계 단백질 결합체 검증 서비스 4RISE 출시 - Unite.AI",
+          "publisher": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOU3U2UUJWbWhZSHFUQmV3WG5CdUxlUV95M3lUdzdGcklIZHp2TEdXcnpDVGNzRVozVUVMdFYxWW1QU3lXQXQ1Rk5waTBsTHVYbmpuWG1CRGVPM3dENUlXaE5kUE1iZU5GOUNHMHFYRDJZU2xzY3hMUm9OT1B0dU4yZ0hoSVRTNjhVb2lHS3VLZGlvV3U0dHlEWFAzQQ?oc=5",
+          "publishedAt": "2026-11-13T15:28:03+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "9bcbb9767d5b88",
+      "title": "베트남에서 새로운 젠북 14 출시: 얇고 가벼우며 배터리 수명이 길다.",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "베트남에서 새로운 젠북 14 출시: 얇고 가벼우며 배터리 수명이 길다. - Vietnam.vn",
+          "publisher": "Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQeGVLU3QxQlZxMldQWVhzOXljUERVY01NcHcxcGxIWkxXaEFyYndrZmg2U3N3cWR6VzBXd090QXNPdTkzVi1ySk5HTFN5RnRZb2lTc1dGNUV4cHpRNmpCc2JtQlJncjFTeUxrcEhMSlVWdHgxWjRjY0FCcW9sc3dhN3FkeFZ2UlFBM1BGU3RhU0Y?oc=5",
+          "publishedAt": "2026-11-15T08:36:38+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "303afa6c2fced3",
+      "title": "OpenAI, 에이전트 지원 구매를 위한 ChatGPT Wallet 출시",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "OpenAI, 에이전트 지원 구매를 위한 ChatGPT Wallet 출시 - Unite.AI",
+          "publisher": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcTU1RDJwZl9UOVpob2V1Z3k2UTdGNHdvMkt1YTcwTXRUZExhZEFFaEJQVUZGQjlLU28xajAxckx6OVY0a1F1YmpTYnVlSUxZMjJpcGFpclFabVY0WHg1SUYyOUV0dC12aklhUUo5d1o0WG9SUE1hMnFhTUZpRzlnQy1GMG15RldLN0tpaA?oc=5",
+          "publishedAt": "2026-11-13T15:28:07+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "a6c1f45934da35",
+      "title": "BESTie’s ‘Love Options’ climbs to No. 5 on Melon after viral comeback",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "BESTie’s ‘Love Options’ climbs to No. 5 on Melon after viral comeback - Korea JoongAng Daily",
+          "publisher": "Korea JoongAng Daily",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQnlvNENRSmx2WF9JVFZvdnVRX25TaUpzMldPMEExZ2VRa3dJRW1yTTlJT2Q1Mnd1SjBQV25Yam9OVEtBYzVkcmZnckZTdXFwWUFOTjNrTjZENTA2dGJsRFpTUmpBWHRIbnJQdDl3eHhUQ3EwU2JCV3BWWWVsbmRUeTVJblN6NlZfSlo5REgwb1ZLci00VnNtZWc5VXh6Skg1TWYtdnpDZ1FyTlpFSjRjT1dtblhGQk5ZRWRYUG1VWjk?oc=5",
+          "publishedAt": "2026-11-16T03:38:55+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "698d2d18ab40b1",
+      "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA - Inquirer.net",
+          "publisher": "Inquirer.net",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmg5UnFIaHJKUlF6d21MS3RXV2thOTRXSW5vUjloZEI5bU5aOVd2TjdnM1lSTkR3cVVqcWlscHZ3QUJiSzBBSjF4Z1dmcnVOUnNLRThvc0plV1FPdE9TQnR3aXotb01OZXUwOF9vWC1TdjRvNHhpdl9seVpJeUx3b1JFNWdUVUpjbHhodVFqYkhBc0RTQkl6R0dMVdIBoAFBVV95cUxOSjlhMWRTckUyQnpaY1JtaGdSZXVCcE1lTXBqS0J4b1dHTFliZzQzbExfakl3NEl5b2FJVWFsbGFhcDZLSjk4Y3NoTXlEaEw4c3M1U3pJT1hkak02RExsY2RjQkF1a0lweUwyeVRwZkxJSlV0d2xxM0E1MFd6dkhGNDhKcTJJeXBZREt3T0hKdHU5TDFSaUlpcUFfNlV4NTdp?oc=5",
+          "publishedAt": "2026-11-16T04:37:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "0ae64b75f646ec",
+      "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY - Spotify",
+          "publisher": "Spotify",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbHVaOEpFZzVuOXZOaWR1cFV2elBpN0JPLU1rckFOZlRvTDg0dTVXRlJ5TzBySmdlRzZRVmEwYVNPbkRUbHFvM29ZR3A1anpGSDlIYUJBOGtBSkJVaWhMTmU4LS1OcWFTR2cxR0w2X2NqbFRGQ2RhV09ER2ZJYmMyQ2R0RjM?oc=5",
+          "publishedAt": "2026-11-16T01:29:33+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "2a81d04ccae88a",
+      "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify - 스타뉴스",
+          "publisher": "스타뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5pbE05SFNQLUc1REdiazBuN09wX3Nrenlrd21DT3JVR1h1d0xCM2t3UDFWVGd5VlF3TnBYaFd1TjdjUDVRQVU0bTBDU21NaEtjVnE3bjM0dktYT0RIX2xraWw0c2JXZDQxZWl5dmplNG9FQVNXS0IzNg?oc=5",
+          "publishedAt": "2026-11-16T00:41:59+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "4625917e36512c",
+      "title": "CL sets November 20 comeback date with first teaser for new single 'ICONIC'",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "CL sets November 20 comeback date with first teaser for new single 'ICONIC' - allkpop",
+          "publisher": "allkpop",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUmlhV0xLaWpwUEFLQ3VtSkZWd0hZMHhNUUVQMnMzZ21URkl4a016MXFmbzdKS2FnVFkwMlFENG9yYW1aUGJSdy0zaHFlOGtVWDBZS2NabWtQQkxKWnVudTdaYllTdE9TeUZaYmZNeS1RR2lXSFBFeWctSlVxeFZHTWZPQ3ZxanpuRHQ4OE9qNGdPYWpnWUFmaWdmd2s1OUNqdnNDd3lERkRya0Nrd25wdA?oc=5",
+          "publishedAt": "2026-11-15T20:35:08+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
     },
     {
       "id": "e18b582584a10c",
@@ -724,17 +811,21 @@
         }
       ],
       "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
         "measuredTraffic": null,
         "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
       },
-      "status": "research_required"
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
     },
     {
       "id": "a983936b2d11e0",
@@ -750,17 +841,21 @@
         }
       ],
       "scores": {
-        "editorialPriority": 35,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
         "measuredTraffic": null,
         "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
       },
-      "status": "research_required"
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
     },
     {
       "id": "0e81db783c460d",
@@ -776,17 +871,21 @@
         }
       ],
       "scores": {
-        "editorialPriority": 35,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
         "measuredTraffic": null,
         "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
       },
-      "status": "research_required"
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
     },
     {
       "id": "96132f9dcb53d7",
@@ -802,17 +901,21 @@
         }
       ],
       "scores": {
-        "editorialPriority": 35,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
         "measuredTraffic": null,
         "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
       },
-      "status": "research_required"
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
     },
     {
       "id": "fc070f27af4812",
@@ -828,17 +931,51 @@
         }
       ],
       "scores": {
-        "editorialPriority": 35,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
         "measuredTraffic": null,
         "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": false
       },
-      "status": "research_required"
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "5a507c9528c4a3",
+      "title": "Gamsgo Promo Code \"MYPSR\" – How to Find Affordable Digital Subscription Plans",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Gamsgo Promo Code \"MYPSR\" – How to Find Affordable Digital Subscription Plans - Steady",
+          "publisher": "Steady",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWUxlbVdqVGpRNU84R0dZaXNJM0tTTmtPQXhSRkl0RnVKd0RtNDdpaHhGUGhmbUJuenh4LWVMTHNmZGk2Y3ZhU2ZmNmZJdE81dV9QOU9iMlgzNjdmcUVIeVBvd0RQcE0zVlZnckt5d3FKSnFNNFdSUjM0dmZiTzI2Qm5ZMldyZmFjOGh3YXJQcTljdHBZM2tSenluMGhTYlFrZUd3Ng?oc=5",
+          "publishedAt": "2026-11-13T15:24:07+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 0,
+        "commercialFitHeuristic": 0,
+        "shortformFitHeuristic": 52,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only",
+        "promotionFlag": true
+      },
+      "status": "excluded_promotion",
+      "reasons": [
+        "할인코드·제휴 홍보성 제목 감지: 자동 추천 제외"
+      ]
     }
   ]
 }
