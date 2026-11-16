@@ -2,11 +2,14 @@
 
 Mobile-friendly **GitHub Pages static prototype** for managing Korean and international content ideas. It ranks example AI/productivity and K-pop topics using adjustable hypothetical scores, offers an editable storyboard outline, and exports reviewer-approved JSON locally.
 
-## Status
+## Current experience (v0.5 UI)
 
-- ✅ Topic list, score weighting, editable storyboard template, manual review checkbox, JSON export.
-- ✅ RSS news ingestion, conservative grouping and heuristic evaluation. Optional AI editorial outlines can be generated server-side via manual GitHub Actions after adding an API key.\n- ⛔ DB persistence, TTS, video rendering, YouTube/Instagram uploads and platform authentication are **not implemented** in this Pages build.
-- ⚠️ All example scores are illustrative, not actual audience, revenue or trend predictions. New entries reset on refresh.
+- **Topic discovery:** real public RSS headline clusters only (no fictional sample rankings). Search, category filters, editorial status and evidence links. Scores are heuristics, **not forecast traffic or revenue**.
+- **Content studio:** view optional pre-generated AI editorial outlines, edit Naver/Tistory/shortform versions, copy text or export a plain-text file. The image section provides **three editable placement briefs**, not images; no media is generated yet.
+- **Publishing tracker:** record actual Naver/Tistory post URLs after manual publication. Existing channels: [Naver](https://blog.naver.com/todaypickkr) and [Tistory](https://blog83848.tistory.com/).
+- **Local-only edits:** manual text changes, image briefs and publication URLs are saved in this device's browser `localStorage` and can be exported as JSON. They are **not synchronized**, private by authentication, or stored in the repository.
+- **AI generation:** separately triggered in GitHub Actions through [Generate AI editorial outlines](../../actions/workflows/generate-drafts.yml); the generated outline file is committed to the **public** repo. Never include private text, credentials or account details.
+- **Not yet implemented:** integrated AI full-article generation, actual screenshot/image creation, video rendering, OAuth, automatic publishing, private cloud storage, verified facts and real advertising/sales metrics.
 
 ## Local development
 
@@ -31,7 +34,7 @@ The previously drafted v0.2 server-based prototype is intentionally not copied a
 
 The [Collect news headlines](../../actions/workflows/collect-news.yml) workflow queries public Google News RSS search feeds every 6 hours (GitHub scheduled workflows may be delayed). To populate the dashboard immediately, open **Actions → Collect news headlines → Run workflow** and select `main`. The workflow commits `public/data/news.json` only when valid headlines are collected; pushing it triggers the GitHub Pages deployment automatically.
 
-The UI reads titles, publisher names, dates and source links from that static JSON. **This does not retrieve article bodies, verify news, estimate real traffic or call an LLM.** Score 50 on RSS headlines is an explicitly uncalibrated placeholder, and published claims need manual verification. If sources fail, existing JSON is preserved; otherwise the dashboard shows example topics. News data and the website are public, so do not store secrets or private drafts here.
+The UI reads titles, publisher names, dates and source links from that static JSON. **This does not retrieve article bodies, verify news, estimate real traffic or call an LLM.** Score 50 on RSS headlines is an explicitly uncalibrated placeholder, and published claims need manual verification. If sources fail, existing JSON is preserved; otherwise the dashboard shows a data-availability message. News data and the website are public, so do not store secrets or private drafts here.
 
 ## Editorial analysis and optional AI drafts (v0.4)
 
