@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-16T04:07:51.208Z",
-  "disclaimer": "Unverified headline clusters and editorial heuristic scores; not measured revenue.",
+  "generatedAt": "2026-11-16T06:50:38.997144+00:00",
+  "disclaimer": "Headline-only clusters and heuristic editorial priorities; not facts or measured revenue. Human verification required.",
   "candidates": [
     {
-      "id": "seed-7",
+      "id": "5a507c9528c4a3",
       "title": "Gamsgo Promo Code \"MYPSR\" – How to Find Affordable Digital Subscription Plans",
       "category": "AI·생산성",
       "region": "EN",
@@ -29,7 +29,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-10",
+      "id": "cf7a59d3a6de3a",
       "title": "Adobe, Google Expand AI Partnership Across Creative and Productivity Tools",
       "category": "AI·생산성",
       "region": "EN",
@@ -61,7 +61,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-29",
+      "id": "3e4ad71da92091",
       "title": "앤스로픽, 클로드에 스프레드시트 기능 탑재—'클로드 시트'가 바꾸는 업무 생산성의 출발점",
       "category": "IT·AI",
       "region": "KO",
@@ -87,33 +87,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-30",
-      "title": "ASUS가 고급 세라믹 소재를 사용한 Zenbook 14를 공개했습니다.",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "ASUS가 고급 세라믹 소재를 사용한 Zenbook 14를 공개했습니다. - Vietnam.vn",
-          "publisher": "Vietnam.vn",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMHpjbFVBblZMbl9jTEJlcE1lZHVNd19jeVFjMF9IUE43Q0pfUVhhVTViYVFnVkhUQ0xnUXV5SnBseXNsaW44d0t4WU0wcEsyOE81LXZic0tUNWlOZzZkdnNTdWFXd0s0NW90UURYLW5kWUVkN1ZGNjdPbV9QM3d1ZWQwaWFpTm5PUWZJZEpZMmc?oc=5",
-          "publishedAt": "2026-11-13T04:16:22+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 57,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "seed-2",
+      "id": "13085e4d27aef7",
       "title": "Tech Talk | Multiplayer AI: Moving From Individual Productivity to Team Results",
       "category": "AI·생산성",
       "region": "EN",
@@ -122,7 +96,7 @@
           "title": "Tech Talk | Multiplayer AI: Moving From Individual Productivity to Team Results - ADTmag",
           "publisher": "ADTmag",
           "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMVNaSmgxWWF1ZXNraF92SlpCRWxDb0hoVkU1M3VGemp4Rl9lcW41alEycGF3emtROEE2OXV2SF9GQlo0MDYyYUN6c3VqUU5ocmN2QkQwSUZEMy16Smx6SUJnc0ZUSGtQVm93RnJsLWhPekMzN3M0LXNNOTQyV2x0VDBfbHplM0plVWcxZ0Jnd0dIUXMyb0FPdE5qYXJPZVBPSmg1MjlvLW5xYXRxeU4xeGlrRW55ckVfN2swSnV4Q3RxcG96?oc=5",
-          "publishedAt": "2026-11-14T19:16:55+00:00"
+          "publishedAt": "2026-11-15T17:17:06+00:00"
         }
       ],
       "scores": {
@@ -139,7 +113,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-3",
+      "id": "3130f2b6a23639",
       "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity",
       "category": "AI·생산성",
       "region": "EN",
@@ -165,7 +139,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-5",
+      "id": "9b8d04dce9297a",
       "title": "AI’s big buildout has yet to deliver a productivity boom (AIQ:NASDAQ)",
       "category": "AI·생산성",
       "region": "EN",
@@ -191,7 +165,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-6",
+      "id": "6e0122dba94488",
       "title": "Building confidence in AI can help Europe’s SMEs boost productivity and drive growth",
       "category": "AI·생산성",
       "region": "EN",
@@ -217,7 +191,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-9",
+      "id": "06c4a8f059c67b",
       "title": "AI-NATIVE SOFTWARE COMPANIES LEAD ON GROWTH, BUT STRONGER ECONOMICS HAVE NOT YET FOLLOWED",
       "category": "AI·생산성",
       "region": "EN",
@@ -243,7 +217,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-1",
+      "id": "e74266ab86778c",
       "title": "AI's anti-change agents",
       "category": "AI·생산성",
       "region": "EN",
@@ -269,7 +243,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-4",
+      "id": "c49b25a857f189",
       "title": "Hood College Partners With Workforce Group for AI Analytics Training",
       "category": "AI·생산성",
       "region": "EN",
@@ -295,7 +269,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-8",
+      "id": "8d81f74925e127",
       "title": "Anthropic's Lofty Valuation Points to Rising Enterprise AI Bills",
       "category": "AI·생산성",
       "region": "EN",
@@ -321,7 +295,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-11",
+      "id": "c247c6bb0c6608",
       "title": "Nebuly raises $21 million to measure the value of AI agents",
       "category": "AI·생산성",
       "region": "EN",
@@ -347,7 +321,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-24",
+      "id": "e731d1f8e4e9e6",
       "title": "마이크로소프트, 기술적 지표가 10% 넘는 추가 하락을 경고함에 따라 사상 최고치 대비 8% 후퇴",
       "category": "IT·AI",
       "region": "KO",
@@ -373,7 +347,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-25",
+      "id": "6dec3a6257e5b7",
       "title": "AI 그림 사과했던 펄어비스...이젠 개발 전체에 AI",
       "category": "IT·AI",
       "region": "KO",
@@ -399,33 +373,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-26",
-      "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다 - 뉴스N연합",
-          "publisher": "뉴스N연합",
-          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1NOTl1VUZZTW5IV1JpQUlxaGxEc0x4ckNjRVQ3elpiLVVaQnZGbGx2d09LSHZpOVBidXlBa0hqQ1NUck85ZlFXY0hR?oc=5",
-          "publishedAt": "2026-11-13T19:44:05+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 51,
-        "commercialFitHeuristic": 58,
-        "shortformFitHeuristic": 45,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "seed-27",
+      "id": "23a1ca526c3717",
       "title": "IBM과 마이크로소프트, 6,000개 이상의 사전 구축된 AI 에이전트 및 자산을 포함한 Imagine Enterprise 출시",
       "category": "IT·AI",
       "region": "KO",
@@ -451,7 +399,33 @@
       "status": "research_required"
     },
     {
-      "id": "seed-28",
+      "id": "d7e70d40def110",
+      "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다 - 뉴스N연합",
+          "publisher": "뉴스N연합",
+          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1NOTl1VUZZTW5IV1JpQUlxaGxEc0x4ckNjRVQ3elpiLVVaQnZGbGx2d09LSHZpOVBidXlBa0hqQ1NUck85ZlFXY0hR?oc=5",
+          "publishedAt": "2026-11-13T19:44:05+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 51,
+        "commercialFitHeuristic": 58,
+        "shortformFitHeuristic": 45,
+        "coverageHeuristic": 45,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "research_required"
+    },
+    {
+      "id": "edf37736215e63",
       "title": "Sino Biological, AI 설계 단백질 결합체 검증 서비스 4RISE 출시",
       "category": "IT·AI",
       "region": "KO",
@@ -477,7 +451,59 @@
       "status": "research_required"
     },
     {
-      "id": "seed-12",
+      "id": "9bcbb9767d5b88",
+      "title": "베트남에서 새로운 젠북 14 출시: 얇고 가벼우며 배터리 수명이 길다.",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "베트남에서 새로운 젠북 14 출시: 얇고 가벼우며 배터리 수명이 길다. - Vietnam.vn",
+          "publisher": "Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQeGVLU3QxQlZxMldQWVhzOXljUERVY01NcHcxcGxIWkxXaEFyYndrZmg2U3N3cWR6VzBXd090QXNPdTkzVi1ySk5HTFN5RnRZb2lTc1dGNUV4cHpRNmpCc2JtQlJncjFTeUxrcEhMSlVWdHgxWjRjY0FCcW9sc3dhN3FkeFZ2UlFBM1BGU3RhU0Y?oc=5",
+          "publishedAt": "2026-11-15T08:36:38+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 51,
+        "commercialFitHeuristic": 58,
+        "shortformFitHeuristic": 45,
+        "coverageHeuristic": 45,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "research_required"
+    },
+    {
+      "id": "303afa6c2fced3",
+      "title": "OpenAI, 에이전트 지원 구매를 위한 ChatGPT Wallet 출시",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "OpenAI, 에이전트 지원 구매를 위한 ChatGPT Wallet 출시 - Unite.AI",
+          "publisher": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcTU1RDJwZl9UOVpob2V1Z3k2UTdGNHdvMkt1YTcwTXRUZExhZEFFaEJQVUZGQjlLU28xajAxckx6OVY0a1F1YmpTYnVlSUxZMjJpcGFpclFabVY0WHg1SUYyOUV0dC12aklhUUo5d1o0WG9SUE1hMnFhTUZpRzlnQy1GMG15RldLN0tpaA?oc=5",
+          "publishedAt": "2026-11-13T15:28:07+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 51,
+        "commercialFitHeuristic": 58,
+        "shortformFitHeuristic": 45,
+        "coverageHeuristic": 45,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "research_required"
+    },
+    {
+      "id": "a6c1f45934da35",
       "title": "BESTie’s ‘Love Options’ climbs to No. 5 on Melon after viral comeback",
       "category": "K-pop",
       "region": "EN",
@@ -503,7 +529,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-13",
+      "id": "61f380178aaa90",
       "title": "Netflix's KPop Demon Hunters is going on a world tour — 150 cities, one epic live show",
       "category": "K-pop",
       "region": "EN",
@@ -529,7 +555,59 @@
       "status": "research_required"
     },
     {
-      "id": "seed-16",
+      "id": "698d2d18ab40b1",
+      "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA - Inquirer.net",
+          "publisher": "Inquirer.net",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmg5UnFIaHJKUlF6d21MS3RXV2thOTRXSW5vUjloZEI5bU5aOVd2TjdnM1lSTkR3cVVqcWlscHZ3QUJiSzBBSjF4Z1dmcnVOUnNLRThvc0plV1FPdE9TQnR3aXotb01OZXUwOF9vWC1TdjRvNHhpdl9seVpJeUx3b1JFNWdUVUpjbHhodVFqYkhBc0RTQkl6R0dMVdIBoAFBVV95cUxOSjlhMWRTckUyQnpaY1JtaGdSZXVCcE1lTXBqS0J4b1dHTFliZzQzbExfakl3NEl5b2FJVWFsbGFhcDZLSjk4Y3NoTXlEaEw4c3M1U3pJT1hkak02RExsY2RjQkF1a0lweUwyeVRwZkxJSlV0d2xxM0E1MFd6dkhGNDhKcTJJeXBZREt3T0hKdHU5TDFSaUlpcUFfNlV4NTdp?oc=5",
+          "publishedAt": "2026-11-16T04:37:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 41,
+        "commercialFitHeuristic": 22,
+        "shortformFitHeuristic": 65,
+        "coverageHeuristic": 45,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "research_required"
+    },
+    {
+      "id": "0ae64b75f646ec",
+      "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY - Spotify",
+          "publisher": "Spotify",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbHVaOEpFZzVuOXZOaWR1cFV2elBpN0JPLU1rckFOZlRvTDg0dTVXRlJ5TzBySmdlRzZRVmEwYVNPbkRUbHFvM29ZR3A1anpGSDlIYUJBOGtBSkJVaWhMTmU4LS1OcWFTR2cxR0w2X2NqbFRGQ2RhV09ER2ZJYmMyQ2R0RjM?oc=5",
+          "publishedAt": "2026-11-16T01:29:33+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 41,
+        "commercialFitHeuristic": 22,
+        "shortformFitHeuristic": 65,
+        "coverageHeuristic": 45,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "research_required"
+    },
+    {
+      "id": "2a81d04ccae88a",
       "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify",
       "category": "K-pop",
       "region": "EN",
@@ -555,7 +633,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-18",
+      "id": "2120a5a1bc2bcf",
       "title": "KPop Demon Hunters Officially Returns Next Year, Netflix Reveals Details & Gives Statement",
       "category": "K-pop",
       "region": "EN",
@@ -581,7 +659,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-19",
+      "id": "4625917e36512c",
       "title": "CL sets November 20 comeback date with first teaser for new single 'ICONIC'",
       "category": "K-pop",
       "region": "EN",
@@ -607,7 +685,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-20",
+      "id": "00f076667ac5b5",
       "title": "Worlds 2026 Finals Opening Show: K/DA Comeback, True Damage & How to Watch",
       "category": "K-pop",
       "region": "EN",
@@ -633,7 +711,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-21",
+      "id": "e18b582584a10c",
       "title": "CL Joins ‘Musical Soul Mate’ Teddy at THEBLACKLABEL, Set for November Comeback",
       "category": "K-pop",
       "region": "EN",
@@ -659,7 +737,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-14",
+      "id": "a983936b2d11e0",
       "title": "TWICE's Nayeon Has a New Identity in \"NA-sty\" — But Who Is the \"BABY ANGEL\" Taking Over the World?",
       "category": "K-pop",
       "region": "EN",
@@ -685,7 +763,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-15",
+      "id": "0e81db783c460d",
       "title": "BTS, aespa take grand prizes on MMA2026 opening night",
       "category": "K-pop",
       "region": "EN",
@@ -693,7 +771,7 @@
         {
           "title": "BTS, aespa take grand prizes on MMA2026 opening night - The Korea Times",
           "publisher": "The Korea Times",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUjhwN19IOF96a0dPR1JNNDFVa2pPQ3ROWVB4UmluWEdkWFZ0TzF6N1lpal9qbEY5RENWZWlvc2FtSTFwbkxoVW5vVE1tYUN4Ujh1eXRqN2kwYUh0WVhHM3N3UzVyb2RqaHFsamkyMDAybmxzcTVJWExuX1p5WVFJN2k0bWh6Vi00VldFcG95VHhXdW8z?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNTBGejJZWGRhMnhhQmpBSkFDdXVNUVBNQldBV3FtTUxEWU1rUjVPYi1oaDNPWGwxbHFvaW94eXdwOUNwOV96M00wRWdVdEVULXdtYTRxcTN5UjJ0d20zd3lteHRYdVdiQmJCa1g1RlFSdjFGYkNoYXU1azd1c3lTX2tweTRBRXo3TlRKbFhmNWRYT2tMTXI4NE9LYzZudVN6WW9xbDJ4elI1OTF5Z0k40gG0AUFVX3lxTE4ydS0waWo1QnNCUVgzQ3RSeTZNSkY3U0lMZzdVX0tBZ0xzaEJXUHZNNTV3NnV1WDhGcmVWbjFKWTdaRjh1MmxJUWJGaktkYUM0R0Q5RUFSazJuZllLRG9Gc3VNR3JnWjNFUEc2QWlybl96T2pPZWFKTXRRMkR4eThhYmdETEVSQmhXUFNnZVhqc2hScGZreG1Qblp1UUJ1SGhNenBfa3pSTGdVNnQxSXA4UzF6cQ?oc=5",
           "publishedAt": "2026-11-15T02:35:03+00:00"
         }
       ],
@@ -711,7 +789,7 @@
       "status": "research_required"
     },
     {
-      "id": "seed-17",
+      "id": "96132f9dcb53d7",
       "title": "After BTS and SEVENTEEN, how will Stray Kids navigate military hiatus?",
       "category": "K-pop",
       "region": "EN",
@@ -737,16 +815,16 @@
       "status": "research_required"
     },
     {
-      "id": "seed-23",
-      "title": "theIDOL Data: What K-pop Fans in Six Languages Really Want From Lyrics",
-      "category": "K-pop",
-      "region": "EN",
+      "id": "fc070f27af4812",
+      "title": "[공식] '프라하 여행사 대표' 김지수, 연예계 복귀 소식 전했다…클라라와 '솔로라서2' 출연",
+      "category": "연예",
+      "region": "KO",
       "headlines": [
         {
-          "title": "theIDOL Data: What K-pop Fans in Six Languages Really Want From Lyrics - kpoppost",
-          "publisher": "kpoppost",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONHZENGVTbWJUS2I2bUFfbHFPRGt1UmJReHRjT0E5eWhoQkhPcDhOYUFxdGhuSUt0bUIxVE81YTY2alJmMDZSenNtRWY3NFJud0N0VWE0dUFqOGt4ZUFWS29JanpKOEZUTjZ4T1dhWTBfalMwVC1STGo3ZDFXWTdWNkVfbWo1dVlhRTZyYWRidXdMdWRGTHc?oc=5",
-          "publishedAt": "2026-11-13T06:10:50+00:00"
+          "title": "[공식] '프라하 여행사 대표' 김지수, 연예계 복귀 소식 전했다…클라라와 '솔로라서2' 출연 - 텐아시아",
+          "publisher": "텐아시아",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9QVXNMVlhWWlpTWW9PaUNNa3VRTXBsWVIyVlljdnd4dThJdUk5UjVabzFZaU1ROUJNdUZnSU9FU2NsZ2pqbnV3cThwRHM5cmJEMkl4RXBGcnZBTEk?oc=5",
+          "publishedAt": "2026-11-16T04:59:00+00:00"
         }
       ],
       "scores": {
@@ -756,32 +834,6 @@
         "coverageHeuristic": 45,
         "independentPublisherCount": 1,
         "riskFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "research_required"
-    },
-    {
-      "id": "seed-22",
-      "title": "Embattled Britney Spears launches career comeback with a surprise new venture just months after DUI scandal",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Embattled Britney Spears launches career comeback with a surprise new venture just months after DUI scandal - Daily Mail",
-          "publisher": "Daily Mail",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOajNlZ3NHYUx1Qy0zWFJyWHJHUk5lRG9EMGZSWkptVWdXR2lmSGp2b3A1WUFoaHZCSW9ZR3h6dXBFem52UHlfeTRJX0N6WVJFU2xaYzBZUkV4XzAzWVhzYVVYT0VqTnhDWlNwQW1hc0VZalFnTkc0ZUV2cmY5bFdMam9RdFVqZjFkTDV0VElZMnNiU2FJY1o2Y2FBdDZwaXRULXfSAacBQVVfeXFMTjlvMHNOcmotYmd0b3JwcUhMVXRKYWwwSGxGc1NnaGhOLV90R29PcVpMRHkxR3JFS1NCNDRXZWFsc1JSanI0NHhfUXRUaGhvNHhXTnNsVU9XaG1mWTZKM0ZYcjRMbWVUZGxGYmktUzZyUE5OWHF0Q1BOVVVpTlZMLTZOYmRDWFlzOGE2OG11c2I5MlNFMGNCSzF2X3FweW51YXlMb3FuYUE?oc=5",
-          "publishedAt": "2026-11-13T20:14:32+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 41,
-        "commercialFitHeuristic": 22,
-        "shortformFitHeuristic": 65,
-        "coverageHeuristic": 45,
-        "independentPublisherCount": 1,
-        "riskFlag": true,
         "measuredTraffic": null,
         "estimatedRevenue": null,
         "evidenceLevel": "headlines_only"
