@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-11-16T04:20:41.653990+00:00",
+  "warning": "PUBLIC review outlines, NOT publication-ready. Verify all claims and media rights.",
+  "drafts": [
+    {
+      "title": "Adobe와 Google, 크리에이티브 및 생산성 도구 전반에 AI 파트너십 확대",
+      "naver": "Adobe와 Google이 인공지능(AI) 기술을 크리에이티브 및 생산성 도구 전반에 적용하기 위해 파트너십을 확장한다고 발표했습니다. 이번 협력으로 양사는 AI 기반 기능을 강화하여 사용자 경험을 혁신할 계획입니다. [VERIFY] Adobe와 Google은 구체적으로 어떤 도구 및 서비스를 대상으로 파트너십을 확대하는지, 그리고 주요 적용 사례와 기대 효과는 무엇인지 확인이 필요합니다. 본 기사는 Analytics India Magazine과 TechGig의 발표 내용을 참고했으며, 정확한 사실 검증을 위해 공식 발표자료를 추가 확보할 예정입니다.",
+      "tistory": "최근 Adobe와 Google이 AI 기술을 활용하여 크리에이티브 및 생산성 도구에 대한 협력을 확대한다고 알려졌습니다. 양사의 협력으로 인공지능이 제공하는 다양한 기능이 Adobe의 디자인 툴과 Google의 생산성 플랫폼에 통합될 전망입니다. 다만, 이번 파트너십의 구체적인 범위와 각 사의 역할에 대해서는 추가 검증이 필요합니다. 자세한 내용은 Analytics India Magazine과 TechGig의 관련 기사를 기반으로 정리했으며, 정식 발표 내용과 비교 분석할 예정입니다.",
+      "shortform": "Adobe와 Google이 AI 협력을 강화하며 크리에이티브 및 생산성 도구에 혁신을 예고했습니다. 하지만 구체적 협력 대상과 기능에 대해서는 추가 확인이 필요합니다. [VERIFY] 공식 발표 자료 및 양사 보도자료 검토가 요구됩니다.",
+      "verificationChecklist": [
+        "Adobe와 Google이 AI 파트너십을 실제로 확장했는지 공식 확인을 하였는가?",
+        "이번 AI 파트너십에 적용되는 구체적인 크리에이티브 및 생산성 도구 목록은 무엇인가?",
+        "양사가 발표한 이번 협력으로 기대되는 주요 기능 개선 및 사용자 이점은 무엇인가?",
+        "이번 협력 관련 공식 발표 자료나 보도자료 링크를 확보했는가?",
+        "Analytics India Magazine과 TechGig 외에 추가 신뢰할 수 있는 출처가 있는가?"
+      ],
+      "id": "seed-10",
+      "status": "unverified_review_required",
+      "sources": [
+        {
+          "title": "Adobe, Google Expand AI Partnership Across Creative and Productivity Tools - Analytics India Magazine",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLVMwdFAzbWNUS3JRTmZMME1CZldqWDJRX1AxQ3ozMzFsaWRFYlVkSzZfRTlqeWZXeXM2WkNVcG42YmRqYjNmeU5RVEliU3pjT3FaUW9XREtKZDZHaHVRcWFRdEdic3B0cEs2NGhJV1V5YUVDYVRmeE5QWHZ6RW5jOXNGSjlFWC1jd2ZDS2hDb1ZiM1ZkQmpObGVLMVV0SDBtNDFMLWxZMl9IeDlMSmJ2Mw?oc=5",
+          "publisher": "Analytics India Magazine"
+        },
+        {
+          "title": "Adobe, Google expand AI partnership across creative, productivity tools - TechGig",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTkc3WFp1ejlncDB1R3RKOENUQ2V1VGZpLUJTb0xWZU5YRVhySXBBcFYzMk4tNGRudUhYR3BxdFloUE9TMWVud3BmV0plSEJtUDFubElEaHZ4VDREcGtyQmRhYzFuTE5IU3Zad2ZJWnRZRzB2VUFFNkhmMjRFOVJ1c0ZzLXU1emVlU3pTMnFyRm5HaW9aTnpHdmNyekJkNFE5S1ZWd2hkYU5abDcxbjgyZjdVaDZPdlRm?oc=5",
+          "publisher": "TechGig"
+        }
+      ]
+    }
+  ]
+}
