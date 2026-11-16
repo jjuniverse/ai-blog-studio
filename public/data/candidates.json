@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-11-16T12:38:11.321296+00:00",
+  "generatedAt": "2026-11-16T18:27:27.128526+00:00",
   "disclaimer": "Editorial-only heuristics; no measured traffic, revenue or factual verification. Promotional topics are excluded from recommendations.",
   "candidates": [
     {
-      "id": "3e4ad71da92091",
-      "title": "앤스로픽, 클로드에 스프레드시트 기능 탑재—'클로드 시트'가 바꾸는 업무 생산성의 출발점",
+      "id": "7b8852c772db4e",
+      "title": "Luma Health, 클리닉 업무를 위한 59가지 기능을 갖춘 ChatGPT 플러그인 출시",
       "category": "IT·AI",
       "region": "KO",
       "headlines": [
         {
-          "title": "앤스로픽, 클로드에 스프레드시트 기능 탑재—'클로드 시트'가 바꾸는 업무 생산성의 출발점 - 유스연합",
-          "publisher": "유스연합",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBrQTNxb0NFM0E5ZmVXZ2VGMFpHV2c5WE9aMXU0VF84YUtYQVgxODZva19uYnlmYzI5STlRYTNIU2Z3OHJtcXc5WnBmTHVIdktQZGxF?oc=5",
-          "publishedAt": "2026-11-13T17:07:38+00:00"
+          "title": "Luma Health, 클리닉 업무를 위한 59가지 기능을 갖춘 ChatGPT 플러그인 출시 - Unite.AI",
+          "publisher": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPanN1NXZYMjRPUE1LN2VzbVd2RDg3cDk5MzVpS1NhV1MyZTFDZE83NFZhN2haaEswMnZKdTNKZTNLUHg4dFdZYWxMZFd5RjFaVkRSRnAzbndJZE5RcWZDajQ5aW5uQjVWQkc4cjk0V3NkckxUYXdzSXlZaTU4eU1NTjFoSng3Nm9OVDVaR1VkQ2JBcjRkbUZj?oc=5",
+          "publishedAt": "2026-11-16T14:55:03+00:00"
         }
       ],
       "scores": {
@@ -44,36 +44,6 @@
           "publisher": "Latin Times",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOVpQY0hON3hzVzFLWmx5WmxUajNLODdVbk53MnQ5TlgzVXFZcF9DUEdCWDN3YW9fbFhuQlFUbjd4R2JkVk1lNlFRVUEtTTdEN1paaG9lSExWd2lHeXR6NHluVE1KY2lnS3dhUXZTOExwam9oYVNGd1NsdjZRWl85UVl0YnFIT0M4M0thbXZXSkZhY1ZPX18wNmJoZFBhVE1uYk9FOGc1dnZveHNS?oc=5",
           "publishedAt": "2026-11-15T02:49:47+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 30,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 60,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "2120a5a1bc2bcf",
-      "title": "KPop Demon Hunters Officially Returns Next Year, Netflix Reveals Details & Gives Statement",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "KPop Demon Hunters Officially Returns Next Year, Netflix Reveals Details & Gives Statement - ComingSoon.net",
-          "publisher": "ComingSoon.net",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOUWl4LTJaNVFNZTdicnh4ZVhQM0RzOFZ4VElqc1pFSVV4YU1zdnRIb1dWdzRQVEQ0akMyYXNrZ0hXTU1kejRWWFpzWFEzRnluTE13dTdfaUFVRmZrVFdkZkd3VTA0dlhpY3NRaXc4Tk5DS0p2QklFdEdZM2xZY0hIYXpTUVlsTXJ3VnMyaHBB0gGTAUFVX3lxTFA5Z014VG40OFpmQVNuaW9HS1hSamdjMkFWTTJBdFhvby1WTEhsdDc0Ym80S3ZLeWlJY01sRGlMUTBtcjMwa0oxM1g5RFRqTWJYb1d6Qkl6XzNZN1NVVldrdk5KdjdzZUdKYkhULV8wQlZZQmlGanpCVFRrZE1UQzNRZ3V2WnBVLW1zeG0tQ21MX3Qwcw?oc=5",
-          "publishedAt": "2026-11-13T17:35:18+00:00"
         }
       ],
       "scores": {
@@ -156,16 +126,16 @@
       ]
     },
     {
-      "id": "3130f2b6a23639",
-      "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity",
+      "id": "bc8ac3ce3b91e5",
+      "title": "Cognition and McKinsey Form Alliance to Help Enterprises Prove the Business Value of AI in Software Engineering",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity - KoreaTechDesk",
-          "publisher": "KoreaTechDesk",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1VY05RaW10Ui1WSkRVR2pqV3p5b0JvV3pVb0tSckJJMDk2WU1FMDQyU3dKcU0zeEttWUIwVW5LZzMxVndnS3NjWFozNVI3X0dKQVVYd3MwQS1PbWwzNTZ2ZG5ERDl3ZzFOTzZ5b294LUJISzFNcjJ6Sg?oc=5",
-          "publishedAt": "2026-11-13T23:35:29+00:00"
+          "title": "Cognition and McKinsey Form Alliance to Help Enterprises Prove the Business Value of AI in Software Engineering - Business Wire",
+          "publisher": "Business Wire",
+          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOQ0hYRV93UzNRZk56SW9iN3pyR3NlQ3A3MHZsNThUNTlqS2MybG5vVk5zNXdlSEFyYVpZYjFCd09LcS1NQkFOR2pjaTZZckNhMTNrV20wdDFkWGhoTjNQYk5jTXRzdjhqcjZPeVNacmt5MF8wSDBMbXpHWmtRTUN2QnB4OU9McXJ3SEhodTJiSWNQYmt2cm04ZXRoWXBsTXJQYUlfdEtzQ3hwR1NPeU9uYll3WWY0QnFDTGFJem1QcGxkNWl2bVhwSWh6YTdVWDEtaU44dnhtcEsyZkdSZ0lUTlUzR2cyTDBlb1U1R29QeHEtTTlpMGZqTXBKNzI?oc=5",
+          "publishedAt": "2026-11-16T17:00:00+00:00"
         }
       ],
       "scores": {
@@ -187,16 +157,16 @@
       ]
     },
     {
-      "id": "34bb4d2fee4d75",
-      "title": "Why AI Makes Developing Junior Software Engineers More Important Than Ever",
+      "id": "3130f2b6a23639",
+      "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Why AI Makes Developing Junior Software Engineers More Important Than Ever - CXOToday.com",
-          "publisher": "CXOToday.com",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNkFUSGNHWVZYNVI4QVNWMmpxUUZTamM3SU9QQWx2NEF1YWJiSm9RWlVGYjg0c1VFMlRWWGY3emtxZnl0dkZUbVpRNmpWSFdUTlBlWHB2bTFmLTZfZDhhYlBKNDRxS2xNLVNmYTFwLXhkZDF4S3p3ckJFMFVUWXlnT0ZSSjhrZmZuclVqQlU0S2NUc0hGY1RReTZ3cTdWSVBEZmZxWkNiUHlaLWVIRXFXSQ?oc=5",
-          "publishedAt": "2026-11-16T11:34:53+00:00"
+          "title": "One Engineer, 520,000 Lines, and the Limits of AI Productivity - KoreaTechDesk",
+          "publisher": "KoreaTechDesk",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1VY05RaW10Ui1WSkRVR2pqV3p5b0JvV3pVb0tSckJJMDk2WU1FMDQyU3dKcU0zeEttWUIwVW5LZzMxVndnS3NjWFozNVI3X0dKQVVYd3MwQS1PbWwzNTZ2ZG5ERDl3ZzFOTzZ5b294LUJISzFNcjJ6Sg?oc=5",
+          "publishedAt": "2026-11-13T23:35:29+00:00"
         }
       ],
       "scores": {
@@ -280,16 +250,16 @@
       ]
     },
     {
-      "id": "085c2ebd587a79",
-      "title": "No Screen, No App: Nothing’s First AI-Native Product Is Due in December",
+      "id": "73866596ade8e0",
+      "title": "Catching AI’s mistakes is a mental burden – and a drag on productivity",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "No Screen, No App: Nothing’s First AI-Native Product Is Due in December - DANAMIC",
-          "publisher": "DANAMIC",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdjJfVGxqU3R4Yk45ejNWbERHXzdsXzNUYS1GZDVHLTlzSE9jOG0xNXNLNzNlUVZZbXJOdDBSdkNEQXZNZ0VoM1UzaW9VX3NKVmFhaWlfbk01cE14MVQ3aTVsdWR4ZFFYYUJhWGVOaEU3MDh4bEJHREJYQ0x3UFJFa2FBcjdnRkh4MHl3UVhHc205N0h6bmxoQ0pOcXY2VzRST3c?oc=5",
-          "publishedAt": "2026-11-14T07:03:11+00:00"
+          "title": "Catching AI’s mistakes is a mental burden – and a drag on productivity - The Conversation",
+          "publisher": "The Conversation",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeEsxdWhjSTdjbFMzMTJpR3RjU0NyV245bnlDSDlCUUFIS1lFVVVHX1VJVTVyX2Q4dzdjMzdNczRwRDN1SWJQNUxWZ05WY2EwSVBna1FHV3J6TV9OeVJmWnhCR0tJM1pHbHp1ckxWS3VTZFBoMWE2aF90Q3gwWjNkbTJzaFVwOFRWbkM1Q1JqT2hNQ2tOUEZESVVLbTBkZFUtcm1NSg?oc=5",
+          "publishedAt": "2026-11-16T13:36:56+00:00"
         }
       ],
       "scores": {
@@ -320,7 +290,7 @@
           "title": "MagicCraft Announces Expansion Beyond Blockchain Gaming Into AI, Advertising, and Digital Payments - StreetInsider",
           "publisher": "StreetInsider",
           "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPc2lwSjBaNU1oVU1Gb3R1V2Q2c3BSS0lVZHN4MHJSeWYtc2hfeGdJVm5hTXI1eUVadEJQNm5rblZUa09DenZDQkV0TkYyVE9leXJjZF9xSU0wZ2Fnc3UzYTM2aGk0U3dnS2hDNlpXdmU3T0FhN085ZERSWkk4aElacmgzWmN4bHRfLW9fcDR1Vm92c3dQbVRyMlNKb3FSdHVRQndEUlRYcUl4MnB3T3d0WXl3VmJfTHFxeDdHNVNlUWNCTUFRY0wwR0ZleUZqTFIyZGFFVmtMZk9sUEMwZ21RRVhFckY3WTNuaTBSWlRnbmFNSlU?oc=5",
-          "publishedAt": "2026-11-16T12:21:11+00:00"
+          "publishedAt": "2026-11-16T12:59:15+00:00"
         }
       ],
       "scores": {
@@ -371,16 +341,16 @@
       ]
     },
     {
-      "id": "10fdcf6a1ff00f",
-      "title": "Rediff’s Second Coming: Can India’s First Internet Generation Pioneer Become a Digital Infrastructure Player?",
+      "id": "362d7dd1a0a781",
+      "title": "Generative AI in Content Creation Market Size, Share [2034]",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Rediff’s Second Coming: Can India’s First Internet Generation Pioneer Become a Digital Infrastructure Player? - Open Magazine",
-          "publisher": "Open Magazine",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOR1VPdWZkTk80Q1VfbE5uMVhCU0sydkszTlpBOEhxZ1JsZmJfVjRQTmJic3d2Mm5EdHFKYjBGZXJIVGNmTjNqQzVZRUZWaVdvbTBXU1lrYzdWOGZrTjJKOXZkeXpkcVRaX0d0M1h6REFIVHhfUGcydWxkNEVJMjl2SHZzZDBwOGlmWXpNR3U3a3hJVXVCWFcyN2pVYUNSRFVRNTg0dWlSUnZyM0tENHZvMEZUOFhYTFBoeFNTVlBNSGtpNWJqWExnbnp3T1V1Z1EyYkI2WXBMUkg4dw?oc=5",
-          "publishedAt": "2026-11-16T07:21:42+00:00"
+          "title": "Generative AI in Content Creation Market Size, Share [2034] - Fortune Business Insights",
+          "publisher": "Fortune Business Insights",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTWRmWFNwOUFjOVNmbkxuaExTdkJtUmV4bXk4TzdQcWk5MUlXeGQ0ajQ1Q2JhQjVOUHI2NUMzdUxOTDZOU0FxX1ZFTER4elN6aU9HSHN6SlVjc2k5cHMyVUNqRXc2UWRvWXNid0tXcmc1ZFMyVU1TX2JDVnBHRm9VZXhaVWp4dC03V1hKTmxEeDQ?oc=5",
+          "publishedAt": "2026-11-16T14:40:37+00:00"
         }
       ],
       "scores": {
@@ -461,16 +431,16 @@
       ]
     },
     {
-      "id": "e3de744ca8b8cb",
-      "title": "Is the AI job apocalypse finally here? The evidence suggests otherwise | John Quiggin",
+      "id": "8c6348fd92d538",
+      "title": "Don’t just use AI to cut costs. Use it to create growth.",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Is the AI job apocalypse finally here? The evidence suggests otherwise | John Quiggin - The Guardian",
-          "publisher": "The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVVRBWE91VnY5Qml5cERUbE50NWxqNy05U1lWSUV0aDRRZUNHRVNqT2Y3VUpqNWhKUG9udWo5c0J3azNIWU5hX1lFc2NWcXdtY2VSTUJ1bWFodEpRXzczQUpCOVNsNzktNmpmMU00ZktiNDFWTlZuSnNnTEN4RTlTNk5SSnc1Z3Z2VGNSek5LbGVTeHFCY2g3cXNHR1ltU2hjNEt6RTFYT3ZVNEliampGbU1xUGc5eDFPcWVTTEtsUmU?oc=5",
-          "publishedAt": "2026-11-16T05:49:00+00:00"
+          "title": "Don’t just use AI to cut costs. Use it to create growth. - Fortune",
+          "publisher": "Fortune",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcUZoUjFwZzdRVFVGbzY2MjkxMmF3NUVfMm5DRnF5akc3cUV1WkhtRVJidE55OUhXNk10dFV4Sm5KbVBJNlFoVDBfN25IVEZGRURSQ2ZibXYySC1COWRCRnkwcFVsYWhMRTZRQ0pmX0hLRl9lQ1FFRWJ3WXB6OVhLamtZd0dIcGs?oc=5",
+          "publishedAt": "2026-11-16T15:06:00+00:00"
         }
       ],
       "scores": {
@@ -500,7 +470,7 @@
           "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
           "publisher": "Dojeon Media",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
-          "publishedAt": "2026-11-16T12:03:32+00:00"
+          "publishedAt": "2026-11-16T14:04:34+00:00"
         }
       ],
       "scores": {
@@ -581,6 +551,36 @@
       ]
     },
     {
+      "id": "f608139aa6c29f",
+      "title": "ATEEZ - 'GOLDEN HOUR : Part.6' Official Video",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "ATEEZ - 'GOLDEN HOUR : Part.6' Official Video - stupidDOPE",
+          "publisher": "stupidDOPE",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNWpRZy05ZVZneXVaVXQyNGV5clY0bnprSUxfZmpMNHdJZEtVc3JyLTRJYlc4MGR6ZFlWbWFSbzRfUHJ3UVNnUmhYa2JkU3NRaGg1U3R1eXhFWnRJeU5GVUtFZ19QbEROM0ZMVXFzUXdpQ2xFQ1lVVGNMclZTR3pJYXM5NG5kdEs2UVVXUlk0Uldtbk1mbUoyTjVKTHNPRzcybmpGNDNpRkZrUQ?oc=5",
+          "publishedAt": "2026-11-16T15:25:40+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "698d2d18ab40b1",
       "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA",
       "category": "K-pop",
@@ -621,6 +621,66 @@
           "publisher": "Chosunbiz",
           "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVkNxbnJyVUowQ083WHRiSGFtWHNERlBDVjVjSG1ndGoxMzZPbVdYNEk3dkROYVhrcWNHMWZOQ1I1MkxHWEpONUo2bzJPZ0dwMWpfamQzWDFIaFkxWnk2Q2xjQVowdHQ2ZU5KT0pVS215ei10dktlbHRKd2dHeWFwTi1CWGptS2pq0gGcAUFVX3lxTE9NazFmZFhXSmdCZnFKLTZuZ0JXODZyeVhuMkw1UUZEOWF1bWd2R1ZqRG9vYWNYUTBWQ2Q1ajA3WExDWlBzWkhOYy1nVFk0b0JuN1pMMzNGWW1rS1BtaGNPVGtEckJ5U1BsY1BBVVRhSEh1U1dpbWZwamxpM1FqRUJ0dHIwcTE2ZVpkMW55TTFoZTZsOXBfZjBBM21MZg?oc=5",
           "publishedAt": "2026-11-16T08:50:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "2a81d04ccae88a",
+      "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify - 스타뉴스",
+          "publisher": "스타뉴스",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5pbE05SFNQLUc1REdiazBuN09wX3Nrenlrd21DT3JVR1h1d0xCM2t3UDFWVGd5VlF3TnBYaFd1TjdjUDVRQVU0bTBDU21NaEtjVnE3bjM0dktYT0RIX2xraWw0c2JXZDQxZWl5dmplNG9FQVNXS0IzNg?oc=5",
+          "publishedAt": "2026-11-16T00:41:59+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "0e81db783c460d",
+      "title": "BTS, aespa take grand prizes on MMA2026 opening night",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "BTS, aespa take grand prizes on MMA2026 opening night - The Korea Times",
+          "publisher": "The Korea Times",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUjhwN19IOF96a0dPR1JNNDFVa2pPQ3ROWVB4UmluWEdkWFZ0TzF6N1lpal9qbEY5RENWZWlvc2FtSTFwbkxoVW5vVE1tYUN4Ujh1eXRqN2kwYUh0WVhHM3N3UzVyb2RqaHFsamkyMDAybmxzcTVJWExuX1p5WVFJN2k0bWh6Vi00VldFcG95VHhXdW8z?oc=5",
+          "publishedAt": "2026-11-15T02:35:03+00:00"
         }
       ],
       "scores": {
@@ -701,16 +761,16 @@
       ]
     },
     {
-      "id": "0ae64b75f646ec",
-      "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY",
+      "id": "60a91e12f0e0d6",
+      "title": "Upcoming Concerts And Festivals In Singapore: Dates, Venues And Tickets",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY - Spotify",
-          "publisher": "Spotify",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbHVaOEpFZzVuOXZOaWR1cFV2elBpN0JPLU1rckFOZlRvTDg0dTVXRlJ5TzBySmdlRzZRVmEwYVNPbkRUbHFvM29ZR3A1anpGSDlIYUJBOGtBSkJVaWhMTmU4LS1OcWFTR2cxR0w2X2NqbFRGQ2RhV09ER2ZJYmMyQ2R0RjM?oc=5",
-          "publishedAt": "2026-11-16T01:29:33+00:00"
+          "title": "Upcoming Concerts And Festivals In Singapore: Dates, Venues And Tickets - Harper's Bazaar Singapore",
+          "publisher": "Harper's Bazaar Singapore",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbk15bGxsWkFxQ0NFSEhXTi1WZ0JIdXZVTThCSEo1RXZJd0VOT0NreGZuVlFYcXoxeUxaYUV6VnY0VS05S3l1ZXNzemFaZ1JmR1VwWmwwekZoVzE4REhEUGtGeXlVQi0tVjJGSzhrR1VmVkZJTlE4REJ1bXpxLTVtdDZFWGF4OUI2TGJDakpOakNCLVlyczhUaEtkc1VGNHRwUjdlVUh2cExrMTE5?oc=5",
+          "publishedAt": "2026-11-15T08:00:00+00:00"
         }
       ],
       "scores": {
@@ -731,46 +791,16 @@
       ]
     },
     {
-      "id": "0e81db783c460d",
-      "title": "BTS, aespa take grand prizes on MMA2026 opening night",
-      "category": "K-pop",
-      "region": "EN",
+      "id": "fd272350a86c0a",
+      "title": "임현주 아나운서, 13년 8개월 만에 MBC 퇴사…\"회사 밖 세계 탐험\"",
+      "category": "연예",
+      "region": "KO",
       "headlines": [
         {
-          "title": "BTS, aespa take grand prizes on MMA2026 opening night - The Korea Times",
-          "publisher": "The Korea Times",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNTBGejJZWGRhMnhhQmpBSkFDdXVNUVBNQldBV3FtTUxEWU1rUjVPYi1oaDNPWGwxbHFvaW94eXdwOUNwOV96M00wRWdVdEVULXdtYTRxcTN5UjJ0d20zd3lteHRYdVdiQmJCa1g1RlFSdjFGYkNoYXU1azd1c3lTX2tweTRBRXo3TlRKbFhmNWRYT2tMTXI4NE9LYzZudVN6WW9xbDJ4elI1OTF5Z0k40gG0AUFVX3lxTE4ydS0waWo1QnNCUVgzQ3RSeTZNSkY3U0lMZzdVX0tBZ0xzaEJXUHZNNTV3NnV1WDhGcmVWbjFKWTdaRjh1MmxJUWJGaktkYUM0R0Q5RUFSazJuZllLRG9Gc3VNR3JnWjNFUEc2QWlybl96T2pPZWFKTXRRMkR4eThhYmdETEVSQmhXUFNnZVhqc2hScGZreG1Qblp1UUJ1SGhNenBfa3pSTGdVNnQxSXA4UzF6cQ?oc=5",
-          "publishedAt": "2026-11-15T02:35:03+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "2a81d04ccae88a",
-      "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "[Official] No news on comeback… NewJeans’ “Attention” surpasses 600 million streams on Spotify - 스타뉴스",
-          "publisher": "스타뉴스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5pbE05SFNQLUc1REdiazBuN09wX3Nrenlrd21DT3JVR1h1d0xCM2t3UDFWVGd5VlF3TnBYaFd1TjdjUDVRQVU0bTBDU21NaEtjVnE3bjM0dktYT0RIX2xraWw0c2JXZDQxZWl5dmplNG9FQVNXS0IzNg?oc=5",
-          "publishedAt": "2026-11-16T00:41:59+00:00"
+          "title": "임현주 아나운서, 13년 8개월 만에 MBC 퇴사…\"회사 밖 세계 탐험\" - https://www.diarypoint.com/",
+          "publisher": "https://www.diarypoint.com/",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zRXdzcXlRWURCTXB1Mm1UZnJSU0k5dlpDMDNkNm9jRG8xYTNxaUNHWUtMMEVOaVhvbmFaYThXVng3Vi1SQmY1c1dKS3oyeGN4anB6b09FOVNRbjBscW9TMzBFeV9GN19oTmd3?oc=5",
+          "publishedAt": "2026-11-16T06:17:00+00:00"
         }
       ],
       "scores": {
@@ -821,22 +851,22 @@
       ]
     },
     {
-      "id": "a7b7e4d46e3495",
-      "title": "Tencent, 저렴한 멀티모달 모델 Hy4 Flash 출시",
-      "category": "IT·AI",
+      "id": "56aa0b58c05e79",
+      "title": "스마트 안경 쓰고 시험 보면 형사 고발…19일 수능부터 집중 단속",
+      "category": "연예",
       "region": "KO",
       "headlines": [
         {
-          "title": "Tencent, 저렴한 멀티모달 모델 Hy4 Flash 출시 - Unite.AI",
-          "publisher": "Unite.AI",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSGRUX0Nodkp5cTdvTVFjWGFxQWVQYUYzMUIzQ1dIVDlOaGRQdXBOX2Vfemd0ajF0ZFRSWXpHWTZKMlIyaDlOMmdxRTZ4OGdxRzh4cFpkSThRbzJiS2d1eWY4aV9leTdPQy1uYTU2cmhWUDlFV1M0cW5lcml4MEZJbjcyQUplMkN5bVYyTw?oc=5",
-          "publishedAt": "2026-11-16T10:25:01+00:00"
+          "title": "스마트 안경 쓰고 시험 보면 형사 고발…19일 수능부터 집중 단속 - https://www.diarypoint.com/",
+          "publisher": "https://www.diarypoint.com/",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ZUWpPWW5VYnRyS0ZTM2VkejdrTVVnM3lTeWxDWkprQUtyaEY0cTU0Q0dFZUxrRVgzUVFUakVlNFlhd1Q1b2psek80TmplWEgzVG5XSm9uV3g5YnBqR040eVpiUHRYSDJkSG5v?oc=5",
+          "publishedAt": "2026-11-15T15:53:00+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -851,16 +881,46 @@
       ]
     },
     {
-      "id": "e731d1f8e4e9e6",
-      "title": "마이크로소프트, 기술적 지표가 10% 넘는 추가 하락을 경고함에 따라 사상 최고치 대비 8% 후퇴",
+      "id": "c277f88ae06710",
+      "title": "MMA2026 첫날 리센느 글로벌 TOP10 수상…15일 아이브·플레이브 출격",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "MMA2026 첫날 리센느 글로벌 TOP10 수상…15일 아이브·플레이브 출격 - https://www.diarypoint.com/",
+          "publisher": "https://www.diarypoint.com/",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0tZFF1MGlibHRnZkxMSTBVNFpwTmxDM0JxenNfVXlyX2NOdWZUb0k3QUFyTTltODh1RzZ6Mjh3MTB3NlVweG9OazUxUkZ4d09qNUYyRTNlX0dKQUNSRE40TWZ5UXRlSjc0Nzk4?oc=5",
+          "publishedAt": "2026-11-14T13:24:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "361814d8fa0100",
+      "title": "Scale AI, 병원 운영을 위한 AI 에이전트 5종 출시",
       "category": "IT·AI",
       "region": "KO",
       "headlines": [
         {
-          "title": "마이크로소프트, 기술적 지표가 10% 넘는 추가 하락을 경고함에 따라 사상 최고치 대비 8% 후퇴 - TradingKey",
-          "publisher": "TradingKey",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTXdwUVBjSjB2azVQclNTZEJsTWtET1l5MV9qenhBbmR2Sms5SVA5TElQeFpaTDVCeWhIbHByVmF1MDFkazVkRU92ZlUtQzVOMjRzWTBEazUzcTNFazVnYVkzRmlMSV9jZTN0b0hobGhJQWg5ekx6ZkxYTnNtZmxnc05DN3JWSGk5NnpESXFFd2FIelB6bjV1RWNWb3NBSTJsU2tzY3FtbjBwVU9PVWRaRkZTTUViUjFnbEN4b1ZWdEg0Nl83czQ5VEdsTQ?oc=5",
-          "publishedAt": "2026-11-15T21:10:15+00:00"
+          "title": "Scale AI, 병원 운영을 위한 AI 에이전트 5종 출시 - Unite.AI",
+          "publisher": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc3l3dE1Sc1VzYXhXUFZFYWd0ZC1WNkpxQjBjYlVsdmVsUGE1RVBZeUw5SXpwMVI3VDhsY2tMYmdXZkdXdEJXcFpHMkIyeE1xX0ZMbUc5NzRka3U5UkJTdkdUb09lYXpHN2NyNWhvb0dfbVpxNGlKT1hMZjNhVF9VOGRQTWthWFRf?oc=5",
+          "publishedAt": "2026-11-16T13:14:02+00:00"
         }
       ],
       "scores": {
@@ -911,6 +971,36 @@
       ]
     },
     {
+      "id": "a7b7e4d46e3495",
+      "title": "Tencent, 저렴한 멀티모달 모델 Hy4 Flash 출시",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "Tencent, 저렴한 멀티모달 모델 Hy4 Flash 출시 - Unite.AI",
+          "publisher": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSGRUX0Nodkp5cTdvTVFjWGFxQWVQYUYzMUIzQ1dIVDlOaGRQdXBOX2Vfemd0ajF0ZFRSWXpHWTZKMlIyaDlOMmdxRTZ4OGdxRzh4cFpkSThRbzJiS2d1eWY4aV9leTdPQy1uYTU2cmhWUDlFV1M0cW5lcml4MEZJbjcyQUplMkN5bVYyTw?oc=5",
+          "publishedAt": "2026-11-16T10:25:01+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "d7e70d40def110",
       "title": "앤스로픽 '클로드 시트', 스프레드시트 작성 주도권을 함수 숙련자에서 지시 능숙자로 옮긴다",
       "category": "IT·AI",
@@ -921,6 +1011,66 @@
           "publisher": "뉴스N연합",
           "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1NOTl1VUZZTW5IV1JpQUlxaGxEc0x4ckNjRVQ3elpiLVVaQnZGbGx2d09LSHZpOVBidXlBa0hqQ1NUck85ZlFXY0hR?oc=5",
           "publishedAt": "2026-11-13T19:44:05+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "970999f0a5c897",
+      "title": "AI 코드 검증 속도 못 따라간 기업 76%...보안·품질 위험 막을 자동 검증 시급",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "AI 코드 검증 속도 못 따라간 기업 76%...보안·품질 위험 막을 자동 검증 시급 - 지티티코리아",
+          "publisher": "지티티코리아",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3dmVTeVFBbkI1ajV2M2Z3QWJlaEw0aGQ0QUVKcTBQc3pUQ0Y3QXdYSnh1M21FNjdvS2ZZclpKYlY1djBGdTBFZU84YmpZV3VOSHV6UHl4TVIzb1hKS3ZTMGI0dTVLWEZUTVE?oc=5",
+          "publishedAt": "2026-11-14T15:30:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "f229384bf16b7e",
+      "title": "[심층분석] LG유플러스, 네트워크·보안 통합 플랫폼 'U+SASE' 출시…기업 보안시장, 개별 솔루션에서 통합 관리체계로 전환",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "[심층분석] LG유플러스, 네트워크·보안 통합 플랫폼 'U+SASE' 출시…기업 보안시장, 개별 솔루션에서 통합 관리체계로 전환 - 뉴스밸류",
+          "publisher": "뉴스밸류",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5jZ0szalRKTWE2eW1IMlpNSHhfQmo1Q2p3S0QtVDh1TFJvOW1NaGVseldkNFRMZGwxY1JpR015djZFUGt6elRzR1JjMndmTTdqaFJ0YzlOV3F0bGxJTXJ5UDRpUXpPa3dtM3c?oc=5",
+          "publishedAt": "2026-11-15T23:30:00+00:00"
         }
       ],
       "scores": {
@@ -971,6 +1121,36 @@
       ]
     },
     {
+      "id": "f4210b088cb6e8",
+      "title": "Vertiv, 칩이 출시되기 전에 AI 인프라를 테스트할 ATLAS Lab 개소",
+      "category": "IT·AI",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "Vertiv, 칩이 출시되기 전에 AI 인프라를 테스트할 ATLAS Lab 개소 - Unite.AI",
+          "publisher": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMXpNTFlIQ2tURGhMWVJvLWNuRWhDZUI4cmxjUm1VdWZzdGpXeHZNQnR3U1lVeVVaUlZaRS16ZUtMNXNlanJtdXBwbzA5VDg2dG0zSGNkSWxkZXJsZ210bUdRYWFtazNYTk1Pc1Jrc2MtTGtLOGloakpZT2U3bzdNQldrTnNpVWZDTGxQVC03QUpPZTJXT1BrRA?oc=5",
+          "publishedAt": "2026-11-16T13:53:03+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "70ac4daf86140f",
       "title": "Alibaba Cloud, 싱가포르 API 가격 25% 인하한 Qwen4-Max 출시",
       "category": "IT·AI",
@@ -1001,16 +1181,16 @@
       ]
     },
     {
-      "id": "edf37736215e63",
-      "title": "Sino Biological, AI 설계 단백질 결합체 검증 서비스 4RISE 출시",
+      "id": "f5dc26768365c1",
+      "title": "직원 휴대폰 속 가짜 앱, 기업 내부망 침투 통로 된다",
       "category": "IT·AI",
       "region": "KO",
       "headlines": [
         {
-          "title": "Sino Biological, AI 설계 단백질 결합체 검증 서비스 4RISE 출시 - Unite.AI",
-          "publisher": "Unite.AI",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOU3U2UUJWbWhZSHFUQmV3WG5CdUxlUV95M3lUdzdGcklIZHp2TEdXcnpDVGNzRVozVUVMdFYxWW1QU3lXQXQ1Rk5waTBsTHVYbmpuWG1CRGVPM3dENUlXaE5kUE1iZU5GOUNHMHFYRDJZU2xzY3hMUm9OT1B0dU4yZ0hoSVRTNjhVb2lHS3VLZGlvV3U0dHlEWFAzQQ?oc=5",
-          "publishedAt": "2026-11-13T15:28:03+00:00"
+          "title": "직원 휴대폰 속 가짜 앱, 기업 내부망 침투 통로 된다 - 디지털포커스",
+          "publisher": "디지털포커스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBKSV9kZWc5YURZWlE0SlBmT2E4LXJpaGo3X2w3UlpXUUFEN0tXN05TcGRKSkFhZkZHeXVLZzdLdnNyUDUxelNhNkZSZ0Z1UDFBWlIwOFY2aDI3ZlZ1WURrVWhDVzlVZVJSc0NqR3Y5cFo?oc=5",
+          "publishedAt": "2026-11-15T00:45:54+00:00"
         }
       ],
       "scores": {
