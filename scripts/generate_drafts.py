@@ -11,7 +11,7 @@ if not API_KEY:
  print('ERROR: OPENAI_API_KEY is not configured in GitHub Secrets',file=sys.stderr)
  raise SystemExit(1)
 records=json.loads((ROOT/'candidates.json').read_text(encoding='utf-8'))['candidates']
-chosen=[x for x in records if not x['scores']['riskFlag'] and len(x['headlines'])>=2][:3]
+chosen=[x for x in records if x.get('status')=='research_required' and not x['scores'].get('promotionFlag') and not x['scores']['riskFlag'] and x['scores']['independentPublisherCount']>=2][:3]
 if not chosen:
  print('No eligible multi-source candidates (not an API failure).')
  raise SystemExit(0)
