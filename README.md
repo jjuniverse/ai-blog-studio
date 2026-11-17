@@ -49,3 +49,9 @@ The UI reads titles, publisher names, dates and source links from that static JS
 - **Optional AI prep outlines:** add `OPENAI_API_KEY` under **Settings → Secrets and variables → Actions → New repository secret**, then manually run [Generate AI editorial outlines](../../actions/workflows/generate-drafts.yml). It uses the API from GitHub Actions, not the browser. It skips risky headline topics and requires at least two headline sources, but these checks do **not** establish factual correctness.
 - The generated `public/data/drafts.json` is **PUBLIC** and contains NOT-READY-FOR-PUBLICATION outlines for Naver, Tistory and shortform. Never put private material in it. The AI has only headlines and links, not article contents; all assertions must be verified independently before publication.
 - Draft generation is deliberately **manual** to control API costs and avoid unsupervised publishing. No automatic article publication or video generation is implemented yet.
+
+## Blog post preview and downloadable image cards
+
+The **콘텐츠 스튜디오** now offers a formatted article preview (headings, paragraphs) with three automatically rendered branded PNG cards: cover, explanatory and summary. Each card has a **PNG 이미지 저장** action. These are local Canvas illustrations, **not generated factual screenshots or licensed entertainment photos**. Review card wording for accuracy. Download images separately and insert them into the Naver or Tistory editor; the current copy button only copies text, not images. A truly one-click rich-text post package and automatic publishing are still not implemented.
+
+Headline-only older drafts may remain in local browser storage. Use the **이전 초안 백업 후 초기화** control where shown, then generate again after deploying the updated Worker. The Worker rejects generic short articles instead of presenting them as ready to post. Real publishable quality and source accuracy have not yet been validated by an end-to-end API test.
