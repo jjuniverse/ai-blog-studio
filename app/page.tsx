@@ -174,8 +174,33 @@ export default function Home() {
         setConnectionDetails('Worker 응답은 정상이지만 OpenAI API 키 또는 관리자 암호 설정이 누락됐어. Cloudflare Secrets를 확인해 줘.');
         return false;
       }
+      // Reproduce /generate's cross-origin POST + custom-header preflight without paid API calls.
+      let probeResponse: Response;
+      try {
+        probeResponse = await fetch(WORKER_URL + '/probe', {
+          method: 'POST', cache: 'no-store',
+          headers: { 'Content-Type': 'application/json', 'X-Studio-Passphrase': 'diagnostic-only' },
+          body: JSON.stringify({ probe: true }),
+          signal: AbortSignal.timeout(12000),
+        });
+      } catch {
+        setConnectionState('unreachable');
+        setConnectionDetails('GET /health는 정상인데 POST /probe가 실패했어. POST 사전 요청(CORS), 네트워크 또는 Worker의 배포 상태를 확인해야 해. AI 생성 비용은 발생하지 않았어.');
+        return false;
+      }
+      if (!probeResponse.ok) {
+        setConnectionState('unreachable');
+        setConnectionDetails('GET은 정상이지만 POST 테스트 HTTP ' + probeResponse.status + '가 나왔어. 최신 Worker 자동 배포가 완료됐는지 확인해 줘.');
+        return false;
+      }
+      const probeData = await probeResponse.json().catch(() => ({}));
+      if (probeData.transport !== 'post') {
+        setConnectionState('unreachable');
+        setConnectionDetails('POST 진단 응답 형식이 달라. Cloudflare Worker 최신 버전 배포를 확인해 줘.');
+        return false;
+      }
       setConnectionState('ready');
-      setConnectionDetails('Worker 연결 정상 · OpenAI 요청은 아직 보내지 않았어.');
+      setConnectionDetails('GET 및 POST/CORS 통신 정상 · 실제 OpenAI 생성 요청은 아직 테스트하지 않았어.');
       return true;
     } catch (error) {
       setConnectionState('unreachable');
@@ -355,7 +380,7 @@ export default function Home() {
                 <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
                 <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'제목만 수집한 단계야. 자료 조사 버튼으로 공식 발표·관련 자료를 추가로 찾아봐. 검증 후 글을 만들 수 있어.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
                 <div className="worker-health">
-                  <button type="button" className="btn btn-light" disabled={connectionState==='checking'||generating} onClick={checkWorkerConnection}>{connectionState==='checking'?'연결 확인 중…':'Worker 연결 테스트 (무료)'}</button>
+                  <button type="button" className="btn btn-light" disabled={connectionState==='checking'||generating} onClick={checkWorkerConnection}>{connectionState==='checking'?'연결 확인 중…':'GET + POST 연결 테스트 (무료)'}</button>
                   <span className={connectionState==='ready'?'worker-health-ok':connectionState==='unreachable'||connectionState==='unconfigured'?'worker-health-bad':'worker-health-idle'}>{connectionState==='ready'?'정상':connectionState==='unreachable'?'연결 불가':connectionState==='unconfigured'?'서버 설정 필요':'검사 전'}</span>
                   {connectionDetails&&<p role="status">{connectionDetails}</p>}
                 </div>
