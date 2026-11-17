@@ -119,7 +119,7 @@ export default {
       tools: [{ type: "web_search", search_context_size: "medium" }],
       tool_choice: "required",
       include: ["web_search_call.action.sources"],
-      max_output_tokens: 6500,
+      max_output_tokens: 8200,
       text: { format: { type: "json_schema", name: "researched_editorial_draft", strict: true, schema } },
       store: false,
     };
@@ -153,13 +153,21 @@ export default {
           !Array.isArray(result.verificationChecklist) || !Array.isArray(result.sourceLinks)) throw Error("Invalid draft schema");
       sourceLinks = result.sourceLinks.filter(src => src && typeof src.url === "string" && /^https:\/\//.test(src.url) &&
         visitedUrls.has(src.url)).slice(0, 10);
-      // Do not return a confident publication draft with absent independently identified sources.
-      if (result.mode === "article" && (sourceLinks.length < 2 || result.naver.trim().length < 600 || result.tistory.trim().length < 650)) {
+      // Fail closed when a model outputs a short generic memo instead of an article.
+      // These heuristics are a format gate, NOT a substitute for human fact-checking.
+      const substantive = value => typeof value === "string" &&
+        value.trim().length >= 1000 &&
+        (value.match(/^#{1,3}\\s+.+/gm) || []).length >= 3 &&
+        (value.match(/\\[확인 필요\\]|\\[추가 독립 출처 필요\\]/g) || []).length === 0;
+      if (result.mode === "article" && (sourceLinks.length < 2 ||
+        !substantive(result.naver) ||
+        !substantive(result.tistory) ||
+        result.shortform.trim().length < 80)) {
         result.mode = "research_brief";
         result.naver = "";
         result.tistory = "";
         result.shortform = "";
-        result.verificationChecklist.unshift("충분한 근거와 본문 길이를 확보하지 못했어. 공식 출처를 확인한 뒤 다시 생성해 줘.");
+        result.verificationChecklist.unshift("검증된 출처 또는 본문의 구체성이 부족해 완성 원고로 인정하지 않았어. 공식 자료를 확인하고 다시 조사해 줘.");
       }
     } catch { return fail("OpenAI research returned incomplete data; no draft was saved", 502); }
     result.sourceLinks = sourceLinks;
