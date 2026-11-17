@@ -1,22 +1,184 @@
 {
-  "fetchedAt": "2026-11-17T06:33:45.491983+00:00",
+  "fetchedAt": "2026-11-17T09:14:32.319583+00:00",
   "source": "Google News RSS search",
-  "note": "Headlines are unverified pointers. Please verify facts and media rights before content creation.",
+  "sourceType": "headline_discovery_only",
+  "collectionVersion": 2,
+  "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
+  "categoryCounts": {
+    "연예/KO": 11,
+    "K-pop/KO": 0,
+    "IT·AI/KO": 2,
+    "생활 정보/KO": 5,
+    "K-pop/EN": 27,
+    "AI·생산성/EN": 28
+  },
   "items": [
     {
-      "title": "BTS Dominates MMA 2026 With 6 Wins, Sweeping Artist and Album of the Year Awards - Dojeon Media",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYWlwdzZzQmZHNFhwR3ZtYnB5TEJreXNxV0ZMRmk5V1Jfc2pzcEQ3ZUhQOGdhbklkUzVQeVFadjlpdU1OY282NEVERmRnM1NnTWFFUUdzZGk2MXl2OVBhcUtadk1Cc0ZfcFRuTjRwS2NvOFhzdWJadERSMnJURkpxM1FEcDhrMDdWRGV1TThRa21mQUJUVWZHOEN2RFJrblBWTFFfZHpNUDVFUEhqcHdGaEFB?oc=5",
-      "publisher": "Dojeon Media",
-      "publishedAt": "2026-11-17T04:59:54+00:00",
+      "title": "2NE1's CL announces solo comeback - Facebook",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmxGaUJMUWcyUmpzdndlY2N4S2tpWTFBV215S0ZLeUVmOFF2MUFZTnlNVXpKSmxhS2VTczlhZjF2Mm9XeHZDU2VoQWtIOVVVZVk1dzFwc1BJNW1WM0dwZ0J0QlY0WFRSNUU1bHZnNGRFUU94YkZZZG5tdTlwMkluT1FMX3g2c0J1M05oSjlfRUp5VDA?oc=5",
+      "publisher": "Facebook",
+      "publishedAt": "2026-11-17T08:30:30+00:00",
       "category": "K-pop",
       "region": "EN"
     },
     {
-      "title": "Netflix's KPop Demon Hunters is going on a world tour — 150 cities, one epic live show - Latin Times",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOVpQY0hON3hzVzFLWmx5WmxUajNLODdVbk53MnQ5TlgzVXFZcF9DUEdCWDN3YW9fbFhuQlFUbjd4R2JkVk1lNlFRVUEtTTdEN1paaG9lSExWd2lHeXR6NHluVE1KY2lnS3dhUXZTOExwam9oYVNGd1NsdjZRWl85UVl0YnFIT0M4M0thbXZXSkZhY1ZPX18wNmJoZFBhVE1uYk9FOGc1dnZveHNS?oc=5",
-      "publisher": "Latin Times",
-      "publishedAt": "2026-11-15T02:49:47+00:00",
+      "title": "The Dog Stars: Trailer & Cast | Explore Disney+ - Disney Plus",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9zTVp2RWliNi0wOWxOaXlhdEU2eXlUalViU1k0UlZ6U0ZQNVN6Z2Z2UlFNT0VITzJDcGZ6eW5PZjJwcHp3cjBib0ptMERWc2RCeGFSYnBKVkxzYm1iVmhaY0o1UnJVbVA0bmpZUzBBYnY?oc=5",
+      "publisher": "Disney Plus",
+      "publishedAt": "2026-11-17T07:10:18+00:00",
       "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUpBaHc2SF9YX1QzSm5BX0R1SVAzRTZ2eG5jcUVtdkZNTWg5NGhfaG9XMkNuWmswQ1ZaVDV0UVVOZUFpVm1VMkRpZHJ3ZGNHRkZDSjN3OHNMSzBoV2VKRzA1RUliMlpRQ1U1Q3FnRkR4TG01QTYwVVoyaGNnWkJCTVFHTGYwZXZra2JIVVVn?oc=5",
+      "publisher": "조선일보",
+      "publishedAt": "2026-11-17T06:33:45+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More - Esquire India",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQTHJFTi1taWxjZnR5WnFaZDd1NEFfaDZ5NXJIZzVPSkVyLVpELVo2MHgyWV9RMkhYVXpUMENMQUdzX1dfYzRycFJIUkJNWnZoWVpnWkR5Yl84aVpoNFFDamNjdXZNRjlvbnQxaFNnZW1WYXhSay1rUWUyZW1uRHJPb2lZRTF3bEdJRUprajRDMGxpbVJ6Q0ZLNlYtSTNiZzltTHdnOVlXSWZvcWMzck1rc1p3ZXNSQ19yeWh5RjZIbmNLLTJpUC1jSmVJdE1QZDFoSG9zRlJ3eV9qaElyNEh5Y3J5dERYaHBEOF9ETHRiVWZQSVNSTmNNYlg4Yi00UnlZd2FV0gGQAkFVX3lxTE9FdnRwUFZ5TjVNSWFYWXpGQ0ZyT09Bck03bFVnLW9OODdpbG9OM1l3MEx5UFhQNURqTWZiWW04c3JkZmx5d3ExSnM0Vl9OeENBNXBPY2VEMWdHQ3dNOXR5NkljWkRpaGF1MExIOHp0UjZBaWxkR3ByQmprNEs2TmtRQWxrdk9nMDZNblg1YnZral9RcjlQZHNJUWhtU3VKYW1uZUo2dVIyZFRiMEtuOUlwdjZrZFBXekp0ZnZfSVdjQUxpd3VoWXdQWWQtYl80MTQ2bWVITGJFZ2wxc1lUS1hCX2xIZWxwSGprekdoai1kWDg5UklsYVplRURjZzViWC1WRjFxOFIyakJkNWtDSVFi?oc=5",
+      "publisher": "Esquire India",
+      "publishedAt": "2026-11-17T06:31:14+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call] - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqN3FTamVCV0ZEYkxucWZkSUZtZ2FJYW5wVTNKU2NuUzYzaFZOb1l6LXIwdlYzMlN1aWVOQnNvNmo5VS1fbUxiZ3ZPajhtalk5?oc=5",
+      "publisher": "매일경제",
+      "publishedAt": "2026-11-17T06:16:23+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story) - 스포츠조선",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MbTBUQ2dDbnIwSXFBUFlzVjhVNWYxaWVhVGNRQWYzemFzS1d6R2N3SVhwZ0hwY0JkbHFqQXJXX1F5SmVvRlJkbTNwQU5xWGNtblRjUjFrbjZNbzdRa002VHZtZUFjOWdpSXhCTzJWN1hqVWtCLU9ld0FlaEJyQQ?oc=5",
+      "publisher": "스포츠조선",
+      "publishedAt": "2026-11-17T06:12:34+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식) - 조이뉴스24",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nbGVNdldNVlJUZjhldFlpaEVXY2lldVFJcXhycG41RWVfaElUd20xQ0NYWGZiUmZ6MFZqODFYN0hNanlTUUFDOTNvTQ?oc=5",
+      "publisher": "조이뉴스24",
+      "publishedAt": "2026-11-17T05:20:00+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "IBM Study: Chief AI Officers See Where AI Creates Value, but Few Control Investment Decisions - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPVTlOVVpTM0FDUmVEWEpCMElsSnFKeHRRd09NeGM5cGVLc2Zfalc3VWppSmd3WHllNE9KdXducDE2X1ZFLWZjNkFrUTJYbjNFUkU4T0xZUHlXMmVuajRObkQ4a1RfdWthUnR6b3dodVBjVlV0MEpnN3MwRFZRSG03ZlhnVmMySm5HZklqU1VfU0FYZWRqNmhaWUVueC1SemxYUHRHa2JnWW5Lc2xTWGpsOGpuYXdCazVISmtvYnY1TVhvWXBSZC10N3E2T05UTU9oek02NEVUTWNoY3hoVWFRXzR6R01TTmM?oc=5",
+      "publisher": "TradingView",
+      "publishedAt": "2026-11-17T05:01:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Meta Is Teaching Small Businesses How To Use AI, Not Just Try It - WeRSM",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5ERFFzRVpMYnBWMVVXQWd6QTJibTI0RVZvZll1NjU3SXRtOGhab3Uwa1NoUExXNHlhQ19KUlZfc25adldEd2RRWlIxdi1IVkxDcGxvams1UjZ5aEstV3dLRGJORU1pQlgwaUhxN2JqaHE?oc=5",
+      "publisher": "WeRSM",
+      "publishedAt": "2026-11-17T02:46:39+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Every Streaming and Cable Show That’s Been Renewed or Cancelled in 2026 So Far - Soaps.com",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT3FkMXltaHR3Z1VVelJ1d3pRYUpmaEJaa0JLTWtValN5VGNCRk1VU0VjWHJiY3RYX3F4SHU0X2lULWlBUm8ya1FmMHljcXYxdVRCOFlqYmlIRmc1RU9Zb1IyZS14VWVmN3d5Y012Yml0TlJzOXl2ZGVoWVMyMDJET1pYQTgtbDBVY2lnYjdWZHVmQkFmVllpN1RhdGlKaHIxdkVhc2gxRFJqMlU?oc=5",
+      "publisher": "Soaps.com",
+      "publishedAt": "2026-11-16T22:58:58+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Google says attackers built an AI framework to turn software patches into exploits without human intervention - VentureBeat",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWXlLd3d3Z0JOanJZX0lsQ0FBMElDVzhuenVvUFlHSjNRRUtGU3lJb0VyV3QxS2RmNF94TDNWeGdzRlhuLWtYZ0tDZmRFVS1GUEdWa1djRHQ0UFlRYldTV1kwU2d6WWxKSHI1bjN2OXlzU1lEV1ZXd3FvWFliLUptRGpmdHRDR3ItM2xGWG1xVUx4VTJfRlIzZlpkRmdEVmpiRFZ4YXJFcDZBVlNFQ0R1V3hnMlhLaWlRVndSRGZteUhqaDJiS285SndIa2Ntby1zZTFOb05mZ1IyQQ?oc=5",
+      "publisher": "VentureBeat",
+      "publishedAt": "2026-11-16T21:58:51+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Grammy Nominations 2027: See the Full List - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVnlxVDVDdXpNaVFVY25mb3UtNzNkaGFKdm1ZTFUxTms2WXNQOE1KM2xtcGhHMGthR185clhSZVFKSGdWMWs3RjRrbEZLYWFxcHdoSU13WmVzeVFMVFdPWGNTNUcxRlpMb0tzYU84SFVXMG5LNmJUTEFVWUozeEdSZQ?oc=5",
+      "publisher": "The New York Times",
+      "publishedAt": "2026-11-16T21:42:08+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "NEW of PRFAA - Puerto Rico Federal Affairs Administration (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONXpfdnVhME5hSzEzNHIyWDVSZC1fcmZ1dEtpZFQxdkJ0VnVlUTFkSzMwa3NEY1lUZ0xnS2JiNjBISEhFOUhvdUN3VFZ3aXNTb1lkcjhhSUlhSUpTd3NPMWhpTWJZXzVHY3dSeGkxQnZIWTNSZ0d5YXpUN3FBUkhQNWZFT25pYVRhZFp3Qnc5U0ZxV2Z1NUdUeXJHZ05zd0xoZmJlc2RselllR2NlS2hvOEVfNnh1QldBRjZ5YQ?oc=5",
+      "publisher": "Puerto Rico Federal Affairs Administration (.gov)",
+      "publishedAt": "2026-11-16T19:20:21+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "ElevenLabs is coming for your meeting notes, dictation app, and maybe your productivity routine - Yahoo Tech",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTVMtOU5xakc2WXpHRlUwYXFWX3ZVV3JMZ3NoWDN1ZVh4Q25uYlRKTkwtSzZpQXpITFNtcExqYXZCY0JxWnc1NXNTUlpic0FlTnpuRjVRSUdoN3A4S1RHNldheHFSaGFfbnNFQUN0LWpTUjJCUlVWM215eWhPX2RNd0ZCZllFTjdnUjZlcGk3N1BKVVNSWEY1aEV1QWJaZw?oc=5",
+      "publisher": "Yahoo Tech",
+      "publishedAt": "2026-11-16T19:01:47+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Why AI Is Becoming Unavoidable in Everyday Technology - Digital Pakistan",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE11WlhKdmpTUGpmWWx3Tm9HdFpjTXZRMl9DSjBXUmdNMl9kNHowRGV0dkwzZ3VZbDkxU09Jb0FCZmtpRHMtRm90QkgxT3BkZmx5aUI0?oc=5",
+      "publisher": "Digital Pakistan",
+      "publishedAt": "2026-11-16T18:45:05+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "2027 Grammy nominations full list: Raye leads with nods in 11 categories, including Album of the Year; Beyoncé makes history - Yahoo",
+      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQRWJvSndzTVVwRzRUVHVkeS1iX3RibF9DZHdUa3J2OVhEMVo5cEpycHl4YzVzUTBTZWdJLXNRaU1td1lVbUJYMFdHcEp6WWVPam1aZjd1OTdfY1FtYWZQRFRvS1N6RDNFTFVoWFZQNWl6Mnh6R3MwN0YzVC1PLUIweElEQU02dXpDOXNxeW9pcFBDcE1tc01WdnpaOVBMTGZISmJLWk80UVR0aVdia1NOSTM1YTRXTGNlZkNwbVhOMDcxUlU5Tm5SSnRjUmNaTzlldG5kMzR2cEZ2dUhhWmdOZUdWaXFYWnBfVlZDMU9sRDNUdml2TlVLb2p3VUdGcDJPRnRjZzZlaVlyQjd2MUxVVHRNVTJ0ODF4cERUa0Y4dUpkTDNI?oc=5",
+      "publisher": "Yahoo",
+      "publishedAt": "2026-11-16T18:26:47+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "2027 Grammy nominations: Raye leads with 11, Angine de Poitrine score 4 — including best new artist - CBC",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9KTzFsRV9uRGJoUEdpT0htSFZHdXVsMUtlLWthbmFYdGFUUWYyUGhacnY4bWk2RkV3dU9iUGZQSDBLZGRlU2dSMUhoRWMxN0VRendSckRsMDM0X2tJLXBvcHk5ME95b29oTjhwTWQzNjFSNFJFenpqSTJpWQ?oc=5",
+      "publisher": "CBC",
+      "publishedAt": "2026-11-16T17:58:44+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Hrtz.wav Hits a New Frequency With Latest Release - The Knockturnal",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQQjRqNWtvYWExUG5YZG04MlZTWEQ2RXpZMlJkQUlkTlhGbTFZZkVMWHlHT0lDaEpLaDB5ei1GTFRYbGViRXRzWHp5OE13dlZqbGlydHRWNE92ZDVvM21GRE5PV0pSbFFiWVd0b0ZiQXF3Y3FvcGdhUXNrSGNIV0dzSG8wWQ?oc=5",
+      "publisher": "The Knockturnal",
+      "publishedAt": "2026-11-16T17:37:51+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Iress rolls out AI tools to boost adviser productivity - Money Marketing",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQ282UjMyVERpQ29QRTMwYkZhYTZ2UFBVMXRTMjdQX0xScUZMZ25ocVdkZFk1eGN2MU5UUEw1SmpydXR3UmFXTGRick10VDRHeDRGb0VwOXdhOXhhTEVOWnJ1OG0wRmhfeHVseEVSSUg4NncySzFtc0FBQmQzQjc0VWdkSVVBT29aU19aVFJ3YW45bzRneHlsVQ?oc=5",
+      "publisher": "Money Marketing",
+      "publishedAt": "2026-11-16T15:40:08+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers - https://3dprinting.com/",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLVBPc012eVVYaGRfVnllSWZPMV91aGRFdEsxV3BobW1STzJ2T1ZFMmFYRFVDZS1TMXNVeU1STS1PdUprcmQ3clI1Tk1OaWtubjl5UkxhN1hlZms3SDVmOVdEZGU1Q3gwUGZmelBOckVORTJRbmJ3MDZUVXlhUkVTcTRZRFRzTnZ6azB2U0duelVSZzNTNW9sZ2o5OE9NeTZJSGlpSTJvWU1kVUFmMnhnMzh0Vi13U0dfZEZxaEN6SnZpTzRiUG1aWQ?oc=5",
+      "publisher": "https://3dprinting.com/",
+      "publishedAt": "2026-11-16T15:10:24+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Anthropic Consolidates a Range of Productivity Tools and Functions Inside Claude - Cloud Wars",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPM0NwWU5mMmlqS3VoRHU2QmRSbzJ2T01IQWtZVGo0eDRvZUVtUmlSRi0xa0pfTXpjVnZqN0pQUXdkS0hfSDhEWkNmazZPaEtOMWVrTll3bjA5Uk4tYkVKcVNWMmsyb2R1QlVjM21hU0tWcVFQaUtzVEM4TUNrUUIyNTFVcmZvUlBQVFpyU0htQzA0WDdvSW01Skh6MXB0d0JlcGJLdkJ2QmlMZw?oc=5",
+      "publisher": "Cloud Wars",
+      "publishedAt": "2026-11-16T15:00:00+00:00",
+      "category": "AI·생산성",
       "region": "EN"
     },
     {
@@ -24,30 +186,6 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
       "publisher": "Rolling Stone",
       "publishedAt": "2026-11-16T14:50:47+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "BESTie’s ‘Love Options’ climbs to No. 5 on Melon after viral comeback - Korea JoongAng Daily",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQnlvNENRSmx2WF9JVFZvdnVRX25TaUpzMldPMEExZ2VRa3dJRW1yTTlJT2Q1Mnd1SjBQV25Yam9OVEtBYzVkcmZnckZTdXFwWUFOTjNrTjZENTA2dGJsRFpTUmpBWHRIbnJQdDl3eHhUQ3EwU2JCV3BWWWVsbmRUeTVJblN6NlZfSlo5REgwb1ZLci00VnNtZWc5VXh6Skg1TWYtdnpDZ1FyTlpFSjRjT1dtblhGQk5ZRWRYUG1VWjk?oc=5",
-      "publisher": "Korea JoongAng Daily",
-      "publishedAt": "2026-11-16T03:38:55+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "The Wildcard Club: HYBE Collaborates with Virtual Creators - 조선일보",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaUEwdGFPenhXdE5lV3RpSGdCendUWFMwM3hRa0lsbkxBVlo0d29ETHlSTVdiQVJ3c0RFWTA5MzFLamt6Q0dtMnRtb0J5b3Y2TUJaSEZxTHJmMUJ1LTR6S0MzcUhmU0ZfU29LUmNRZnZSTUNDbXhxUWtFb1pLTW9rTDdrdWt4Wm4wVC10Q0ZB?oc=5",
-      "publisher": "조선일보",
-      "publishedAt": "2026-11-16T08:58:49+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY - Spotify",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbHVaOEpFZzVuOXZOaWR1cFV2elBpN0JPLU1rckFOZlRvTDg0dTVXRlJ5TzBySmdlRzZRVmEwYVNPbkRUbHFvM29ZR3A1anpGSDlIYUJBOGtBSkJVaWhMTmU4LS1OcWFTR2cxR0w2X2NqbFRGQ2RhV09ER2ZJYmMyQ2R0RjM?oc=5",
-      "publisher": "Spotify",
-      "publishedAt": "2026-11-16T01:29:33+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -60,28 +198,228 @@
       "region": "EN"
     },
     {
-      "title": "ATEEZ Follow a Billboard 200 No. 1 With the Brass Driven GOLDEN HOUR : Part.6 - stupidDOPE",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNWpRZy05ZVZneXVaVXQyNGV5clY0bnprSUxfZmpMNHdJZEtVc3JyLTRJYlc4MGR6ZFlWbWFSbzRfUHJ3UVNnUmhYa2JkU3NRaGg1U3R1eXhFWnRJeU5GVUtFZ19QbEROM0ZMVXFzUXdpQ2xFQ1lVVGNMclZTR3pJYXM5NG5kdEs2UVVXUlk0Uldtbk1mbUoyTjVKTHNPRzcybmpGNDNpRkZrUQ?oc=5",
-      "publisher": "stupidDOPE",
-      "publishedAt": "2026-11-16T15:25:40+00:00",
+      "title": "Intel Xeon and GPU D-Series: HPC and AI in a Unified System - igor´sLAB",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVNpNlZwaG5fSGpmekVDR0w2dlRySnFvSDNPU2NPbXh0YkdDWjlqTHd5LWM0YnhWWXdKNTJmLXVNTnNrMnJhR08teE44SjZSV0dLbnp6MWNoa0JfanR4eUxSbDBQWHpFa0gwME1SVjNOLVV6LURxZTVWd2JmSndROEpRcXBuQQ?oc=5",
+      "publisher": "igor´sLAB",
+      "publishedAt": "2026-11-16T14:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "AI Performs Best in Property and Asset Management Operations - Globest",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPT2lRbDZOaWlCZlZMZi1hampKNllkeTBrbHE5TENCekF4THd5R0hsT1ppbzBVand0dllsU0FhcjczNWtFeGo3RWRESkxlN09NX1BFcXdidFFWUFJ5ak9BUmRwTS1QUlA3dDBDNzRJeWdEakZDMXRKRklzRmRUWlNXNjZQMDRlVXZKeks5c0NjUHNuX0p6MVVxLV9VRFU?oc=5",
+      "publisher": "Globest",
+      "publishedAt": "2026-11-16T13:39:56+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "How to watch What a Boss Wants in the US - UpNext by Reelgood",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5aQW1oVTVPWF9oYm1uVXlsOS00aFBMSEREYXZFZml4cVNlMFU5VEJ0b3Fzay1Jd19vemVvRXpidUp1TlY2RndlU2pndkJkTnlRNUV2c2xEUmJ5eVQyMUNXaVVSMV81bGlIZDR1ekx1UTVzOVhE?oc=5",
+      "publisher": "UpNext by Reelgood",
+      "publishedAt": "2026-11-16T13:02:46+00:00",
       "category": "K-pop",
       "region": "EN"
     },
     {
-      "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA - Inquirer.net",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmg5UnFIaHJKUlF6d21MS3RXV2thOTRXSW5vUjloZEI5bU5aOVd2TjdnM1lSTkR3cVVqcWlscHZ3QUJiSzBBSjF4Z1dmcnVOUnNLRThvc0plV1FPdE9TQnR3aXotb01OZXUwOF9vWC1TdjRvNHhpdl9seVpJeUx3b1JFNWdUVUpjbHhodVFqYkhBc0RTQkl6R0dMVdIBoAFBVV95cUxOSjlhMWRTckUyQnpaY1JtaGdSZXVCcE1lTXBqS0J4b1dHTFliZzQzbExfakl3NEl5b2FJVWFsbGFhcDZLSjk4Y3NoTXlEaEw4c3M1U3pJT1hkak02RExsY2RjQkF1a0lweUwyeVRwZkxJSlV0d2xxM0E1MFd6dkhGNDhKcTJJeXBZREt3T0hKdHU5TDFSaUlpcUFfNlV4NTdp?oc=5",
-      "publisher": "Inquirer.net",
-      "publishedAt": "2026-11-16T04:37:00+00:00",
+      "title": "How to watch What a Boss Wants outside South Korea - UpNext by Reelgood",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMnpBV3VXNXV4MEducFd1TEQwaVdEVU8zazZWWERVMDhQM05lTHBEVERuY2tBN3lmSUtZY3JsSFlfbmpmdG13V01CM1NqUVl3MUg4dzI5UDJ4azV5bzFIeTFtNlZYWFhob3VGZUVlZ296THluUzRkcE1COWJFY2R4VVln?oc=5",
+      "publisher": "UpNext by Reelgood",
+      "publishedAt": "2026-11-16T12:58:05+00:00",
       "category": "K-pop",
       "region": "EN"
     },
     {
-      "title": "Virtual creators team with HYBE unit NEWEPICBASE to release single and YouTube series - Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVkNxbnJyVUowQ083WHRiSGFtWHNERlBDVjVjSG1ndGoxMzZPbVdYNEk3dkROYVhrcWNHMWZOQ1I1MkxHWEpONUo2bzJPZ0dwMWpfamQzWDFIaFkxWnk2Q2xjQVowdHQ2ZU5KT0pVS215ei10dktlbHRKd2dHeWFwTi1CWGptS2pq0gGcAUFVX3lxTE9NazFmZFhXSmdCZnFKLTZuZ0JXODZyeVhuMkw1UUZEOWF1bWd2R1ZqRG9vYWNYUTBWQ2Q1ajA3WExDWlBzWkhOYy1nVFk0b0JuN1pMMzNGWW1rS1BtaGNPVGtEckJ5U1BsY1BBVVRhSEh1U1dpbWZwamxpM1FqRUJ0dHIwcTE2ZVpkMW55TTFoZTZsOXBfZjBBM21MZg?oc=5",
-      "publisher": "Chosunbiz",
-      "publishedAt": "2026-11-16T08:50:00+00:00",
+      "title": "Adobe and Google expand partnership to integrate AI models and creative tools across platforms - Social Samosa",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTldUb1RyYTJpQTNodEhEUmZsT0pMQ3U0TUlWUTViVUVqOTBMRkdoZF9uV2RFRmc3NFZMdlJKelJETnFBdlRKWC02eEFkZElhS3l5dTNfUlMwc0VxVEtuUWF5WVFyT2FVWHNxWnpyYXBLM3UtSTJFMGdjZEZlVWtzdnZ6TzBUWU5TcW4zYk1WdzVneWRQWFpmX0x5UG85VmZLdHB1UjlwNXhSeWZKdFBnSHFNM2lGck5ucTBmQmpB0gG-AUFVX3lxTE9OV1RvVHJhMmlBM2h0SERSZmxPSkxDdTRNSVZRNWJVRWo5MExGR2hkX25XZEVGZzc0Vkx2Ukp6UkROcUF2VEpYLTZ4QWRkSWFLeXl1M19SUzBzRXFUS25RYXlZUXJPYVVYc3FaenJhcEszdS1JMkUwZ2NkRmVVa3N2dnpPMFRZTlNxbjNiTVZ3NWd5ZFBYWmZfTHlQbzlWZkt0cHVSOXA1eFJ5Zkp0UGdIcU0zaUZyTm5xMGZCakE?oc=5",
+      "publisher": "Social Samosa",
+      "publishedAt": "2026-11-16T12:24:31+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "OTT releases this week (November 16-22): New movies and shows on Netflix, Prime Video, JioHotstar and more - News9live",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTThNQWlTUHRPLTdrNG9VNjdlcnlfYXhnRWRCZmpWM2ppa1hTV3RVNFJ1MkdVcFhmbGwzRUpzN1FoekRzMXRyR0R6RlFLTUU2cVdTVHlwWjR3X1dhdHN6ZzRzZUZzWUs2NTB2cEMtdFNtNE4ta19tM0dBaDVuWmRGeWtUTnhtSFlzZHdpdjNPeWdYUGp1RUR6a0hFS2tUWGM?oc=5",
+      "publisher": "News9live",
+      "publishedAt": "2026-11-16T11:59:19+00:00",
       "category": "K-pop",
       "region": "EN"
+    },
+    {
+      "title": "Streaming: What to Watch This Weekend, November 20–22, 2026? - Sortir à Paris",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORUFwZlNqS05ad0JlMUNyXzBod0w4eGh4cENSejlnazhhSkRVVnJYVGF5SThOT0FWdFRST0Z4ZERBZFg2MDRCQUFvLUt5azNCb0hObEZldXNBUWVVRVFNamZkOXcwcHJtQ2wyWWt4b3N4SDVwU1hLT3JlT2pER0E1RnhlbUV1OTI3REdlT21PcHp0Rmg1aEh6SzRNa1VuWnd0cnNudktZT1oxZ0dmbXVFdENQR1hmZVFFZk9McXFDUE9BUy1QZXRCVGU1X1JCc0ROamc?oc=5",
+      "publisher": "Sortir à Paris",
+      "publishedAt": "2026-11-16T11:46:15+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "OpenAI and ServiceNow expand partnership to connect workflows with ChatGPT - MarketScale",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZVVTNkYtcVhycmtXS3c3cWR4VzNoRExDdHpXWmM5ZExxWC03cXk1MnRUT2x6VHpZVjh2cEhuSGpLbWFXMGpSd25xNGhFTnhMbzdjRThnYldlaEtfSUtoeWltNmE1dkg0TUZ3dFR3Y2VnY2ZxbmJxa2ptTklBdVVnUmx1aWdNUFprMlVqanVGNnhLWURXYW1wVDE5ZUFGbWluajhUNjE3ZDU2aDliMnNia0JvNHE2MlpnTG1yRHdBeFZTcDZhV0s5Wm8zdlo2Q2RfWkpj?oc=5",
+      "publisher": "MarketScale",
+      "publishedAt": "2026-11-16T11:22:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record - DailyDrama",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdmpTQWNkaVprWERqSFFjaTJvRElPYW1mS2FzQkstdVAwUnNEdjJ6azZ3QUh4bU96SzMxMEMwa0JqcWxGTmloSEItVmtRUWZTbmVacWptOVZBRG1qai0tV0N2MUdkVFpvX05LaFFmeFF0Y3JZdFA1bjZVN3NPeEpVNWdvQ05iTm50OFNmTVc0dmRBdElp?oc=5",
+      "publisher": "DailyDrama",
+      "publishedAt": "2026-11-16T11:00:51+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Zoho Introduces Blended Agents to Zoho Desk, Combining AI Execution With Human Judgment to Help Businesses More Effectively Resolve Customer Issues - Business Wire",
+      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOSEZ2VzI4amoySTVvZ0NNeFpHMDB0aVdOd2hhV3lNbW5JRERPOU04eFVzSEF5QmxBSTVWeDV0UGhlanBrRXAwNlVNUl94bzJyNDlldTUzT1ZvWENUX29VTU5adlpVTTVXTUFuX0VSNzRxdWdaeWFEcmJhdDZNSWQyRlZzRzlQV29KdDduWFNPMU16aUlVckUxeHVROXo2NjlOWEVlb1hCMDlfV1hKUlRxLXc1SFFMcmQ1UDF1WVd0emxoZFY3VWNBdnIya0w4Um9uQzV5ak53TDJ6TTBTamJDcGJrMUlUNTV2OG9VTElJUEozNTM1d2xiRk5fUEtwaG92STNFZnFZdVJrMlNPanRfX0gtUHYxQVJ1Qk5IWlQwamFmb1ltemprbWRPRQ?oc=5",
+      "publisher": "Business Wire",
+      "publishedAt": "2026-11-16T11:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Adobe Brings AI Agents and Creative Tools to Creators Everywhere - MarTech Cube",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPV2x1QmR3S1VCdG5CYjhiOGttZ29XaTFpTm9IVC1Wa1J3WUxHejRsMUZDNE5tY0g1MXFJVVRoWExSZkZxcFI5TzBKLUJTbU5hcFNDaGI0eWFyT19tU2dYOFA4aXNhQkpHRXkzdXVWS2NabmI5WTByQU9MUFdzdVJoTFpfdUJzQ2M4UXNhbmRJTUJMRXFKNFNGZA?oc=5",
+      "publisher": "MarTech Cube",
+      "publishedAt": "2026-11-16T10:58:53+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Anthropic Adds Whiteboard, Spreadsheet and Data Features to Claude, Taking Aim at the Office Productivity Market - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJSExtRWhXRWFPY0pJVWRIYld2VTE0WjhWSFQ0MTloOV84cWM3VlpSU0RsQXdGdWJwR3FsQWZGVkR5MV9CSy1DcGtoSXA2LVZSdkhQYjFSUFVFRXhfU1RYWnlQelV1Q2lqZVJMUGcxdEhxeExSV1E?oc=5",
+      "publisher": "BigGo Finance",
+      "publishedAt": "2026-11-16T09:50:05+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "TOMORROW X TOGETHER — K-pop Group Kicks Off 5th World Tour in Seoul - The Korea Daily",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9CWGhIcTdvdG9Kcm81V0hZb0R3X2xoQ3VSd0RnMmxidFFOY1lPU3lHdnZOWXA3cHVRWkw0ck9pU3R4ZUZHcXhNbndBR3NTSnRlbkduYTRvLTJJY0IwOGN1aHhQNDIzR0xfbVdfd29R?oc=5",
+      "publisher": "The Korea Daily",
+      "publishedAt": "2026-11-16T09:10:26+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Good Partner 2 and Blue Road both premiere Nov. 20 - Pirates and Princesses",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZnZweEYwdzJMekVCQ3VEbDBqbFJiR3NSY05ydlNHQlN1UU9IaTB5SVQzRkQ2WGo0TkZzdGwzd3gzTTFGcWF4aGlKRGhrMEtQRGFPZXhldlV6MUtRbk9OS1hWNVhLRUh6WDkzNlhpdHA5bDEwdGRtTkJvN2FJZmctbXlBMmRBbEtkUEsw?oc=5",
+      "publisher": "Pirates and Princesses",
+      "publishedAt": "2026-11-16T09:03:48+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "[김포 소식]온라인 주민 의견조사…“우리 동네 돌봄, 여러분의 의견을 들려주세요” 등 - 프레시안",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1OZ1VhcnFaaTZLRnlOV3hzT1JxZTd2MmR3bGdQaWFTcmFqTU9zd09yMHI3LXVRM21lSTd4cUdZUm9ERDhZajg0VmJaWTFGWHhJRDNYdUNQSDhXRlBqMFJ4NEh0MDlFZEM5eld3?oc=5",
+      "publisher": "프레시안",
+      "publishedAt": "2026-11-16T08:34:30+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "[공식] 김지수, 체코 프라하서 여행사 차렸다…유이와 ‘솔로라서2’ 합류 - 스포츠동아",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFByZERTV2JrTk56X2xRY2FUWXdPZ2pPaWpNQlpDcVdEZHNneVphTzlCbGc1Rmc4Z05HT2dCTWtYOUR1ZXY4X1BsNkNvalI0aFZPRjR5WXkyZS1FaE9FMVpYSkRrT2tqNGd3Q2NjUzlR?oc=5",
+      "publisher": "스포츠동아",
+      "publishedAt": "2026-11-16T07:40:47+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "조진웅 이어 고경표 잔혹사…tvN, \\'보검매직컬\\' 편성 위기 앞 골머리 [이슈&톡] - 티브이데일리",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE02TFV3NEtGNE9YUlZpX0QxeTk2aFgwOEQ0ekVoOGlXcnN1MzZkcGlGcEtRYWpjeFkzbjJPSlR6NWVyd016R0JGem5BSnBxMnIyS3h2UDk2cVNqNFhlYkE0UzFzRi1nUzJkclFmR0lDb1I?oc=5",
+      "publisher": "티브이데일리",
+      "publishedAt": "2026-11-16T06:56:43+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "THE SIGNAL IS LIVE BINI announces that they will be releasing their album \"Signals Deluxe,\" which features live versions of tracks from their \"Signals\" and \"FLAMES\" albums. (Courtesy of BINI/X) - Facebook",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQV0lsRVR5Mkl4cTZkT3JRSjFEZjViTy1FMG4wUXFRdXNESkxwQ2xBTUx6TG9MT2ZRc1ZPd3lKWFEtckNzN0g4SlMtSHYzWnpaRnRMemJySXZvYXg2ck1IVGR3U21WTVp0dzJiMGphdGRfR2JaT3VkaHFJWEJCbThhOEw4OUplTmFzWG1vVWZKT0VIczZLTHZGOUhrNzJ0T2VUaVNFYi1TTHoxcFpOMDdMV3V5aW5nbEFrUTdva1BUbFB3ZFZ2VVVwQ2xWNHFITk1rbTVRM2h5QU0?oc=5",
+      "publisher": "Facebook",
+      "publishedAt": "2026-11-16T06:55:54+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "이영애, MMA2026 초록 드레스 눈길…유지태와 25년 만에 '재이의 영인' 호흡 - https://www.diarypoint.com/",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE04NHlCejJyZm4xNWt3QlhDOEpyTjFOTF8zY1N6WTFwRjdYSnBrdnMwdk1SNjZqRkRkMll2V0ZvY18tMWZkQkVLam9Fa3NDQk5lblZEODNiampNVUJndnVmTEhXRlRUZEo5bVRj?oc=5",
+      "publisher": "https://www.diarypoint.com/",
+      "publishedAt": "2026-11-16T06:03:00+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "'비서진' 16회 연장 확정, 김종국·블랙핑크 지수·화사 출격(공식) - 조이뉴스24",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBrbE9xenYzbHdyOFpKRXpLR3FubVVUbzd2eG1xWWtFQVUyY0tTRWlKYUhha0UwOUM2THpKd29abmF2b1BCc0pfMmVTRQ?oc=5",
+      "publisher": "조이뉴스24",
+      "publishedAt": "2026-11-16T05:07:00+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "Doctor X K-drama finale ends at No. 1 with 15.2% ratings - Pirates and Princesses",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaVVHaURjb05aVE9lSXp5NnR4Ynltb1JGbXVkdU10TzBmNUYzOF9VM2N6Tk5VY2JaeVFlU2twNlJGOGx2cS1OWC1GOEVGb1liWkI0N01KaVN3a0p5MzA2MVR0TjlHWjdnWFhCMVZkcE9JVzhQYm92R3d6QjBaTW1uSDlTQ1N1aXBzcG1QdVdUVXJJUQ?oc=5",
+      "publisher": "Pirates and Princesses",
+      "publishedAt": "2026-11-16T05:06:41+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "AI Training Data Companies Overview in 2026: 10 Vendors Compared for Buyers - Memeburn",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBRRVNwQTJqZFlScjhxUU9tNW5iOTh2RVNRVEQ5c2lIdzg5Nkd4Sk1SN3pCYzFPUFNIeU5OWFpZRmFscGxad3VXeTFPbldkX0NFbjhjTGVoYmROSlh3?oc=5",
+      "publisher": "Memeburn",
+      "publishedAt": "2026-11-16T04:12:55+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Legal Workflow Automation: 10 Best Practices for 2027 - Lawxy AI",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObVVHV005QWl5Q05oUlRrWkxNeTJfQ0thYWIzS3RiLTg1Um9pZkU4cjNuUGF3T3JQTEZ4ajNnVmJEdVVUSHY3NFRFZWFMSWhwZHFUdDFTalZXUTYwLVdzeG51c3pDR0t3Zkcxc2VkbDgyaVRWelBqRHlTZHV5eGhfelZCbmstOXdxdmNoaWR3?oc=5",
+      "publisher": "Lawxy AI",
+      "publishedAt": "2026-11-16T00:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "성의·임경신 신작 '양경십오일' 20일 대공개...기대감 높지만 전작 성적이 변수 - 뉴스워커",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1sMjBzR2plWC00U1kxdEk3WVBWYmJhejI1WGhwVi1zYjJmMDI0Y3B5MUxwd0VmUHVjdjBOclpDMGlSN1ltVEVHVGN4akRxM0R0OUdidEwyUVVTMXpuRi05NU9WTHo3ZW9fWnU2LWFwR1DSAXRBVV95cUxPVUNJY3ZYYkFWYVBLZVdQTy15QklRaEdaWTdqQ2FYbVp2RXlhaHNqeWg4ZlJsNEIzVzAzSVgxSk9UMk1BU0NuNUpkTGNtMVNLRmdIcHR0ZWR5SnN6SzJhRXUzOGFmNGp6OXNUNTNhOUwtU1BFTw?oc=5",
+      "publisher": "뉴스워커",
+      "publishedAt": "2026-11-15T23:19:19+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기 - https://www.diarypoint.com/",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBWY25WN3U5MHM0M1p0dGkxT3dtUV9OUUg1YTc0Yzc2blVBY2YydklrNEhZMzJDVkFDV0N2UnpXbEVER0FZWVRQMkNkMm5KRjNLSlFWYWZxdkRMYU1YZnNkclU0Q1VOeFB6RVdV?oc=5",
+      "publisher": "https://www.diarypoint.com/",
+      "publishedAt": "2026-11-15T23:10:00+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "대출 받기 힘들 땐 ’1397′ 이용하세요 - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX092T1lxbjZobzhidDQ2UHZvVjJIMFpkQXFoM1lGb0wzdExFU3Jlck9YY0RIcGJ0MUhZU3pXS3h4b2NnWjJvLW15bmprczVmTUtxclZabS1xMnE4QW0xYndudnZTanEwNVBnMUxEM0Q4b2xDUzZqSnhQdzZBVGNrdFN5M3diUTJraWc?oc=5",
+      "publisher": "조선일보",
+      "publishedAt": "2026-11-15T15:37:00+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "배민, 외식업 AI 활용 문턱 낮춘다…따라 하기 쉬운 실전 가이드 공개 - 잡포스트",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5ZMEdZemVhcnRoVVZyeWNMRnJ4M0JybE1hWHpvMFR4VlVaZ0FIVE0zWDdOcDA4Q0VSZ0Q3blVkRVFqcDBUX0lJZGpMMTRZRGx5OTZmTTRKcnpOODVSLUI0QUJxeGdSRjk4MDBSVHYtT1Z0QdIBckFVX3lxTE5ZMEdZemVhcnRoVVZyeWNMRnJ4M0JybE1hWHpvMFR4VlVaZ0FIVE0zWDdOcDA4Q0VSZ0Q3blVkRVFqcDBUX0lJZGpMMTRZRGx5OTZmTTRKcnpOODVSLUI0QUJxeGdSRjk4MDBSVHYtT1Z0QQ?oc=5",
+      "publisher": "잡포스트",
+      "publishedAt": "2026-11-15T11:54:51+00:00",
+      "category": "IT·AI",
+      "region": "KO"
+    },
+    {
+      "title": "고경표, 음주운전 직접 사과·활동 전면 중단…출연 예능 편집 비상 - www.diarypoint.com",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE56OV9QeXYwZm5yV0ZRSDhlLW9FWVlUN01aWmVMR1VVZ09yMEk3UHRaSmRnUnV5V3RzUkJoQURLVmo5dVRpTTJkWW5UbkRXT2YxbjVDVUJSOGVOVjEyT1BUYXFmUWlqeGVBUnJJ?oc=5",
+      "publisher": "www.diarypoint.com",
+      "publishedAt": "2026-11-15T09:21:00+00:00",
+      "category": "연예",
+      "region": "KO"
     },
     {
       "title": "Upcoming Concerts And Festivals In Singapore: Dates, Venues And Tickets - Harper's Bazaar Singapore",
@@ -92,151 +430,173 @@
       "region": "EN"
     },
     {
-      "title": "TWICE's Nayeon Has a New Identity in \"NA-sty\" — But Who Is the \"BABY ANGEL\" Taking Over the World? - Dojeon Media",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTVZJUFlBTkVRdldZdml1X2s0NUczWDJ3Q1dWNDI3N1dKN3J6anZ4bTNzMnNabVYyRGFBQkZxcFNCUENfN2tWQm1zaHFmcGVjRG5IX29WOGh2WEFib1dMQjFiUWE2U0NDSlBzY1NEbVI1RFp4WXFzVWJHWEpwYXlXOXF1c3NGQVV4WndDYk5oZy1qZDlneUh2d3JteGlaUjk5VUowQk9xTW8wVk5mNThsRjhSTjVFZnNGOE1vS1Qtb2xsdw?oc=5",
-      "publisher": "Dojeon Media",
-      "publishedAt": "2026-11-14T12:03:22+00:00",
+      "title": "LNGSHOT reflects on sold-out world tour and new album in Germany - www.famtimes.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAzTy1xd3BvRS1qYU1GcWJGU3BGNDRDWEZsSEhjRXBRTlNkVE15anZfVEhsSGlqQUREWC05SEJxQ3JKM3dlMWdFWlJGRG1ONUo4SXFlREMtUk95ajN4MmhxZVpDOXJhN3gyWkZmZDFTOWpjQQ?oc=5",
+      "publisher": "www.famtimes.co.kr",
+      "publishedAt": "2026-11-15T05:41:44+00:00",
       "category": "K-pop",
       "region": "EN"
     },
     {
-      "title": "日 배우 나카다 노아, 드라마 방영 중 사망..향년 23세 - SPOTV NEWS",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5mSDBLcF9ocHJQQW5KVFoxS2tSaDRVcFh0bVM3cFdQVmFYSHpfdDI1OUJ1SzRBYXJSTzJPNnZiVEhuYXpjb2NYdG1BT3pwX2RQNjRvZHd4VlExNC0wM1FxZTdTNENEU3NuUVF2QlZxR1E?oc=5",
-      "publisher": "SPOTV NEWS",
-      "publishedAt": "2026-11-16T10:58:08+00:00",
+      "title": "‘재혼 황후’ 이세영, 패딩 입은 라스타 독기 어디로…미소 뒤 두 얼굴 알고 보니 - 위키트리",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tWDhqbWZ6WFpLVVdtbWg0N05iM0hURTEzempCZ0E2dGRzNXV4V05jWXp0ZlppcG5EMzk5aGNJUjh4LVpLdThIWEt1cVViQlZMY0lybm9n?oc=5",
+      "publisher": "위키트리",
+      "publishedAt": "2026-11-15T03:30:00+00:00",
       "category": "연예",
       "region": "KO"
     },
     {
-      "title": "일본 배우 나카타 노아, 23세로 사망…'울트라맨' 출연 중 비보 - 인터내셔널포커스",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlSjhhOWk5Wi1LU0UydzNkbXE3QXBCa2I1bzBBRWJPUkN2QXlfVFdYUmFndFZDT25RTDR3X1RZUmdITm9SelVtM1RJWTZpS21XMUNTbDJ3?oc=5",
-      "publisher": "인터내셔널포커스",
-      "publishedAt": "2026-11-16T10:50:26+00:00",
-      "category": "연예",
-      "region": "KO"
+      "title": "BTS, aespa take grand prizes on MMA2026 opening night - The Korea Times",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNTBGejJZWGRhMnhhQmpBSkFDdXVNUVBNQldBV3FtTUxEWU1rUjVPYi1oaDNPWGwxbHFvaW94eXdwOUNwOV96M00wRWdVdEVULXdtYTRxcTN5UjJ0d20zd3lteHRYdVdiQmJCa1g1RlFSdjFGYkNoYXU1azd1c3lTX2tweTRBRXo3TlRKbFhmNWRYT2tMTXI4NE9LYzZudVN6WW9xbDJ4elI1OTF5Z0k40gG0AUFVX3lxTE4ydS0waWo1QnNCUVgzQ3RSeTZNSkY3U0lMZzdVX0tBZ0xzaEJXUHZNNTV3NnV1WDhGcmVWbjFKWTdaRjh1MmxJUWJGaktkYUM0R0Q5RUFSazJuZllLRG9Gc3VNR3JnWjNFUEc2QWlybl96T2pPZWFKTXRRMkR4eThhYmdETEVSQmhXUFNnZVhqc2hScGZreG1Qblp1UUJ1SGhNenBfa3pSTGdVNnQxSXA4UzF6cQ?oc=5",
+      "publisher": "The Korea Times",
+      "publishedAt": "2026-11-15T02:35:03+00:00",
+      "category": "K-pop",
+      "region": "EN"
     },
     {
-      "title": "`23세` 여배우, 드라마 방영 중 사망 비보 - 마이데일리",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93eFdIMlU3dkhEdFZCMlVNODdzaXhHUU4xLVpXbXY3eWx5V0NqM0JlRWpDRUFVaGtKV3dUOUNkVklwNHQ4MnYwYUs5VXZaTGVWaWZvMFpDQWdBMElQck1Vdw?oc=5",
-      "publisher": "마이데일리",
-      "publishedAt": "2026-11-16T09:54:22+00:00",
-      "category": "연예",
-      "region": "KO"
-    },
-    {
-      "title": "임현주 아나운서, 13년 8개월 만에 MBC 퇴사…\"회사 밖 세계 탐험\" - https://www.diarypoint.com/",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zRXdzcXlRWURCTXB1Mm1UZnJSU0k5dlpDMDNkNm9jRG8xYTNxaUNHWUtMMEVOaVhvbmFaYThXVng3Vi1SQmY1c1dKS3oyeGN4anB6b09FOVNRbjBscW9TMzBFeV9GN19oTmd3?oc=5",
+      "title": "'놀면 뭐하니?' 고경표 긴급 편집에도 김희선 효과…시청률 6.5% 올해 최고 - https://www.diarypoint.com/",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1TeWc5M25lM3VwR2llcWczaHk4S2pzdms0aXdNaXNFbG9wZ1BGdVZBa0RVREZnVnFGeWFqbVpxSFQzV28yN2Y1R00yeEQwc3haRzRTWTBoTGxBWF9JVDJvT0xOS1JoR3pUTzUw?oc=5",
       "publisher": "https://www.diarypoint.com/",
-      "publishedAt": "2026-11-16T06:17:00+00:00",
+      "publishedAt": "2026-11-15T02:26:00+00:00",
       "category": "연예",
       "region": "KO"
     },
     {
-      "title": "[공식] '프라하 여행사 대표' 김지수, 연예계 복귀 소식 전했다…클라라와 '솔로라서2' 출연 - 텐아시아",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9QVXNMVlhWWlpTWW9PaUNNa3VRTXBsWVIyVlljdnd4dThJdUk5UjVabzFZaU1ROUJNdUZnSU9FU2NsZ2pqbnV3cThwRHM5cmJEMkl4RXBGcnZBTEk?oc=5",
-      "publisher": "텐아시아",
-      "publishedAt": "2026-11-16T04:59:00+00:00",
-      "category": "연예",
-      "region": "KO"
-    },
-    {
-      "title": "League, 안전 제어 기능을 갖춘 헬스케어 AI 에이전트 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObkZIZEJWQzdyWXJ0NTJQVE8tekR0UC02WFRRUTVqX3lFMXZwWUszQ3p4VWd6WnBrTXpkcHhXYVFldDV5RTNmRHd1WWUyR1JBZkRzVTVEOTZaSk9lbTl3MUIwNU9yQzhvY2xlcE9HZ1ExSFpWekdHU0ZiR0FkOGZnenhZOGZYS3ZjZVE?oc=5",
-      "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T19:08:02+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "Cerebras, 웨이퍼 규모 프로그래밍을 위한 고급 언어 Tungsten 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWDV4enBxX1V5X216WE1YTWZDZ3QwU2wyUzlFWnJDZjR3bjh5S0RITkNuZ1NpYjVMVmMyeVAwX2RlUWNqbzZRekwxT3hVYll1bnRTWkw4NFRJbUFzWXN3T2MwNERxWDB3cWNnWTdjaFdMdWw5SXFOek0zMjRuWDNrcW9qWEhZeXNoSDc2U1M1RlpHeXM1?oc=5",
-      "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T21:22:03+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "일레븐랩스, 회의 기록과 받아쓰기 합친 팀용 앱 공개 - AI 매터스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0yUWpJdXBRU0JrakY3OTM5ZzVlU0N6Z25LTjRmRGUwclhINVpPLTkzX1dDNmQ2MklVb2ZxaVg1aUctajhoM01xWGY0Z1ZVLWJwbU4xYw?oc=5",
-      "publisher": "AI 매터스",
-      "publishedAt": "2026-11-15T04:45:41+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "Perplexity, 웹 변경 사항 감지 자동화를 위한 Monitor API 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSWxReVBVSEp2dmh1UmJSdW9ucXNXYkZZUUVVR09UWVVxTDdMV2hOR2lIVktnSmIxQkJsb25VaG1JWndZSGRaZk5qOEk5bkRqYTJXMklFOXRlTzFSanZ6NFZjY3UwTzA4Vm9BVGdzZzB5YWt2RlRyZVV3azRRMHR1RzdkQU9Fd2VUSVpRZW9vSG1fTjg?oc=5",
-      "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T19:43:02+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "베트남에서 새로운 젠북 14 출시: 얇고 가벼우며 배터리 수명이 길다. - Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQeGVLU3QxQlZxMldQWVhzOXljUERVY01NcHcxcGxIWkxXaEFyYndrZmg2U3N3cWR6VzBXd090QXNPdTkzVi1ySk5HTFN5RnRZb2lTc1dGNUV4cHpRNmpCc2JtQlJncjFTeUxrcEhMSlVWdHgxWjRjY0FCcW9sc3dhN3FkeFZ2UlFBM1BGU3RhU0Y?oc=5",
-      "publisher": "Vietnam.vn",
-      "publishedAt": "2026-11-15T08:36:38+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "Scale AI, 병원 운영을 위한 AI 에이전트 5종 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc3l3dE1Sc1VzYXhXUFZFYWd0ZC1WNkpxQjBjYlVsdmVsUGE1RVBZeUw5SXpwMVI3VDhsY2tMYmdXZkdXdEJXcFpHMkIyeE1xX0ZMbUc5NzRka3U5UkJTdkdUb09lYXpHN2NyNWhvb0dfbVpxNGlKT1hMZjNhVF9VOGRQTWthWFRf?oc=5",
-      "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T13:14:02+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "Teledyne LeCroy, AI 스케일업 네트워크용 800G UALink 테스터 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVWsyUUFLaHR0YTJBbV9sM21fVXU2dnNicDdtNHlGUk1zSjk4YmViWENGanAzaTJSVVl4OHZ6Qk51eTZwaHhnUVpZZGpWY2hFTUVHeDdDY3pDRW8wOVlqbmpYLXhVR3FVQUNMRnRyQVhXa2xkLUcyZWNOOG9sNDNCS0s1OTNxSXQ3WkhSUjVlWk5JQlozUW5ZdA?oc=5",
-      "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T19:19:03+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "유아이패스, AI 에이전트 플랫폼 고도화...데이터 연결·보안·배포 통합 - 더에이아이",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB1d0h6Y1duYlRtaEJ4cmpTREpYNC12Q3lucEswRTV5TW9hNjhkdGZSb1I4TEVCYzg3N2pGY2RfeWw4ejR1bUlJY2VraWI5TVlsdGJrQVZPd3BqcHVwWEJpYktWNG1CTElPR1RF?oc=5",
-      "publisher": "더에이아이",
-      "publishedAt": "2026-11-16T05:45:07+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "AI 코드 검증 속도 못 따라간 기업 76%...보안·품질 위험 막을 자동 검증 시급 - 지티티코리아",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3dmVTeVFBbkI1ajV2M2Z3QWJlaEw0aGQ0QUVKcTBQc3pUQ0Y3QXdYSnh1M21FNjdvS2ZZclpKYlY1djBGdTBFZU84YmpZV3VOSHV6UHl4TVIzb1hKS3ZTMGI0dTVLWEZUTVE?oc=5",
-      "publisher": "지티티코리아",
-      "publishedAt": "2026-11-14T15:30:00+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "[심층분석] LG유플러스, 네트워크·보안 통합 플랫폼 'U+SASE' 출시…기업 보안시장, 개별 솔루션에서 통합 관리체계로 전환 - 뉴스밸류",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5jZ0szalRKTWE2eW1IMlpNSHhfQmo1Q2p3S0QtVDh1TFJvOW1NaGVseldkNFRMZGwxY1JpR015djZFUGt6elRzR1JjMndmTTdqaFJ0YzlOV3F0bGxJTXJ5UDRpUXpPa3dtM3c?oc=5",
-      "publisher": "뉴스밸류",
-      "publishedAt": "2026-11-15T23:30:00+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "NVIDIA, 과학 연구용 Nemotron 및 개방형 화학 데이터셋 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPX1BwSU0tUXpFSVFVMVFtSzIyOGtMLXJidXJGWW9qNm5FRkhYallRcFN1RFlNblVBb0pabk9Sd1pWbkVwUFFBZDIxLXd2M0drenhocjlSVnBENmctWUVrbmFCUGFDOVVGR2lTRmpaQ01Md1hOLW5NcE52Si1mcC1jbXd6X0NLTWN0LWU2NmdlSThMdw?oc=5",
-      "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T16:56:02+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "파이어웍스 AI 경유 노션 데이터 사고가 드러낸 AI SaaS 공급망 리스크 - 한국공공정책신문",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFAwYjZBVE15NFVzREJ5azFSUVByclBWb2VvVDdvVzhQUk5MNGJkNEtKU19Dc244VHNPV0F0NXp2c3AwZ2s?oc=5",
+      "title": "건강·주거·돌봄 어려움 겹친 위기가구…복지서비스 연계체계 점검 - 한국공공정책신문",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1pQ3BDWkFKU2hwQnRZUXpZeUNtQmdUZnc0V1cxeG8yV0N6RGt1RGhFRWhrbk5iWm9JSTVLOHdTT0JzOGM?oc=5",
       "publisher": "한국공공정책신문",
-      "publishedAt": "2026-11-15T03:22:39+00:00",
+      "publishedAt": "2026-11-15T01:32:06+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "History of ChatGPT: How AI Changed the World - STL.News",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBvbjdERWhLejFZeDVmejlTUFk2OVBzUUFqN3c3NWkzZDA4UU5ETnY2bWdiTl9IOFpBeEtQS2tiLXdfT1N5Uk5MN2lBT01SMjBrTmlTTERUQlluUDhfM1pTRG9LSVV2c2JaZ2xISDNPcHpRMzA?oc=5",
+      "publisher": "STL.News",
+      "publishedAt": "2026-11-14T20:36:14+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSmZFbFBPZ1U2ZGdqemxYUDYtZjF0TFNOOXFfcDRmUnBpS1k2WjZZWlhYU2hyNkhKSURhbFAzLXRCN0xJVHhla1BzdHFXZkJkVERsd21qRTJmZFhCcEZNeGJyR3ZjeHREYjNNYjlwY2JfMGViN3lWRllzNkpOaWl5UTBnRFJmZUtkekpmbGxvQnlCMU5EYmZBUjRGSGs1eVhVOUtCQVRrMEFkNGVkSDNvOTVkaVdEQTRZZEhQN0VlVVXSAcABQVVfeXFMTkpmRWxQT2dVNmRnanpsWFA2LWYxdExTTjlxX3A0ZlJwaUtZNlo2WVpYWFNocjZISklEYWxQMy10QjdMSVR4ZWtQc3RxV2ZCZFREbHdtakUyZmRYQnBGTXhickd2Y3h0RGIzTWI5cGNiXzBlYjd5VkZZczZKTmlpeVEwZ0RSZmVLZHpKZmxsb0J5QjFORGJmQVI0RkhrNXlYVTlLQkFUazBBZDRlZEgzbzk1ZGlXREE0WWRIUDdFZVVV?oc=5",
+      "publisher": "Simply Wall St",
+      "publishedAt": "2026-11-14T20:20:17+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "‘MobLand’ season 2 release schedule: When do new episodes premiere - Lifestyle Asia Hong Kong",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMHFHWG40WERsM1BQQlNoUW50QnhLX1JzSXBPTU5QTUR3T1lJT2F3bEJjVS1NY1RReVFWaVVIUUdMX2ZGZ0xSazNFSWZaR0Z3YzluV0szRFJlelpCRWpCN3pWY01rOVI4STVrNXh0QUZMQlotVFF1RTF1OENNd1daeVBLQ1BENVhhMTBCa1dHY2RUaXF3eDFlUTJIdFdURWRVYlhlTUJRUWkzV2hpZDVVLXBsakVORElMSXVTbUlfQnNhUQ?oc=5",
+      "publisher": "Lifestyle Asia Hong Kong",
+      "publishedAt": "2026-11-14T18:48:00+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Notes app in iOS 27 gets notable upgrades: Here is everything new - آي-فون إسلام",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVXY3U25jcVpxcGYzdXVzLUlKdWY2TTdNNVlfNC02NkJlVmVXOWVkaHZvOUt1NEtUWTdfYmpFZHhBRmI2TDZzMElxUmhNcjRPejFjQU9PR05LWGY5Z0M2S3hua0VManJ1YVowbWs0V19HdnlQYlNuSC1uX1JBcE5VX2RjVlRZMk1YZ01kbGdWd2RVOTlpYVRPUTVVTG1KQ1VEU2NPTUZ2c3F4SngwNFZkZkUtcXdyUQ?oc=5",
+      "publisher": "آي-فون إسلام",
+      "publishedAt": "2026-11-14T17:57:42+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "고경표, 음주운전 사고 당일 '놀뭐'서 사실상 삭제…개인샷 실종 '초고속 편집' - 스포츠조선",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORlpiRVByRW96cGh2U3JGdEM1X1N3UEptSUEteDZqbE5CcS1LdnF3V3gwY3dWNWV4eFpUWXZrUk1iVXNHSl9YRjk0NkVpbTRLeXRSMjRzNFNaODRhYTVkd3ZjR21fd1JyWGdocVJDQXdIaUZQZFJ1NnF6azVnNU5uVEpucWE?oc=5",
+      "publisher": "스포츠조선",
+      "publishedAt": "2026-11-14T10:12:32+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "NAYEON IS HERE! 🤩 WATCH: TWICE’s Nayeon shared with ABS-CBN News her favorite memory with Filipino ONCE and teased what they can expect from her upcoming release, “NA-sty.” Nayeon is set to hold a meet and greet this Saturday. | via Anna Ce",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPM3ZzVTcyWDNMRmtXLU5NdUZ5bW80SW9YVGpwempJajRqVEJVb01wRXp4bVZmR1lRQmNLbUtQclhGajBOUkhwT25sTUYxdFNUS2l3WmdVQW03UE1relctUUw0SllPdlhvSTlwZGRiU1h0aVdEZzZIRlVSREVteWFOcnMtSGJiaXBZLTdkVFRhZXR2WjJsQmVZQUR5aV9YRlRJU0g1ZEFtNWVwYjkxdVZjMURETW5fU3ZkUk9GZkNjUWs1aGZjeFdjajJLUk9xNnlmMGxKZURhT2Y?oc=5",
+      "publisher": "Facebook",
+      "publishedAt": "2026-11-14T10:08:04+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Best RMM tools for MSPs: features, AI and buying criteria - Acronis",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1KaEpCTWIzeFJQYl9abzE1bHk4Q1lpb2hPTzFxc2VWQXU5RnBKVGhXcjhSQkI1YVMxZVBELUhFN0RJclA4YU9ET1c3S1RhVmYzY2owX25DSEUzeFJ2a3BDT2xrUXd5MnYySFJ3MWRsV216NFBi?oc=5",
+      "publisher": "Acronis",
+      "publishedAt": "2026-11-14T08:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "AI-BOMs: A Practical Guide to AI Bills of Materials - wiz.io",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PZ1k1WDRLQWYyUmg5R0xoUEpuZGwxTEVuN3Jrdi1GcXpNZUczMktoTk5yVFRLdlVIalpxdEJWSWp4X0thUDNUU0REZEFYdGtLSDgtYS1rREo1WW81MGx6SE1nSFZvU2V0bU9kcHVMdmxlR0JY?oc=5",
+      "publisher": "wiz.io",
+      "publishedAt": "2026-11-13T23:59:13+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "부산진구, ‘다문화가족을 위한 찾아가는 생활민원 교육’ 실시 - 국제신문",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcWI2N01UU3NhZnBTRmFBcDVjdFlhdV9VQTNaWHpxRnF4RlhKUDNXSU9OVHR2OWx3RWg3WjBVQjJvOXVWUC1oTXQ2dUpfZHpXQkYwMm81OUV1UkpWel9KWV9XTVFGeTctUHVqR0s1OGhxQ1U4MG5CejJNM3hfamp5dFdnQkJENjBJRmN3b3Nn?oc=5",
+      "publisher": "국제신문",
+      "publishedAt": "2026-11-13T08:35:00+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "Compare Top 5 Stonebranch Alternatives - AIMultiple",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0yMkpGQzV0aVBJQU9NTkIteHRmNzFFaERfazljaWdQS1YyVWdJSVdZbFRYQ1lvZHVpaE9WbEdqS3ZlQ25YZkpWc2pJV2NNa2tqdmljQkR5U3Vscmc?oc=5",
+      "publisher": "AIMultiple",
+      "publishedAt": "2026-11-13T08:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Best AI Agents in 2026: 30 Tools Tested and Compared - Fello AI",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBJWEF6NXdfZVZqYkVIdlF4cTBKdThTUFdvS3RHc0o1cnlRcEJ4MVFyem5jeXQ2bi13aWVDM0FyX05HaXl6UklNOVVqZw?oc=5",
+      "publisher": "Fello AI",
+      "publishedAt": "2026-11-13T08:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Google launches Gemini 4 Hydrogen, targets faster AI workflows - The American Bazaar",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeFZWTldPNDktREpkTG80NXBUcTBNb2dzV3pPdDRJb2FNb05YX0xCVnBEWWlnT1FORVoxbS05QnNGNXZ6MlNTZnVROHZfZ3RVMWs4WUdjbVc0ZlNNSHVybHlidXNyU2k2M1hyalVjcEFuOVZxRFI3ZWNmd3MwVmdZNDRLRVNxTWk4WU81eWlZeHo1cHNmRzczYXlENnRKODkwbFNybEhKdjFJZw?oc=5",
+      "publisher": "The American Bazaar",
+      "publishedAt": "2026-11-12T22:38:53+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "[체크] 앤트로픽, ‘페이블 5.2’ 프롬프트 가이드 공개…AI에 맡길 범위·완료 기준 명시 - 아웃소싱타임스",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9xR3BqZnVsRXNHOTdsOVlvT3ZGc2lrSmFwSDVVVEliWTQ2b0llWkdEQmdPbU9GcDVJN2xsZHYza01PQVJ3U25SRlJSTjBhT3FIRUdEYnRyRWJBMWlGaXBuVVJMZ2o2R1F6N0I3am9MU1h4QQ?oc=5",
+      "publisher": "아웃소싱타임스",
+      "publishedAt": "2026-11-12T22:07:06+00:00",
       "category": "IT·AI",
       "region": "KO"
+    },
+    {
+      "title": "Introducing Gemini 4 Hydrogen for Agentic Workflows - blog.google",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbnlqelBIT1ZXblFBa25zdHlXalhPR2Z2b2xLZ2lmeEtFbUFXS3Mya3FtU0tyeGJrOXpHVEJOdFpDVUZSUTVOUHA0WjRiakw2a2hIRzc3ZHBfM3pDT3dKTDdfMExNQ2FnU1NWSHI3UGpXX2lVSEUxeVYwb2FfNE5vRGJnMjhWSzU5WkFrdmtOdW5Fb0lja1dFN3JUMkQ5R01JRXhNUA?oc=5",
+      "publisher": "blog.google",
+      "publishedAt": "2026-11-12T18:04:04+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법 - 창원특례신문",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxU1pRVUk1WXpmZTRTWHl1RUFsRDZfalJGNWpacWtGM3h1VUZBcHF1UXc4SDhIZHo4NHc3N0oybWtoczh4ay1uUEdud0ZBMlh2YjhVZzFOMm84NnRBUWt4S0kyb2pMQzTSAWtBVV95cUxQOUw1d3VpU1JNeUJpd0ZFMGE5MVZKc2VfUm9IRHE4UWg1cFZ0V25FVC1XdTFadlFTaEtKd1JNRVZkY2xaU09Rcy14ZUFCUGx1TjdpQml2OTlLWXpLUmJ1eVh4OVVmc3FfSmx1WQ?oc=5",
+      "publisher": "창원특례신문",
+      "publishedAt": "2026-11-11T21:15:00+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "Pay $48 and claim lifetime access to AI apps: How to compare ChatGPT, Claude, and Gemini - Mashable",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE44anVBU002ZjBxX0Z3T0Q1MjFZclBpdFRTRzNmY1JkZVFoamV5aXVxOHJMS2JQYmFuX3U1NVNNSWRHSHV4MFJXWmI5SG1BV1NEQlRoNVU5UGJ3b19BcUJFakxnS3pjYVoxMFZZVGdsdldxR2lIZXZ3X2NB?oc=5",
+      "publisher": "Mashable",
+      "publishedAt": "2026-11-11T09:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
     }
   ],
-  "errors": [
-    "AI·생산성/EN: HTTPError: HTTP Error 429: Too Many Requests"
-  ]
+  "errors": []
 }
