@@ -1,20 +1,60 @@
 {
-  "fetchedAt": "2026-11-17T09:17:08.964279+00:00",
+  "fetchedAt": "2026-11-17T12:29:33.334586+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
   "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
   "categoryCounts": {
-    "연예/KO": 12,
-    "K-pop/KO": 3,
-    "IT·AI/KO": 2,
-    "생활 정보/KO": 5,
-    "K-pop/EN": 8,
+    "연예/KO": 11,
+    "K-pop/KO": 4,
+    "IT·AI/KO": 3,
+    "생활 정보/KO": 6,
+    "K-pop/EN": 7,
     "K-드라마/EN": 4,
-    "AI·생산성/EN": 26
+    "AI·생산성/EN": 27
   },
   "retainedFromPrevious": 0,
   "items": [
+    {
+      "title": "'데블스 플랜: 데드 어게인', 공개 첫 주 비드라마 화제성 1위…탈락자 부활 '유배지' 주목 - 제이앤엠뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rZHlXcm9NUTJpZjFPUmU0b3pteVdHLUJKUW4ydHFrSjRuQ3ctWWZuSXRsbXMyNzJyYzcxMTBiNFZ3WjZkM0V1WVhfQWpiVUZ5OFpDd0tvbjluYVlBTnEtOA?oc=5",
+      "publisher": "제이앤엠뉴스",
+      "publishedAt": "2026-11-17T10:14:31+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details - NDTV Profit",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNOGhNTWdLYlN1TmktWDNoejB2UllyQTBpR180UWwwUzZyWi1WNV9mNkJnTmNFamJhMV9QeWdwcGlVUUUzM0NMOV9EeXVQanFiMXRWbVMxNDZaVUdkU0dmWVdLLVM5Sndib1pmQ2tnVTRZd080VDR2ZkM4UHRJelFoWEJuMkV6SF9sRDVuRDFJUXRUa3czcmV3bjhUcThhVGY1XzJHczkzc2F6MGV3MHdmU2VaVEEzc0Q0bW1jcUV3VUx0VncybWF4Ymctc9IB0wFBVV95cUxQa21ScGZvTUw1VHRLUWNRdEhOVHFNRFJZVjFCTjE4QVpFZGROLUlDZ1c5SDgxbm4wQlJaTGFnVDh3LTQ1SFVYVG9EVFNWSzhWYVYwUFExSk9FeHE1QlJPeHE1Sm5JeHVhQ2thY1h3LU9FUi1jTE9LRnZwVDJJcXBoRThfa2NmbW9JR09XRlVDaWpBQkdzWi1MMjJMRFZxQWVVS3hXaEdqQktITktfM2t6UnF4QU9oU3BpMTlSUkN5SkJTOUlQV3RRbUJaLWw3bFFLZkpz?oc=5",
+      "publisher": "NDTV Profit",
+      "publishedAt": "2026-11-17T09:53:57+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "핑클 완전체, 빗속 심야 회동 포착..컴백 앞두고 끈끈한 우정 - 스타뉴스",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9KaGFJa0xnZjUwaDQzNTk3MVBrRmZQai0zMlNHZ0F6eDVULUxfdXBzeF9JUGxvdm9fNFNZQ25JTlRmUnA5dG5mQldOeXQ2THRuanAxeF9jQWlzNTFlOVJxaFB4U2dJUkU0YWI1N05zcTFlQnM?oc=5",
+      "publisher": "스타뉴스",
+      "publishedAt": "2026-11-17T09:43:25+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "부산 북구, 부산 최초 AI 기반 대형폐기물 배출 ‘가져가’ 서비스 시범 운영 - 국제신문",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOV3hFVkRTQ1Jsc0lnalhtdkZQTU1lV0s1UU9YaXpQTEFaYjljM1UtZWZJV3hnc0MtMDJ1UDJjaS1ZWUdKanQyakdVRW9tUFJNVDF5NmxuUGdDNmJ1S1FabzZSbVh6el9mTGV2QjVXQllfdVFLRzQxdWlETGdRNlVyeHYzcGJjTzdGb01kamZ3?oc=5",
+      "publisher": "국제신문",
+      "publishedAt": "2026-11-17T09:36:00+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "DeepChem: Workflow and Research Checks - CASRAI",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBheGpNblBOaGdKR0g0ZEdVTVZtdm1nT3NRd053TzhJUndyYm0xUEdiSzZqRW1tQ1UweHpLTXo5WkdnZ0xJS0Z1YWRR?oc=5",
+      "publisher": "CASRAI",
+      "publishedAt": "2026-11-17T09:21:53+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
     {
       "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리·누나는 안 나오나요?\"[K-EYES] - 스타뉴스",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CdHVhTWQzcGxaOGtCUDhraW13R2RxQU12YkZXek1RZHpXTkV0LVNqVWVndE9iU280WG54SVBLLVQtMVNVS0c2TnJCcEd4X2lpRHZLRVU4bFhFUDEzakFSZGwzdDhaVm9DYXFNOXdScnVVa2Zs?oc=5",
@@ -65,19 +105,11 @@
     },
     {
       "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식) - 조이뉴스24",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nbGVNdldNVlJUZjhldFlpaEVXY2lldVFJcXhycG41RWVfaElUd20xQ0NYWGZiUmZ6MFZqODFYN0hNanlTUUFDOTNvTQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KYm5TbzgwTHIwVmlmVnY4NDdvdnNkclg3eW94M2Z2Q0V0dVNaMi1KdVRhVHJyUEQydkUwd1dqVDJvSHQ5M0gzbjB6UzRRQzg?oc=5",
       "publisher": "조이뉴스24",
       "publishedAt": "2026-11-17T05:20:00+00:00",
       "category": "연예",
       "region": "KO"
-    },
-    {
-      "title": "IBM Study: Chief AI Officers See Where AI Creates Value, but Few Control Investment Decisions - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPVTlOVVpTM0FDUmVEWEpCMElsSnFKeHRRd09NeGM5cGVLc2Zfalc3VWppSmd3WHllNE9KdXducDE2X1ZFLWZjNkFrUTJYbjNFUkU4T0xZUHlXMmVuajRObkQ4a1RfdWthUnR6b3dodVBjVlV0MEpnN3MwRFZRSG03ZlhnVmMySm5HZklqU1VfU0FYZWRqNmhaWUVueC1SemxYUHRHa2JnWW5Lc2xTWGpsOGpuYXdCazVISmtvYnY1TVhvWXBSZC10N3E2T05UTU9oek02NEVUTWNoY3hoVWFRXzR6R01TTmM?oc=5",
-      "publisher": "TradingView",
-      "publishedAt": "2026-11-17T05:01:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     },
     {
       "title": "Meta Is Teaching Small Businesses How To Use AI, Not Just Try It - WeRSM",
@@ -104,6 +136,14 @@
       "region": "EN"
     },
     {
+      "title": "Vericut Optimizer 3.0 simplifies NC program optimisation - ETMM",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY0Y5dzYxQ3BnVDFqMjRROTE1bFo1Ykk5VWZwSTJJNWlGTlEtUHViUkN0TnlKNnk0blFJTmdpWGs4dUVuOEVtdURER2VqcUswY2JsYXVsSUk0UWJDRUxYeDBqZUVkdm1LaG1mR2xYX3MxX2xkQTdLeEY2MnpsZ0MyM21uMF9iZ19YTV94RWctYnAxYkhSS3JIbUNObWxSZEQ4dzdieThyVVhsNnV6SktrN3hR?oc=5",
+      "publisher": "ETMM",
+      "publishedAt": "2026-11-16T20:56:37+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
       "title": "NEW of PRFAA - Puerto Rico Federal Affairs Administration (.gov)",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONXpfdnVhME5hSzEzNHIyWDVSZC1fcmZ1dEtpZFQxdkJ0VnVlUTFkSzMwa3NEY1lUZ0xnS2JiNjBISEhFOUhvdUN3VFZ3aXNTb1lkcjhhSUlhSUpTd3NPMWhpTWJZXzVHY3dSeGkxQnZIWTNSZ0d5YXpUN3FBUkhQNWZFT25pYVRhZFp3Qnc5U0ZxV2Z1NUdUeXJHZ05zd0xoZmJlc2RselllR2NlS2hvOEVfNnh1QldBRjZ5YQ?oc=5",
       "publisher": "Puerto Rico Federal Affairs Administration (.gov)",
@@ -124,6 +164,14 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQ282UjMyVERpQ29QRTMwYkZhYTZ2UFBVMXRTMjdQX0xScUZMZ25ocVdkZFk1eGN2MU5UUEw1SmpydXR3UmFXTGRick10VDRHeDRGb0VwOXdhOXhhTEVOWnJ1OG0wRmhfeHVseEVSSUg4NncySzFtc0FBQmQzQjc0VWdkSVVBT29aU19aVFJ3YW45bzRneHlsVQ?oc=5",
       "publisher": "Money Marketing",
       "publishedAt": "2026-11-16T15:40:08+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Thread AI Joins the Microsoft for Startups Pegasus Program to Deliver its AI Workflow Orchestration Platform on Microsoft Marketplace - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMDRFbXpZWm85T3hDa051Q2otcGk5V2JTNEtYT29TR1ZjeXBmZFRxdVQxVkVudXVUWUZyaDA4czlUcmh2VU00ZnNNUG5VUk5BVHVQSDR1MmZ2bUQ3LWpERzJTZXFlVFRpXzN2YmZ6aUVrOXhTZkVRN0Zzb1hkYkZLcUNOam52Qm1rRGoyQTJpbWNoWHVIWWFJc2pFVzJURWM?oc=5",
+      "publisher": "Yahoo Finance",
+      "publishedAt": "2026-11-16T15:40:00+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -184,14 +232,6 @@
       "region": "EN"
     },
     {
-      "title": "OpenAI and ServiceNow expand partnership to connect workflows with ChatGPT - MarketScale",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZVVTNkYtcVhycmtXS3c3cWR4VzNoRExDdHpXWmM5ZExxWC03cXk1MnRUT2x6VHpZVjh2cEhuSGpLbWFXMGpSd25xNGhFTnhMbzdjRThnYldlaEtfSUtoeWltNmE1dkg0TUZ3dFR3Y2VnY2ZxbmJxa2ptTklBdVVnUmx1aWdNUFprMlVqanVGNnhLWURXYW1wVDE5ZUFGbWluajhUNjE3ZDU2aDliMnNia0JvNHE2MlpnTG1yRHdBeFZTcDZhV0s5Wm8zdlo2Q2RfWkpj?oc=5",
-      "publisher": "MarketScale",
-      "publishedAt": "2026-11-16T11:22:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record - DailyDrama",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdmpTQWNkaVprWERqSFFjaTJvRElPYW1mS2FzQkstdVAwUnNEdjJ6azZ3QUh4bU96SzMxMEMwa0JqcWxGTmloSEItVmtRUWZTbmVacWptOVZBRG1qai0tV0N2MUdkVFpvX05LaFFmeFF0Y3JZdFA1bjZVN3NPeEpVNWdvQ05iTm50OFNmTVc0dmRBdElp?oc=5",
       "publisher": "DailyDrama",
@@ -245,14 +285,6 @@
       "publisher": "프레시안",
       "publishedAt": "2026-11-16T08:34:30+00:00",
       "category": "생활 정보",
-      "region": "KO"
-    },
-    {
-      "title": "[공식] 김지수, 체코 프라하서 여행사 차렸다…유이와 ‘솔로라서2’ 합류 - 스포츠동아",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFByZERTV2JrTk56X2xRY2FUWXdPZ2pPaWpNQlpDcVdEZHNneVphTzlCbGc1Rmc4Z05HT2dCTWtYOUR1ZXY4X1BsNkNvalI0aFZPRjR5WXkyZS1FaE9FMVpYSkRrT2tqNGd3Q2NjUzlR?oc=5",
-      "publisher": "스포츠동아",
-      "publishedAt": "2026-11-16T07:40:47+00:00",
-      "category": "연예",
       "region": "KO"
     },
     {
@@ -384,35 +416,11 @@
       "region": "EN"
     },
     {
-      "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSmZFbFBPZ1U2ZGdqemxYUDYtZjF0TFNOOXFfcDRmUnBpS1k2WjZZWlhYU2hyNkhKSURhbFAzLXRCN0xJVHhla1BzdHFXZkJkVERsd21qRTJmZFhCcEZNeGJyR3ZjeHREYjNNYjlwY2JfMGViN3lWRllzNkpOaWl5UTBnRFJmZUtkekpmbGxvQnlCMU5EYmZBUjRGSGs1eVhVOUtCQVRrMEFkNGVkSDNvOTVkaVdEQTRZZEhQN0VlVVXSAcABQVVfeXFMTkpmRWxQT2dVNmRnanpsWFA2LWYxdExTTjlxX3A0ZlJwaUtZNlo2WVpYWFNocjZISklEYWxQMy10QjdMSVR4ZWtQc3RxV2ZCZFREbHdtakUyZmRYQnBGTXhickd2Y3h0RGIzTWI5cGNiXzBlYjd5VkZZczZKTmlpeVEwZ0RSZmVLZHpKZmxsb0J5QjFORGJmQVI0RkhrNXlYVTlLQkFUazBBZDRlZEgzbzk1ZGlXREE0WWRIUDdFZVVV?oc=5",
-      "publisher": "Simply Wall St",
-      "publishedAt": "2026-11-14T20:20:17+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "Notes app in iOS 27 gets notable upgrades: Here is everything new - آي-فون إسلام",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVXY3U25jcVpxcGYzdXVzLUlKdWY2TTdNNVlfNC02NkJlVmVXOWVkaHZvOUt1NEtUWTdfYmpFZHhBRmI2TDZzMElxUmhNcjRPejFjQU9PR05LWGY5Z0M2S3hua0VManJ1YVowbWs0V19HdnlQYlNuSC1uX1JBcE5VX2RjVlRZMk1YZ01kbGdWd2RVOTlpYVRPUTVVTG1KQ1VEU2NPTUZ2c3F4SngwNFZkZkUtcXdyUQ?oc=5",
       "publisher": "آي-فون إسلام",
       "publishedAt": "2026-11-14T17:57:42+00:00",
       "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "고경표, 음주운전 사고 당일 '놀뭐'서 사실상 삭제…개인샷 실종 '초고속 편집' - 스포츠조선",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORlpiRVByRW96cGh2U3JGdEM1X1N3UEptSUEteDZqbE5CcS1LdnF3V3gwY3dWNWV4eFpUWXZrUk1iVXNHSl9YRjk0NkVpbTRLeXRSMjRzNFNaODRhYTVkd3ZjR21fd1JyWGdocVJDQXdIaUZQZFJ1NnF6azVnNU5uVEpucWE?oc=5",
-      "publisher": "스포츠조선",
-      "publishedAt": "2026-11-14T10:12:32+00:00",
-      "category": "연예",
-      "region": "KO"
-    },
-    {
-      "title": "NAYEON IS HERE! 🤩 WATCH: TWICE’s Nayeon shared with ABS-CBN News her favorite memory with Filipino ONCE and teased what they can expect from her upcoming release, “NA-sty.” Nayeon is set to hold a meet and greet this Saturday. | via Anna Ce",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPM3ZzVTcyWDNMRmtXLU5NdUZ5bW80SW9YVGpwempJajRqVEJVb01wRXp4bVZmR1lRQmNLbUtQclhGajBOUkhwT25sTUYxdFNUS2l3WmdVQW03UE1relctUUw0SllPdlhvSTlwZGRiU1h0aVdEZzZIRlVSREVteWFOcnMtSGJiaXBZLTdkVFRhZXR2WjJsQmVZQUR5aV9YRlRJU0g1ZEFtNWVwYjkxdVZjMURETW5fU3ZkUk9GZkNjUWs1aGZjeFdjajJLUk9xNnlmMGxKZURhT2Y?oc=5",
-      "publisher": "Facebook",
-      "publishedAt": "2026-11-14T10:08:04+00:00",
-      "category": "K-pop",
       "region": "EN"
     },
     {
@@ -428,6 +436,14 @@
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PZ1k1WDRLQWYyUmg5R0xoUEpuZGwxTEVuN3Jrdi1GcXpNZUczMktoTk5yVFRLdlVIalpxdEJWSWp4X0thUDNUU0REZEFYdGtLSDgtYS1rREo1WW81MGx6SE1nSFZvU2V0bU9kcHVMdmxlR0JY?oc=5",
       "publisher": "wiz.io",
       "publishedAt": "2026-11-13T23:59:13+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Bracco, Avicenna.AI announce US FDA clearance for new brain aneurysm detection and assessment software - NeuroNews International",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUGQ2eEJ3ZUJaOUFLc3dkYUk4RjBTZllLUmROX1ExazVoeUxPY2JTdU1SZlRnQmZpZU5MdzRKcmtzZ3ZiaTY4dGJObTM0Nk40b2RmQ3UwQ3g3SjNYY0JIRlBfa192cko4SHZ0ai1VLVF1aDlWQ3RGaG9wTUdJV3h1bDF3QjllSkVLVEdBLXZueFZ0SUZ5a3hVTkFmQ2JHX3l5NjItSTFKZEotUm1yNjYxakQxNmRWTy03cmdiYjlSRWkxaWR1UkU4YzlydjFwZzMyU1dF?oc=5",
+      "publisher": "NeuroNews International",
+      "publishedAt": "2026-11-13T17:16:05+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -456,6 +472,14 @@
       "region": "EN"
     },
     {
+      "title": "“1시간 걸리던 일이 10분으로”…배민, 외식업 AI 도구 27종 공개 - 매일일보",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9yajVxUWhsS0NLOHlIUDdOYUZCMFVSRWNnbk9EUV9haWVwelhsVGZZdXVPZlJXT3dEd201WHhURzAtMU0tTkhpMTFTT21TcDY3TnJRNl9hNGJ6Rk1GMVhwam1OMGQ?oc=5",
+      "publisher": "매일일보",
+      "publishedAt": "2026-11-13T01:40:50+00:00",
+      "category": "IT·AI",
+      "region": "KO"
+    },
+    {
       "title": "Google launches Gemini 4 Hydrogen, targets faster AI workflows - The American Bazaar",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeFZWTldPNDktREpkTG80NXBUcTBNb2dzV3pPdDRJb2FNb05YX0xCVnBEWWlnT1FORVoxbS05QnNGNXZ6MlNTZnVROHZfZ3RVMWs4WUdjbVc0ZlNNSHVybHlidXNyU2k2M1hyalVjcEFuOVZxRFI3ZWNmd3MwVmdZNDRLRVNxTWk4WU81eWlZeHo1cHNmRzczYXlENnRKODkwbFNybEhKdjFJZw?oc=5",
       "publisher": "The American Bazaar",
@@ -472,14 +496,6 @@
       "region": "KO"
     },
     {
-      "title": "Introducing Gemini 4 Hydrogen for Agentic Workflows - blog.google",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbnlqelBIT1ZXblFBa25zdHlXalhPR2Z2b2xLZ2lmeEtFbUFXS3Mya3FtU0tyeGJrOXpHVEJOdFpDVUZSUTVOUHA0WjRiakw2a2hIRzc3ZHBfM3pDT3dKTDdfMExNQ2FnU1NWSHI3UGpXX2lVSEUxeVYwb2FfNE5vRGJnMjhWSzU5WkFrdmtOdW5Fb0lja1dFN3JUMkQ5R01JRXhNUA?oc=5",
-      "publisher": "blog.google",
-      "publishedAt": "2026-11-12T18:04:04+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법 - 창원특례신문",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxU1pRVUk1WXpmZTRTWHl1RUFsRDZfalJGNWpacWtGM3h1VUZBcHF1UXc4SDhIZHo4NHc3N0oybWtoczh4ay1uUEdud0ZBMlh2YjhVZzFOMm84NnRBUWt4S0kyb2pMQzTSAWtBVV95cUxQOUw1d3VpU1JNeUJpd0ZFMGE5MVZKc2VfUm9IRHE4UWg1cFZ0V25FVC1XdTFadlFTaEtKd1JNRVZkY2xaU09Rcy14ZUFCUGx1TjdpQml2OTlLWXpLUmJ1eVh4OVVmc3FfSmx1WQ?oc=5",
       "publisher": "창원특례신문",
@@ -488,10 +504,10 @@
       "region": "KO"
     },
     {
-      "title": "3 US AI Software Stocks Worth Watching As Enterprise Spending Shifts - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPS3FpeE01Y2dKTVlGb2NtMHhzdkI4N253dEdqLVpxTDBYOHRWNUZzd3picDVZRkxrWjQzbjRNVFdIYXRNbU5JaHB4b0I4U05lcjNfMDFhOXducmZOdTlKYk5YLWFqdzZLc3I3aHJHc1FrRWlkckRJX1dzTmNoeFZBZTlSTnNmdmMweTlyMHNxaS0?oc=5",
-      "publisher": "Yahoo Finance",
-      "publishedAt": "2026-11-11T15:12:46+00:00",
+      "title": "UiPath Joins Google Cloud's Gemini For Healthcare As Launch Partner — Enables AI-Powered Workflow Automation - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQMEd4ZFBfQWxZNlJ4cmpvdzJ4TDJld3ZjX05XWnBYR2Jzb1NZd3hyWHJOSXRhOWVMb0EtT2xtNk1menRSMDdFM3RVQjJiRTltNC1FZHFPZ3RXVXRxQVhxc1FFSUszSDhBNTlZeVZGa3lsNDlTaEFPTFc5N3lKSi1ZdWkyTFE0WElib3B4bGtXSk93ckxjdzR3Y1pTZlZmcl8yUTJtdW0taGo3TThHUHlRQzhBMEtXdEF3d0hrVld2eTlSaW1XYi1LaVpkR0FYZjdBNWt1bXlaZ1NqSmR2ZzdwZHRrM19Zc1RlQ3haajFQcFR1NjFDX3hlMTNQdw?oc=5",
+      "publisher": "TradingView",
+      "publishedAt": "2026-11-10T16:43:50+00:00",
       "category": "AI·생산성",
       "region": "EN"
     }
