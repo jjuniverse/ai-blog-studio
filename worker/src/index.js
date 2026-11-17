@@ -51,11 +51,11 @@ function cleanInput(input) {
   // Never trust browser-provided status alone for the obvious sensitive/promotion cases.
   const title = input.title.toLowerCase();
   const blocked = [
-    /\\bpromo(?:tional)?\\s+codes?\\b/, /\\bcoupon\\s+codes?\\b/,
-    /\\bdiscount\\s+codes?\\b/, /\\breferral\\s+codes?\\b/,
-    /\\bsponsored\\s+(?:post|content|article)\\b/,
-    /할인\\s*코드/, /쿠폰\\s*코드/, /제휴\\s*(?:광고|링크)/,
-    /\\b(?:unconfirmed|rumou?r|alleged|scandal|accused)\\b/,
+    /\bpromo(?:tional)?\s+codes?\b/, /\bcoupon\s+codes?\b/,
+    /\bdiscount\s+codes?\b/, /\breferral\s+codes?\b/,
+    /\bsponsored\s+(?:post|content|article)\b/,
+    /할인\s*코드/, /쿠폰\s*코드/, /제휴\s*(?:광고|링크)/,
+    /\b(?:unconfirmed|rumou?r|alleged|scandal|accused)\b/,
     /열애설|루머|의혹|폭로|혐의|사망|자살/
   ];
   if (blocked.some(pattern => pattern.test(title))) return null;
