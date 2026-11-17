@@ -152,7 +152,7 @@ export default {
           !Array.isArray(result.imageNotes) || result.imageNotes.length !== 3 ||
           !Array.isArray(result.verificationChecklist) || !Array.isArray(result.sourceLinks)) throw Error("Invalid draft schema");
       sourceLinks = result.sourceLinks.filter(src => src && typeof src.url === "string" && /^https:\/\//.test(src.url) &&
-        (visitedUrls.has(src.url) || visitedUrls.size === 0)).slice(0, 10);
+        visitedUrls.has(src.url)).slice(0, 10);
       // Do not return a confident publication draft with absent independently identified sources.
       if (result.mode === "article" && (sourceLinks.length < 2 || result.naver.trim().length < 600 || result.tistory.trim().length < 650)) {
         result.mode = "research_brief";
