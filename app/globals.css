@@ -28,3 +28,8 @@
 .research-sources{padding:13px 15px;border:1px solid #cbded2;background:#f0faf2;border-radius:11px;margin-bottom:14px;font-size:12px;color:#285c41}
 .research-sources ul{padding-left:18px;margin:9px 0 0;line-height:1.8;overflow-wrap:anywhere}
 .research-sources a{color:#176c50;text-decoration:underline;text-underline-offset:2px}
+
+.legacy-draft-warning{border:1px solid #f0c7a6;background:#fff7f0;padding:14px 16px;border-radius:12px;margin-bottom:14px;color:#8b4f2a;font-size:12px}
+.legacy-draft-warning strong{display:block;font-size:13px;margin-bottom:6px}
+.legacy-draft-warning p{line-height:1.7;margin:6px 0 11px}
+.legacy-draft-warning span{color:#8b4f2a;font-size:11px}
