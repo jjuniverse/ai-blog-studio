@@ -1,6 +1,11 @@
 name: Research top news candidates
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/research_news.py'
+      - '.github/workflows/research-news.yml'
   schedule:
     - cron: '15 1 * * *'
   workflow_dispatch:
