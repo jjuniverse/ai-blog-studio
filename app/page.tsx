@@ -20,6 +20,7 @@ type Draft = {
   id: string;
   mode?: "article" | "research_brief";
   sourceLinks?: { title: string; url: string }[];
+  researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
   title: string;
   naver: string;
   tistory: string;
@@ -304,8 +305,19 @@ export default function Home() {
                 {legacyStored ? <button className="btn btn-light" onClick={archiveOldDraft}>이전 초안 백업 후 초기화</button> : <span>서버에서 가져온 과거 초안은 자동 표시하지 않아.</span>}
               </div>}
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
-              {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>조사에 사용된 출처 · 발행 전 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
-              {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="draft-warning"><strong>자료 부족 · 글은 생성하지 않았어.</strong><p>한두 줄짜리 글로 채우지 않고 조사해야 할 내용을 남겼어.</p><ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul></div> : null}
+              {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
+              {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="draft-warning">
+                <strong>원고 보류 · 원인을 확인해 줘</strong>
+                <p>기사 내용이 부족하거나 품질 검사에서 탈락했어. 같은 주제를 반복 생성하면 API 비용만 발생할 수 있으니, 먼저 아래 결과를 확인해 줘.</p>
+                {matchingDraft.researchAudit && <div className="research-audit">
+                  <p>검색에서 발견된 링크 {matchingDraft.researchAudit.searchedSourceCount}개 · 반환된 참고 링크 {matchingDraft.researchAudit.returnedSourceCount}개 · 사이트 {matchingDraft.researchAudit.distinctSourceDomains}곳</p>
+                  <strong>생성 보류 사유</strong>
+                  <ul>{matchingDraft.researchAudit.reasons.map((x,i)=><li key={i}>{x}</li>)}</ul>
+                </div>}
+                <strong>추가 검증할 내용</strong>
+                <ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul>
+                <p>충분한 공식 자료를 찾지 못했다면 다른 주제를 선택하는 게 좋아.</p>
+              </div> : null}
               {!legacyStored && matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
               {currentDraft && !legacyStored ? <>
                 <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
