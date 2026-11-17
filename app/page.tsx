@@ -34,6 +34,7 @@ type LocalEdit = {
 };
 
 const ROOT = '/ai-blog-studio';
+const WORKER_URL = 'https://todaypick-studio-api.jjuniverse-plant-lens.workers.dev';
 const EDIT_KEY = 'todaypick_workspace_v1';
 const channels: { id: Channel; label: string }[] = [
   { id: 'naver', label: '네이버 블로그' },
@@ -97,7 +98,6 @@ export default function Home() {
   const [localEdits, setLocalEdits] = useState<Record<string, LocalEdit>>({});
   const [hydrated, setHydrated] = useState(false);
   const [notice, setNotice] = useState('');
-  const [workerUrl, setWorkerUrl] = useState('');
   const [studioPassphrase, setStudioPassphrase] = useState('');
   const [verifiedNotes, setVerifiedNotes] = useState('');
   const [generating, setGenerating] = useState(false);
@@ -111,7 +111,6 @@ export default function Home() {
         if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) setLocalEdits(parsed as Record<string, LocalEdit>);
       }
     } catch { /* private mode or disabled local storage */ }
-    try { setWorkerUrl(window.localStorage.getItem('todaypick_worker_url_v1') || ''); } catch {}
     setHydrated(true);
     Promise.allSettled([publicFile('/data/candidates.json'), publicFile('/data/drafts.json')])
       .then(([a, b]) => {
@@ -129,19 +128,15 @@ export default function Home() {
     try { window.localStorage.setItem(EDIT_KEY, JSON.stringify(localEdits)); } catch { setNotice('브라우저 저장 공간을 사용할 수 없어. 내보내기로 백업해 줘.'); }
   }, [localEdits, hydrated]);
 
-  const configuredWorker = (() => {
-    try { const u = new URL(workerUrl.trim()); return u.protocol === 'https:' && u.hostname.endsWith('.workers.dev'); }
-    catch { return false; }
-  })();
+  const configuredWorker = true;
   async function generateHere() {
     if (!selected || generating) return;
     setGenerateError('');
     if (selected.status !== 'research_required') { setGenerateError('출처가 부족하거나 제외된 주제야.'); return; }
-    if (!configuredWorker) { setGenerateError('Cloudflare Worker URL을 입력해 줘.'); return; }
     if (!studioPassphrase) { setGenerateError('관리자 암호를 입력해 줘.'); return; }
     setGenerating(true);
     try {
-      const response = await fetch(workerUrl.trim().replace(/\/$/, '') + '/generate', {
+      const response = await fetch(WORKER_URL + '/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'X-Studio-Passphrase': studioPassphrase },
         body: JSON.stringify({
@@ -258,15 +253,15 @@ export default function Home() {
             <div className="panel editor-panel">
               <div className="panel-heading"><div><h2>원고 편집 · AI 생성</h2><p>주제를 선택하고 이 화면에서 원고를 생성한 뒤 수정해 봐.</p></div></div>
               <div className="inline-generator">
-                <div className="panel-heading"><strong>AI 연결 설정</strong><span>{configuredWorker?'Worker 주소 등록됨':'백엔드 연결 필요'}</span></div>
+                <div className="panel-heading"><strong>AI 연결</strong><span>Worker 주소 자동 연결됨</span></div>
                 <div className="generator-inputs">
-                  <label>Cloudflare Worker URL<input type="url" placeholder="https://todaypick-studio-api.계정.workers.dev" value={workerUrl} onChange={e=>{setWorkerUrl(e.target.value);setGenerateError('');try{window.localStorage.setItem('todaypick_worker_url_v1',e.target.value)}catch{}}}/></label>
+                  <div className="worker-endpoint"><small>연결된 Worker</small><span>https://todaypick-studio-api.jjuniverse-plant-lens.workers.dev</span></div>
                   <label>관리자 암호 (저장되지 않음)<input type="password" autoComplete="off" placeholder="Cloudflare에 등록한 STUDIO_PASSWORD" value={studioPassphrase} onChange={e=>setStudioPassphrase(e.target.value)}/></label>
                 </div>
                 <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
-                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected||selected.status!=='research_required'||!configuredWorker||!studioPassphrase} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 이 화면에서 AI 원고 생성'}</button><span>API 사용료 발생 · Worker 배포 후 작동</span></div>
+                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected||selected.status!=='research_required'||!configuredWorker||!studioPassphrase} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 이 화면에서 AI 원고 생성'}</button><span>API 사용료 발생 · 인증 후 생성</span></div>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
-                {!configuredWorker&&<p className="muted">현재 백엔드 연결 전이야. Cloudflare에 Worker를 배포한 뒤 주소를 넣으면 GitHub로 이동하지 않고 생성할 수 있어.</p>}
+                <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
               <div className="draft-selector"><strong>생성된 AI 초안 {drafts.length}건</strong>
                 {drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : drafts.map((d,i)=>{
