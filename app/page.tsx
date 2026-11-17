@@ -33,11 +33,13 @@ type LocalEdit = {
   verified: boolean;
   publishedUrls: Partial<Record<'naver' | 'tistory', string>>;
   updatedAt: string;
+  generatedVersion?: number;
 };
 
 const ROOT = '/ai-blog-studio';
 const WORKER_URL = 'https://todaypick-studio-api.jjuniverse-plant-lens.workers.dev';
 const EDIT_KEY = 'todaypick_workspace_v1';
+const DRAFT_VERSION = 2;
 const channels: { id: Channel; label: string }[] = [
   { id: 'naver', label: '네이버 블로그' },
   { id: 'tistory', label: '티스토리' },
@@ -183,7 +185,10 @@ export default function Home() {
   const matchingDraft = selected && drafts.find(d => d.id === selected.id || (d.sources || []).some(s => selected.headlines.some(h => h.url === s.url)));
   const editId = selected?.id || '';
   const saved = localEdits[editId];
-  const text = saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '';
+  const legacyStored = !!saved && saved.generatedVersion !== DRAFT_VERSION && Object.values(saved.fields || {}).some(value => !!value?.trim());
+  const legacyPublic = !!matchingDraft && matchingDraft.mode !== 'article' && matchingDraft.mode !== 'research_brief';
+  const currentDraft = !legacyStored && !legacyPublic && (matchingDraft?.mode === 'article' || !!saved?.fields?.[channel]);
+  const text = legacyStored ? (saved?.fields?.[channel] || '') : legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
   const reviewCount = candidates.filter(x => x.status === 'research_required').length;
@@ -198,7 +203,18 @@ export default function Home() {
       verified: patch.verified ?? old[editId]?.verified ?? false,
       publishedUrls: { ...(old[editId]?.publishedUrls || {}), ...(patch.publishedUrls || {}) },
       updatedAt: new Date().toISOString(),
+      generatedVersion: patch.generatedVersion ?? old[editId]?.generatedVersion,
     } }));
+  }
+  function archiveOldDraft() {
+    if (!editId || !saved) return;
+    download('todaypick-old-draft-backup.json', JSON.stringify({ topic: selected?.title, data: saved }, null, 2), 'application/json');
+    setLocalEdits(old => {
+      const copy = { ...old };
+      delete copy[editId];
+      return copy;
+    });
+    setNotice('기존 초안을 백업한 뒤 이 화면에서 초기화했어. 새 자료 조사 버튼으로 다시 생성해 줘.');
   }
   function choose(id: string, next: Section = 'editor') {
     setSelectedId(id);
@@ -279,17 +295,22 @@ export default function Home() {
                 })}
                 <p className="muted">초안은 발행용 완성 글이 아니라 출처 검증이 필요한 준비 자료야.</p>
               </div>
+              {(legacyStored || legacyPublic) && <div className="legacy-draft-warning">
+                <strong>이전 방식으로 만든 짧은 초안이 있어</strong>
+                <p>이 글은 자료 조사 없이 만든 이전 버전이야. 발행용으로 사용하지 말고, 새 생성 버튼으로 다시 조사하는 걸 추천해.</p>
+                {legacyStored ? <button className="btn btn-light" onClick={archiveOldDraft}>이전 초안 백업 후 초기화</button> : <span>서버에서 가져온 과거 초안은 자동 표시하지 않아.</span>}
+              </div>}
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
-              {matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>조사에 사용된 출처 · 발행 전 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
-              {matchingDraft?.mode==='research_brief' ? <div className="draft-warning"><strong>자료 부족 · 글은 생성하지 않았어.</strong><p>한두 줄짜리 글로 채우지 않고 조사해야 할 내용을 남겼어.</p><ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul></div> : null}
-              {matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
-              {matchingDraft?.mode!=='research_brief' || !!saved?.fields?.[channel] ? <>
+              {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>조사에 사용된 출처 · 발행 전 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
+              {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="draft-warning"><strong>자료 부족 · 글은 생성하지 않았어.</strong><p>한두 줄짜리 글로 채우지 않고 조사해야 할 내용을 남겼어.</p><ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul></div> : null}
+              {!legacyStored && matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
+              {currentDraft && !legacyStored ? <>
                 <div className="draft-warning">이 원고는 기사 제목·출처에 기반한 검수용 자료야. 문장에 있는 사실을 공식 자료와 대조하고 이미지 권리도 확인해야 발행할 수 있어.</div>
                 <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>
                 <div className="editor-toolbar"><button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
               </> : null}
-              {!matchingDraft && !saved?.fields?.[channel] && <div className="empty-editor"><span className="empty-symbol">✦</span><h3>이 주제의 원고는 아직 없어</h3><p>위에서 자료 조사 버튼을 눌러 줘. 신뢰할 만한 근거가 부족하면 글 대신 확인할 항목을 표시해.</p></div>}
+              {(!matchingDraft || legacyPublic) && !saved?.fields?.[channel] && <div className="empty-editor"><span className="empty-symbol">✦</span><h3>이 주제의 원고는 아직 없어</h3><p>위에서 자료 조사 버튼을 눌러 줘. 신뢰할 만한 근거가 부족하면 글 대신 확인할 항목을 표시해.</p></div>}
             </div>
           </div>
           <aside className="studio-side">
