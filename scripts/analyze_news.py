@@ -37,7 +37,8 @@ def similar(a, b):
         return False
     left, right = terms(a["title"]), terms(b["title"])
     overlap = len(left & right)
-    return bool(left and right and overlap >= 3 and overlap / len(left | right) >= 0.72)
+    # Avoid joining headlines simply because they share common topic words.
+    return bool(left and right and overlap >= 3 and overlap / len(left | right) >= 0.38)
 
 
 def evaluate(group):
