@@ -82,15 +82,6 @@ function safePublishedUrl(raw: string, channel: 'naver' | 'tistory') {
     return u.hostname === 'blog83848.tistory.com' && u.pathname.length > 1;
   } catch { return false; }
 }
-function DefaultEditorHint({ candidate }: { candidate?: Candidate }) {
-  return <div className="empty-editor">
-    <span className="empty-symbol">✦</span>
-    <h3>아직 준비된 AI 원고가 없어</h3>
-    <p>이 주제의 검수용 초안이 생성되지 않았어. 공개 GitHub Actions에서 원고 생성 작업을 실행할 수 있어.</p>
-    {candidate?.status !== 'research_required' && <p className="warning-line">현재 주제는 출처가 부족하거나 제외 대상으로 분류돼 자동 생성 대상이 아니야.</p>}
-    <a className="btn btn-primary" href={links.workflow} target="_blank" rel="noreferrer">GitHub에서 새 초안 생성 실행 ↗</a>
-  </div>;
-}
 export default function Home() {
   const [section, setSection] = useState<Section>('discover');
   const [candidates, setCandidates] = useState<Candidate[]>([]);
@@ -106,6 +97,11 @@ export default function Home() {
   const [localEdits, setLocalEdits] = useState<Record<string, LocalEdit>>({});
   const [hydrated, setHydrated] = useState(false);
   const [notice, setNotice] = useState('');
+  const [workerUrl, setWorkerUrl] = useState('');
+  const [studioPassphrase, setStudioPassphrase] = useState('');
+  const [verifiedNotes, setVerifiedNotes] = useState('');
+  const [generating, setGenerating] = useState(false);
+  const [generateError, setGenerateError] = useState('');
 
   useEffect(() => {
     try {
@@ -115,6 +111,7 @@ export default function Home() {
         if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) setLocalEdits(parsed as Record<string, LocalEdit>);
       }
     } catch { /* private mode or disabled local storage */ }
+    try { setWorkerUrl(window.localStorage.getItem('todaypick_worker_url_v1') || ''); } catch {}
     setHydrated(true);
     Promise.allSettled([publicFile('/data/candidates.json'), publicFile('/data/drafts.json')])
       .then(([a, b]) => {
@@ -132,6 +129,48 @@ export default function Home() {
     try { window.localStorage.setItem(EDIT_KEY, JSON.stringify(localEdits)); } catch { setNotice('브라우저 저장 공간을 사용할 수 없어. 내보내기로 백업해 줘.'); }
   }, [localEdits, hydrated]);
 
+  const configuredWorker = (() => {
+    try { const u = new URL(workerUrl.trim()); return u.protocol === 'https:' && u.hostname.endsWith('.workers.dev'); }
+    catch { return false; }
+  })();
+  async function generateHere() {
+    if (!selected || generating) return;
+    setGenerateError('');
+    if (selected.status !== 'research_required') { setGenerateError('출처가 부족하거나 제외된 주제야.'); return; }
+    if (!configuredWorker) { setGenerateError('Cloudflare Worker URL을 입력해 줘.'); return; }
+    if (!studioPassphrase) { setGenerateError('관리자 암호를 입력해 줘.'); return; }
+    setGenerating(true);
+    try {
+      const response = await fetch(workerUrl.trim().replace(/\/$/, '') + '/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Studio-Passphrase': studioPassphrase },
+        body: JSON.stringify({
+          title: selected.title, category: selected.category, region: selected.region,
+          status: selected.status, verifiedNotes,
+          sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })).slice(0,5),
+        }),
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(payload.error || 'HTTP ' + response.status);
+      if (!payload.draft || !['naver','tistory','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
+      const draft: Draft = { ...payload.draft, id: selected.id, status: 'unverified_review_required', sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })) };
+      setDrafts(old => [draft, ...old.filter(x => x.id !== selected.id && !(x.sources || []).some(z => selected.headlines.some(h => h.url === z.url)))]);
+      setLocalEdits(old => ({
+        ...old,
+        [selected.id]: {
+          fields: { naver: draft.naver, tistory: draft.tistory, shortform: draft.shortform },
+          imageNotes: payload.draft.imageNotes,
+          verified: false,
+          publishedUrls: old[selected.id]?.publishedUrls || {},
+          updatedAt: new Date().toISOString(),
+        },
+      }));
+      setChannel('naver');
+      setNotice('AI 원고가 생성됐어. 탭을 변경해 각 채널의 검수용 초안을 확인해 봐.');
+    } catch (e) {
+      setGenerateError(e instanceof Error ? e.message : '원고 생성 중 오류가 발생했어.');
+    } finally { setGenerating(false); }
+  }
   const categories = useMemo(() => ['전체', ...Array.from(new Set(candidates.map(x => x.category)))], [candidates]);
   const visible = useMemo(() => candidates.filter(x => {
     if (!showExcluded && (x.status === 'excluded_promotion' || x.status === 'sensitive_review')) return false;
@@ -191,7 +230,7 @@ export default function Home() {
         <button className={section === 'editor' ? 'nav-item active' : 'nav-item'} onClick={() => setSection('editor')}><span>✎</span> 콘텐츠 스튜디오</button>
         <button className={section === 'publish' ? 'nav-item active' : 'nav-item'} onClick={() => setSection('publish')}><span>↗</span> 발행 관리</button>
       </nav>
-      <div className="side-bottom"><span className="state-dot" /> Public preview<div>실제 AI 생성은 GitHub Actions에서 실행돼.</div></div>
+      <div className="side-bottom"><span className="state-dot" /> Public preview<div>AI 원고 생성은 Worker 연결 후 이용 가능.</div></div>
     </aside>
     <main className="workspace">
       <header className="topbar"><span>오늘의 픽 / {section === 'discover' ? '주제 탐색' : section === 'editor' ? '콘텐츠 스튜디오' : '발행 관리'}</span><div><a href={links.naver} target="_blank" rel="noreferrer">네이버 ↗</a><a href={links.tistory} target="_blank" rel="noreferrer">티스토리 ↗</a></div></header>
@@ -217,7 +256,18 @@ export default function Home() {
               {selected && <div className="source-summary"><div className="pill-row"><span className="pill">{selected.category}</span><span className={'pill ' + (selected.status === 'research_required' ? 'green' : 'yellow')}>{statusLabel[selected.status || 'needs_sources']}</span></div><p>{selected.reasons?.join(' · ')}</p><details><summary>참고 뉴스 {selected.headlines.length}개와 출처 보기</summary><ul>{selected.headlines.map((h,i) => <li key={i}><a href={h.url} target="_blank" rel="noreferrer">{h.publisher || '출처'} — {h.title} ↗</a></li>)}</ul></details></div>}
             </div>
             <div className="panel editor-panel">
-              <div className="panel-heading"><div><h2>원고 편집</h2><p>기존 초안은 여기서 바로 확인할 수 있어. 새 초안 생성은 별도 GitHub Actions 작업이야.</p></div><a className="btn btn-light" href={links.workflow} target="_blank" rel="noreferrer">GitHub에서 새 초안 생성 ↗</a></div>
+              <div className="panel-heading"><div><h2>원고 편집 · AI 생성</h2><p>주제를 선택하고 이 화면에서 원고를 생성한 뒤 수정해 봐.</p></div></div>
+              <div className="inline-generator">
+                <div className="panel-heading"><strong>AI 연결 설정</strong><span>{configuredWorker?'Worker 주소 등록됨':'백엔드 연결 필요'}</span></div>
+                <div className="generator-inputs">
+                  <label>Cloudflare Worker URL<input type="url" placeholder="https://todaypick-studio-api.계정.workers.dev" value={workerUrl} onChange={e=>{setWorkerUrl(e.target.value);setGenerateError('');try{window.localStorage.setItem('todaypick_worker_url_v1',e.target.value)}catch{}}}/></label>
+                  <label>관리자 암호 (저장되지 않음)<input type="password" autoComplete="off" placeholder="Cloudflare에 등록한 STUDIO_PASSWORD" value={studioPassphrase} onChange={e=>setStudioPassphrase(e.target.value)}/></label>
+                </div>
+                <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
+                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected||selected.status!=='research_required'||!configuredWorker||!studioPassphrase} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 이 화면에서 AI 원고 생성'}</button><span>API 사용료 발생 · Worker 배포 후 작동</span></div>
+                {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
+                {!configuredWorker&&<p className="muted">현재 백엔드 연결 전이야. Cloudflare에 Worker를 배포한 뒤 주소를 넣으면 GitHub로 이동하지 않고 생성할 수 있어.</p>}
+              </div>
               <div className="draft-selector"><strong>생성된 AI 초안 {drafts.length}건</strong>
                 {drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : drafts.map((d,i)=>{
                   const corresponding=candidates.find(c=>c.id===d.id||(d.sources||[]).some(src=>c.headlines.some(h=>h.url===src.url)));
@@ -233,7 +283,7 @@ export default function Home() {
                 <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>
                 <div className="editor-toolbar"><button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
-              </> : <DefaultEditorHint candidate={selected}/>}
+              </> : <div className="empty-editor"><span className="empty-symbol">✦</span><h3>이 주제의 원고는 아직 없어</h3><p>위에서 AI 원고 생성 버튼을 누르면 여기에 표시돼. 출처가 부족한 주제는 생성이 제한돼.</p></div>}
             </div>
           </div>
           <aside className="studio-side">
