@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-17T09:15:52.202302+00:00",
+  "fetchedAt": "2026-11-17T09:16:05.737263+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
@@ -9,7 +9,7 @@
     "K-pop/KO": 0,
     "IT·AI/KO": 2,
     "생활 정보/KO": 5,
-    "K-pop/EN": 8,
+    "K-pop/EN": 9,
     "K-드라마/EN": 4,
     "AI·생산성/EN": 26
   },
@@ -19,6 +19,14 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmxGaUJMUWcyUmpzdndlY2N4S2tpWTFBV215S0ZLeUVmOFF2MUFZTnlNVXpKSmxhS2VTczlhZjF2Mm9XeHZDU2VoQWtIOVVVZVk1dzFwc1BJNW1WM0dwZ0J0QlY0WFRSNUU1bHZnNGRFUU94YkZZZG5tdTlwMkluT1FMX3g2c0J1M05oSjlfRUp5VDA?oc=5",
       "publisher": "Facebook",
       "publishedAt": "2026-11-17T08:30:30+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUpBaHc2SF9YX1QzSm5BX0R1SVAzRTZ2eG5jcUVtdkZNTWg5NGhfaG9XMkNuWmswQ1ZaVDV0UVVOZUFpVm1VMkRpZHJ3ZGNHRkZDSjN3OHNMSzBoV2VKRzA1RUliMlpRQ1U1Q3FnRkR4TG01QTYwVVoyaGNnWkJCTVFHTGYwZXZra2JIVVVn?oc=5",
+      "publisher": "조선일보",
+      "publishedAt": "2026-11-17T06:33:45+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -75,14 +83,6 @@
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWXlLd3d3Z0JOanJZX0lsQ0FBMElDVzhuenVvUFlHSjNRRUtGU3lJb0VyV3QxS2RmNF94TDNWeGdzRlhuLWtYZ0tDZmRFVS1GUEdWa1djRHQ0UFlRYldTV1kwU2d6WWxKSHI1bjN2OXlzU1lEV1ZXd3FvWFliLUptRGpmdHRDR3ItM2xGWG1xVUx4VTJfRlIzZlpkRmdEVmpiRFZ4YXJFcDZBVlNFQ0R1V3hnMlhLaWlRVndSRGZteUhqaDJiS285SndIa2Ntby1zZTFOb05mZ1IyQQ?oc=5",
       "publisher": "VentureBeat",
       "publishedAt": "2026-11-16T21:58:51+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Vericut Optimizer 3.0 simplifies NC program optimisation - ETMM",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY0Y5dzYxQ3BnVDFqMjRROTE1bFo1Ykk5VWZwSTJJNWlGTlEtUHViUkN0TnlKNnk0blFJTmdpWGs4dUVuOEVtdURER2VqcUswY2JsYXVsSUk0UWJDRUxYeDBqZUVkdm1LaG1mR2xYX3MxX2xkQTdLeEY2MnpsZ0MyM21uMF9iZ19YTV94RWctYnAxYkhSS3JIbUNObWxSZEQ4dzdieThyVVhsNnV6SktrN3hR?oc=5",
-      "publisher": "ETMM",
-      "publishedAt": "2026-11-16T20:56:37+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -403,6 +403,14 @@
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PZ1k1WDRLQWYyUmg5R0xoUEpuZGwxTEVuN3Jrdi1GcXpNZUczMktoTk5yVFRLdlVIalpxdEJWSWp4X0thUDNUU0REZEFYdGtLSDgtYS1rREo1WW81MGx6SE1nSFZvU2V0bU9kcHVMdmxlR0JY?oc=5",
       "publisher": "wiz.io",
       "publishedAt": "2026-11-13T23:59:13+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Bracco, Avicenna.AI announce US FDA clearance for new brain aneurysm detection and assessment software - NeuroNews International",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUGQ2eEJ3ZUJaOUFLc3dkYUk4RjBTZllLUmROX1ExazVoeUxPY2JTdU1SZlRnQmZpZU5MdzRKcmtzZ3ZiaTY4dGJObTM0Nk40b2RmQ3UwQ3g3SjNYY0JIRlBfa192cko4SHZ0ai1VLVF1aDlWQ3RGaG9wTUdJV3h1bDF3QjllSkVLVEdBLXZueFZ0SUZ5a3hVTkFmQ2JHX3l5NjItSTFKZEotUm1yNjYxakQxNmRWTy03cmdiYjlSRWkxaWR1UkU4YzlydjFwZzMyU1dF?oc=5",
+      "publisher": "NeuroNews International",
+      "publishedAt": "2026-11-13T17:16:05+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
