@@ -196,15 +196,24 @@ export default {
       if (!substantive(result.tistory)) failReasons.push("티스토리 본문이 짧거나 소제목·구체성이 부족");
       if (result.shortform.trim().length < 80) failReasons.push("숏폼 대본 분량 부족");
       if (result.mode === "research_brief") failReasons.push("AI가 조사 자료 부족으로 판단");
-      if (result.mode === "article" && (distinctDomains < 2 ||
-        !substantive(result.naver) ||
-        !substantive(result.tistory) ||
-        result.shortform.trim().length < 80)) {
-        result.mode = "research_brief";
-        result.naver = "";
-        result.tistory = "";
-        result.shortform = "";
-        result.verificationChecklist.unshift("검증된 출처 또는 본문의 구체성이 부족해 완성 원고로 인정하지 않았어. 공식 자료를 확인하고 다시 조사해 줘.");
+      if (result.mode === "article") {
+        // Do not erase an otherwise solid blog article just because the shortform script
+        // or the other blog platform failed its own format gate.
+        const qualifiedNaver = substantive(result.naver);
+        const qualifiedTistory = substantive(result.tistory);
+        if (!qualifiedNaver) result.naver = "";
+        if (!qualifiedTistory) result.tistory = "";
+        if (result.shortform.trim().length < 80) result.shortform = "";
+        if (distinctDomains < 2 || (!qualifiedNaver && !qualifiedTistory)) {
+          result.mode = "research_brief";
+          result.naver = "";
+          result.tistory = "";
+          result.shortform = "";
+          result.verificationChecklist.unshift("독립 출처나 본문 완성도가 부족해 게시할 수 있는 원고가 없어. 공식 자료를 확인한 뒤 다시 조사해 줘.");
+        } else {
+          if (!qualifiedNaver) result.verificationChecklist.unshift("네이버 원고 품질 검사 실패: 티스토리 원고만 확인할 수 있어.");
+          if (!qualifiedTistory) result.verificationChecklist.unshift("티스토리 원고 품질 검사 실패: 네이버 원고만 확인할 수 있어.");
+        }
       }
     } catch { return fail("OpenAI research returned incomplete data; no draft was saved", 502); }
     result.sourceLinks = sourceLinks;
