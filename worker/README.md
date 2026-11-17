@@ -68,12 +68,12 @@ The initial workflow run **fails clearly** if either GitHub Secret is missing. T
 
 Inline generation now uses the OpenAI Responses API **web_search** tool before writing. This costs more than the earlier headline-only call; review the [OpenAI API usage dashboard](https://platform.openai.com/usage) and use rate/spend limits. Results must cite web-search-returned URLs; an article with insufficient grounded sources or thin text is suppressed and presented as a research brief instead of being represented as ready-to-publish content.
 
-For an existing deployed Worker, pull the latest code and redeploy:
+For an existing Worker, **prefer the GitHub Actions auto-deploy workflow above**. Manual redeployment remains a fallback when CI deployment is not configured:
 
 ```bash
 git pull
-cd worker  # omit this line if already inside the worker directory
+cd worker  # omit if already inside the worker directory
 npx wrangler deploy
 ```
 
-Then refresh GitHub Pages. AI-generated material still requires a human editor to verify each key claim, rights and dates; no automated fact certification is implied. The Worker endpoint does not generate images, only image placement notes.
+Changes to the Worker backend do not require a GitHub Pages rebuild. Refresh GitHub Pages if the frontend itself was changed. AI-generated material still requires a human editor to verify each key claim, rights and dates; no automated fact certification is implied. The Worker endpoint does not generate images, only image placement notes.
