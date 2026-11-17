@@ -55,7 +55,7 @@ const links = {
 };
 const statusLabel: Record<Status, string> = {
   research_required: '검토 후보',
-  needs_sources: '추가 출처 필요',
+  needs_sources: '자료 조사 필요',
   sensitive_review: '민감 이슈 제외',
   excluded_promotion: '홍보성 제외',
 };
@@ -195,7 +195,7 @@ export default function Home() {
   const text = legacyStored ? (saved?.fields?.[channel] || '') : legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
-  const reviewCount = candidates.filter(x => x.status === 'research_required').length;
+  const reviewCount = candidates.filter(x => x.status === 'research_required' || x.status === 'needs_sources').length;
   const excludedCount = candidates.filter(x => ['excluded_promotion', 'sensitive_review'].includes(x.status || '')).length;
   const editCount = Object.values(localEdits).filter(x => Object.values(x.fields || {}).some(s => s?.trim())).length;
   const publishedCount = Object.values(localEdits).reduce((sum, x) => sum + Object.values(x.publishedUrls || {}).filter(Boolean).length, 0);
@@ -261,13 +261,13 @@ export default function Home() {
         {notice && <div className="toast" role="status">{notice}<button onClick={() => setNotice('')} aria-label="닫기">×</button></div>}
         {section === 'discover' && <>
           <div className="metric-grid">
-            <div className="metric"><small>검토할 만한 후보</small><strong>{reviewCount}</strong><span>복수 매체 보도 · 추가 검증 필요</span></div>
+            <div className="metric"><small>자료 조사 가능한 후보</small><strong>{reviewCount}</strong><span>기사 제목 기반 · 조사 전 단계</span></div>
             <div className="metric"><small>제외된 이슈</small><strong>{excludedCount}</strong><span>홍보성·민감 이슈</span></div>
             <div className="metric"><small>생성된 AI 검수 초안</small><strong>{drafts.length}</strong><span>완성된 게시글이 아닌 준비 자료</span></div>
           </div>
-          <div className="section-title"><div><h2>추천 주제</h2><p>{updatedAt ? '마지막 분석 ' + new Date(updatedAt).toLocaleString('ko-KR') : '뉴스 수집 후 목록이 업데이트돼.'}</p></div><span className="small-label">점수는 검색량·수익 예측이 아닌 내부 편집 기준</span></div>
+          <div className="section-title"><div><h2>수집된 콘텐츠 후보</h2><p>{updatedAt ? '마지막 분석 ' + new Date(updatedAt).toLocaleString('ko-KR') : '뉴스 수집 후 목록이 업데이트돼.'}</p></div><span className="small-label">점수는 검색량·수익 예측이 아닌 내부 편집 기준</span></div>
           <div className="filters"><input value={query} onChange={e => setQuery(e.target.value)} placeholder="기사나 키워드 검색" aria-label="키워드 검색"/><select value={category} onChange={e => setCategory(e.target.value)} aria-label="카테고리 필터">{categories.map(v => <option key={v}>{v}</option>)}</select><label className="inline-check"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)}/> 제외된 주제 보기</label></div>
-          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '해외 / 영어' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span></div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' ? '콘텐츠 준비 →' : '근거 확인 →'}</button></div></article>)}</div>}
+          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '해외 / 영어' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span></div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' || c.status === 'needs_sources' ? '자료 조사 →' : '제외 사유 보기 →'}</button></div></article>)}</div>}
         </>}
         {section === 'editor' && <div className="studio-grid">
           <div className="editor-main">
@@ -285,7 +285,7 @@ export default function Home() {
                   <label>관리자 암호 (저장되지 않음)<input type="password" autoComplete="off" placeholder="Cloudflare에 등록한 STUDIO_PASSWORD" value={studioPassphrase} onChange={e=>setStudioPassphrase(e.target.value)}/></label>
                 </div>
                 <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
-                <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'출처가 한 곳뿐이야. AI가 확인 질문과 빈칸을 포함한 조사용 초안을 작성할 수 있어. 사실 확인 후 발행해.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
+                <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'제목만 수집한 단계야. 자료 조사 버튼으로 공식 발표·관련 자료를 추가로 찾아봐. 검증 후 글을 만들 수 있어.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
                 <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>OpenAI 웹 검색 + 원고 작성 비용 발생 · 인증 후 생성</span></div>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
