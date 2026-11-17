@@ -1,5 +1,13 @@
 name: Collect news headlines
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/collect_news.py'
+      - 'scripts/analyze_news.py'
+      - 'tests/test_collect_news.py'
+      - 'tests/test_analyze_news.py'
+      - '.github/workflows/collect-news.yml'
   schedule:
     - cron: '20 */6 * * *'
   workflow_dispatch:
