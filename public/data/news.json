@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-17T12:29:33.334586+00:00",
+  "fetchedAt": "2026-11-17T18:27:03.540571+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
@@ -9,12 +9,36 @@
     "K-pop/KO": 4,
     "IT·AI/KO": 3,
     "생활 정보/KO": 6,
-    "K-pop/EN": 7,
-    "K-드라마/EN": 4,
-    "AI·생산성/EN": 27
+    "K-pop/EN": 8,
+    "K-드라마/EN": 5,
+    "AI·생산성/EN": 21
   },
   "retainedFromPrevious": 0,
   "items": [
+    {
+      "title": "OPPO Pad Air 6 Launch: Key Features and Price - Techgenyz",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1oaE54MXRSUkFkNm9iQVhCVmhzeXQ0U2syWVRWM1NNRW5pXy1VNzBfSGZScTJtSlgxLWVLakpEUGN0bkI5aURCUThITmYtUFpubm1HX003SQ?oc=5",
+      "publisher": "Techgenyz",
+      "publishedAt": "2026-11-17T17:00:50+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "AI in Finance – News on AI in Banking & Payments - FF News",
+      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFA0TGZZMDFwNXpwanlCbURRX2tKNG02bU5uSWdVZTctTThyYU9hMEVzZnNtV2d6V29NRzhaZUF5OXR1SWdvRFhr?oc=5",
+      "publisher": "FF News",
+      "publishedAt": "2026-11-17T16:23:38+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/ - Facebook",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdEtJamowVW44UmRWWXlZMEljcEFjUmwtUmN5aThOdE1SOERiLTRrYmJFNkw2UjR4dWlVeE1SNnJkQVpPSTJHby1aMU8waUJDZTdDVGY5Mlh6bzRpT1RIYi1sLXk3cmdpdnR6akhEejBTU0FqUWgzdDk0ZU53Yy0wbUFLSGhRemdDZnRPQ0lVSkRjdExhR3ZRMlVGQ0dxY3VVNlJZV3ZPMEhLaE0yZ3RHd2s1dVIwMG1qbXZieWFRUnJXQnh3MzVrQjBKUHJqRkZmMC1N?oc=5",
+      "publisher": "Facebook",
+      "publishedAt": "2026-11-17T16:13:53+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
     {
       "title": "'데블스 플랜: 데드 어게인', 공개 첫 주 비드라마 화제성 1위…탈락자 부활 '유배지' 주목 - 제이앤엠뉴스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rZHlXcm9NUTJpZjFPUmU0b3pteVdHLUJKUW4ydHFrSjRuQ3ctWWZuSXRsbXMyNzJyYzcxMTBiNFZ3WjZkM0V1WVhfQWpiVUZ5OFpDd0tvbjluYVlBTnEtOA?oc=5",
@@ -22,6 +46,14 @@
       "publishedAt": "2026-11-17T10:14:31+00:00",
       "category": "연예",
       "region": "KO"
+    },
+    {
+      "title": "Google says hackers use AI agents to find and exploit software flaws - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb2tBRzFPVzNkWENsbVNtY3hpeGt3T3FvU3ozZllQWlFqemtsTGg2eS0tdlJqT2I1NDdnMVg4WHlCenMwbmJQN1d6RlZiUWJlTDhlMDVmbmNoQi05N21FaGVXRG9fZzFJTlN2T0xvR2RxTkgwcjJpbWZEQ2NtbW8xR3lPUmU1SS1SeVF1LWNiU09DOEdaUkkxMkk0LTNMNVVyS2t2RmliV3EyZzVBWFgwbXdiLWhwUlRzNDNtOUdXX2ZBV2FfWXZfOEpRR2M?oc=5",
+      "publisher": "TradingView",
+      "publishedAt": "2026-11-17T10:05:59+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
     },
     {
       "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details - NDTV Profit",
@@ -48,15 +80,7 @@
       "region": "KO"
     },
     {
-      "title": "DeepChem: Workflow and Research Checks - CASRAI",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBheGpNblBOaGdKR0g0ZEdVTVZtdm1nT3NRd053TzhJUndyYm0xUEdiSzZqRW1tQ1UweHpLTXo5WkdnZ0xJS0Z1YWRR?oc=5",
-      "publisher": "CASRAI",
-      "publishedAt": "2026-11-17T09:21:53+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리·누나는 안 나오나요?\"[K-EYES] - 스타뉴스",
+      "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리· 레이는 안 나오나요?\"[K-EYES] - 스타뉴스",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CdHVhTWQzcGxaOGtCUDhraW13R2RxQU12YkZXek1RZHpXTkV0LVNqVWVndE9iU280WG54SVBLLVQtMVNVS0c2TnJCcEd4X2lpRHZLRVU4bFhFUDEzakFSZGwzdDhaVm9DYXFNOXdScnVVa2Zs?oc=5",
       "publisher": "스타뉴스",
       "publishedAt": "2026-11-17T08:55:34+00:00",
@@ -78,6 +102,14 @@
       "publishedAt": "2026-11-17T07:51:00+00:00",
       "category": "연예",
       "region": "KO"
+    },
+    {
+      "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUpBaHc2SF9YX1QzSm5BX0R1SVAzRTZ2eG5jcUVtdkZNTWg5NGhfaG9XMkNuWmswQ1ZaVDV0UVVOZUFpVm1VMkRpZHJ3ZGNHRkZDSjN3OHNMSzBoV2VKRzA1RUliMlpRQ1U1Q3FnRkR4TG01QTYwVVoyaGNnWkJCTVFHTGYwZXZra2JIVVVn?oc=5",
+      "publisher": "조선일보",
+      "publishedAt": "2026-11-17T07:03:18+00:00",
+      "category": "K-pop",
+      "region": "EN"
     },
     {
       "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More - Esquire India",
@@ -105,19 +137,11 @@
     },
     {
       "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식) - 조이뉴스24",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KYm5TbzgwTHIwVmlmVnY4NDdvdnNkclg3eW94M2Z2Q0V0dVNaMi1KdVRhVHJyUEQydkUwd1dqVDJvSHQ5M0gzbjB6UzRRQzg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nbGVNdldNVlJUZjhldFlpaEVXY2lldVFJcXhycG41RWVfaElUd20xQ0NYWGZiUmZ6MFZqODFYN0hNanlTUUFDOTNvTQ?oc=5",
       "publisher": "조이뉴스24",
       "publishedAt": "2026-11-17T05:20:00+00:00",
       "category": "연예",
       "region": "KO"
-    },
-    {
-      "title": "Meta Is Teaching Small Businesses How To Use AI, Not Just Try It - WeRSM",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5ERFFzRVpMYnBWMVVXQWd6QTJibTI0RVZvZll1NjU3SXRtOGhab3Uwa1NoUExXNHlhQ19KUlZfc25adldEd2RRWlIxdi1IVkxDcGxvams1UjZ5aEstV3dLRGJORU1pQlgwaUhxN2JqaHE?oc=5",
-      "publisher": "WeRSM",
-      "publishedAt": "2026-11-17T02:46:39+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     },
     {
       "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표 - 티브이데일리",
@@ -126,22 +150,6 @@
       "publishedAt": "2026-11-17T00:04:02+00:00",
       "category": "K-pop",
       "region": "KO"
-    },
-    {
-      "title": "Google says attackers built an AI framework to turn software patches into exploits without human intervention - VentureBeat",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWXlLd3d3Z0JOanJZX0lsQ0FBMElDVzhuenVvUFlHSjNRRUtGU3lJb0VyV3QxS2RmNF94TDNWeGdzRlhuLWtYZ0tDZmRFVS1GUEdWa1djRHQ0UFlRYldTV1kwU2d6WWxKSHI1bjN2OXlzU1lEV1ZXd3FvWFliLUptRGpmdHRDR3ItM2xGWG1xVUx4VTJfRlIzZlpkRmdEVmpiRFZ4YXJFcDZBVlNFQ0R1V3hnMlhLaWlRVndSRGZteUhqaDJiS285SndIa2Ntby1zZTFOb05mZ1IyQQ?oc=5",
-      "publisher": "VentureBeat",
-      "publishedAt": "2026-11-16T21:58:51+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Vericut Optimizer 3.0 simplifies NC program optimisation - ETMM",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY0Y5dzYxQ3BnVDFqMjRROTE1bFo1Ykk5VWZwSTJJNWlGTlEtUHViUkN0TnlKNnk0blFJTmdpWGs4dUVuOEVtdURER2VqcUswY2JsYXVsSUk0UWJDRUxYeDBqZUVkdm1LaG1mR2xYX3MxX2xkQTdLeEY2MnpsZ0MyM21uMF9iZ19YTV94RWctYnAxYkhSS3JIbUNObWxSZEQ4dzdieThyVVhsNnV6SktrN3hR?oc=5",
-      "publisher": "ETMM",
-      "publishedAt": "2026-11-16T20:56:37+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     },
     {
       "title": "NEW of PRFAA - Puerto Rico Federal Affairs Administration (.gov)",
@@ -168,14 +176,6 @@
       "region": "EN"
     },
     {
-      "title": "Thread AI Joins the Microsoft for Startups Pegasus Program to Deliver its AI Workflow Orchestration Platform on Microsoft Marketplace - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMDRFbXpZWm85T3hDa051Q2otcGk5V2JTNEtYT29TR1ZjeXBmZFRxdVQxVkVudXVUWUZyaDA4czlUcmh2VU00ZnNNUG5VUk5BVHVQSDR1MmZ2bUQ3LWpERzJTZXFlVFRpXzN2YmZ6aUVrOXhTZkVRN0Zzb1hkYkZLcUNOam52Qm1rRGoyQTJpbWNoWHVIWWFJc2pFVzJURWM?oc=5",
-      "publisher": "Yahoo Finance",
-      "publishedAt": "2026-11-16T15:40:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers - https://3dprinting.com/",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLVBPc012eVVYaGRfVnllSWZPMV91aGRFdEsxV3BobW1STzJ2T1ZFMmFYRFVDZS1TMXNVeU1STS1PdUprcmQ3clI1Tk1OaWtubjl5UkxhN1hlZms3SDVmOVdEZGU1Q3gwUGZmelBOckVORTJRbmJ3MDZUVXlhUkVTcTRZRFRzTnZ6azB2U0duelVSZzNTNW9sZ2o5OE9NeTZJSGlpSTJvWU1kVUFmMnhnMzh0Vi13U0dfZEZxaEN6SnZpTzRiUG1aWQ?oc=5",
       "publisher": "https://3dprinting.com/",
@@ -192,14 +192,6 @@
       "region": "EN"
     },
     {
-      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
-      "publisher": "Rolling Stone",
-      "publishedAt": "2026-11-16T14:50:47+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
       "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
       "publisher": "Dojeon Media",
@@ -212,22 +204,6 @@
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVNpNlZwaG5fSGpmekVDR0w2dlRySnFvSDNPU2NPbXh0YkdDWjlqTHd5LWM0YnhWWXdKNTJmLXVNTnNrMnJhR08teE44SjZSV0dLbnp6MWNoa0JfanR4eUxSbDBQWHpFa0gwME1SVjNOLVV6LURxZTVWd2JmSndROEpRcXBuQQ?oc=5",
       "publisher": "igor´sLAB",
       "publishedAt": "2026-11-16T14:00:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "AI Performs Best in Property and Asset Management Operations - Globest",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPT2lRbDZOaWlCZlZMZi1hampKNllkeTBrbHE5TENCekF4THd5R0hsT1ppbzBVand0dllsU0FhcjczNWtFeGo3RWRESkxlN09NX1BFcXdidFFWUFJ5ak9BUmRwTS1QUlA3dDBDNzRJeWdEakZDMXRKRklzRmRUWlNXNjZQMDRlVXZKeks5c0NjUHNuX0p6MVVxLV9VRFU?oc=5",
-      "publisher": "Globest",
-      "publishedAt": "2026-11-16T13:39:56+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Adobe and Google expand partnership to integrate AI models and creative tools across platforms - Social Samosa",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTldUb1RyYTJpQTNodEhEUmZsT0pMQ3U0TUlWUTViVUVqOTBMRkdoZF9uV2RFRmc3NFZMdlJKelJETnFBdlRKWC02eEFkZElhS3l5dTNfUlMwc0VxVEtuUWF5WVFyT2FVWHNxWnpyYXBLM3UtSTJFMGdjZEZlVWtzdnZ6TzBUWU5TcW4zYk1WdzVneWRQWFpmX0x5UG85VmZLdHB1UjlwNXhSeWZKdFBnSHFNM2lGck5ucTBmQmpB0gG-AUFVX3lxTE9OV1RvVHJhMmlBM2h0SERSZmxPSkxDdTRNSVZRNWJVRWo5MExGR2hkX25XZEVGZzc0Vkx2Ukp6UkROcUF2VEpYLTZ4QWRkSWFLeXl1M19SUzBzRXFUS25RYXlZUXJPYVVYc3FaenJhcEszdS1JMkUwZ2NkRmVVa3N2dnpPMFRZTlNxbjNiTVZ3NWd5ZFBYWmZfTHlQbzlWZkt0cHVSOXA1eFJ5Zkp0UGdIcU0zaUZyTm5xMGZCakE?oc=5",
-      "publisher": "Social Samosa",
-      "publishedAt": "2026-11-16T12:24:31+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -288,6 +264,14 @@
       "region": "KO"
     },
     {
+      "title": "The Remarried Empress tops K-drama buzz rankings over 100 Days - Pirates and Princesses",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcWFJMG9vSGNfTmRUdGxvZXJPNkUtUEE5eXlROGRDcjlNVHY4SHVnRmxlSmx5M2NNdEZWa0ZsWXBfQWMwZEJqbUw4eTB4RTlNaE5tbFNVdEJNRWxsVGkwQ25IekEyZVJCV3RUQ190YWZJOExuNlFHWlVlQmZWdFZ1emxwSDAxcVVMSlMwOFlCeC1BSm9KTGVaNnNPWkM?oc=5",
+      "publisher": "Pirates and Princesses",
+      "publishedAt": "2026-11-16T08:09:05+00:00",
+      "category": "K-드라마",
+      "region": "EN"
+    },
+    {
       "title": "조진웅 이어 고경표 잔혹사…tvN, \\'보검매직컬\\' 편성 위기 앞 골머리 [이슈&톡] - 티브이데일리",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE02TFV3NEtGNE9YUlZpX0QxeTk2aFgwOEQ0ekVoOGlXcnN1MzZkcGlGcEtRYWpjeFkzbjJPSlR6NWVyd016R0JGem5BSnBxMnIyS3h2UDk2cVNqNFhlYkE0UzFzRi1nUzJkclFmR0lDb1I?oc=5",
       "publisher": "티브이데일리",
@@ -328,10 +312,10 @@
       "region": "EN"
     },
     {
-      "title": "Legal Workflow Automation: 10 Best Practices for 2027 - Lawxy AI",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObVVHV005QWl5Q05oUlRrWkxNeTJfQ0thYWIzS3RiLTg1Um9pZkU4cjNuUGF3T3JQTEZ4ajNnVmJEdVVUSHY3NFRFZWFMSWhwZHFUdDFTalZXUTYwLVdzeG51c3pDR0t3Zkcxc2VkbDgyaVRWelBqRHlTZHV5eGhfelZCbmstOXdxdmNoaWR3?oc=5",
-      "publisher": "Lawxy AI",
-      "publishedAt": "2026-11-16T00:00:00+00:00",
+      "title": "Asana vs monday.com vs ClickUp: Team Pricing Compared - JournalArta",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcmtxaTdyT1lXT2NEMkcwM0Vjay1RZnl0NVo2eUlOMFVMMWhGeDJ3d0tOem5OVUNMOTdabTljSDRTckgyU2hwTl9MdTcyN2VVX1FvUFd6VlpUYWt2eG5ERjRmczgwUVg5NWVqcnhvYXk0dHB5eGJvZE80UkFCZUpwVWZ3S25lcmxqTzJ3MkdCRE9IWlZjSFVSaS1YVExwSWEyeHc?oc=5",
+      "publisher": "JournalArta",
+      "publishedAt": "2026-11-16T00:26:06+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -376,6 +360,30 @@
       "region": "KO"
     },
     {
+      "title": "Top 6 Alternatives to Automic Automation - AIMultiple",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1lYlhfc3dKU3M5WmhjUVNfOFNsSUJOTE9XZzVsdXgtaGU1N05ITVNDVE45aGwwRTRvTGVCajhYTXlyeXpXeVNOSlY1cXlBRXBfSnRSTQ?oc=5",
+      "publisher": "AIMultiple",
+      "publishedAt": "2026-11-15T08:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Top 10 Enterprise Job Scheduler Software - AIMultiple",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE96dXhzdW9QSUZqeVBEaGFXeTk3b29zNEdnaUc3R2NibXZFTFBQSFhENm11T0R3Z180aDZMc3EzLWE1Y1Bma1h3WEwydUFlTzRBUGZoOW5ENGRqWng0ZUNUNkFSMFJJRTg?oc=5",
+      "publisher": "AIMultiple",
+      "publishedAt": "2026-11-15T08:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "PLTR, CRM, NOW, SNOW Comparison: Palantir Leads Growth, Salesforce's AI ARR Is Clearer - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0lPUjJuVmRMT3RJTW9vc3U1R3ZvNTM0OXZpZWIwSXdKdjlTemIxb0cxSjlVcVpPUWt5RW9pVmo1bl9WT0VzX1ljTG5YRVJXS0hSNUpXM0hZb1dSNlVOalNOTTRaWDh3bnZrcmF3YUV4Q3VSMmhqLUgzbnRFcGVKRWRRYlAyZWpzVzRRelNYSjRadXM2N01SUmN2bzNMQTh1dVN6NFZkdHlUb3Jqa09aYg?oc=5",
+      "publisher": "TradingKey",
+      "publishedAt": "2026-11-15T06:22:51+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
       "title": "‘재혼 황후’ 이세영, 패딩 입은 라스타 독기 어디로…미소 뒤 두 얼굴 알고 보니 - 위키트리",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tWDhqbWZ6WFpLVVdtbWg0N05iM0hURTEzempCZ0E2dGRzNXV4V05jWXp0ZlppcG5EMzk5aGNJUjh4LVpLdThIWEt1cVViQlZMY0lybm9n?oc=5",
       "publisher": "위키트리",
@@ -408,18 +416,10 @@
       "region": "KO"
     },
     {
-      "title": "History of ChatGPT: How AI Changed the World - STL.News",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBvbjdERWhLejFZeDVmejlTUFk2OVBzUUFqN3c3NWkzZDA4UU5ETnY2bWdiTl9IOFpBeEtQS2tiLXdfT1N5Uk5MN2lBT01SMjBrTmlTTERUQlluUDhfM1pTRG9LSVV2c2JaZ2xISDNPcHpRMzA?oc=5",
-      "publisher": "STL.News",
-      "publishedAt": "2026-11-14T20:36:14+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Notes app in iOS 27 gets notable upgrades: Here is everything new - آي-فون إسلام",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVXY3U25jcVpxcGYzdXVzLUlKdWY2TTdNNVlfNC02NkJlVmVXOWVkaHZvOUt1NEtUWTdfYmpFZHhBRmI2TDZzMElxUmhNcjRPejFjQU9PR05LWGY5Z0M2S3hua0VManJ1YVowbWs0V19HdnlQYlNuSC1uX1JBcE5VX2RjVlRZMk1YZ01kbGdWd2RVOTlpYVRPUTVVTG1KQ1VEU2NPTUZ2c3F4SngwNFZkZkUtcXdyUQ?oc=5",
-      "publisher": "آي-فون إسلام",
-      "publishedAt": "2026-11-14T17:57:42+00:00",
+      "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSmZFbFBPZ1U2ZGdqemxYUDYtZjF0TFNOOXFfcDRmUnBpS1k2WjZZWlhYU2hyNkhKSURhbFAzLXRCN0xJVHhla1BzdHFXZkJkVERsd21qRTJmZFhCcEZNeGJyR3ZjeHREYjNNYjlwY2JfMGViN3lWRllzNkpOaWl5UTBnRFJmZUtkekpmbGxvQnlCMU5EYmZBUjRGSGs1eVhVOUtCQVRrMEFkNGVkSDNvOTVkaVdEQTRZZEhQN0VlVVXSAcABQVVfeXFMTkpmRWxQT2dVNmRnanpsWFA2LWYxdExTTjlxX3A0ZlJwaUtZNlo2WVpYWFNocjZISklEYWxQMy10QjdMSVR4ZWtQc3RxV2ZCZFREbHdtakUyZmRYQnBGTXhickd2Y3h0RGIzTWI5cGNiXzBlYjd5VkZZczZKTmlpeVEwZ0RSZmVLZHpKZmxsb0J5QjFORGJmQVI0RkhrNXlYVTlLQkFUazBBZDRlZEgzbzk1ZGlXREE0WWRIUDdFZVVV?oc=5",
+      "publisher": "Simply Wall St",
+      "publishedAt": "2026-11-14T20:20:17+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -428,22 +428,6 @@
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1KaEpCTWIzeFJQYl9abzE1bHk4Q1lpb2hPTzFxc2VWQXU5RnBKVGhXcjhSQkI1YVMxZVBELUhFN0RJclA4YU9ET1c3S1RhVmYzY2owX25DSEUzeFJ2a3BDT2xrUXd5MnYySFJ3MWRsV216NFBi?oc=5",
       "publisher": "Acronis",
       "publishedAt": "2026-11-14T08:00:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "AI-BOMs: A Practical Guide to AI Bills of Materials - wiz.io",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PZ1k1WDRLQWYyUmg5R0xoUEpuZGwxTEVuN3Jrdi1GcXpNZUczMktoTk5yVFRLdlVIalpxdEJWSWp4X0thUDNUU0REZEFYdGtLSDgtYS1rREo1WW81MGx6SE1nSFZvU2V0bU9kcHVMdmxlR0JY?oc=5",
-      "publisher": "wiz.io",
-      "publishedAt": "2026-11-13T23:59:13+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Bracco, Avicenna.AI announce US FDA clearance for new brain aneurysm detection and assessment software - NeuroNews International",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUGQ2eEJ3ZUJaOUFLc3dkYUk4RjBTZllLUmROX1ExazVoeUxPY2JTdU1SZlRnQmZpZU5MdzRKcmtzZ3ZiaTY4dGJObTM0Nk40b2RmQ3UwQ3g3SjNYY0JIRlBfa192cko4SHZ0ai1VLVF1aDlWQ3RGaG9wTUdJV3h1bDF3QjllSkVLVEdBLXZueFZ0SUZ5a3hVTkFmQ2JHX3l5NjItSTFKZEotUm1yNjYxakQxNmRWTy03cmdiYjlSRWkxaWR1UkU4YzlydjFwZzMyU1dF?oc=5",
-      "publisher": "NeuroNews International",
-      "publishedAt": "2026-11-13T17:16:05+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -480,14 +464,6 @@
       "region": "KO"
     },
     {
-      "title": "Google launches Gemini 4 Hydrogen, targets faster AI workflows - The American Bazaar",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeFZWTldPNDktREpkTG80NXBUcTBNb2dzV3pPdDRJb2FNb05YX0xCVnBEWWlnT1FORVoxbS05QnNGNXZ6MlNTZnVROHZfZ3RVMWs4WUdjbVc0ZlNNSHVybHlidXNyU2k2M1hyalVjcEFuOVZxRFI3ZWNmd3MwVmdZNDRLRVNxTWk4WU81eWlZeHo1cHNmRzczYXlENnRKODkwbFNybEhKdjFJZw?oc=5",
-      "publisher": "The American Bazaar",
-      "publishedAt": "2026-11-12T22:38:53+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "[체크] 앤트로픽, ‘페이블 5.2’ 프롬프트 가이드 공개…AI에 맡길 범위·완료 기준 명시 - 아웃소싱타임스",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9xR3BqZnVsRXNHOTdsOVlvT3ZGc2lrSmFwSDVVVEliWTQ2b0llWkdEQmdPbU9GcDVJN2xsZHYza01PQVJ3U25SRlJSTjBhT3FIRUdEYnRyRWJBMWlGaXBuVVJMZ2o2R1F6N0I3am9MU1h4QQ?oc=5",
       "publisher": "아웃소싱타임스",
@@ -502,14 +478,6 @@
       "publishedAt": "2026-11-11T21:15:00+00:00",
       "category": "생활 정보",
       "region": "KO"
-    },
-    {
-      "title": "UiPath Joins Google Cloud's Gemini For Healthcare As Launch Partner — Enables AI-Powered Workflow Automation - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQMEd4ZFBfQWxZNlJ4cmpvdzJ4TDJld3ZjX05XWnBYR2Jzb1NZd3hyWHJOSXRhOWVMb0EtT2xtNk1menRSMDdFM3RVQjJiRTltNC1FZHFPZ3RXVXRxQVhxc1FFSUszSDhBNTlZeVZGa3lsNDlTaEFPTFc5N3lKSi1ZdWkyTFE0WElib3B4bGtXSk93ckxjdzR3Y1pTZlZmcl8yUTJtdW0taGo3TThHUHlRQzhBMEtXdEF3d0hrVld2eTlSaW1XYi1LaVpkR0FYZjdBNWt1bXlaZ1NqSmR2ZzdwZHRrM19Zc1RlQ3haajFQcFR1NjFDX3hlMTNQdw?oc=5",
-      "publisher": "TradingView",
-      "publishedAt": "2026-11-10T16:43:50+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     }
   ],
   "errors": []

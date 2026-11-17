@@ -1,7 +1,69 @@
 {
-  "generatedAt": "2026-11-17T12:29:33.393635+00:00",
+  "generatedAt": "2026-11-17T18:27:03.585213+00:00",
   "disclaimer": "Editorial-only heuristics; no measured traffic, revenue or factual verification. Promotional topics are excluded from recommendations.",
   "candidates": [
+    {
+      "id": "5cabc492a1bb04",
+      "title": "Top 6 Alternatives to Automic Automation",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Top 6 Alternatives to Automic Automation - AIMultiple",
+          "publisher": "AIMultiple",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1lYlhfc3dKU3M5WmhjUVNfOFNsSUJOTE9XZzVsdXgtaGU1N05ITVNDVE45aGwwRTRvTGVCajhYTXlyeXpXeVNOSlY1cXlBRXBfSnRSTQ?oc=5",
+          "publishedAt": "2026-11-15T08:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 34,
+        "commercialFitHeuristic": 42,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "사용법·비교 등 정보 탐색 의도 단서",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "c0dcfae3d8567d",
+      "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/ - Facebook",
+          "publisher": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdEtJamowVW44UmRWWXlZMEljcEFjUmwtUmN5aThOdE1SOERiLTRrYmJFNkw2UjR4dWlVeE1SNnJkQVpPSTJHby1aMU8waUJDZTdDVGY5Mlh6bzRpT1RIYi1sLXk3cmdpdnR6akhEejBTU0FqUWgzdDk0ZU53Yy0wbUFLSGhRemdDZnRPQ0lVSkRjdExhR3ZRMlVGQ0dxY3VVNlJZV3ZPMEhLaE0yZ3RHd2s1dVIwMG1qbXZieWFRUnJXQnh3MzVrQjBKUHJqRkZmMC1N?oc=5",
+          "publishedAt": "2026-11-17T16:13:53+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
     {
       "id": "582f78fe1d74e4",
       "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기",
@@ -30,37 +92,6 @@
       "status": "needs_sources",
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "97213f254eb83d",
-      "title": "Meta Is Teaching Small Businesses How To Use AI, Not Just Try It",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Meta Is Teaching Small Businesses How To Use AI, Not Just Try It - WeRSM",
-          "publisher": "WeRSM",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5ERFFzRVpMYnBWMVVXQWd6QTJibTI0RVZvZll1NjU3SXRtOGhab3Uwa1NoUExXNHlhQ19KUlZfc25adldEd2RRWlIxdi1IVkxDcGxvams1UjZ5aEstV3dLRGJORU1pQlgwaUhxN2JqaHE?oc=5",
-          "publishedAt": "2026-11-17T02:46:39+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 36,
-        "commercialFitHeuristic": 30,
-        "shortformFitHeuristic": 52,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "사용법·비교 등 정보 탐색 의도 단서"
       ]
     },
     {
@@ -125,36 +156,6 @@
       ]
     },
     {
-      "id": "ac45b356875cf5",
-      "title": "2NE1's CL announces solo comeback",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "2NE1's CL announces solo comeback - Facebook",
-          "publisher": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmxGaUJMUWcyUmpzdndlY2N4S2tpWTFBV215S0ZLeUVmOFF2MUFZTnlNVXpKSmxhS2VTczlhZjF2Mm9XeHZDU2VoQWtIOVVVZVk1dzFwc1BJNW1WM0dwZ0J0QlY0WFRSNUU1bHZnNGRFUU94YkZZZG5tdTlwMkluT1FMX3g2c0J1M05oSjlfRUp5VDA?oc=5",
-          "publishedAt": "2026-11-17T08:30:30+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "724ec2250e9c29",
       "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More",
       "category": "K-드라마",
@@ -216,6 +217,67 @@
       ]
     },
     {
+      "id": "38fafa71e91cbe",
+      "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers - https://3dprinting.com/",
+          "publisher": "https://3dprinting.com/",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLVBPc012eVVYaGRfVnllSWZPMV91aGRFdEsxV3BobW1STzJ2T1ZFMmFYRFVDZS1TMXNVeU1STS1PdUprcmQ3clI1Tk1OaWtubjl5UkxhN1hlZms3SDVmOVdEZGU1Q3gwUGZmelBOckVORTJRbmJ3MDZUVXlhUkVTcTRZRFRzTnZ6azB2U0duelVSZzNTNW9sZ2o5OE9NeTZJSGlpSTJvWU1kVUFmMnhnMzh0Vi13U0dfZEZxaEN6SnZpTzRiUG1aWQ?oc=5",
+          "publishedAt": "2026-11-16T15:10:24+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 33,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 52,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "ac45b356875cf5",
+      "title": "2NE1's CL announces solo comeback",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "2NE1's CL announces solo comeback - Facebook",
+          "publisher": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmxGaUJMUWcyUmpzdndlY2N4S2tpWTFBV215S0ZLeUVmOFF2MUFZTnlNVXpKSmxhS2VTczlhZjF2Mm9XeHZDU2VoQWtIOVVVZVk1dzFwc1BJNW1WM0dwZ0J0QlY0WFRSNUU1bHZnNGRFUU94YkZZZG5tdTlwMkluT1FMX3g2c0J1M05oSjlfRUp5VDA?oc=5",
+          "publishedAt": "2026-11-17T08:30:30+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "3274dd88b349ac",
       "title": "'데블스 플랜: 데드 어게인', 공개 첫 주 비드라마 화제성 1위…탈락자 부활 '유배지' 주목",
       "category": "연예",
@@ -243,37 +305,6 @@
       "status": "needs_sources",
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "fa81fa2723c6f8",
-      "title": "AI-BOMs: A Practical Guide to AI Bills of Materials",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "AI-BOMs: A Practical Guide to AI Bills of Materials - wiz.io",
-          "publisher": "wiz.io",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PZ1k1WDRLQWYyUmg5R0xoUEpuZGwxTEVuN3Jrdi1GcXpNZUczMktoTk5yVFRLdlVIalpxdEJWSWp4X0thUDNUU0REZEFYdGtLSDgtYS1rREo1WW81MGx6SE1nSFZvU2V0bU9kcHVMdmxlR0JY?oc=5",
-          "publishedAt": "2026-11-13T23:59:13+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 36,
-        "commercialFitHeuristic": 30,
-        "shortformFitHeuristic": 52,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "사용법·비교 등 정보 탐색 의도 단서"
       ]
     },
     {
@@ -323,36 +354,6 @@
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "9e0d4ed102c13c",
-      "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call]",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call] - 매일경제",
-          "publisher": "매일경제",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqN3FTamVCV0ZEYkxucWZkSUZtZ2FJYW5wVTNKU2NuUzYzaFZOb1l6LXIwdlYzMlN1aWVOQnNvNmo5VS1fbUxiZ3ZPajhtalk5?oc=5",
-          "publishedAt": "2026-11-17T06:16:23+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -428,6 +429,67 @@
       ]
     },
     {
+      "id": "a5b5a0ea8a7fd5",
+      "title": "PLTR, CRM, NOW, SNOW Comparison: Palantir Leads Growth, Salesforce's AI ARR Is Clearer",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "PLTR, CRM, NOW, SNOW Comparison: Palantir Leads Growth, Salesforce's AI ARR Is Clearer - TradingKey",
+          "publisher": "TradingKey",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0lPUjJuVmRMT3RJTW9vc3U1R3ZvNTM0OXZpZWIwSXdKdjlTemIxb0cxSjlVcVpPUWt5RW9pVmo1bl9WT0VzX1ljTG5YRVJXS0hSNUpXM0hZb1dSNlVOalNOTTRaWDh3bnZrcmF3YUV4Q3VSMmhqLUgzbnRFcGVKRWRRYlAyZWpzVzRRelNYSjRadXM2N01SUmN2bzNMQTh1dVN6NFZkdHlUb3Jqa09aYg?oc=5",
+          "publishedAt": "2026-11-15T06:22:51+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 30,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "사용법·비교 등 정보 탐색 의도 단서"
+      ]
+    },
+    {
+      "id": "4fd06171766341",
+      "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback - 조선일보",
+          "publisher": "조선일보",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUpBaHc2SF9YX1QzSm5BX0R1SVAzRTZ2eG5jcUVtdkZNTWg5NGhfaG9XMkNuWmswQ1ZaVDV0UVVOZUFpVm1VMkRpZHJ3ZGNHRkZDSjN3OHNMSzBoV2VKRzA1RUliMlpRQ1U1Q3FnRkR4TG01QTYwVVoyaGNnWkJCTVFHTGYwZXZra2JIVVVn?oc=5",
+          "publishedAt": "2026-11-17T07:03:18+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "097c2a5f895510",
       "title": "‘100일의 거짓말’ 화제성 1위 탈환…김유정 출연자·브랜드평판 1위",
       "category": "연예",
@@ -455,37 +517,6 @@
       "status": "needs_sources",
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "38fafa71e91cbe",
-      "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers - https://3dprinting.com/",
-          "publisher": "https://3dprinting.com/",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLVBPc012eVVYaGRfVnllSWZPMV91aGRFdEsxV3BobW1STzJ2T1ZFMmFYRFVDZS1TMXNVeU1STS1PdUprcmQ3clI1Tk1OaWtubjl5UkxhN1hlZms3SDVmOVdEZGU1Q3gwUGZmelBOckVORTJRbmJ3MDZUVXlhUkVTcTRZRFRzTnZ6azB2U0duelVSZzNTNW9sZ2o5OE9NeTZJSGlpSTJvWU1kVUFmMnhnMzh0Vi13U0dfZEZxaEN6SnZpTzRiUG1aWQ?oc=5",
-          "publishedAt": "2026-11-16T15:10:24+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 33,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 52,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
       ]
     },
     {
@@ -535,36 +566,6 @@
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "aa3614db0612a8",
-      "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story)",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story) - 스포츠조선",
-          "publisher": "스포츠조선",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MbTBUQ2dDbnIwSXFBUFlzVjhVNWYxaWVhVGNRQWYzemFzS1d6R2N3SVhwZ0hwY0JkbHFqQXJXX1F5SmVvRlJkbTNwQU5xWGNtblRjUjFrbjZNbzdRa002VHZtZUFjOWdpSXhCTzJWN1hqVWtCLU9ld0FlaEJyQQ?oc=5",
-          "publishedAt": "2026-11-17T06:12:34+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -640,36 +641,6 @@
       ]
     },
     {
-      "id": "3cba1bb03085e9",
-      "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식)",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식) - 조이뉴스24",
-          "publisher": "조이뉴스24",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KYm5TbzgwTHIwVmlmVnY4NDdvdnNkclg3eW94M2Z2Q0V0dVNaMi1KdVRhVHJyUEQydkUwd1dqVDJvSHQ5M0gzbjB6UzRRQzg?oc=5",
-          "publishedAt": "2026-11-17T05:20:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "2c0c2d127565a9",
       "title": "Compare Top 5 Stonebranch Alternatives",
       "category": "AI·생산성",
@@ -701,13 +672,73 @@
       ]
     },
     {
-      "id": "2b10149b7a760b",
-      "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리·누나는 안 나오나요?\"[K-EYES]",
+      "id": "9e0d4ed102c13c",
+      "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call]",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call] - 매일경제",
+          "publisher": "매일경제",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqN3FTamVCV0ZEYkxucWZkSUZtZ2FJYW5wVTNKU2NuUzYzaFZOb1l6LXIwdlYzMlN1aWVOQnNvNmo5VS1fbUxiZ3ZPajhtalk5?oc=5",
+          "publishedAt": "2026-11-17T06:16:23+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "3cba1bb03085e9",
+      "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식)",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식) - 조이뉴스24",
+          "publisher": "조이뉴스24",
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nbGVNdldNVlJUZjhldFlpaEVXY2lldVFJcXhycG41RWVfaElUd20xQ0NYWGZiUmZ6MFZqODFYN0hNanlTUUFDOTNvTQ?oc=5",
+          "publishedAt": "2026-11-17T05:20:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "58b3dae4580697",
+      "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리· 레이는 안 나오나요?\"[K-EYES]",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리·누나는 안 나오나요?\"[K-EYES] - 스타뉴스",
+          "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리· 레이는 안 나오나요?\"[K-EYES] - 스타뉴스",
           "publisher": "스타뉴스",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CdHVhTWQzcGxaOGtCUDhraW13R2RxQU12YkZXek1RZHpXTkV0LVNqVWVndE9iU280WG54SVBLLVQtMVNVS0c2TnJCcEd4X2lpRHZLRVU4bFhFUDEzakFSZGwzdDhaVm9DYXFNOXdScnVVa2Zs?oc=5",
           "publishedAt": "2026-11-17T08:55:34+00:00"
@@ -761,22 +792,22 @@
       ]
     },
     {
-      "id": "7675b86b41a472",
-      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys",
-      "category": "K-pop",
+      "id": "19ebbaf7be4840",
+      "title": "The Remarried Empress tops K-drama buzz rankings over 100 Days",
+      "category": "K-드라마",
       "region": "EN",
       "headlines": [
         {
-          "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
-          "publisher": "Rolling Stone",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
-          "publishedAt": "2026-11-16T14:50:47+00:00"
+          "title": "The Remarried Empress tops K-drama buzz rankings over 100 Days - Pirates and Princesses",
+          "publisher": "Pirates and Princesses",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcWFJMG9vSGNfTmRUdGxvZXJPNkUtUEE5eXlROGRDcjlNVHY4SHVnRmxlSmx5M2NNdEZWa0ZsWXBfQWMwZEJqbUw4eTB4RTlNaE5tbFNVdEJNRWxsVGkwQ25IekEyZVJCV3RUQ190YWZJOExuNlFHWlVlQmZWdFZ1emxwSDAxcVVMSlMwOFlCeC1BSm9KTGVaNnNPWkM?oc=5",
+          "publishedAt": "2026-11-16T08:09:05+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -791,22 +822,53 @@
       ]
     },
     {
-      "id": "732d0c2316c5ea",
-      "title": "Doctor X K-drama finale ends at No. 1 with 15.2% ratings",
-      "category": "K-드라마",
+      "id": "5012a3723cb4d4",
+      "title": "Google says hackers use AI agents to find and exploit software flaws",
+      "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Doctor X K-drama finale ends at No. 1 with 15.2% ratings - Pirates and Princesses",
-          "publisher": "Pirates and Princesses",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaVVHaURjb05aVE9lSXp5NnR4Ynltb1JGbXVkdU10TzBmNUYzOF9VM2N6Tk5VY2JaeVFlU2twNlJGOGx2cS1OWC1GOEVGb1liWkI0N01KaVN3a0p5MzA2MVR0TjlHWjdnWFhCMVZkcE9JVzhQYm92R3d6QjBaTW1uSDlTQ1N1aXBzcG1QdVdUVXJJUQ?oc=5",
-          "publishedAt": "2026-11-16T05:06:41+00:00"
+          "title": "Google says hackers use AI agents to find and exploit software flaws - TradingView",
+          "publisher": "TradingView",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb2tBRzFPVzNkWENsbVNtY3hpeGt3T3FvU3ozZllQWlFqemtsTGg2eS0tdlJqT2I1NDdnMVg4WHlCenMwbmJQN1d6RlZiUWJlTDhlMDVmbmNoQi05N21FaGVXRG9fZzFJTlN2T0xvR2RxTkgwcjJpbWZEQ2NtbW8xR3lPUmU1SS1SeVF1LWNiU09DOEdaUkkxMkk0LTNMNVVyS2t2RmliV3EyZzVBWFgwbXdiLWhwUlRzNDNtOUdXX2ZBV2FfWXZfOEpRR2M?oc=5",
+          "publishedAt": "2026-11-17T10:05:59+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
         "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "aa3614db0612a8",
+      "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story)",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story) - 스포츠조선",
+          "publisher": "스포츠조선",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MbTBUQ2dDbnIwSXFBUFlzVjhVNWYxaWVhVGNRQWYzemFzS1d6R2N3SVhwZ0hwY0JkbHFqQXJXX1F5SmVvRlJkbTNwQU5xWGNtblRjUjFrbjZNbzdRa002VHZtZUFjOWdpSXhCTzJWN1hqVWtCLU9ld0FlaEJyQQ?oc=5",
+          "publishedAt": "2026-11-17T06:12:34+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -851,37 +913,6 @@
       ]
     },
     {
-      "id": "54ad7d6e2f63e2",
-      "title": "DeepChem: Workflow and Research Checks",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "DeepChem: Workflow and Research Checks - CASRAI",
-          "publisher": "CASRAI",
-          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBheGpNblBOaGdKR0g0ZEdVTVZtdm1nT3NRd053TzhJUndyYm0xUEdiSzZqRW1tQ1UweHpLTXo5WkdnZ0xJS0Z1YWRR?oc=5",
-          "publishedAt": "2026-11-17T09:21:53+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
       "id": "5eeaeda1032d96",
       "title": "건강·주거·돌봄 어려움 겹친 위기가구…복지서비스 연계체계 점검",
       "category": "생활 정보",
@@ -909,6 +940,67 @@
       "status": "needs_sources",
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "732d0c2316c5ea",
+      "title": "Doctor X K-drama finale ends at No. 1 with 15.2% ratings",
+      "category": "K-드라마",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Doctor X K-drama finale ends at No. 1 with 15.2% ratings - Pirates and Princesses",
+          "publisher": "Pirates and Princesses",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaVVHaURjb05aVE9lSXp5NnR4Ynltb1JGbXVkdU10TzBmNUYzOF9VM2N6Tk5VY2JaeVFlU2twNlJGOGx2cS1OWC1GOEVGb1liWkI0N01KaVN3a0p5MzA2MVR0TjlHWjdnWFhCMVZkcE9JVzhQYm92R3d6QjBaTW1uSDlTQ1N1aXBzcG1QdVdUVXJJUQ?oc=5",
+          "publishedAt": "2026-11-16T05:06:41+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "8a4a163a6bddb1",
+      "title": "ElevenLabs is coming for your meeting notes, dictation app, and maybe your productivity routine",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "ElevenLabs is coming for your meeting notes, dictation app, and maybe your productivity routine - Yahoo Tech",
+          "publisher": "Yahoo Tech",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTVMtOU5xakc2WXpHRlUwYXFWX3ZVV3JMZ3NoWDN1ZVh4Q25uYlRKTkwtSzZpQXpITFNtcExqYXZCY0JxWnc1NXNTUlpic0FlTnpuRjVRSUdoN3A4S1RHNldheHFSaGFfbnNFQUN0LWpTUjJCUlVWM215eWhPX2RNd0ZCZllFTjdnUjZlcGk3N1BKVVNSWEY1aEV1QWJaZw?oc=5",
+          "publishedAt": "2026-11-16T19:01:47+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
       ]
     },
     {
@@ -972,37 +1064,6 @@
       ]
     },
     {
-      "id": "27c6b45dd0a303",
-      "title": "Google says attackers built an AI framework to turn software patches into exploits without human intervention",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Google says attackers built an AI framework to turn software patches into exploits without human intervention - VentureBeat",
-          "publisher": "VentureBeat",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWXlLd3d3Z0JOanJZX0lsQ0FBMElDVzhuenVvUFlHSjNRRUtGU3lJb0VyV3QxS2RmNF94TDNWeGdzRlhuLWtYZ0tDZmRFVS1GUEdWa1djRHQ0UFlRYldTV1kwU2d6WWxKSHI1bjN2OXlzU1lEV1ZXd3FvWFliLUptRGpmdHRDR3ItM2xGWG1xVUx4VTJfRlIzZlpkRmdEVmpiRFZ4YXJFcDZBVlNFQ0R1V3hnMlhLaWlRVndSRGZteUhqaDJiS285SndIa2Ntby1zZTFOb05mZ1IyQQ?oc=5",
-          "publishedAt": "2026-11-16T21:58:51+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
       "id": "7cae009b40a338",
       "title": "부산진구, ‘다문화가족을 위한 찾아가는 생활민원 교육’ 실시",
       "category": "생활 정보",
@@ -1030,6 +1091,37 @@
       "status": "needs_sources",
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "4f8e07bd8cf47e",
+      "title": "Iress rolls out AI tools to boost adviser productivity",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Iress rolls out AI tools to boost adviser productivity - Money Marketing",
+          "publisher": "Money Marketing",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQ282UjMyVERpQ29QRTMwYkZhYTZ2UFBVMXRTMjdQX0xScUZMZ25ocVdkZFk1eGN2MU5UUEw1SmpydXR3UmFXTGRick10VDRHeDRGb0VwOXdhOXhhTEVOWnJ1OG0wRmhfeHVseEVSSUg4NncySzFtc0FBQmQzQjc0VWdkSVVBT29aU19aVFJ3YW45bzRneHlsVQ?oc=5",
+          "publishedAt": "2026-11-16T15:40:08+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
       ]
     },
     {
@@ -1093,16 +1185,16 @@
       ]
     },
     {
-      "id": "8a4a163a6bddb1",
-      "title": "ElevenLabs is coming for your meeting notes, dictation app, and maybe your productivity routine",
+      "id": "52721658665c4c",
+      "title": "Anthropic Consolidates a Range of Productivity Tools and Functions Inside Claude",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "ElevenLabs is coming for your meeting notes, dictation app, and maybe your productivity routine - Yahoo Tech",
-          "publisher": "Yahoo Tech",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTVMtOU5xakc2WXpHRlUwYXFWX3ZVV3JMZ3NoWDN1ZVh4Q25uYlRKTkwtSzZpQXpITFNtcExqYXZCY0JxWnc1NXNTUlpic0FlTnpuRjVRSUdoN3A4S1RHNldheHFSaGFfbnNFQUN0LWpTUjJCUlVWM215eWhPX2RNd0ZCZllFTjdnUjZlcGk3N1BKVVNSWEY1aEV1QWJaZw?oc=5",
-          "publishedAt": "2026-11-16T19:01:47+00:00"
+          "title": "Anthropic Consolidates a Range of Productivity Tools and Functions Inside Claude - Cloud Wars",
+          "publisher": "Cloud Wars",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPM0NwWU5mMmlqS3VoRHU2QmRSbzJ2T01IQWtZVGo0eDRvZUVtUmlSRi0xa0pfTXpjVnZqN0pQUXdkS0hfSDhEWkNmazZPaEtOMWVrTll3bjA5Uk4tYkVKcVNWMmsyb2R1QlVjM21hU0tWcVFQaUtzVEM4TUNrUUIyNTFVcmZvUlBQVFpyU0htQzA0WDdvSW01Skh6MXB0d0JlcGJLdkJ2QmlMZw?oc=5",
+          "publishedAt": "2026-11-16T15:00:00+00:00"
         }
       ],
       "scores": {
@@ -1184,16 +1276,16 @@
       ]
     },
     {
-      "id": "4f8e07bd8cf47e",
-      "title": "Iress rolls out AI tools to boost adviser productivity",
+      "id": "51635582fc0ec3",
+      "title": "Adobe Brings AI Agents and Creative Tools to Creators Everywhere",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Iress rolls out AI tools to boost adviser productivity - Money Marketing",
-          "publisher": "Money Marketing",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQ282UjMyVERpQ29QRTMwYkZhYTZ2UFBVMXRTMjdQX0xScUZMZ25ocVdkZFk1eGN2MU5UUEw1SmpydXR3UmFXTGRick10VDRHeDRGb0VwOXdhOXhhTEVOWnJ1OG0wRmhfeHVseEVSSUg4NncySzFtc0FBQmQzQjc0VWdkSVVBT29aU19aVFJ3YW45bzRneHlsVQ?oc=5",
-          "publishedAt": "2026-11-16T15:40:08+00:00"
+          "title": "Adobe Brings AI Agents and Creative Tools to Creators Everywhere - MarTech Cube",
+          "publisher": "MarTech Cube",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPV2x1QmR3S1VCdG5CYjhiOGttZ29XaTFpTm9IVC1Wa1J3WUxHejRsMUZDNE5tY0g1MXFJVVRoWExSZkZxcFI5TzBKLUJTbU5hcFNDaGI0eWFyT19tU2dYOFA4aXNhQkpHRXkzdXVWS2NabmI5WTByQU9MUFdzdVJoTFpfdUJzQ2M4UXNhbmRJTUJMRXFKNFNGZA?oc=5",
+          "publishedAt": "2026-11-16T10:58:53+00:00"
         }
       ],
       "scores": {
@@ -1245,16 +1337,16 @@
       ]
     },
     {
-      "id": "ee6e14c4a25a41",
-      "title": "Thread AI Joins the Microsoft for Startups Pegasus Program to Deliver its AI Workflow Orchestration Platform on Microsoft Marketplace",
+      "id": "0e303229fdab7b",
+      "title": "Anthropic Adds Whiteboard, Spreadsheet and Data Features to Claude, Taking Aim at the Office Productivity Market",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Thread AI Joins the Microsoft for Startups Pegasus Program to Deliver its AI Workflow Orchestration Platform on Microsoft Marketplace - Yahoo Finance",
-          "publisher": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMDRFbXpZWm85T3hDa051Q2otcGk5V2JTNEtYT29TR1ZjeXBmZFRxdVQxVkVudXVUWUZyaDA4czlUcmh2VU00ZnNNUG5VUk5BVHVQSDR1MmZ2bUQ3LWpERzJTZXFlVFRpXzN2YmZ6aUVrOXhTZkVRN0Zzb1hkYkZLcUNOam52Qm1rRGoyQTJpbWNoWHVIWWFJc2pFVzJURWM?oc=5",
-          "publishedAt": "2026-11-16T15:40:00+00:00"
+          "title": "Anthropic Adds Whiteboard, Spreadsheet and Data Features to Claude, Taking Aim at the Office Productivity Market - BigGo Finance",
+          "publisher": "BigGo Finance",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJSExtRWhXRWFPY0pJVWRIYld2VTE0WjhWSFQ0MTloOV84cWM3VlpSU0RsQXdGdWJwR3FsQWZGVkR5MV9CSy1DcGtoSXA2LVZSdkhQYjFSUFVFRXhfU1RYWnlQelV1Q2lqZVJMUGcxdEhxeExSV1E?oc=5",
+          "publishedAt": "2026-11-16T09:50:05+00:00"
         }
       ],
       "scores": {
@@ -1306,16 +1398,16 @@
       ]
     },
     {
-      "id": "52721658665c4c",
-      "title": "Anthropic Consolidates a Range of Productivity Tools and Functions Inside Claude",
+      "id": "403b70d0b8f1df",
+      "title": "Top 10 Enterprise Job Scheduler Software",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Anthropic Consolidates a Range of Productivity Tools and Functions Inside Claude - Cloud Wars",
-          "publisher": "Cloud Wars",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPM0NwWU5mMmlqS3VoRHU2QmRSbzJ2T01IQWtZVGo0eDRvZUVtUmlSRi0xa0pfTXpjVnZqN0pQUXdkS0hfSDhEWkNmazZPaEtOMWVrTll3bjA5Uk4tYkVKcVNWMmsyb2R1QlVjM21hU0tWcVFQaUtzVEM4TUNrUUIyNTFVcmZvUlBQVFpyU0htQzA0WDdvSW01Skh6MXB0d0JlcGJLdkJ2QmlMZw?oc=5",
-          "publishedAt": "2026-11-16T15:00:00+00:00"
+          "title": "Top 10 Enterprise Job Scheduler Software - AIMultiple",
+          "publisher": "AIMultiple",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE96dXhzdW9QSUZqeVBEaGFXeTk3b29zNEdnaUc3R2NibXZFTFBQSFhENm11T0R3Z180aDZMc3EzLWE1Y1Bma1h3WEwydUFlTzRBUGZoOW5ENGRqWng0ZUNUNkFSMFJJRTg?oc=5",
+          "publishedAt": "2026-11-15T08:00:00+00:00"
         }
       ],
       "scores": {
@@ -1367,140 +1459,16 @@
       ]
     },
     {
-      "id": "3c26d74293d66c",
-      "title": "Adobe and Google expand partnership to integrate AI models and creative tools across platforms",
+      "id": "435a382d0e4ed3",
+      "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors?",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Adobe and Google expand partnership to integrate AI models and creative tools across platforms - Social Samosa",
-          "publisher": "Social Samosa",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTldUb1RyYTJpQTNodEhEUmZsT0pMQ3U0TUlWUTViVUVqOTBMRkdoZF9uV2RFRmc3NFZMdlJKelJETnFBdlRKWC02eEFkZElhS3l5dTNfUlMwc0VxVEtuUWF5WVFyT2FVWHNxWnpyYXBLM3UtSTJFMGdjZEZlVWtzdnZ6TzBUWU5TcW4zYk1WdzVneWRQWFpmX0x5UG85VmZLdHB1UjlwNXhSeWZKdFBnSHFNM2lGck5ucTBmQmpB0gG-AUFVX3lxTE9OV1RvVHJhMmlBM2h0SERSZmxPSkxDdTRNSVZRNWJVRWo5MExGR2hkX25XZEVGZzc0Vkx2Ukp6UkROcUF2VEpYLTZ4QWRkSWFLeXl1M19SUzBzRXFUS25RYXlZUXJPYVVYc3FaenJhcEszdS1JMkUwZ2NkRmVVa3N2dnpPMFRZTlNxbjNiTVZ3NWd5ZFBYWmZfTHlQbzlWZkt0cHVSOXA1eFJ5Zkp0UGdIcU0zaUZyTm5xMGZCakE?oc=5",
-          "publishedAt": "2026-11-16T12:24:31+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "51635582fc0ec3",
-      "title": "Adobe Brings AI Agents and Creative Tools to Creators Everywhere",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Adobe Brings AI Agents and Creative Tools to Creators Everywhere - MarTech Cube",
-          "publisher": "MarTech Cube",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPV2x1QmR3S1VCdG5CYjhiOGttZ29XaTFpTm9IVC1Wa1J3WUxHejRsMUZDNE5tY0g1MXFJVVRoWExSZkZxcFI5TzBKLUJTbU5hcFNDaGI0eWFyT19tU2dYOFA4aXNhQkpHRXkzdXVWS2NabmI5WTByQU9MUFdzdVJoTFpfdUJzQ2M4UXNhbmRJTUJMRXFKNFNGZA?oc=5",
-          "publishedAt": "2026-11-16T10:58:53+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "0e303229fdab7b",
-      "title": "Anthropic Adds Whiteboard, Spreadsheet and Data Features to Claude, Taking Aim at the Office Productivity Market",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Anthropic Adds Whiteboard, Spreadsheet and Data Features to Claude, Taking Aim at the Office Productivity Market - BigGo Finance",
-          "publisher": "BigGo Finance",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJSExtRWhXRWFPY0pJVWRIYld2VTE0WjhWSFQ0MTloOV84cWM3VlpSU0RsQXdGdWJwR3FsQWZGVkR5MV9CSy1DcGtoSXA2LVZSdkhQYjFSUFVFRXhfU1RYWnlQelV1Q2lqZVJMUGcxdEhxeExSV1E?oc=5",
-          "publishedAt": "2026-11-16T09:50:05+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "c060d69bc61f5f",
-      "title": "Legal Workflow Automation: 10 Best Practices for 2027",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Legal Workflow Automation: 10 Best Practices for 2027 - Lawxy AI",
-          "publisher": "Lawxy AI",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObVVHV005QWl5Q05oUlRrWkxNeTJfQ0thYWIzS3RiLTg1Um9pZkU4cjNuUGF3T3JQTEZ4ajNnVmJEdVVUSHY3NFRFZWFMSWhwZHFUdDFTalZXUTYwLVdzeG51c3pDR0t3Zkcxc2VkbDgyaVRWelBqRHlTZHV5eGhfelZCbmstOXdxdmNoaWR3?oc=5",
-          "publishedAt": "2026-11-16T00:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "2885ab6d9deba3",
-      "title": "Notes app in iOS 27 gets notable upgrades: Here is everything new",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Notes app in iOS 27 gets notable upgrades: Here is everything new - آي-فون إسلام",
-          "publisher": "آي-فون إسلام",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVXY3U25jcVpxcGYzdXVzLUlKdWY2TTdNNVlfNC02NkJlVmVXOWVkaHZvOUt1NEtUWTdfYmpFZHhBRmI2TDZzMElxUmhNcjRPejFjQU9PR05LWGY5Z0M2S3hua0VManJ1YVowbWs0V19HdnlQYlNuSC1uX1JBcE5VX2RjVlRZMk1YZ01kbGdWd2RVOTlpYVRPUTVVTG1KQ1VEU2NPTUZ2c3F4SngwNFZkZkUtcXdyUQ?oc=5",
-          "publishedAt": "2026-11-14T17:57:42+00:00"
+          "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
+          "publisher": "Simply Wall St",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSmZFbFBPZ1U2ZGdqemxYUDYtZjF0TFNOOXFfcDRmUnBpS1k2WjZZWlhYU2hyNkhKSURhbFAzLXRCN0xJVHhla1BzdHFXZkJkVERsd21qRTJmZFhCcEZNeGJyR3ZjeHREYjNNYjlwY2JfMGViN3lWRllzNkpOaWl5UTBnRFJmZUtkekpmbGxvQnlCMU5EYmZBUjRGSGs1eVhVOUtCQVRrMEFkNGVkSDNvOTVkaVdEQTRZZEhQN0VlVVXSAcABQVVfeXFMTkpmRWxQT2dVNmRnanpsWFA2LWYxdExTTjlxX3A0ZlJwaUtZNlo2WVpYWFNocjZISklEYWxQMy10QjdMSVR4ZWtQc3RxV2ZCZFREbHdtakUyZmRYQnBGTXhickd2Y3h0RGIzTWI5cGNiXzBlYjd5VkZZczZKTmlpeVEwZ0RSZmVLZHpKZmxsb0J5QjFORGJmQVI0RkhrNXlYVTlLQkFUazBBZDRlZEgzbzk1ZGlXREE0WWRIUDdFZVVV?oc=5",
+          "publishedAt": "2026-11-14T20:20:17+00:00"
         }
       ],
       "scores": {
@@ -1553,37 +1521,6 @@
       ]
     },
     {
-      "id": "bb7cb1f35ad759",
-      "title": "Bracco, Avicenna.AI announce US FDA clearance for new brain aneurysm detection and assessment software",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Bracco, Avicenna.AI announce US FDA clearance for new brain aneurysm detection and assessment software - NeuroNews International",
-          "publisher": "NeuroNews International",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUGQ2eEJ3ZUJaOUFLc3dkYUk4RjBTZllLUmROX1ExazVoeUxPY2JTdU1SZlRnQmZpZU5MdzRKcmtzZ3ZiaTY4dGJObTM0Nk40b2RmQ3UwQ3g3SjNYY0JIRlBfa192cko4SHZ0ai1VLVF1aDlWQ3RGaG9wTUdJV3h1bDF3QjllSkVLVEdBLXZueFZ0SUZ5a3hVTkFmQ2JHX3l5NjItSTFKZEotUm1yNjYxakQxNmRWTy03cmdiYjlSRWkxaWR1UkU4YzlydjFwZzMyU1dF?oc=5",
-          "publishedAt": "2026-11-13T17:16:05+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
       "id": "e9724b762568c6",
       "title": "Best AI Agents in 2026: 30 Tools Tested and Compared",
       "category": "AI·생산성",
@@ -1615,78 +1552,16 @@
       ]
     },
     {
-      "id": "c3733b5daab7c5",
-      "title": "Google launches Gemini 4 Hydrogen, targets faster AI workflows",
+      "id": "531bacd8ff93e5",
+      "title": "OPPO Pad Air 6 Launch: Key Features and Price",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Google launches Gemini 4 Hydrogen, targets faster AI workflows - The American Bazaar",
-          "publisher": "The American Bazaar",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOeFZWTldPNDktREpkTG80NXBUcTBNb2dzV3pPdDRJb2FNb05YX0xCVnBEWWlnT1FORVoxbS05QnNGNXZ6MlNTZnVROHZfZ3RVMWs4WUdjbVc0ZlNNSHVybHlidXNyU2k2M1hyalVjcEFuOVZxRFI3ZWNmd3MwVmdZNDRLRVNxTWk4WU81eWlZeHo1cHNmRzczYXlENnRKODkwbFNybEhKdjFJZw?oc=5",
-          "publishedAt": "2026-11-12T22:38:53+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "4614921421e545",
-      "title": "UiPath Joins Google Cloud's Gemini For Healthcare As Launch Partner — Enables AI-Powered Workflow Automation",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "UiPath Joins Google Cloud's Gemini For Healthcare As Launch Partner — Enables AI-Powered Workflow Automation - TradingView",
-          "publisher": "TradingView",
-          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQMEd4ZFBfQWxZNlJ4cmpvdzJ4TDJld3ZjX05XWnBYR2Jzb1NZd3hyWHJOSXRhOWVMb0EtT2xtNk1menRSMDdFM3RVQjJiRTltNC1FZHFPZ3RXVXRxQVhxc1FFSUszSDhBNTlZeVZGa3lsNDlTaEFPTFc5N3lKSi1ZdWkyTFE0WElib3B4bGtXSk93ckxjdzR3Y1pTZlZmcl8yUTJtdW0taGo3TThHUHlRQzhBMEtXdEF3d0hrVld2eTlSaW1XYi1LaVpkR0FYZjdBNWt1bXlaZ1NqSmR2ZzdwZHRrM19Zc1RlQ3haajFQcFR1NjFDX3hlMTNQdw?oc=5",
-          "publishedAt": "2026-11-10T16:43:50+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "20e61bc51d09ca",
-      "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details - NDTV Profit",
-          "publisher": "NDTV Profit",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNOGhNTWdLYlN1TmktWDNoejB2UllyQTBpR180UWwwUzZyWi1WNV9mNkJnTmNFamJhMV9QeWdwcGlVUUUzM0NMOV9EeXVQanFiMXRWbVMxNDZaVUdkU0dmWVdLLVM5Sndib1pmQ2tnVTRZd080VDR2ZkM4UHRJelFoWEJuMkV6SF9sRDVuRDFJUXRUa3czcmV3bjhUcThhVGY1XzJHczkzc2F6MGV3MHdmU2VaVEEzc0Q0bW1jcUV3VUx0VncybWF4Ymctc9IB0wFBVV95cUxQa21ScGZvTUw1VHRLUWNRdEhOVHFNRFJZVjFCTjE4QVpFZGROLUlDZ1c5SDgxbm4wQlJaTGFnVDh3LTQ1SFVYVG9EVFNWSzhWYVYwUFExSk9FeHE1QlJPeHE1Sm5JeHVhQ2thY1h3LU9FUi1jTE9LRnZwVDJJcXBoRThfa2NmbW9JR09XRlVDaWpBQkdzWi1MMjJMRFZxQWVVS3hXaEdqQktITktfM2t6UnF4QU9oU3BpMTlSUkN5SkJTOUlQV3RRbUJaLWw3bFFLZkpz?oc=5",
-          "publishedAt": "2026-11-17T09:53:57+00:00"
+          "title": "OPPO Pad Air 6 Launch: Key Features and Price - Techgenyz",
+          "publisher": "Techgenyz",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1oaE54MXRSUkFkNm9iQVhCVmhzeXQ0U2syWVRWM1NNRW5pXy1VNzBfSGZScTJtSlgxLWVLakpEUGN0bkI5aURCUThITmYtUFpubm1HX003SQ?oc=5",
+          "publishedAt": "2026-11-17T17:00:50+00:00"
         }
       ],
       "scores": {
@@ -1707,16 +1582,46 @@
       ]
     },
     {
-      "id": "8c419e6e77af6d",
-      "title": "Vericut Optimizer 3.0 simplifies NC program optimisation",
+      "id": "7b036aaa915e60",
+      "title": "AI in Finance – News on AI in Banking & Payments",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Vericut Optimizer 3.0 simplifies NC program optimisation - ETMM",
-          "publisher": "ETMM",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY0Y5dzYxQ3BnVDFqMjRROTE1bFo1Ykk5VWZwSTJJNWlGTlEtUHViUkN0TnlKNnk0blFJTmdpWGs4dUVuOEVtdURER2VqcUswY2JsYXVsSUk0UWJDRUxYeDBqZUVkdm1LaG1mR2xYX3MxX2xkQTdLeEY2MnpsZ0MyM21uMF9iZ19YTV94RWctYnAxYkhSS3JIbUNObWxSZEQ4dzdieThyVVhsNnV6SktrN3hR?oc=5",
-          "publishedAt": "2026-11-16T20:56:37+00:00"
+          "title": "AI in Finance – News on AI in Banking & Payments - FF News",
+          "publisher": "FF News",
+          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFA0TGZZMDFwNXpwanlCbURRX2tKNG02bU5uSWdVZTctTThyYU9hMEVzZnNtV2d6V29NRzhaZUF5OXR1SWdvRFhr?oc=5",
+          "publishedAt": "2026-11-17T16:23:38+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "20e61bc51d09ca",
+      "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details - NDTV Profit",
+          "publisher": "NDTV Profit",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNOGhNTWdLYlN1TmktWDNoejB2UllyQTBpR180UWwwUzZyWi1WNV9mNkJnTmNFamJhMV9QeWdwcGlVUUUzM0NMOV9EeXVQanFiMXRWbVMxNDZaVUdkU0dmWVdLLVM5Sndib1pmQ2tnVTRZd080VDR2ZkM4UHRJelFoWEJuMkV6SF9sRDVuRDFJUXRUa3czcmV3bjhUcThhVGY1XzJHczkzc2F6MGV3MHdmU2VaVEEzc0Q0bW1jcUV3VUx0VncybWF4Ymctc9IB0wFBVV95cUxQa21ScGZvTUw1VHRLUWNRdEhOVHFNRFJZVjFCTjE4QVpFZGROLUlDZ1c5SDgxbm4wQlJaTGFnVDh3LTQ1SFVYVG9EVFNWSzhWYVYwUFExSk9FeHE1QlJPeHE1Sm5JeHVhQ2thY1h3LU9FUi1jTE9LRnZwVDJJcXBoRThfa2NmbW9JR09XRlVDaWpBQkdzWi1MMjJMRFZxQWVVS3hXaEdqQktITktfM2t6UnF4QU9oU3BpMTlSUkN5SkJTOUlQV3RRbUJaLWw3bFFLZkpz?oc=5",
+          "publishedAt": "2026-11-17T09:53:57+00:00"
         }
       ],
       "scores": {
@@ -1797,36 +1702,6 @@
       ]
     },
     {
-      "id": "32a815ad166ce5",
-      "title": "AI Performs Best in Property and Asset Management Operations",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "AI Performs Best in Property and Asset Management Operations - Globest",
-          "publisher": "Globest",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPT2lRbDZOaWlCZlZMZi1hampKNllkeTBrbHE5TENCekF4THd5R0hsT1ppbzBVand0dllsU0FhcjczNWtFeGo3RWRESkxlN09NX1BFcXdidFFWUFJ5ak9BUmRwTS1QUlA3dDBDNzRJeWdEakZDMXRKRklzRmRUWlNXNjZQMDRlVXZKeks5c0NjUHNuX0p6MVVxLV9VRFU?oc=5",
-          "publishedAt": "2026-11-16T13:39:56+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "b6fd8134f61793",
       "title": "Zoho Introduces Blended Agents to Zoho Desk, Combining AI Execution With Human Judgment to Help Businesses More Effectively Resolve Customer Issues",
       "category": "AI·생산성",
@@ -1857,16 +1732,16 @@
       ]
     },
     {
-      "id": "6f175fd39a7396",
-      "title": "History of ChatGPT: How AI Changed the World",
+      "id": "d41203947710f1",
+      "title": "Asana vs monday.com vs ClickUp: Team Pricing Compared",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "History of ChatGPT: How AI Changed the World - STL.News",
-          "publisher": "STL.News",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBvbjdERWhLejFZeDVmejlTUFk2OVBzUUFqN3c3NWkzZDA4UU5ETnY2bWdiTl9IOFpBeEtQS2tiLXdfT1N5Uk5MN2lBT01SMjBrTmlTTERUQlluUDhfM1pTRG9LSVV2c2JaZ2xISDNPcHpRMzA?oc=5",
-          "publishedAt": "2026-11-14T20:36:14+00:00"
+          "title": "Asana vs monday.com vs ClickUp: Team Pricing Compared - JournalArta",
+          "publisher": "JournalArta",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcmtxaTdyT1lXT2NEMkcwM0Vjay1RZnl0NVo2eUlOMFVMMWhGeDJ3d0tOem5OVUNMOTdabTljSDRTckgyU2hwTl9MdTcyN2VVX1FvUFd6VlpUYWt2eG5ERjRmczgwUVg5NWVqcnhvYXk0dHB5eGJvZE80UkFCZUpwVWZ3S25lcmxqTzJ3MkdCRE9IWlZjSFVSaS1YVExwSWEyeHc?oc=5",
+          "publishedAt": "2026-11-16T00:26:06+00:00"
         }
       ],
       "scores": {
