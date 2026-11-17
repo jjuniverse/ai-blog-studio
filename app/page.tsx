@@ -257,7 +257,10 @@ export default function Home() {
         }),
       });
       const payload = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(payload.error || 'HTTP ' + response.status);
+      if (!response.ok) {
+        const detail = [payload.error || 'HTTP ' + response.status, payload.code, payload.stage].filter(Boolean).join(' · ');
+        throw new Error(detail + (response.status >= 500 ? ' · 서버 내부 오류야. 추가 생성은 누르지 말고 이 오류 문구를 알려줘.' : ''));
+      }
       if (!payload.draft || !['naver','tistory','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
       const draft: Draft = { ...payload.draft, id: selected.id, status: payload.status || 'unverified_review_required', sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })) };
       setDrafts(old => [draft, ...old.filter(x => x.id !== selected.id && !(x.sources || []).some(z => selected.headlines.some(h => h.url === z.url)))]);
