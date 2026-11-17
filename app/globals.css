@@ -43,3 +43,9 @@
 .generated-image canvas{width:100%;height:auto;border-radius:7px;display:block;box-shadow:0 5px 15px #18314722}
 .generated-image .btn{justify-self:end}
 @media(max-width:760px){.post-preview{padding:16px}.post-preview h1{font-size:20px}.post-preview h2{font-size:17px}}
+
+.research-lead{padding:15px 16px;background:#f7fafb;border:1px solid #e1ebf0;border-radius:12px;font-size:12px;color:#445b6e;line-height:1.8}
+.research-lead p{margin:9px 0}
+.research-lead strong{display:block;margin-top:13px;color:#314e62}
+.research-lead ul{margin:7px 0 12px;padding-left:20px;overflow-wrap:anywhere}
+.research-lead a{color:#23688f;text-decoration:underline}
