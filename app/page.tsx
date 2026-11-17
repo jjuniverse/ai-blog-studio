@@ -16,6 +16,20 @@ type Candidate = {
   status?: Status;
   reasons?: string[];
 };
+type ResearchLead = {
+  candidateId: string;
+  title: string;
+  category: string;
+  region: string;
+  researchedAt: string;
+  status: "needs_human_review" | "insufficient_evidence" | "research_failed";
+  summary?: string;
+  keyFacts?: string[];
+  openQuestions?: string[];
+  sources?: { title: string; url: string }[];
+  distinctSourceDomains?: number;
+  officialSourceSuggested?: boolean;
+};
 type Draft = {
   id: string;
   mode?: "article" | "research_brief";
@@ -93,6 +107,8 @@ export default function Home() {
   const [section, setSection] = useState<Section>('discover');
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [drafts, setDrafts] = useState<Draft[]>([]);
+  const [researchLeads, setResearchLeads] = useState<ResearchLead[]>([]);
+  const [researchDailyLimit, setResearchDailyLimit] = useState(3);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState('');
   const [updatedAt, setUpdatedAt] = useState('');
@@ -119,8 +135,8 @@ export default function Home() {
       }
     } catch { /* private mode or disabled local storage */ }
     setHydrated(true);
-    Promise.allSettled([publicFile('/data/candidates.json'), publicFile('/data/drafts.json')])
-      .then(([a, b]) => {
+    Promise.allSettled([publicFile('/data/candidates.json'), publicFile('/data/drafts.json'), publicFile('/data/research.json')])
+      .then(([a, b, research]) => {
         if (a.status === 'fulfilled') {
           const list = (a.value.candidates || []) as Candidate[];
           setCandidates(list);
@@ -128,6 +144,10 @@ export default function Home() {
           setSelectedId((id) => id || (list.find((x) => x.status === 'research_required') || list[0])?.id || '');
         } else setLoadError('후보 데이터를 읽지 못했어. 뉴스 수집 Actions를 확인해 줘.');
         if (b.status === 'fulfilled') setDrafts((b.value.drafts || []) as Draft[]);
+        if (research.status === 'fulfilled') {
+          setResearchLeads((research.value.entries || []) as ResearchLead[]);
+          setResearchDailyLimit(research.value.maxDailyCalls || 3);
+        }
       }).finally(() => setLoading(false));
   }, []);
   useEffect(() => {
@@ -186,6 +206,7 @@ export default function Home() {
     return true;
   }), [candidates, category, showExcluded, query]);
   const selected = candidates.find(x => x.id === selectedId);
+  const activeResearch = researchLeads.find(x => x.candidateId === selectedId);
   const matchingDraft = selected && drafts.find(d => d.id === selected.id || (d.sources || []).some(s => selected.headlines.some(h => h.url === s.url)));
   const editId = selected?.id || '';
   const saved = localEdits[editId];
@@ -263,7 +284,7 @@ export default function Home() {
           <div className="metric-grid">
             <div className="metric"><small>자료 조사 가능한 후보</small><strong>{reviewCount}</strong><span>기사 제목 기반 · 조사 전 단계</span></div>
             <div className="metric"><small>제외된 이슈</small><strong>{excludedCount}</strong><span>홍보성·민감 이슈</span></div>
-            <div className="metric"><small>생성된 AI 검수 초안</small><strong>{drafts.length}</strong><span>완성된 게시글이 아닌 준비 자료</span></div>
+            <div className="metric"><small>자동 조사 완료 후보</small><strong>{researchLeads.filter(x=>x.status==='needs_human_review').length}</strong><span>사람이 근거를 확인할 후보</span></div>
           </div>
           <div className="section-title"><div><h2>수집된 콘텐츠 후보</h2><p>{updatedAt ? '마지막 분석 ' + new Date(updatedAt).toLocaleString('ko-KR') : '뉴스 수집 후 목록이 업데이트돼.'}</p></div><span className="small-label">점수는 검색량·수익 예측이 아닌 내부 편집 기준</span></div>
           <div className="filters"><input value={query} onChange={e => setQuery(e.target.value)} placeholder="기사나 키워드 검색" aria-label="키워드 검색"/><select value={category} onChange={e => setCategory(e.target.value)} aria-label="카테고리 필터">{categories.map(v => <option key={v}>{v}</option>)}</select><label className="inline-check"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)}/> 제외된 주제 보기</label></div>
@@ -275,6 +296,17 @@ export default function Home() {
               <div className="panel-heading"><h2>제작할 주제</h2><span>{candidates.length}개 수집 후보</span></div>
               <select className="wide-select" aria-label="주제 선택" value={selectedId} onChange={e => { setSelectedId(e.target.value); setNotice(''); }}>{candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}</select>
               {selected && <div className="source-summary"><div className="pill-row"><span className="pill">{selected.category}</span><span className={'pill ' + (selected.status === 'research_required' ? 'green' : 'yellow')}>{statusLabel[selected.status || 'needs_sources']}</span></div><p>{selected.reasons?.join(' · ')}</p><details><summary>참고 뉴스 {selected.headlines.length}개와 출처 보기</summary><ul>{selected.headlines.map((h,i) => <li key={i}><a href={h.url} target="_blank" rel="noreferrer">{h.publisher || '출처'} — {h.title} ↗</a></li>)}</ul></details></div>}
+            </div>
+            <div className="panel">
+              <div className="panel-heading"><div><h2>자동 자료 조사</h2><p>매일 최대 {researchDailyLimit}개 후보를 자동 조사해. 결과는 사람이 사실을 확인해야 하는 참고자료야.</p></div><a className="btn btn-light" href="https://github.com/jjuniverse/ai-blog-studio/actions/workflows/research-news.yml" target="_blank" rel="noreferrer">조사 실행 기록 ↗</a></div>
+              {activeResearch ? <div className="research-lead">
+                <div className="pill-row"><span className={'pill '+(activeResearch.status==='needs_human_review'?'green':'yellow')}>{activeResearch.status==='needs_human_review'?'추가 검토 가능':activeResearch.status==='insufficient_evidence'?'근거 부족':'조사 실패'}</span><span className="pill subtle">{new Date(activeResearch.researchedAt).toLocaleString('ko-KR')}</span></div>
+                <p>{activeResearch.summary || '근거 확보가 완료되지 않았어.'}</p>
+                {(activeResearch.keyFacts||[]).length>0 && <><strong>AI가 추출한 확인 대상 사실</strong><ul>{activeResearch.keyFacts?.map((fact,i)=><li key={i}>{fact}</li>)}</ul></>}
+                {(activeResearch.openQuestions||[]).length>0 && <><strong>추가 확인할 내용</strong><ul>{activeResearch.openQuestions?.map((q,i)=><li key={i}>{q}</li>)}</ul></>}
+                {(activeResearch.sources||[]).length>0 && <><strong>참고 출처</strong><ul>{activeResearch.sources?.map((source,i)=><li key={i}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title||source.url} ↗</a></li>)}</ul></>}
+                <p className="muted">출처를 찾았다는 것은 사실 확인 완료를 뜻하지 않아. AI 결과와 실제 공식 문서를 대조한 뒤 원고를 생성해 줘.</p>
+              </div> : <div className="research-lead"><p>이 주제의 자동 조사 결과가 아직 없어. 매일 선별된 일부 후보만 조사하므로 모두 조사되지는 않아.</p></div>}
             </div>
             <div className="panel editor-panel">
               <div className="panel-heading"><div><h2>원고 편집 · AI 생성</h2><p>검토 후보와 추가 출처 필요 주제도 생성할 수 있어. 단일 출처는 사실 검증용 초안만 제공해.</p></div></div>
