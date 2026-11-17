@@ -259,7 +259,8 @@ export default function Home() {
                   <label>관리자 암호 (저장되지 않음)<input type="password" autoComplete="off" placeholder="Cloudflare에 등록한 STUDIO_PASSWORD" value={studioPassphrase} onChange={e=>setStudioPassphrase(e.target.value)}/></label>
                 </div>
                 <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
-                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected||selected.status!=='research_required'||!configuredWorker||!studioPassphrase} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 이 화면에서 AI 원고 생성'}</button><span>API 사용료 발생 · 인증 후 생성</span></div>
+                <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status!=='research_required'?'이 주제는 현재 추가 출처가 필요하거나 제외된 주제야. 버튼을 누르면 이유를 확인할 수 있어.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
+                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 이 화면에서 AI 원고 생성'}</button><span>API 사용료 발생 · 인증 후 생성</span></div>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
