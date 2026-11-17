@@ -99,13 +99,23 @@ export default {
     const authLimit = await env.AUTH_LIMIT.limit({ key: "studio-auth-global" });
     if (!authLimit.success) return fail("Too many attempts", 429);
     if (!await sameSecret(request.headers.get("X-Studio-Passphrase") || "", env.STUDIO_PASSWORD)) return fail("Incorrect studio passphrase", 401);
-    const generationLimit = await env.GEN_LIMIT.limit({ key: "studio-generate-global" });
-    if (!generationLimit.success) return fail("Generation rate limit reached", 429);
+    // If the binding is invalid or temporarily unavailable, fail before incurring OpenAI costs.
+    let generationLimit;
+    try {
+      generationLimit = await env.GEN_LIMIT.limit({ key: "studio-generate-global" });
+    } catch (error) {
+      console.error("generate limiter failed", { name: error?.name || "Error" });
+      return reply({ error: "Generation rate limiter unavailable", code: "GEN_LIMIT_ERROR", stage: "generation_rate_limit" }, 503);
+    }
+    if (!generationLimit?.success) return reply({ error: "Generation rate limit reached", code: "GEN_RATE_LIMITED", stage: "generation_rate_limit" }, 429);
     if (Number(request.headers.get("Content-Length") || 0) > 16000) return fail("Request too large", 413);
     let body;
     try { body = await request.json(); } catch { return fail("Invalid JSON", 400); }
     const input = cleanInput(body);
     if (!input) return fail("Only non-sensitive, non-promotional topics with at least one source can be prepared", 422);
+    // Guard later errors as well: no stack traces, user input, or secrets in the browser response.
+    let stage = "prepare_openai_request";
+    try {
     // Search is performed server-side. The RSS headline is a discovery clue, not a fact source.
     const instructions = [
       "You are the Korean editor of '오늘의 픽', a practical, helpful information blog.",
@@ -135,6 +145,7 @@ export default {
       text: { format: { type: "json_schema", name: "researched_editorial_draft", strict: true, schema } },
       store: false,
     };
+    stage = "openai_request";
     let upstream;
     try {
       upstream = await fetch("https://api.openai.com/v1/responses", {
@@ -148,6 +159,7 @@ export default {
       // Do not return provider body, authorization tokens or sensitive logs to browsers.
       return fail(upstream.status === 429 ? "OpenAI rate or quota limit reached" : "OpenAI request failed (" + upstream.status + ")", upstream.status === 429 ? 429 : 502);
     }
+    stage = "parse_openai_result";
     let result, sourceLinks = [];
     try {
       const data = await upstream.json();
@@ -242,5 +254,9 @@ export default {
         "Researched draft: sources and claims still require human verification before publishing." :
         "Sources were insufficient; no publishable article was generated.",
     });
+    } catch (error) {
+      console.error("generate unexpected error", { stage, name: error?.name || "Error" });
+      return reply({ error: "Worker could not finish the generation request", code: "GEN_UNEXPECTED", stage }, 503);
+    }
   },
 };
