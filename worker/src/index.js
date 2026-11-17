@@ -85,6 +85,14 @@ export default {
     // Probe the same CORS preflight and POST transport as /generate, without credentials or OpenAI costs.
     // It does not authenticate or authorize generation; never return private settings here.
     if (url.pathname === "/probe" && request.method === "POST") return reply({ ok: true, transport: "post", version: 1 });
+    // Auth-only POST diagnostic. No calls to OpenAI and no generation quota consumed.
+    if (url.pathname === "/auth-check" && request.method === "POST") {
+      if (!env.STUDIO_PASSWORD || env.STUDIO_PASSWORD.length < 16 || !env.AUTH_LIMIT) return fail("Worker auth not configured", 503);
+      const authLimit = await env.AUTH_LIMIT.limit({ key: "studio-auth-global" });
+      if (!authLimit.success) return fail("Authentication rate limited", 429);
+      if (!await sameSecret(request.headers.get("X-Studio-Passphrase") || "", env.STUDIO_PASSWORD)) return fail("Incorrect studio passphrase", 401);
+      return reply({ ok: true, authenticated: true, version: 1 });
+    }
     if (url.pathname !== "/generate" || request.method !== "POST") return fail("Not found", 404);
     if (origin !== ALLOWED_ORIGIN) return fail("Origin required", 403);
     if (!env.OPENAI_API_KEY || !env.STUDIO_PASSWORD || env.STUDIO_PASSWORD.length < 16 || !env.AUTH_LIMIT || !env.GEN_LIMIT) return fail("Worker not configured", 503);
