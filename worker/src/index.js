@@ -157,8 +157,8 @@ export default {
       // These heuristics are a format gate, NOT a substitute for human fact-checking.
       const substantive = value => typeof value === "string" &&
         value.trim().length >= 1000 &&
-        (value.match(/^#{1,3}\\s+.+/gm) || []).length >= 3 &&
-        (value.match(/\\[확인 필요\\]|\\[추가 독립 출처 필요\\]/g) || []).length === 0;
+        (value.match(/^#{1,3}\s+.+/gm) || []).length >= 3 &&
+        (value.match(/\[확인 필요\]|\[추가 독립 출처 필요\]/g) || []).length === 0;
       if (result.mode === "article" && (sourceLinks.length < 2 ||
         !substantive(result.naver) ||
         !substantive(result.tistory) ||
