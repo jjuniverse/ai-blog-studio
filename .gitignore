@@ -5,3 +5,7 @@ out/
 !.env.example
 *.tsbuildinfo
 .DS_Store
+
+# Cloudflare Worker local secrets
+.dev.vars*
+worker/.dev.vars*
