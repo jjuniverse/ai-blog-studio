@@ -6,3 +6,15 @@
 .saved-draft b{display:block;font-size:12px;line-height:1.5;color:#25405b}
 .saved-draft small{display:block;margin-top:6px;color:#748b9c;font-size:11px}
 .saved-draft>span:last-child{white-space:nowrap;font-size:11px;font-weight:750}
+
+.inline-generator{border:1px solid #d9e8e4;background:#f3faf7;border-radius:12px;padding:17px;margin-bottom:18px}
+.inline-generator .panel-heading{margin-bottom:12px}
+.inline-generator .panel-heading strong{font-size:13px}
+.generator-inputs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.generator-inputs label,.notes-label{display:block;font-size:11px;font-weight:700;color:#536c64}
+.generator-inputs input,.notes-label textarea{display:block;width:100%;margin-top:6px;padding:11px;border-radius:8px;border:1px solid #cbded8;background:white;font-size:12px;color:#213b37}
+.notes-label{margin-top:12px}.notes-label textarea{resize:vertical;line-height:1.6}
+.generator-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:13px}
+.generator-actions span{font-size:11px;color:#718c83}
+.generator-error{font-size:12px;color:#b23838;font-weight:650;line-height:1.5}
+@media(max-width:760px){.generator-inputs{grid-template-columns:1fr}}
