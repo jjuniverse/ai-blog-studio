@@ -17,6 +17,8 @@ type Candidate = {
 };
 type Draft = {
   id: string;
+  mode?: "article" | "research_brief";
+  sourceLinks?: { title: string; url: string }[];
   title: string;
   naver: string;
   tistory: string;
@@ -148,20 +150,24 @@ export default function Home() {
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(payload.error || 'HTTP ' + response.status);
       if (!payload.draft || !['naver','tistory','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
-      const draft: Draft = { ...payload.draft, id: selected.id, status: 'unverified_review_required', sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })) };
+      const draft: Draft = { ...payload.draft, id: selected.id, status: payload.status || 'unverified_review_required', sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })) };
       setDrafts(old => [draft, ...old.filter(x => x.id !== selected.id && !(x.sources || []).some(z => selected.headlines.some(h => h.url === z.url)))]);
-      setLocalEdits(old => ({
-        ...old,
-        [selected.id]: {
-          fields: { naver: draft.naver, tistory: draft.tistory, shortform: draft.shortform },
-          imageNotes: payload.draft.imageNotes,
-          verified: false,
-          publishedUrls: old[selected.id]?.publishedUrls || {},
-          updatedAt: new Date().toISOString(),
-        },
-      }));
+      if (draft.mode === 'article') {
+        setLocalEdits(old => ({
+          ...old,
+          [selected.id]: {
+            fields: { naver: draft.naver, tistory: draft.tistory, shortform: draft.shortform },
+            imageNotes: payload.draft.imageNotes,
+            verified: false,
+            publishedUrls: old[selected.id]?.publishedUrls || {},
+            updatedAt: new Date().toISOString(),
+          },
+        }));
+      }
       setChannel('naver');
-      setNotice('AI 원고가 생성됐어. 탭을 변경해 각 채널의 검수용 초안을 확인해 봐.');
+      setNotice(draft.mode === 'research_brief'
+        ? '참고 자료가 부족해서 글을 억지로 생성하지 않았어. 조사 항목을 확인해 줘.'
+        : '자료를 조사해 AI 원고를 작성했어. 출처와 내용을 확인한 뒤 편집해 줘.');
     } catch (e) {
       setGenerateError(e instanceof Error ? e.message : '원고 생성 중 오류가 발생했어.');
     } finally { setGenerating(false); }
@@ -260,7 +266,7 @@ export default function Home() {
                 </div>
                 <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
                 <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'출처가 한 곳뿐이야. AI가 확인 질문과 빈칸을 포함한 조사용 초안을 작성할 수 있어. 사실 확인 후 발행해.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
-                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 이 화면에서 AI 원고 생성'}</button><span>API 사용료 발생 · 인증 후 생성</span></div>
+                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>OpenAI 웹 검색 + 원고 작성 비용 발생 · 인증 후 생성</span></div>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
@@ -274,12 +280,16 @@ export default function Home() {
                 <p className="muted">초안은 발행용 완성 글이 아니라 출처 검증이 필요한 준비 자료야.</p>
               </div>
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
-              {matchingDraft || saved?.fields?.[channel] ? <>
+              {matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>조사에 사용된 출처 · 발행 전 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
+              {matchingDraft?.mode==='research_brief' ? <div className="draft-warning"><strong>자료 부족 · 글은 생성하지 않았어.</strong><p>한두 줄짜리 글로 채우지 않고 조사해야 할 내용을 남겼어.</p><ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul></div> : null}
+              {matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
+              {matchingDraft?.mode!=='research_brief' || !!saved?.fields?.[channel] ? <>
                 <div className="draft-warning">이 원고는 기사 제목·출처에 기반한 검수용 자료야. 문장에 있는 사실을 공식 자료와 대조하고 이미지 권리도 확인해야 발행할 수 있어.</div>
                 <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>
                 <div className="editor-toolbar"><button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
-              </> : <div className="empty-editor"><span className="empty-symbol">✦</span><h3>이 주제의 원고는 아직 없어</h3><p>위에서 AI 원고 생성 버튼을 누르면 여기에 표시돼. 출처가 한 곳뿐이면 검증용 초안을 생성하고, 홍보성·민감 이슈는 제한돼.</p></div>}
+              </> : null}
+              {!matchingDraft && !saved?.fields?.[channel] && <div className="empty-editor"><span className="empty-symbol">✦</span><h3>이 주제의 원고는 아직 없어</h3><p>위에서 자료 조사 버튼을 눌러 줘. 신뢰할 만한 근거가 부족하면 글 대신 확인할 항목을 표시해.</p></div>}
             </div>
           </div>
           <aside className="studio-side">
