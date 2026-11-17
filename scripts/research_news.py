@@ -130,18 +130,22 @@ def select_candidates(candidates, cache, today):
         if old:
             try:
                 researched = datetime.fromisoformat(old["researchedAt"].replace("Z", "+00:00"))
-                if researched >= datetime.now(timezone.utc) - timedelta(days=MAX_CACHE_DAYS):
+                if old.get("status") == "research_failed":
+                    if researched.date() >= datetime.now(timezone.utc).date():
+                        continue  # no same-day repeat paid call
+                elif researched >= datetime.now(timezone.utc) - timedelta(days=MAX_CACHE_DAYS):
                     continue
             except (ValueError, TypeError, KeyError):
                 pass
-        group = (candidate.get("category"), candidate.get("region"))
+        group = candidate.get("category")  # avoid paying twice for Korean/English coverage of one topic
         if group not in used_categories:
             chosen.append(candidate)
             used_categories.add(group)
     if len(chosen) < MAX_DAILY_CALLS:
         chosen_ids = {x["id"] for x in chosen}
         chosen.extend(x for x in eligible if x["id"] not in chosen_ids and
-                      x not in chosen and x["id"] not in entries)
+                      x not in chosen and x["id"] not in entries and
+                      x.get("category") not in used_categories)
     return chosen
 
 
