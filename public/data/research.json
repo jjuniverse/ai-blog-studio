@@ -1,8 +1,139 @@
 {
   "version": 1,
-  "updatedAt": null,
+  "updatedAt": "2026-11-17T09:25:40.382379+00:00",
   "maxDailyCalls": 3,
-  "dailyAttempts": {},
-  "note": "Public AI-assisted research leads; not verified facts or publication approval.",
-  "entries": []
+  "dailyAttempts": {
+    "2026-11-17": 3
+  },
+  "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
+  "entries": [
+    {
+      "candidateId": "582f78fe1d74e4",
+      "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기",
+      "category": "연예",
+      "region": "KO",
+      "researchedAt": "2026-11-17T09:25:31.383286+00:00",
+      "status": "research_failed",
+      "keyFacts": [],
+      "openQuestions": [
+        "조사 API 오류로 근거를 수집하지 못했어."
+      ],
+      "sources": [],
+      "summary": ""
+    },
+    {
+      "candidateId": "ac45b356875cf5",
+      "title": "2NE1's CL announces solo comeback",
+      "category": "K-pop",
+      "region": "EN",
+      "researchedAt": "2026-11-17T09:25:28.075705+00:00",
+      "topic": "CL의 솔로 컴백 발표",
+      "summary": "2NE1의 리더이자 솔로 아티스트인 CL이 5년 만에 새로운 디지털 싱글 'ICONIC'을 발표하며 솔로 컴백을 예고했습니다. 이번 싱글은 11월 20일 오후 6시에 발매될 예정이며, 그녀의 새로운 소속사인 THEBLACKLABEL과의 첫 작품입니다.",
+      "keyFacts": [
+        "CL, 5년 만에 새로운 디지털 싱글 'ICONIC' 발표 예정",
+        "'ICONIC'은 11월 20일 오후 6시 발매 예정",
+        "THEBLACKLABEL과의 첫 작품으로 기대감 증대",
+        "컨셉 사진에서 흰색 의상과 뱀 무늬의 의상, 길게 늘어뜨린 흰색 머리로 강렬한 이미지 연출",
+        "'ICONIC'은 CL의 첫 솔로 싱글로 5년 만의 컴백을 의미"
+      ],
+      "openQuestions": [
+        "'ICONIC'의 음악 스타일과 장르는 무엇일까?",
+        "싱글 발매와 함께 뮤직비디오도 공개될 예정인가?",
+        "CL의 향후 활동 계획은 어떻게 될까?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://kpopfizz.com/news/cl-announces-solo-comeback-with-new-digital-single-iconic-on/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.starnewskorea.com/en/music/2026/11/17/2026111708045217181?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.allkpop.com/article/2026/11/cl-showcases-her-signature-charisma-in-new-teaser-images-for-comeback-single-iconic?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.allkpop.com/article/2026/11/cl-signs-with-theblacklabel-to-release-new-music-in-november?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.allkpop.com/video/2026/11/cl-sets-november-20-comeback-date-with-first-teaser-for-new-single-iconic?auth=login&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.kpopworld.com/news/cl-iconic-solo-comeback?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://kpopfwd.com/articles/cl-iconic-comeback-november-20/?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 10,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "a75d110be59742",
+      "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표",
+      "category": "K-pop",
+      "region": "KO",
+      "researchedAt": "2026-11-17T09:25:24.479074+00:00",
+      "topic": "씨엘, 5년 만에 솔로 컴백…20일 신곡 '아이코닉' 발표",
+      "summary": "가수 씨엘(CL)이 5년 만에 솔로 신곡 '아이코닉(ICONIC)'을 발표한다. 소속사 더블랙레이블은 17일 공식 SNS를 통해 씨엘의 새 디지털 싱글 콘셉트 포토를 공개하며, 신곡 발매를 예고했다. 씨엘은 지난 13일 더블랙레이블과 전속계약을 체결하며, 오랜 시간 음악적 호흡을 맞춘 프로듀서 테디와의 재회를 알렸다. 신곡 '아이코닉'은 오는 20일 오후 6시에 발매될 예정이다. ([newspim.com](https://www.newspim.com/news/view/20261117000072?utm_source=openai))",
+      "keyFacts": [
+        "씨엘, 5년 만에 솔로 신곡 '아이코닉' 발표 예정",
+        "더블랙레이블과 전속계약 체결",
+        "프로듀서 테디와 재회",
+        "신곡 '아이코닉' 20일 오후 6시 발매"
+      ],
+      "openQuestions": [
+        "신곡 '아이코닉'의 음악 스타일은 무엇인가?",
+        "씨엘의 신곡 발매 이후 활동 계획은 어떻게 되는가?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.newspim.com/news/view/20261117000072?utm_source=openai",
+          "title": "씨엘, 5년 만에 솔로 컴백…20일 '아이코닉' 발매"
+        },
+        {
+          "url": "https://www.tenasia.co.kr/article/2026111708224?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://m.tvdaily.co.kr/article.php?aid=17948738421809940010&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=486470&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://v.isplus.com/article/view/isp202611170025?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://img.bntnews.co.kr/Music/article/view/bnt202611170074?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.mt.co.kr/amp/entertainment/2026/11/17/2026111709297291163?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://stoo.com/article.php?aid=109941172209&utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 12,
+      "status": "needs_human_review"
+    }
+  ]
 }
