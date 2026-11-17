@@ -23,17 +23,20 @@ FEEDS = [
     ("생활 정보", "KO", "생활 서비스 신청 방법 공식 안내 when:7d", "ko", "KR"),
     # Overseas channels
     ("K-pop", "EN", "K-pop comeback album concert official announcement when:3d", "en-US", "US"),
-    ("K-pop", "EN", "Korean drama streaming premiere Netflix Disney official when:3d", "en-US", "US"),
+    ("K-드라마", "EN", "Korean drama streaming premiere Netflix Disney official when:3d", "en-US", "US"),
     ("AI·생산성", "EN", "AI productivity tools new features official release when:3d", "en-US", "US"),
     ("AI·생산성", "EN", "AI workflow software how to comparison when:7d", "en-US", "US"),
 ]
 MAX_ITEMS_PER_FEED = 16
 MAX_ITEMS_PER_CATEGORY = 28
 MAX_DAYS_OLD = 7
+
+KPOP_TERMS = re.compile(r"\bk[ -]?pop\b|\bbts\b|\bblackpink\b|\btwice\b|\bnayeon\b|\btxt\b|\b2ne1\b|\bampers?\s*(?:and|&)?\s*one\b|\baespa\b|\bstray\s+kids\b|\bseventeen\b|\bidol\b|\bcomeback\b", re.I)
+KDRAMA_TERMS = re.compile(r"k[ -]?drama|korean\s+drama|korean\s+series|good\s+partner|crash\s+season|blue\s+road", re.I)
 OUTPUT = Path("public/data/news.json")
 PROMOTION = re.compile(
     r"\b(?:promo(?:tional)?|discount|coupon|referral)\s+codes?\b|"
-    r"\bsponsored\s+(?:post|content)\b|"
+    r"\bsponsored\s+(?:post|content)\b|\blifetime\s+access\b|\bpay\s+\$\d+\b|"
     r"할인\s*코드|쿠폰\s*코드|프로모션\s*코드|추천인\s*코드",
     re.IGNORECASE,
 )
@@ -73,6 +76,10 @@ def fetch(category, region, query, hl, gl):
         if published < datetime.now(timezone.utc) - timedelta(days=MAX_DAYS_OLD):
             continue
         if PROMOTION.search(title):
+            continue
+        if region == 'EN' and category == 'K-pop' and not KPOP_TERMS.search(title):
+            continue
+        if region == 'EN' and category == 'K-드라마' and not KDRAMA_TERMS.search(title):
             continue
         yield {
             "title": title[:240],
