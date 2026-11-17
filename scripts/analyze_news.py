@@ -126,12 +126,23 @@ def build_candidates(rows):
             "reasons": evaluation["reasons"],
         })
 
-    candidates.sort(key=lambda item: (
-        {"research_required": 0, "needs_sources": 1, "sensitive_review": 2, "excluded_promotion": 3}[item["status"]],
-        -item["scores"]["editorialPriority"],
-        -len(item["headlines"]),
-    ))
-    return candidates
+    # Preserve editorial eligibility boundaries while alternating categories.
+    # Otherwise a wave of AI articles crowds out entertainment and Korean topics.
+    priority_order = ("research_required", "needs_sources", "sensitive_review", "excluded_promotion")
+    balanced = []
+    for status in priority_order:
+        subset = [item for item in candidates if item["status"] == status]
+        buckets = {}
+        for item in subset:
+            key = (item["category"], item["region"])
+            buckets.setdefault(key, []).append(item)
+        for entries in buckets.values():
+            entries.sort(key=lambda x: (-x["scores"]["editorialPriority"], -len(x["headlines"])))
+        while any(buckets.values()):
+            for key in list(buckets):
+                if buckets[key]:
+                    balanced.append(buckets[key].pop(0))
+    return balanced
 
 
 def main():
