@@ -49,3 +49,8 @@
 .research-lead strong{display:block;margin-top:13px;color:#314e62}
 .research-lead ul{margin:7px 0 12px;padding-left:20px;overflow-wrap:anywhere}
 .research-lead a{color:#23688f;text-decoration:underline}
+
+.worker-health{margin-top:12px;padding:12px;border:1px solid #dbe7e3;border-radius:10px;background:#fff;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.worker-health>span{font-size:12px;font-weight:700}
+.worker-health-ok{color:#16845e}.worker-health-bad{color:#b34438}.worker-health-idle{color:#74839a}
+.worker-health p{flex-basis:100%;margin:0;color:#567167;line-height:1.65;font-size:12px}
