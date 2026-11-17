@@ -22,3 +22,5 @@
 .worker-endpoint{min-width:0;background:#e4f3ee;border:1px solid #c9e8df;border-radius:9px;padding:10px 12px;display:flex;flex-direction:column;justify-content:center;gap:5px}
 .worker-endpoint small{color:#558777;font-size:10px;font-weight:700}
 .worker-endpoint span{font-size:11px;color:#286a58;overflow-wrap:anywhere;line-height:1.5}
+
+.generator-help{font-size:12px;color:#476d64;line-height:1.65;margin:12px 0 0}
