@@ -34,11 +34,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Validate Worker syntax
         run: node --check worker/src/index.js
-      - name: Deploy todaypick-studio-api
-        uses: cloudflare/wrangler-action@v4
+      - uses: actions/setup-node@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: worker
-          command: deploy
-          wranglerVersion: '4.163.0'
+          node-version: '22'
+      - name: Install Worker deployment dependencies
+        working-directory: worker
+        run: npm install --no-audit --no-fund
+      - name: Deploy todaypick-studio-api
+        working-directory: worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npm run deploy
