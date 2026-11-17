@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import ImageCard from './components/ImageCard';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
 type Channel = 'naver' | 'tistory' | 'shortform';
@@ -106,6 +107,7 @@ export default function Home() {
   const [verifiedNotes, setVerifiedNotes] = useState('');
   const [generating, setGenerating] = useState(false);
   const [generateError, setGenerateError] = useState('');
+  const [previewMode, setPreviewMode] = useState(true);
 
   useEffect(() => {
     try {
@@ -167,6 +169,7 @@ export default function Home() {
         }));
       }
       setChannel('naver');
+      setPreviewMode(true);
       setNotice(draft.mode === 'research_brief'
         ? '참고 자료가 부족해서 글을 억지로 생성하지 않았어. 조사 항목을 확인해 줘.'
         : '자료를 조사해 AI 원고를 작성했어. 출처와 내용을 확인한 뒤 편집해 줘.');
@@ -305,8 +308,18 @@ export default function Home() {
               {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="draft-warning"><strong>자료 부족 · 글은 생성하지 않았어.</strong><p>한두 줄짜리 글로 채우지 않고 조사해야 할 내용을 남겼어.</p><ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul></div> : null}
               {!legacyStored && matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
               {currentDraft && !legacyStored ? <>
-                <div className="draft-warning">이 원고는 기사 제목·출처에 기반한 검수용 자료야. 문장에 있는 사실을 공식 자료와 대조하고 이미지 권리도 확인해야 발행할 수 있어.</div>
-                <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>
+                <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
+                <div className="editor-toolbar"><button className={previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(true)}>블로그 미리보기</button><button className={!previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(false)}>원고 편집</button></div>
+                {previewMode ? <div className="post-preview">
+                  <div className="post-preview-label">오늘의 픽 · {channel === 'naver'?'네이버 블로그':channel==='tistory'?'티스토리':'숏폼 대본'} 발행 전 미리보기</div>
+                  <h1>{matchingDraft?.title || selected?.title || '새 글'}</h1>
+                  {text.split(/\n+/).filter(Boolean).map((paragraph, i) => <div key={i}>
+                    {/^#{1,3}\s+/.test(paragraph) ? <h2>{paragraph.replace(/^#{1,3}\s+/, '')}</h2> : <p>{paragraph}</p>}
+                    {i === 0 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>}
+                    {i === 4 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[1]} variant="detail" index={1}/>}
+                  </div>)}
+                  {channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[2]} variant="summary" index={2}/>}
+                </div> : <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
                 <div className="editor-toolbar"><button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
               </> : null}
