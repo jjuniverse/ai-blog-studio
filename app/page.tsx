@@ -124,6 +124,8 @@ export default function Home() {
   const [verifiedNotes, setVerifiedNotes] = useState('');
   const [generating, setGenerating] = useState(false);
   const [generateError, setGenerateError] = useState('');
+  const [connectionState, setConnectionState] = useState<'idle' | 'checking' | 'ready' | 'unconfigured' | 'unreachable'>('idle');
+  const [connectionDetails, setConnectionDetails] = useState('');
   const [previewMode, setPreviewMode] = useState(true);
 
   useEffect(() => {
@@ -156,6 +158,34 @@ export default function Home() {
   }, [localEdits, hydrated]);
 
   const configuredWorker = true;
+  async function checkWorkerConnection() {
+    setConnectionState('checking');
+    setConnectionDetails('');
+    try {
+      // No credentials, no paid generation. This only checks the public health endpoint.
+      const response = await fetch(WORKER_URL + '/health', {
+        method: 'GET', cache: 'no-store', signal: AbortSignal.timeout(12000),
+      });
+      if (!response.ok) throw new Error('Worker HTTP ' + response.status);
+      const body = await response.json();
+      if (!body?.ok) throw new Error('Worker health response was unexpected');
+      if (body.configured !== true) {
+        setConnectionState('unconfigured');
+        setConnectionDetails('Worker 응답은 정상이지만 OpenAI API 키 또는 관리자 암호 설정이 누락됐어. Cloudflare Secrets를 확인해 줘.');
+        return false;
+      }
+      setConnectionState('ready');
+      setConnectionDetails('Worker 연결 정상 · OpenAI 요청은 아직 보내지 않았어.');
+      return true;
+    } catch (error) {
+      setConnectionState('unreachable');
+      const timedOut = error instanceof Error && (error.name === 'TimeoutError' || error.name === 'AbortError');
+      setConnectionDetails(timedOut
+        ? 'Worker 상태 확인 요청이 12초 안에 끝나지 않았어. Cloudflare 배포 상태와 네트워크를 확인해 줘.'
+        : 'Worker에 연결하지 못했어. workers.dev 주소가 브라우저에서 열리는지, 네트워크·브라우저 확장 기능·Cloudflare 설정을 확인해 줘.');
+      return false;
+    }
+  }
   async function generateHere() {
     if (!selected || generating) return;
     setGenerateError('');
@@ -163,6 +193,8 @@ export default function Home() {
     if (!studioPassphrase) { setGenerateError('관리자 암호를 입력해 줘.'); return; }
     setGenerating(true);
     try {
+      // Check reachability before sending a paid OpenAI request.
+      if (!(await checkWorkerConnection())) return;
       const response = await fetch(WORKER_URL + '/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'X-Studio-Passphrase': studioPassphrase },
@@ -195,7 +227,11 @@ export default function Home() {
         ? '참고 자료가 부족해서 글을 억지로 생성하지 않았어. 조사 항목을 확인해 줘.'
         : '자료를 조사해 AI 원고를 작성했어. 출처와 내용을 확인한 뒤 편집해 줘.');
     } catch (e) {
-      setGenerateError(e instanceof Error ? e.message : '원고 생성 중 오류가 발생했어.');
+      if (e instanceof TypeError) {
+        setGenerateError('Worker 요청을 보내거나 응답을 받지 못했어 (Failed to fetch). CORS 사전 요청, 네트워크 차단, Worker 연결 또는 장시간 응답 중단 가능성이 있어. API 요청이 이미 처리됐을 수도 있으니 바로 다시 누르지 말고 Cloudflare 요청 기록을 확인해 줘.');
+      } else {
+        setGenerateError(e instanceof Error ? e.message : '원고 생성 중 오류가 발생했어.');
+      }
     } finally { setGenerating(false); }
   }
   const categories = useMemo(() => ['전체', ...Array.from(new Set(candidates.map(x => x.category)))], [candidates]);
@@ -318,7 +354,12 @@ export default function Home() {
                 </div>
                 <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
                 <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'제목만 수집한 단계야. 자료 조사 버튼으로 공식 발표·관련 자료를 추가로 찾아봐. 검증 후 글을 만들 수 있어.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
-                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>OpenAI 웹 검색 + 원고 작성 비용 발생 · 인증 후 생성</span></div>
+                <div className="worker-health">
+                  <button type="button" className="btn btn-light" disabled={connectionState==='checking'||generating} onClick={checkWorkerConnection}>{connectionState==='checking'?'연결 확인 중…':'Worker 연결 테스트 (무료)'}</button>
+                  <span className={connectionState==='ready'?'worker-health-ok':connectionState==='unreachable'||connectionState==='unconfigured'?'worker-health-bad':'worker-health-idle'}>{connectionState==='ready'?'정상':connectionState==='unreachable'?'연결 불가':connectionState==='unconfigured'?'서버 설정 필요':'검사 전'}</span>
+                  {connectionDetails&&<p role="status">{connectionDetails}</p>}
+                </div>
+                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>OpenAI 웹 검색 + 원고 작성 비용 발생 · 먼저 무료 연결 테스트 권장</span></div>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
