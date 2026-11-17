@@ -88,7 +88,7 @@ function DefaultEditorHint({ candidate }: { candidate?: Candidate }) {
     <h3>아직 준비된 AI 원고가 없어</h3>
     <p>이 주제의 검수용 초안이 생성되지 않았어. 공개 GitHub Actions에서 원고 생성 작업을 실행할 수 있어.</p>
     {candidate?.status !== 'research_required' && <p className="warning-line">현재 주제는 출처가 부족하거나 제외 대상으로 분류돼 자동 생성 대상이 아니야.</p>}
-    <a className="btn btn-primary" href={links.workflow} target="_blank" rel="noreferrer">AI 초안 생성 작업 열기 ↗</a>
+    <a className="btn btn-primary" href={links.workflow} target="_blank" rel="noreferrer">GitHub에서 새 초안 생성 실행 ↗</a>
   </div>;
 }
 export default function Home() {
@@ -216,7 +216,17 @@ export default function Home() {
               <select className="wide-select" aria-label="주제 선택" value={selectedId} onChange={e => { setSelectedId(e.target.value); setNotice(''); }}>{candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}</select>
               {selected && <div className="source-summary"><div className="pill-row"><span className="pill">{selected.category}</span><span className={'pill ' + (selected.status === 'research_required' ? 'green' : 'yellow')}>{statusLabel[selected.status || 'needs_sources']}</span></div><p>{selected.reasons?.join(' · ')}</p><details><summary>참고 뉴스 {selected.headlines.length}개와 출처 보기</summary><ul>{selected.headlines.map((h,i) => <li key={i}><a href={h.url} target="_blank" rel="noreferrer">{h.publisher || '출처'} — {h.title} ↗</a></li>)}</ul></details></div>}
             </div>
-            <div className="panel editor-panel"><div className="panel-heading"><div><h2>원고 편집</h2><p>생성된 검수 초안이 있다면 불러와서 수정할 수 있어.</p></div><a className="btn btn-light" href={links.workflow} target="_blank" rel="noreferrer">AI 초안 생성 ↗</a></div>
+            <div className="panel editor-panel">
+              <div className="panel-heading"><div><h2>원고 편집</h2><p>기존 초안은 여기서 바로 확인할 수 있어. 새 초안 생성은 별도 GitHub Actions 작업이야.</p></div><a className="btn btn-light" href={links.workflow} target="_blank" rel="noreferrer">GitHub에서 새 초안 생성 ↗</a></div>
+              <div className="draft-selector"><strong>생성된 AI 초안 {drafts.length}건</strong>
+                {drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : drafts.map((d,i)=>{
+                  const corresponding=candidates.find(c=>c.id===d.id||(d.sources||[]).some(src=>c.headlines.some(h=>h.url===src.url)));
+                  return <button type="button" key={d.id+'-'+i} className="saved-draft" disabled={!corresponding} onClick={()=>{if(corresponding){setSelectedId(corresponding.id);setChannel('naver');setNotice('기존 AI 검수 초안을 불러왔어.');}}}>
+                    <span><b>{d.title}</b><small>{corresponding?'네이버·티스토리·숏폼 초안 보기':'현재 뉴스 목록에서 해당 주제를 찾을 수 없어'}</small></span><span>보기 →</span>
+                  </button>;
+                })}
+                <p className="muted">초안은 발행용 완성 글이 아니라 출처 검증이 필요한 준비 자료야.</p>
+              </div>
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {matchingDraft || saved?.fields?.[channel] ? <>
                 <div className="draft-warning">이 원고는 기사 제목·출처에 기반한 검수용 자료야. 문장에 있는 사실을 공식 자료와 대조하고 이미지 권리도 확인해야 발행할 수 있어.</div>
