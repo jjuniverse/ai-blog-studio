@@ -1,0 +1,12 @@
+{
+  "name": "todaypick-studio-worker",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "check": "node --check src/index.js"
+  },
+  "devDependencies": {
+    "wrangler": "4.163.0"
+  }
+}
