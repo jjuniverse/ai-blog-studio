@@ -2,13 +2,19 @@
 
 Mobile-friendly **GitHub Pages static prototype** for managing Korean and international content ideas. It ranks example AI/productivity and K-pop topics using adjustable hypothetical scores, offers an editable storyboard outline, and exports reviewer-approved JSON locally.
 
+## In-page AI generation (Cloudflare Worker integration)
+
+The **콘텐츠 스튜디오** screen now supports an inline **AI 원고 생성** button. This requires deploying the **Cloudflare Worker** under [worker/](worker/README.md) once, and entering its `workers.dev` HTTPS URL and a separate Studio passphrase in the web UI. The passphrase is **not persisted**, the backend holds the OpenAI API key in Cloudflare Secrets, and generation remains gated behind editorial-review status and rate limits. [Setup guide](worker/README.md)
+
+The button is implemented, but the backend is **not yet deployed** to a Cloudflare account, so the live OpenAI call cannot complete until the one-time Worker setup. Existing GitHub Actions generation remains available as a legacy optional path.
+
 ## Current experience (v0.5 UI)
 
 - **Topic discovery:** real public RSS headline clusters only (no fictional sample rankings). Search, category filters, editorial status and evidence links. Scores are heuristics, **not forecast traffic or revenue**.
 - **Content studio:** view optional pre-generated AI editorial outlines, edit Naver/Tistory/shortform versions, copy text or export a plain-text file. The image section provides **three editable placement briefs**, not images; no media is generated yet.
 - **Publishing tracker:** record actual Naver/Tistory post URLs after manual publication. Existing channels: [Naver](https://blog.naver.com/todaypickkr) and [Tistory](https://blog83848.tistory.com/).
 - **Local-only edits:** manual text changes, image briefs and publication URLs are saved in this device's browser `localStorage` and can be exported as JSON. They are **not synchronized**, private by authentication, or stored in the repository.
-- **AI generation:** separately triggered in GitHub Actions through [Generate AI editorial outlines](../../actions/workflows/generate-drafts.yml); the generated outline file is committed to the **public** repo. Never include private text, credentials or account details.
+- **Legacy AI generation:** separately triggered in GitHub Actions through [Generate AI editorial outlines](../../actions/workflows/generate-drafts.yml); the generated outline file is committed to the **public** repo. Never include private text, credentials or account details.
 - **Not yet implemented:** integrated AI full-article generation, actual screenshot/image creation, video rendering, OAuth, automatic publishing, private cloud storage, verified facts and real advertising/sales metrics.
 
 ## Local development
