@@ -38,6 +38,22 @@ class EditorialScoringTests(unittest.TestCase):
         self.assertIsNone(result["scores"]["measuredTraffic"])
         self.assertIsNone(result["scores"]["estimatedRevenue"])
 
+    def test_related_event_headlines_group_without_exact_title_match(self):
+        rows = [
+            headline("Adobe and Google expand AI partnership across creative tools", "Publisher A"),
+            headline("Adobe Google expand partnership to integrate creative AI tools", "Publisher B")
+        ]
+        clusters = build_candidates(rows)
+        self.assertEqual(len(clusters), 1)
+        self.assertEqual(clusters[0]["scores"]["independentPublisherCount"], 2)
+
+    def test_unrelated_product_announcements_do_not_merge(self):
+        rows = [
+            headline("Adobe expands partnership to integrate creative AI tools", "Publisher A"),
+            headline("Anthropic releases Claude spreadsheet and office features", "Publisher B")
+        ]
+        self.assertEqual(len(build_candidates(rows)), 2)
+
     def test_promo_appears_after_eligible_topics(self):
         rows = [headline("Gamsgo Promo Code MYPSR – save now", "One"),
                 headline("A useful AI productivity software comparison", "One"),
