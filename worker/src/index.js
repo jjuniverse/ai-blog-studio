@@ -141,9 +141,23 @@ export default {
     try {
       const data = await upstream.json();
       const webCalls = (data.output || []).filter(item => item.type === "web_search_call");
-      const visitedUrls = new Set(webCalls.flatMap(item => item.action?.sources || [])
-        .map(src => typeof src.url === "string" ? src.url : "")
-        .filter(src => /^https:\/\//.test(src)));
+      const sourceData = webCalls.flatMap(item => item.action?.sources || []);
+      // Web-search results can also cite URLs via message annotations.
+      const citations = (data.output || []).flatMap(message => (message.content || [])
+        .flatMap(part => (part.annotations || []).filter(a => a.type === "url_citation")));
+      const retrieved = [...sourceData, ...citations]
+        .filter(src => typeof src.url === "string" && /^https:\/\//.test(src.url));
+      const normalize = raw => {
+        try {
+          const u = new URL(raw);
+          u.hash = "";
+          u.searchParams.delete("utm_source"); u.searchParams.delete("utm_medium");
+          u.searchParams.delete("utm_campaign");
+          return (u.hostname.toLowerCase() + u.pathname.replace(/\/$/, "")).toLowerCase();
+        } catch { return ""; }
+      };
+      const retrievedByUrl = new Map(retrieved.map(src => [normalize(src.url), src]));
+      const visitedUrls = new Set(retrievedByUrl.keys());
       if (!webCalls.length) return fail("Web research did not run; no draft was created", 502);
       const parts = (data.output || []).flatMap(message => (message.content || [])
         .filter(part => part.type === "output_text").map(part => part.text));
@@ -152,15 +166,37 @@ export default {
       if (!["article", "research_brief"].includes(result.mode) || !["naver", "tistory", "shortform", "title"].every(key => typeof result[key] === "string") ||
           !Array.isArray(result.imageNotes) || result.imageNotes.length !== 3 ||
           !Array.isArray(result.verificationChecklist) || !Array.isArray(result.sourceLinks)) throw Error("Invalid draft schema");
-      sourceLinks = result.sourceLinks.filter(src => src && typeof src.url === "string" && /^https:\/\//.test(src.url) &&
-        visitedUrls.has(src.url)).slice(0, 10);
+      const verifiedLinks = (result.sourceLinks || []).filter(src => src && typeof src.url === "string" &&
+        /^https:\/\//.test(src.url) && visitedUrls.has(normalize(src.url)));
+      sourceLinks = verifiedLinks.map(src => {
+        const actual = retrievedByUrl.get(normalize(src.url));
+        return { title: src.title || actual?.title || "", url: actual.url };
+      }).slice(0, 10);
+      // When the article model used citations but the JSON uses a different URL format,
+      // fall back to actual citations instead of treating cited material as missing.
+      if (sourceLinks.length < 2) {
+        const unique = new Map(sourceLinks.map(src => [normalize(src.url), src]));
+        for (const src of retrieved) {
+          const key = normalize(src.url);
+          if (key && !unique.has(key)) unique.set(key, { title: src.title || "", url: src.url });
+        }
+        sourceLinks = Array.from(unique.values()).slice(0, 10);
+      }
+      const distinctDomains = new Set(sourceLinks.map(src => { try { return new URL(src.url).hostname.replace(/^www\./, ""); } catch { return ""; } }).filter(Boolean)).size;
       // Fail closed when a model outputs a short generic memo instead of an article.
       // These heuristics are a format gate, NOT a substitute for human fact-checking.
       const substantive = value => typeof value === "string" &&
         value.trim().length >= 1000 &&
         (value.match(/^#{1,3}\s+.+/gm) || []).length >= 3 &&
         (value.match(/\[확인 필요\]|\[추가 독립 출처 필요\]/g) || []).length === 0;
-      if (result.mode === "article" && (sourceLinks.length < 2 ||
+      const generatedMode = result.mode;
+      const failReasons = [];
+      if (distinctDomains < 2) failReasons.push("서로 다른 웹사이트 출처가 2곳 미만");
+      if (!substantive(result.naver)) failReasons.push("네이버 본문이 짧거나 소제목·구체성이 부족");
+      if (!substantive(result.tistory)) failReasons.push("티스토리 본문이 짧거나 소제목·구체성이 부족");
+      if (result.shortform.trim().length < 80) failReasons.push("숏폼 대본 분량 부족");
+      if (result.mode === "research_brief") failReasons.push("AI가 조사 자료 부족으로 판단");
+      if (result.mode === "article" && (distinctDomains < 2 ||
         !substantive(result.naver) ||
         !substantive(result.tistory) ||
         result.shortform.trim().length < 80)) {
@@ -172,6 +208,13 @@ export default {
       }
     } catch { return fail("OpenAI research returned incomplete data; no draft was saved", 502); }
     result.sourceLinks = sourceLinks;
+    result.researchAudit = {
+      searchedSourceCount: visitedUrls.size,
+      returnedSourceCount: sourceLinks.length,
+      distinctSourceDomains: distinctDomains,
+      initiallyGeneratedMode: generatedMode,
+      reasons: failReasons,
+    };
     return reply({
       draft: result,
       status: result.mode === "article" ? "review_required" : "research_required",
