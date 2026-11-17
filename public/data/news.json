@@ -1,117 +1,13 @@
 {
-  "fetchedAt": "2026-11-17T00:43:07.829024+00:00",
+  "fetchedAt": "2026-11-17T06:33:45.491983+00:00",
   "source": "Google News RSS search",
   "note": "Headlines are unverified pointers. Please verify facts and media rights before content creation.",
   "items": [
     {
-      "title": "How to Build a Software Engineering Career in the Age of AI Agents - Medium",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNU016ZGc5YVA0RHNwVlhtZURSVUI3SUkwcDlEbWFiNmpSUVQtYXpSUXRXQ21DbVVJaHNMOUlucm1VZC1YNExyM1ZCeloxQmVjV216bVZEQlJ1R1Bkb3V5YjFlSEVrZDUxTDAxS2dyY0QzMXB5RkhsdkRpWjFXc3ZTeHlLOHFSY1dYRHk3SWExNUNnUnBBTjB4OXJGbEJuVGU4R3d2LWdIcTJTYlBLalRLWA?oc=5",
-      "publisher": "Medium",
-      "publishedAt": "2026-11-16T16:46:01+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Tech Talk | Multiplayer AI: Moving From Individual Productivity to Team Results - ADTmag",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMVNaSmgxWWF1ZXNraF92SlpCRWxDb0hoVkU1M3VGemp4Rl9lcW41alEycGF3emtROEE2OXV2SF9GQlo0MDYyYUN6c3VqUU5ocmN2QkQwSUZEMy16Smx6SUJnc0ZUSGtQVm93RnJsLWhPekMzN3M0LXNNOTQyV2x0VDBfbHplM0plVWcxZ0Jnd0dIUXMyb0FPdE5qYXJPZVBPSmg1MjlvLW5xYXRxeU4xeGlrRW55ckVfN2swSnV4Q3RxcG96?oc=5",
-      "publisher": "ADTmag",
-      "publishedAt": "2026-11-15T17:17:06+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "McKinsey and Cognition are trying to prove AI coding pays off - AOL.com",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUzBpOXVlVmpNY0dwTHRzS2libG1Jd2VPaEdCVHVPbElYLXFQMktyekMzclZ5cnU3eVFUZVNuQzJNVVBXOGJDQWVTaGJRWUx2bUU3aWgwTzh3TVFDMHc1Y1NVUFIxci1nT2ZvUmVKZWpKR2RnV3VrTmJlQWxhakdycnM1Ulg?oc=5",
-      "publisher": "AOL.com",
-      "publishedAt": "2026-11-16T17:24:26+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "MagicCraft Announces Expansion Beyond Blockchain Gaming Into AI, Advertising, and Digital Payments - StreetInsider",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPc2lwSjBaNU1oVU1Gb3R1V2Q2c3BSS0lVZHN4MHJSeWYtc2hfeGdJVm5hTXI1eUVadEJQNm5rblZUa09DenZDQkV0TkYyVE9leXJjZF9xSU0wZ2Fnc3UzYTM2aGk0U3dnS2hDNlpXdmU3T0FhN085ZERSWkk4aElacmgzWmN4bHRfLW9fcDR1Vm92c3dQbVRyMlNKb3FSdHVRQndEUlRYcUl4MnB3T3d0WXl3VmJfTHFxeDdHNVNlUWNCTUFRY0wwR0ZleUZqTFIyZGFFVmtMZk9sUEMwZ21RRVhFckY3WTNuaTBSWlRnbmFNSlU?oc=5",
-      "publisher": "StreetInsider",
-      "publishedAt": "2026-11-16T12:59:15+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "AI's anti-change agents - Axios",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ldUJGUWpQTWRUUU9MMnJ1Ty1obmhRTUpzZkwyZWZrUEp2Vkg5VkNIY1ZIc2NCZVp4YTd5Q1VBUXlVeXhDdS1TRnNxT1RjVkRYS2R4TDRVUkNYUDgwNGFDbkNVN3hIZkk3OTROVldfd2cwcE5xM0E?oc=5",
-      "publisher": "Axios",
-      "publishedAt": "2026-11-14T11:30:14+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "McKinsey, Cognition partner to prove AI coding ROI - TechGig",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOTlEbF9wMFc3MHA4WmtRNFZ4M3pJZE5DR2h5MFNYT0kwT281LXY0Wm5MRlRTaXA3QW9KaDF3bGxNOGJYdEJFSXdfeHNzQkhKNGh1c2x6RWpWa1BLMW1Ud3NGZzBQeXh0V0VXajJXcTQ3c0RISVp5ZkZKMjBNbk1TeXVvaS1nd2NlRTZpUjU1VWc?oc=5",
-      "publisher": "TechGig",
-      "publishedAt": "2026-11-16T23:49:10+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "McKinsey, Cognition launch AI coding partnership for enterprise software projects - Traders Union",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbHJ5MFVzOFZDQlFmRFNjcWZRX2lXWHd0SThreFRwRlY1QWdNLXdEdVhJVjZ2MlZiT3F0WEJGYXF1NlVWNW9tendqeDNjaFVpSDBhZnJkSEVuN0o1b0IwYkVhVnViSF9VWGRDYWEzTGdLdnM4TE01N3NkRERBOFNIODJKVnIxM2QzLTk3OWphWnJSUFM5U3kxNFF3?oc=5",
-      "publisher": "Traders Union",
-      "publishedAt": "2026-11-16T17:27:28+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Cognition and McKinsey Form Alliance to Help Enterprises Prove the Business Value of AI in Software Engineering - Business Wire",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOQ0hYRV93UzNRZk56SW9iN3pyR3NlQ3A3MHZsNThUNTlqS2MybG5vVk5zNXdlSEFyYVpZYjFCd09LcS1NQkFOR2pjaTZZckNhMTNrV20wdDFkWGhoTjNQYk5jTXRzdjhqcjZPeVNacmt5MF8wSDBMbXpHWmtRTUN2QnB4OU9McXJ3SEhodTJiSWNQYmt2cm04ZXRoWXBsTXJQYUlfdEtzQ3hwR1NPeU9uYll3WWY0QnFDTGFJem1QcGxkNWl2bVhwSWh6YTdVWDEtaU44dnhtcEsyZkdSZ0lUTlUzR2cyTDBlb1U1R29QeHEtTTlpMGZqTXBKNzI?oc=5",
-      "publisher": "Business Wire",
-      "publishedAt": "2026-11-16T17:00:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Generative AI in Content Creation Market Size, Share [2034] - Fortune Business Insights",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTWRmWFNwOUFjOVNmbkxuaExTdkJtUmV4bXk4TzdQcWk5MUlXeGQ0ajQ1Q2JhQjVOUHI2NUMzdUxOTDZOU0FxX1ZFTER4elN6aU9HSHN6SlVjc2k5cHMyVUNqRXc2UWRvWXNid0tXcmc1ZFMyVU1TX2JDVnBHRm9VZXhaVWp4dC03V1hKTmxEeDQ?oc=5",
-      "publisher": "Fortune Business Insights",
-      "publishedAt": "2026-11-16T14:40:37+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Nebuly raises $21 million to measure the value of AI agents - news.lavx.hu",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPU1JKMnFuY1dLZ2Jrb3Y4U0NkMEthUjBPNmhPR1dzZ2RXOXNpeElaR2tXaG9FRFZCRWp1V1kxYWoxT3R0R3RERlgzemtFeUxRS3dUbVFkYnlRSU1URjhVQlpINndWZDlQTk1FMmU3MkhoNjJvMFJiT1BzSFlNU3MyS0RGR2ZNd2d3TmZEOHJES18?oc=5",
-      "publisher": "news.lavx.hu",
-      "publishedAt": "2026-11-15T08:56:35+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Adobe, Google expand AI partnership across creative, productivity tools - TechGig",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTkc3WFp1ejlncDB1R3RKOENUQ2V1VGZpLUJTb0xWZU5YRVhySXBBcFYzMk4tNGRudUhYR3BxdFloUE9TMWVud3BmV0plSEJtUDFubElEaHZ4VDREcGtyQmRhYzFuTE5IU3Zad2ZJWnRZRzB2VUFFNkhmMjRFOVJ1c0ZzLXU1emVlU3pTMnFyRm5HaW9aTnpHdmNyekJkNFE5S1ZWd2hkYU5abDcxbjgyZjdVaDZPdlRm?oc=5",
-      "publisher": "TechGig",
-      "publishedAt": "2026-11-14T09:15:37+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Catching AI’s mistakes is a mental burden – and a drag on productivity - The Conversation",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNeEsxdWhjSTdjbFMzMTJpR3RjU0NyV245bnlDSDlCUUFIS1lFVVVHX1VJVTVyX2Q4dzdjMzdNczRwRDN1SWJQNUxWZ05WY2EwSVBna1FHV3J6TV9OeVJmWnhCR0tJM1pHbHp1ckxWS3VTZFBoMWE2aF90Q3gwWjNkbTJzaFVwOFRWbkM1Q1JqT2hNQ2tOUEZESVVLbTBkZFUtcm1NSg?oc=5",
-      "publisher": "The Conversation",
-      "publishedAt": "2026-11-16T13:36:56+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
+      "title": "BTS Dominates MMA 2026 With 6 Wins, Sweeping Artist and Album of the Year Awards - Dojeon Media",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYWlwdzZzQmZHNFhwR3ZtYnB5TEJreXNxV0ZMRmk5V1Jfc2pzcEQ3ZUhQOGdhbklkUzVQeVFadjlpdU1OY282NEVERmRnM1NnTWFFUUdzZGk2MXl2OVBhcUtadk1Cc0ZfcFRuTjRwS2NvOFhzdWJadERSMnJURkpxM1FEcDhrMDdWRGV1TThRa21mQUJUVWZHOEN2RFJrblBWTFFfZHpNUDVFUEhqcHdGaEFB?oc=5",
       "publisher": "Dojeon Media",
-      "publishedAt": "2026-11-16T14:04:34+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
-      "publisher": "Rolling Stone",
-      "publishedAt": "2026-11-16T14:50:47+00:00",
+      "publishedAt": "2026-11-17T04:59:54+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -120,6 +16,14 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOVpQY0hON3hzVzFLWmx5WmxUajNLODdVbk53MnQ5TlgzVXFZcF9DUEdCWDN3YW9fbFhuQlFUbjd4R2JkVk1lNlFRVUEtTTdEN1paaG9lSExWd2lHeXR6NHluVE1KY2lnS3dhUXZTOExwam9oYVNGd1NsdjZRWl85UVl0YnFIT0M4M0thbXZXSkZhY1ZPX18wNmJoZFBhVE1uYk9FOGc1dnZveHNS?oc=5",
       "publisher": "Latin Times",
       "publishedAt": "2026-11-15T02:49:47+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
+      "publisher": "Rolling Stone",
+      "publishedAt": "2026-11-16T14:50:47+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -140,34 +44,18 @@
       "region": "EN"
     },
     {
-      "title": "TOMORROW X TOGETHER - 'PERFECT STORM' Official Video - stupidDOPE",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQWZHRFBPeVAtZDU2TlZJSU9lSmlaTTFnNXBWWWRMOEd0akU2WDNsbEZucWJZZWNGS2tpMENxWEhMZjlJT0JucXJJc3VlY21ULUROZ1p3RE0teVFqWDFsUmliSXpSXzVYbEZuUzlTeGxpbjV4aVZjdlJfYTRaQU5ZeFhWaC1JbGlfZmNKS1dJYjVkRzFxMXZjMTZB?oc=5",
-      "publisher": "stupidDOPE",
-      "publishedAt": "2026-11-16T23:16:57+00:00",
+      "title": "Watch IVE’s Comeback Performance Videos From the Spotify DIVE ACADEMY - Spotify",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQbHVaOEpFZzVuOXZOaWR1cFV2elBpN0JPLU1rckFOZlRvTDg0dTVXRlJ5TzBySmdlRzZRVmEwYVNPbkRUbHFvM29ZR3A1anpGSDlIYUJBOGtBSkJVaWhMTmU4LS1OcWFTR2cxR0w2X2NqbFRGQ2RhV09ER2ZJYmMyQ2R0RjM?oc=5",
+      "publisher": "Spotify",
+      "publishedAt": "2026-11-16T01:29:33+00:00",
       "category": "K-pop",
       "region": "EN"
     },
     {
-      "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA - Inquirer.net",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmg5UnFIaHJKUlF6d21MS3RXV2thOTRXSW5vUjloZEI5bU5aOVd2TjdnM1lSTkR3cVVqcWlscHZ3QUJiSzBBSjF4Z1dmcnVOUnNLRThvc0plV1FPdE9TQnR3aXotb01OZXUwOF9vWC1TdjRvNHhpdl9seVpJeUx3b1JFNWdUVUpjbHhodVFqYkhBc0RTQkl6R0dMVdIBoAFBVV95cUxOSjlhMWRTckUyQnpaY1JtaGdSZXVCcE1lTXBqS0J4b1dHTFliZzQzbExfakl3NEl5b2FJVWFsbGFhcDZLSjk4Y3NoTXlEaEw4c3M1U3pJT1hkak02RExsY2RjQkF1a0lweUwyeVRwZkxJSlV0d2xxM0E1MFd6dkhGNDhKcTJJeXBZREt3T0hKdHU5TDFSaUlpcUFfNlV4NTdp?oc=5",
-      "publisher": "Inquirer.net",
-      "publishedAt": "2026-11-16T04:37:00+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "NAYEON IS HERE! 🤩 WATCH: TWICE’s Nayeon shared with ABS-CBN News her favorite memory with Filipino ONCE and teased what they can expect from her upcoming release, “NA-sty.” Nayeon is set to hold a meet and greet this Saturday. | via Anna Ce",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPM3ZzVTcyWDNMRmtXLU5NdUZ5bW80SW9YVGpwempJajRqVEJVb01wRXp4bVZmR1lRQmNLbUtQclhGajBOUkhwT25sTUYxdFNUS2l3WmdVQW03UE1relctUUw0SllPdlhvSTlwZGRiU1h0aVdEZzZIRlVSREVteWFOcnMtSGJiaXBZLTdkVFRhZXR2WjJsQmVZQUR5aV9YRlRJU0g1ZEFtNWVwYjkxdVZjMURETW5fU3ZkUk9GZkNjUWs1aGZjeFdjajJLUk9xNnlmMGxKZURhT2Y?oc=5",
-      "publisher": "Facebook",
-      "publishedAt": "2026-11-14T10:08:04+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "Virtual creators team with HYBE unit NEWEPICBASE to release single and YouTube series - Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVkNxbnJyVUowQ083WHRiSGFtWHNERlBDVjVjSG1ndGoxMzZPbVdYNEk3dkROYVhrcWNHMWZOQ1I1MkxHWEpONUo2bzJPZ0dwMWpfamQzWDFIaFkxWnk2Q2xjQVowdHQ2ZU5KT0pVS215ei10dktlbHRKd2dHeWFwTi1CWGptS2pq0gGcAUFVX3lxTE9NazFmZFhXSmdCZnFKLTZuZ0JXODZyeVhuMkw1UUZEOWF1bWd2R1ZqRG9vYWNYUTBWQ2Q1ajA3WExDWlBzWkhOYy1nVFk0b0JuN1pMMzNGWW1rS1BtaGNPVGtEckJ5U1BsY1BBVVRhSEh1U1dpbWZwamxpM1FqRUJ0dHIwcTE2ZVpkMW55TTFoZTZsOXBfZjBBM21MZg?oc=5",
-      "publisher": "Chosunbiz",
-      "publishedAt": "2026-11-16T08:50:00+00:00",
+      "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
+      "publisher": "Dojeon Media",
+      "publishedAt": "2026-11-16T14:04:34+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -180,10 +68,18 @@
       "region": "EN"
     },
     {
-      "title": "TWICE's Nayeon Has a New Identity in \"NA-sty\" — But Who Is the \"BABY ANGEL\" Taking Over the World? - Dojeon Media",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTVZJUFlBTkVRdldZdml1X2s0NUczWDJ3Q1dWNDI3N1dKN3J6anZ4bTNzMnNabVYyRGFBQkZxcFNCUENfN2tWQm1zaHFmcGVjRG5IX29WOGh2WEFib1dMQjFiUWE2U0NDSlBzY1NEbVI1RFp4WXFzVWJHWEpwYXlXOXF1c3NGQVV4WndDYk5oZy1qZDlneUh2d3JteGlaUjk5VUowQk9xTW8wVk5mNThsRjhSTjVFZnNGOE1vS1Qtb2xsdw?oc=5",
-      "publisher": "Dojeon Media",
-      "publishedAt": "2026-11-14T12:03:22+00:00",
+      "title": "2NE1’s CL joins THEBLACKLABEL, sets ‘ICONIC’ comeback at 2026 MAMA - Inquirer.net",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVmg5UnFIaHJKUlF6d21MS3RXV2thOTRXSW5vUjloZEI5bU5aOVd2TjdnM1lSTkR3cVVqcWlscHZ3QUJiSzBBSjF4Z1dmcnVOUnNLRThvc0plV1FPdE9TQnR3aXotb01OZXUwOF9vWC1TdjRvNHhpdl9seVpJeUx3b1JFNWdUVUpjbHhodVFqYkhBc0RTQkl6R0dMVdIBoAFBVV95cUxOSjlhMWRTckUyQnpaY1JtaGdSZXVCcE1lTXBqS0J4b1dHTFliZzQzbExfakl3NEl5b2FJVWFsbGFhcDZLSjk4Y3NoTXlEaEw4c3M1U3pJT1hkak02RExsY2RjQkF1a0lweUwyeVRwZkxJSlV0d2xxM0E1MFd6dkhGNDhKcTJJeXBZREt3T0hKdHU5TDFSaUlpcUFfNlV4NTdp?oc=5",
+      "publisher": "Inquirer.net",
+      "publishedAt": "2026-11-16T04:37:00+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Virtual creators team with HYBE unit NEWEPICBASE to release single and YouTube series - Chosunbiz",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVkNxbnJyVUowQ083WHRiSGFtWHNERlBDVjVjSG1ndGoxMzZPbVdYNEk3dkROYVhrcWNHMWZOQ1I1MkxHWEpONUo2bzJPZ0dwMWpfamQzWDFIaFkxWnk2Q2xjQVowdHQ2ZU5KT0pVS215ei10dktlbHRKd2dHeWFwTi1CWGptS2pq0gGcAUFVX3lxTE9NazFmZFhXSmdCZnFKLTZuZ0JXODZyeVhuMkw1UUZEOWF1bWd2R1ZqRG9vYWNYUTBWQ2Q1ajA3WExDWlBzWkhOYy1nVFk0b0JuN1pMMzNGWW1rS1BtaGNPVGtEckJ5U1BsY1BBVVRhSEh1U1dpbWZwamxpM1FqRUJ0dHIwcTE2ZVpkMW55TTFoZTZsOXBfZjBBM21MZg?oc=5",
+      "publisher": "Chosunbiz",
+      "publishedAt": "2026-11-16T08:50:00+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -192,6 +88,14 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbk15bGxsWkFxQ0NFSEhXTi1WZ0JIdXZVTThCSEo1RXZJd0VOT0NreGZuVlFYcXoxeUxaYUV6VnY0VS05S3l1ZXNzemFaZ1JmR1VwWmwwekZoVzE4REhEUGtGeXlVQi0tVjJGSzhrR1VmVkZJTlE4REJ1bXpxLTVtdDZFWGF4OUI2TGJDakpOakNCLVlyczhUaEtkc1VGNHRwUjdlVUh2cExrMTE5?oc=5",
       "publisher": "Harper's Bazaar Singapore",
       "publishedAt": "2026-11-15T08:00:00+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "TWICE's Nayeon Has a New Identity in \"NA-sty\" — But Who Is the \"BABY ANGEL\" Taking Over the World? - Dojeon Media",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTVZJUFlBTkVRdldZdml1X2s0NUczWDJ3Q1dWNDI3N1dKN3J6anZ4bTNzMnNabVYyRGFBQkZxcFNCUENfN2tWQm1zaHFmcGVjRG5IX29WOGh2WEFib1dMQjFiUWE2U0NDSlBzY1NEbVI1RFp4WXFzVWJHWEpwYXlXOXF1c3NGQVV4WndDYk5oZy1qZDlneUh2d3JteGlaUjk5VUowQk9xTW8wVk5mNThsRjhSTjVFZnNGOE1vS1Qtb2xsdw?oc=5",
+      "publisher": "Dojeon Media",
+      "publishedAt": "2026-11-14T12:03:22+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -252,30 +156,6 @@
       "region": "KO"
     },
     {
-      "title": "AI 코드 검증 속도 못 따라간 기업 76%...보안·품질 위험 막을 자동 검증 시급 - 지티티코리아",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3dmVTeVFBbkI1ajV2M2Z3QWJlaEw0aGQ0QUVKcTBQc3pUQ0Y3QXdYSnh1M21FNjdvS2ZZclpKYlY1djBGdTBFZU84YmpZV3VOSHV6UHl4TVIzb1hKS3ZTMGI0dTVLWEZUTVE?oc=5",
-      "publisher": "지티티코리아",
-      "publishedAt": "2026-11-14T15:30:00+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "AI 그림 사과했던 펄어비스...이젠 개발 전체에 AI - 게임와이",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HM2IzR2pzRHlsbEt3NHhEcFk3WkNMbURZSWdwZzlxeS1UT0d1ckd5enBNenVnRzFzRDJXNXZMUzNxVlptTGE1RlRHUEFoZl9JeWduZ0NxN0hGMldLQlhnSUs3NjdmbTJQbGfSAWpBVV95cUxORzNiM0dqc0R5bGxLdzR4RHBZN1pDTG1EWUlncGc5cXktVE9HdXJHeXpwTXp1Z0cxc0QyVzV2TFMzcVZabUxhNUZUR1BBaGZfSXlnbmdDcTdIRjJXS0JYZ0lLNzY3Zm0yUGxn?oc=5",
-      "publisher": "게임와이",
-      "publishedAt": "2026-11-14T04:29:34+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "[심층분석] LG유플러스, 네트워크·보안 통합 플랫폼 'U+SASE' 출시…기업 보안시장, 개별 솔루션에서 통합 관리체계로 전환 - 뉴스밸류",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5jZ0szalRKTWE2eW1IMlpNSHhfQmo1Q2p3S0QtVDh1TFJvOW1NaGVseldkNFRMZGwxY1JpR015djZFUGt6elRzR1JjMndmTTdqaFJ0YzlOV3F0bGxJTXJ5UDRpUXpPa3dtM3c?oc=5",
-      "publisher": "뉴스밸류",
-      "publishedAt": "2026-11-15T23:30:00+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
       "title": "일레븐랩스, 회의 기록과 받아쓰기 합친 팀용 앱 공개 - AI 매터스",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0yUWpJdXBRU0JrakY3OTM5ZzVlU0N6Z25LTjRmRGUwclhINVpPLTkzX1dDNmQ2MklVb2ZxaVg1aUctajhoM01xWGY0Z1ZVLWJwbU4xYw?oc=5",
       "publisher": "AI 매터스",
@@ -284,18 +164,10 @@
       "region": "KO"
     },
     {
-      "title": "파이어웍스 AI 경유 노션 데이터 사고가 드러낸 AI SaaS 공급망 리스크 - 한국공공정책신문",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFAwYjZBVE15NFVzREJ5azFSUVByclBWb2VvVDdvVzhQUk5MNGJkNEtKU19Dc244VHNPV0F0NXp2c3AwZ2s?oc=5",
-      "publisher": "한국공공정책신문",
-      "publishedAt": "2026-11-15T03:22:39+00:00",
-      "category": "IT·AI",
-      "region": "KO"
-    },
-    {
-      "title": "Scale AI, 병원 운영을 위한 AI 에이전트 5종 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc3l3dE1Sc1VzYXhXUFZFYWd0ZC1WNkpxQjBjYlVsdmVsUGE1RVBZeUw5SXpwMVI3VDhsY2tMYmdXZkdXdEJXcFpHMkIyeE1xX0ZMbUc5NzRka3U5UkJTdkdUb09lYXpHN2NyNWhvb0dfbVpxNGlKT1hMZjNhVF9VOGRQTWthWFRf?oc=5",
+      "title": "Perplexity, 웹 변경 사항 감지 자동화를 위한 Monitor API 출시 - Unite.AI",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSWxReVBVSEp2dmh1UmJSdW9ucXNXYkZZUUVVR09UWVVxTDdMV2hOR2lIVktnSmIxQkJsb25VaG1JWndZSGRaZk5qOEk5bkRqYTJXMklFOXRlTzFSanZ6NFZjY3UwTzA4Vm9BVGdzZzB5YWt2RlRyZVV3azRRMHR1RzdkQU9Fd2VUSVpRZW9vSG1fTjg?oc=5",
       "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T13:14:02+00:00",
+      "publishedAt": "2026-11-16T19:43:02+00:00",
       "category": "IT·AI",
       "region": "KO"
     },
@@ -308,29 +180,63 @@
       "region": "KO"
     },
     {
-      "title": "Tencent, 저렴한 멀티모달 모델 Hy4 Flash 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSGRUX0Nodkp5cTdvTVFjWGFxQWVQYUYzMUIzQ1dIVDlOaGRQdXBOX2Vfemd0ajF0ZFRSWXpHWTZKMlIyaDlOMmdxRTZ4OGdxRzh4cFpkSThRbzJiS2d1eWY4aV9leTdPQy1uYTU2cmhWUDlFV1M0cW5lcml4MEZJbjcyQUplMkN5bVYyTw?oc=5",
+      "title": "Scale AI, 병원 운영을 위한 AI 에이전트 5종 출시 - Unite.AI",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc3l3dE1Sc1VzYXhXUFZFYWd0ZC1WNkpxQjBjYlVsdmVsUGE1RVBZeUw5SXpwMVI3VDhsY2tMYmdXZkdXdEJXcFpHMkIyeE1xX0ZMbUc5NzRka3U5UkJTdkdUb09lYXpHN2NyNWhvb0dfbVpxNGlKT1hMZjNhVF9VOGRQTWthWFRf?oc=5",
       "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T10:25:01+00:00",
+      "publishedAt": "2026-11-16T13:14:02+00:00",
       "category": "IT·AI",
       "region": "KO"
     },
     {
-      "title": "Alibaba Cloud, 싱가포르 API 가격 25% 인하한 Qwen4-Max 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPdGdrLVJKbkdyQm9MdUctRjYwUnZTSWt0aE5HZkVvQW81WjBGbG11LXZwU2s5RENRMlRVeFFQbldldUNqRHZSX05uSkc3ZGE5RXJzQXRhbmlNN2tMSTN2WTQ1eUMtRTRoS280Wng1NUUyM08xVkRmM2I5OEFHSjJCNF9QOXVfaGVXa3QwSmdnQWhXRjBKbDVz?oc=5",
+      "title": "Teledyne LeCroy, AI 스케일업 네트워크용 800G UALink 테스터 출시 - Unite.AI",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVWsyUUFLaHR0YTJBbV9sM21fVXU2dnNicDdtNHlGUk1zSjk4YmViWENGanAzaTJSVVl4OHZ6Qk51eTZwaHhnUVpZZGpWY2hFTUVHeDdDY3pDRW8wOVlqbmpYLXhVR3FVQUNMRnRyQVhXa2xkLUcyZWNOOG9sNDNCS0s1OTNxSXQ3WkhSUjVlWk5JQlozUW5ZdA?oc=5",
       "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T04:46:01+00:00",
+      "publishedAt": "2026-11-16T19:19:03+00:00",
       "category": "IT·AI",
       "region": "KO"
     },
     {
-      "title": "Perplexity, 웹 변경 사항 감지 자동화를 위한 Monitor API 출시 - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSWxReVBVSEp2dmh1UmJSdW9ucXNXYkZZUUVVR09UWVVxTDdMV2hOR2lIVktnSmIxQkJsb25VaG1JWndZSGRaZk5qOEk5bkRqYTJXMklFOXRlTzFSanZ6NFZjY3UwTzA4Vm9BVGdzZzB5YWt2RlRyZVV3azRRMHR1RzdkQU9Fd2VUSVpRZW9vSG1fTjg?oc=5",
+      "title": "유아이패스, AI 에이전트 플랫폼 고도화...데이터 연결·보안·배포 통합 - 더에이아이",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB1d0h6Y1duYlRtaEJ4cmpTREpYNC12Q3lucEswRTV5TW9hNjhkdGZSb1I4TEVCYzg3N2pGY2RfeWw4ejR1bUlJY2VraWI5TVlsdGJrQVZPd3BqcHVwWEJpYktWNG1CTElPR1RF?oc=5",
+      "publisher": "더에이아이",
+      "publishedAt": "2026-11-16T05:45:07+00:00",
+      "category": "IT·AI",
+      "region": "KO"
+    },
+    {
+      "title": "AI 코드 검증 속도 못 따라간 기업 76%...보안·품질 위험 막을 자동 검증 시급 - 지티티코리아",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3dmVTeVFBbkI1ajV2M2Z3QWJlaEw0aGQ0QUVKcTBQc3pUQ0Y3QXdYSnh1M21FNjdvS2ZZclpKYlY1djBGdTBFZU84YmpZV3VOSHV6UHl4TVIzb1hKS3ZTMGI0dTVLWEZUTVE?oc=5",
+      "publisher": "지티티코리아",
+      "publishedAt": "2026-11-14T15:30:00+00:00",
+      "category": "IT·AI",
+      "region": "KO"
+    },
+    {
+      "title": "[심층분석] LG유플러스, 네트워크·보안 통합 플랫폼 'U+SASE' 출시…기업 보안시장, 개별 솔루션에서 통합 관리체계로 전환 - 뉴스밸류",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5jZ0szalRKTWE2eW1IMlpNSHhfQmo1Q2p3S0QtVDh1TFJvOW1NaGVseldkNFRMZGwxY1JpR015djZFUGt6elRzR1JjMndmTTdqaFJ0YzlOV3F0bGxJTXJ5UDRpUXpPa3dtM3c?oc=5",
+      "publisher": "뉴스밸류",
+      "publishedAt": "2026-11-15T23:30:00+00:00",
+      "category": "IT·AI",
+      "region": "KO"
+    },
+    {
+      "title": "NVIDIA, 과학 연구용 Nemotron 및 개방형 화학 데이터셋 출시 - Unite.AI",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPX1BwSU0tUXpFSVFVMVFtSzIyOGtMLXJidXJGWW9qNm5FRkhYallRcFN1RFlNblVBb0pabk9Sd1pWbkVwUFFBZDIxLXd2M0drenhocjlSVnBENmctWUVrbmFCUGFDOVVGR2lTRmpaQ01Md1hOLW5NcE52Si1mcC1jbXd6X0NLTWN0LWU2NmdlSThMdw?oc=5",
       "publisher": "Unite.AI",
-      "publishedAt": "2026-11-16T19:43:02+00:00",
+      "publishedAt": "2026-11-16T16:56:02+00:00",
+      "category": "IT·AI",
+      "region": "KO"
+    },
+    {
+      "title": "파이어웍스 AI 경유 노션 데이터 사고가 드러낸 AI SaaS 공급망 리스크 - 한국공공정책신문",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFAwYjZBVE15NFVzREJ5azFSUVByclBWb2VvVDdvVzhQUk5MNGJkNEtKU19Dc244VHNPV0F0NXp2c3AwZ2s?oc=5",
+      "publisher": "한국공공정책신문",
+      "publishedAt": "2026-11-15T03:22:39+00:00",
       "category": "IT·AI",
       "region": "KO"
     }
   ],
-  "errors": []
+  "errors": [
+    "AI·생산성/EN: HTTPError: HTTP Error 429: Too Many Requests"
+  ]
 }
