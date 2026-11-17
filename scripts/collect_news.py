@@ -6,6 +6,8 @@ The output is deliberately limited, diversified and deduplicated.
 """
 import json
 import re
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -17,7 +19,8 @@ FEEDS = [
     # Domestic news and practical guides
     ("연예", "KO", "드라마 OTT 공개일 출연진 공식 발표 when:3d", "ko", "KR"),
     ("연예", "KO", "예능 방송 편성 출연 공식 발표 when:3d", "ko", "KR"),
-    ("K-pop", "KO", "아이돌 컴백 콘서트 티켓 예매 공식 발표 when:3d", "ko", "KR"),
+    ("K-pop", "KO", "아이돌 컴백 공식 발표 when:3d", "ko", "KR"),
+    ("K-pop", "KO", "아이돌 콘서트 예매 일정 when:3d", "ko", "KR"),
     ("IT·AI", "KO", "AI 신기능 출시 공식 업데이트 생산성 when:3d", "ko", "KR"),
     ("IT·AI", "KO", "AI 업무 자동화 사용법 활용 가이드 when:7d", "ko", "KR"),
     ("생활 정보", "KO", "생활 서비스 신청 방법 공식 안내 when:7d", "ko", "KR"),
@@ -57,8 +60,17 @@ def fetch(category, region, query, hl, gl):
     request = urllib.request.Request(url, headers={
         "User-Agent": "TodayPick-News-Collector/0.5"
     })
-    with urllib.request.urlopen(request, timeout=20) as response:
-        raw = response.read(2_000_000)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                raw = response.read(2_000_000)
+            break
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (429, 503) or attempt == 2:
+                raise
+            retry_after = exc.headers.get("Retry-After", "")
+            delay = min(20, max(2, int(retry_after) if retry_after.isdigit() else 3 * (attempt + 1)))
+            time.sleep(delay)
     root = ET.fromstring(raw)
     if root.tag != "rss":
         raise ValueError("Unexpected RSS payload")
@@ -109,6 +121,27 @@ def main():
                 counters[key] += 1
         except (OSError, ET.ParseError, ValueError) as exc:
             failures.append(f"{category}/{region}: {type(exc).__name__}: {exc}")
+    # Preserve still-recent items from a previous successful run if a category failed.
+    # Never label these as freshly collected; the fetchedAt timestamp is retained per item.
+    retained_count = 0
+    if failures and OUTPUT.exists():
+        try:
+            previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
+            cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_DAYS_OLD)
+            for row in previous.get("items", []):
+                key = (row.get("category"), row.get("region"))
+                try:
+                    published = datetime.fromisoformat(row["publishedAt"]).astimezone(timezone.utc)
+                except (KeyError, ValueError, TypeError):
+                    continue
+                identity = (row.get("region"), normalized_title(row.get("title", "")))
+                if key not in counters or counters[key] > 0 or published < cutoff or identity in duplicates:
+                    continue
+                collected.append(row)
+                duplicates.add(identity)
+                retained_count += 1
+        except (OSError, ValueError, TypeError):
+            pass
     if not collected:
         raise RuntimeError("No valid feeds were retrieved; old data preserved. " + "; ".join(failures))
     collected.sort(key=lambda row: row["publishedAt"], reverse=True)
@@ -119,6 +152,7 @@ def main():
         "collectionVersion": 2,
         "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
         "categoryCounts": {f"{cat}/{lang}": count for (cat, lang), count in counters.items()},
+        "retainedFromPrevious": retained_count,
         "items": collected,
         "errors": failures,
     }
