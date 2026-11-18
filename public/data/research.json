@@ -1,12 +1,144 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T09:26:26.020713+00:00",
+  "updatedAt": "2026-11-18T01:18:40.681909+00:00",
   "maxDailyCalls": 3,
   "dailyAttempts": {
-    "2026-11-17": 3
+    "2026-11-17": 3,
+    "2026-11-18": 3
   },
   "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
   "entries": [
+    {
+      "candidateId": "285fcc08e628c4",
+      "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법",
+      "category": "생활 정보",
+      "region": "KO",
+      "researchedAt": "2026-11-18T01:18:31.872824+00:00",
+      "topic": "건강보험 환급금 조회 및 신청 방법",
+      "summary": "건강보험료를 이중으로 납부하거나 자격 상실 후에도 보험료가 계속 납부된 경우, 환급금이 발생합니다. 이러한 환급금은 국민건강보험공단의 공식 웹사이트나 모바일 앱을 통해 조회하고 신청할 수 있으며, 발생일로부터 3년 이내에 신청하지 않으면 소멸시효로 인해 환급받을 수 없습니다. ([openfact.kr](https://openfact.kr/health/health-insurance-refund-check-apply-sosmyeol?utm_source=openai))",
+      "keyFacts": [
+        "이중납부나 자격 상실 후에도 보험료가 납부된 경우 환급금 발생",
+        "환급금은 국민건강보험공단 공식 웹사이트나 모바일 앱을 통해 조회 및 신청 가능",
+        "발생일로부터 3년 이내에 신청하지 않으면 소멸시효로 인해 환급받을 수 없음"
+      ],
+      "openQuestions": [
+        "환급금 신청 시 필요한 서류는 무엇인가요?",
+        "환급금 신청 후 입금까지 소요되는 기간은 얼마나 되나요?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://etfstyle.com/guide/retirement/health-insurance-refund?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://myzen.tistory.com/entry/%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98-%ED%99%98%EA%B8%89%EA%B8%88-%EC%A1%B0%ED%9A%8C-%EB%B0%A9%EB%B2%95-%E2%80%94-3%EB%85%84-%EC%A7%80%EB%82%98%EB%A9%B4-%EC%82%AC%EB%9D%BC%EC%A7%91%EB%8B%88%EB%8B%A4-%EB%AF%B8%EC%A7%80%EA%B8%89-%ED%99%98%EA%B8%89%EA%B8%88-%EC%B0%BE%EB%8A%94-%EC%88%9C%EC%84%9C?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://coolwoojuin.tistory.com/entry/%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98-%ED%99%98%EA%B8%89%EA%B8%88-%EC%A1%B0%ED%9A%8C-%EB%B0%A9%EB%B2%95-%EB%B3%B8%EC%9D%B8%EB%B6%80%EB%8B%B4%EC%83%81%ED%95%9C%EC%95%A1-%EC%B4%88%EA%B3%BC%EA%B8%88?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://sherry7777.tistory.com/entry/%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98%EB%A3%8C-%ED%99%98%EA%B8%89%EA%B8%88-%EC%A1%B0%ED%9A%8C-%EB%B0%A9%EB%B2%95-3%EB%85%84-%EC%A7%80%EB%82%98%EB%A9%B4-%EC%82%AC%EB%9D%BC%EC%A0%B8%EC%9A%94-%EC%95%B1%C2%B7%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-3%EB%8B%A8%EA%B3%84?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://news-times.tistory.com/entry/%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98-%ED%99%98%EA%B8%89%EA%B8%88-%EC%A1%B0%ED%9A%8C-%EB%B0%A9%EB%B2%95-%F0%9F%92%B0-3%EB%85%84-%EC%A7%80%EB%82%98%EB%A9%B4-%EC%82%AC%EB%9D%BC%EC%A7%91%EB%8B%88%EB%8B%A4?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://app-developer.tistory.com/entry/%EA%B1%B4%EA%B0%95%EB%B3%B4%ED%97%98-%ED%99%98%EA%B8%89%EA%B8%88-%EC%A1%B0%ED%9A%8C-%EC%95%88%EB%90%A8-%EC%9D%B4%EC%9C%A0%EC%99%80-%EC%8B%A0%EC%B2%AD-%EB%B0%A9%EB%B2%95-%EB%B3%B4%ED%97%98%EB%A3%8C-%ED%99%98%EA%B8%89%EA%B8%88%C2%B7%EB%B3%B8%EC%9D%B8%EB%B6%80%EB%8B%B4%EA%B8%88%ED%99%98%EA%B8%89%EA%B8%88-%EC%B0%A8%EC%9D%B4?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://everydayoracle.tistory.com/211?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://abouttoday.co.kr/health-insurance-refund-check/?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 12,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "38fafa71e91cbe",
+      "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers",
+      "category": "AI·생산성",
+      "region": "EN",
+      "researchedAt": "2026-11-18T01:18:28.891857+00:00",
+      "topic": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers",
+      "summary": "Siemens는 AGIBOT과 협력하여 사용자가 객체와 작업을 설명하면 AI 소프트웨어가 이를 3D 프린팅 가능한 로봇 그리퍼 설계로 자동 변환하는 에이전트형 AI 워크플로우를 시연했습니다. 이 워크플로우는 기존의 수동 설계 방식을 대체하여 엔지니어링 프로세스를 간소화하고, 복잡한 엔지니어링 작업을 더 넓은 사용자층이 접근할 수 있게 합니다. ([3dprinting.com](https://3dprinting.com/news/siemens-demonstrates-agentic-ai-workflow-for-prompt-based-engineering-of-3d-printed-robotic-grippers/?utm_source=openai))",
+      "keyFacts": [
+        "사용자가 객체와 작업을 설명하면 AI 소프트웨어가 이를 3D 프린팅 가능한 로봇 그리퍼 설계로 자동 변환",
+        "기존의 수동 설계 방식을 대체하여 엔지니어링 프로세스 간소화",
+        "복잡한 엔지니어링 작업을 더 넓은 사용자층이 접근할 수 있게 함"
+      ],
+      "openQuestions": [
+        "이 AI 워크플로우의 정확도와 신뢰성은 어떻게 검증되었는가?",
+        "이 기술이 실제 산업 현장에서 어떻게 적용될 수 있을까?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://3dprinting.com/news/siemens-demonstrates-agentic-ai-workflow-for-prompt-based-engineering-of-3d-printed-robotic-grippers/?utm_source=openai",
+          "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers - 3D Printing"
+        },
+        {
+          "url": "https://3dprinting.com/news/tripo-ai-launches-agentic-canvas-node-based-workflow-builder-for-ai-3d/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://3dprinting.com/news/hi3d-ai-3d-printing-workflow/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://3dprinting.com/news/tripo-ai-previews-h3-5-print-ready-model-and-polipop-print-agent-at-formnext/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://3dprinting.com/news/pathon-robotics-releases-files-for-its-three-finger-3d-printed-robot-hand/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://3dprinting.com/news/mit-team-3d-prints-modular-blocks-that-stay-wired-when-they-change-shape/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://3dprinting.com/page/4/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://3dprinting.com/page/20/?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 7,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "fe1b0abbc1ea28",
+      "title": "'100일의 거짓말' 김유정-박진영, 출연자 화제성 1·2위…TV·OTT 화제성도 1위",
+      "category": "연예",
+      "region": "KO",
+      "researchedAt": "2026-11-18T01:18:22.207948+00:00",
+      "topic": "100일의 거짓말 화제성 1위",
+      "summary": "2026년 11월 18일 기준으로, 드라마 '100일의 거짓말'이 출연자 화제성에서 김유정과 박진영이 각각 1위와 2위를 차지하며, TV와 OTT 플랫폼에서도 화제성 1위를 기록했습니다.",
+      "keyFacts": [
+        "'100일의 거짓말' 출연자 화제성 순위: 김유정 1위, 박진영 2위",
+        "TV와 OTT 플랫폼에서 '100일의 거짓말' 화제성 1위"
+      ],
+      "openQuestions": [
+        "'100일의 거짓말'의 시청률은 어떻게 변화하고 있나요?",
+        "김유정과 박진영의 최근 활동은 무엇인가요?"
+      ],
+      "officialSourceSuggested": false,
+      "sources": [],
+      "distinctSourceDomains": 0,
+      "status": "insufficient_evidence"
+    },
     {
       "candidateId": "582f78fe1d74e4",
       "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기",
