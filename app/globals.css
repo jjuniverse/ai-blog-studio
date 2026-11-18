@@ -66,3 +66,52 @@
 .post-title-row>.wide-select{flex:1;min-width:0;margin:0}
 .post-title-row .copy-button-wrap{flex-shrink:0}
 @media(max-width:520px){.post-title-row{align-items:stretch;flex-direction:column}.post-title-row .copy-button-wrap{align-self:flex-end}}
+
+/* Mobile containment: long news URLs and headlines must never widen the layout. */
+html,body{max-width:100%;overflow-x:clip}
+.app-shell,.workspace,.main-inner,.recommend-list,.recommend-card,.topic-main,.panel,.saved-draft{min-width:0;max-width:100%}
+.recommend-card h3,.recommend-card p,.saved-draft b,.saved-draft small,.topic-main,.source-summary,.research-sources,.research-lead,.panel{overflow-wrap:anywhere;word-break:normal}
+.saved-draft>span:first-child{min-width:0;flex:1}
+.saved-draft>span:last-child{flex-shrink:0}
+@media(max-width:760px){
+  .app-shell{width:100%;max-width:100%;overflow-x:clip}
+  .sidebar{width:100%;max-width:100%;height:auto;box-sizing:border-box}
+  .sidebar nav{width:100%;min-width:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .nav-item{min-width:0;white-space:normal;line-height:1.4}
+  .workspace{display:block;width:100%;min-width:0}
+  .main-inner{box-sizing:border-box;width:100%;max-width:100%;padding:22px 14px 44px}
+  .topbar{max-width:100%;min-width:0;gap:8px}
+  .topbar>span{min-width:0;overflow-wrap:anywhere}
+  .topbar>div{flex-shrink:0}
+  .page-head{min-width:0;gap:10px}
+  .page-head>div{min-width:0;flex:1}
+  .page-head h1{font-size:23px;line-height:1.35}
+  .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .metric-grid>.metric:last-child:nth-child(odd){grid-column:1/-1}
+  .metric{min-width:0;padding:15px}
+  .metric small,.metric span{overflow-wrap:anywhere;line-height:1.5}
+  .section-title,.panel-heading{min-width:0;flex-wrap:wrap}
+  .filters{width:100%;min-width:0}
+  .filters input{flex-basis:100%;min-width:0}
+  .filters select{max-width:100%;min-width:0}
+  .recommend-list{width:100%;grid-template-columns:minmax(0,1fr)}
+  .recommend-card{width:100%;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:17px 15px}
+  .recommend-card h3{font-size:16px;line-height:1.45;overflow-wrap:anywhere}
+  .topic-main{width:100%;min-width:0}
+  .topic-actions{width:100%;display:flex;justify-content:space-between;gap:10px;margin-top:0}
+  .topic-actions .btn{flex-shrink:0}
+  .studio-grid,.publish-grid,.studio-side,.editor-main{grid-template-columns:minmax(0,1fr);width:100%}
+  .inline-generator,.draft-selector,.post-preview,.panel{min-width:0;max-width:100%}
+  .post-preview{overflow-x:hidden}
+  .post-preview h1,.post-preview h2,.post-preview p{overflow-wrap:anywhere}
+  .generator-inputs{grid-template-columns:minmax(0,1fr)}
+  .tabs{max-width:100%;overflow-x:auto}
+  .tab{flex-shrink:0}
+  .image-slot{grid-template-columns:70px minmax(0,1fr)}
+  .generated-image canvas{max-width:100%}
+}
+@media(max-width:390px){
+  .metric-grid{grid-template-columns:minmax(0,1fr)}
+  .metric-grid>.metric:last-child:nth-child(odd){grid-column:auto}
+  .page-head>.btn{white-space:normal;text-align:center;max-width:100px}
+}
