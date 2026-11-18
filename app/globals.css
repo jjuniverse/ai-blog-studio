@@ -115,3 +115,30 @@ html,body{max-width:100%;overflow-x:clip}
   .metric-grid>.metric:last-child:nth-child(odd){grid-column:auto}
   .page-head>.btn{white-space:normal;text-align:center;max-width:100px}
 }
+
+/* Independent claim review and openly licensed image research */
+.evidence-panel{margin-top:20px;padding:16px;border:1px solid #cfdfe9;background:#f8fbfe;border-radius:12px}
+.evidence-panel h3{margin:0 0 5px;font-size:15px;color:#28445b}
+.evidence-panel .panel-heading{flex-wrap:wrap;align-items:start}
+.evidence-claim{border:1px solid #e3e9f0;background:white;border-radius:9px;padding:12px;margin:12px 0;font-size:12px;line-height:1.7;overflow-wrap:anywhere}
+.evidence-claim>strong{display:block;margin-top:7px;color:#2a4157}
+.evidence-claim p{margin:7px 0;color:#546779}
+.evidence-claim small{display:block;color:#788b9f;margin:4px 0}
+.evidence-status{font-size:11px;font-weight:750;color:#7e5d20;background:#fff5df;padding:4px 8px;border-radius:6px}
+.evidence-status.supported{color:#246a53;background:#e4f7ee}
+.evidence-status.conflicting{color:#a64244;background:#ffebeb}
+.evidence-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
+.evidence-links a{color:#24639c;text-decoration:underline}
+.evidence-panel ul{font-size:12px;line-height:1.75;overflow-wrap:anywhere}
+.image-search-row{display:flex;gap:9px;align-items:center;margin-top:12px}
+.image-search-row input{flex:1;min-width:0;border:1px solid #d7e3eb;background:#fff;border-radius:9px;padding:11px 12px;font-size:13px}
+.licensed-image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.licensed-image{border:1px solid #e0e8ed;border-radius:11px;padding:9px;display:grid;gap:7px;min-width:0;overflow-wrap:anywhere}
+.licensed-image img,.image-selected img{width:100%;height:140px;object-fit:cover;background:#f0f4f5;border-radius:7px}
+.licensed-image strong{font-size:12px;line-height:1.4}
+.licensed-image small,.licensed-image div{font-size:11px;color:#657787}
+.licensed-image button{width:100%}
+.image-selected{border:1px solid #b5dbce;border-radius:10px;background:#f3fbf7;padding:10px;margin:12px 0}
+.image-selected img{margin-top:10px;object-fit:contain;height:180px}
+.image-selected strong{font-size:13px}.image-selected p,.image-selected a{font-size:12px;overflow-wrap:anywhere}
+@media(max-width:480px){.licensed-image-grid{grid-template-columns:minmax(0,1fr)}.image-search-row{align-items:stretch;flex-direction:column}.image-search-row button{width:100%}}
