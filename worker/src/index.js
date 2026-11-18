@@ -245,7 +245,7 @@ export default {
       failReasons = [];
       // Remove raw source-link syntax from publication copy; sourceLinks are shown separately.
       const stripInlineLinks = value => String(value || "")
-        .replace(/\(\[([^\]]+)\]\(https?:\/\/[^)]+\)\)/g, " ($1)")
+        .replace(/\(\[([^\]]+)\]\(https?:\/\/[^)]+\)\)/g, "")
         .replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g, "$1")
         .replace(/https?:\/\/[^\s)]+/g, "")
         .replace(/\(\s*\)/g, "")
