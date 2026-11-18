@@ -449,21 +449,71 @@ export default function Home() {
     finally {setVerifying(false);}
   }
   async function searchImages() {
-    if (!studioPassphrase || !imageQuery.trim() || imageSearching) return;
+    if (imageQuery.trim().length < 2 || imageSearching) return;
     setImageError('');
     setImageSearching(true);
     setImageResults([]);
+    const q = imageQuery.trim();
+    const searchUrl = new URL('https://api.openverse.org/v1/images/');
+    searchUrl.searchParams.set('q', q);
+    searchUrl.searchParams.set('page_size', '12');
+    searchUrl.searchParams.set('license', 'cc0,by');
+    searchUrl.searchParams.set('mature', 'false');
     try {
-      const response = await fetch(WORKER_URL + '/images', {
-        method:'POST',
-        headers:{'Content-Type':'application/json', 'X-Studio-Passphrase':studioPassphrase},
-        body:JSON.stringify({query:imageQuery.trim()}),
-      });
-      const value = await response.json().catch(()=>({}));
-      if (!response.ok || !Array.isArray(value.images)) throw Error(value.error || '이미지 검색 응답이 올바르지 않아.');
-      setImageResults(value.images as ImageSearchResult[]);
-      if (!value.images.length) setImageError('사용 조건이 명시된 이미지 후보가 없어. 다른 검색어를 시도하거나 자체 제작 카드를 사용해 줘.');
-    } catch (error) {setImageError(error instanceof Error?error.message:'이미지 검색 실패');}
+      let images: ImageSearchResult[] | null = null;
+      let directError = '';
+      try {
+        // Direct browser requests avoid cloud-host egress blocks and need no studio credentials.
+        const response = await fetch(searchUrl.toString(), {
+          headers: { Accept: 'application/json' },
+          signal: AbortSignal.timeout(15000),
+        });
+        if (!response.ok) throw new Error('Openverse HTTP ' + response.status);
+        const data = await response.json();
+        const isSafeHttps = (url: unknown) => {
+          try { return typeof url === 'string' && new URL(url).protocol === 'https:'; }
+          catch { return false; }
+        };
+        images = (Array.isArray(data.results) ? data.results : []).filter((img: any) =>
+          ['cc0','by'].includes(String(img.license || '').toLowerCase()) &&
+          isSafeHttps(img.foreign_landing_url) && isSafeHttps(img.url) &&
+          isSafeHttps(img.thumbnail) && isSafeHttps(img.license_url) && !img.mature
+        ).slice(0, 8).map((img: any): ImageSearchResult => ({
+          id: String(img.id || ''),
+          title: String(img.title || '제목 없음').slice(0, 140),
+          creator: String(img.creator || '제작자 미상').slice(0, 140),
+          license: String(img.license).toUpperCase(),
+          licenseVersion: String(img.license_version || ''),
+          licenseUrl: img.license_url,
+          sourceUrl: img.foreign_landing_url,
+          imageUrl: img.url,
+          thumbnailUrl: img.thumbnail,
+          attribution: String(img.attribution || '').slice(0, 500),
+        }));
+      } catch (error) {
+        directError = error instanceof Error ? error.message : '브라우저 직접 연결 실패';
+      }
+      if (images === null && studioPassphrase) {
+        // Fallback when a user's browser cannot reach Openverse directly.
+        try {
+          const response = await fetch(WORKER_URL + '/images', {
+            method:'POST',
+            headers:{'Content-Type':'application/json','X-Studio-Passphrase':studioPassphrase},
+            body:JSON.stringify({query:q}),
+            signal: AbortSignal.timeout(15000),
+          });
+          const data = await response.json().catch(()=>({}));
+          if (!response.ok || !Array.isArray(data.images)) throw new Error(data.code || 'Worker HTTP ' + response.status);
+          images = data.images;
+        } catch (error) {
+          const fallback = error instanceof Error ? error.message : '서버 검색 실패';
+          throw new Error('Openverse 연결 실패 (직접: ' + directError + ', 서버: ' + fallback + '). 외부 검색 링크를 이용해 줘.');
+        }
+      }
+      if (images === null) throw new Error('Openverse에 직접 연결하지 못했어 (' + directError + '). 아래 외부 검색 링크를 이용해 줘.');
+      setImageResults(images);
+      if (!images.length) setImageError('CC0·CC BY 후보가 없어. 다른 검색어로 시도하거나 외부 검색 결과를 확인해 줘.');
+    } catch (error) {setImageError(error instanceof Error ? error.message : '이미지 검색 실패');}
     finally {setImageSearching(false);}
   }
   async function copyToClipboard(content: string, target: 'title' | 'article') {
@@ -686,10 +736,11 @@ export default function Home() {
               <div className="panel-heading"><h2>실제 이미지 검색</h2><span>Openverse · 검색 무료</span></div>
               <p className="muted">CC0 및 CC BY 후보만 탐색해. 공식 포스터나 방송 스틸컷은 사용 허가가 확인되지 않으면 가져오지 않아.</p>
               <div className="image-search-row"><input value={imageQuery} onChange={e=>setImageQuery(e.target.value)} placeholder="예: 1930s Seoul street / vintage radio" aria-label="이미지 검색어" />
-                <button className="btn btn-primary" onClick={searchImages} disabled={!studioPassphrase || imageSearching || imageQuery.trim().length<2}>{imageSearching?'검색 중…':'이미지 검색'}</button>
+                <button className="btn btn-primary" onClick={searchImages} disabled={imageSearching || imageQuery.trim().length<2}>{imageSearching?'검색 중…':'이미지 검색'}</button>
               </div>
               <p className="muted">구체적인 배경·사물 검색어를 입력해. 드라마 제목으로 검색해도 실제 작품 사진이 검색된다는 보장은 없어.</p>
               {imageError && <p className="generator-error" role="alert">{imageError}</p>}
+              <p className="muted">검색이 안 될 때: <a href={'https://openverse.org/search/image?q='+encodeURIComponent(imageQuery.trim() || 'historic Seoul')} target="_blank" rel="noopener noreferrer">Openverse 웹사이트에서 직접 검색 ↗</a></p>
               {selectedImage && <div className="image-selected">
                 <strong>선택한 이미지 후보</strong>
                 <img src={selectedImage.thumbnailUrl} alt={selectedImage.title} loading="lazy" referrerPolicy="no-referrer" />
