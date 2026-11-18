@@ -370,7 +370,6 @@ export default function Home() {
             selectedImages: old[selected.id]?.selectedImages,
             imageRightsApproved: old[selected.id]?.imageRightsApproved || [],
             imageKeywords: draft.imageKeywords || [],
-            selectedImages: old[selected.id]?.selectedImages || (old[selected.id]?.selectedImage ? [old[selected.id].selectedImage].filter((image): image is ImageSearchResult => !!image) : []),
           },
         }));
       }
@@ -448,7 +447,6 @@ export default function Home() {
       selectedImages: patch.selectedImages ?? old[editId]?.selectedImages,
       imageKeywords: patch.imageKeywords ?? old[editId]?.imageKeywords,
       imageRightsApproved: patch.imageRightsApproved ?? old[editId]?.imageRightsApproved,
-      selectedImages: patch.selectedImages ?? old[editId]?.selectedImages,
     } }));
   }
   function recoverStoredDraft() {
