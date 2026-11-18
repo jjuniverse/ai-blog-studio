@@ -141,7 +141,7 @@ export default {
       tools: [{ type: "web_search", search_context_size: "medium" }],
       tool_choice: "required",
       include: ["web_search_call.action.sources"],
-      max_output_tokens: 8200,
+      max_output_tokens: 12000,
       text: { format: { type: "json_schema", name: "researched_editorial_draft", strict: true, schema } },
       store: false,
     };
@@ -163,6 +163,21 @@ export default {
     let result, sourceLinks = [];
     try {
       const data = await upstream.json();
+      // A successful HTTP response can still be incomplete due to output-token budget.
+      // Report the precise non-sensitive category, rather than collapsing everything to "incomplete data".
+      if (data.status === "incomplete") {
+        const reason = data.incomplete_details?.reason || "unknown";
+        console.warn("OpenAI result incomplete", { reason });
+        return reply({
+          error: "AI output stopped before completing the article",
+          code: reason === "max_output_tokens" ? "AI_OUTPUT_LIMIT" : "AI_INCOMPLETE",
+          stage: "openai_response",
+        }, 502);
+      }
+      if (data.status && data.status !== "completed") {
+        console.warn("OpenAI response unexpected status", { status: data.status });
+        return reply({ error: "AI did not finish its response", code: "AI_NOT_COMPLETED", stage: "openai_response" }, 502);
+      }
       const webCalls = (data.output || []).filter(item => item.type === "web_search_call");
       const sourceData = webCalls.flatMap(item => item.action?.sources || []);
       // Web-search results can also cite URLs via message annotations.
@@ -181,11 +196,15 @@ export default {
       };
       const retrievedByUrl = new Map(retrieved.map(src => [normalize(src.url), src]));
       const visitedUrls = new Set(retrievedByUrl.keys());
-      if (!webCalls.length) return fail("Web research did not run; no draft was created", 502);
+      if (!webCalls.length) return reply({ error: "Web research did not run; no draft was created", code: "AI_NO_WEB_SEARCH", stage: "openai_response" }, 502);
       const parts = (data.output || []).flatMap(message => (message.content || [])
         .filter(part => part.type === "output_text").map(part => part.text));
-      if (!parts.length) throw Error("Empty output");
-      result = JSON.parse(parts.join(""));
+      if (!parts.length) return reply({ error: "AI returned no article text", code: "AI_EMPTY_OUTPUT", stage: "parse_openai_result" }, 502);
+      try {
+        result = JSON.parse(parts.join(""));
+      } catch {
+        return reply({ error: "AI returned invalid or truncated JSON", code: "AI_INVALID_JSON", stage: "parse_openai_result" }, 502);
+      }
       if (!["article", "research_brief"].includes(result.mode) || !["naver", "tistory", "shortform", "title"].every(key => typeof result[key] === "string") ||
           !Array.isArray(result.imageNotes) || result.imageNotes.length !== 3 ||
           !Array.isArray(result.verificationChecklist) || !Array.isArray(result.sourceLinks)) throw Error("Invalid draft schema");
@@ -238,7 +257,10 @@ export default {
           if (!qualifiedTistory) result.verificationChecklist.unshift("티스토리 원고 품질 검사 실패: 네이버 원고만 확인할 수 있어.");
         }
       }
-    } catch { return fail("OpenAI research returned incomplete data; no draft was saved", 502); }
+    } catch (error) {
+      console.error("OpenAI parse stage failed", { name: error?.name || "Error" });
+      return reply({ error: "AI response did not match expected draft structure", code: "AI_DRAFT_FORMAT_ERROR", stage: "parse_openai_result" }, 502);
+    }
     result.sourceLinks = sourceLinks;
     result.researchAudit = {
       searchedSourceCount: visitedUrls.size,
