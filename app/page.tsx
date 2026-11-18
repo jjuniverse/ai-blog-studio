@@ -35,6 +35,7 @@ type Draft = {
   mode?: "article" | "research_brief";
   sourceLinks?: { title: string; url: string }[];
   researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
+  qualityAudit?: { blogsAreCopies: boolean; shortformCopiesBlog: boolean; visualRightsWarning: boolean; warnings: string[] };
   title: string;
   naver: string;
   tistory: string;
@@ -278,7 +279,7 @@ export default function Home() {
       }
       setChannel('naver');
       setPreviewMode(true);
-      setNotice(draft.mode === 'research_brief'
+      setNotice(draft.status === 'revision_required' ? '원고는 생성됐지만 중복 본문이나 숏폼·이미지 문제로 수정이 필요해.' : draft.mode === 'research_brief'
         ? '참고 자료가 부족해서 글을 억지로 생성하지 않았어. 조사 항목을 확인해 줘.'
         : '자료를 조사해 AI 원고를 작성했어. 출처와 내용을 확인한 뒤 편집해 줘.');
     } catch (e) {
@@ -434,6 +435,11 @@ export default function Home() {
               </div>}
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
+              {matchingDraft?.qualityAudit?.warnings?.length ? <div className="draft-warning" role="alert">
+                <strong>원고 품질 검사 · 수정 필요</strong>
+                <ul>{matchingDraft.qualityAudit.warnings.map((warning,i)=><li key={i}>{warning}</li>)}</ul>
+                <p>자동 생성 성공이 발행 승인이라는 뜻은 아니야. 사실·채널별 원고·이미지 권리를 확인해 줘.</p>
+              </div> : null}
               {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="draft-warning">
                 <strong>원고 보류 · 원인을 확인해 줘</strong>
                 <p>기사 내용이 부족하거나 품질 검사에서 탈락했어. 같은 주제를 반복 생성하면 API 비용만 발생할 수 있으니, 먼저 아래 결과를 확인해 줘.</p>
