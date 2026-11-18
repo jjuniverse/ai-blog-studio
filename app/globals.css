@@ -61,3 +61,8 @@
 .copy-tooltip-error{background:#a33f44}
 .copy-tooltip-error::after{border-top-color:#a33f44}
 @keyframes copy-pop{from{opacity:0;transform:translate(-50%,6px)}to{opacity:1;transform:translate(-50%,0)}}
+
+.post-title-row{display:flex;align-items:center;gap:10px;margin-top:7px}
+.post-title-row>.wide-select{flex:1;min-width:0;margin:0}
+.post-title-row .copy-button-wrap{flex-shrink:0}
+@media(max-width:520px){.post-title-row{align-items:stretch;flex-direction:column}.post-title-row .copy-button-wrap{align-self:flex-end}}
