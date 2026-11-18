@@ -20,7 +20,8 @@ test('complete OpenAI response yields a research audit and draft without a scope
       { type: 'message', content: [{
         type: 'output_text',
         text: JSON.stringify({
-          mode: 'article', title, naver: article, tistory: article,
+          mode: 'article', title, naverTitle: 'Useful AI software announcement and how to use it',
+          tistoryTitle: 'AI software release: features and detailed setup', naver: article, tistory: article,
           shortform: 'An informative script that has enough content to pass the short-form length requirement.',
           verificationChecklist: [], imageNotes: ['Cover','Illustration','Summary'],
           sourceLinks,
@@ -48,6 +49,8 @@ test('complete OpenAI response yields a research audit and draft without a scope
     const result = await response.json();
     assert.equal(response.status, 200, JSON.stringify(result));
     assert.equal(result.draft.mode, 'article');
+    assert.equal(result.draft.naverTitle, 'Useful AI software announcement and how to use it');
+    assert.equal(result.draft.tistoryTitle, 'AI software release: features and detailed setup');
     assert.equal(result.draft.researchAudit.distinctSourceDomains, 2);
     assert.equal(result.draft.researchAudit.returnedSourceCount, 2);
     assert.equal(result.draft.researchAudit.initiallyGeneratedMode, 'article');
