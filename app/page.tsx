@@ -350,7 +350,7 @@ export default function Home() {
             generatedVersion: DRAFT_VERSION,
             evidenceReview: {},
             selectedImage: old[selected.id]?.selectedImage,
-            selectedImages: old[selected.id]?.selectedImages || (old[selected.id]?.selectedImage ? [old[selected.id].selectedImage] : []),
+            selectedImages: old[selected.id]?.selectedImages || (old[selected.id]?.selectedImage ? [old[selected.id].selectedImage].filter((image): image is ImageSearchResult => !!image) : []),
           },
         }));
       }
