@@ -37,6 +37,8 @@ type Draft = {
   researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
   qualityAudit?: { blogsAreCopies: boolean; shortformCopiesBlog: boolean; visualRightsWarning: boolean; warnings: string[] };
   title: string;
+  naverTitle?: string;
+  tistoryTitle?: string;
   naver: string;
   tistory: string;
   shortform: string;
@@ -46,6 +48,7 @@ type Draft = {
 };
 type LocalEdit = {
   fields: Partial<Record<Channel, string>>;
+  titles?: Partial<Record<'naver' | 'tistory', string>>;
   imageNotes: string[];
   verified: boolean;
   publishedUrls: Partial<Record<'naver' | 'tistory', string>>;
@@ -277,6 +280,7 @@ export default function Home() {
           ...old,
           [selected.id]: {
             fields: { naver: draft.naver, tistory: draft.tistory, shortform: draft.shortform },
+            titles: { naver: draft.naverTitle || draft.title, tistory: draft.tistoryTitle || draft.title },
             imageNotes: payload.draft.imageNotes,
             verified: false,
             publishedUrls: old[selected.id]?.publishedUrls || {},
@@ -314,6 +318,9 @@ export default function Home() {
   const legacyPublic = !!matchingDraft && matchingDraft.mode !== 'article' && matchingDraft.mode !== 'research_brief';
   const currentDraft = !legacyStored && !legacyPublic && (matchingDraft?.mode === 'article' || !!saved?.fields?.[channel]);
   const text = legacyStored ? (saved?.fields?.[channel] || '') : legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
+  const articleTitle = channel === 'shortform' ? (matchingDraft?.title || selected?.title || '') :
+    (saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '');
+  const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text;
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
   const reviewCount = candidates.filter(x => x.status === 'research_required' || x.status === 'needs_sources').length;
@@ -324,6 +331,7 @@ export default function Home() {
     if (!editId) return;
     setLocalEdits(old => ({ ...old, [editId]: {
       fields: { ...(old[editId]?.fields || {}), ...(patch.fields || {}) },
+      titles: { ...(old[editId]?.titles || {}), ...(patch.titles || {}) },
       imageNotes: patch.imageNotes || old[editId]?.imageNotes || imagePrompts(selected),
       verified: patch.verified ?? old[editId]?.verified ?? false,
       publishedUrls: { ...(old[editId]?.publishedUrls || {}), ...(patch.publishedUrls || {}) },
@@ -357,14 +365,14 @@ export default function Home() {
   async function copyText() {
     if (!text.trim()) return;
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(copyableArticle);
       setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'success' }));
     } catch {
       setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'error' }));
     }
   }
   function exportText() {
-    download('todaypick-' + channel + '-draft.txt', (selected?.title || '') + '\n\n' + text + '\n\n' + images.map((n,i) => '[이미지 ' + (i + 1) + '] ' + n).join('\n'), 'text/plain;charset=utf-8');
+    download('todaypick-' + channel + '-draft.txt', copyableArticle + '\n\n' + images.map((n,i) => '[이미지 ' + (i + 1) + '] ' + n).join('\n'), 'text/plain;charset=utf-8');
   }
   function savePublished(channelId: 'naver' | 'tistory', value: string) {
     if (!value.trim()) { updateEdit({ publishedUrls: { [channelId]: '' } }); setNotice('기록된 게시 URL을 비웠어.'); return; }
@@ -477,17 +485,25 @@ export default function Home() {
               {!legacyStored && matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
               {currentDraft && !legacyStored && !!text.trim() ? <>
                 <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
+                {channel !== 'shortform' && <label className="notes-label">검색형 게시 제목
+                  <input className="wide-select" value={articleTitle} onChange={e=>updateEdit({titles:{[channel]:e.target.value},verified:false})} aria-label={channel==='naver'?'네이버 게시 제목':'티스토리 게시 제목'} />
+                </label>}
                 <div className="editor-toolbar"><button className={previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(true)}>블로그 미리보기</button><button className={!previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(false)}>원고 편집</button></div>
                 {previewMode ? <div className="post-preview">
                   <div className="post-preview-label">오늘의 픽 · {channel === 'naver'?'네이버 블로그':channel==='tistory'?'티스토리':'숏폼 대본'} 발행 전 미리보기</div>
-                  <h1>{matchingDraft?.title || selected?.title || '새 글'}</h1>
+                  <h1>{articleTitle || '새 글'}</h1>
                   {text.split(/\n+/).filter(Boolean).map((paragraph, i) => <div key={i}>
                     {/^#{1,3}\s+/.test(paragraph) ? <h2>{paragraph.replace(/^#{1,3}\s+/, '')}</h2> : <p>{paragraph}</p>}
-                    {i === 0 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>}
+                    {i === 0 && channel !== 'shortform' && selected && <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>}
                     {i === 4 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={1}/>}
                   </div>)}
                   {channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[2]} excerpt={text} variant="summary" index={2}/>}
                 </div> : <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
+                {channel !== 'shortform' && matchingDraft?.sourceLinks?.length ? <div className="research-sources">
+                  <strong>본문과 분리한 참고 출처</strong>
+                  <ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul>
+                  <p className="muted">글에 적힌 개별 주장과 자료가 실제로 일치하는지 발행 전에 확인해 줘.</p>
+                </div> : null}
                 <div className="editor-toolbar"><span className="copy-button-wrap">
                   <button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button>
                   {copyFeedback && <span className={'copy-tooltip '+(copyFeedback.kind==='error'?'copy-tooltip-error':'')} role="status" aria-live="polite">
