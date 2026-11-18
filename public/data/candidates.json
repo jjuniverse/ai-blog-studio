@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-11-18T06:33:36.328856+00:00",
+  "generatedAt": "2026-11-18T12:29:17.835294+00:00",
   "disclaimer": "Editorial-only heuristics; no measured traffic, revenue or factual verification. Promotional topics are excluded from recommendations.",
   "candidates": [
     {
-      "id": "721fef9fec2932",
-      "title": "‘데블스 플랜: 데드 어게인’, 터졌다…장동민도 화제성 1위 쌍끌이",
+      "id": "16bef504dfbec3",
+      "title": "‘데블스 플랜: 데드 어게인’ 공개 일주일 만에 통했다…넷플릭스 1위·화제성 정상",
       "category": "연예",
       "region": "KO",
       "headlines": [
+        {
+          "title": "‘데블스 플랜: 데드 어게인’ 공개 일주일 만에 통했다…넷플릭스 1위·화제성 정상 - 위키트리",
+          "publisher": "위키트리",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5IdXk5cDdHZ19EOEgwRlVRc1AtVFNHM3lJNjhnd3lpbnFaVTB2UmlnWml2bE1RRzRGaVV5N0xUNEJWRVA1a3l1cG90Q0JzOWxWQUZDbEFn?oc=5",
+          "publishedAt": "2026-11-18T11:05:00+00:00"
+        },
         {
           "title": "‘데블스 플랜: 데드 어게인’, 터졌다…장동민도 화제성 1위 쌍끌이 - 일간스포츠",
           "publisher": "일간스포츠",
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE82MDREYkVBSjkxSUdQWTJBQ1BKeWk0SXpoRzBPczZIbDhGdFBmbjFWbERIcERnb2E4X3NKRXdXV2cxX1otRmU1ZWl1TnNlZnd0eVFxMklPZm5IcDQ?oc=5",
           "publishedAt": "2026-11-18T05:58:00+00:00"
-        },
-        {
-          "title": "'데블스 플랜: 데드 어게인', 공개 첫 주 비드라마 화제성 1위…탈락자 부활 '유배지' 주목 - 제이앤엠뉴스",
-          "publisher": "제이앤엠뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rZHlXcm9NUTJpZjFPUmU0b3pteVdHLUJKUW4ydHFrSjRuQ3ctWWZuSXRsbXMyNzJyYzcxMTBiNFZ3WjZkM0V1WVhfQWpiVUZ5OFpDd0tvbjluYVlBTnEtOA?oc=5",
-          "publishedAt": "2026-11-17T10:14:31+00:00"
         }
       ],
       "scores": {
@@ -75,22 +75,22 @@
       ]
     },
     {
-      "id": "582f78fe1d74e4",
-      "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기",
-      "category": "연예",
+      "id": "285fcc08e628c4",
+      "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법",
+      "category": "생활 정보",
       "region": "KO",
       "headlines": [
         {
-          "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기 - https://www.diarypoint.com/",
-          "publisher": "https://www.diarypoint.com/",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBWY25WN3U5MHM0M1p0dGkxT3dtUV9OUUg1YTc0Yzc2blVBY2YydklrNEhZMzJDVkFDV0N2UnpXbEVER0FZWVRQMkNkMm5KRjNLSlFWYWZxdkRMYU1YZnNkclU0Q1VOeFB6RVdV?oc=5",
-          "publishedAt": "2026-11-15T23:10:00+00:00"
+          "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법 - 창원특례신문",
+          "publisher": "창원특례신문",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxU1pRVUk1WXpmZTRTWHl1RUFsRDZfalJGNWpacWtGM3h1VUZBcHF1UXc4SDhIZHo4NHc3N0oybWtoczh4ay1uUEdud0ZBMlh2YjhVZzFOMm84NnRBUWt4S0kyb2pMQzTSAWtBVV95cUxQOUw1d3VpU1JNeUJpd0ZFMGE5MVZKc2VfUm9IRHE4UWg1cFZ0V25FVC1XdTFadlFTaEtKd1JNRVZkY2xaU09Rcy14ZUFCUGx1TjdpQml2OTlLWXpLUmJ1eVh4OVVmc3FfSmx1WQ?oc=5",
+          "publishedAt": "2026-11-11T21:15:00+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 30,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 60,
+        "editorialPriority": 34,
+        "commercialFitHeuristic": 26,
+        "shortformFitHeuristic": 52,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -101,7 +101,8 @@
       },
       "status": "needs_sources",
       "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "사용법·비교 등 정보 탐색 의도 단서"
       ]
     },
     {
@@ -136,53 +137,22 @@
       ]
     },
     {
-      "id": "285fcc08e628c4",
-      "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법",
-      "category": "생활 정보",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법 - 창원특례신문",
-          "publisher": "창원특례신문",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxU1pRVUk1WXpmZTRTWHl1RUFsRDZfalJGNWpacWtGM3h1VUZBcHF1UXc4SDhIZHo4NHc3N0oybWtoczh4ay1uUEdud0ZBMlh2YjhVZzFOMm84NnRBUWt4S0kyb2pMQzTSAWtBVV95cUxQOUw1d3VpU1JNeUJpd0ZFMGE5MVZKc2VfUm9IRHE4UWg1cFZ0V25FVC1XdTFadlFTaEtKd1JNRVZkY2xaU09Rcy14ZUFCUGx1TjdpQml2OTlLWXpLUmJ1eVh4OVVmc3FfSmx1WQ?oc=5",
-          "publishedAt": "2026-11-11T21:15:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 34,
-        "commercialFitHeuristic": 26,
-        "shortformFitHeuristic": 52,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "사용법·비교 등 정보 탐색 의도 단서"
-      ]
-    },
-    {
-      "id": "c0dcfae3d8567d",
-      "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/",
-      "category": "K-pop",
+      "id": "8d16caa6e6b562",
+      "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN",
+      "category": "K-드라마",
       "region": "EN",
       "headlines": [
         {
-          "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/ - Facebook",
-          "publisher": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdEtJamowVW44UmRWWXlZMEljcEFjUmwtUmN5aThOdE1SOERiLTRrYmJFNkw2UjR4dWlVeE1SNnJkQVpPSTJHby1aMU8waUJDZTdDVGY5Mlh6bzRpT1RIYi1sLXk3cmdpdnR6akhEejBTU0FqUWgzdDk0ZU53Yy0wbUFLSGhRemdDZnRPQ0lVSkRjdExhR3ZRMlVGQ0dxY3VVNlJZV3ZPMEhLaE0yZ3RHd2s1dVIwMG1qbXZieWFRUnJXQnh3MzVrQjBKUHJqRkZmMC1N?oc=5",
-          "publishedAt": "2026-11-17T16:13:53+00:00"
+          "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN - Pirates and Princesses",
+          "publisher": "Pirates and Princesses",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWFlqVFRmVy1ZUjFYNlJZWjNrSWJqeUoyX3FwV2s0SjlPSFRtaVBaWjhKcHBRLUFXZy1NQmZDUVZCR01YVG1iYUhlN0FMbUM2eXFWa05vNExJWnVSenNfdTF5cmFZWmV4dDZzXzYxTllZallGTkVsb0RnUkhiRWxTOWZYYmVKTVhpbDBmUzNBRXFlOWd1QlE?oc=5",
+          "publishedAt": "2026-11-18T11:03:48+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -197,16 +167,16 @@
       ]
     },
     {
-      "id": "883e3e17f9d339",
-      "title": "핑클 완전체, 빗속 심야 회동 포착..컴백 앞두고 끈끈한 우정",
+      "id": "8eb7b83792f84d",
+      "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "핑클 완전체, 빗속 심야 회동 포착..컴백 앞두고 끈끈한 우정 - 스타뉴스",
-          "publisher": "스타뉴스",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9KaGFJa0xnZjUwaDQzNTk3MVBrRmZQai0zMlNHZ0F6eDVULUxfdXBzeF9JUGxvdm9fNFNZQ25JTlRmUnA5dG5mQldOeXQ2THRuanAxeF9jQWlzNTFlOVJxaFB4U2dJUkU0YWI1N05zcTFlQnM?oc=5",
-          "publishedAt": "2026-11-17T09:43:25+00:00"
+          "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최 - 톱스타뉴스",
+          "publisher": "톱스타뉴스",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2TWFEOW9icWVKTldIb0UyNmRIYXlPM0E3QXQwMFdDNEljRENORVdPZ2NhZjd3X2VZRUlkbUFhWFlxVFZmcTkwcnUwU1BKZjhEMlF2SkpaXzZacGRPZnMxaHVOdG1uTGVkbGhRTjdKcXBLQQ?oc=5",
+          "publishedAt": "2026-11-18T07:30:41+00:00"
         }
       ],
       "scores": {
@@ -227,22 +197,52 @@
       ]
     },
     {
-      "id": "724ec2250e9c29",
-      "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More",
-      "category": "K-드라마",
-      "region": "EN",
+      "id": "582f78fe1d74e4",
+      "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기",
+      "category": "연예",
+      "region": "KO",
       "headlines": [
         {
-          "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More - Esquire India",
-          "publisher": "Esquire India",
-          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQTHJFTi1taWxjZnR5WnFaZDd1NEFfaDZ5NXJIZzVPSkVyLVpELVo2MHgyWV9RMkhYVXpUMENMQUdzX1dfYzRycFJIUkJNWnZoWVpnWkR5Yl84aVpoNFFDamNjdXZNRjlvbnQxaFNnZW1WYXhSay1rUWUyZW1uRHJPb2lZRTF3bEdJRUprajRDMGxpbVJ6Q0ZLNlYtSTNiZzltTHdnOVlXSWZvcWMzck1rc1p3ZXNSQ19yeWh5RjZIbmNLLTJpUC1jSmVJdE1QZDFoSG9zRlJ3eV9qaElyNEh5Y3J5dERYaHBEOF9ETHRiVWZQSVNSTmNNYlg4Yi00UnlZd2FV0gGQAkFVX3lxTE9FdnRwUFZ5TjVNSWFYWXpGQ0ZyT09Bck03bFVnLW9OODdpbG9OM1l3MEx5UFhQNURqTWZiWW04c3JkZmx5d3ExSnM0Vl9OeENBNXBPY2VEMWdHQ3dNOXR5NkljWkRpaGF1MExIOHp0UjZBaWxkR3ByQmprNEs2TmtRQWxrdk9nMDZNblg1YnZral9RcjlQZHNJUWhtU3VKYW1uZUo2dVIyZFRiMEtuOUlwdjZrZFBXekp0ZnZfSVdjQUxpd3VoWXdQWWQtYl80MTQ2bWVITGJFZ2wxc1lUS1hCX2xIZWxwSGprekdoai1kWDg5UklsYVplRURjZzViWC1WRjFxOFIyakJkNWtDSVFi?oc=5",
-          "publishedAt": "2026-11-17T06:31:14+00:00"
+          "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기 - https://www.diarypoint.com/",
+          "publisher": "https://www.diarypoint.com/",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBWY25WN3U5MHM0M1p0dGkxT3dtUV9OUUg1YTc0Yzc2blVBY2YydklrNEhZMzJDVkFDV0N2UnpXbEVER0FZWVRQMkNkMm5KRjNLSlFWYWZxdkRMYU1YZnNkclU0Q1VOeFB6RVdV?oc=5",
+          "publishedAt": "2026-11-15T23:10:00+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 22,
+        "editorialPriority": 30,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "a3b9350ed1509f",
+      "title": "BLACKPINK Weverse Membership Sales Paused as YG Addresses Group Activity Questions",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "BLACKPINK Weverse Membership Sales Paused as YG Addresses Group Activity Questions - Music Times",
+          "publisher": "Music Times",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYlJnSzFIdGw4U29WUUJMeE1OZ1drd1BWUHNuYXdwZWxOeHJnRXJ4YVFkOEJsM0p4bmJ6aW12eWp0ejVGam83Sl9BX280UXhkdmVINGhNNnFXMXpFdENaZGcyQ3NJcC1MYUxkaEl0dUJEdHFmUjdaT3JuY3VBUm9wMm9KdjdUR01RRW9FZzM5SGFhNi1jWl9tcXl0YjhlTXNkV3M3anpJLXdvX0RHU2xRVE1PeVdXNHQyUU0yVUF0dUpqbkV4YnNPT1FSVTJweDVs?oc=5",
+          "publishedAt": "2026-11-18T01:50:41+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -288,22 +288,22 @@
       ]
     },
     {
-      "id": "4500daf9e39a85",
-      "title": "11월 2주차, 화제성 1위는 `데블스 플랜3`…출연자는 `장동민` [공식]",
-      "category": "연예",
+      "id": "e609c1efa4e006",
+      "title": "김포시, ‘우리 동네 돌봄, 여러분의 의견을 들려주세요’",
+      "category": "생활 정보",
       "region": "KO",
       "headlines": [
         {
-          "title": "11월 2주차, 화제성 1위는 `데블스 플랜3`…출연자는 `장동민` [공식] - 마이데일리",
-          "publisher": "마이데일리",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9QUHlDdXhRcmZxcEYwS056Ry1wdVMzQm0xZmh2SlNITmQtcm9DcXYxalJES3BLbWlQZzdoUlBodmF5R3J6MmhHT2oyYVRSYktMU242eU9TM2RvNkkzX1NhQ3ZtZHQ4Zw?oc=5",
-          "publishedAt": "2026-11-18T05:42:00+00:00"
+          "title": "김포시, ‘우리 동네 돌봄, 여러분의 의견을 들려주세요’ - 국민기자뉴스",
+          "publisher": "국민기자뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94cGljNEFrZHNEc3hYUFBJMUlERWdBaXAzYXYtaFNoV2kzdGEzNmtqZVE4TFFyNVY3VHVvaGx5RUdHN05rbEIzQVRlamJlQkpPaEJsLWF4M2xYVFJTTE1RZnJmeGzSAWdBVV95cUxQZDlOZ3E5Y2I4dWVFSVpEWEVROFBuT3N2Q2duV1M1c2NXZlRHa3NSY1JmaTFnOWE1S3VVRy1PNElLdExMS29fanEwS3JYekczZ0NmZFFZR2NoZEllcHFBUEcxRnFENU9F?oc=5",
+          "publishedAt": "2026-11-18T11:20:00+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -349,22 +349,82 @@
       ]
     },
     {
-      "id": "bb7c5bd1b91b04",
-      "title": "외국인 한국 취업·비자·생활정보, 어디서 확인할까? 위드코리아24 서비스 안내",
-      "category": "생활 정보",
-      "region": "KO",
+      "id": "724ec2250e9c29",
+      "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More",
+      "category": "K-드라마",
+      "region": "EN",
       "headlines": [
         {
-          "title": "외국인 한국 취업·비자·생활정보, 어디서 확인할까? 위드코리아24 서비스 안내 - 얼리어답터뉴스",
-          "publisher": "얼리어답터뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9nSXZTUHk5TU9nWmF6MF9zdnJFLWNHb3lJQXdsM1pTcFZkM0ZpbDNhMHhlSTdqejFsYlEzdGRGOUxuVWw2V1czYzhR?oc=5",
-          "publishedAt": "2026-11-17T22:46:32+00:00"
+          "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More - Esquire India",
+          "publisher": "Esquire India",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQTHJFTi1taWxjZnR5WnFaZDd1NEFfaDZ5NXJIZzVPSkVyLVpELVo2MHgyWV9RMkhYVXpUMENMQUdzX1dfYzRycFJIUkJNWnZoWVpnWkR5Yl84aVpoNFFDamNjdXZNRjlvbnQxaFNnZW1WYXhSay1rUWUyZW1uRHJPb2lZRTF3bEdJRUprajRDMGxpbVJ6Q0ZLNlYtSTNiZzltTHdnOVlXSWZvcWMzck1rc1p3ZXNSQ19yeWh5RjZIbmNLLTJpUC1jSmVJdE1QZDFoSG9zRlJ3eV9qaElyNEh5Y3J5dERYaHBEOF9ETHRiVWZQSVNSTmNNYlg4Yi00UnlZd2FV0gGQAkFVX3lxTE9FdnRwUFZ5TjVNSWFYWXpGQ0ZyT09Bck03bFVnLW9OODdpbG9OM1l3MEx5UFhQNURqTWZiWW04c3JkZmx5d3ExSnM0Vl9OeENBNXBPY2VEMWdHQ3dNOXR5NkljWkRpaGF1MExIOHp0UjZBaWxkR3ByQmprNEs2TmtRQWxrdk9nMDZNblg1YnZral9RcjlQZHNJUWhtU3VKYW1uZUo2dVIyZFRiMEtuOUlwdjZrZFBXekp0ZnZfSVdjQUxpd3VoWXdQWWQtYl80MTQ2bWVITGJFZ2wxc1lUS1hCX2xIZWxwSGprekdoai1kWDg5UklsYVplRURjZzViWC1WRjFxOFIyakJkNWtDSVFi?oc=5",
+          "publishedAt": "2026-11-17T06:31:14+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "883e3e17f9d339",
+      "title": "핑클 완전체, 빗속 심야 회동 포착..컴백 앞두고 끈끈한 우정",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "핑클 완전체, 빗속 심야 회동 포착..컴백 앞두고 끈끈한 우정 - 스타뉴스",
+          "publisher": "스타뉴스",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9KaGFJa0xnZjUwaDQzNTk3MVBrRmZQai0zMlNHZ0F6eDVULUxfdXBzeF9JUGxvdm9fNFNZQ25JTlRmUnA5dG5mQldOeXQ2THRuanAxeF9jQWlzNTFlOVJxaFB4U2dJUkU0YWI1N05zcTFlQnM?oc=5",
+          "publishedAt": "2026-11-17T09:43:25+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "4500daf9e39a85",
+      "title": "11월 2주차, 화제성 1위는 `데블스 플랜3`…출연자는 `장동민` [공식]",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "11월 2주차, 화제성 1위는 `데블스 플랜3`…출연자는 `장동민` [공식] - 마이데일리",
+          "publisher": "마이데일리",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9QUHlDdXhRcmZxcEYwS056Ry1wdVMzQm0xZmh2SlNITmQtcm9DcXYxalJES3BLbWlQZzdoUlBodmF5R3J6MmhHT2oyYVRSYktMU242eU9TM2RvNkkzX1NhQ3ZtZHQ4Zw?oc=5",
+          "publishedAt": "2026-11-18T05:42:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -395,66 +455,6 @@
         "editorialPriority": 24,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "a75d110be59742",
-      "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표",
-      "category": "K-pop",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표 - 티브이데일리",
-          "publisher": "티브이데일리",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB1Y0tiN2EzQ1FJa21IUGxneXZPTUk2WlB1a2diblZkSDFBRG8xbG1Wd09wekYtX1pBOTIxcjVqS002S1pFdzlVMGdPYlZZNWgyWU5GTHdrUlFJTGpZZTliX1VmMFR5emE5ekhaUEVFUUY?oc=5",
-          "publishedAt": "2026-11-17T00:04:02+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 30,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 60,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "a848e94fc0f7e2",
-      "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record",
-      "category": "K-드라마",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record - DailyDrama",
-          "publisher": "DailyDrama",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdmpTQWNkaVprWERqSFFjaTJvRElPYW1mS2FzQkstdVAwUnNEdjJ6azZ3QUh4bU96SzMxMEMwa0JqcWxGTmloSEItVmtRUWZTbmVacWptOVZBRG1qai0tV0N2MUdkVFpvX05LaFFmeFF0Y3JZdFA1bjZVN3NPeEpVNWdvQ05iTm50OFNmTVc0dmRBdElp?oc=5",
-          "publishedAt": "2026-11-16T11:00:51+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -500,22 +500,22 @@
       ]
     },
     {
-      "id": "1969e1c235f0f7",
-      "title": "[공식]장동민의 위엄..'데블스 플랜3' 이끌고 화제성 단숨에 '1위'",
-      "category": "연예",
+      "id": "bb7c5bd1b91b04",
+      "title": "외국인 한국 취업·비자·생활정보, 어디서 확인할까? 위드코리아24 서비스 안내",
+      "category": "생활 정보",
       "region": "KO",
       "headlines": [
         {
-          "title": "[공식]장동민의 위엄..'데블스 플랜3' 이끌고 화제성 단숨에 '1위' - 스타뉴스",
-          "publisher": "스타뉴스",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8wNThpRDZxSXh1ZzlGYi1ZakRjNkE5d3VQN1AzQ09yU2JoVGt2bTYyTXhGNmtXaVRqMFJGRHZFQTRoSjZiemJpdmxyVUFPdWp1cWlfeGZMUFRMOWlvLUV6clUybEtmcFg0RDVVWGRnZnRKR28?oc=5",
-          "publishedAt": "2026-11-18T05:31:44+00:00"
+          "title": "외국인 한국 취업·비자·생활정보, 어디서 확인할까? 위드코리아24 서비스 안내 - 얼리어답터뉴스",
+          "publisher": "얼리어답터뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9nSXZTUHk5TU9nWmF6MF9zdnJFLWNHb3lJQXdsM1pTcFZkM0ZpbDNhMHhlSTdqejFsYlEzdGRGOUxuVWw2V1czYzhR?oc=5",
+          "publishedAt": "2026-11-17T22:46:32+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -561,22 +561,82 @@
       ]
     },
     {
-      "id": "4860e62e5aec3d",
-      "title": "부산 북구, 부산 최초 AI 기반 대형폐기물 배출 ‘가져가’ 서비스 시범 운영",
-      "category": "생활 정보",
-      "region": "KO",
+      "id": "a848e94fc0f7e2",
+      "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record",
+      "category": "K-드라마",
+      "region": "EN",
       "headlines": [
         {
-          "title": "부산 북구, 부산 최초 AI 기반 대형폐기물 배출 ‘가져가’ 서비스 시범 운영 - 국제신문",
-          "publisher": "국제신문",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOV3hFVkRTQ1Jsc0lnalhtdkZQTU1lV0s1UU9YaXpQTEFaYjljM1UtZWZJV3hnc0MtMDJ1UDJjaS1ZWUdKanQyakdVRW9tUFJNVDF5NmxuUGdDNmJ1S1FabzZSbVh6el9mTGV2QjVXQllfdVFLRzQxdWlETGdRNlVyeHYzcGJjTzdGb01kamZ3?oc=5",
-          "publishedAt": "2026-11-17T09:36:00+00:00"
+          "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record - DailyDrama",
+          "publisher": "DailyDrama",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdmpTQWNkaVprWERqSFFjaTJvRElPYW1mS2FzQkstdVAwUnNEdjJ6azZ3QUh4bU96SzMxMEMwa0JqcWxGTmloSEItVmtRUWZTbmVacWptOVZBRG1qai0tV0N2MUdkVFpvX05LaFFmeFF0Y3JZdFA1bjZVN3NPeEpVNWdvQ05iTm50OFNmTVc0dmRBdElp?oc=5",
+          "publishedAt": "2026-11-16T11:00:51+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "a75d110be59742",
+      "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표 - 티브이데일리",
+          "publisher": "티브이데일리",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB1Y0tiN2EzQ1FJa21IUGxneXZPTUk2WlB1a2diblZkSDFBRG8xbG1Wd09wekYtX1pBOTIxcjVqS002S1pFdzlVMGdPYlZZNWgyWU5GTHdrUlFJTGpZZTliX1VmMFR5emE5ekhaUEVFUUY?oc=5",
+          "publishedAt": "2026-11-17T00:04:02+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "1969e1c235f0f7",
+      "title": "[공식]장동민의 위엄..'데블스 플랜3' 이끌고 화제성 단숨에 '1위'",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "[공식]장동민의 위엄..'데블스 플랜3' 이끌고 화제성 단숨에 '1위' - 스타뉴스",
+          "publisher": "스타뉴스",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8wNThpRDZxSXh1ZzlGYi1ZakRjNkE5d3VQN1AzQ09yU2JoVGt2bTYyTXhGNmtXaVRqMFJGRHZFQTRoSjZiemJpdmxyVUFPdWp1cWlfeGZMUFRMOWlvLUV6clUybEtmcFg0RDVVWGRnZnRKR28?oc=5",
+          "publishedAt": "2026-11-18T05:31:44+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -607,66 +667,6 @@
         "editorialPriority": 24,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "b395767ed54ef2",
-      "title": "유병재 제작 ‘죽어도 아이돌2’ 컴백, 데뷔 무산 딛고 재도전",
-      "category": "K-pop",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "유병재 제작 ‘죽어도 아이돌2’ 컴백, 데뷔 무산 딛고 재도전 - 스페셜타임스",
-          "publisher": "스페셜타임스",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1tNG0tY0tqWXdSZUsyZDc4VkltcjlLQjItTGxtek5KN1VWdzBCMWRab25tVWZnVFdRV3ZTakxLaGdHZlVCRXB3dllLei1XOGdLYzJ0aUlmWWQ2STR2WTlMeG90NThxQ0xLOXA5cE90U2VBZGs?oc=5",
-          "publishedAt": "2026-11-16T09:35:55+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 30,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 60,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "92ee4408ca93a5",
-      "title": "Good Partner 2 and Blue Road both premiere Nov. 20",
-      "category": "K-드라마",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Good Partner 2 and Blue Road both premiere Nov. 20 - Pirates and Princesses",
-          "publisher": "Pirates and Princesses",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZnZweEYwdzJMekVCQ3VEbDBqbFJiR3NSY05ydlNHQlN1UU9IaTB5SVQzRkQ2WGo0TkZzdGwzd3gzTTFGcWF4aGlKRGhrMEtQRGFPZXhldlV6MUtRbk9OS1hWNVhLRUh6WDkzNlhpdHA5bDEwdGRtTkJvN2FJZmctbXlBMmRBbEtkUEsw?oc=5",
-          "publishedAt": "2026-11-16T09:03:48+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -712,6 +712,127 @@
       ]
     },
     {
+      "id": "4860e62e5aec3d",
+      "title": "부산 북구, 부산 최초 AI 기반 대형폐기물 배출 ‘가져가’ 서비스 시범 운영",
+      "category": "생활 정보",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "부산 북구, 부산 최초 AI 기반 대형폐기물 배출 ‘가져가’ 서비스 시범 운영 - 국제신문",
+          "publisher": "국제신문",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOV3hFVkRTQ1Jsc0lnalhtdkZQTU1lV0s1UU9YaXpQTEFaYjljM1UtZWZJV3hnc0MtMDJ1UDJjaS1ZWUdKanQyakdVRW9tUFJNVDF5NmxuUGdDNmJ1S1FabzZSbVh6el9mTGV2QjVXQllfdVFLRzQxdWlETGdRNlVyeHYzcGJjTzdGb01kamZ3?oc=5",
+          "publishedAt": "2026-11-17T09:36:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "70bf3d6b01eade",
+      "title": "Galaxy A57 5G and A37 5G Give Young Users AI Tools for Photo-Editing, Productivity and Social Media",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Galaxy A57 5G and A37 5G Give Young Users AI Tools for Photo-Editing, Productivity and Social Media - samsung.com",
+          "publisher": "samsung.com",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeGd6dkpHdlJFQ1NQakQyRDFzM1NfeWFJbzZXS2FwNkIwOWg4NHhJVUt5eUQyMnVoSHQ3bW1raHk0SE9mQ0wycHN0dTFNbm56V01mMmM5Q2hFY1FlUDlXWlRYa1hieTM5MDdGYjQwRHRuZmJ4SmZBTVo2enliSGR2YWplNDF5MFlXWnQ4M25yaDdPQmNRbVQ5bmNyTXQ2MlhYMlRNRmtDZld0RGlfMy1SOUI1eGJWNTdMTDdJdWNjcW1jZjlQ?oc=5",
+          "publishedAt": "2026-11-18T11:15:44+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "92ee4408ca93a5",
+      "title": "Good Partner 2 and Blue Road both premiere Nov. 20",
+      "category": "K-드라마",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Good Partner 2 and Blue Road both premiere Nov. 20 - Pirates and Princesses",
+          "publisher": "Pirates and Princesses",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZnZweEYwdzJMekVCQ3VEbDBqbFJiR3NSY05ydlNHQlN1UU9IaTB5SVQzRkQ2WGo0TkZzdGwzd3gzTTFGcWF4aGlKRGhrMEtQRGFPZXhldlV6MUtRbk9OS1hWNVhLRUh6WDkzNlhpdHA5bDEwdGRtTkJvN2FJZmctbXlBMmRBbEtkUEsw?oc=5",
+          "publishedAt": "2026-11-16T09:03:48+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "b395767ed54ef2",
+      "title": "유병재 제작 ‘죽어도 아이돌2’ 컴백, 데뷔 무산 딛고 재도전",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "유병재 제작 ‘죽어도 아이돌2’ 컴백, 데뷔 무산 딛고 재도전 - 스페셜타임스",
+          "publisher": "스페셜타임스",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1tNG0tY0tqWXdSZUsyZDc4VkltcjlLQjItTGxtek5KN1VWdzBCMWRab25tVWZnVFdRV3ZTakxLaGdHZlVCRXB3dllLei1XOGdLYzJ0aUlmWWQ2STR2WTlMeG90NThxQ0xLOXA5cE90U2VBZGs?oc=5",
+          "publishedAt": "2026-11-16T09:35:55+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "5f6aba90ba6517",
       "title": "“장혁 포스 후덜덜” 300억 대작 ‘문무’ 풀렸다‥시청률은 4%대인데 OTT 올킬",
       "category": "연예",
@@ -728,6 +849,66 @@
         "editorialPriority": 24,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "fe9a944eef6e6c",
+      "title": "Stray Kids' I.N releases 'No Return'",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Stray Kids' I.N releases 'No Return' - Korea JoongAng Daily",
+          "publisher": "Korea JoongAng Daily",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcmVWY2FpNG1mT2ZvUDAzV1FMSW9IMTB0NUFMTnM5ZXdPbk1lRDZjRVhQcGRDVW42bndRaWFFcC1EVXcwSUdnSFlpOElGbTRqU2c1Rl9fSWRLZDlNVzl2eGlkZHZpVmZDemFicDJYaGxiclB5TXdpZWYtdDBwZEdaYW5GR193VGxOYnlVc2NHYnh5LWRz?oc=5",
+          "publishedAt": "2026-11-17T06:50:45+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "4ef96bc0c50524",
+      "title": "양주소방서 “119 화재대피안심콜로 가족의 안전을 지키세요”",
+      "category": "생활 정보",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "양주소방서 “119 화재대피안심콜로 가족의 안전을 지키세요” - 소방방재신문",
+          "publisher": "소방방재신문",
+          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBvemVpYTd5YTVSR1VEclJmbTRRc0hYRTJlUlJFOVV2dW1Xa2JYekROX1Npc2g3ZEJQTTdpZmNEdUpZVWxfLVE?oc=5",
+          "publishedAt": "2026-11-12T06:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -773,66 +954,6 @@
       ]
     },
     {
-      "id": "7cae009b40a338",
-      "title": "부산진구, ‘다문화가족을 위한 찾아가는 생활민원 교육’ 실시",
-      "category": "생활 정보",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "부산진구, ‘다문화가족을 위한 찾아가는 생활민원 교육’ 실시 - 국제신문",
-          "publisher": "국제신문",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcWI2N01UU3NhZnBTRmFBcDVjdFlhdV9VQTNaWHpxRnF4RlhKUDNXSU9OVHR2OWx3RWg3WjBVQjJvOXVWUC1oTXQ2dUpfZHpXQkYwMm81OUV1UkpWel9KWV9XTVFGeTctUHVqR0s1OGhxQ1U4MG5CejJNM3hfamp5dFdnQkJENjBJRmN3b3Nn?oc=5",
-          "publishedAt": "2026-11-13T08:35:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "fe9a944eef6e6c",
-      "title": "Stray Kids' I.N releases 'No Return'",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Stray Kids' I.N releases 'No Return' - Korea JoongAng Daily",
-          "publisher": "Korea JoongAng Daily",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcmVWY2FpNG1mT2ZvUDAzV1FMSW9IMTB0NUFMTnM5ZXdPbk1lRDZjRVhQcGRDVW42bndRaWFFcC1EVXcwSUdnSFlpOElGbTRqU2c1Rl9fSWRLZDlNVzl2eGlkZHZpVmZDemFicDJYaGxiclB5TXdpZWYtdDBwZEdaYW5GR193VGxOYnlVc2NHYnh5LWRz?oc=5",
-          "publishedAt": "2026-11-17T06:50:45+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "d12a0eb8be3c8b",
       "title": "5세대 대표 아이돌 라이즈와 플레이브, 콜라보 음원 “LowKey”로 11월 30일 컴백 예고",
       "category": "K-pop",
@@ -849,36 +970,6 @@
         "editorialPriority": 30,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 60,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "732d0c2316c5ea",
-      "title": "Doctor X K-drama finale ends at No. 1 with 15.2% ratings",
-      "category": "K-드라마",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Doctor X K-drama finale ends at No. 1 with 15.2% ratings - Pirates and Princesses",
-          "publisher": "Pirates and Princesses",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQaVVHaURjb05aVE9lSXp5NnR4Ynltb1JGbXVkdU10TzBmNUYzOF9VM2N6Tk5VY2JaeVFlU2twNlJGOGx2cS1OWC1GOEVGb1liWkI0N01KaVN3a0p5MzA2MVR0TjlHWjdnWFhCMVZkcE9JVzhQYm92R3d6QjBaTW1uSDlTQ1N1aXBzcG1QdVdUVXJJUQ?oc=5",
-          "publishedAt": "2026-11-16T05:06:41+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -923,37 +1014,6 @@
       ]
     },
     {
-      "id": "04c94d6adf8c23",
-      "title": "Compare TimeLake vs. WorkflowPulse in 2026",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Compare TimeLake vs. WorkflowPulse in 2026 - Slashdot",
-          "publisher": "Slashdot",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBhS1I5YTlmUmxRZ0IxOGJHZ3RnNU4zTzZoV0pxaDRscDk5d2F6QlI0TTE0U2dvZk5LME1GMjVHQjFzbWdWeWtVa1JpVTZWbS12M0RMRkIyZ1dOZnMtY0x6SGRDbFdJbS1CUGgwczNMUHVIY2tmNFE?oc=5",
-          "publishedAt": "2026-11-17T16:13:04+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
       "id": "9e0d4ed102c13c",
       "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call]",
       "category": "K-pop",
@@ -984,16 +1044,47 @@
       ]
     },
     {
-      "id": "58b3dae4580697",
-      "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리· 레이는 안 나오나요?\"[K-EYES]",
+      "id": "2f78d2946dfcfb",
+      "title": "6 Best Project Management Software and Tools in 2026",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "6 Best Project Management Software and Tools in 2026 - Cybernews",
+          "publisher": "Cybernews",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2bjJMUTZFVklBem15R09PYmx1cmUxZjc3T25UQjVwdDY0WkdsaEh1eFZaT2o3YnFzLVczd2xlZXI2aUNPc0tDaXBHYlh5V29CZDZPRGdfNTF4a2U4OWIyTURyWmxDQjBIdExhNDZEams2dw?oc=5",
+          "publishedAt": "2026-11-17T15:44:56+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "e03b598160e151",
+      "title": "태연 체조서 새 투어 시작…2027년 4월까지 바쁜 행보",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리· 레이는 안 나오나요?\"[K-EYES] - 스타뉴스",
-          "publisher": "스타뉴스",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CdHVhTWQzcGxaOGtCUDhraW13R2RxQU12YkZXek1RZHpXTkV0LVNqVWVndE9iU280WG54SVBLLVQtMVNVS0c2TnJCcEd4X2lpRHZLRVU4bFhFUDEzakFSZGwzdDhaVm9DYXFNOXdScnVVa2Zs?oc=5",
-          "publishedAt": "2026-11-17T08:55:34+00:00"
+          "title": "태연 체조서 새 투어 시작…2027년 4월까지 바쁜 행보 - 스포츠동아",
+          "publisher": "스포츠동아",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iVndNZmxwd1UtZlc5ODl6emhhM1VtY0ZDQ2Y4VEhwUmVKTjhBODllX0FIMEYtYWxsckU2anBmYkVNQjFWZTQ3MWxrNEFqc09KU2YxU1ppbTdHbkxUc01FMDIzODNmVHVQNU0zbURB?oc=5",
+          "publishedAt": "2026-11-18T07:49:04+00:00"
         }
       ],
       "scores": {
@@ -1024,6 +1115,36 @@
           "publisher": "미디어펜",
           "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB5OEJQU0dkNlNEQ2w3T0lJbktRR0pCTklqTGZySDhRM09OQ2tla3FGUnR4SlV0eEZPb25ob2RrdEVoS1JyRG9ia3pPNGFWdGxhOHVxa1hrb0bSAVhBVV95cUxQeThCUFNHZDZTRENsN09JSW5LUUdKQk5Jakxmckg4UTNPTkNrZWtxRlJ0eEpVdHhGT29uaG9ka3RFaEtSckRvYmt6TzRhVnRsYTh1cWtYa29G?oc=5",
           "publishedAt": "2026-11-17T23:40:27+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "aa3614db0612a8",
+      "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story)",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story) - 스포츠조선",
+          "publisher": "스포츠조선",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MbTBUQ2dDbnIwSXFBUFlzVjhVNWYxaWVhVGNRQWYzemFzS1d6R2N3SVhwZ0hwY0JkbHFqQXJXX1F5SmVvRlJkbTNwQU5xWGNtblRjUjFrbjZNbzdRa002VHZtZUFjOWdpSXhCTzJWN1hqVWtCLU9ld0FlaEJyQQ?oc=5",
+          "publishedAt": "2026-11-17T06:12:34+00:00"
         }
       ],
       "scores": {
@@ -1075,16 +1196,16 @@
       ]
     },
     {
-      "id": "aa3614db0612a8",
-      "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story)",
+      "id": "43a5cecd1f0422",
+      "title": "'그룹·솔로 케이스포돔 매진시킨 첫 女가수' 태연, 또 같은 곳서 콘서트",
       "category": "K-pop",
-      "region": "EN",
+      "region": "KO",
       "headlines": [
         {
-          "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story) - 스포츠조선",
-          "publisher": "스포츠조선",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MbTBUQ2dDbnIwSXFBUFlzVjhVNWYxaWVhVGNRQWYzemFzS1d6R2N3SVhwZ0hwY0JkbHFqQXJXX1F5SmVvRlJkbTNwQU5xWGNtblRjUjFrbjZNbzdRa002VHZtZUFjOWdpSXhCTzJWN1hqVWtCLU9ld0FlaEJyQQ?oc=5",
-          "publishedAt": "2026-11-17T06:12:34+00:00"
+          "title": "'그룹·솔로 케이스포돔 매진시킨 첫 女가수' 태연, 또 같은 곳서 콘서트 - 뉴시스",
+          "publisher": "뉴시스",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBRVWJoVGxUZV8xZzhLaUN4Vlg2RTRHWEppOXZQekJEUXF0VFFrZjlqWXc0bmR3aVE1SktQcW9PVzNhSk0wRW5zYkx5YnQ2OW1ya2NlQ1MtRlVuSUVmanBnYnJObWVUaGVtS2pQZTNmSkNqemvSAXhBVV95cUxPSFQxbFZoN3FQcWxVMlpvbTZIdEhpekU1VHhyZlJmbEdRYV9GSF93Rmo1ZGlUeVF0T0kyX0pPenB1YVpJSHgwaTd4OFViWnpkbm1fUWJBX1lFNTBRY0xXYVVTN2kxcnk5OFJ1WEQ3dThjNFhjZVM2QjI?oc=5",
+          "publishedAt": "2026-11-18T06:58:20+00:00"
         }
       ],
       "scores": {
@@ -1115,6 +1236,36 @@
           "publisher": "https://www.diarypoint.com/",
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1BRnlDeHdDbmsyaC00cmlwaWd0NzVrYjhiaDNVZmNJdFBIblBhTzE1a0w1Z2ozRUFVcDd1Smx3T082N2J1TnRVQTJZMFh0UG1ra3h2NTV1LVdmS1o0N2U1TUFyWWFMWERNMllZ?oc=5",
           "publishedAt": "2026-11-17T16:59:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "7675b86b41a472",
+      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
+          "publisher": "Rolling Stone",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
+          "publishedAt": "2026-11-16T14:50:47+00:00"
         }
       ],
       "scores": {
@@ -1166,16 +1317,16 @@
       ]
     },
     {
-      "id": "7675b86b41a472",
-      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys",
+      "id": "58b3dae4580697",
+      "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리· 레이는 안 나오나요?\"[K-EYES]",
       "category": "K-pop",
-      "region": "EN",
+      "region": "KO",
       "headlines": [
         {
-          "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
-          "publisher": "Rolling Stone",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
-          "publishedAt": "2026-11-16T14:50:47+00:00"
+          "title": "'케데헌' 월드투어 발표, 글로벌 팬들 반응\"그런데 이재·오드리· 레이는 안 나오나요?\"[K-EYES] - 스타뉴스",
+          "publisher": "스타뉴스",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1CdHVhTWQzcGxaOGtCUDhraW13R2RxQU12YkZXek1RZHpXTkV0LVNqVWVndE9iU280WG54SVBLLVQtMVNVS0c2TnJCcEd4X2lpRHZLRVU4bFhFUDEzakFSZGwzdDhaVm9DYXFNOXdScnVVa2Zs?oc=5",
+          "publishedAt": "2026-11-17T08:55:34+00:00"
         }
       ],
       "scores": {
@@ -1196,16 +1347,46 @@
       ]
     },
     {
-      "id": "3cba1bb03085e9",
-      "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식)",
+      "id": "3274dd88b349ac",
+      "title": "'데블스 플랜: 데드 어게인', 공개 첫 주 비드라마 화제성 1위…탈락자 부활 '유배지' 주목",
       "category": "연예",
       "region": "KO",
       "headlines": [
         {
-          "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식) - 조이뉴스24",
-          "publisher": "조이뉴스24",
-          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nbGVNdldNVlJUZjhldFlpaEVXY2lldVFJcXhycG41RWVfaElUd20xQ0NYWGZiUmZ6MFZqODFYN0hNanlTUUFDOTNvTQ?oc=5",
-          "publishedAt": "2026-11-17T05:20:00+00:00"
+          "title": "'데블스 플랜: 데드 어게인', 공개 첫 주 비드라마 화제성 1위…탈락자 부활 '유배지' 주목 - 제이앤엠뉴스",
+          "publisher": "제이앤엠뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rZHlXcm9NUTJpZjFPUmU0b3pteVdHLUJKUW4ydHFrSjRuQ3ctWWZuSXRsbXMyNzJyYzcxMTBiNFZ3WjZkM0V1WVhfQWpiVUZ5OFpDd0tvbjluYVlBTnEtOA?oc=5",
+          "publishedAt": "2026-11-17T10:14:31+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "68e358438c2b25",
+      "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
+          "publisher": "Dojeon Media",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
+          "publishedAt": "2026-11-16T14:04:34+00:00"
         }
       ],
       "scores": {
@@ -1257,16 +1438,16 @@
       ]
     },
     {
-      "id": "68e358438c2b25",
-      "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER",
-      "category": "K-pop",
-      "region": "EN",
+      "id": "3cba1bb03085e9",
+      "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식)",
+      "category": "연예",
+      "region": "KO",
       "headlines": [
         {
-          "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
-          "publisher": "Dojeon Media",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
-          "publishedAt": "2026-11-16T14:04:34+00:00"
+          "title": "장한나, '비서진' 출격…최초 비연예인 스타 만난다(공식) - 조이뉴스24",
+          "publisher": "조이뉴스24",
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nbGVNdldNVlJUZjhldFlpaEVXY2lldVFJcXhycG41RWVfaElUd20xQ0NYWGZiUmZ6MFZqODFYN0hNanlTUUFDOTNvTQ?oc=5",
+          "publishedAt": "2026-11-17T05:20:00+00:00"
         }
       ],
       "scores": {
@@ -1287,16 +1468,16 @@
       ]
     },
     {
-      "id": "2c8485e1bcc89c",
-      "title": "조진웅 이어 고경표 잔혹사…tvN, \\'보검매직컬\\' 편성 위기 앞 골머리 [이슈&톡]",
-      "category": "연예",
-      "region": "KO",
+      "id": "2255753ff42a90",
+      "title": "TOMORROW X TOGETHER — K-pop Group Kicks Off 5th World Tour in Seoul",
+      "category": "K-pop",
+      "region": "EN",
       "headlines": [
         {
-          "title": "조진웅 이어 고경표 잔혹사…tvN, \\'보검매직컬\\' 편성 위기 앞 골머리 [이슈&톡] - 티브이데일리",
-          "publisher": "티브이데일리",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE02TFV3NEtGNE9YUlZpX0QxeTk2aFgwOEQ0ekVoOGlXcnN1MzZkcGlGcEtRYWpjeFkzbjJPSlR6NWVyd016R0JGem5BSnBxMnIyS3h2UDk2cVNqNFhlYkE0UzFzRi1nUzJkclFmR0lDb1I?oc=5",
-          "publishedAt": "2026-11-16T06:56:43+00:00"
+          "title": "TOMORROW X TOGETHER — K-pop Group Kicks Off 5th World Tour in Seoul - The Korea Daily",
+          "publisher": "The Korea Daily",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9CWGhIcTdvdG9Kcm81V0hZb0R3X2xoQ3VSd0RnMmxidFFOY1lPU3lHdnZOWXA3cHVRWkw0ck9pU3R4ZUZHcXhNbndBR3NTSnRlbkduYTRvLTJJY0IwOGN1aHhQNDIzR0xfbVdfd29R?oc=5",
+          "publishedAt": "2026-11-16T09:10:26+00:00"
         }
       ],
       "scores": {
@@ -1348,16 +1529,16 @@
       ]
     },
     {
-      "id": "2255753ff42a90",
-      "title": "TOMORROW X TOGETHER — K-pop Group Kicks Off 5th World Tour in Seoul",
-      "category": "K-pop",
-      "region": "EN",
+      "id": "2c8485e1bcc89c",
+      "title": "조진웅 이어 고경표 잔혹사…tvN, \\'보검매직컬\\' 편성 위기 앞 골머리 [이슈&톡]",
+      "category": "연예",
+      "region": "KO",
       "headlines": [
         {
-          "title": "TOMORROW X TOGETHER — K-pop Group Kicks Off 5th World Tour in Seoul - The Korea Daily",
-          "publisher": "The Korea Daily",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9CWGhIcTdvdG9Kcm81V0hZb0R3X2xoQ3VSd0RnMmxidFFOY1lPU3lHdnZOWXA3cHVRWkw0ck9pU3R4ZUZHcXhNbndBR3NTSnRlbkduYTRvLTJJY0IwOGN1aHhQNDIzR0xfbVdfd29R?oc=5",
-          "publishedAt": "2026-11-16T09:10:26+00:00"
+          "title": "조진웅 이어 고경표 잔혹사…tvN, \\'보검매직컬\\' 편성 위기 앞 골머리 [이슈&톡] - 티브이데일리",
+          "publisher": "티브이데일리",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE02TFV3NEtGNE9YUlZpX0QxeTk2aFgwOEQ0ekVoOGlXcnN1MzZkcGlGcEtRYWpjeFkzbjJPSlR6NWVyd016R0JGem5BSnBxMnIyS3h2UDk2cVNqNFhlYkE0UzFzRi1nUzJkclFmR0lDb1I?oc=5",
+          "publishedAt": "2026-11-16T06:56:43+00:00"
         }
       ],
       "scores": {
@@ -1378,16 +1559,16 @@
       ]
     },
     {
-      "id": "b5283d2f31d802",
-      "title": "이영애, MMA2026 초록 드레스 눈길…유지태와 25년 만에 '재이의 영인' 호흡",
-      "category": "연예",
-      "region": "KO",
+      "id": "5e098ebef8244e",
+      "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts",
+      "category": "K-pop",
+      "region": "EN",
       "headlines": [
         {
-          "title": "이영애, MMA2026 초록 드레스 눈길…유지태와 25년 만에 '재이의 영인' 호흡 - https://www.diarypoint.com/",
-          "publisher": "https://www.diarypoint.com/",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE04NHlCejJyZm4xNWt3QlhDOEpyTjFOTF8zY1N6WTFwRjdYSnBrdnMwdk1SNjZqRkRkMll2V0ZvY18tMWZkQkVLam9Fa3NDQk5lblZEODNiampNVUJndnVmTEhXRlRUZEo5bVRj?oc=5",
-          "publishedAt": "2026-11-16T06:03:00+00:00"
+          "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts - Britannica",
+          "publisher": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82a0hoSTFZVFNVaXlsNjlXZjZVQ1dyTEZBeWtfZEVjeGoyLTIxcHJqTFF5eGwydTZERUtHUHd0SnM5MDBCZmUzVXRQbHk?oc=5",
+          "publishedAt": "2026-11-16T08:00:00+00:00"
         }
       ],
       "scores": {
@@ -1439,46 +1620,16 @@
       ]
     },
     {
-      "id": "5e098ebef8244e",
-      "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts - Britannica",
-          "publisher": "Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82a0hoSTFZVFNVaXlsNjlXZjZVQ1dyTEZBeWtfZEVjeGoyLTIxcHJqTFF5eGwydTZERUtHUHd0SnM5MDBCZmUzVXRQbHk?oc=5",
-          "publishedAt": "2026-11-16T08:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "3ba3fd2a165e3e",
-      "title": "'비서진' 16회 연장 확정, 김종국·블랙핑크 지수·화사 출격(공식)",
+      "id": "b5283d2f31d802",
+      "title": "이영애, MMA2026 초록 드레스 눈길…유지태와 25년 만에 '재이의 영인' 호흡",
       "category": "연예",
       "region": "KO",
       "headlines": [
         {
-          "title": "'비서진' 16회 연장 확정, 김종국·블랙핑크 지수·화사 출격(공식) - 조이뉴스24",
-          "publisher": "조이뉴스24",
-          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBrbE9xenYzbHdyOFpKRXpLR3FubVVUbzd2eG1xWWtFQVUyY0tTRWlKYUhha0UwOUM2THpKd29abmF2b1BCc0pfMmVTRQ?oc=5",
-          "publishedAt": "2026-11-16T05:07:00+00:00"
+          "title": "이영애, MMA2026 초록 드레스 눈길…유지태와 25년 만에 '재이의 영인' 호흡 - https://www.diarypoint.com/",
+          "publisher": "https://www.diarypoint.com/",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE04NHlCejJyZm4xNWt3QlhDOEpyTjFOTF8zY1N6WTFwRjdYSnBrdnMwdk1SNjZqRkRkMll2V0ZvY18tMWZkQkVLam9Fa3NDQk5lblZEODNiampNVUJndnVmTEhXRlRUZEo5bVRj?oc=5",
+          "publishedAt": "2026-11-16T06:03:00+00:00"
         }
       ],
       "scores": {
@@ -1530,16 +1681,77 @@
       ]
     },
     {
-      "id": "9693662bcd9e7b",
-      "title": "고경표, 음주운전 직접 사과·활동 전면 중단…출연 예능 편집 비상",
+      "id": "3ba3fd2a165e3e",
+      "title": "'비서진' 16회 연장 확정, 김종국·블랙핑크 지수·화사 출격(공식)",
       "category": "연예",
       "region": "KO",
       "headlines": [
         {
-          "title": "고경표, 음주운전 직접 사과·활동 전면 중단…출연 예능 편집 비상 - www.diarypoint.com",
-          "publisher": "www.diarypoint.com",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE56OV9QeXYwZm5yV0ZRSDhlLW9FWVlUN01aWmVMR1VVZ09yMEk3UHRaSmRnUnV5V3RzUkJoQURLVmo5dVRpTTJkWW5UbkRXT2YxbjVDVUJSOGVOVjEyT1BUYXFmUWlqeGVBUnJJ?oc=5",
-          "publishedAt": "2026-11-15T09:21:00+00:00"
+          "title": "'비서진' 16회 연장 확정, 김종국·블랙핑크 지수·화사 출격(공식) - 조이뉴스24",
+          "publisher": "조이뉴스24",
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBrbE9xenYzbHdyOFpKRXpLR3FubVVUbzd2eG1xWWtFQVUyY0tTRWlKYUhha0UwOUM2THpKd29abmF2b1BCc0pfMmVTRQ?oc=5",
+          "publishedAt": "2026-11-16T05:07:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "403b70d0b8f1df",
+      "title": "Top 10 Enterprise Job Scheduler Software",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Top 10 Enterprise Job Scheduler Software - AIMultiple",
+          "publisher": "AIMultiple",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE96dXhzdW9QSUZqeVBEaGFXeTk3b29zNEdnaUc3R2NibXZFTFBQSFhENm11T0R3Z180aDZMc3EzLWE1Y1Bma1h3WEwydUFlTzRBUGZoOW5ENGRqWng0ZUNUNkFSMFJJRTg?oc=5",
+          "publishedAt": "2026-11-15T08:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "5408cee69d4fdb",
+      "title": "성의·임경신 신작 '양경십오일' 20일 대공개...기대감 높지만 전작 성적이 변수",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "성의·임경신 신작 '양경십오일' 20일 대공개...기대감 높지만 전작 성적이 변수 - 뉴스워커",
+          "publisher": "뉴스워커",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1sMjBzR2plWC00U1kxdEk3WVBWYmJhejI1WGhwVi1zYjJmMDI0Y3B5MUxwd0VmUHVjdjBOclpDMGlSN1ltVEVHVGN4akRxM0R0OUdidEwyUVVTMXpuRi05NU9WTHo3ZW9fWnU2LWFwR1DSAXRBVV95cUxPVUNJY3ZYYkFWYVBLZVdQTy15QklRaEdaWTdqQ2FYbVp2RXlhaHNqeWg4ZlJsNEIzVzAzSVgxSk9UMk1BU0NuNUpkTGNtMVNLRmdIcHR0ZWR5SnN6SzJhRXUzOGFmNGp6OXNUNTNhOUwtU1BFTw?oc=5",
+          "publishedAt": "2026-11-15T23:19:19+00:00"
         }
       ],
       "scores": {
@@ -1568,7 +1780,7 @@
         {
           "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
           "publisher": "Simply Wall St",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSmZFbFBPZ1U2ZGdqemxYUDYtZjF0TFNOOXFfcDRmUnBpS1k2WjZZWlhYU2hyNkhKSURhbFAzLXRCN0xJVHhla1BzdHFXZkJkVERsd21qRTJmZFhCcEZNeGJyR3ZjeHREYjNNYjlwY2JfMGViN3lWRllzNkpOaWl5UTBnRFJmZUtkekpmbGxvQnlCMU5EYmZBUjRGSGs1eVhVOUtCQVRrMEFkNGVkSDNvOTVkaVdEQTRZZEhQN0VlVVXSAcABQVVfeXFMTkpmRWxQT2dVNmRnanpsWFA2LWYxdExTTjlxX3A0ZlJwaUtZNlo2WVpYWFNocjZISklEYWxQMy10QjdMSVR4ZWtQc3RxV2ZCZFREbHdtakUyZmRYQnBGTXhickd2Y3h0RGIzTWI5cGNiXzBlYjd5VkZZczZKTmlpeVEwZ0RSZmVLZHpKZmxsb0J5QjFORGJmQVI0RkhrNXlYVTlLQkFUazBBZDRlZEgzbzk1ZGlXREE0WWRIUDdFZVVV?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm5NcHNJZVhLUERaNW5uN2pzd0RVMkM2X0szT28tc0J4c3ZaaXdBX3laSUhIVDFIOGdUM01adnVkbEkxT25sS1BIRWZqZFNqOFhpbk03c05LZ1Q2LUNYSlM4LTB3LS1JX2JpUklNbklPajNDdDFGVV9mMkR5UWtmWmVxZ1FjV3pESHB1aEkyZ25qcGttWURfcTdEVWM3X3JFZTd6S2JlZVk0Z0hQY1J6LUpfaHRkdFh5LTln0gHAAUFVX3lxTE5KZkVsUE9nVTZkZ2p6bFhQNi1mMXRMU045cV9wNGZScGlLWTZaNllaWFhTaHI2SEpJRGFsUDMtdEI3TElUeGVrUHN0cVdmQmRURGx3bWpFMmZkWEJwRk14YnJHdmN4dERiM01iOXBjYl8wZWI3eVZGWXM2Sk5paXlRMGdEUmZlS2R6SmZsbG9CeUIxTkRiZkFSNEZIazV5WFU5S0JBVGswQWQ0ZWRIM285NWRpV0RBNFlkSFA3RWVVVQ?oc=5",
           "publishedAt": "2026-11-14T20:20:17+00:00"
         }
       ],
@@ -1622,21 +1834,21 @@
       ]
     },
     {
-      "id": "d028291fa8ea31",
-      "title": "Leading Generative Engine Optimization (GEO) Tools for 2026",
+      "id": "6d7f18ed142965",
+      "title": "OnePlus Open Starts Receiving Stable ColorOS 17 Update in India: Build Number and Features",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Leading Generative Engine Optimization (GEO) Tools for 2026 - SitePoint",
-          "publisher": "SitePoint",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9uek1KYlpHSmFNb2VXNDl6bGFiaFRmc21pRS1jTkp3cHE5d29TMTlLUEhhekFmSU84XzJBX2JWMkFnR21JUVJhMy16WW9jUllPZXAxQlgxOGJLRGtqV1BQZ3lPYjhvM05vbDZtekwyVUdFMHE0SUlB?oc=5",
-          "publishedAt": "2026-11-11T06:36:07+00:00"
+          "title": "OnePlus Open Starts Receiving Stable ColorOS 17 Update in India: Build Number and Features - My Mobile India",
+          "publisher": "My Mobile India",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZlo0WFZVTEVwanpORHVTNE1KN3JmQ3pnbFRPUWNPbzdsWllKYXBMbDhNaWZTSi1yVmY3Z1k5UWhmbWFJZkZBYURKS3VlcVBFdkVKZ3N1WU5Ub1YzOGJTM3VHNEh4dUxOcEVSbU9VZ2xlelBzQUNDVnp0ZkdJNU1LWHFvMi1PSGt3QndhWC1fZ2xEeF9Qc09YZEVLVXlLNE9qcHQ3UnZHVm12N0VRVlhvanE5R3k1ejdGTnNvdw?oc=5",
+          "publishedAt": "2026-11-18T06:24:49+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
@@ -1648,8 +1860,7 @@
       },
       "status": "needs_sources",
       "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
@@ -1803,36 +2014,6 @@
       ]
     },
     {
-      "id": "7b036aaa915e60",
-      "title": "AI in Finance – News on AI in Banking & Payments",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "AI in Finance – News on AI in Banking & Payments - FF News",
-          "publisher": "FF News",
-          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFA0TGZZMDFwNXpwanlCbURRX2tKNG02bU5uSWdVZTctTThyYU9hMEVzZnNtV2d6V29NRzhaZUF5OXR1SWdvRFhr?oc=5",
-          "publishedAt": "2026-11-17T16:23:38+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "adcfae849abb93",
       "title": "Microsoft's Outage Barely Moved Its Stock, But a Bigger Risk May Be Building",
       "category": "AI·생산성",
@@ -1871,7 +2052,7 @@
         {
           "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details - NDTV Profit",
           "publisher": "NDTV Profit",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNOGhNTWdLYlN1TmktWDNoejB2UllyQTBpR180UWwwUzZyWi1WNV9mNkJnTmNFamJhMV9QeWdwcGlVUUUzM0NMOV9EeXVQanFiMXRWbVMxNDZaVUdkU0dmWVdLLVM5Sndib1pmQ2tnVTRZd080VDR2ZkM4UHRJelFoWEJuMkV6SF9sRDVuRDFJUXRUa3czcmV3bjhUcThhVGY1XzJHczkzc2F6MGV3MHdmU2VaVEEzc0Q0bW1jcUV3VUx0VncybWF4Ymctc9IB0wFBVV95cUxQa21ScGZvTUw1VHRLUWNRdEhOVHFNRFJZVjFCTjE4QVpFZGROLUlDZ1c5SDgxbm4wQlJaTGFnVDh3LTQ1SFVYVG9EVFNWSzhWYVYwUFExSk9FeHE1QlJPeHE1Sm5JeHVhQ2thY1h3LU9FUi1jTE9LRnZwVDJJcXBoRThfa2NmbW9JR09XRlVDaWpBQkdzWi1MMjJMRFZxQWVVS3hXaEdqQktITktfM2t6UnF4QU9oU3BpMTlSUkN5SkJTOUlQV3RRbUJaLWw3bFFLZkpz?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNOGhNTWdLYlN1TmktWDNoejB2UllyQTBpR180UWwwUzZyWi1WNV9mNkJnTmNFamJhMV9QeWdwcGlVUUUzM0NMOV9EeXVQanFiMXRWbVMxNDZaVUdkU0dmWVdLLVM5Sndib1pmQ2tnVTRZd080VDR2ZkM4UHRJelFoWEJuMkV6SF9sRDVuRDFJUXRUa3czcmV3bjhUcThhVGY1XzJHczkzc2F6MGV3MHdmU2VaVEEzc0Q0bW1jcUV3VUx0VncybWF4Ymctcw?oc=5",
           "publishedAt": "2026-11-17T09:53:57+00:00"
         }
       ],
@@ -1903,6 +2084,36 @@
           "publisher": "Business Wire",
           "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOSEZ2VzI4amoySTVvZ0NNeFpHMDB0aVdOd2hhV3lNbW5JRERPOU04eFVzSEF5QmxBSTVWeDV0UGhlanBrRXAwNlVNUl94bzJyNDlldTUzT1ZvWENUX29VTU5adlpVTTVXTUFuX0VSNzRxdWdaeWFEcmJhdDZNSWQyRlZzRzlQV29KdDduWFNPMU16aUlVckUxeHVROXo2NjlOWEVlb1hCMDlfV1hKUlRxLXc1SFFMcmQ1UDF1WVd0emxoZFY3VWNBdnIya0w4Um9uQzV5ak53TDJ6TTBTamJDcGJrMUlUNTV2OG9VTElJUEozNTM1d2xiRk5fUEtwaG92STNFZnFZdVJrMlNPanRfX0gtUHYxQVJ1Qk5IWlQwamFmb1ltemprbWRPRQ?oc=5",
           "publishedAt": "2026-11-16T11:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "74fcc310b3804c",
+      "title": "Compare IBM Tivoli Workload Scheduler",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Compare IBM Tivoli Workload Scheduler - AIMultiple",
+          "publisher": "AIMultiple",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93TjNvdC1CNnE4VnFIT3pnRjBhX1hvaVdDbDU4NGtJSzI5a2ktUWptTGUxbC1uU0JOT21pRjNMcnhrN3Y4QktvdXdUTU1yUzlrWUg3em1OWTFzZm9k?oc=5",
+          "publishedAt": "2026-11-15T08:00:00+00:00"
         }
       ],
       "scores": {
