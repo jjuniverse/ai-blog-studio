@@ -49,6 +49,9 @@ test('complete OpenAI response yields a research audit and draft without a scope
     const result = await response.json();
     assert.equal(response.status, 200, JSON.stringify(result));
     assert.equal(result.draft.mode, 'article');
+    assert.match(result.draft.naver, /#오늘의픽/);
+    assert.match(result.draft.tistory, /#오늘의픽/);
+    assert.equal((result.draft.naver.match(/#오늘의픽/g)||[]).length, 1);
     assert.equal(result.draft.naverTitle, 'Useful AI software announcement and how to use it');
     assert.equal(result.draft.tistoryTitle, 'AI software release: features and detailed setup');
     assert.equal(result.draft.researchAudit.distinctSourceDomains, 2);
@@ -97,8 +100,10 @@ test('short imperfect articles remain visible for revision instead of becoming e
     assert.equal(response.status,200,JSON.stringify(result));
     assert.equal(result.draft.mode,'article');
     assert.equal(result.status,'revision_required');
-    assert.equal(result.draft.naver,body);
-    assert.equal(result.draft.tistory,body);
+    assert.ok(result.draft.naver.startsWith(body));
+    assert.ok(result.draft.tistory.startsWith(body));
+    assert.match(result.draft.naver, /## 관련 태그\n#오늘의픽$/);
+    assert.match(result.draft.tistory, /## 관련 태그\n#오늘의픽$/);
     assert.ok(result.draft.shortform.length>0);
     assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('본문이 짧거나')));
   } finally {
