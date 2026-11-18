@@ -290,9 +290,9 @@ export default {
         "본문 이미지 — 확인한 날짜·숫자·순위를 출처 표기와 함께 직접 그린 간단한 타임라인 또는 그래프",
         "요약 이미지 — 검증된 사실 세 가지를 정리한 자체 제작 정보 카드. 제3자 포스터·사진·스틸컷 사용하지 않기",
       ];
-      if (shortformCopiesBlog) result.shortform = "";
+      // Flag imperfect output for human editing. Never erase paid-generated text.
       if (blogsAreCopies) result.verificationChecklist.unshift("네이버와 티스토리가 동일한 원고야. 한쪽은 구조와 관점을 바꿔 별도로 작성하고 발행해.");
-      if (shortformCopiesBlog) result.verificationChecklist.unshift("숏폼 대본이 블로그 서론과 동일해서 제거했어. 영상용 훅·장면·자막으로 다시 작성해야 해.");
+      if (shortformCopiesBlog) result.verificationChecklist.unshift("숏폼 대본이 블로그 서론과 동일해. 영상용 훅·장면·자막으로 다시 작성해야 해.");
       result.qualityAudit = { blogsAreCopies, shortformCopiesBlog, visualRightsWarning, titleIsMissing, titlesAreCopies, weakConclusion, metricContextMissing, warnings: editorialWarnings };
       if (distinctDomains < 2) failReasons.push("서로 다른 웹사이트 출처가 2곳 미만");
       if (!substantive(result.naver)) failReasons.push("네이버 본문이 짧거나 소제목·구체성이 부족");
@@ -300,22 +300,17 @@ export default {
       if (result.shortform.trim().length < 80) failReasons.push("숏폼 대본 분량 부족");
       if (result.mode === "research_brief") failReasons.push("AI가 조사 자료 부족으로 판단");
       if (result.mode === "article") {
-        // Do not erase an otherwise solid blog article just because the shortform script
-        // or the other blog platform failed its own format gate.
-        const qualifiedNaver = substantive(result.naver);
-        const qualifiedTistory = substantive(result.tistory);
-        if (!qualifiedNaver) result.naver = "";
-        if (!qualifiedTistory) result.tistory = "";
-        if (result.shortform.trim().length < 80) result.shortform = "";
-        if (distinctDomains < 2 || (!qualifiedNaver && !qualifiedTistory)) {
+        // Source count, lengths and headings are editorial REVIEW signals, never deletion triggers.
+        // Only switch to research_brief when the model supplied no usable article body at all.
+        const hasAnyDraft = [result.naver, result.tistory].some(value =>
+          typeof value === "string" && value.trim().length >= 80);
+        for (const reason of failReasons) {
+          if (!result.verificationChecklist.includes(reason)) result.verificationChecklist.push(reason);
+        }
+        if (failReasons.length) result.qualityAudit.warnings.push(...failReasons);
+        if (!hasAnyDraft) {
           result.mode = "research_brief";
-          result.naver = "";
-          result.tistory = "";
-          result.shortform = "";
-          result.verificationChecklist.unshift("독립 출처나 본문 완성도가 부족해 게시할 수 있는 원고가 없어. 공식 자료를 확인한 뒤 다시 조사해 줘.");
-        } else {
-          if (!qualifiedNaver) result.verificationChecklist.unshift("네이버 원고 품질 검사 실패: 티스토리 원고만 확인할 수 있어.");
-          if (!qualifiedTistory) result.verificationChecklist.unshift("티스토리 원고 품질 검사 실패: 네이버 원고만 확인할 수 있어.");
+          result.verificationChecklist.unshift("AI가 충분한 본문을 생성하지 않았어. 참고 출처만 확인할 수 있어.");
         }
       }
     } catch (error) {
