@@ -274,6 +274,7 @@ export default function Home() {
             verified: false,
             publishedUrls: old[selected.id]?.publishedUrls || {},
             updatedAt: new Date().toISOString(),
+            generatedVersion: DRAFT_VERSION,
           },
         }));
       }
@@ -322,6 +323,13 @@ export default function Home() {
       updatedAt: new Date().toISOString(),
       generatedVersion: patch.generatedVersion ?? old[editId]?.generatedVersion,
     } }));
+  }
+  function recoverStoredDraft() {
+    if (!editId || !saved || !Object.values(saved.fields || {}).some(value => value?.trim())) return;
+    // Never call the paid endpoint; preserve the exact existing text and user edits.
+    updateEdit({ generatedVersion: DRAFT_VERSION, verified: false });
+    setPreviewMode(true);
+    setNotice('브라우저에 저장돼 있던 원고를 복구했어. 재생성 비용은 발생하지 않았어. 내용과 출처를 직접 검수해 줘.');
   }
   function archiveOldDraft() {
     if (!editId || !saved) return;
@@ -429,9 +437,12 @@ export default function Home() {
                 <p className="muted">초안은 발행용 완성 글이 아니라 출처 검증이 필요한 준비 자료야.</p>
               </div>
               {(legacyStored || legacyPublic) && <div className="legacy-draft-warning">
-                <strong>이전 방식으로 만든 짧은 초안이 있어</strong>
-                <p>이 글은 자료 조사 없이 만든 이전 버전이야. 발행용으로 사용하지 말고, 새 생성 버튼으로 다시 조사하는 걸 추천해.</p>
-                {legacyStored ? <button className="btn btn-light" onClick={archiveOldDraft}>이전 초안 백업 후 초기화</button> : <span>서버에서 가져온 과거 초안은 자동 표시하지 않아.</span>}
+                <strong>저장된 원고의 버전 정보가 없어</strong>
+                <p>원고 자체는 브라우저에 남아 있어. 이전 버전일 수도 있고, 새 생성 후 버전 정보만 빠졌을 수도 있어. 재생성 없이 내용을 복구해 확인할 수 있어.</p>
+                {legacyStored ? <div className="editor-toolbar">
+                  <button className="btn btn-primary" onClick={recoverStoredDraft}>저장된 원고 복구해서 보기 (무료)</button>
+                  <button className="btn btn-light" onClick={archiveOldDraft}>백업 후 초기화</button>
+                </div> : <span>서버에서 가져온 과거 초안은 자동 표시하지 않아.</span>}
               </div>}
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
