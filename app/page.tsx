@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
@@ -41,6 +41,7 @@ type EvidenceReview = {
   correctionSuggestions: string[];
   notice: string;
 };
+type ImageGroup = { keyword: string; provider: string; images: ImageSearchResult[]; error?: string };
 type ImageSearchResult = {
   id: string; title: string; creator: string; license: string; licenseVersion: string;
   licenseUrl: string; sourceUrl: string; imageUrl: string; thumbnailUrl: string; attribution: string;
@@ -52,6 +53,7 @@ type Draft = {
   generationVersion?: number;
   comparedToPrevious?: 'changed' | 'same' | 'first' | 'brief';
   sourceLinks?: { title: string; url: string }[];
+  imageKeywords?: string[];
   researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
   qualityAudit?: { blogsAreCopies: boolean; shortformCopiesBlog: boolean; visualRightsWarning: boolean; warnings: string[] };
   title: string;
@@ -75,6 +77,8 @@ type LocalEdit = {
   evidenceReview?: Partial<Record<Channel, EvidenceReview>>;
   selectedImage?: ImageSearchResult;
   selectedImages?: ImageSearchResult[];
+  imageKeywords?: string[];
+  imageRightsApproved?: string[];
 };
 
 const ROOT = '/ai-blog-studio';
@@ -165,6 +169,10 @@ export default function Home() {
   const [imageSearching, setImageSearching] = useState(false);
   const [imageError, setImageError] = useState('');
   const [imageResults, setImageResults] = useState<ImageSearchResult[]>([]);
+  const [imageGroups, setImageGroups] = useState<ImageGroup[]>([]);
+  const [keywordsLoading, setKeywordsLoading] = useState(false);
+  const [imageSourceNotice, setImageSourceNotice] = useState('');
+  const imageRequestId = useRef(0);
   const [manualImageUrl, setManualImageUrl] = useState('');
   const [manualSourceUrl, setManualSourceUrl] = useState('');
   const [generateError, setGenerateError] = useState('');
@@ -213,6 +221,15 @@ export default function Home() {
     catch { setNotice('생성 결과 보관 공간이 부족해. 중요한 원고는 텍스트 파일로 저장해 줘.'); }
   }, [localDrafts, hydrated]);
 
+  useEffect(() => {
+    // Selecting a new topic should never expose the previous topic's image results.
+    imageRequestId.current += 1;
+    setImageQuery('');
+    setImageResults([]);
+    setImageGroups([]);
+    setImageError('');
+    setImageSourceNotice('');
+  }, [selectedId]);
   useEffect(() => {
     if (!copyFeedback) return;
     const timeout = window.setTimeout(() => setCopyFeedback(current => current?.id === copyFeedback.id ? null : current), 1800);
@@ -350,10 +367,15 @@ export default function Home() {
             generatedVersion: DRAFT_VERSION,
             evidenceReview: {},
             selectedImage: old[selected.id]?.selectedImage,
+            selectedImages: old[selected.id]?.selectedImages,
+            imageRightsApproved: old[selected.id]?.imageRightsApproved || [],
+            imageKeywords: draft.imageKeywords || [],
             selectedImages: old[selected.id]?.selectedImages || (old[selected.id]?.selectedImage ? [old[selected.id].selectedImage].filter((image): image is ImageSearchResult => !!image) : []),
           },
         }));
       }
+      setImageGroups([]);
+      setImageSourceNotice('');
       setChannel('naver');
       setPreviewMode(true);
       setNotice(draft.status === 'revision_required' ? '원고는 생성됐지만 중복 본문이나 숏폼·이미지 문제로 수정이 필요해.' : draft.mode === 'research_brief'
@@ -401,6 +423,10 @@ export default function Home() {
   const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
   const selectedImages = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
   const selectedImage = selectedImages[0];
+  const imageKeywords = saved?.imageKeywords?.length ? saved.imageKeywords :
+    matchingDraft?.imageKeywords?.length ? matchingDraft.imageKeywords : selected ? [selected.title] : [];
+  const imageRightsApproved = saved?.imageRightsApproved || [];
+  const approvedImages = selectedImages.filter(image => imageRightsApproved.includes(image.imageUrl));
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
   const reviewCount = candidates.filter(x => x.status === 'research_required' || x.status === 'needs_sources').length;
@@ -419,6 +445,9 @@ export default function Home() {
       generatedVersion: patch.generatedVersion ?? old[editId]?.generatedVersion,
       evidenceReview: { ...(old[editId]?.evidenceReview || {}), ...(patch.evidenceReview || {}) },
       selectedImage: patch.selectedImage ?? old[editId]?.selectedImage,
+      selectedImages: patch.selectedImages ?? old[editId]?.selectedImages,
+      imageKeywords: patch.imageKeywords ?? old[editId]?.imageKeywords,
+      imageRightsApproved: patch.imageRightsApproved ?? old[editId]?.imageRightsApproved,
       selectedImages: patch.selectedImages ?? old[editId]?.selectedImages,
     } }));
   }
@@ -440,7 +469,8 @@ export default function Home() {
     setNotice('기존 초안을 백업한 뒤 이 화면에서 초기화했어. 새 자료 조사 버튼으로 다시 생성해 줘.');
   }
   function choose(id: string, next: Section = 'editor') {
-    setImageResults([]); setImageError(''); setImageQuery('');
+    imageRequestId.current += 1;
+    setImageResults([]); setImageGroups([]); setImageError(''); setImageSourceNotice(''); setImageQuery('');
     setSelectedId(id);
     setChannel('naver');
     setSection(next);
