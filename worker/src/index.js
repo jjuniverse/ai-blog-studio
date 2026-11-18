@@ -126,10 +126,10 @@ export default {
       "Avoid generic AI filler, motivational boilerplate, repeated disclaimers and thin paragraphs. Write useful specifics grounded in the consulted sources.",
       "Only assert details explicitly supported by credible web search findings or by the user's verified notes. Append source URLs in a references section; do not copy news article passages.",
       "If you cannot identify adequate reliable supporting material, return mode='research_brief', set naver/tistory/shortform to empty strings, and provide precise verificationChecklist instead of filler text. Never repeat 'needs verification' as a fake article.",
-      "If good sources exist, return mode='article' and write TWO distinct, readable Korean drafts. Naver: approx 1100-1700 Korean characters, a natural hook, 4-6 substantive sections with ## headings, clear examples/reader takeaways, succinct summary and 4-6 relevant tags. Tistory: approx 1300-2000 Korean characters, 4-6 substantive ## headings, practical FAQ and sources. Do not stretch with speculation.",
+      "If good sources exist, return mode='article' and write TWO DISTINCT Korean blog articles, not a duplicated article with two labels. Naver: approx 1100-1700 Korean characters, a reader-friendly conversational opening, meaningful context, specific explanations, 4-6 substantive sections and relevant tags. Tistory: approx 1300-2000 Korean characters, a more structured SEO-oriented analytical angle, factual timelines, specific details, FAQs and a sources section. Change the information architecture and wording, not just the title. Do not stretch with speculation.",
       "For each section use information with real substance, not generic commentary; if a topic is too thin, switch to research_brief.",
-      "Write a 35-45 second shortform script in English when region is EN, otherwise Korean; only if mode=article.",
-      "Provide exactly 3 imageNotes as original cover/illustration/summary graphics with suggested placement. Do not imply that actual images have been created or reuse copyrighted celebrity images.",
+      "Write a genuine 35-45 second vertical-video SCRIPT only if mode=article: short hook (0-3 seconds), 3-4 specific factual beats, clear on-screen captions/scenes and a closing takeaway. English when region is EN, otherwise Korean. Never copy the blog introduction or append raw citation URLs into spoken narration.",
+      "Provide exactly 3 imageNotes describing ONLY new, original designs using verified information: a text-based cover card, a self-produced explanatory timeline/chart, and a summary graphic. No broadcaster stills, posters, press photos, celebrity likenesses, screenshots or third-party visual assets unless usage rights have been independently confirmed. Do not imply images have already been generated.",
       "sourceLinks must contain the actual HTTPS URLs consulted in web search, never fictional links.",
       "Even article mode remains a human-review draft; require final fact check and rights review before publishing.",
       "Return only JSON matching the given schema."
@@ -237,6 +237,27 @@ export default {
         (value.match(/\[확인 필요\]|\[추가 독립 출처 필요\]/g) || []).length === 0;
       generatedMode = result.mode;
       failReasons = [];
+      const comparable = text => String(text || "").replace(/\(\[[^\]]+\]\(https?:\/\/[^)]+\)\)/g, "").replace(/\s+/g, "").toLowerCase();
+      const blogsAreCopies = comparable(result.naver).length > 250 &&
+        comparable(result.naver) === comparable(result.tistory);
+      const shortformCopiesBlog = comparable(result.shortform).length > 60 &&
+        (comparable(result.naver).startsWith(comparable(result.shortform)) ||
+         comparable(result.tistory).startsWith(comparable(result.shortform)));
+      const visualRightsWarning = result.imageNotes.some(note =>
+        /(?:공식\s*포스터|스틸\s*컷|스틸컷|방송\s*장면|연예인\s*사진|press\s*photo|official\s*poster|screenshot)/i.test(note));
+      const editorialWarnings = [];
+      if (blogsAreCopies) editorialWarnings.push("네이버·티스토리 원고가 동일해 채널별 재작성 필요");
+      if (shortformCopiesBlog) editorialWarnings.push("숏폼 대본이 블로그 서론을 복사해 별도 대본 작성 필요");
+      if (visualRightsWarning) editorialWarnings.push("이미지 제안에 제3자 저작물이 포함돼 자체 제작 카드로 교체");
+      if (visualRightsWarning) result.imageNotes = [
+        "대표 이미지 — 검증한 주제명과 핵심 메시지를 타이포그래피로 표현한 자체 제작 카드. 오늘의 픽 네이비·민트 색상",
+        "본문 이미지 — 확인한 날짜·숫자·순위를 출처 표기와 함께 직접 그린 간단한 타임라인 또는 그래프",
+        "요약 이미지 — 검증된 사실 세 가지를 정리한 자체 제작 정보 카드. 제3자 포스터·사진·스틸컷 사용하지 않기",
+      ];
+      if (shortformCopiesBlog) result.shortform = "";
+      if (blogsAreCopies) result.verificationChecklist.unshift("네이버와 티스토리가 동일한 원고야. 한쪽은 구조와 관점을 바꿔 별도로 작성하고 발행해.");
+      if (shortformCopiesBlog) result.verificationChecklist.unshift("숏폼 대본이 블로그 서론과 동일해서 제거했어. 영상용 훅·장면·자막으로 다시 작성해야 해.");
+      result.qualityAudit = { blogsAreCopies, shortformCopiesBlog, visualRightsWarning, warnings: editorialWarnings };
       if (distinctDomains < 2) failReasons.push("서로 다른 웹사이트 출처가 2곳 미만");
       if (!substantive(result.naver)) failReasons.push("네이버 본문이 짧거나 소제목·구체성이 부족");
       if (!substantive(result.tistory)) failReasons.push("티스토리 본문이 짧거나 소제목·구체성이 부족");
@@ -266,6 +287,7 @@ export default {
       return reply({ error: "AI response did not match expected draft structure", code: "AI_DRAFT_FORMAT_ERROR", stage: "parse_openai_result" }, 502);
     }
     result.sourceLinks = sourceLinks;
+    const needsRevision = result.mode === "article" && (result.qualityAudit?.blogsAreCopies || result.qualityAudit?.shortformCopiesBlog);
     result.researchAudit = {
       searchedSourceCount: visitedUrls.size,
       returnedSourceCount: sourceLinks.length,
@@ -275,7 +297,7 @@ export default {
     };
     return reply({
       draft: result,
-      status: result.mode === "article" ? "review_required" : "research_required",
+      status: result.mode === "article" ? (needsRevision ? "revision_required" : "review_required") : "research_required",
       warning: result.mode === "article" ?
         "Researched draft: sources and claims still require human verification before publishing." :
         "Sources were insufficient; no publishable article was generated.",
