@@ -110,6 +110,14 @@ const imagePrompts = (topic: Candidate | undefined) => [
     : '본문 설명 — 확인된 공개 일정·사실을 바탕으로 직접 제작한 정보 카드 삽입.',
   '핵심 정리 — 출처 확인 후 요점 3개를 독자적인 인포그래픽으로 제작. 기사 사진 및 방송 장면 무단 사용 금지.',
 ];
+function withBrandHashtag(body: string): string {
+  if (!body.trim() || /(^|\s)#오늘의픽(?=\s|$)/m.test(body)) return body;
+  const value = body.trimEnd();
+  const lastLine = value.split('\n').at(-1)?.trim() || '';
+  return /^#[^#\s]+(?:\s+#[^#\s]+)*$/.test(lastLine)
+    ? value + ' #오늘의픽'
+    : value + '\n\n## 관련 태그\n#오늘의픽';
+}
 function download(filename: string, content: string, mime: string) {
   const url = URL.createObjectURL(new Blob([content], { type: mime }));
   const el = document.createElement('a');
@@ -375,9 +383,10 @@ export default function Home() {
   // When latest research cannot produce an article, never mix its new sources with an old cached body.
   const currentDraft = !legacyStored && !legacyPublic && matchingDraft?.mode !== 'research_brief' &&
     (matchingDraft?.mode === 'article' || !!saved?.fields?.[channel]);
-  const text = matchingDraft?.mode === 'research_brief' ? '' :
+  const storedText = matchingDraft?.mode === 'research_brief' ? '' :
     legacyStored ? (saved?.fields?.[channel] || '') :
     legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
+  const text = channel === 'shortform' ? storedText : withBrandHashtag(storedText);
   const articleTitle = channel === 'shortform' ? (matchingDraft?.title || selected?.title || '') :
     (saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '');
   const referenceAppendix = matchingDraft?.mode === 'article' && matchingDraft?.sourceLinks?.length
