@@ -147,3 +147,12 @@ html,body{max-width:100%;overflow-x:clip}
 .post-selected-image img{width:100%;max-height:420px;object-fit:contain;border-radius:7px}
 .post-selected-image figcaption{padding:8px 6px 3px;font-size:11px;line-height:1.65;color:#627789;overflow-wrap:anywhere}
 .post-selected-image figcaption a{text-decoration:underline;color:#24689b}
+
+.image-manual-add{border:1px solid #dfe7ef;border-radius:10px;padding:12px;margin:14px 0}
+.image-manual-add summary{font-size:12px;font-weight:750;cursor:pointer;color:#325a70}
+.image-manual-add input{width:100%;min-width:0;border:1px solid #dfe6ef;border-radius:9px;padding:11px 12px;font-size:12px;margin-bottom:8px}
+.image-manual-add .btn{max-width:100%}
+.saved-images{border-top:1px solid #e5edf3;padding-top:13px;margin-top:15px}
+.saved-images>strong{font-size:13px;color:#2a4b5d}
+.saved-images .licensed-image a{font-size:12px;overflow-wrap:anywhere}
+.image-search-row{flex-wrap:wrap}
