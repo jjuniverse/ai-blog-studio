@@ -74,6 +74,7 @@ type LocalEdit = {
   generatedVersion?: number;
   evidenceReview?: Partial<Record<Channel, EvidenceReview>>;
   selectedImage?: ImageSearchResult;
+  selectedImages?: ImageSearchResult[];
 };
 
 const ROOT = '/ai-blog-studio';
@@ -164,6 +165,8 @@ export default function Home() {
   const [imageSearching, setImageSearching] = useState(false);
   const [imageError, setImageError] = useState('');
   const [imageResults, setImageResults] = useState<ImageSearchResult[]>([]);
+  const [manualImageUrl, setManualImageUrl] = useState('');
+  const [manualSourceUrl, setManualSourceUrl] = useState('');
   const [generateError, setGenerateError] = useState('');
   const [connectionState, setConnectionState] = useState<'idle' | 'checking' | 'ready' | 'unconfigured' | 'unreachable'>('idle');
   const [connectionDetails, setConnectionDetails] = useState('');
@@ -347,6 +350,7 @@ export default function Home() {
             generatedVersion: DRAFT_VERSION,
             evidenceReview: {},
             selectedImage: old[selected.id]?.selectedImage,
+            selectedImages: old[selected.id]?.selectedImages || (old[selected.id]?.selectedImage ? [old[selected.id].selectedImage] : []),
           },
         }));
       }
@@ -395,7 +399,8 @@ export default function Home() {
   const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
   const reviewed = saved?.evidenceReview?.[channel];
   const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
-  const selectedImage = saved?.selectedImage;
+  const selectedImages = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
+  const selectedImage = selectedImages[0];
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
   const reviewCount = candidates.filter(x => x.status === 'research_required' || x.status === 'needs_sources').length;
@@ -414,6 +419,7 @@ export default function Home() {
       generatedVersion: patch.generatedVersion ?? old[editId]?.generatedVersion,
       evidenceReview: { ...(old[editId]?.evidenceReview || {}), ...(patch.evidenceReview || {}) },
       selectedImage: patch.selectedImage ?? old[editId]?.selectedImage,
+      selectedImages: patch.selectedImages ?? old[editId]?.selectedImages,
     } }));
   }
   function recoverStoredDraft() {
@@ -462,68 +468,73 @@ export default function Home() {
     setImageError('');
     setImageSearching(true);
     setImageResults([]);
-    const q = imageQuery.trim();
-    const searchUrl = new URL('https://api.openverse.org/v1/images/');
-    searchUrl.searchParams.set('q', q);
-    searchUrl.searchParams.set('page_size', '12');
-    searchUrl.searchParams.set('license', 'cc0,by');
-    searchUrl.searchParams.set('mature', 'false');
+    const query = imageQuery.trim();
+    const url = new URL('https://commons.wikimedia.org/w/api.php');
+    const params = {
+      action: 'query', generator: 'search', gsrsearch: query,
+      gsrnamespace: '6', gsrlimit: '18', prop: 'imageinfo',
+      iiprop: 'url|extmetadata|mime', iiurlwidth: '480',
+      format: 'json', origin: '*',
+    };
+    Object.entries(params).forEach(([key,value])=>url.searchParams.set(key,value));
+    const plain = (value: unknown) => String(value || '').replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').trim().slice(0,180);
     try {
-      let images: ImageSearchResult[] | null = null;
-      let directError = '';
-      try {
-        // Direct browser requests avoid cloud-host egress blocks and need no studio credentials.
-        const response = await fetch(searchUrl.toString(), {
-          headers: { Accept: 'application/json' },
-          signal: AbortSignal.timeout(15000),
-        });
-        if (!response.ok) throw new Error('Openverse HTTP ' + response.status);
-        const data = await response.json();
-        const isSafeHttps = (url: unknown) => {
-          try { return typeof url === 'string' && new URL(url).protocol === 'https:'; }
-          catch { return false; }
-        };
-        images = (Array.isArray(data.results) ? data.results : []).filter((img: any) =>
-          ['cc0','by'].includes(String(img.license || '').toLowerCase()) &&
-          isSafeHttps(img.foreign_landing_url) && isSafeHttps(img.url) &&
-          isSafeHttps(img.thumbnail) && isSafeHttps(img.license_url) && !img.mature
-        ).slice(0, 8).map((img: any): ImageSearchResult => ({
-          id: String(img.id || ''),
-          title: String(img.title || '제목 없음').slice(0, 140),
-          creator: String(img.creator || '제작자 미상').slice(0, 140),
-          license: String(img.license).toUpperCase(),
-          licenseVersion: String(img.license_version || ''),
-          licenseUrl: img.license_url,
-          sourceUrl: img.foreign_landing_url,
-          imageUrl: img.url,
-          thumbnailUrl: img.thumbnail,
-          attribution: String(img.attribution || '').slice(0, 500),
-        }));
-      } catch (error) {
-        directError = error instanceof Error ? error.message : '브라우저 직접 연결 실패';
-      }
-      if (images === null && studioPassphrase) {
-        // Fallback when a user's browser cannot reach Openverse directly.
-        try {
-          const response = await fetch(WORKER_URL + '/images', {
-            method:'POST',
-            headers:{'Content-Type':'application/json','X-Studio-Passphrase':studioPassphrase},
-            body:JSON.stringify({query:q}),
-            signal: AbortSignal.timeout(15000),
-          });
-          const data = await response.json().catch(()=>({}));
-          if (!response.ok || !Array.isArray(data.images)) throw new Error(data.code || 'Worker HTTP ' + response.status);
-          images = data.images;
-        } catch (error) {
-          const fallback = error instanceof Error ? error.message : '서버 검색 실패';
-          throw new Error('Openverse 연결 실패 (직접: ' + directError + ', 서버: ' + fallback + '). 외부 검색 링크를 이용해 줘.');
-        }
-      }
-      if (images === null) throw new Error('Openverse에 직접 연결하지 못했어 (' + directError + '). 아래 외부 검색 링크를 이용해 줘.');
+      const response = await fetch(url.toString(), {signal: AbortSignal.timeout(16000)});
+      if (!response.ok) throw new Error('Wikimedia Commons HTTP '+response.status);
+      const data = await response.json();
+      const pages: any[] = Object.values(data.query?.pages || {});
+      const images: ImageSearchResult[] = pages.flatMap(page=>{
+        const info = page.imageinfo?.[0];
+        if (!info || !String(info.mime || '').startsWith('image/')) return [];
+        const meta = info.extmetadata || {};
+        const license = plain(meta.LicenseShortName?.value);
+        if (!/^(CC0|CC BY(?: 1\.0| 2\.0| 2\.5| 3\.0| 4\.0)?|Public domain)$/i.test(license)) return [];
+        const sourceUrl = info.descriptionurl;
+        const imageUrl = info.url;
+        const thumbnailUrl = info.thumburl || info.url;
+        if (![sourceUrl,imageUrl,thumbnailUrl].every(value => {
+          try {return new URL(value).protocol==='https:';}catch{return false;}
+        })) return [];
+        return [{
+          id: String(page.pageid || page.title),
+          title: String(page.title || '').replace(/^File:/,'').slice(0,140),
+          creator: plain(meta.Artist?.value) || '제작자 확인 필요',
+          license, licenseVersion: '',
+          licenseUrl: /^https:\/\//.test(String(meta.LicenseUrl?.value || '')) ? meta.LicenseUrl.value : sourceUrl,
+          sourceUrl, imageUrl, thumbnailUrl,
+          attribution: plain(meta.Attribution?.value) || '원본에서 저작자와 이용 조건 확인 필요',
+        }];
+      }).slice(0,12);
       setImageResults(images);
-      if (!images.length) setImageError('CC0·CC BY 후보가 없어. 다른 검색어로 시도하거나 외부 검색 결과를 확인해 줘.');
-    } catch (error) {setImageError(error instanceof Error ? error.message : '이미지 검색 실패');}
-    finally {setImageSearching(false);}
+      if (!images.length) setImageError('명시된 CC0·CC BY·퍼블릭 도메인 이미지 후보가 없어. 검색어를 바꾸거나 구글에서 원본을 찾아봐.');
+    } catch(error) {
+      setImageError('이미지 검색에 실패했어 ('+(error instanceof Error?error.message:'연결 문제')+'). 구글 이미지 검색 또는 원본 URL 직접 등록을 이용해 줘.');
+    } finally {setImageSearching(false);}
+  }
+  function toggleSavedImage(item: ImageSearchResult) {
+    const current = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
+    const exists = current.some(x=>x.id===item.id && x.sourceUrl===item.sourceUrl);
+    const next = exists ? current.filter(x=>!(x.id===item.id && x.sourceUrl===item.sourceUrl)) : [...current,item].slice(0,8);
+    updateEdit({selectedImages:next,selectedImage:next[0],verified:false});
+  }
+  function addManualImage() {
+    const validHttps = (raw:string) => {try{const parsed=new URL(raw.trim());return parsed.protocol==='https:' && !parsed.username && !parsed.password;}catch{return false;}};
+    if (!validHttps(manualImageUrl)||!validHttps(manualSourceUrl)) {
+      setImageError('이미지 파일 주소와 원본 출처 주소를 둘 다 HTTPS URL로 입력해 줘.');
+      return;
+    }
+    const item: ImageSearchResult = {
+      id:'manual-'+manualImageUrl.trim(),
+      title:'직접 등록한 이미지 (사용 권한 미확인)', creator:'확인 필요',
+      license:'미확인',licenseVersion:'',licenseUrl:manualSourceUrl.trim(),
+      sourceUrl:manualSourceUrl.trim(),imageUrl:manualImageUrl.trim(),
+      thumbnailUrl:manualImageUrl.trim(),attribution:'원본에서 저작권·초상권·사용 허가 확인 필요',
+    };
+    const old = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
+    const next=[...old.filter(x=>x.id!==item.id),item].slice(0,8);
+    updateEdit({selectedImages:next,selectedImage:next[0],verified:false});
+    setImageError('');setManualImageUrl('');setManualSourceUrl('');
+    setNotice('외부 이미지 후보를 보관했어. 원본 권한 확인 전에는 발행에 사용하지 마.');
   }
   async function copyToClipboard(content: string, target: 'title' | 'article') {
     if (!content.trim()) return;
@@ -689,12 +700,12 @@ export default function Home() {
                   {text.split(/\n+/).filter(Boolean).map((paragraph, i) => <div key={i}>
                     {/^#{1,3}\s+/.test(paragraph) ? <h2>{paragraph.replace(/^#{1,3}\s+/, '')}</h2> : <p>{paragraph}</p>}
                     {i === 0 && channel !== 'shortform' && selected && <>
-                      {selectedImage && <figure className="post-selected-image">
-                        <img src={selectedImage.imageUrl} alt={selectedImage.title} loading="lazy" referrerPolicy="no-referrer" />
-                        <figcaption>{selectedImage.title} · {selectedImage.creator} · {selectedImage.license} {selectedImage.licenseVersion}
-                          {' · '}<a href={selectedImage.sourceUrl} target="_blank" rel="noopener noreferrer">원본/사용 조건 확인 ↗</a>
+                      {selectedImages.map(img=><figure className="post-selected-image" key={img.id}>
+                        <img src={img.imageUrl} alt={img.title} loading="lazy" referrerPolicy="no-referrer" />
+                        <figcaption>{img.title} · {img.creator} · {img.license}
+                          {' · '}<a href={img.sourceUrl} target="_blank" rel="noopener noreferrer">원본/사용 조건 확인 ↗</a>
                         </figcaption>
-                      </figure>}
+                      </figure>)}
                       <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>
                     </>}
                     {i === 4 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={1}/>}
@@ -742,28 +753,44 @@ export default function Home() {
           <aside className="studio-side">
             <div className="panel"><div className="panel-heading"><h2>이미지 배치 계획</h2><span>이미지 생성 전</span></div><p className="muted">글을 읽기 쉽게 만드는 세 가지 이미지 슬롯이야. 실제 이미지는 아직 생성되지 않아.</p>{images.map((img,i) => <div key={i} className="image-slot"><div className="image-placeholder"><span>{i === 0 ? '▣' : i === 1 ? '▤' : '☰'}</span><small>이미지 {i+1}</small></div><label><strong>{['대표 이미지', '본문 설명', '핵심 요약'][i]}</strong><textarea rows={3} aria-label={'이미지 '+(i+1)+' 설명'} value={img} onChange={e => updateEdit({imageNotes:images.map((v,k) => k === i ? e.target.value : v)})}/></label></div>)}</div>
             <div className="panel">
-              <div className="panel-heading"><h2>실제 이미지 검색</h2><span>Openverse · 검색 무료</span></div>
-              <p className="muted">CC0 및 CC BY 후보만 탐색해. 공식 포스터나 방송 스틸컷은 사용 허가가 확인되지 않으면 가져오지 않아.</p>
-              <div className="image-search-row"><input value={imageQuery} onChange={e=>setImageQuery(e.target.value)} placeholder="예: 1930s Seoul street / vintage radio" aria-label="이미지 검색어" />
-                <button className="btn btn-primary" onClick={searchImages} disabled={imageSearching || imageQuery.trim().length<2}>{imageSearching?'검색 중…':'이미지 검색'}</button>
+              <div className="panel-heading"><h2>이미지 후보 찾기·저장</h2><span>최대 8장 · 이 브라우저 보관</span></div>
+              <p className="muted">구글 이미지를 새 탭에서 검색하거나, 라이선스 정보가 있는 Wikimedia Commons 후보를 바로 확인해. 구글 검색 결과가 곧 사용 허가를 뜻하진 않아.</p>
+              <div className="image-search-row">
+                <input value={imageQuery} onChange={e=>setImageQuery(e.target.value)} placeholder="예: 100일의 거짓말 / 1930s Seoul" aria-label="이미지 검색어"/>
+                <button className="btn btn-light" disabled={!imageQuery.trim()} onClick={()=>GenUI.openUrl('https://www.google.com/search?tbm=isch&q='+encodeURIComponent(imageQuery.trim()))}>구글에서 보기 ↗</button>
               </div>
-              <p className="muted">구체적인 배경·사물 검색어를 입력해. 드라마 제목으로 검색해도 실제 작품 사진이 검색된다는 보장은 없어.</p>
+              <div className="editor-toolbar">
+                <button className="btn btn-primary" disabled={imageSearching || imageQuery.trim().length<2} onClick={searchImages}>{imageSearching?'추천 찾는 중…':'사용 조건 있는 후보 검색'}</button>
+              </div>
+              <p className="muted">추천 결과는 Wikimedia Commons 검색이야. 작품 포스터·배우 사진처럼 권리 확인이 어려운 이미지는 직접 원본을 확인해 줘.</p>
               {imageError && <p className="generator-error" role="alert">{imageError}</p>}
-              <p className="muted">검색이 안 될 때: <a href={'https://openverse.org/search/image?q='+encodeURIComponent(imageQuery.trim() || 'historic Seoul')} target="_blank" rel="noopener noreferrer">Openverse 웹사이트에서 직접 검색 ↗</a></p>
-              {selectedImage && <div className="image-selected">
-                <strong>선택한 이미지 후보</strong>
-                <img src={selectedImage.thumbnailUrl} alt={selectedImage.title} loading="lazy" referrerPolicy="no-referrer" />
-                <p>{selectedImage.title} · {selectedImage.creator} · {selectedImage.license} {selectedImage.licenseVersion}</p>
-                <a href={selectedImage.sourceUrl} target="_blank" rel="noopener noreferrer">원본·이용 조건 확인 ↗</a>
-                <p className="muted">선택만 저장했어. 아직 원고에 자동 삽입되거나 다운로드된 것은 아니야.</p>
-              </div>}
-              {!!imageResults.length && <div className="licensed-image-grid">{imageResults.map(item=><div className="licensed-image" key={item.id}>
-                <img src={item.thumbnailUrl} alt={item.title} loading="lazy" referrerPolicy="no-referrer" />
-                <strong>{item.title}</strong><small>{item.creator} · {item.license} {item.licenseVersion}</small>
-                <div><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">원본 ↗</a> · <a href={item.licenseUrl} target="_blank" rel="noopener noreferrer">라이선스 ↗</a></div>
-                <button className="btn btn-light" onClick={()=>updateEdit({selectedImage:item,verified:false})}>이미지 후보 선택</button>
-              </div>)}</div>}
-              <p className="muted">Openverse의 라이선스 메타데이터는 이용 허가를 보증하지 않아. 원본 페이지에서 귀속 조건과 인물 초상권·상표권 등을 확인하고 사용해 줘.</p>
+              {!!imageResults.length && <div className="licensed-image-grid">{imageResults.map(item=>{
+                const isSaved=selectedImages.some(saved=>saved.id===item.id && saved.sourceUrl===item.sourceUrl);
+                return <div className="licensed-image" key={item.id}>
+                  <img src={item.thumbnailUrl} alt={item.title} loading="lazy" referrerPolicy="no-referrer" />
+                  <strong>{item.title}</strong><small>{item.creator} · {item.license}</small>
+                  <div><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">원본 ↗</a> · <a href={item.licenseUrl} target="_blank" rel="noopener noreferrer">사용 조건 ↗</a></div>
+                  <button className={isSaved?'btn btn-primary':'btn btn-light'} onClick={()=>toggleSavedImage(item)}>{isSaved?'✓ 보관됨 · 선택 해제':'후보 보관'}</button>
+                </div>;
+              })}</div>}
+              <details className="image-manual-add">
+                <summary>구글에서 찾은 이미지 직접 등록</summary>
+                <p className="muted">구글에서 원본 사이트를 열고, 이미지 파일 주소와 해당 페이지 URL을 각각 입력해 줘. 등록은 권리 승인과 무관해.</p>
+                <input value={manualImageUrl} onChange={e=>setManualImageUrl(e.target.value)} placeholder="이미지 파일 HTTPS URL" aria-label="외부 이미지 파일 주소"/>
+                <input value={manualSourceUrl} onChange={e=>setManualSourceUrl(e.target.value)} placeholder="원본 출처 페이지 HTTPS URL" aria-label="외부 이미지 출처 주소"/>
+                <button className="btn btn-light" onClick={addManualImage} disabled={!selected}>이미지 후보 보관</button>
+              </details>
+              <div className="saved-images">
+                <strong>보관한 이미지 후보 {selectedImages.length} / 8</strong>
+                {selectedImages.length ? <div className="licensed-image-grid">{selectedImages.map(item=><div className="licensed-image" key={item.id}>
+                  <img src={item.thumbnailUrl} alt={item.title} loading="lazy" referrerPolicy="no-referrer"/>
+                  <small>{item.license} · {item.creator}</small>
+                  <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">원본과 권리 확인 ↗</a>
+                  <a href={item.imageUrl} target="_blank" rel="noopener noreferrer">이미지 원본 열기 ↗</a>
+                  <button className="btn btn-light" onClick={()=>toggleSavedImage(item)}>보관 해제</button>
+                </div>)}</div> : <p className="muted">아직 보관한 이미지가 없어.</p>}
+              </div>
+              <p className="muted">이미지는 URL과 출처를 저장하며 실제 이미지 파일을 다운로드하거나 영구 보관하지는 않아. 원본 권리 확인 후 파일을 직접 저장해 블로그에 올려 줘.</p>
             </div>
             <div className="panel"><h2>제작 원칙</h2><ul className="rules"><li>확인되지 않은 뉴스는 발행하지 않기</li><li>타 매체 기사나 사진 무단 복제 금지</li><li>정보 카드·직접 캡처 중심으로 제작</li><li>네이버와 티스토리 글은 별도로 검수</li></ul></div>
           </aside>
