@@ -287,6 +287,7 @@ export default {
       "Never conflate different metrics: TV/OTT topic buzz, cast-member buzz, personal brand reputation and television ratings are distinct. Give each metric its measurement organization, period, population and basis (e.g. share vs rating) when these are confirmed; otherwise omit that metric or mark it as an explicit research question. Never combine percentages or attribute brand-reputation indices to a buzz ranking.",
       "Conclude with a specific, reader-useful takeaway tied to sourced facts: for example exactly what is known, where to check official schedules or what important data remains uncertain. Avoid generic predictions like high expectations, growing excitement or exciting developments.",
       "Write clean text with ## section headings and plain paragraphs, not Markdown source-link syntax. Do not include ([publisher](url)), raw hyperlinks, [citation] markers or invented citations in the body. Put links ONLY in sourceLinks; the application renders a separate reference section. Do not plagiarize article passages.",
+      "At the very end of EACH blog article body, add a ## 관련 태그 section with 5-8 relevant topic hashtags and ALWAYS include #오늘의픽 exactly once. No hashtags in shortform spoken script.",
       "For each section use information with real substance, not generic commentary; if a topic is too thin, switch to research_brief.",
       "Write a genuine 35-45 second vertical-video SCRIPT only if mode=article: short hook (0-3 seconds), 3-4 specific factual beats, clear on-screen captions/scenes and a closing takeaway. English when region is EN, otherwise Korean. Never copy the blog introduction or append raw citation URLs into spoken narration.",
       "Provide exactly 3 imageNotes describing ONLY new, original designs using verified information: a text-based cover card, a self-produced explanatory timeline/chart, and a summary graphic. No broadcaster stills, posters, press photos, celebrity likenesses, screenshots or third-party visual assets unless usage rights have been independently confirmed. Do not imply images have already been generated.",
@@ -404,8 +405,17 @@ export default {
         .replace(/https?:\/\/[^\s)]+/g, "")
         .replace(/\(\s*\)/g, "")
         .replace(/[ \t]+\n/g, "\n");
-      result.naver = stripInlineLinks(result.naver);
-      result.tistory = stripInlineLinks(result.tistory);
+      const ensureBrandHashtag = body => {
+        const value = String(body || "").trimEnd();
+        if (!value.trim() || /(^|\\s)#오늘의픽(?=\\s|$)/m.test(value)) return value;
+        const lines = value.split("\\n");
+        const lastLine = lines[lines.length - 1]?.trim() || "";
+        return /^#[^#\\s]+(?:\\s+#[^#\\s]+)*$/.test(lastLine)
+          ? value + " #오늘의픽"
+          : value + "\\n\\n## 관련 태그\\n#오늘의픽";
+      };
+      result.naver = result.mode === "article" ? ensureBrandHashtag(stripInlineLinks(result.naver)) : stripInlineLinks(result.naver);
+      result.tistory = result.mode === "article" ? ensureBrandHashtag(stripInlineLinks(result.tistory)) : stripInlineLinks(result.tistory);
       result.naverTitle = result.naverTitle.trim().slice(0, 110);
       result.tistoryTitle = result.tistoryTitle.trim().slice(0, 110);
       const titleIsMissing = !result.naverTitle || !result.tistoryTitle;
