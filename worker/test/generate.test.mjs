@@ -51,6 +51,10 @@ test('complete OpenAI response yields a research audit and draft without a scope
     assert.equal(result.draft.researchAudit.distinctSourceDomains, 2);
     assert.equal(result.draft.researchAudit.returnedSourceCount, 2);
     assert.equal(result.draft.researchAudit.initiallyGeneratedMode, 'article');
+    assert.equal(result.status, 'revision_required');
+    assert.equal(result.draft.qualityAudit.blogsAreCopies, true);
+    assert.ok(result.draft.qualityAudit.warnings.some(x => x.includes('동일')));
+
   } finally {
     globalThis.fetch = originalFetch;
   }
