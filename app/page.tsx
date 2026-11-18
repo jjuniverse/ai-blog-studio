@@ -124,7 +124,7 @@ export default function Home() {
   const [localEdits, setLocalEdits] = useState<Record<string, LocalEdit>>({});
   const [hydrated, setHydrated] = useState(false);
   const [notice, setNotice] = useState('');
-  const [copyFeedback, setCopyFeedback] = useState<{ id: number; kind: 'success' | 'error' } | null>(null);
+  const [copyFeedback, setCopyFeedback] = useState<{ id: number; kind: 'success' | 'error'; target: 'title' | 'article' } | null>(null);
   const [studioPassphrase, setStudioPassphrase] = useState('');
   const [verifiedNotes, setVerifiedNotes] = useState('');
   const [generating, setGenerating] = useState(false);
@@ -365,14 +365,17 @@ export default function Home() {
     setSection(next);
     setNotice('');
   }
-  async function copyText() {
-    if (!text.trim()) return;
+  async function copyToClipboard(content: string, target: 'title' | 'article') {
+    if (!content.trim()) return;
     try {
-      await navigator.clipboard.writeText(copyableArticle);
-      setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'success' }));
+      await navigator.clipboard.writeText(content);
+      setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'success', target }));
     } catch {
-      setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'error' }));
+      setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'error', target }));
     }
+  }
+  async function copyText() {
+    return copyToClipboard(copyableArticle, 'article');
   }
   function exportText() {
     download('todaypick-' + channel + '-draft.txt', copyableArticle + '\n\n' + images.map((n,i) => '[이미지 ' + (i + 1) + '] ' + n).join('\n'), 'text/plain;charset=utf-8');
@@ -488,9 +491,16 @@ export default function Home() {
               {!legacyStored && matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
               {currentDraft && !legacyStored && !!text.trim() ? <>
                 <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
-                {channel !== 'shortform' && <label className="notes-label">검색형 게시 제목
-                  <input className="wide-select" value={articleTitle} onChange={e=>updateEdit({titles:{[channel]:e.target.value},verified:false})} aria-label={channel==='naver'?'네이버 게시 제목':'티스토리 게시 제목'} />
-                </label>}
+                {channel !== 'shortform' && <div className="notes-label">
+                  <label htmlFor="editor-post-title">검색형 게시 제목</label>
+                  <div className="post-title-row">
+                    <input id="editor-post-title" className="wide-select" value={articleTitle} onChange={e=>updateEdit({titles:{[channel]:e.target.value},verified:false})} aria-label={channel==='naver'?'네이버 게시 제목':'티스토리 게시 제목'} />
+                    <span className="copy-button-wrap">
+                      <button type="button" className="btn btn-light" onClick={()=>copyToClipboard(articleTitle,'title')} disabled={!articleTitle.trim()}>제목 복사</button>
+                      {copyFeedback?.target==='title' && <span className={'copy-tooltip '+(copyFeedback.kind==='error'?'copy-tooltip-error':'')} role="status" aria-live="polite">{copyFeedback.kind==='success'?'✓ 복사됐어!':'복사에 실패했어'}</span>}
+                    </span>
+                  </div>
+                </div>}
                 <div className="editor-toolbar"><button className={previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(true)}>블로그 미리보기</button><button className={!previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(false)}>원고 편집</button></div>
                 {previewMode ? <div className="post-preview">
                   <div className="post-preview-label">오늘의 픽 · {channel === 'naver'?'네이버 블로그':channel==='tistory'?'티스토리':'숏폼 대본'} 발행 전 미리보기</div>
@@ -509,7 +519,7 @@ export default function Home() {
                 </div> : null}
                 <div className="editor-toolbar"><span className="copy-button-wrap">
                   <button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button>
-                  {copyFeedback && <span className={'copy-tooltip '+(copyFeedback.kind==='error'?'copy-tooltip-error':'')} role="status" aria-live="polite">
+                  {copyFeedback?.target==='article' && <span className={'copy-tooltip '+(copyFeedback.kind==='error'?'copy-tooltip-error':'')} role="status" aria-live="polite">
                     {copyFeedback.kind==='success'?'✓ 복사됐어!':'복사에 실패했어'}
                   </span>}
                 </span><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
