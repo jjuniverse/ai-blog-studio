@@ -537,8 +537,14 @@ export default function Home() {
                 <strong>추가 검증할 내용</strong>
                 <ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul>
                 <p>충분한 공식 자료를 찾지 못했다면 다른 주제를 선택하는 게 좋아.</p>
+                {saved?.fields && Object.values(saved.fields).some(value => !!value?.trim()) && <div className="editor-toolbar">
+                  <button className="btn btn-light" onClick={() => download('todaypick-previous-local-draft.json', JSON.stringify({
+                    title: selected?.title, savedAt: saved.updatedAt, previousDraft: saved.fields, previousTitles: saved.titles,
+                  }, null, 2), 'application/json')}>이전 저장 원고 백업 (무료)</button>
+                  <p className="muted">이 버튼은 이번 실패 결과가 아니라 이 브라우저에 이전부터 남아 있던 원고를 저장해.</p>
+                </div>}
               </div> : null}
-              {!legacyStored && matchingDraft?.mode==='research_brief' && !saved?.fields?.[channel] ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
+              {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
               {currentDraft && !legacyStored && !!text.trim() ? <>
                 <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
                 {channel !== 'shortform' && <div className="notes-label">
