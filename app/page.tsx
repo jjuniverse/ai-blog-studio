@@ -757,7 +757,7 @@ export default function Home() {
               <p className="muted">구글 이미지를 새 탭에서 검색하거나, 라이선스 정보가 있는 Wikimedia Commons 후보를 바로 확인해. 구글 검색 결과가 곧 사용 허가를 뜻하진 않아.</p>
               <div className="image-search-row">
                 <input value={imageQuery} onChange={e=>setImageQuery(e.target.value)} placeholder="예: 100일의 거짓말 / 1930s Seoul" aria-label="이미지 검색어"/>
-                <button className="btn btn-light" disabled={!imageQuery.trim()} onClick={()=>GenUI.openUrl('https://www.google.com/search?tbm=isch&q='+encodeURIComponent(imageQuery.trim()))}>구글에서 보기 ↗</button>
+                <button className="btn btn-light" disabled={!imageQuery.trim()} onClick={()=>window.open('https://www.google.com/search?tbm=isch&q='+encodeURIComponent(imageQuery.trim()),'_blank','noopener,noreferrer')}>구글에서 보기 ↗</button>
               </div>
               <div className="editor-toolbar">
                 <button className="btn btn-primary" disabled={imageSearching || imageQuery.trim().length<2} onClick={searchImages}>{imageSearching?'추천 찾는 중…':'사용 조건 있는 후보 검색'}</button>
