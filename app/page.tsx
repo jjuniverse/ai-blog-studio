@@ -121,6 +121,7 @@ export default function Home() {
   const [localEdits, setLocalEdits] = useState<Record<string, LocalEdit>>({});
   const [hydrated, setHydrated] = useState(false);
   const [notice, setNotice] = useState('');
+  const [copyFeedback, setCopyFeedback] = useState<{ id: number; kind: 'success' | 'error' } | null>(null);
   const [studioPassphrase, setStudioPassphrase] = useState('');
   const [verifiedNotes, setVerifiedNotes] = useState('');
   const [generating, setGenerating] = useState(false);
@@ -157,6 +158,12 @@ export default function Home() {
     if (!hydrated) return;
     try { window.localStorage.setItem(EDIT_KEY, JSON.stringify(localEdits)); } catch { setNotice('브라우저 저장 공간을 사용할 수 없어. 내보내기로 백업해 줘.'); }
   }, [localEdits, hydrated]);
+
+  useEffect(() => {
+    if (!copyFeedback) return;
+    const timeout = window.setTimeout(() => setCopyFeedback(current => current?.id === copyFeedback.id ? null : current), 1800);
+    return () => window.clearTimeout(timeout);
+  }, [copyFeedback]);
 
   const configuredWorker = true;
   async function checkWorkerConnection() {
@@ -349,8 +356,12 @@ export default function Home() {
   }
   async function copyText() {
     if (!text.trim()) return;
-    try { await navigator.clipboard.writeText(text); setNotice('원고를 복사했어. 발행 전 사실관계를 확인해 줘.'); }
-    catch { setNotice('복사 권한이 없어. 원고를 직접 선택해 복사해 줘.'); }
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'success' }));
+    } catch {
+      setCopyFeedback(previous => ({ id: (previous?.id || 0) + 1, kind: 'error' }));
+    }
   }
   function exportText() {
     download('todaypick-' + channel + '-draft.txt', (selected?.title || '') + '\n\n' + text + '\n\n' + images.map((n,i) => '[이미지 ' + (i + 1) + '] ' + n).join('\n'), 'text/plain;charset=utf-8');
@@ -477,7 +488,12 @@ export default function Home() {
                   </div>)}
                   {channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[2]} excerpt={text} variant="summary" index={2}/>}
                 </div> : <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
-                <div className="editor-toolbar"><button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
+                <div className="editor-toolbar"><span className="copy-button-wrap">
+                  <button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button>
+                  {copyFeedback && <span className={'copy-tooltip '+(copyFeedback.kind==='error'?'copy-tooltip-error':'')} role="status" aria-live="polite">
+                    {copyFeedback.kind==='success'?'✓ 복사됐어!':'복사에 실패했어'}
+                  </span>}
+                </span><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
               </> : null}
               {matchingDraft?.mode==='article' && !text.trim() && <div className="empty-editor"><h3>이 채널 원고는 품질 검사를 통과하지 못했어.</h3><p>다른 채널 탭에는 사용 가능한 원고가 있을 수 있어. 빈 글은 게시하지 마.</p></div>}
