@@ -161,6 +161,10 @@ export default {
     }
     stage = "parse_openai_result";
     let result, sourceLinks = [];
+    let visitedUrls = new Set();
+    let distinctDomains = 0;
+    let generatedMode = "research_brief";
+    let failReasons = [];
     try {
       const data = await upstream.json();
       // A successful HTTP response can still be incomplete due to output-token budget.
@@ -195,7 +199,7 @@ export default {
         } catch { return ""; }
       };
       const retrievedByUrl = new Map(retrieved.map(src => [normalize(src.url), src]));
-      const visitedUrls = new Set(retrievedByUrl.keys());
+      visitedUrls = new Set(retrievedByUrl.keys());
       if (!webCalls.length) return reply({ error: "Web research did not run; no draft was created", code: "AI_NO_WEB_SEARCH", stage: "openai_response" }, 502);
       const parts = (data.output || []).flatMap(message => (message.content || [])
         .filter(part => part.type === "output_text").map(part => part.text));
@@ -224,15 +228,15 @@ export default {
         }
         sourceLinks = Array.from(unique.values()).slice(0, 10);
       }
-      const distinctDomains = new Set(sourceLinks.map(src => { try { return new URL(src.url).hostname.replace(/^www\./, ""); } catch { return ""; } }).filter(Boolean)).size;
+      distinctDomains = new Set(sourceLinks.map(src => { try { return new URL(src.url).hostname.replace(/^www\./, ""); } catch { return ""; } }).filter(Boolean)).size;
       // Fail closed when a model outputs a short generic memo instead of an article.
       // These heuristics are a format gate, NOT a substitute for human fact-checking.
       const substantive = value => typeof value === "string" &&
         value.trim().length >= 1000 &&
         (value.match(/^#{1,3}\s+.+/gm) || []).length >= 3 &&
         (value.match(/\[확인 필요\]|\[추가 독립 출처 필요\]/g) || []).length === 0;
-      const generatedMode = result.mode;
-      const failReasons = [];
+      generatedMode = result.mode;
+      failReasons = [];
       if (distinctDomains < 2) failReasons.push("서로 다른 웹사이트 출처가 2곳 미만");
       if (!substantive(result.naver)) failReasons.push("네이버 본문이 짧거나 소제목·구체성이 부족");
       if (!substantive(result.tistory)) failReasons.push("티스토리 본문이 짧거나 소제목·구체성이 부족");
