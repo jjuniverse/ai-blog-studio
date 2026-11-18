@@ -254,7 +254,9 @@ export default {
     // If the binding is invalid or temporarily unavailable, fail before incurring OpenAI costs.
     let generationLimit;
     try {
-      generationLimit = await env.GEN_LIMIT.limit({ key: "studio-generate-global" });
+      const rateKey = url.pathname === "/images" ? "studio-image-search" :
+        url.pathname === "/verify" ? "studio-claim-verification" : "studio-generate-global";
+      generationLimit = await env.GEN_LIMIT.limit({ key: rateKey });
     } catch (error) {
       console.error("generate limiter failed", { name: error?.name || "Error" });
       return reply({ error: "Generation rate limiter unavailable", code: "GEN_LIMIT_ERROR", stage: "generation_rate_limit" }, 503);
