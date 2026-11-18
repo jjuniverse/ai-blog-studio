@@ -30,6 +30,20 @@ type ResearchLead = {
   distinctSourceDomains?: number;
   officialSourceSuggested?: boolean;
 };
+type EvidenceReview = {
+  checkedAt: string;
+  status: string;
+  claims: { claim: string; status: 'supported' | 'uncertain' | 'conflicting'; explanation: string;
+    sourceOrganization: string; measurementPeriod: string; measurementBasis: string;
+    evidence: { url: string; title: string }[] }[];
+  freshnessNotes: string[];
+  correctionSuggestions: string[];
+  notice: string;
+};
+type ImageSearchResult = {
+  id: string; title: string; creator: string; license: string; licenseVersion: string;
+  licenseUrl: string; sourceUrl: string; imageUrl: string; thumbnailUrl: string; attribution: string;
+};
 type Draft = {
   id: string;
   mode?: "article" | "research_brief";
@@ -57,6 +71,8 @@ type LocalEdit = {
   publishedUrls: Partial<Record<'naver' | 'tistory', string>>;
   updatedAt: string;
   generatedVersion?: number;
+  evidenceReview?: Partial<Record<Channel, EvidenceReview>>;
+  selectedImage?: ImageSearchResult;
 };
 
 const ROOT = '/ai-blog-studio';
@@ -133,6 +149,12 @@ export default function Home() {
   const [studioPassphrase, setStudioPassphrase] = useState('');
   const [verifiedNotes, setVerifiedNotes] = useState('');
   const [generating, setGenerating] = useState(false);
+  const [verifying, setVerifying] = useState(false);
+  const [verifyError, setVerifyError] = useState('');
+  const [imageQuery, setImageQuery] = useState('');
+  const [imageSearching, setImageSearching] = useState(false);
+  const [imageError, setImageError] = useState('');
+  const [imageResults, setImageResults] = useState<ImageSearchResult[]>([]);
   const [generateError, setGenerateError] = useState('');
   const [connectionState, setConnectionState] = useState<'idle' | 'checking' | 'ready' | 'unconfigured' | 'unreachable'>('idle');
   const [connectionDetails, setConnectionDetails] = useState('');
@@ -314,6 +336,8 @@ export default function Home() {
             publishedUrls: old[selected.id]?.publishedUrls || {},
             updatedAt: new Date().toISOString(),
             generatedVersion: DRAFT_VERSION,
+            evidenceReview: {},
+            selectedImage: old[selected.id]?.selectedImage,
           },
         }));
       }
@@ -359,6 +383,8 @@ export default function Home() {
     ? '\n\n참고자료 (내용·저작권 확인 후 발행)\n' + matchingDraft.sourceLinks.map((source, i) => (i + 1) + '. ' + (source.title || '원문') + ' — ' + source.url).join('\n')
     : '';
   const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
+  const reviewed = saved?.evidenceReview?.[channel];
+  const selectedImage = saved?.selectedImage;
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
   const reviewCount = candidates.filter(x => x.status === 'research_required' || x.status === 'needs_sources').length;
@@ -375,6 +401,8 @@ export default function Home() {
       publishedUrls: { ...(old[editId]?.publishedUrls || {}), ...(patch.publishedUrls || {}) },
       updatedAt: new Date().toISOString(),
       generatedVersion: patch.generatedVersion ?? old[editId]?.generatedVersion,
+      evidenceReview: { ...(old[editId]?.evidenceReview || {}), ...(patch.evidenceReview || {}) },
+      selectedImage: patch.selectedImage ?? old[editId]?.selectedImage,
     } }));
   }
   function recoverStoredDraft() {
@@ -395,10 +423,46 @@ export default function Home() {
     setNotice('기존 초안을 백업한 뒤 이 화면에서 초기화했어. 새 자료 조사 버튼으로 다시 생성해 줘.');
   }
   function choose(id: string, next: Section = 'editor') {
+    setImageResults([]); setImageError(''); setImageQuery('');
     setSelectedId(id);
     setChannel('naver');
     setSection(next);
     setNotice('');
+  }
+  async function verifyCurrentDraft() {
+    if (!selected || !text.trim() || !studioPassphrase || verifying) return;
+    setVerifyError('');
+    setVerifying(true);
+    try {
+      const response = await fetch(WORKER_URL + '/verify', {
+        method:'POST',
+        headers:{ 'Content-Type':'application/json', 'X-Studio-Passphrase':studioPassphrase },
+        body:JSON.stringify({title: articleTitle, article:text, sources:matchingDraft?.sourceLinks || []}),
+      });
+      const value = await response.json().catch(()=>({}));
+      if (!response.ok || !value.result) throw Error(value.error || '검증 API 요청 실패 (HTTP '+response.status+')');
+      updateEdit({evidenceReview:{[channel]:value.result},verified:false});
+      setNotice('근거 대조 결과를 저장했어. 지원·충돌·미확인 판정은 참고용이며, 직접 출처를 확인해야 해.');
+    } catch (error) {setVerifyError(error instanceof Error ? error.message : '검증에 실패했어.');}
+    finally {setVerifying(false);}
+  }
+  async function searchImages() {
+    if (!studioPassphrase || !imageQuery.trim() || imageSearching) return;
+    setImageError('');
+    setImageSearching(true);
+    setImageResults([]);
+    try {
+      const response = await fetch(WORKER_URL + '/images', {
+        method:'POST',
+        headers:{'Content-Type':'application/json', 'X-Studio-Passphrase':studioPassphrase},
+        body:JSON.stringify({query:imageQuery.trim()}),
+      });
+      const value = await response.json().catch(()=>({}));
+      if (!response.ok || !Array.isArray(value.images)) throw Error(value.error || '이미지 검색 응답이 올바르지 않아.');
+      setImageResults(value.images as ImageSearchResult[]);
+      if (!value.images.length) setImageError('사용 조건이 명시된 이미지 후보가 없어. 다른 검색어를 시도하거나 자체 제작 카드를 사용해 줘.');
+    } catch (error) {setImageError(error instanceof Error?error.message:'이미지 검색 실패');}
+    finally {setImageSearching(false);}
   }
   async function copyToClipboard(content: string, target: 'title' | 'article') {
     if (!content.trim()) return;
@@ -579,6 +643,26 @@ export default function Home() {
                     {copyFeedback.kind==='success'?'✓ 복사됐어!':'복사에 실패했어'}
                   </span>}
                 </span><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
+                {channel !== 'shortform' && <div className="evidence-panel">
+                  <div className="panel-heading"><div><h3>원고 근거 대조</h3><p>현재 편집 중인 본문의 핵심 수치·날짜·순위를 추가 웹 검색으로 점검해.</p></div>
+                    <button className="btn btn-light" onClick={verifyCurrentDraft} disabled={verifying || !text.trim() || !studioPassphrase}>
+                      {verifying?'근거 확인 중…':'근거 대조 실행 (유료)'}
+                    </button>
+                  </div>
+                  {verifyError && <p className="generator-error" role="alert">{verifyError}</p>}
+                  {reviewed ? <>
+                    <p className="muted">마지막 검사: {new Date(reviewed.checkedAt).toLocaleString('ko-KR')} · 검증 보증이 아닌 AI 검색 기반 점검 결과야.</p>
+                    {reviewed.claims.map((claim,i)=><div className="evidence-claim" key={i}>
+                      <span className={'evidence-status '+claim.status}>{claim.status==='supported'?'근거 후보 있음':claim.status==='conflicting'?'상충 가능성':'확인 필요'}</span>
+                      <strong>{claim.claim}</strong>
+                      <p>{claim.explanation}</p>
+                      {(claim.sourceOrganization||claim.measurementPeriod||claim.measurementBasis) && <small>조사: {claim.sourceOrganization || '불명'} · 기간: {claim.measurementPeriod || '불명'} · 기준: {claim.measurementBasis || '불명'}</small>}
+                      {!!claim.evidence?.length && <div className="evidence-links">{claim.evidence.map((link,j)=><a key={j} href={link.url} target="_blank" rel="noopener noreferrer">{link.title || '확인한 출처'} ↗</a>)}</div>}
+                    </div>)}
+                    {!!reviewed.freshnessNotes?.length && <><strong>최신성 점검</strong><ul>{reviewed.freshnessNotes.map((note,i)=><li key={i}>{note}</li>)}</ul></>}
+                    {!!reviewed.correctionSuggestions?.length && <><strong>수정 제안</strong><ul>{reviewed.correctionSuggestions.map((suggestion,i)=><li key={i}>{suggestion}</li>)}</ul></>}
+                  </> : <p className="muted">아직 대조하지 않았어. 필요한 주제만 검사해서 API 비용을 줄여 줘.</p>}
+                </div>}
                 {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
               </> : null}
               {matchingDraft?.mode==='article' && !text.trim() && <div className="empty-editor"><h3>이 채널 원고는 품질 검사를 통과하지 못했어.</h3><p>다른 채널 탭에는 사용 가능한 원고가 있을 수 있어. 빈 글은 게시하지 마.</p></div>}
@@ -587,6 +671,29 @@ export default function Home() {
           </div>
           <aside className="studio-side">
             <div className="panel"><div className="panel-heading"><h2>이미지 배치 계획</h2><span>이미지 생성 전</span></div><p className="muted">글을 읽기 쉽게 만드는 세 가지 이미지 슬롯이야. 실제 이미지는 아직 생성되지 않아.</p>{images.map((img,i) => <div key={i} className="image-slot"><div className="image-placeholder"><span>{i === 0 ? '▣' : i === 1 ? '▤' : '☰'}</span><small>이미지 {i+1}</small></div><label><strong>{['대표 이미지', '본문 설명', '핵심 요약'][i]}</strong><textarea rows={3} aria-label={'이미지 '+(i+1)+' 설명'} value={img} onChange={e => updateEdit({imageNotes:images.map((v,k) => k === i ? e.target.value : v)})}/></label></div>)}</div>
+            <div className="panel">
+              <div className="panel-heading"><h2>실제 이미지 검색</h2><span>Openverse · 검색 무료</span></div>
+              <p className="muted">CC0 및 CC BY 후보만 탐색해. 공식 포스터나 방송 스틸컷은 사용 허가가 확인되지 않으면 가져오지 않아.</p>
+              <div className="image-search-row"><input value={imageQuery} onChange={e=>setImageQuery(e.target.value)} placeholder="예: 1930s Seoul street / vintage radio" aria-label="이미지 검색어" />
+                <button className="btn btn-primary" onClick={searchImages} disabled={!studioPassphrase || imageSearching || imageQuery.trim().length<2}>{imageSearching?'검색 중…':'이미지 검색'}</button>
+              </div>
+              <p className="muted">구체적인 배경·사물 검색어를 입력해. 드라마 제목으로 검색해도 실제 작품 사진이 검색된다는 보장은 없어.</p>
+              {imageError && <p className="generator-error" role="alert">{imageError}</p>}
+              {selectedImage && <div className="image-selected">
+                <strong>선택한 이미지 후보</strong>
+                <img src={selectedImage.thumbnailUrl} alt={selectedImage.title} loading="lazy" referrerPolicy="no-referrer" />
+                <p>{selectedImage.title} · {selectedImage.creator} · {selectedImage.license} {selectedImage.licenseVersion}</p>
+                <a href={selectedImage.sourceUrl} target="_blank" rel="noopener noreferrer">원본·이용 조건 확인 ↗</a>
+                <p className="muted">선택만 저장했어. 아직 원고에 자동 삽입되거나 다운로드된 것은 아니야.</p>
+              </div>}
+              {!!imageResults.length && <div className="licensed-image-grid">{imageResults.map(item=><div className="licensed-image" key={item.id}>
+                <img src={item.thumbnailUrl} alt={item.title} loading="lazy" referrerPolicy="no-referrer" />
+                <strong>{item.title}</strong><small>{item.creator} · {item.license} {item.licenseVersion}</small>
+                <div><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">원본 ↗</a> · <a href={item.licenseUrl} target="_blank" rel="noopener noreferrer">라이선스 ↗</a></div>
+                <button className="btn btn-light" onClick={()=>updateEdit({selectedImage:item,verified:false})}>이미지 후보 선택</button>
+              </div>)}</div>}
+              <p className="muted">Openverse의 라이선스 메타데이터는 이용 허가를 보증하지 않아. 원본 페이지에서 귀속 조건과 인물 초상권·상표권 등을 확인하고 사용해 줘.</p>
+            </div>
             <div className="panel"><h2>제작 원칙</h2><ul className="rules"><li>확인되지 않은 뉴스는 발행하지 않기</li><li>타 매체 기사나 사진 무단 복제 금지</li><li>정보 카드·직접 캡처 중심으로 제작</li><li>네이버와 티스토리 글은 별도로 검수</li></ul></div>
           </aside>
         </div>}
