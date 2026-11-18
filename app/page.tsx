@@ -473,9 +473,9 @@ export default function Home() {
                   {text.split(/\n+/).filter(Boolean).map((paragraph, i) => <div key={i}>
                     {/^#{1,3}\s+/.test(paragraph) ? <h2>{paragraph.replace(/^#{1,3}\s+/, '')}</h2> : <p>{paragraph}</p>}
                     {i === 0 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>}
-                    {i === 4 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[1]} variant="detail" index={1}/>}
+                    {i === 4 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={1}/>}
                   </div>)}
-                  {channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[2]} variant="summary" index={2}/>}
+                  {channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[2]} excerpt={text} variant="summary" index={2}/>}
                 </div> : <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
                 <div className="editor-toolbar"><button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
