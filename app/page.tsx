@@ -160,7 +160,7 @@ export default function Home() {
           const list = (a.value.candidates || []) as Candidate[];
           setCandidates(list);
           setUpdatedAt(a.value.generatedAt || '');
-          setSelectedId((id) => id || (list.find((x) => x.status === 'research_required') || list[0])?.id || '');
+          // Do not auto-select a headline: old drafts must only be shown after an explicit choice.
         } else setLoadError('후보 데이터를 읽지 못했어. 뉴스 수집 Actions를 확인해 줘.');
         if (b.status === 'fulfilled') setDrafts((b.value.drafts || []) as Draft[]);
         if (research.status === 'fulfilled') {
@@ -454,7 +454,10 @@ export default function Home() {
           <div className="editor-main">
             <div className="panel">
               <div className="panel-heading"><h2>제작할 주제</h2><span>{candidates.length}개 수집 후보</span></div>
-              <select className="wide-select" aria-label="주제 선택" value={selectedId} onChange={e => { setSelectedId(e.target.value); setNotice(''); }}>{candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}</select>
+              <select className="wide-select" aria-label="주제 선택" value={selectedId} onChange={e => { setSelectedId(e.target.value); setNotice(''); }}>
+                <option value="">주제를 선택해 줘</option>
+                {candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}
+              </select>
               {selected && <div className="source-summary"><div className="pill-row"><span className="pill">{selected.category}</span><span className={'pill ' + (selected.status === 'research_required' ? 'green' : 'yellow')}>{statusLabel[selected.status || 'needs_sources']}</span></div><p>{selected.reasons?.join(' · ')}</p><details><summary>참고 뉴스 {selected.headlines.length}개와 출처 보기</summary><ul>{selected.headlines.map((h,i) => <li key={i}><a href={h.url} target="_blank" rel="noreferrer">{h.publisher || '출처'} — {h.title} ↗</a></li>)}</ul></details></div>}
             </div>
             <div className="panel">
@@ -487,6 +490,7 @@ export default function Home() {
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
+              {!selected && <div className="empty-editor"><h3>아직 선택한 주제가 없어</h3><p>위에서 제작할 주제를 고르거나 아래 저장된 초안을 선택하면 해당 원고를 표시할게.</p></div>}
               <div className="draft-selector"><strong>AI 초안 · 내 브라우저 {localDrafts.length}건 / 서버 제공 {drafts.length}건</strong>
                 {localDrafts.length+drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : [...localDrafts, ...drafts.filter(d => !localDrafts.some(local => local.id === d.id))].map((d,i)=>{
                   const corresponding=candidates.find(c=>c.id===d.id||(d.sources||[]).some(src=>c.headlines.some(h=>h.url===src.url)));
@@ -581,8 +585,8 @@ export default function Home() {
           </aside>
         </div>}
         {section === 'publish' && <div className="publish-grid">
-          <div className="panel"><div className="panel-heading"><h2>발행 관리</h2><span>이 브라우저 전용 기록</span></div><div className="metric-grid compact"><div className="metric"><small>수정한 주제</small><strong>{editCount}</strong></div><div className="metric"><small>등록된 게시 URL</small><strong>{publishedCount}</strong></div></div><p className="muted">발행할 주제를 선택하고 실제 게시 후 주소를 입력해. 이 기록은 계정 연동이 아니라 브라우저에만 보관돼.</p><select className="wide-select" value={selectedId} onChange={e => setSelectedId(e.target.value)}>{candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}</select>
-            {(['naver','tistory'] as const).map(c => <div className="publish-row" key={c}><div><h3>{c === 'naver' ? '네이버 블로그' : '티스토리'}</h3><a target="_blank" rel="noreferrer" href={links[c]}>블로그 열기 ↗</a></div><input aria-label={(c === 'naver' ? '네이버' : '티스토리')+' 발행 URL'} placeholder="발행된 글 URL" value={urlInput[c]} onChange={e => setUrlInput(old => ({...old,[c]:e.target.value}))}/><button className="btn btn-primary" onClick={() => savePublished(c,urlInput[c])}>저장</button></div>)}
+          <div className="panel"><div className="panel-heading"><h2>발행 관리</h2><span>이 브라우저 전용 기록</span></div><div className="metric-grid compact"><div className="metric"><small>수정한 주제</small><strong>{editCount}</strong></div><div className="metric"><small>등록된 게시 URL</small><strong>{publishedCount}</strong></div></div><p className="muted">발행할 주제를 선택하고 실제 게시 후 주소를 입력해. 이 기록은 계정 연동이 아니라 브라우저에만 보관돼.</p><select className="wide-select" value={selectedId} aria-label="발행 관리 주제 선택" onChange={e => setSelectedId(e.target.value)}><option value="">발행할 주제를 선택해 줘</option>{candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}</select>
+            {(['naver','tistory'] as const).map(c => <div className="publish-row" key={c}><div><h3>{c === 'naver' ? '네이버 블로그' : '티스토리'}</h3><a target="_blank" rel="noreferrer" href={links[c]}>블로그 열기 ↗</a></div><input aria-label={(c === 'naver' ? '네이버' : '티스토리')+' 발행 URL'} placeholder="발행된 글 URL" value={urlInput[c]} onChange={e => setUrlInput(old => ({...old,[c]:e.target.value}))}/><button className="btn btn-primary" disabled={!selected} onClick={() => savePublished(c,urlInput[c])}>저장</button></div>)}
             <div className="editor-toolbar"><button className="btn btn-light" onClick={() => download('todaypick-local-backup.json',JSON.stringify(localEdits,null,2),'application/json')}>기기 내 작업 백업 (JSON)</button><button className="btn btn-light" onClick={() => setSection('editor')}>원고 검수하기 →</button></div>
           </div>
           <div className="panel"><h2>현재 지원 범위</h2><ul className="rules"><li>네이버·티스토리: 직접 발행 후 링크 저장</li><li>이미지: 삽입 위치·내용 계획만 지원</li><li>숏폼: 검수용 대본 편집까지 지원</li><li>자동 게시·영상 렌더링·계정 로그인: 아직 미구현</li></ul><div className="draft-warning">공개 GitHub Pages에 인증 기능은 없어. 민감한 원고를 다루거나 실제 자동 게시를 구현하려면 별도 인증 백엔드가 필요해.</div></div>
