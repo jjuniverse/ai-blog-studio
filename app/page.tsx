@@ -35,6 +35,7 @@ type Draft = {
   mode?: "article" | "research_brief";
   generatedAt?: string;
   generationVersion?: number;
+  comparedToPrevious?: 'changed' | 'same' | 'first' | 'brief';
   sourceLinks?: { title: string; url: string }[];
   researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
   qualityAudit?: { blogsAreCopies: boolean; shortformCopiesBlog: boolean; visualRightsWarning: boolean; warnings: string[] };
@@ -289,8 +290,14 @@ export default function Home() {
         throw new Error(detail + (response.status >= 500 ? ' · 서버 내부 오류야. 추가 생성은 누르지 말고 이 오류 문구를 알려줘.' : ''));
       }
       if (!payload.draft || !['naver','tistory','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
+      const previousText = saved?.fields?.naver || matchingDraft?.naver || '';
+      const newText = String(payload.draft.naver || '');
+      const comparedToPrevious = payload.draft.mode !== 'article' ? 'brief' :
+        !previousText.trim() ? 'first' :
+        previousText.trim() === newText.trim() ? 'same' : 'changed';
       const draft: Draft = {
         ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 3,
+        comparedToPrevious,
         status: payload.status || 'unverified_review_required',
         sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })),
       };
@@ -492,7 +499,9 @@ export default function Home() {
               {matchingDraft?.generatedAt ? <div className="research-lead" role="status">
                 <strong>마지막 AI 요청 결과 · {new Date(matchingDraft.generatedAt).toLocaleString('ko-KR')}</strong>
                 <p>{matchingDraft.mode==='article'
-                  ? '새로 받은 원고를 브라우저에 따로 보관하고 있어. 아래 글은 가장 최근 생성 결과야.'
+                  ? matchingDraft.comparedToPrevious==='same' ? 'API는 새로 응답했지만 네이버 본문이 이전 저장본과 완전히 동일해. 다른 주제로 시도하거나 원고를 직접 개선해 줘.'
+                    : matchingDraft.comparedToPrevious==='changed' ? '이전 저장본과 비교해 새 본문으로 변경됐어. 현재 화면에는 가장 최근 생성 결과가 표시돼.'
+                    : '가장 최근에 받은 원고야. 브라우저에 별도로 보관하고 있어.'
                   : '이번 조사에서 발행용 원고가 만들어지지 않았어. 이전 본문을 새 결과로 표시하지 않도록 숨겼어.'}</p>
               </div> : matchingDraft?.mode==='article' && saved?.fields?.[channel] ? <div className="research-lead">
                 <strong>이전 저장본 · 생성 시각 확인 불가</strong>
