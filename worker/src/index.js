@@ -256,12 +256,19 @@ export default {
       result.tistoryTitle = result.tistoryTitle.trim().slice(0, 110);
       const titleIsMissing = !result.naverTitle || !result.tistoryTitle;
       const titlesAreCopies = result.naverTitle === result.tistoryTitle;
-      const weakConclusion = /(?:기대감(?:이)?\s*(?:높|커)|앞으로의\s*전개.*기대|귀추가\s*주목|관심이\s*집중|지켜볼\s*필요가\s*있)/.test([result.naver, result.tistory]
-        .map(body => body.split(/\n\s*\n/).filter(Boolean).slice(-2).join(" ")).join(" "));
-      // This is a conservative *review flag*, not a factual verification.
-      const metricMentions = /(?:화제성|브랜드\s*평판|시청률|점유율|평판지수)/.test(result.naver+" "+result.tistory);
-      const metricContextMissing = metricMentions &&
-        !/(?:굿데이터|펀덱스|FUNdex|닐슨|한국기업평판|조사기관|집계기관|측정기관)/i.test(result.naver+" "+result.tistory);
+      const closingParagraphs = [result.naver, result.tistory].map(body =>
+        body.split(/\n\s*\n/).map(p => p.trim()).filter(p => p && !/^#{1,3}\s/.test(p) && !/^#\S/.test(p)).slice(-1).join(" "));
+      const weakConclusion = /(?:기대감(?:이)?\s*(?:높|커)|앞으로의\s*전개.*기대|귀추가\s*주목|관심이\s*집중|지켜볼\s*필요가\s*있)/.test(closingParagraphs.join(" "));
+      // Each metric paragraph should identify its own context, not borrow an unrelated survey elsewhere.
+      // Heuristics only flag missing context: they never assert an individual figure is true.
+      const metricsRequiringReview = [result.naver, result.tistory].flatMap(body =>
+        body.split(/\n\s*\n/).map(p => p.trim()).filter(p =>
+          /(?:화제성|브랜드\s*평판|시청률|점유율|평판지수)/.test(p) &&
+          /\d+(?:[.,]\d+)?\s*(?:%|위|점|만|억)/.test(p) &&
+          !/(?:굿데이터|펀덱스|FUNdex|닐슨|한국기업평판|조사기관|집계기관|측정기관|기준|조사|집계|발표)/i.test(p)
+        )
+      );
+      const metricContextMissing = metricsRequiringReview.length > 0;
       const comparable = text => String(text || "").replace(/\(\[[^\]]+\]\(https?:\/\/[^)]+\)\)/g, "").replace(/\s+/g, "").toLowerCase();
       const blogsAreCopies = comparable(result.naver).length > 250 &&
         comparable(result.naver) === comparable(result.tistory);
