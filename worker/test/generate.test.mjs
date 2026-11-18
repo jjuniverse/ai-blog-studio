@@ -62,3 +62,46 @@ test('complete OpenAI response yields a research audit and draft without a scope
     globalThis.fetch = originalFetch;
   }
 });
+
+test('short imperfect articles remain visible for revision instead of becoming empty research briefs', async () => {
+  const source = await readFile(new URL('../src/index.js', import.meta.url), 'utf8');
+  const worker = (await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'))).default;
+  const originalFetch = globalThis.fetch;
+  const body = '첫 문단은 중요한 사실을 설명해.\n\n## 조사 결과\n짧지만 사용자가 검수할 수 있는 본문이야.\n\n## 구체적 수치\n더 확인해야 할 수치가 있어.\n\n## 정리\n원문과 비교가 필요해.';
+  const sources = [
+    { title:'Media 1', url:'https://news-one.example/article' },
+    { title:'Media 2', url:'https://news-two.example/article' },
+  ];
+  globalThis.fetch = async () => Response.json({
+    status:'completed', output:[
+      {type:'web_search_call',action:{sources}},
+      {type:'message',content:[{type:'output_text',text:JSON.stringify({
+        mode:'article',title:'보도 내용 확인',naverTitle:'보도 내용과 조사 결과',tistoryTitle:'조사 결과 분석',
+        naver:body,tistory:body,shortform:body.slice(0,95),
+        verificationChecklist:[],imageNotes:['cover','detail','summary'],sourceLinks:sources,
+      })}]},
+    ],
+  });
+  try {
+    const env={
+      OPENAI_API_KEY:'dummy-key',STUDIO_PASSWORD:'a-password-long-enough',
+      AUTH_LIMIT:{limit:async()=>({success:true})},GEN_LIMIT:{limit:async()=>({success:true})},
+    };
+    const response=await worker.fetch(new Request('https://worker.example/generate',{
+      method:'POST',headers:{Origin:'https://jjuniverse.github.io',
+        'Content-Type':'application/json','X-Studio-Passphrase':env.STUDIO_PASSWORD},
+      body:JSON.stringify({title:'Good research topic title',category:'IT·AI',region:'KO',
+        status:'needs_sources',sources:[{title:'Good research topic title',publisher:'Example',url:'https://news.example/test'}]}),
+    }),env);
+    const result=await response.json();
+    assert.equal(response.status,200,JSON.stringify(result));
+    assert.equal(result.draft.mode,'article');
+    assert.equal(result.status,'revision_required');
+    assert.equal(result.draft.naver,body);
+    assert.equal(result.draft.tistory,body);
+    assert.ok(result.draft.shortform.length>0);
+    assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('본문이 짧거나')));
+  } finally {
+    globalThis.fetch=originalFetch;
+  }
+});
