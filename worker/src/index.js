@@ -407,12 +407,12 @@ export default {
         .replace(/[ \t]+\n/g, "\n");
       const ensureBrandHashtag = body => {
         const value = String(body || "").trimEnd();
-        if (!value.trim() || /(^|\\s)#오늘의픽(?=\\s|$)/m.test(value)) return value;
-        const lines = value.split("\\n");
+        if (!value.trim() || /(^|\s)#오늘의픽(?=\s|$)/m.test(value)) return value;
+        const lines = value.split("\n");
         const lastLine = lines[lines.length - 1]?.trim() || "";
-        return /^#[^#\\s]+(?:\\s+#[^#\\s]+)*$/.test(lastLine)
+        return /^#[^#\s]+(?:\s+#[^#\s]+)*$/.test(lastLine)
           ? value + " #오늘의픽"
-          : value + "\\n\\n## 관련 태그\\n#오늘의픽";
+          : value + "\n\n## 관련 태그\n#오늘의픽";
       };
       result.naver = result.mode === "article" ? ensureBrandHashtag(stripInlineLinks(result.naver)) : stripInlineLinks(result.naver);
       result.tistory = result.mode === "article" ? ensureBrandHashtag(stripInlineLinks(result.tistory)) : stripInlineLinks(result.tistory);
