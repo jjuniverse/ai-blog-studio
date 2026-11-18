@@ -320,7 +320,10 @@ export default function Home() {
   const text = legacyStored ? (saved?.fields?.[channel] || '') : legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
   const articleTitle = channel === 'shortform' ? (matchingDraft?.title || selected?.title || '') :
     (saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '');
-  const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text;
+  const referenceAppendix = matchingDraft?.sourceLinks?.length
+    ? '\n\n참고자료 (내용·저작권 확인 후 발행)\n' + matchingDraft.sourceLinks.map((source, i) => (i + 1) + '. ' + (source.title || '원문') + ' — ' + source.url).join('\n')
+    : '';
+  const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
   const reviewCount = candidates.filter(x => x.status === 'research_required' || x.status === 'needs_sources').length;
