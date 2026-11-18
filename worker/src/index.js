@@ -33,6 +33,8 @@ const schema = {
   properties: {
     mode: { type: "string", enum: ["article", "research_brief"] },
     title: { type: "string" },
+    naverTitle: { type: "string" },
+    tistoryTitle: { type: "string" },
     naver: { type: "string" },
     tistory: { type: "string" },
     shortform: { type: "string" },
@@ -48,7 +50,7 @@ const schema = {
       }
     }
   },
-  required: ["mode", "title", "naver", "tistory", "shortform", "verificationChecklist", "imageNotes", "sourceLinks"],
+  required: ["mode", "title", "naverTitle", "tistoryTitle", "naver", "tistory", "shortform", "verificationChecklist", "imageNotes", "sourceLinks"],
 };
 function cleanInput(input) {
   if (!input || typeof input !== "object" || typeof input.title !== "string" || input.title.trim().length < 8 || input.title.length > 250) return null;
@@ -126,7 +128,11 @@ export default {
       "Avoid generic AI filler, motivational boilerplate, repeated disclaimers and thin paragraphs. Write useful specifics grounded in the consulted sources.",
       "Only assert details explicitly supported by credible web search findings or by the user's verified notes. Append source URLs in a references section; do not copy news article passages.",
       "If you cannot identify adequate reliable supporting material, return mode='research_brief', set naver/tistory/shortform to empty strings, and provide precise verificationChecklist instead of filler text. Never repeat 'needs verification' as a fake article.",
-      "If good sources exist, return mode='article' and write TWO DISTINCT Korean blog articles, not a duplicated article with two labels. Naver: approx 1100-1700 Korean characters, a reader-friendly conversational opening, meaningful context, specific explanations, 4-6 substantive sections and relevant tags. Tistory: approx 1300-2000 Korean characters, a more structured SEO-oriented analytical angle, factual timelines, specific details, FAQs and a sources section. Change the information architecture and wording, not just the title. Do not stretch with speculation.",
+      "Write naverTitle and tistoryTitle as two distinct, concise, search-intent-aware Korean titles about ONLY verified material, without clickbait or fabricated rankings. Keep title as the underlying researched topic. No title heading inside naver/tistory body; each platform receives its own separate title field.",
+      "If good sources exist, return mode='article' and write TWO DISTINCT Korean blog articles, not a duplicated article with two labels. Naver: approx 1100-1700 Korean characters, a reader-friendly hook naming what the reader will learn, clear evidence-based context, useful concrete explanations, 4-6 substantive sections and relevant tags. Tistory: approx 1300-2000 Korean characters, SEO-oriented analytical structure, factual timeline, specific details and useful FAQs. Do not force speculation or pretend to know audiences' motivations. If saying WHY an issue is popular, label evidenced reasons vs editorial interpretation.",
+      "Never conflate different metrics: TV/OTT topic buzz, cast-member buzz, personal brand reputation and television ratings are distinct. Give each metric its measurement organization, period, population and basis (e.g. share vs rating) when these are confirmed; otherwise omit that metric or mark it as an explicit research question. Never combine percentages or attribute brand-reputation indices to a buzz ranking.",
+      "Conclude with a specific, reader-useful takeaway tied to sourced facts: for example exactly what is known, where to check official schedules or what important data remains uncertain. Avoid generic predictions like high expectations, growing excitement or exciting developments.",
+      "Write clean text with ## section headings and plain paragraphs, not Markdown source-link syntax. Do not include ([publisher](url)), raw hyperlinks, [citation] markers or invented citations in the body. Put links ONLY in sourceLinks; the application renders a separate reference section. Do not plagiarize article passages.",
       "For each section use information with real substance, not generic commentary; if a topic is too thin, switch to research_brief.",
       "Write a genuine 35-45 second vertical-video SCRIPT only if mode=article: short hook (0-3 seconds), 3-4 specific factual beats, clear on-screen captions/scenes and a closing takeaway. English when region is EN, otherwise Korean. Never copy the blog introduction or append raw citation URLs into spoken narration.",
       "Provide exactly 3 imageNotes describing ONLY new, original designs using verified information: a text-based cover card, a self-produced explanatory timeline/chart, and a summary graphic. No broadcaster stills, posters, press photos, celebrity likenesses, screenshots or third-party visual assets unless usage rights have been independently confirmed. Do not imply images have already been generated.",
@@ -209,7 +215,7 @@ export default {
       } catch {
         return reply({ error: "AI returned invalid or truncated JSON", code: "AI_INVALID_JSON", stage: "parse_openai_result" }, 502);
       }
-      if (!["article", "research_brief"].includes(result.mode) || !["naver", "tistory", "shortform", "title"].every(key => typeof result[key] === "string") ||
+      if (!["article", "research_brief"].includes(result.mode) || !["naver", "tistory", "shortform", "title", "naverTitle", "tistoryTitle"].every(key => typeof result[key] === "string") ||
           !Array.isArray(result.imageNotes) || result.imageNotes.length !== 3 ||
           !Array.isArray(result.verificationChecklist) || !Array.isArray(result.sourceLinks)) throw Error("Invalid draft schema");
       const verifiedLinks = (result.sourceLinks || []).filter(src => src && typeof src.url === "string" &&
@@ -237,6 +243,25 @@ export default {
         (value.match(/\[확인 필요\]|\[추가 독립 출처 필요\]/g) || []).length === 0;
       generatedMode = result.mode;
       failReasons = [];
+      // Remove raw source-link syntax from publication copy; sourceLinks are shown separately.
+      const stripInlineLinks = value => String(value || "")
+        .replace(/\(\[([^\]]+)\]\(https?:\/\/[^)]+\)\)/g, " ($1)")
+        .replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g, "$1")
+        .replace(/https?:\/\/[^\s)]+/g, "")
+        .replace(/\(\s*\)/g, "")
+        .replace(/[ \t]+\n/g, "\n");
+      result.naver = stripInlineLinks(result.naver);
+      result.tistory = stripInlineLinks(result.tistory);
+      result.naverTitle = result.naverTitle.trim().slice(0, 110);
+      result.tistoryTitle = result.tistoryTitle.trim().slice(0, 110);
+      const titleIsMissing = !result.naverTitle || !result.tistoryTitle;
+      const titlesAreCopies = result.naverTitle === result.tistoryTitle;
+      const weakConclusion = /(?:기대감(?:이)?\s*(?:높|커)|앞으로의\s*전개.*기대|귀추가\s*주목|관심이\s*집중|지켜볼\s*필요가\s*있)/.test([result.naver, result.tistory]
+        .map(body => body.split(/\n\s*\n/).filter(Boolean).slice(-2).join(" ")).join(" "));
+      // This is a conservative *review flag*, not a factual verification.
+      const metricMentions = /(?:화제성|브랜드\s*평판|시청률|점유율|평판지수)/.test(result.naver+" "+result.tistory);
+      const metricContextMissing = metricMentions &&
+        !/(?:굿데이터|펀덱스|FUNdex|닐슨|한국기업평판|조사기관|집계기관|측정기관)/i.test(result.naver+" "+result.tistory);
       const comparable = text => String(text || "").replace(/\(\[[^\]]+\]\(https?:\/\/[^)]+\)\)/g, "").replace(/\s+/g, "").toLowerCase();
       const blogsAreCopies = comparable(result.naver).length > 250 &&
         comparable(result.naver) === comparable(result.tistory);
@@ -246,6 +271,10 @@ export default {
       const visualRightsWarning = result.imageNotes.some(note =>
         /(?:공식\s*포스터|스틸\s*컷|스틸컷|방송\s*장면|연예인\s*사진|press\s*photo|official\s*poster|screenshot)/i.test(note));
       const editorialWarnings = [];
+      if (titleIsMissing) editorialWarnings.push("채널별 제목 누락: 검색 제목을 직접 검토해 줘");
+      if (titlesAreCopies) editorialWarnings.push("네이버·티스토리 제목이 같아 차별화가 필요해");
+      if (weakConclusion) editorialWarnings.push("구체적인 정보 없이 전망·기대감으로 끝나는 결론을 고쳐 줘");
+      if (metricContextMissing) editorialWarnings.push("숫자와 순위의 조사기관·조사 기간·대상을 확인해 줘");
       if (blogsAreCopies) editorialWarnings.push("네이버·티스토리 원고가 동일해 채널별 재작성 필요");
       if (shortformCopiesBlog) editorialWarnings.push("숏폼 대본이 블로그 서론을 복사해 별도 대본 작성 필요");
       if (visualRightsWarning) editorialWarnings.push("이미지 제안에 제3자 저작물이 포함돼 자체 제작 카드로 교체");
@@ -257,7 +286,7 @@ export default {
       if (shortformCopiesBlog) result.shortform = "";
       if (blogsAreCopies) result.verificationChecklist.unshift("네이버와 티스토리가 동일한 원고야. 한쪽은 구조와 관점을 바꿔 별도로 작성하고 발행해.");
       if (shortformCopiesBlog) result.verificationChecklist.unshift("숏폼 대본이 블로그 서론과 동일해서 제거했어. 영상용 훅·장면·자막으로 다시 작성해야 해.");
-      result.qualityAudit = { blogsAreCopies, shortformCopiesBlog, visualRightsWarning, warnings: editorialWarnings };
+      result.qualityAudit = { blogsAreCopies, shortformCopiesBlog, visualRightsWarning, titleIsMissing, titlesAreCopies, weakConclusion, metricContextMissing, warnings: editorialWarnings };
       if (distinctDomains < 2) failReasons.push("서로 다른 웹사이트 출처가 2곳 미만");
       if (!substantive(result.naver)) failReasons.push("네이버 본문이 짧거나 소제목·구체성이 부족");
       if (!substantive(result.tistory)) failReasons.push("티스토리 본문이 짧거나 소제목·구체성이 부족");
@@ -287,7 +316,7 @@ export default {
       return reply({ error: "AI response did not match expected draft structure", code: "AI_DRAFT_FORMAT_ERROR", stage: "parse_openai_result" }, 502);
     }
     result.sourceLinks = sourceLinks;
-    const needsRevision = result.mode === "article" && (result.qualityAudit?.blogsAreCopies || result.qualityAudit?.shortformCopiesBlog);
+    const needsRevision = result.mode === "article" && result.qualityAudit?.warnings?.length > 0;
     result.researchAudit = {
       searchedSourceCount: visitedUrls.size,
       returnedSourceCount: sourceLinks.length,
