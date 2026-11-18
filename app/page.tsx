@@ -33,6 +33,8 @@ type ResearchLead = {
 type Draft = {
   id: string;
   mode?: "article" | "research_brief";
+  generatedAt?: string;
+  generationVersion?: number;
   sourceLinks?: { title: string; url: string }[];
   researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
   qualityAudit?: { blogsAreCopies: boolean; shortformCopiesBlog: boolean; visualRightsWarning: boolean; warnings: string[] };
@@ -59,6 +61,7 @@ type LocalEdit = {
 const ROOT = '/ai-blog-studio';
 const WORKER_URL = 'https://todaypick-studio-api.jjuniverse-plant-lens.workers.dev';
 const EDIT_KEY = 'todaypick_workspace_v1';
+const GENERATED_DRAFTS_KEY = 'todaypick_generated_drafts_v1';
 const DRAFT_VERSION = 2;
 const channels: { id: Channel; label: string }[] = [
   { id: 'naver', label: '네이버 블로그' },
@@ -111,6 +114,7 @@ export default function Home() {
   const [section, setSection] = useState<Section>('discover');
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [drafts, setDrafts] = useState<Draft[]>([]);
+  const [localDrafts, setLocalDrafts] = useState<Draft[]>([]);
   const [researchLeads, setResearchLeads] = useState<ResearchLead[]>([]);
   const [researchDailyLimit, setResearchDailyLimit] = useState(3);
   const [loading, setLoading] = useState(true);
@@ -140,6 +144,13 @@ export default function Home() {
         const parsed: unknown = JSON.parse(raw);
         if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) setLocalEdits(parsed as Record<string, LocalEdit>);
       }
+      const generated = window.localStorage.getItem(GENERATED_DRAFTS_KEY);
+      if (generated) {
+        const parsed: unknown = JSON.parse(generated);
+        if (Array.isArray(parsed)) setLocalDrafts(parsed.filter((entry): entry is Draft =>
+          !!entry && typeof entry === 'object' && typeof entry.id === 'string' &&
+          (entry.mode === 'article' || entry.mode === 'research_brief')).slice(0, 40));
+      }
     } catch { /* private mode or disabled local storage */ }
     setHydrated(true);
     Promise.allSettled([publicFile('/data/candidates.json'), publicFile('/data/drafts.json'), publicFile('/data/research.json')])
@@ -161,6 +172,11 @@ export default function Home() {
     if (!hydrated) return;
     try { window.localStorage.setItem(EDIT_KEY, JSON.stringify(localEdits)); } catch { setNotice('브라우저 저장 공간을 사용할 수 없어. 내보내기로 백업해 줘.'); }
   }, [localEdits, hydrated]);
+  useEffect(() => {
+    if (!hydrated) return;
+    try { window.localStorage.setItem(GENERATED_DRAFTS_KEY, JSON.stringify(localDrafts.slice(0, 40))); }
+    catch { setNotice('생성 결과 보관 공간이 부족해. 중요한 원고는 텍스트 파일로 저장해 줘.'); }
+  }, [localDrafts, hydrated]);
 
   useEffect(() => {
     if (!copyFeedback) return;
@@ -273,8 +289,13 @@ export default function Home() {
         throw new Error(detail + (response.status >= 500 ? ' · 서버 내부 오류야. 추가 생성은 누르지 말고 이 오류 문구를 알려줘.' : ''));
       }
       if (!payload.draft || !['naver','tistory','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
-      const draft: Draft = { ...payload.draft, id: selected.id, status: payload.status || 'unverified_review_required', sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })) };
-      setDrafts(old => [draft, ...old.filter(x => x.id !== selected.id && !(x.sources || []).some(z => selected.headlines.some(h => h.url === z.url)))]);
+      const draft: Draft = {
+        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 3,
+        status: payload.status || 'unverified_review_required',
+        sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })),
+      };
+      // Preserve the most recent paid response separately from bundled public files.
+      setLocalDrafts(old => [draft, ...old.filter(x => x.id !== selected.id)]);
       if (draft.mode === 'article') {
         setLocalEdits(old => ({
           ...old,
@@ -311,16 +332,23 @@ export default function Home() {
   }), [candidates, category, showExcluded, query]);
   const selected = candidates.find(x => x.id === selectedId);
   const activeResearch = researchLeads.find(x => x.candidateId === selectedId);
-  const matchingDraft = selected && drafts.find(d => d.id === selected.id || (d.sources || []).some(s => selected.headlines.some(h => h.url === s.url)));
+  const matchingDraft = selected && (
+    localDrafts.find(d => d.id === selected.id) ||
+    drafts.find(d => d.id === selected.id || (d.sources || []).some(s => selected.headlines.some(h => h.url === s.url)))
+  );
   const editId = selected?.id || '';
   const saved = localEdits[editId];
   const legacyStored = !!saved && saved.generatedVersion !== DRAFT_VERSION && Object.values(saved.fields || {}).some(value => !!value?.trim());
   const legacyPublic = !!matchingDraft && matchingDraft.mode !== 'article' && matchingDraft.mode !== 'research_brief';
-  const currentDraft = !legacyStored && !legacyPublic && (matchingDraft?.mode === 'article' || !!saved?.fields?.[channel]);
-  const text = legacyStored ? (saved?.fields?.[channel] || '') : legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
+  // When latest research cannot produce an article, never mix its new sources with an old cached body.
+  const currentDraft = !legacyStored && !legacyPublic && matchingDraft?.mode !== 'research_brief' &&
+    (matchingDraft?.mode === 'article' || !!saved?.fields?.[channel]);
+  const text = matchingDraft?.mode === 'research_brief' ? '' :
+    legacyStored ? (saved?.fields?.[channel] || '') :
+    legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
   const articleTitle = channel === 'shortform' ? (matchingDraft?.title || selected?.title || '') :
     (saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '');
-  const referenceAppendix = matchingDraft?.sourceLinks?.length
+  const referenceAppendix = matchingDraft?.mode === 'article' && matchingDraft?.sourceLinks?.length
     ? '\n\n참고자료 (내용·저작권 확인 후 발행)\n' + matchingDraft.sourceLinks.map((source, i) => (i + 1) + '. ' + (source.title || '원문') + ' — ' + source.url).join('\n')
     : '';
   const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
@@ -452,8 +480,8 @@ export default function Home() {
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
-              <div className="draft-selector"><strong>생성된 AI 초안 {drafts.length}건</strong>
-                {drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : drafts.map((d,i)=>{
+              <div className="draft-selector"><strong>AI 초안 · 내 브라우저 {localDrafts.length}건 / 서버 제공 {drafts.length}건</strong>
+                {localDrafts.length+drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : [...localDrafts, ...drafts.filter(d => !localDrafts.some(local => local.id === d.id))].map((d,i)=>{
                   const corresponding=candidates.find(c=>c.id===d.id||(d.sources||[]).some(src=>c.headlines.some(h=>h.url===src.url)));
                   return <button type="button" key={d.id+'-'+i} className="saved-draft" disabled={!corresponding} onClick={()=>{if(corresponding){setSelectedId(corresponding.id);setChannel('naver');setNotice('기존 AI 검수 초안을 불러왔어.');}}}>
                     <span><b>{d.title}</b><small>{corresponding?'네이버·티스토리·숏폼 초안 보기':'현재 뉴스 목록에서 해당 주제를 찾을 수 없어'}</small></span><span>보기 →</span>
@@ -461,6 +489,15 @@ export default function Home() {
                 })}
                 <p className="muted">초안은 발행용 완성 글이 아니라 출처 검증이 필요한 준비 자료야.</p>
               </div>
+              {matchingDraft?.generatedAt ? <div className="research-lead" role="status">
+                <strong>마지막 AI 요청 결과 · {new Date(matchingDraft.generatedAt).toLocaleString('ko-KR')}</strong>
+                <p>{matchingDraft.mode==='article'
+                  ? '새로 받은 원고를 브라우저에 따로 보관하고 있어. 아래 글은 가장 최근 생성 결과야.'
+                  : '이번 조사에서 발행용 원고가 만들어지지 않았어. 이전 본문을 새 결과로 표시하지 않도록 숨겼어.'}</p>
+              </div> : matchingDraft?.mode==='article' && saved?.fields?.[channel] ? <div className="research-lead">
+                <strong>이전 저장본 · 생성 시각 확인 불가</strong>
+                <p>현재 보이는 글은 이전 브라우저 저장본일 수 있어. 새로 생성된 원고라고 판단하지 말아 줘.</p>
+              </div> : null}
               {(legacyStored || legacyPublic) && <div className="legacy-draft-warning">
                 <strong>저장된 원고의 버전 정보가 없어</strong>
                 <p>원고 자체는 브라우저에 남아 있어. 이전 버전일 수도 있고, 새 생성 후 버전 정보만 빠졌을 수도 있어. 재생성 없이 내용을 복구해 확인할 수 있어.</p>
