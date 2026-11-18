@@ -23,7 +23,7 @@ test('complete OpenAI response yields a research audit and draft without a scope
           mode: 'article', title, naverTitle: 'Useful AI software announcement and how to use it',
           tistoryTitle: 'AI software release: features and detailed setup', naver: article, tistory: article,
           shortform: 'An informative script that has enough content to pass the short-form length requirement.',
-          verificationChecklist: [], imageNotes: ['Cover','Illustration','Summary'],
+          verificationChecklist: [], imageNotes: ['Cover','Illustration','Summary'], imageKeywords: ['Useful productivity news','software release'],
           sourceLinks,
         }),
       }] },
@@ -49,6 +49,7 @@ test('complete OpenAI response yields a research audit and draft without a scope
     const result = await response.json();
     assert.equal(response.status, 200, JSON.stringify(result));
     assert.equal(result.draft.mode, 'article');
+    assert.equal(result.draft.imageKeywords.length, 2);
     assert.match(result.draft.naver, /#오늘의픽/);
     assert.match(result.draft.tistory, /#오늘의픽/);
     assert.equal((result.draft.naver.match(/#오늘의픽/g)||[]).length, 1);
@@ -81,7 +82,7 @@ test('short imperfect articles remain visible for revision instead of becoming e
       {type:'message',content:[{type:'output_text',text:JSON.stringify({
         mode:'article',title:'보도 내용 확인',naverTitle:'보도 내용과 조사 결과',tistoryTitle:'조사 결과 분석',
         naver:body,tistory:body,shortform:body.slice(0,95),
-        verificationChecklist:[],imageNotes:['cover','detail','summary'],sourceLinks:sources,
+        verificationChecklist:[],imageNotes:['cover','detail','summary'],imageKeywords:['보도 내용','조사 결과'],sourceLinks:sources,
       })}]},
     ],
   });
