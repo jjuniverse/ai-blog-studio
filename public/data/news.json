@@ -1,20 +1,76 @@
 {
-  "fetchedAt": "2026-11-18T00:43:44.227384+00:00",
+  "fetchedAt": "2026-11-18T06:33:36.272314+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
   "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
   "categoryCounts": {
-    "연예/KO": 13,
-    "K-pop/KO": 4,
+    "연예/KO": 16,
+    "K-pop/KO": 5,
     "IT·AI/KO": 3,
-    "생활 정보/KO": 5,
+    "생활 정보/KO": 4,
     "K-pop/EN": 10,
     "K-드라마/EN": 4,
-    "AI·생산성/EN": 25
+    "AI·생산성/EN": 23
   },
   "retainedFromPrevious": 0,
   "items": [
+    {
+      "title": "‘데블스 플랜: 데드 어게인’, 터졌다…장동민도 화제성 1위 쌍끌이 - 일간스포츠",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE82MDREYkVBSjkxSUdQWTJBQ1BKeWk0SXpoRzBPczZIbDhGdFBmbjFWbERIcERnb2E4X3NKRXdXV2cxX1otRmU1ZWl1TnNlZnd0eVFxMklPZm5IcDQ?oc=5",
+      "publisher": "일간스포츠",
+      "publishedAt": "2026-11-18T05:58:00+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "11월 2주차, 화제성 1위는 `데블스 플랜3`…출연자는 `장동민` [공식] - 마이데일리",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9QUHlDdXhRcmZxcEYwS056Ry1wdVMzQm0xZmh2SlNITmQtcm9DcXYxalJES3BLbWlQZzdoUlBodmF5R3J6MmhHT2oyYVRSYktMU242eU9TM2RvNkkzX1NhQ3ZtZHQ4Zw?oc=5",
+      "publisher": "마이데일리",
+      "publishedAt": "2026-11-18T05:42:00+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "[공식]장동민의 위엄..'데블스 플랜3' 이끌고 화제성 단숨에 '1위' - 스타뉴스",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8wNThpRDZxSXh1ZzlGYi1ZakRjNkE5d3VQN1AzQ09yU2JoVGt2bTYyTXhGNmtXaVRqMFJGRHZFQTRoSjZiemJpdmxyVUFPdWp1cWlfeGZMUFRMOWlvLUV6clUybEtmcFg0RDVVWGRnZnRKR28?oc=5",
+      "publisher": "스타뉴스",
+      "publishedAt": "2026-11-18T05:31:44+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "Iress (ASX:IRE) Rolls AI Into Xplan: Can It Win Ground With Advisers? - Kalkine Media",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNjJ0Z1dWaGNDcWtPbGdibXFBVFdZMkNpbjVoY0h0WG5WZ0ozM2FRQVFwZmlobGhxMUotZHBockJwZ0ozR19rSnh2Q2g5UmJyTUpfb3ZSdnBaVm43VThQTFFPc1hOY1FBazJ3SjZDVU15R2RzaEZ5bUxKdkljOGdSOWllX1F5cWNlYXliUTk0S280WGxIYThYek1CcXVRamgwVWJ0MFJpOEROV0lrQzhv?oc=5",
+      "publisher": "Kalkine Media",
+      "publishedAt": "2026-11-18T05:08:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "“장혁 포스 후덜덜” 300억 대작 ‘문무’ 풀렸다‥시청률은 4%대인데 OTT 올킬 - 뉴스엔",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBQYmhyN0VhaWU3dVY1LW9WSm1ydVRrVEVqRjNtSGNDYVY1cS1id3B0WWJRTHFYa1R5bml3alRUa1k1NHdqQzV3MW92RDlRNTE1SWJ6RlVjYmlnUW1XZmpCdnRVZVU1RmF3akNqSUx4OWhYM25jREFWcXdFcw?oc=5",
+      "publisher": "뉴스엔",
+      "publishedAt": "2026-11-18T02:27:36+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "시청률X화제성 다 잡은 ‘100일’ 김유정♥박진영, 3주 연속 1·2위 싹쓸이 - 뉴스엔",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE55OUgtUVlLdE94aHJmRkFIZkM0WndXRjF6Z3k5SkdpS1IyQktwWmdmNkVPbUVfVXk5SlprNWNMc3pNMDdSMUxYekwwc1FnVmQxM1RVUXlFRGpZRUZPYVJmaXJXR0pfQW9tWXgyR3NpNEoteVBqdWRCdFEzUQ?oc=5",
+      "publisher": "뉴스엔",
+      "publishedAt": "2026-11-18T00:30:13+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "'광고 블루칩' 남주연, 새 둥지 틀고 연기 핫페이스 부각 - 미디어펜",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB5OEJQU0dkNlNEQ2w3T0lJbktRR0pCTklqTGZySDhRM09OQ2tla3FGUnR4SlV0eEZPb25ob2RrdEVoS1JyRG9ia3pPNGFWdGxhOHVxa1hrb0bSAVhBVV95cUxQeThCUFNHZDZTRENsN09JSW5LUUdKQk5Jakxmckg4UTNPTkNrZWtxRlJ0eEpVdHhGT29uaG9ka3RFaEtSckRvYmt6TzRhVnRsYTh1cWtYa29G?oc=5",
+      "publisher": "미디어펜",
+      "publishedAt": "2026-11-17T23:40:27+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
     {
       "title": "Microsoft unveiled Copilot Workspaces at Ignite 2026, plus more AI workplace updates - ZDNET",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vM3I1eVdpS3BYY2dTY3lyQ09POGVTS2hoczVGbUNEMERoU1IyLVlzM2tickNtTEZLY3ZYUmJsVlE0TDh5UU1lUGJPMUlReVFTOUtEZktYV3RuVjQxV3RCalNWd3Q2cEFpUHRpVjdhWkg3V3FWb3NVUUhVVUdhRjg?oc=5",
@@ -36,22 +92,6 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORHBGcTZfSUo1NDdJTWN3aUQ4cVEzcjNucTJ1T0JxMTRyal9uejlYYXdRRkxLMGg2MWZuQV9ldTVadm1UaEx1OFVIaVV6cVZ3Q0V2MGFoX2tuNURKT1J1N2VDUE0xY0V4c0lYQTZKRWtJUXZIQ25lQnZzbE5leDRra0JjY0MzVld3R3JrbXRBalJpSmZtZDdRR0tqcmdFMnJCczNPUWtDWG13b3hPZXBXRFZYSVhWRUU?oc=5",
       "publisher": "Windows Report",
       "publishedAt": "2026-11-17T21:12:10+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "AI automated vulnerability exploitation: GTIG's report - NeoTeo",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOGczZ3ZEQldBZzZBUUItaEJ0ek9HM2d4UVY5NFBPN3J0dk9Rb09rMGcxa2U2elI3RHVYVWl0X2VKMHp1SHVybGZfLWJOSnZKODJGT0JvWGwyNi0tdG44WHVTbEFiNkZiVHNleEExbVgtWmFacS1vbFk5V3pHS1FLWmJvaEtZTWFJcDBNOFNocXdtNTlRcy1MN2hPcGxYSlJkNjg4?oc=5",
-      "publisher": "NeoTeo",
-      "publishedAt": "2026-11-17T20:58:24+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Business Central + Copilot: $6 CSP Savings Start in 2027 - JournalArta",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPeGMyUW4yaDdUdy0zLWFjVmhqRVBvQnU4MDZMdjRsWklTT1lKWnFkUV96WHdrX1I4MUVMVXN4RWxZRzNFekk4alhNNENVenpBclRNVWpSMUVnUW81bHVFN0h2TXVyYW5hWnJtM2thNjlmTlVrWndQLXdZOEd0UjBGME1VMHRJUnRMM0Z2cU5nVG45SWJCdkpoeWt3?oc=5",
-      "publisher": "JournalArta",
-      "publishedAt": "2026-11-17T20:37:38+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -101,6 +141,22 @@
       "publisher": "Facebook",
       "publishedAt": "2026-11-17T16:13:53+00:00",
       "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Compare TimeLake vs. WorkflowPulse in 2026 - Slashdot",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBhS1I5YTlmUmxRZ0IxOGJHZ3RnNU4zTzZoV0pxaDRscDk5d2F6QlI0TTE0U2dvZk5LME1GMjVHQjFzbWdWeWtVa1JpVTZWbS12M0RMRkIyZ1dOZnMtY0x6SGRDbFdJbS1CUGgwczNMUHVIY2tmNFE?oc=5",
+      "publisher": "Slashdot",
+      "publishedAt": "2026-11-17T16:13:04+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Microsoft's Outage Barely Moved Its Stock, But a Bigger Risk May Be Building - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOLUgtbEtHTXV4UnFmSmVQUWd1akJwa05VQ1hEQ24xUldobnBqWldra3ZRTlVNbXd1SWxJX19jcGtZR19jRld1QUNyMjhCT2c4LWswWXFmeWR0SUJOcHFTQ2h6MG1zNTRpVDBtbWt4VEotZXNRTGhXTF9LVzNZQ0JIemFhZ0R6OGp1aVE2b0lkbHY1c0hRMHhCWXpxRE01bmdSb0F3dFVtU2dqdmY2TjA4Z2pXaU9ncHktb0hhdXlRbUtyakxlQk1XVWctWjM4bGJSVVE?oc=5",
+      "publisher": "TradingView",
+      "publishedAt": "2026-11-17T13:10:00+00:00",
+      "category": "AI·생산성",
       "region": "EN"
     },
     {
@@ -224,14 +280,6 @@
       "region": "KO"
     },
     {
-      "title": "NEW of PRFAA - Puerto Rico Federal Affairs Administration (.gov)",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONXpfdnVhME5hSzEzNHIyWDVSZC1fcmZ1dEtpZFQxdkJ0VnVlUTFkSzMwa3NEY1lUZ0xnS2JiNjBISEhFOUhvdUN3VFZ3aXNTb1lkcjhhSUlhSUpTd3NPMWhpTWJZXzVHY3dSeGkxQnZIWTNSZ0d5YXpUN3FBUkhQNWZFT25pYVRhZFp3Qnc5U0ZxV2Z1NUdUeXJHZ05zd0xoZmJlc2RselllR2NlS2hvOEVfNnh1QldBRjZ5YQ?oc=5",
-      "publisher": "Puerto Rico Federal Affairs Administration (.gov)",
-      "publishedAt": "2026-11-16T19:20:21+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "ElevenLabs is coming for your meeting notes, dictation app, and maybe your productivity routine - Yahoo Tech",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTVMtOU5xakc2WXpHRlUwYXFWX3ZVV3JMZ3NoWDN1ZVh4Q25uYlRKTkwtSzZpQXpITFNtcExqYXZCY0JxWnc1NXNTUlpic0FlTnpuRjVRSUdoN3A4S1RHNldheHFSaGFfbnNFQUN0LWpTUjJCUlVWM215eWhPX2RNd0ZCZllFTjdnUjZlcGk3N1BKVVNSWEY1aEV1QWJaZw?oc=5",
       "publisher": "Yahoo Tech",
@@ -280,14 +328,6 @@
       "region": "EN"
     },
     {
-      "title": "Intel Xeon and GPU D-Series: HPC and AI in a Unified System - igor´sLAB",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVNpNlZwaG5fSGpmekVDR0w2dlRySnFvSDNPU2NPbXh0YkdDWjlqTHd5LWM0YnhWWXdKNTJmLXVNTnNrMnJhR08teE44SjZSV0dLbnp6MWNoa0JfanR4eUxSbDBQWHpFa0gwME1SVjNOLVV6LURxZTVWd2JmSndROEpRcXBuQQ?oc=5",
-      "publisher": "igor´sLAB",
-      "publishedAt": "2026-11-16T14:00:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record - DailyDrama",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdmpTQWNkaVprWERqSFFjaTJvRElPYW1mS2FzQkstdVAwUnNEdjJ6azZ3QUh4bU96SzMxMEMwa0JqcWxGTmloSEItVmtRUWZTbmVacWptOVZBRG1qai0tV0N2MUdkVFpvX05LaFFmeFF0Y3JZdFA1bjZVN3NPeEpVNWdvQ05iTm50OFNmTVc0dmRBdElp?oc=5",
       "publisher": "DailyDrama",
@@ -320,6 +360,14 @@
       "region": "EN"
     },
     {
+      "title": "유병재 제작 ‘죽어도 아이돌2’ 컴백, 데뷔 무산 딛고 재도전 - 스페셜타임스",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1tNG0tY0tqWXdSZUsyZDc4VkltcjlLQjItTGxtek5KN1VWdzBCMWRab25tVWZnVFdRV3ZTakxLaGdHZlVCRXB3dllLei1XOGdLYzJ0aUlmWWQ2STR2WTlMeG90NThxQ0xLOXA5cE90U2VBZGs?oc=5",
+      "publisher": "스페셜타임스",
+      "publishedAt": "2026-11-16T09:35:55+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
       "title": "TOMORROW X TOGETHER — K-pop Group Kicks Off 5th World Tour in Seoul - The Korea Daily",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9CWGhIcTdvdG9Kcm81V0hZb0R3X2xoQ3VSd0RnMmxidFFOY1lPU3lHdnZOWXA3cHVRWkw0ck9pU3R4ZUZHcXhNbndBR3NTSnRlbkduYTRvLTJJY0IwOGN1aHhQNDIzR0xfbVdfd29R?oc=5",
       "publisher": "The Korea Daily",
@@ -333,6 +381,14 @@
       "publisher": "Pirates and Princesses",
       "publishedAt": "2026-11-16T09:03:48+00:00",
       "category": "K-드라마",
+      "region": "EN"
+    },
+    {
+      "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts - Britannica",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82a0hoSTFZVFNVaXlsNjlXZjZVQ1dyTEZBeWtfZEVjeGoyLTIxcHJqTFF5eGwydTZERUtHUHd0SnM5MDBCZmUzVXRQbHk?oc=5",
+      "publisher": "Britannica",
+      "publishedAt": "2026-11-16T08:00:00+00:00",
+      "category": "K-pop",
       "region": "EN"
     },
     {
@@ -376,14 +432,6 @@
       "region": "EN"
     },
     {
-      "title": "성의·임경신 신작 '양경십오일' 20일 대공개...기대감 높지만 전작 성적이 변수 - 뉴스워커",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1sMjBzR2plWC00U1kxdEk3WVBWYmJhejI1WGhwVi1zYjJmMDI0Y3B5MUxwd0VmUHVjdjBOclpDMGlSN1ltVEVHVGN4akRxM0R0OUdidEwyUVVTMXpuRi05NU9WTHo3ZW9fWnU2LWFwR1DSAXRBVV95cUxPVUNJY3ZYYkFWYVBLZVdQTy15QklRaEdaWTdqQ2FYbVp2RXlhaHNqeWg4ZlJsNEIzVzAzSVgxSk9UMk1BU0NuNUpkTGNtMVNLRmdIcHR0ZWR5SnN6SzJhRXUzOGFmNGp6OXNUNTNhOUwtU1BFTw?oc=5",
-      "publisher": "뉴스워커",
-      "publishedAt": "2026-11-15T23:19:19+00:00",
-      "category": "연예",
-      "region": "KO"
-    },
-    {
       "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기 - https://www.diarypoint.com/",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBWY25WN3U5MHM0M1p0dGkxT3dtUV9OUUg1YTc0Yzc2blVBY2YydklrNEhZMzJDVkFDV0N2UnpXbEVER0FZWVRQMkNkMm5KRjNLSlFWYWZxdkRMYU1YZnNkclU0Q1VOeFB6RVdV?oc=5",
       "publisher": "https://www.diarypoint.com/",
@@ -408,8 +456,8 @@
       "region": "KO"
     },
     {
-      "title": "Top 10 Enterprise Job Scheduler Software - AIMultiple",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE96dXhzdW9QSUZqeVBEaGFXeTk3b29zNEdnaUc3R2NibXZFTFBQSFhENm11T0R3Z180aDZMc3EzLWE1Y1Bma1h3WEwydUFlTzRBUGZoOW5ENGRqWng0ZUNUNkFSMFJJRTg?oc=5",
+      "title": "12 Workload Automation Tools: Vendor Benchmark - AIMultiple",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1TOFVjMlhhMlgyOERnZGl1RHRhVXZFWEZYYUdudElEWHBsZFBvUmZlUUMwTVZ2ME1HUlpzSFVPbHNpdDcxS1FYbTVzbmI4aVpTUmtzUkVoMmktTXdu?oc=5",
       "publisher": "AIMultiple",
       "publishedAt": "2026-11-15T08:00:00+00:00",
       "category": "AI·생산성",
@@ -422,38 +470,6 @@
       "publishedAt": "2026-11-15T06:22:51+00:00",
       "category": "AI·생산성",
       "region": "EN"
-    },
-    {
-      "title": "‘재혼 황후’ 이세영, 패딩 입은 라스타 독기 어디로…미소 뒤 두 얼굴 알고 보니 - 위키트리",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tWDhqbWZ6WFpLVVdtbWg0N05iM0hURTEzempCZ0E2dGRzNXV4V05jWXp0ZlppcG5EMzk5aGNJUjh4LVpLdThIWEt1cVViQlZMY0lybm9n?oc=5",
-      "publisher": "위키트리",
-      "publishedAt": "2026-11-15T03:30:00+00:00",
-      "category": "연예",
-      "region": "KO"
-    },
-    {
-      "title": "BTS, aespa take grand prizes on MMA2026 opening night - The Korea Times",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNTBGejJZWGRhMnhhQmpBSkFDdXVNUVBNQldBV3FtTUxEWU1rUjVPYi1oaDNPWGwxbHFvaW94eXdwOUNwOV96M00wRWdVdEVULXdtYTRxcTN5UjJ0d20zd3lteHRYdVdiQmJCa1g1RlFSdjFGYkNoYXU1azd1c3lTX2tweTRBRXo3TlRKbFhmNWRYT2tMTXI4NE9LYzZudVN6WW9xbDJ4elI1OTF5Z0k40gG0AUFVX3lxTE4ydS0waWo1QnNCUVgzQ3RSeTZNSkY3U0lMZzdVX0tBZ0xzaEJXUHZNNTV3NnV1WDhGcmVWbjFKWTdaRjh1MmxJUWJGaktkYUM0R0Q5RUFSazJuZllLRG9Gc3VNR3JnWjNFUEc2QWlybl96T2pPZWFKTXRRMkR4eThhYmdETEVSQmhXUFNnZVhqc2hScGZreG1Qblp1UUJ1SGhNenBfa3pSTGdVNnQxSXA4UzF6cQ?oc=5",
-      "publisher": "The Korea Times",
-      "publishedAt": "2026-11-15T02:35:03+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "'놀면 뭐하니?' 고경표 긴급 편집에도 김희선 효과…시청률 6.5% 올해 최고 - https://www.diarypoint.com/",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1TeWc5M25lM3VwR2llcWczaHk4S2pzdms0aXdNaXNFbG9wZ1BGdVZBa0RVREZnVnFGeWFqbVpxSFQzV28yN2Y1R00yeEQwc3haRzRTWTBoTGxBWF9JVDJvT0xOS1JoR3pUTzUw?oc=5",
-      "publisher": "https://www.diarypoint.com/",
-      "publishedAt": "2026-11-15T02:26:00+00:00",
-      "category": "연예",
-      "region": "KO"
-    },
-    {
-      "title": "건강·주거·돌봄 어려움 겹친 위기가구…복지서비스 연계체계 점검 - 한국공공정책신문",
-      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1pQ3BDWkFKU2hwQnRZUXpZeUNtQmdUZnc0V1cxeG8yV0N6RGt1RGhFRWhrbk5iWm9JSTVLOHdTT0JzOGM?oc=5",
-      "publisher": "한국공공정책신문",
-      "publishedAt": "2026-11-15T01:32:06+00:00",
-      "category": "생활 정보",
-      "region": "KO"
     },
     {
       "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
@@ -483,14 +499,6 @@
       "title": "Compare Top 5 Stonebranch Alternatives - AIMultiple",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0yMkpGQzV0aVBJQU9NTkIteHRmNzFFaERfazljaWdQS1YyVWdJSVdZbFRYQ1lvZHVpaE9WbEdqS3ZlQ25YZkpWc2pJV2NNa2tqdmljQkR5U3Vscmc?oc=5",
       "publisher": "AIMultiple",
-      "publishedAt": "2026-11-13T08:00:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Best AI Agents in 2026: 30 Tools Tested and Compared - Fello AI",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBJWEF6NXdfZVZqYkVIdlF4cTBKdThTUFdvS3RHc0o1cnlRcEJ4MVFyem5jeXQ2bi13aWVDM0FyX05HaXl6UklNOVVqZw?oc=5",
-      "publisher": "Fello AI",
       "publishedAt": "2026-11-13T08:00:00+00:00",
       "category": "AI·생산성",
       "region": "EN"
