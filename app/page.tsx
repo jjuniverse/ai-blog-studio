@@ -31,6 +31,7 @@ type ResearchLead = {
   officialSourceSuggested?: boolean;
 };
 type EvidenceReview = {
+  reviewedText?: string;
   checkedAt: string;
   status: string;
   claims: { claim: string; status: 'supported' | 'uncertain' | 'conflicting'; explanation: string;
@@ -384,6 +385,7 @@ export default function Home() {
     : '';
   const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
   const reviewed = saved?.evidenceReview?.[channel];
+  const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
   const selectedImage = saved?.selectedImage;
   const verified = !!saved?.verified;
   const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
@@ -441,7 +443,7 @@ export default function Home() {
       });
       const value = await response.json().catch(()=>({}));
       if (!response.ok || !value.result) throw Error(value.error || '검증 API 요청 실패 (HTTP '+response.status+')');
-      updateEdit({evidenceReview:{[channel]:value.result},verified:false});
+      updateEdit({evidenceReview:{[channel]:{...value.result,reviewedText:text}},verified:false});
       setNotice('근거 대조 결과를 저장했어. 지원·충돌·미확인 판정은 참고용이며, 직접 출처를 확인해야 해.');
     } catch (error) {setVerifyError(error instanceof Error ? error.message : '검증에 실패했어.');}
     finally {setVerifying(false);}
@@ -627,7 +629,15 @@ export default function Home() {
                   <h1>{articleTitle || '새 글'}</h1>
                   {text.split(/\n+/).filter(Boolean).map((paragraph, i) => <div key={i}>
                     {/^#{1,3}\s+/.test(paragraph) ? <h2>{paragraph.replace(/^#{1,3}\s+/, '')}</h2> : <p>{paragraph}</p>}
-                    {i === 0 && channel !== 'shortform' && selected && <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>}
+                    {i === 0 && channel !== 'shortform' && selected && <>
+                      {selectedImage && <figure className="post-selected-image">
+                        <img src={selectedImage.imageUrl} alt={selectedImage.title} loading="lazy" referrerPolicy="no-referrer" />
+                        <figcaption>{selectedImage.title} · {selectedImage.creator} · {selectedImage.license} {selectedImage.licenseVersion}
+                          {' · '}<a href={selectedImage.sourceUrl} target="_blank" rel="noopener noreferrer">원본/사용 조건 확인 ↗</a>
+                        </figcaption>
+                      </figure>}
+                      <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>
+                    </>}
                     {i === 4 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={1}/>}
                   </div>)}
                   {channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[2]} excerpt={text} variant="summary" index={2}/>}
@@ -652,6 +662,7 @@ export default function Home() {
                   {verifyError && <p className="generator-error" role="alert">{verifyError}</p>}
                   {reviewed ? <>
                     <p className="muted">마지막 검사: {new Date(reviewed.checkedAt).toLocaleString('ko-KR')} · 검증 보증이 아닌 AI 검색 기반 점검 결과야.</p>
+                    {reviewIsStale && <p className="generator-error" role="alert">검증 이후 본문이 수정됐어. 아래 결과는 이전 버전 기준이니 주요 주장을 다시 확인해 줘.</p>}
                     {reviewed.claims.map((claim,i)=><div className="evidence-claim" key={i}>
                       <span className={'evidence-status '+claim.status}>{claim.status==='supported'?'근거 후보 있음':claim.status==='conflicting'?'상충 가능성':'확인 필요'}</span>
                       <strong>{claim.claim}</strong>
