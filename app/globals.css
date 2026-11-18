@@ -54,3 +54,10 @@
 .worker-health>span{font-size:12px;font-weight:700}
 .worker-health-ok{color:#16845e}.worker-health-bad{color:#b34438}.worker-health-idle{color:#74839a}
 .worker-health p{flex-basis:100%;margin:0;color:#567167;line-height:1.65;font-size:12px}
+
+.copy-button-wrap{position:relative;display:inline-flex;align-items:center}
+.copy-tooltip{position:absolute;z-index:12;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%);white-space:nowrap;padding:9px 13px;border-radius:9px;background:#173c38;color:#fff;font-weight:700;font-size:12px;box-shadow:0 6px 20px #0b29292a;pointer-events:none;animation:copy-pop .18s ease-out}
+.copy-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:#173c38}
+.copy-tooltip-error{background:#a33f44}
+.copy-tooltip-error::after{border-top-color:#a33f44}
+@keyframes copy-pop{from{opacity:0;transform:translate(-50%,6px)}to{opacity:1;transform:translate(-50%,0)}}
