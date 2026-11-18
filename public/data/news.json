@@ -1,20 +1,76 @@
 {
-  "fetchedAt": "2026-11-17T18:27:03.540571+00:00",
+  "fetchedAt": "2026-11-18T00:43:44.227384+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
   "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
   "categoryCounts": {
-    "연예/KO": 11,
+    "연예/KO": 13,
     "K-pop/KO": 4,
     "IT·AI/KO": 3,
-    "생활 정보/KO": 6,
-    "K-pop/EN": 8,
-    "K-드라마/EN": 5,
-    "AI·생산성/EN": 21
+    "생활 정보/KO": 5,
+    "K-pop/EN": 10,
+    "K-드라마/EN": 4,
+    "AI·생산성/EN": 25
   },
   "retainedFromPrevious": 0,
   "items": [
+    {
+      "title": "Microsoft unveiled Copilot Workspaces at Ignite 2026, plus more AI workplace updates - ZDNET",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9vM3I1eVdpS3BYY2dTY3lyQ09POGVTS2hoczVGbUNEMERoU1IyLVlzM2tickNtTEZLY3ZYUmJsVlE0TDh5UU1lUGJPMUlReVFTOUtEZktYV3RuVjQxV3RCalNWd3Q2cEFpUHRpVjdhWkg3V3FWb3NVUUhVVUdhRjg?oc=5",
+      "publisher": "ZDNET",
+      "publishedAt": "2026-11-17T23:14:05+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "외국인 한국 취업·비자·생활정보, 어디서 확인할까? 위드코리아24 서비스 안내 - 얼리어답터뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9nSXZTUHk5TU9nWmF6MF9zdnJFLWNHb3lJQXdsM1pTcFZkM0ZpbDNhMHhlSTdqejFsYlEzdGRGOUxuVWw2V1czYzhR?oc=5",
+      "publisher": "얼리어답터뉴스",
+      "publishedAt": "2026-11-17T22:46:32+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "Microsoft Edge for Business Gets Smarter With AI Agents and New Enterprise Security Tools - Windows Report",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORHBGcTZfSUo1NDdJTWN3aUQ4cVEzcjNucTJ1T0JxMTRyal9uejlYYXdRRkxLMGg2MWZuQV9ldTVadm1UaEx1OFVIaVV6cVZ3Q0V2MGFoX2tuNURKT1J1N2VDUE0xY0V4c0lYQTZKRWtJUXZIQ25lQnZzbE5leDRra0JjY0MzVld3R3JrbXRBalJpSmZtZDdRR0tqcmdFMnJCczNPUWtDWG13b3hPZXBXRFZYSVhWRUU?oc=5",
+      "publisher": "Windows Report",
+      "publishedAt": "2026-11-17T21:12:10+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "AI automated vulnerability exploitation: GTIG's report - NeoTeo",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOGczZ3ZEQldBZzZBUUItaEJ0ek9HM2d4UVY5NFBPN3J0dk9Rb09rMGcxa2U2elI3RHVYVWl0X2VKMHp1SHVybGZfLWJOSnZKODJGT0JvWGwyNi0tdG44WHVTbEFiNkZiVHNleEExbVgtWmFacS1vbFk5V3pHS1FLWmJvaEtZTWFJcDBNOFNocXdtNTlRcy1MN2hPcGxYSlJkNjg4?oc=5",
+      "publisher": "NeoTeo",
+      "publishedAt": "2026-11-17T20:58:24+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Business Central + Copilot: $6 CSP Savings Start in 2027 - JournalArta",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPeGMyUW4yaDdUdy0zLWFjVmhqRVBvQnU4MDZMdjRsWklTT1lKWnFkUV96WHdrX1I4MUVMVXN4RWxZRzNFekk4alhNNENVenpBclRNVWpSMUVnUW81bHVFN0h2TXVyYW5hWnJtM2thNjlmTlVrWndQLXdZOEd0UjBGME1VMHRJUnRMM0Z2cU5nVG45SWJCdkpoeWt3?oc=5",
+      "publisher": "JournalArta",
+      "publishedAt": "2026-11-17T20:37:38+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Ignite 2026: Microsoft Makes Copilot the Center of the Office Experience - Petri IT Knowledgebase",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE81d0Q1UEtUb1VtVnQ1cUcxOExzUGpkYktOdlU4SVZNQlRwa3k5bkJGbkpOQ3dja1J1VkxwQTF2Y3A5U3lnanhrTXpNTnRQT0hYZ1NEQVZ2VFY4UU80bFI5VW9Vcw?oc=5",
+      "publisher": "Petri IT Knowledgebase",
+      "publishedAt": "2026-11-17T19:17:59+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Andreessen tells Warsh's AI conference that regulation will limit both job losses and growth, as Stripe says new business starts doubled - MLQ.ai",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQWEpkZ1B3VGROVGJTdnJXcUdkbmhmUExxM1BXeGFIbXpZdnNHUjZneEc3Y210dk1KRER5WTNaZmFjZzl2dm8xbm1vQThUZEROSFVMX3ctS0tmWDdUZFdLcW1HWDN0MHpaWm5lS2tBa0lVdjRHZGsxamxfa2l2aTJ2WVpLSG5ZSU1IbWZvS0VVZEw0R1ltczlNYW1SQkFNVVEzZFFtenFGdXplYzhIZGxiOGRPNjE1VXVGYXUyTUFXSnBWNkJtcXZ2eTZSYlRoQ1U5VW5MekJ5eUdJY3lNWGx4eWtpek5QeFA3cGlV?oc=5",
+      "publisher": "MLQ.ai",
+      "publishedAt": "2026-11-17T18:36:07+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
     {
       "title": "OPPO Pad Air 6 Launch: Key Features and Price - Techgenyz",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1oaE54MXRSUkFkNm9iQVhCVmhzeXQ0U2syWVRWM1NNRW5pXy1VNzBfSGZScTJtSlgxLWVLakpEUGN0bkI5aURCUThITmYtUFpubm1HX003SQ?oc=5",
@@ -22,6 +78,14 @@
       "publishedAt": "2026-11-17T17:00:50+00:00",
       "category": "AI·생산성",
       "region": "EN"
+    },
+    {
+      "title": "정호연, 차기 '007' 본드걸 후보 거론…보그 선정 45인 중 5번째 이름 올려 - https://www.diarypoint.com/",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1BRnlDeHdDbmsyaC00cmlwaWd0NzVrYjhiaDNVZmNJdFBIblBhTzE1a0w1Z2ozRUFVcDd1Smx3T082N2J1TnRVQTJZMFh0UG1ra3h2NTV1LVdmS1o0N2U1TUFyWWFMWERNMllZ?oc=5",
+      "publisher": "https://www.diarypoint.com/",
+      "publishedAt": "2026-11-17T16:59:00+00:00",
+      "category": "연예",
+      "region": "KO"
     },
     {
       "title": "AI in Finance – News on AI in Banking & Payments - FF News",
@@ -40,20 +104,20 @@
       "region": "EN"
     },
     {
+      "title": "'100일의 거짓말' 김유정-박진영, 출연자 화제성 1·2위…TV·OTT 화제성도 1위 - 톱스타뉴스",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBvc3dTdGRVZU1ETGhXLUhUMDdObnBVZlNtTEFYWTVyZ2M2alRQaE1BMkg5VDIyWVZCUzFHaDRucHJPQzY4dkNwMjgzZnFyY3VkVVRVeHdONWdPc1VkZF9kQnBzQTFobzMyamJadnhKWXR6UQ?oc=5",
+      "publisher": "톱스타뉴스",
+      "publishedAt": "2026-11-17T10:20:16+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
       "title": "'데블스 플랜: 데드 어게인', 공개 첫 주 비드라마 화제성 1위…탈락자 부활 '유배지' 주목 - 제이앤엠뉴스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rZHlXcm9NUTJpZjFPUmU0b3pteVdHLUJKUW4ydHFrSjRuQ3ctWWZuSXRsbXMyNzJyYzcxMTBiNFZ3WjZkM0V1WVhfQWpiVUZ5OFpDd0tvbjluYVlBTnEtOA?oc=5",
       "publisher": "제이앤엠뉴스",
       "publishedAt": "2026-11-17T10:14:31+00:00",
       "category": "연예",
       "region": "KO"
-    },
-    {
-      "title": "Google says hackers use AI agents to find and exploit software flaws - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb2tBRzFPVzNkWENsbVNtY3hpeGt3T3FvU3ozZllQWlFqemtsTGg2eS0tdlJqT2I1NDdnMVg4WHlCenMwbmJQN1d6RlZiUWJlTDhlMDVmbmNoQi05N21FaGVXRG9fZzFJTlN2T0xvR2RxTkgwcjJpbWZEQ2NtbW8xR3lPUmU1SS1SeVF1LWNiU09DOEdaUkkxMkk0LTNMNVVyS2t2RmliV3EyZzVBWFgwbXdiLWhwUlRzNDNtOUdXX2ZBV2FfWXZfOEpRR2M?oc=5",
-      "publisher": "TradingView",
-      "publishedAt": "2026-11-17T10:05:59+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     },
     {
       "title": "Xiaomi 18 Pro Global Launch: Expected Price, Features, Camera, Battery And Other Details - NDTV Profit",
@@ -108,6 +172,14 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUpBaHc2SF9YX1QzSm5BX0R1SVAzRTZ2eG5jcUVtdkZNTWg5NGhfaG9XMkNuWmswQ1ZaVDV0UVVOZUFpVm1VMkRpZHJ3ZGNHRkZDSjN3OHNMSzBoV2VKRzA1RUliMlpRQ1U1Q3FnRkR4TG01QTYwVVoyaGNnWkJCTVFHTGYwZXZra2JIVVVn?oc=5",
       "publisher": "조선일보",
       "publishedAt": "2026-11-17T07:03:18+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Stray Kids' I.N releases 'No Return' - Korea JoongAng Daily",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcmVWY2FpNG1mT2ZvUDAzV1FMSW9IMTB0NUFMTnM5ZXdPbk1lRDZjRVhQcGRDVW42bndRaWFFcC1EVXcwSUdnSFlpOElGbTRqU2c1Rl9fSWRLZDlNVzl2eGlkZHZpVmZDemFicDJYaGxiclB5TXdpZWYtdDBwZEdaYW5GR193VGxOYnlVc2NHYnh5LWRz?oc=5",
+      "publisher": "Korea JoongAng Daily",
+      "publishedAt": "2026-11-17T06:50:45+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -192,6 +264,14 @@
       "region": "EN"
     },
     {
+      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
+      "publisher": "Rolling Stone",
+      "publishedAt": "2026-11-16T14:50:47+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
       "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
       "publisher": "Dojeon Media",
@@ -235,7 +315,7 @@
       "title": "Anthropic Adds Whiteboard, Spreadsheet and Data Features to Claude, Taking Aim at the Office Productivity Market - BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJSExtRWhXRWFPY0pJVWRIYld2VTE0WjhWSFQ0MTloOV84cWM3VlpSU0RsQXdGdWJwR3FsQWZGVkR5MV9CSy1DcGtoSXA2LVZSdkhQYjFSUFVFRXhfU1RYWnlQelV1Q2lqZVJMUGcxdEhxeExSV1E?oc=5",
       "publisher": "BigGo Finance",
-      "publishedAt": "2026-11-16T09:50:05+00:00",
+      "publishedAt": "2026-11-16T09:45:00+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -252,22 +332,6 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZnZweEYwdzJMekVCQ3VEbDBqbFJiR3NSY05ydlNHQlN1UU9IaTB5SVQzRkQ2WGo0TkZzdGwzd3gzTTFGcWF4aGlKRGhrMEtQRGFPZXhldlV6MUtRbk9OS1hWNVhLRUh6WDkzNlhpdHA5bDEwdGRtTkJvN2FJZmctbXlBMmRBbEtkUEsw?oc=5",
       "publisher": "Pirates and Princesses",
       "publishedAt": "2026-11-16T09:03:48+00:00",
-      "category": "K-드라마",
-      "region": "EN"
-    },
-    {
-      "title": "[김포 소식]온라인 주민 의견조사…“우리 동네 돌봄, 여러분의 의견을 들려주세요” 등 - 프레시안",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1OZ1VhcnFaaTZLRnlOV3hzT1JxZTd2MmR3bGdQaWFTcmFqTU9zd09yMHI3LXVRM21lSTd4cUdZUm9ERDhZajg0VmJaWTFGWHhJRDNYdUNQSDhXRlBqMFJ4NEh0MDlFZEM5eld3?oc=5",
-      "publisher": "프레시안",
-      "publishedAt": "2026-11-16T08:34:30+00:00",
-      "category": "생활 정보",
-      "region": "KO"
-    },
-    {
-      "title": "The Remarried Empress tops K-drama buzz rankings over 100 Days - Pirates and Princesses",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcWFJMG9vSGNfTmRUdGxvZXJPNkUtUEE5eXlROGRDcjlNVHY4SHVnRmxlSmx5M2NNdEZWa0ZsWXBfQWMwZEJqbUw4eTB4RTlNaE5tbFNVdEJNRWxsVGkwQ25IekEyZVJCV3RUQ190YWZJOExuNlFHWlVlQmZWdFZ1emxwSDAxcVVMSlMwOFlCeC1BSm9KTGVaNnNPWkM?oc=5",
-      "publisher": "Pirates and Princesses",
-      "publishedAt": "2026-11-16T08:09:05+00:00",
       "category": "K-드라마",
       "region": "EN"
     },
@@ -312,14 +376,6 @@
       "region": "EN"
     },
     {
-      "title": "Asana vs monday.com vs ClickUp: Team Pricing Compared - JournalArta",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcmtxaTdyT1lXT2NEMkcwM0Vjay1RZnl0NVo2eUlOMFVMMWhGeDJ3d0tOem5OVUNMOTdabTljSDRTckgyU2hwTl9MdTcyN2VVX1FvUFd6VlpUYWt2eG5ERjRmczgwUVg5NWVqcnhvYXk0dHB5eGJvZE80UkFCZUpwVWZ3S25lcmxqTzJ3MkdCRE9IWlZjSFVSaS1YVExwSWEyeHc?oc=5",
-      "publisher": "JournalArta",
-      "publishedAt": "2026-11-16T00:26:06+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "성의·임경신 신작 '양경십오일' 20일 대공개...기대감 높지만 전작 성적이 변수 - 뉴스워커",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1sMjBzR2plWC00U1kxdEk3WVBWYmJhejI1WGhwVi1zYjJmMDI0Y3B5MUxwd0VmUHVjdjBOclpDMGlSN1ltVEVHVGN4akRxM0R0OUdidEwyUVVTMXpuRi05NU9WTHo3ZW9fWnU2LWFwR1DSAXRBVV95cUxPVUNJY3ZYYkFWYVBLZVdQTy15QklRaEdaWTdqQ2FYbVp2RXlhaHNqeWg4ZlJsNEIzVzAzSVgxSk9UMk1BU0NuNUpkTGNtMVNLRmdIcHR0ZWR5SnN6SzJhRXUzOGFmNGp6OXNUNTNhOUwtU1BFTw?oc=5",
       "publisher": "뉴스워커",
@@ -333,14 +389,6 @@
       "publisher": "https://www.diarypoint.com/",
       "publishedAt": "2026-11-15T23:10:00+00:00",
       "category": "연예",
-      "region": "KO"
-    },
-    {
-      "title": "대출 받기 힘들 땐 ’1397′ 이용하세요 - 조선일보",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX092T1lxbjZobzhidDQ2UHZvVjJIMFpkQXFoM1lGb0wzdExFU3Jlck9YY0RIcGJ0MUhZU3pXS3h4b2NnWjJvLW15bmprczVmTUtxclZabS1xMnE4QW0xYndudnZTanEwNVBnMUxEM0Q4b2xDUzZqSnhQdzZBVGNrdFN5M3diUTJraWc?oc=5",
-      "publisher": "조선일보",
-      "publishedAt": "2026-11-15T15:37:00+00:00",
-      "category": "생활 정보",
       "region": "KO"
     },
     {
@@ -358,14 +406,6 @@
       "publishedAt": "2026-11-15T09:21:00+00:00",
       "category": "연예",
       "region": "KO"
-    },
-    {
-      "title": "Top 6 Alternatives to Automic Automation - AIMultiple",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1lYlhfc3dKU3M5WmhjUVNfOFNsSUJOTE9XZzVsdXgtaGU1N05ITVNDVE45aGwwRTRvTGVCajhYTXlyeXpXeVNOSlY1cXlBRXBfSnRSTQ?oc=5",
-      "publisher": "AIMultiple",
-      "publishedAt": "2026-11-15T08:00:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     },
     {
       "title": "Top 10 Enterprise Job Scheduler Software - AIMultiple",
@@ -478,6 +518,14 @@
       "publishedAt": "2026-11-11T21:15:00+00:00",
       "category": "생활 정보",
       "region": "KO"
+    },
+    {
+      "title": "Leading Generative Engine Optimization (GEO) Tools for 2026 - SitePoint",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9uek1KYlpHSmFNb2VXNDl6bGFiaFRmc21pRS1jTkp3cHE5d29TMTlLUEhhekFmSU84XzJBX2JWMkFnR21JUVJhMy16WW9jUllPZXAxQlgxOGJLRGtqV1BQZ3lPYjhvM05vbDZtekwyVUdFMHE0SUlB?oc=5",
+      "publisher": "SitePoint",
+      "publishedAt": "2026-11-11T06:36:07+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
     }
   ],
   "errors": []
