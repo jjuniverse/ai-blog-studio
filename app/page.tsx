@@ -3,10 +3,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
 import PostImagePackage from './components/PostImagePackage';
-import { normalizeArticleTags, paragraphLines, imagePositions, withImageMarkers } from './lib/postPackage';
+import { normalizeArticleTags, normalizeEnglishArticleTags, paragraphLines, imagePositions, withImageMarkers } from './lib/postPackage';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
-type Channel = 'naver' | 'tistory' | 'shortform';
+type Channel = 'naver' | 'tistory' | 'tistoryEn' | 'shortform';
 type Section = 'discover' | 'editor' | 'publish';
 type Candidate = {
   id: string;
@@ -61,8 +61,10 @@ type Draft = {
   title: string;
   naverTitle?: string;
   tistoryTitle?: string;
+  tistoryEnTitle?: string;
   naver: string;
   tistory: string;
+  tistoryEn?: string;
   shortform: string;
   verificationChecklist?: string[];
   sources?: { title: string; url: string; publisher: string }[];
@@ -70,10 +72,10 @@ type Draft = {
 };
 type LocalEdit = {
   fields: Partial<Record<Channel, string>>;
-  titles?: Partial<Record<'naver' | 'tistory', string>>;
+  titles?: Partial<Record<'naver' | 'tistory' | 'tistoryEn', string>>;
   imageNotes: string[];
   verified: boolean;
-  publishedUrls: Partial<Record<'naver' | 'tistory', string>>;
+  publishedUrls: Partial<Record<'naver' | 'tistory' | 'tistoryEn', string>>;
   updatedAt: string;
   generatedVersion?: number;
   evidenceReview?: Partial<Record<Channel, EvidenceReview>>;
@@ -90,7 +92,8 @@ const GENERATED_DRAFTS_KEY = 'todaypick_generated_drafts_v1';
 const DRAFT_VERSION = 2;
 const channels: { id: Channel; label: string }[] = [
   { id: 'naver', label: '네이버 블로그' },
-  { id: 'tistory', label: '티스토리' },
+  { id: 'tistory', label: '티스토리 · 한국어' },
+  { id: 'tistoryEn', label: '티스토리 · English' },
   { id: 'shortform', label: '숏폼 대본' },
 ];
 const links = {
@@ -127,7 +130,7 @@ function download(filename: string, content: string, mime: string) {
   el.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
-function safePublishedUrl(raw: string, channel: 'naver' | 'tistory') {
+function safePublishedUrl(raw: string, channel: 'naver' | 'tistory' | 'tistoryEn') {
   try {
     const u = new URL(raw.trim());
     if (u.protocol !== 'https:') return false;
@@ -335,7 +338,7 @@ export default function Home() {
         const detail = [payload.error || 'HTTP ' + response.status, payload.code, payload.stage].filter(Boolean).join(' · ');
         throw new Error(detail + (response.status >= 500 ? ' · 서버 내부 오류야. 추가 생성은 누르지 말고 이 오류 문구를 알려줘.' : ''));
       }
-      if (!payload.draft || !['naver','tistory','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
+      if (!payload.draft || !['naver','tistory','tistoryEn','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
       const previousText = saved?.fields?.naver || matchingDraft?.naver || '';
       const newText = String(payload.draft.naver || '');
       const comparedToPrevious = payload.draft.mode !== 'article' ? 'brief' :
@@ -353,8 +356,8 @@ export default function Home() {
         setLocalEdits(old => ({
           ...old,
           [selected.id]: {
-            fields: { naver: draft.naver, tistory: draft.tistory, shortform: draft.shortform },
-            titles: { naver: draft.naverTitle || draft.title, tistory: draft.tistoryTitle || draft.title },
+            fields: { naver: draft.naver, tistory: draft.tistory, tistoryEn: draft.tistoryEn || '', shortform: draft.shortform },
+            titles: { naver: draft.naverTitle || draft.title, tistory: draft.tistoryTitle || draft.title, tistoryEn: draft.tistoryEnTitle || draft.title },
             imageNotes: payload.draft.imageNotes,
             verified: false,
             publishedUrls: old[selected.id]?.publishedUrls || {},
@@ -407,10 +410,12 @@ export default function Home() {
   const storedText = matchingDraft?.mode === 'research_brief' ? '' :
     legacyStored ? (saved?.fields?.[channel] || '') :
     legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
-  const text = channel === 'shortform' ? storedText : normalizeArticleTags(storedText,
+  const text = channel === 'shortform' ? storedText : channel === 'tistoryEn'
+    ? normalizeEnglishArticleTags(storedText, saved?.titles?.tistoryEn || matchingDraft?.tistoryEnTitle || matchingDraft?.title || '')
+    : normalizeArticleTags(storedText,
     saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '', selected?.category || '');
   const articleTitle = channel === 'shortform' ? (matchingDraft?.title || selected?.title || '') :
-    (saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '');
+    (saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : channel === 'tistoryEn' ? matchingDraft?.tistoryEnTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '');
   const referenceAppendix = matchingDraft?.mode === 'article' && matchingDraft?.sourceLinks?.length
     ? '\n\n참고자료 (내용·저작권 확인 후 발행)\n' + matchingDraft.sourceLinks.map((source, i) => (i + 1) + '. ' + (source.title || '원문') + ' — ' + source.url).join('\n')
     : '';
@@ -582,14 +587,14 @@ export default function Home() {
   function exportText() {
     download('todaypick-' + channel + '-draft.txt', copyableArticle + '\n\n' + images.map((n,i) => '[이미지 ' + (i + 1) + '] ' + n).join('\n'), 'text/plain;charset=utf-8');
   }
-  function savePublished(channelId: 'naver' | 'tistory', value: string) {
+  function savePublished(channelId: 'naver' | 'tistory' | 'tistoryEn', value: string) {
     if (!value.trim()) { updateEdit({ publishedUrls: { [channelId]: '' } }); setNotice('기록된 게시 URL을 비웠어.'); return; }
     if (!safePublishedUrl(value, channelId)) { setNotice('오늘의 픽 블로그에서 발행한 https 주소를 입력해 줘.'); return; }
     updateEdit({ publishedUrls: { [channelId]: value.trim() } });
     setNotice('이 브라우저에만 게시 URL을 저장했어.');
   }
-  const [urlInput, setUrlInput] = useState<Record<'naver'|'tistory', string>>({naver: '', tistory: ''});
-  useEffect(() => { setUrlInput({ naver: saved?.publishedUrls?.naver || '', tistory: saved?.publishedUrls?.tistory || '' }); }, [selectedId, saved?.publishedUrls?.naver, saved?.publishedUrls?.tistory]);
+  const [urlInput, setUrlInput] = useState<Record<'naver'|'tistory'|'tistoryEn', string>>({naver: '', tistory: '', tistoryEn: ''});
+  useEffect(() => { setUrlInput({ naver: saved?.publishedUrls?.naver || '', tistory: saved?.publishedUrls?.tistory || '', tistoryEn: saved?.publishedUrls?.tistoryEn || '' }); }, [selectedId, saved?.publishedUrls?.naver, saved?.publishedUrls?.tistory, saved?.publishedUrls?.tistoryEn]);
 
   return <div className="app-shell">
     <aside className="sidebar">
@@ -686,7 +691,8 @@ export default function Home() {
                   <button className="btn btn-light" onClick={archiveOldDraft}>백업 후 초기화</button>
                 </div> : <span>서버에서 가져온 과거 초안은 자동 표시하지 않아.</span>}
               </div>}
-              {selected?.region === 'EN' && <div className="research-lead"><strong>해외 영어 콘텐츠</strong><p>이 주제의 영어 원고는 숏폼 대본 탭에서 확인해 줘. 영어는 해외 YouTube Shorts·Instagram Reels용으로 제작하며, 네이버·티스토리는 한국어 중심 운영이야.</p></div>}
+              {selected?.region === 'EN' && <div className="research-lead"><strong>해외 콘텐츠</strong><p>티스토리 English 탭에서 영어 블로그 원고를, 숏폼 대본 탭에서 해외 Shorts·Reels 대본을 확인할 수 있어.</p></div>}
+              {channel === 'tistoryEn' && matchingDraft?.mode==='article' && !storedText.trim() && <div className="draft-warning">이전에 생성된 초안에는 영문 원고가 없어. 이전 원고를 영어로 자동 표시하지 않으며, 새 생성 결과부터 별도 영어 버전이 저장돼.</div>}
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
               {matchingDraft?.qualityAudit?.warnings?.length ? <div className="draft-warning" role="alert">
@@ -727,7 +733,7 @@ export default function Home() {
                 </div>}
                 <div className="editor-toolbar"><button className={previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(true)}>블로그 미리보기</button><button className={!previewMode?'btn btn-primary':'btn btn-light'} onClick={()=>setPreviewMode(false)}>원고 편집</button></div>
                 {previewMode ? <div className="post-preview">
-                  <div className="post-preview-label">오늘의 픽 · {channel === 'naver'?'네이버 블로그':channel==='tistory'?'티스토리':'숏폼 대본'} 발행 전 미리보기</div>
+                  <div className="post-preview-label">오늘의 픽 · {channel === 'naver'?'네이버 블로그':channel==='tistory'?'티스토리 한국어':channel==='tistoryEn'?'티스토리 English':'숏폼 대본'} 발행 전 미리보기</div>
                   <h1>{articleTitle || '새 글'}</h1>
                   {channel !== 'shortform' && selected && <>
                     <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>
@@ -834,7 +840,7 @@ export default function Home() {
         </div>}
         {section === 'publish' && <div className="publish-grid">
           <div className="panel"><div className="panel-heading"><h2>발행 관리</h2><span>이 브라우저 전용 기록</span></div><div className="metric-grid compact"><div className="metric"><small>수정한 주제</small><strong>{editCount}</strong></div><div className="metric"><small>등록된 게시 URL</small><strong>{publishedCount}</strong></div></div><p className="muted">발행할 주제를 선택하고 실제 게시 후 주소를 입력해. 이 기록은 계정 연동이 아니라 브라우저에만 보관돼.</p><select className="wide-select" value={selectedId} aria-label="발행 관리 주제 선택" onChange={e => setSelectedId(e.target.value)}><option value="">발행할 주제를 선택해 줘</option>{candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}</select>
-            {(['naver','tistory'] as const).map(c => <div className="publish-row" key={c}><div><h3>{c === 'naver' ? '네이버 블로그' : '티스토리'}</h3><a target="_blank" rel="noreferrer" href={links[c]}>블로그 열기 ↗</a></div><input aria-label={(c === 'naver' ? '네이버' : '티스토리')+' 발행 URL'} placeholder="발행된 글 URL" value={urlInput[c]} onChange={e => setUrlInput(old => ({...old,[c]:e.target.value}))}/><button className="btn btn-primary" disabled={!selected} onClick={() => savePublished(c,urlInput[c])}>저장</button></div>)}
+            {(['naver','tistory','tistoryEn'] as const).map(c => <div className="publish-row" key={c}><div><h3>{c === 'naver' ? '네이버 블로그' : c === 'tistoryEn' ? '티스토리 English' : '티스토리 한국어'}</h3><a target="_blank" rel="noreferrer" href={c === 'tistoryEn' ? links.tistory : links[c]}>블로그 열기 ↗</a></div><input aria-label={(c === 'naver' ? '네이버' : '티스토리')+' 발행 URL'} placeholder="발행된 글 URL" value={urlInput[c]} onChange={e => setUrlInput(old => ({...old,[c]:e.target.value}))}/><button className="btn btn-primary" disabled={!selected} onClick={() => savePublished(c,urlInput[c])}>저장</button></div>)}
             <div className="editor-toolbar"><button className="btn btn-light" onClick={() => download('todaypick-local-backup.json',JSON.stringify(localEdits,null,2),'application/json')}>기기 내 작업 백업 (JSON)</button><button className="btn btn-light" onClick={() => setSection('editor')}>원고 검수하기 →</button></div>
           </div>
           <div className="panel"><h2>현재 지원 범위</h2><ul className="rules"><li>네이버·티스토리: 직접 발행 후 링크 저장</li><li>이미지: 삽입 위치·내용 계획만 지원</li><li>숏폼: 검수용 대본 편집까지 지원</li><li>자동 게시·영상 렌더링·계정 로그인: 아직 미구현</li></ul><div className="draft-warning">공개 GitHub Pages에 인증 기능은 없어. 민감한 원고를 다루거나 실제 자동 게시를 구현하려면 별도 인증 백엔드가 필요해.</div></div>
