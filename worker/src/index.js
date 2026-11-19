@@ -546,7 +546,10 @@ export default {
         )
       );
       const metricContextMissing = metricsRequiringReview.length > 0;
-      const comparable = text => String(text || "").replace(/\(\[[^\]]+\]\(https?:\/\/[^)]+\)\)/g, "").replace(/\s+/g, "").toLowerCase();
+      const comparable = text => String(text || "")
+        .replace(/(?:^|\n)#{1,3}\s*관련\s*태그\s*\n[\s\S]*$/i, "")
+        .replace(/\(\[[^\]]+\]\(https?:\/\/[^)]+\)\)/g, "")
+        .replace(/\s+/g, "").toLowerCase();
       const blogsAreCopies = comparable(result.naver).length > 250 &&
         comparable(result.naver) === comparable(result.tistory);
       const shortformCopiesBlog = comparable(result.shortform).length > 60 &&
