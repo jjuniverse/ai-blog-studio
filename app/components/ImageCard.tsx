@@ -21,9 +21,16 @@ function wrap(ctx:CanvasRenderingContext2D,content:string,width:number,maxLines:
 }
 function print(ctx:CanvasRenderingContext2D,lines:string[],x:number,y:number,gap:number){lines.forEach((line,i)=>ctx.fillText(line,x,y+i*gap));}
 function clean(value:string){return value.replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g,'$1').replace(/https?:\/\/\S+/g,'').replace(/[#*_]/g,'').replace(/\s+/g,' ').trim();}
-function facts(article:string){
-  return article.split(/\n\s*\n/).map(p=>p.trim()).filter(p=>p&&!/^#{1,3}\s/.test(p)&&!/^#\S/.test(p))
-    .map(clean).filter(p=>p.length>42).slice(0,3);
+function facts(article:string,variant:Variant){
+  // Prefer the actual three summary bullets for the summary card.
+  // Prevent generic truncated introductory prose from replacing the useful headline facts.
+  if(variant==='summary'){
+    const match=article.match(/(?:^|\n)#{1,3}\s*3줄\s*요약\s*\n([\s\S]*?)(?=\n#{1,3}\s|$)/);
+    const bullets=match?.[1].split(/\n+/).map(x=>x.replace(/^\s*[-•*]\s*/,'').trim()).filter(Boolean).map(clean).slice(0,3)||[];
+    if(bullets.length>=2)return bullets;
+  }
+  const paragraphs=article.split(/\n\s*\n/).map(p=>p.trim()).filter(p=>p&&!/^#{1,3}\s/.test(p)&&!/^#\S/.test(p));
+  return paragraphs.map(clean).filter(p=>p.length>20).slice(0,3);
 }
 function header(ctx:CanvasRenderingContext2D,cat:string,dark:boolean){
   rect(ctx,80,76,154,47,23,dark?C.mint:C.navy);
@@ -65,7 +72,7 @@ function information(ctx:CanvasRenderingContext2D,props:Props){
   ctx.fillStyle=C.navy;ctx.font='800 55px '+FONT;
   ctx.fillText(props.variant==='detail'?'이슈 핵심 살펴보기':'오늘의 이슈, 3줄 정리',80,208);
   ctx.fillStyle=C.gray;ctx.font='500 23px '+FONT;ctx.fillText('AI 초안 기반 · 발행 전 사실 확인 필요',80,256);
-  const snippets=facts(props.excerpt||'');
+  const snippets=facts(props.excerpt||'',props.variant);
   if(!snippets.length){
     rect(ctx,80,320,1040,380,23,C.white);ctx.fillStyle=C.ink;ctx.font='700 39px '+FONT;
     print(ctx,wrap(ctx,clean(props.title),930,3),124,410,59);
