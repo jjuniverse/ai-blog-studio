@@ -21,7 +21,7 @@ test('complete OpenAI response yields a research audit and draft without a scope
         type: 'output_text',
         text: JSON.stringify({
           mode: 'article', title, naverTitle: 'Useful AI software announcement and how to use it',
-          tistoryTitle: 'AI software release: features and detailed setup', naver: article, tistory: article,
+          tistoryTitle: 'AI software release: features and detailed setup', tistoryEnTitle: 'AI Software Release and Setup Guide', naver: article, tistory: article, tistoryEn: article,
           shortform: 'An informative script that has enough content to pass the short-form length requirement.',
           verificationChecklist: [], imageNotes: ['Cover','Illustration','Summary'], imageKeywords: ['Useful productivity news','software release'],
           sourceLinks,
@@ -55,6 +55,9 @@ test('complete OpenAI response yields a research audit and draft without a scope
     assert.equal((result.draft.naver.match(/#오늘의픽/g)||[]).length, 1);
     assert.equal(result.draft.naverTitle, 'Useful AI software announcement and how to use it');
     assert.equal(result.draft.tistoryTitle, 'AI software release: features and detailed setup');
+    assert.equal(result.draft.tistoryEnTitle, 'AI Software Release and Setup Guide');
+    assert.match(result.draft.tistoryEn, /## Related Tags\n#TodaysPick/);
+    assert.equal((result.draft.tistoryEn.match(/#TodaysPick/g) || []).length, 1);
     assert.equal(result.draft.researchAudit.distinctSourceDomains, 2);
     assert.equal(result.draft.researchAudit.returnedSourceCount, 2);
     assert.equal(result.draft.researchAudit.initiallyGeneratedMode, 'article');
@@ -80,8 +83,8 @@ test('short imperfect articles remain visible for revision instead of becoming e
     status:'completed', output:[
       {type:'web_search_call',action:{sources}},
       {type:'message',content:[{type:'output_text',text:JSON.stringify({
-        mode:'article',title:'보도 내용 확인',naverTitle:'보도 내용과 조사 결과',tistoryTitle:'조사 결과 분석',
-        naver:body,tistory:body,shortform:body.slice(0,95),
+        mode:'article',title:'보도 내용 확인',naverTitle:'보도 내용과 조사 결과',tistoryTitle:'조사 결과 분석',tistoryEnTitle:'Research Results and Evidence',
+        naver:body,tistory:body,tistoryEn:'Information '.repeat(35),shortform:body.slice(0,95),
         verificationChecklist:[],imageNotes:['cover','detail','summary'],imageKeywords:['보도 내용','조사 결과'],sourceLinks:sources,
       })}]},
     ],
