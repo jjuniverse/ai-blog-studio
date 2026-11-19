@@ -8,6 +8,7 @@ type Props = {
   title: string;
   category: string;
   article: string;
+  referenceAppendix: string;
   channel: 'naver' | 'tistory';
 };
 type GeneratedAsset = { kind: ImageKind; blob: Blob; url: string; label: string };
@@ -27,7 +28,7 @@ function pngBlob(canvas: HTMLCanvasElement): Promise<Blob> {
     blob ? resolve(blob) : reject(new Error('PNG 생성에 실패했어.')), 'image/png'));
 }
 
-export default function PostImagePackage({title,category,article,channel}:Props) {
+export default function PostImagePackage({title,category,article,referenceAppendix,channel}:Props) {
   const [generated,setGenerated] = useState<GeneratedAsset[]>([]);
   const [loading,setLoading] = useState(false);
   const [error,setError] = useState('');
@@ -67,7 +68,7 @@ export default function PostImagePackage({title,category,article,channel}:Props)
       for (const asset of generated) {
         files[IMAGE_FILENAMES[asset.kind]]=new Uint8Array(await asset.blob.arrayBuffer());
       }
-      files['원고-이미지배치.txt'] = strToU8(title+'\n\n'+withImageMarkers(article));
+      files['원고-이미지배치.txt'] = strToU8(title+'\n\n'+withImageMarkers(article)+referenceAppendix);
       files['사용안내.txt'] = strToU8(
         '오늘의 픽 · '+(channel==='naver'?'네이버':'티스토리')+' 포스팅 패키지\n\n'+
         '1. 이 ZIP에는 새로 렌더링한 오리지널 PNG 3장이 포함돼.\n'+
