@@ -502,22 +502,25 @@ export default {
         };
         // Preserve actual topical tags from the model before deriving anything.
         for (const tag of (tail.match(/#[^\s#]+/g) || [])) add(tag.slice(1));
-        const quoted = [...String(title).matchAll(/['"‘“]([^'"’”]{2,55})['"’”]/g)].map(x => x[1]);
+        const quoted = [...String(title + " " + base.slice(0, 900)).matchAll(/['"‘“]([^'"’”]{2,55})['"’”]/g)]
+          .map(x => x[1]).filter(x => x.length <= 30);
         for (const phrase of quoted) add(phrase);
         const allKeywords = [title, ...result.imageKeywords, ...((base.match(/#{1,3}\s+[^\n]+/g) || []).map(x=>x.replace(/^#+\s*/, "")))];
         const words = allKeywords.join(" ").match(/[\p{L}\p{N}.]{2,}/gu) || [];
         const useful = words.map(x => x.replace(/(?:까지|으로|에서|부터|만에|이어|개최)$/u, ""))
-          .filter(x => x.length >= 2 && !ignored.has(x) && !/^\d+$/.test(x));
-        for (const word of useful) add(word);
-        const articleWords = base.match(/[\p{L}\p{N}.]{2,}/gu) || [];
-        for (const word of articleWords) if (tags.length < 8 && (/[A-Z]/.test(word) || word.length >= 3)) add(word);
+          .filter(x => x.length >= 2 && !ignored.has(x) && !/^\\d+(?:년|개월|일|월)?$/.test(x));
         const subject = useful.find(x => /^[가-힣]{2,6}$/.test(x)) || useful[0] || "";
-        const focus = ["컴백","콘서트","투어","아시아투어","정규","정규4집","신곡","앨범","시청률","화제성","예매","공연","일정","방송","출연자"];
+        if (subject) add(subject);
+        // Search-intent combinations before generic component words.
+        const focus = ["컴백","콘서트","아시아투어","정규4집","투어","앨범","시청률","화제성","예매","공연","일정","출연자"];
         for (const token of focus) {
-          if (tags.length >= 10) break;
-          const detected = [title,base].some(x => String(x).includes(token));
+          if (tags.length >= 9) break;
+          const detected = [title,base].some(x => String(x).includes(token === "정규4집" ? "정규 4집" : token));
           if (detected && subject && !subject.includes(token)) add(subject + token);
         }
+        for (const word of useful) add(word);
+        const articleWords = base.match(/[\\p{L}\\p{N}.]{2,}/gu) || [];
+        for (const word of articleWords) if (tags.length < 8 && (/[A-Z]/.test(word) || word.length >= 3)) add(word);
         for (const fallback of ["오늘의이슈", "핵심정리", result.category || ""]) {
           if (tags.length >= 8) break;
           add(fallback);
