@@ -103,8 +103,10 @@ test('short imperfect articles remain visible for revision instead of becoming e
     assert.equal(result.status,'revision_required');
     assert.ok(result.draft.naver.startsWith(body));
     assert.ok(result.draft.tistory.startsWith(body));
-    assert.match(result.draft.naver, /## 관련 태그\n#오늘의픽$/);
-    assert.match(result.draft.tistory, /## 관련 태그\n#오늘의픽$/);
+    assert.match(result.draft.naver, /## 관련 태그\n#오늘의픽/);
+    assert.match(result.draft.tistory, /## 관련 태그\n#오늘의픽/);
+    assert.equal((result.draft.naver.match(/#오늘의픽/g) || []).length, 1);
+    assert.ok((result.draft.naver.split('## 관련 태그')[1].match(/#[^\s#]+/g) || []).length >= 8);
     assert.ok(result.draft.shortform.length>0);
     assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('요약·구체적 근거·소제목')));
   } finally {
