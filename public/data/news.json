@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-19T12:29:47.817208+00:00",
+  "fetchedAt": "2026-11-19T13:20:17.987062+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
@@ -9,12 +9,21 @@
     "K-pop/KO": 11,
     "IT·AI/KO": 4,
     "생활 정보/KO": 4,
+    "시니어·복지/KO": 24,
     "K-pop/EN": 10,
     "K-드라마/EN": 4,
     "AI·생산성/EN": 24
   },
   "retainedFromPrevious": 0,
   "items": [
+    {
+      "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets - Netflix",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanJZMDRJdnNyZlR0cFFQQXgzNnNteDlsbUFqS3NOT0Y4aE5JeTNBMFZHV1RfbHR5SWZjaGtPTGw4dzBNNWZqVnVkem5OX1NCM0FEWHJjbU1BTFJmSFBiUjg3VlBnLWN2eDBZcUptcm0yd2VPZjgteVlWTXViX3ZSeDd4bzBUWm5qYUZr?oc=5",
+      "publisher": "Netflix",
+      "publishedAt": "2026-11-19T11:57:04+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
     {
       "title": "이민호·박규영, SBS '버츄얼 러브' 주연 확정…버추얼 아이돌 된 상사와 로맨스, 2027년 하반기 편성 - 톱셀럽뉴스",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TQVFpdUd5dmNERVZZX0swNDJfaVBKYy16V2FhSnJxM3FKeXhtNzRlVEZkY1lXa296cklnSnZGYlgzMGd1akEtQ3FLQ0dTaFhWeDJrQ2dneWVaekNPZmNHODJlaG1DZFVhOEFV?oc=5",
@@ -64,20 +73,20 @@
       "region": "EN"
     },
     {
-      "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets - Netflix",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanJZMDRJdnNyZlR0cFFQQXgzNnNteDlsbUFqS3NOT0Y4aE5JeTNBMFZHV1RfbHR5SWZjaGtPTGw4dzBNNWZqVnVkem5OX1NCM0FEWHJjbU1BTFJmSFBiUjg3VlBnLWN2eDBZcUptcm0yd2VPZjgteVlWTXViX3ZSeDd4bzBUWm5qYUZr?oc=5",
-      "publisher": "Netflix",
-      "publishedAt": "2026-11-19T10:17:48+00:00",
-      "category": "K-pop",
+      "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5 - IMDb",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84LTFZWmN3NDd3RG1HUmYxVzc5Sjl4S3l5cE8tNlIzaHRlQWFueVpJclJuSjJvRkNibERWYUlYT19MZkFieVZyajZLdUR1bWZnQ1VMMVFQQXZTeGtMY2otZw?oc=5",
+      "publisher": "IMDb",
+      "publishedAt": "2026-11-19T10:27:24+00:00",
+      "category": "K-드라마",
       "region": "EN"
     },
     {
-      "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5 - Pirates and Princesses",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQc0VuWUcxdDBqaXlRb3JuV2d1OE16NlVlVDJ6YlRWVWlOZUJmeTdqSFFhNVRHeG1fNmlfeEhhU2FTcEhEOEFEaGtDWXFpTlNZekRYOUZlTTJpUHk3RnVYc1pmYTJtTTJjZE9nVG0yU1JZcHdlb0xVVWdQcHRpSEc0b0s2cGJTTXV1TDlHWFVNbGk3SHFqUXc?oc=5",
-      "publisher": "Pirates and Princesses",
-      "publishedAt": "2026-11-19T09:08:44+00:00",
-      "category": "K-드라마",
-      "region": "EN"
+      "title": "예방이냐 절감이냐 — 유럽 요양 개혁이 한국에 보내는 경고장 - 뉴스N연합",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBzQUpYUlNPQzROQ0t1SGFyQVhsQ2lHM3M2dmhodlJBVFViRTBocVU1cjRTMWJlWkFWZ19HTHlUYXBpWFplQjYxeU93?oc=5",
+      "publisher": "뉴스N연합",
+      "publishedAt": "2026-11-19T09:46:17+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
     },
     {
       "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레 - 씨네플레이",
@@ -128,6 +137,14 @@
       "region": "KO"
     },
     {
+      "title": "집에서 살고 싶은 장기요양 수급자, 돌봄은 부족 - 이투데이",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE00QWYteV9TSUpHRjk5ODdOMjdUYmtLX25qQ3VTaEZOcUdmTDA0YWdFQ2FIZTBnQTRoNWRpNElncm5PV0lEVzNISnQwWEg3YS12Sl9ybDFfU0xxdw?oc=5",
+      "publisher": "이투데이",
+      "publishedAt": "2026-11-19T07:21:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
       "title": "Microsoft unveils its AI-powered future at Ignite 2026 - News of Bahrain",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUGRGYmxja2pBOW42QzVSa2hBRTlKQVlmZ05LZ0tLNWdyZkhzU1J3N0FJRGxmWmg2ZDV4WXBkX2dJajZDc0Z6S2R2M0Y1ZGdLdmZ0OXh0STY4VGpQRjJRb2QzaEJTRkZXSWVXa2dDek55c0pEdnZNeUd5X0ZGeVdrRTFyN3c0c1poWEpHNXpHVmhZcUNoeV80alRhWQ?oc=5",
       "publisher": "News of Bahrain",
@@ -136,11 +153,75 @@
       "region": "EN"
     },
     {
+      "title": "[이로운체크] '신청해야 받는 복지' 바뀐다...사각지대 줄일까 - 이로운넷",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBCTms1ZG92VTNCSjBKVE1PNGk0YlJ1bTdESnZaeTlQZ1d4TEE3Zjdkc0NKRTh4c1FrWXUxejFqWE9DQ1cyM3FWdEJkYmZRbE1lRTRGc3l2Tm1ka0VjOERJaUJiNi1xUQ?oc=5",
+      "publisher": "이로운넷",
+      "publishedAt": "2026-11-19T05:48:04+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "아동수당 자동지급 등 복지급여 신청 절차 바뀐다…복지부, 새 정책 이름 공모 - 간호사신문",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBBMkc2WmI3QkNOdUtELWdJb2Jubkc3VEVOanFWR20yMF95ZW5YaU9QbVB6eFNPOXhCczhxLUY1NEl1SHhiS01nMktQTDJydW13NGMzYm5SbVRpUlI1dWJ0NTBpcTB4d3ZTbEhRN053?oc=5",
+      "publisher": "간호사신문",
+      "publishedAt": "2026-11-19T05:38:55+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "'신청해야 받는 복지' 바뀐다...새 정책명 국민이 짓는다 - 이로운넷",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5ZTUtObzVtWUVFZnNrMV9HeDNFUG56UFgxU0NpOE1YTTBXRm8taTl0aFROWWNLS1hiSU9MOFhMYm5ZOUN3SmtWOXc3bGxKM3JtY3JfVUFNVEs2Z3ZJSFVHdFprbjFSUQ?oc=5",
+      "publisher": "이로운넷",
+      "publishedAt": "2026-11-19T05:30:18+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "문서뷰어 - 대한민국 정책브리핑",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNUFRdEp3cWVDaVlKVjR3Sjk1U052TUZRTmYyd1RrV0dhYjh4SDlzQ210S0RiWFB0MzlfQWREanJWMTd6QTZJeDN0VjczQWxGQzlSZ2RYOUtLaFg4V2M1RGRSUXVITFgtVkd4MjVrNHZxS2lrM0RXQXp2M0thTlZHdzdrZlBtdnI0am1zZUdQa1pGek1xNzlRTlRXdEc5bVVnLXdkd3c0bXE0OVEzSlpNQ3JXZGZkZDc2eS04SEsyTUJwbklUZVlWWHFFMXFwSE50ZEhsRGpnS0hNX1g4ZkJvbzRleUhMVlE?oc=5",
+      "publisher": "대한민국 정책브리핑",
+      "publishedAt": "2026-11-19T05:11:55+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "신청주의 개선 정책, 새로운 이름 지어주세요 > 뉴스 - 한의신문",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1wOXJyVXU5RHRWd1Qzd25XWDhqemlIcGtCQVhXTlc3aFV0eXpNNFQtM1hfdlk2LWlSYmRBMmotci1kR052OEh5a2VST3ktSkljMlRiNVhBb3lta3FHa2FITkN0MURFUTR6SHJhRl93UER2Zw?oc=5",
+      "publisher": "한의신문",
+      "publishedAt": "2026-11-19T03:51:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
       "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다. - Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hUmRhUjd1T05ZLTdjbkc3SV9wNi1fbDhEMVlndXYxQlY3NzQxN0RBczloMzd6b0xoODFMYWwySE1RNXNtbHVZR2M0ek5feGZZX1pBdlVmRVZFWE5CX2RvWnVyTngweEtWbGtJbG5UbkwxNkt5b0hF?oc=5",
       "publisher": "Vietnam.vn",
       "publishedAt": "2026-11-19T03:26:11+00:00",
       "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "복지급여 '신청주의 개선' 새로운 이름 공모…내달 4일까지 접수 - 뉴스1",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4zTnJxbUlfS05KMl9YQnBWOGZQekl5bXZsTlNhY2FyczA0ZDVvZkNaZ2t3NHZNU3I1VXM4V2VERmdVVFlqRmRvMm1JdE1pT1k0ZUJMMlpWOWZ2TTI1?oc=5",
+      "publisher": "뉴스1",
+      "publishedAt": "2026-11-19T03:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "신청 없이 받는 복지급여…복지부, 새 정책 이름 공모 - 데일리안",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOM19Qc1VXOENXWHotZ1hLeHNrckhRay1oQldZU3o2anJ5RWxWX3l2UUVmdkJlRHYwS2FGeUZNbm1SMEhOeXd1VUtleXRWVGFJdThRTU05b3Ayd3VCLXREbXZEdWdsenp0S1g2NVdNYm4weHl0eUU4RzdpbVlTZWV6b0pzb3BDaUxjTUF2VTZIaWtmZ3ZIRzF4THN0MkFRZlJjREtuN1lBWkZTZGFlSFN5MFE0cm5POFU2NGtHdTFpQlhwMFUzbWpFeGlfTERuMUhKSVVnM0FOVTNvMUxvTlVrV2hBVDZ2VnBJZ1hGZGgxSDVqNjU0dmV5MEVhYVdqSUFXOWJrOFloRGhoYW9JQml0VzVwYkU5YU5m?oc=5",
+      "publisher": "데일리안",
+      "publishedAt": "2026-11-19T03:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "아동수당ㆍ부모급여 자동지급⋯정부, 정책 이름 국민 공모 - 이투데이",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1mNVRYYUdoMUZMUHdpN1JPRHNMYjNBQzdranFoWk5pcFc3Tmc0R3BuNmNiUmowWkJJZVFfUVViV3hkTmlIZnozUEwzNWtyZEMza2FBaW9QY0ZOVjlMY21vWl9LalpuejVudzdFTVYxNkNPVXlR?oc=5",
+      "publisher": "이투데이",
+      "publishedAt": "2026-11-19T03:00:00+00:00",
+      "category": "시니어·복지",
       "region": "KO"
     },
     {
@@ -190,6 +271,14 @@
       "publishedAt": "2026-11-18T19:39:57+00:00",
       "category": "AI·생산성",
       "region": "EN"
+    },
+    {
+      "title": "[단독]“필요한 서비스 못받고, 본인부담금도 발생”… 장기요양등급 포기 5년새 1만5000명 - 동아일보",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5HdlJWTXM2bzI2ZnF2THJxYWUyX1l5aXZFWEpIY19lMjZoZkZmRlRrdVk4dnduSVV5Q2IwclZwX1AxNm15SGtRZTIzdzFqUnMxa2h0OW1NNUxjUTN6Uk5rbVVuLXJrd9IBZkFVX3lxTE5HdlJWTXM2bzI2ZnF2THJxYWUyX1l5aXZFWEpIY19lMjZoZkZmRlRrdVk4dnduSVV5Q2IwclZwX1AxNm15SGtRZTIzdzFqUnMxa2h0OW1NNUxjUTN6Uk5rbVVuLXJrdw?oc=5",
+      "publisher": "동아일보",
+      "publishedAt": "2026-11-18T19:30:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
     },
     {
       "title": "Best AI Contract Review Software in 2026 (Top-Rated Tools Reviewed & Compared) - Quasa.io",
@@ -488,6 +577,14 @@
       "region": "KO"
     },
     {
+      "title": "요양시설 6400여곳에 무료 전산 서비스…돌봄 기록 작성·조회 지원 - 간호사신문",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1NNUE2MHlYVGdseWE2UTRIZlJHbzVlT0FxdXV0bTVzb3g5T1NDeGNlU2hiSzFnUzRxRVFkOGpRellVakUzbk9NMENFOVBwYndFV3JlX3hFbHFJS05TQzBhaEhtejBodnRlSmpaYjJB?oc=5",
+      "publisher": "간호사신문",
+      "publishedAt": "2026-11-17T03:56:32+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
       "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표 - 티브이데일리",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84LTBYUC1mdzRSWnlCbE14OFVOeFNid29tc1BCeE5Uc25SWGF6NG4zRGc3NWZnMFRocExjWnphUXhSZEF2UEg2V3k0T1RINHA2OWt4dUZUMk5WVk1KeGlWeDljb0FIUHJiZVBV?oc=5",
       "publisher": "티브이데일리",
@@ -528,6 +625,38 @@
       "region": "EN"
     },
     {
+      "title": "송파구의사회 \"퇴원 후 돌봄 공백…지역의료 연계가 답\" - 보건신문",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOcWtKMWdCODhuVU5xbWpRYU9MelB5OUpJdTNjc0tCUXNJdWtkck1Hak90SWJaRnpXNTRTVjM5X2xDbkpaVlFxaVNyUW5vVEhNQjkwaWQxT0VqR3FnOXdNajVjYw?oc=5",
+      "publisher": "보건신문",
+      "publishedAt": "2026-11-16T01:20:27+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "퇴원 후 집에서 간호받도록… 병원 평가·수가 개선 제안 - 이투데이",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tNHZlWHU2alljc1NSZjZTcUVtN1IyMTNieWZsSDYtT21aeWpVVjNfNll4bWZaWURCbjRucktmbmNZTFNzemZJMkdxRUxhaDh2YjVwRVZzOUVZUQ?oc=5",
+      "publisher": "이투데이",
+      "publishedAt": "2026-11-16T00:34:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "내년 장기요양보험료율 0.9994%…중증 재가급여 한도 15.1% 인상 - 쿠키뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5MM1RqazhEblNBTWVhNnBUX0c5cGJmV2hURXRwdUg1RUEtMVBjOEpoQU9nc0ZzZjNYbzFCV1dtSkRtczkyTXpiQVFIcUpTc2ZaY2NzV0tySFZ6aVl0UWthQUhTbw?oc=5",
+      "publisher": "쿠키뉴스",
+      "publishedAt": "2026-11-15T17:36:25+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "집 있다고 포기할 필요 없다…기초연금, 월급보다 ‘소득인정액’ 확인해야 - CBC뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9nRjlsUXljNTBxV0VFYjFDcVJiTnpsR2NqTlJnYll5WjFERFM0aXlqRzlxeF9XalZocUFveW11VkVNRlR1V21jRWNsN2hnS0FnMzBtYUFKbjdqQmwyR0U0WUp0QXhIOG9s?oc=5",
+      "publisher": "CBC뉴스",
+      "publishedAt": "2026-11-15T15:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
       "title": "배민, 외식업 AI 활용 문턱 낮춘다…따라 하기 쉬운 실전 가이드 공개 - 잡포스트",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8xX05wbjZJTjZmWUNlUUJmRUVJd2d1RnFSclc2N2hVQmY2S1FmWnJFNzFZZHEtb0M1Uk1mN0Etc0pnVlJBUGZobG9wOW1EMWYzamVDbU9xMVBSSGNwLWNBQkFPYTk0Ni1GTktjV2R30gFyQVVfeXFMTlkwR1l6ZWFydGhVVnJ5Y0xGcngzQnJsTWFYem8wVHhWVVpnQUhUTTNYN05wMDhDRVJnRDduVWRFUWpwMFRfSUlkakwxNFlEbHk5NmZNNEpyek44NVItQjRBQnF4Z1JGOTgwMFJUdi1PVnRB?oc=5",
       "publisher": "잡포스트",
@@ -560,6 +689,30 @@
       "region": "EN"
     },
     {
+      "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의 - 캐어유 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1femN6bjFzdEVqM09qR1J0dUhsSVhjdjc4LVV1cG5ZM0ZYb3RxLU9KMkdOZEs0Q1VCaWlNLWNzYmdrRTEzajZQcExiaENCc1ZYdExaQ0Q2UF9KMnB0ZHQ5WVNaTEttYS1LYXpEeWRR?oc=5",
+      "publisher": "캐어유 뉴스",
+      "publishedAt": "2026-11-15T03:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "기초연금에 ‘국내 거주기간’ 요건 검토…외국인 연금 추납도 손질 - 쿠키뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9SODh5Q2duNGhNaHMzOU1BNHR0eHNfVjhOUXRsOGk0QlE2YXBUM19RQjFWbjI0bjY3aFViMnotZEM5QXMwYXIyU1hMRGJMaU5YbmhmTlNPYmZXTFZsTVBvYUJYWQ?oc=5",
+      "publisher": "쿠키뉴스",
+      "publishedAt": "2026-11-15T02:17:07+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "[남기찬 칼럼] 부모님 퇴원 날짜는 잡혔는데, 집에서의 돌봄은 준비됐을까? - 캐어유 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9iQzVoWUdwOHAta1BOLVRhMzI1dzlyTFlkMzZpZ0ZXYXpkQjhSOUF5SzY2X25ULVktZXJMSWVOWjZ6UnB3ZlFzNzBRX2FLT004YWo3c09BR010aGtFX3p1N053RGlQT1Qwc1hFX0Fn?oc=5",
+      "publisher": "캐어유 뉴스",
+      "publishedAt": "2026-11-15T00:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
       "title": "Best RMM tools for MSPs: features, AI and buying criteria - Acronis",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1KaEpCTWIzeFJQYl9abzE1bHk4Q1lpb2hPTzFxc2VWQXU5RnBKVGhXcjhSQkI1YVMxZVBELUhFN0RJclA4YU9ET1c3S1RhVmYzY2owX25DSEUzeFJ2a3BDT2xrUXd5MnYySFJ3MWRsV216NFBi?oc=5",
       "publisher": "Acronis",
@@ -573,6 +726,22 @@
       "publisher": "국제신문",
       "publishedAt": "2026-11-13T08:35:00+00:00",
       "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "요양보호사는 ‘가정부’ 아닙니다…재가서비스 제대로 이용하려면 - 농민신문",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kUzgyWGtCSm9NM2RrVk1VVC04QUJUSDVvdnhaNTFqSVBkTUFSOE1Edm0waWt6aWFSRndVd21QdHk2SjhNUGtodzlqT2YtaDUteW16eHA1OWduZw?oc=5",
+      "publisher": "농민신문",
+      "publishedAt": "2026-11-13T08:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "‘시설 입소’에서 ‘내 집 요양’으로…재가 돌봄 확대가 바꿀 '간병보험' 공식(영상+) - 보험저널",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1vSlRwTVEzWHh0SE91Z3ZpOUwxVXNEenZrSkpiWnhWOTE5Z2hqc1J5eWlXWU1hRVhXSGhPUkRlRXJEaFNmUlE2b3pyRTA3YVpZVGtvWGJWX1FRaFlEWkVGczFsRjZURjVjOWFobi1pYw?oc=5",
+      "publisher": "보험저널",
+      "publishedAt": "2026-11-13T08:00:00+00:00",
+      "category": "시니어·복지",
       "region": "KO"
     },
     {
@@ -597,6 +766,30 @@
       "publisher": "아웃소싱타임스",
       "publishedAt": "2026-11-12T22:07:06+00:00",
       "category": "IT·AI",
+      "region": "KO"
+    },
+    {
+      "title": "“시니어 케어의 경쟁력 핵심, 운영 표준화에 있어” - 이투데이",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5XRVRaOUlfTWUtQWZzME5OQkFkS2JnaENlZ2s4M2psUkF4YW9yQ2pZVG43WFRuNVlFdWticlQ5aWJJRW44T0JYT2dZMXpqZXYydFZoUjdiYnF3QQ?oc=5",
+      "publisher": "이투데이",
+      "publishedAt": "2026-11-12T22:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "AI 돌봄, 공공 체계에 묶어야 작동한다 — 삼성생명 동탄 실증과 세계 시장의 경고 - 한국공공정책신문",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBLLWxqamNiY0c0MUNReXJjdTBVR3V5bjZXSFFNajR0ZW9IcTdhNF9rcWswTEhUa0NPX2JlaDYwMEhGbXc?oc=5",
+      "publisher": "한국공공정책신문",
+      "publishedAt": "2026-11-12T17:24:45+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "장애인 통합돌봄, 15만 명 수요에 연계된 건 709명뿐 - 유스연합",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9CZHpnX0FyWERId090RE9qS1NKd2g5ODhxNTBYdmpELWVDSElyaXRMdGJKczBhRjJSMHVpbzRCNnBucVJ1enV4OTdFNW5ZbmktZGlJ?oc=5",
+      "publisher": "유스연합",
+      "publishedAt": "2026-11-12T16:06:07+00:00",
+      "category": "시니어·복지",
       "region": "KO"
     }
   ],

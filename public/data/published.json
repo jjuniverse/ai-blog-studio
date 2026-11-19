@@ -1,45 +1,57 @@
 {
-  "generatedAt": "2026-11-19T12:29:47.938493+00:00",
+  "generatedAt": "2026-11-19T13:20:18.108196+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 9,
-      "lastSuccessAt": "2026-11-19T12:29:47.938493+00:00"
+      "count": 11,
+      "lastSuccessAt": "2026-11-19T13:20:18.108196+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-19T12:29:47.938493+00:00"
+      "lastSuccessAt": "2026-11-19T13:20:18.108196+00:00"
     }
   ],
   "posts": [
     {
       "channel": "naver",
+      "title": "2026년 기초연금 수급자격·선정기준액과 신청 방법 — 만 65세 전에 꼭 확인할 핵심 정리",
+      "url": "https://blog.naver.com/todaypickkr/224483955006?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T13:16:21+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "숨은 카드포인트·통신비 미환급금 한 번에 현금화하는 법 (2026년 11월 최신 기준)",
+      "url": "https://blog.naver.com/todaypickkr/224483921729?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T12:45:14+00:00"
+    },
+    {
+      "channel": "naver",
       "title": "건강보험 환급금 조회·신청 방법 — 3년 지나기 전에 챙기는 '숨은 돈' 정리 (2026년 11월 기준)",
       "url": "https://blog.naver.com/todaypickkr/224483877338?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-19T12:02:34+00:00"
+      "publishedAt": "2026-11-19T12:02:33+00:00"
     },
     {
       "channel": "naver",
       "title": "직장인 가성비 냉동도시락 비교 — 한 끼 3,315원부터 5,280원까지 4종",
       "url": "https://blog.naver.com/todaypickkr/224483801833?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-19T10:45:40+00:00"
+      "publishedAt": "2026-11-19T10:45:39+00:00"
     },
     {
       "channel": "naver",
       "title": "신의 구슬: Prime Video에서 12월 5일 방영 예정인 고려 전쟁 K-드라마",
       "url": "https://blog.naver.com/todaypickkr/224483749536?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-19T09:51:36+00:00"
+      "publishedAt": "2026-11-19T09:51:35+00:00"
     },
     {
       "channel": "naver",
       "title": "겨울 방한·건조 대비 꿀템 4종 비교 — 3만 원대 전기요부터 가열식 가습기까지",
       "url": "https://blog.naver.com/todaypickkr/224483723372?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-19T09:26:53+00:00"
+      "publishedAt": "2026-11-19T09:26:52+00:00"
     },
     {
       "channel": "naver",
@@ -57,7 +69,7 @@
       "channel": "naver",
       "title": "앤트로픽 '클로드 페이블 5.2' 프롬프트 가이드, 핵심만 정리",
       "url": "https://blog.naver.com/todaypickkr/224483269032?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-19T03:34:54+00:00"
+      "publishedAt": "2026-11-19T03:34:53+00:00"
     },
     {
       "channel": "naver",
@@ -69,7 +81,19 @@
       "channel": "naver",
       "title": "맥북 화면 녹화하는 방법 총정리｜단축키부터 녹화 중지, 저장 위치까지",
       "url": "https://blog.naver.com/todaypickkr/224479286806?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-16T07:28:31+00:00"
+      "publishedAt": "2026-11-16T07:28:30+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "숨은 카드포인트·통신비 미환급금 한 번에 현금화하는 법 (2026년 11월 최신 기준)",
+      "url": "https://blog83848.tistory.com/14",
+      "publishedAt": "2026-11-19T12:53:10+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "건강보험 환급금 조회·신청 방법 — 3년 지나기 전에 챙기는 '숨은 돈' 정리 (2026년 11월 기준)",
+      "url": "https://blog83848.tistory.com/13",
+      "publishedAt": "2026-11-19T12:30:28+00:00"
     },
     {
       "channel": "tistory",
@@ -118,18 +142,6 @@
       "title": "Anthropic's Claude Fable 5.2 Prompting Guide: The Rules That Actually Change Output",
       "url": "https://blog83848.tistory.com/5",
       "publishedAt": "2026-11-19T02:40:16+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "앤트로픽 '클로드 페이블 5.2' 프롬프트 가이드, 핵심만 정리",
-      "url": "https://blog83848.tistory.com/4",
-      "publishedAt": "2026-11-19T00:09:58+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "‘100일의 거짓말’ 김유정-박진영, 출연자 화제성 1·2위…TV·OTT 화제성도 1위",
-      "url": "https://blog83848.tistory.com/3",
-      "publishedAt": "2026-11-18T09:04:09+00:00"
     }
   ]
 }

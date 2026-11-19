@@ -1,7 +1,49 @@
 {
-  "generatedAt": "2026-11-19T12:29:47.872237+00:00",
+  "generatedAt": "2026-11-19T13:20:18.044619+00:00",
   "disclaimer": "Editorial-only heuristics; no measured traffic, revenue or factual verification. Promotional topics are excluded from recommendations.",
   "candidates": [
+    {
+      "id": "f9766d878b1023",
+      "title": "아동수당 자동지급 등 복지급여 신청 절차 바뀐다…복지부, 새 정책 이름 공모",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "아동수당 자동지급 등 복지급여 신청 절차 바뀐다…복지부, 새 정책 이름 공모 - 간호사신문",
+          "publisher": "간호사신문",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBBMkc2WmI3QkNOdUtELWdJb2Jubkc3VEVOanFWR20yMF95ZW5YaU9QbVB6eFNPOXhCczhxLUY1NEl1SHhiS01nMktQTDJydW13NGMzYm5SbVRpUlI1dWJ0NTBpcTB4d3ZTbEhRN053?oc=5",
+          "publishedAt": "2026-11-19T05:38:55+00:00"
+        },
+        {
+          "title": "신청 없이 받는 복지급여…복지부, 새 정책 이름 공모 - 데일리안",
+          "publisher": "데일리안",
+          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOM19Qc1VXOENXWHotZ1hLeHNrckhRay1oQldZU3o2anJ5RWxWX3l2UUVmdkJlRHYwS2FGeUZNbm1SMEhOeXd1VUtleXRWVGFJdThRTU05b3Ayd3VCLXREbXZEdWdsenp0S1g2NVdNYm4weHl0eUU4RzdpbVlTZWV6b0pzb3BDaUxjTUF2VTZIaWtmZ3ZIRzF4THN0MkFRZlJjREtuN1lBWkZTZGFlSFN5MFE0cm5POFU2NGtHdTFpQlhwMFUzbWpFeGlfTERuMUhKSVVnM0FOVTNvMUxvTlVrV2hBVDZ2VnBJZ1hGZGgxSDVqNjU0dmV5MEVhYVdqSUFXOWJrOFloRGhoYW9JQml0VzVwYkU5YU5m?oc=5",
+          "publishedAt": "2026-11-19T03:00:00+00:00"
+        },
+        {
+          "title": "아동수당ㆍ부모급여 자동지급⋯정부, 정책 이름 국민 공모 - 이투데이",
+          "publisher": "이투데이",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1mNVRYYUdoMUZMUHdpN1JPRHNMYjNBQzdranFoWk5pcFc3Tmc0R3BuNmNiUmowWkJJZVFfUVViV3hkTmlIZnozUEwzNWtyZEMza2FBaW9QY0ZOVjlMY21vWl9LalpuejVudzdFTVYxNkNPVXlR?oc=5",
+          "publishedAt": "2026-11-19T03:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 34,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 60,
+        "independentPublisherCount": 3,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "research_required",
+      "reasons": [
+        "복수 매체 헤드라인 확인: 원문 및 공식 발표 추가 검증 필요"
+      ]
+    },
     {
       "id": "16bef504dfbec3",
       "title": "‘데블스 플랜: 데드 어게인’ 공개 일주일 만에 통했다…넷플릭스 1위·화제성 정상",
@@ -72,6 +114,37 @@
       "status": "research_required",
       "reasons": [
         "복수 매체 헤드라인 확인: 원문 및 공식 발표 추가 검증 필요"
+      ]
+    },
+    {
+      "id": "149ead8e58d1a7",
+      "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets - Netflix",
+          "publisher": "Netflix",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanJZMDRJdnNyZlR0cFFQQXgzNnNteDlsbUFqS3NOT0Y4aE5JeTNBMFZHV1RfbHR5SWZjaGtPTGw4dzBNNWZqVnVkem5OX1NCM0FEWHJjbU1BTFJmSFBiUjg3VlBnLWN2eDBZcUptcm0yd2VPZjgteVlWTXViX3ZSeDd4bzBUWm5qYUZr?oc=5",
+          "publishedAt": "2026-11-19T11:57:04+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 36,
+        "commercialFitHeuristic": 26,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "사용법·비교 등 정보 탐색 의도 단서"
       ]
     },
     {
@@ -167,22 +240,22 @@
       ]
     },
     {
-      "id": "149ead8e58d1a7",
-      "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets",
-      "category": "K-pop",
+      "id": "b9cb376cecc44d",
+      "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5",
+      "category": "K-드라마",
       "region": "EN",
       "headlines": [
         {
-          "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets - Netflix",
-          "publisher": "Netflix",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanJZMDRJdnNyZlR0cFFQQXgzNnNteDlsbUFqS3NOT0Y4aE5JeTNBMFZHV1RfbHR5SWZjaGtPTGw4dzBNNWZqVnVkem5OX1NCM0FEWHJjbU1BTFJmSFBiUjg3VlBnLWN2eDBZcUptcm0yd2VPZjgteVlWTXViX3ZSeDd4bzBUWm5qYUZr?oc=5",
-          "publishedAt": "2026-11-19T10:17:48+00:00"
+          "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5 - IMDb",
+          "publisher": "IMDb",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84LTFZWmN3NDd3RG1HUmYxVzc5Sjl4S3l5cE8tNlIzaHRlQWFueVpJclJuSjJvRkNibERWYUlYT19MZkFieVZyajZLdUR1bWZnQ1VMMVFQQXZTeGtMY2otZw?oc=5",
+          "publishedAt": "2026-11-19T10:27:24+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 36,
-        "commercialFitHeuristic": 26,
-        "shortformFitHeuristic": 60,
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -193,21 +266,26 @@
       },
       "status": "needs_sources",
       "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "사용법·비교 등 정보 탐색 의도 단서"
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
-      "id": "b9cb376cecc44d",
-      "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5",
-      "category": "K-드라마",
-      "region": "EN",
+      "id": "2e81e5fc96138b",
+      "title": "[이로운체크] '신청해야 받는 복지' 바뀐다...사각지대 줄일까",
+      "category": "시니어·복지",
+      "region": "KO",
       "headlines": [
         {
-          "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5 - Pirates and Princesses",
-          "publisher": "Pirates and Princesses",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQc0VuWUcxdDBqaXlRb3JuV2d1OE16NlVlVDJ6YlRWVWlOZUJmeTdqSFFhNVRHeG1fNmlfeEhhU2FTcEhEOEFEaGtDWXFpTlNZekRYOUZlTTJpUHk3RnVYc1pmYTJtTTJjZE9nVG0yU1JZcHdlb0xVVWdQcHRpSEc0b0s2cGJTTXV1TDlHWFVNbGk3SHFqUXc?oc=5",
-          "publishedAt": "2026-11-19T09:08:44+00:00"
+          "title": "[이로운체크] '신청해야 받는 복지' 바뀐다...사각지대 줄일까 - 이로운넷",
+          "publisher": "이로운넷",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBCTms1ZG92VTNCSjBKVE1PNGk0YlJ1bTdESnZaeTlQZ1d4TEE3Zjdkc0NKRTh4c1FrWXUxejFqWE9DQ1cyM3FWdEJkYmZRbE1lRTRGc3l2Tm1ka0VjOERJaUJiNi1xUQ?oc=5",
+          "publishedAt": "2026-11-19T05:48:04+00:00"
+        },
+        {
+          "title": "'신청해야 받는 복지' 바뀐다...새 정책명 국민이 짓는다 - 이로운넷",
+          "publisher": "이로운넷",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5ZTUtObzVtWUVFZnNrMV9HeDNFUG56UFgxU0NpOE1YTTBXRm8taTl0aFROWWNLS1hiSU9MOFhMYm5ZOUN3SmtWOXc3bGxKM3JtY3JfVUFNVEs2Z3ZJSFVHdFprbjFSUQ?oc=5",
+          "publishedAt": "2026-11-19T05:30:18+00:00"
         }
       ],
       "scores": {
@@ -287,6 +365,36 @@
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족",
         "사용법·비교 등 정보 탐색 의도 단서"
+      ]
+    },
+    {
+      "id": "c67af016170f09",
+      "title": "Stray Kids Announce 2027 Tour: See Dates",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Stray Kids Announce 2027 Tour: See Dates - Ticketmaster Blog",
+          "publisher": "Ticketmaster Blog",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5cHZhY1RCWEtQeGdIcXNKQUJCNTV4VWxMYktpU1ZRTlVkbk9xXzE4aHdCeDh1dUtLQWpiMlQ0SURlRUxWX3hOSUhyTkN0bWNkT05oNnF4RFRQOVM1emtNa093U0N1WVI0?oc=5",
+          "publishedAt": "2026-11-19T11:03:14+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
@@ -381,22 +489,22 @@
       ]
     },
     {
-      "id": "c67af016170f09",
-      "title": "Stray Kids Announce 2027 Tour: See Dates",
-      "category": "K-pop",
+      "id": "7e6b52b0f71e90",
+      "title": "\"Good Partner\" Season 2 Premieres November 20: Cast, Storyline & Where to Watch",
+      "category": "K-드라마",
       "region": "EN",
       "headlines": [
         {
-          "title": "Stray Kids Announce 2027 Tour: See Dates - Ticketmaster Blog",
-          "publisher": "Ticketmaster Blog",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5cHZhY1RCWEtQeGdIcXNKQUJCNTV4VWxMYktpU1ZRTlVkbk9xXzE4aHdCeDh1dUtLQWpiMlQ0SURlRUxWX3hOSUhyTkN0bWNkT05oNnF4RFRQOVM1emtNa093U0N1WVI0?oc=5",
-          "publishedAt": "2026-11-19T11:03:14+00:00"
+          "title": "\"Good Partner\" Season 2 Premieres November 20: Cast, Storyline & Where to Watch - Dojeon Media",
+          "publisher": "Dojeon Media",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMFNsUTBscWNoMUJ4WjZMbXYzdHUyanlRdko1a3U5U25md21JTXJaUXcyc2t2RkRBVTBWOTh2SG5KdWhuNVR2Y0Z0bEJQS2hHY1dXWEhfUVZXU3pHa1VoMG9EbU5hYkN0SXFLTFB6VGI0aTFQejZjZEtoMF85UlZyT3NsYWVRRUpsTkdnaXQyVjREZUdxSDFJWHVBYVZjU0tQeXdKcTJFNVkxQQ?oc=5",
+          "publishedAt": "2026-11-18T22:51:52+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -411,16 +519,16 @@
       ]
     },
     {
-      "id": "7e6b52b0f71e90",
-      "title": "\"Good Partner\" Season 2 Premieres November 20: Cast, Storyline & Where to Watch",
-      "category": "K-드라마",
-      "region": "EN",
+      "id": "d34a18f0b9c601",
+      "title": "예방이냐 절감이냐 — 유럽 요양 개혁이 한국에 보내는 경고장",
+      "category": "시니어·복지",
+      "region": "KO",
       "headlines": [
         {
-          "title": "\"Good Partner\" Season 2 Premieres November 20: Cast, Storyline & Where to Watch - Dojeon Media",
-          "publisher": "Dojeon Media",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMFNsUTBscWNoMUJ4WjZMbXYzdHUyanlRdko1a3U5U25md21JTXJaUXcyc2t2RkRBVTBWOTh2SG5KdWhuNVR2Y0Z0bEJQS2hHY1dXWEhfUVZXU3pHa1VoMG9EbU5hYkN0SXFLTFB6VGI0aTFQejZjZEtoMF85UlZyT3NsYWVRRUpsTkdnaXQyVjREZUdxSDFJWHVBYVZjU0tQeXdKcTJFNVkxQQ?oc=5",
-          "publishedAt": "2026-11-18T22:51:52+00:00"
+          "title": "예방이냐 절감이냐 — 유럽 요양 개혁이 한국에 보내는 경고장 - 뉴스N연합",
+          "publisher": "뉴스N연합",
+          "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBzQUpYUlNPQzROQ0t1SGFyQVhsQ2lHM3M2dmhodlJBVFViRTBocVU1cjRTMWJlWkFWZ19HTHlUYXBpWFplQjYxeU93?oc=5",
+          "publishedAt": "2026-11-19T09:46:17+00:00"
         }
       ],
       "scores": {
@@ -499,6 +607,36 @@
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족",
         "사용법·비교 등 정보 탐색 의도 단서"
+      ]
+    },
+    {
+      "id": "a3b9350ed1509f",
+      "title": "BLACKPINK Weverse Membership Sales Paused as YG Addresses Group Activity Questions",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "BLACKPINK Weverse Membership Sales Paused as YG Addresses Group Activity Questions - Music Times",
+          "publisher": "Music Times",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYlJnSzFIdGw4U29WUUJMeE1OZ1drd1BWUHNuYXdwZWxOeHJnRXJ4YVFkOEJsM0p4bmJ6aW12eWp0ejVGam83Sl9BX280UXhkdmVINGhNNnFXMXpFdENaZGcyQ3NJcC1MYUxkaEl0dUJEdHFmUjdaT3JuY3VBUm9wMm9KdjdUR01RRW9FZzM5SGFhNi1jWl9tcXl0YjhlTXNkV3M3anpJLXdvX0RHU2xRVE1PeVdXNHQyUU0yVUF0dUpqbkV4YnNPT1FSVTJweDVs?oc=5",
+          "publishedAt": "2026-11-18T01:50:41+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
@@ -593,22 +731,22 @@
       ]
     },
     {
-      "id": "a3b9350ed1509f",
-      "title": "BLACKPINK Weverse Membership Sales Paused as YG Addresses Group Activity Questions",
-      "category": "K-pop",
+      "id": "8d16caa6e6b562",
+      "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN",
+      "category": "K-드라마",
       "region": "EN",
       "headlines": [
         {
-          "title": "BLACKPINK Weverse Membership Sales Paused as YG Addresses Group Activity Questions - Music Times",
-          "publisher": "Music Times",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYlJnSzFIdGw4U29WUUJMeE1OZ1drd1BWUHNuYXdwZWxOeHJnRXJ4YVFkOEJsM0p4bmJ6aW12eWp0ejVGam83Sl9BX280UXhkdmVINGhNNnFXMXpFdENaZGcyQ3NJcC1MYUxkaEl0dUJEdHFmUjdaT3JuY3VBUm9wMm9KdjdUR01RRW9FZzM5SGFhNi1jWl9tcXl0YjhlTXNkV3M3anpJLXdvX0RHU2xRVE1PeVdXNHQyUU0yVUF0dUpqbkV4YnNPT1FSVTJweDVs?oc=5",
-          "publishedAt": "2026-11-18T01:50:41+00:00"
+          "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN - Pirates and Princesses",
+          "publisher": "Pirates and Princesses",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWFlqVFRmVy1ZUjFYNlJZWjNrSWJqeUoyX3FwV2s0SjlPSFRtaVBaWjhKcHBRLUFXZy1NQmZDUVZCR01YVG1iYUhlN0FMbUM2eXFWa05vNExJWnVSenNfdTF5cmFZWmV4dDZzXzYxTllZallGTkVsb0RnUkhiRWxTOWZYYmVKTVhpbDBmUzNBRXFlOWd1QlE?oc=5",
+          "publishedAt": "2026-11-18T11:03:48+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -623,16 +761,16 @@
       ]
     },
     {
-      "id": "8d16caa6e6b562",
-      "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN",
-      "category": "K-드라마",
-      "region": "EN",
+      "id": "3f9db8271a6c65",
+      "title": "집에서 살고 싶은 장기요양 수급자, 돌봄은 부족",
+      "category": "시니어·복지",
+      "region": "KO",
       "headlines": [
         {
-          "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN - Pirates and Princesses",
-          "publisher": "Pirates and Princesses",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWFlqVFRmVy1ZUjFYNlJZWjNrSWJqeUoyX3FwV2s0SjlPSFRtaVBaWjhKcHBRLUFXZy1NQmZDUVZCR01YVG1iYUhlN0FMbUM2eXFWa05vNExJWnVSenNfdTF5cmFZWmV4dDZzXzYxTllZallGTkVsb0RnUkhiRWxTOWZYYmVKTVhpbDBmUzNBRXFlOWd1QlE?oc=5",
-          "publishedAt": "2026-11-18T11:03:48+00:00"
+          "title": "집에서 살고 싶은 장기요양 수급자, 돌봄은 부족 - 이투데이",
+          "publisher": "이투데이",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE00QWYteV9TSUpHRjk5ODdOMjdUYmtLX25qQ3VTaEZOcUdmTDA0YWdFQ2FIZTBnQTRoNWRpNElncm5PV0lEVzNISnQwWEg3YS12Sl9ybDFfU0xxdw?oc=5",
+          "publishedAt": "2026-11-19T07:21:00+00:00"
         }
       ],
       "scores": {
@@ -711,6 +849,36 @@
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족",
         "사용법·비교 등 정보 탐색 의도 단서"
+      ]
+    },
+    {
+      "id": "c0dcfae3d8567d",
+      "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/ - Facebook",
+          "publisher": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdEtJamowVW44UmRWWXlZMEljcEFjUmwtUmN5aThOdE1SOERiLTRrYmJFNkw2UjR4dWlVeE1SNnJkQVpPSTJHby1aMU8waUJDZTdDVGY5Mlh6bzRpT1RIYi1sLXk3cmdpdnR6akhEejBTU0FqUWgzdDk0ZU53Yy0wbUFLSGhRemdDZnRPQ0lVSkRjdExhR3ZRMlVGQ0dxY3VVNlJZV3ZPMEhLaE0yZ3RHd2s1dVIwMG1qbXZieWFRUnJXQnh3MzVrQjBKUHJqRkZmMC1N?oc=5",
+          "publishedAt": "2026-11-17T15:00:20+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
@@ -805,22 +973,22 @@
       ]
     },
     {
-      "id": "c0dcfae3d8567d",
-      "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/",
-      "category": "K-pop",
+      "id": "724ec2250e9c29",
+      "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More",
+      "category": "K-드라마",
       "region": "EN",
       "headlines": [
         {
-          "title": "Get ready for CL’s comeback! 👑🤩 The 2NE1 leader and solo artist is set to release her comeback single, “Iconic.” READ: https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/ - Facebook",
-          "publisher": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdEtJamowVW44UmRWWXlZMEljcEFjUmwtUmN5aThOdE1SOERiLTRrYmJFNkw2UjR4dWlVeE1SNnJkQVpPSTJHby1aMU8waUJDZTdDVGY5Mlh6bzRpT1RIYi1sLXk3cmdpdnR6akhEejBTU0FqUWgzdDk0ZU53Yy0wbUFLSGhRemdDZnRPQ0lVSkRjdExhR3ZRMlVGQ0dxY3VVNlJZV3ZPMEhLaE0yZ3RHd2s1dVIwMG1qbXZieWFRUnJXQnh3MzVrQjBKUHJqRkZmMC1N?oc=5",
-          "publishedAt": "2026-11-17T15:00:20+00:00"
+          "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More - Esquire India",
+          "publisher": "Esquire India",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQTHJFTi1taWxjZnR5WnFaZDd1NEFfaDZ5NXJIZzVPSkVyLVpELVo2MHgyWV9RMkhYVXpUMENMQUdzX1dfYzRycFJIUkJNWnZoWVpnWkR5Yl84aVpoNFFDamNjdXZNRjlvbnQxaFNnZW1WYXhSay1rUWUyZW1uRHJPb2lZRTF3bEdJRUprajRDMGxpbVJ6Q0ZLNlYtSTNiZzltTHdnOVlXSWZvcWMzck1rc1p3ZXNSQ19yeWh5RjZIbmNLLTJpUC1jSmVJdE1QZDFoSG9zRlJ3eV9qaElyNEh5Y3J5dERYaHBEOF9ETHRiVWZQSVNSTmNNYlg4Yi00UnlZd2FV0gGQAkFVX3lxTE9FdnRwUFZ5TjVNSWFYWXpGQ0ZyT09Bck03bFVnLW9OODdpbG9OM1l3MEx5UFhQNURqTWZiWW04c3JkZmx5d3ExSnM0Vl9OeENBNXBPY2VEMWdHQ3dNOXR5NkljWkRpaGF1MExIOHp0UjZBaWxkR3ByQmprNEs2TmtRQWxrdk9nMDZNblg1YnZral9RcjlQZHNJUWhtU3VKYW1uZUo2dVIyZFRiMEtuOUlwdjZrZFBXekp0ZnZfSVdjQUxpd3VoWXdQWWQtYl80MTQ2bWVITGJFZ2wxc1lUS1hCX2xIZWxwSGprekdoai1kWDg5UklsYVplRURjZzViWC1WRjFxOFIyakJkNWtDSVFi?oc=5",
+          "publishedAt": "2026-11-17T06:31:14+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -835,16 +1003,16 @@
       ]
     },
     {
-      "id": "724ec2250e9c29",
-      "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More",
-      "category": "K-드라마",
-      "region": "EN",
+      "id": "fe494d2bee3aa8",
+      "title": "문서뷰어",
+      "category": "시니어·복지",
+      "region": "KO",
       "headlines": [
         {
-          "title": "New K-Drama OTT Releases This Week (Nov 16-22): The Blue Road, Good Partner, Crash Season 2 On Netflix, Disney+, And More - Esquire India",
-          "publisher": "Esquire India",
-          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQTHJFTi1taWxjZnR5WnFaZDd1NEFfaDZ5NXJIZzVPSkVyLVpELVo2MHgyWV9RMkhYVXpUMENMQUdzX1dfYzRycFJIUkJNWnZoWVpnWkR5Yl84aVpoNFFDamNjdXZNRjlvbnQxaFNnZW1WYXhSay1rUWUyZW1uRHJPb2lZRTF3bEdJRUprajRDMGxpbVJ6Q0ZLNlYtSTNiZzltTHdnOVlXSWZvcWMzck1rc1p3ZXNSQ19yeWh5RjZIbmNLLTJpUC1jSmVJdE1QZDFoSG9zRlJ3eV9qaElyNEh5Y3J5dERYaHBEOF9ETHRiVWZQSVNSTmNNYlg4Yi00UnlZd2FV0gGQAkFVX3lxTE9FdnRwUFZ5TjVNSWFYWXpGQ0ZyT09Bck03bFVnLW9OODdpbG9OM1l3MEx5UFhQNURqTWZiWW04c3JkZmx5d3ExSnM0Vl9OeENBNXBPY2VEMWdHQ3dNOXR5NkljWkRpaGF1MExIOHp0UjZBaWxkR3ByQmprNEs2TmtRQWxrdk9nMDZNblg1YnZral9RcjlQZHNJUWhtU3VKYW1uZUo2dVIyZFRiMEtuOUlwdjZrZFBXekp0ZnZfSVdjQUxpd3VoWXdQWWQtYl80MTQ2bWVITGJFZ2wxc1lUS1hCX2xIZWxwSGprekdoai1kWDg5UklsYVplRURjZzViWC1WRjFxOFIyakJkNWtDSVFi?oc=5",
-          "publishedAt": "2026-11-17T06:31:14+00:00"
+          "title": "문서뷰어 - 대한민국 정책브리핑",
+          "publisher": "대한민국 정책브리핑",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNUFRdEp3cWVDaVlKVjR3Sjk1U052TUZRTmYyd1RrV0dhYjh4SDlzQ210S0RiWFB0MzlfQWREanJWMTd6QTZJeDN0VjczQWxGQzlSZ2RYOUtLaFg4V2M1RGRSUXVITFgtVkd4MjVrNHZxS2lrM0RXQXp2M0thTlZHdzdrZlBtdnI0am1zZUdQa1pGek1xNzlRTlRXdEc5bVVnLXdkd3c0bXE0OVEzSlpNQ3JXZGZkZDc2eS04SEsyTUJwbklUZVlWWHFFMXFwSE50ZEhsRGpnS0hNX1g4ZkJvbzRleUhMVlE?oc=5",
+          "publishedAt": "2026-11-19T05:11:55+00:00"
         }
       ],
       "scores": {
@@ -923,6 +1091,36 @@
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족",
         "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "ac45b356875cf5",
+      "title": "2NE1's CL announces solo comeback",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "2NE1's CL announces solo comeback - Facebook",
+          "publisher": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmxGaUJMUWcyUmpzdndlY2N4S2tpWTFBV215S0ZLeUVmOFF2MUFZTnlNVXpKSmxhS2VTczlhZjF2Mm9XeHZDU2VoQWtIOVVVZVk1dzFwc1BJNW1WM0dwZ0J0QlY0WFRSNUU1bHZnNGRFUU94YkZZZG5tdTlwMkluT1FMX3g2c0J1M05oSjlfRUp5VDA?oc=5",
+          "publishedAt": "2026-11-17T08:30:30+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
@@ -1017,16 +1215,46 @@
       ]
     },
     {
-      "id": "ac45b356875cf5",
-      "title": "2NE1's CL announces solo comeback",
+      "id": "8670cd9f8e6fd7",
+      "title": "신청주의 개선 정책, 새로운 이름 지어주세요 > 뉴스",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "신청주의 개선 정책, 새로운 이름 지어주세요 > 뉴스 - 한의신문",
+          "publisher": "한의신문",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1wOXJyVXU5RHRWd1Qzd25XWDhqemlIcGtCQVhXTlc3aFV0eXpNNFQtM1hfdlk2LWlSYmRBMmotci1kR052OEh5a2VST3ktSkljMlRiNVhBb3lta3FHa2FITkN0MURFUTR6SHJhRl93UER2Zw?oc=5",
+          "publishedAt": "2026-11-19T03:51:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "4fd06171766341",
+      "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "2NE1's CL announces solo comeback - Facebook",
-          "publisher": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmxGaUJMUWcyUmpzdndlY2N4S2tpWTFBV215S0ZLeUVmOFF2MUFZTnlNVXpKSmxhS2VTczlhZjF2Mm9XeHZDU2VoQWtIOVVVZVk1dzFwc1BJNW1WM0dwZ0J0QlY0WFRSNUU1bHZnNGRFUU94YkZZZG5tdTlwMkluT1FMX3g2c0J1M05oSjlfRUp5VDA?oc=5",
-          "publishedAt": "2026-11-17T08:30:30+00:00"
+          "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback - 조선일보",
+          "publisher": "조선일보",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUpBaHc2SF9YX1QzSm5BX0R1SVAzRTZ2eG5jcUVtdkZNTWg5NGhfaG9XMkNuWmswQ1ZaVDV0UVVOZUFpVm1VMkRpZHJ3ZGNHRkZDSjN3OHNMSzBoV2VKRzA1RUliMlpRQ1U1Q3FnRkR4TG01QTYwVVoyaGNnWkJCTVFHTGYwZXZra2JIVVVn?oc=5",
+          "publishedAt": "2026-11-17T07:03:18+00:00"
         }
       ],
       "scores": {
@@ -1138,16 +1366,46 @@
       ]
     },
     {
-      "id": "4fd06171766341",
-      "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback",
+      "id": "14f8640499c4fc",
+      "title": "복지급여 '신청주의 개선' 새로운 이름 공모…내달 4일까지 접수",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "복지급여 '신청주의 개선' 새로운 이름 공모…내달 4일까지 접수 - 뉴스1",
+          "publisher": "뉴스1",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4zTnJxbUlfS05KMl9YQnBWOGZQekl5bXZsTlNhY2FyczA0ZDVvZkNaZ2t3NHZNU3I1VXM4V2VERmdVVFlqRmRvMm1JdE1pT1k0ZUJMMlpWOWZ2TTI1?oc=5",
+          "publishedAt": "2026-11-19T03:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "fe9a944eef6e6c",
+      "title": "Stray Kids' I.N releases 'No Return'",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "Ampersand One Targets 'King of K-pop' with 'King’s Way' Comeback - 조선일보",
-          "publisher": "조선일보",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUpBaHc2SF9YX1QzSm5BX0R1SVAzRTZ2eG5jcUVtdkZNTWg5NGhfaG9XMkNuWmswQ1ZaVDV0UVVOZUFpVm1VMkRpZHJ3ZGNHRkZDSjN3OHNMSzBoV2VKRzA1RUliMlpRQ1U1Q3FnRkR4TG01QTYwVVoyaGNnWkJCTVFHTGYwZXZra2JIVVVn?oc=5",
-          "publishedAt": "2026-11-17T07:03:18+00:00"
+          "title": "Stray Kids' I.N releases 'No Return' - Korea JoongAng Daily",
+          "publisher": "Korea JoongAng Daily",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcmVWY2FpNG1mT2ZvUDAzV1FMSW9IMTB0NUFMTnM5ZXdPbk1lRDZjRVhQcGRDVW42bndRaWFFcC1EVXcwSUdnSFlpOElGbTRqU2c1Rl9fSWRLZDlNVzl2eGlkZHZpVmZDemFicDJYaGxiclB5TXdpZWYtdDBwZEdaYW5GR193VGxOYnlVc2NHYnh5LWRz?oc=5",
+          "publishedAt": "2026-11-17T06:50:45+00:00"
         }
       ],
       "scores": {
@@ -1259,16 +1517,46 @@
       ]
     },
     {
-      "id": "fe9a944eef6e6c",
-      "title": "Stray Kids' I.N releases 'No Return'",
+      "id": "6034baceb1355e",
+      "title": "[단독]“필요한 서비스 못받고, 본인부담금도 발생”… 장기요양등급 포기 5년새 1만5000명",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "[단독]“필요한 서비스 못받고, 본인부담금도 발생”… 장기요양등급 포기 5년새 1만5000명 - 동아일보",
+          "publisher": "동아일보",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5HdlJWTXM2bzI2ZnF2THJxYWUyX1l5aXZFWEpIY19lMjZoZkZmRlRrdVk4dnduSVV5Q2IwclZwX1AxNm15SGtRZTIzdzFqUnMxa2h0OW1NNUxjUTN6Uk5rbVVuLXJrd9IBZkFVX3lxTE5HdlJWTXM2bzI2ZnF2THJxYWUyX1l5aXZFWEpIY19lMjZoZkZmRlRrdVk4dnduSVV5Q2IwclZwX1AxNm15SGtRZTIzdzFqUnMxa2h0OW1NNUxjUTN6Uk5rbVVuLXJrdw?oc=5",
+          "publishedAt": "2026-11-18T19:30:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "9e0d4ed102c13c",
+      "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call]",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "Stray Kids' I.N releases 'No Return' - Korea JoongAng Daily",
-          "publisher": "Korea JoongAng Daily",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcmVWY2FpNG1mT2ZvUDAzV1FMSW9IMTB0NUFMTnM5ZXdPbk1lRDZjRVhQcGRDVW42bndRaWFFcC1EVXcwSUdnSFlpOElGbTRqU2c1Rl9fSWRLZDlNVzl2eGlkZHZpVmZDemFicDJYaGxiclB5TXdpZWYtdDBwZEdaYW5GR193VGxOYnlVc2NHYnh5LWRz?oc=5",
-          "publishedAt": "2026-11-17T06:50:45+00:00"
+          "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call] - 매일경제",
+          "publisher": "매일경제",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqN3FTamVCV0ZEYkxucWZkSUZtZ2FJYW5wVTNKU2NuUzYzaFZOb1l6LXIwdlYzMlN1aWVOQnNvNmo5VS1fbUxiZ3ZPajhtalk5?oc=5",
+          "publishedAt": "2026-11-17T06:16:23+00:00"
         }
       ],
       "scores": {
@@ -1380,16 +1668,46 @@
       ]
     },
     {
-      "id": "9e0d4ed102c13c",
-      "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call]",
+      "id": "5dcf1d1c2c7632",
+      "title": "요양시설 6400여곳에 무료 전산 서비스…돌봄 기록 작성·조회 지원",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "요양시설 6400여곳에 무료 전산 서비스…돌봄 기록 작성·조회 지원 - 간호사신문",
+          "publisher": "간호사신문",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1NNUE2MHlYVGdseWE2UTRIZlJHbzVlT0FxdXV0bTVzb3g5T1NDeGNlU2hiSzFnUzRxRVFkOGpRellVakUzbk9NMENFOVBwYndFV3JlX3hFbHFJS05TQzBhaEhtejBodnRlSmpaYjJB?oc=5",
+          "publishedAt": "2026-11-17T03:56:32+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "aa3614db0612a8",
+      "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story)",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "“Call Us the ‘King of K-pop’” ... “First Full-Length Album,” Ampers&One Has Good Reason for Its Confidence [Curtain Call] - 매일경제",
-          "publisher": "매일경제",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqN3FTamVCV0ZEYkxucWZkSUZtZ2FJYW5wVTNKU2NuUzYzaFZOb1l6LXIwdlYzMlN1aWVOQnNvNmo5VS1fbUxiZ3ZPajhtalk5?oc=5",
-          "publishedAt": "2026-11-17T06:16:23+00:00"
+          "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story) - 스포츠조선",
+          "publisher": "스포츠조선",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MbTBUQ2dDbnIwSXFBUFlzVjhVNWYxaWVhVGNRQWYzemFzS1d6R2N3SVhwZ0hwY0JkbHFqQXJXX1F5SmVvRlJkbTNwQU5xWGNtblRjUjFrbjZNbzdRa002VHZtZUFjOWdpSXhCTzJWN1hqVWtCLU9ld0FlaEJyQQ?oc=5",
+          "publishedAt": "2026-11-17T06:12:34+00:00"
         }
       ],
       "scores": {
@@ -1501,16 +1819,46 @@
       ]
     },
     {
-      "id": "aa3614db0612a8",
-      "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story)",
+      "id": "821d6de8e2d81b",
+      "title": "송파구의사회 \"퇴원 후 돌봄 공백…지역의료 연계가 답\"",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "송파구의사회 \"퇴원 후 돌봄 공백…지역의료 연계가 답\" - 보건신문",
+          "publisher": "보건신문",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOcWtKMWdCODhuVU5xbWpRYU9MelB5OUpJdTNjc0tCUXNJdWtkck1Hak90SWJaRnpXNTRTVjM5X2xDbkpaVlFxaVNyUW5vVEhNQjkwaWQxT0VqR3FnOXdNajVjYw?oc=5",
+          "publishedAt": "2026-11-16T01:20:27+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "7675b86b41a472",
+      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "“Now the Real Beginning; We Want to Become K-Pop Kings”... Ampers&One to Forge Its Own ‘King’s Way’ With Its First Full-Length Album (Full Story) - 스포츠조선",
-          "publisher": "스포츠조선",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9MbTBUQ2dDbnIwSXFBUFlzVjhVNWYxaWVhVGNRQWYzemFzS1d6R2N3SVhwZ0hwY0JkbHFqQXJXX1F5SmVvRlJkbTNwQU5xWGNtblRjUjFrbjZNbzdRa002VHZtZUFjOWdpSXhCTzJWN1hqVWtCLU9ld0FlaEJyQQ?oc=5",
-          "publishedAt": "2026-11-17T06:12:34+00:00"
+          "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
+          "publisher": "Rolling Stone",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
+          "publishedAt": "2026-11-16T14:50:47+00:00"
         }
       ],
       "scores": {
@@ -1622,22 +1970,22 @@
       ]
     },
     {
-      "id": "7675b86b41a472",
-      "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys",
-      "category": "K-pop",
-      "region": "EN",
+      "id": "cd272db042f8dc",
+      "title": "퇴원 후 집에서 간호받도록… 병원 평가·수가 개선 제안",
+      "category": "시니어·복지",
+      "region": "KO",
       "headlines": [
         {
-          "title": "Don’t Be Surprised That BTS Aren’t Nominated for the 2027 Grammys - Rolling Stone",
-          "publisher": "Rolling Stone",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTWFTd0k4QUEtd1pZdFFWZHoyU0JZdFZBVDUyeHFjYXBDakRoQVY5ZjZuNm9kUTN3eUVkUG55dF9BTlZVYjhNR0dxSFhjZUNZc0J2UDJnZzBESkRqQnUycllMUW1XTjlrVlpndXlJTU5nck5hMXpjOFBSV3RQMXRobTJIR1cwVTNrdjMtZHpsbnB3eTkxTG15cHhCLXhfVVJuX0ZPVXNVcw?oc=5",
-          "publishedAt": "2026-11-16T14:50:47+00:00"
+          "title": "퇴원 후 집에서 간호받도록… 병원 평가·수가 개선 제안 - 이투데이",
+          "publisher": "이투데이",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tNHZlWHU2alljc1NSZjZTcUVtN1IyMTNieWZsSDYtT21aeWpVVjNfNll4bWZaWURCbjRucktmbmNZTFNzemZJMkdxRUxhaDh2YjVwRVZzOUVZUQ?oc=5",
+          "publishedAt": "2026-11-16T00:34:00+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
+        "editorialPriority": 22,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -1743,6 +2091,36 @@
       ]
     },
     {
+      "id": "faf34d770bb5b5",
+      "title": "내년 장기요양보험료율 0.9994%…중증 재가급여 한도 15.1% 인상",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "내년 장기요양보험료율 0.9994%…중증 재가급여 한도 15.1% 인상 - 쿠키뉴스",
+          "publisher": "쿠키뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5MM1RqazhEblNBTWVhNnBUX0c5cGJmV2hURXRwdUg1RUEtMVBjOEpoQU9nc0ZzZjNYbzFCV1dtSkRtczkyTXpiQVFIcUpTc2ZaY2NzV0tySFZ6aVl0UWthQUhTbw?oc=5",
+          "publishedAt": "2026-11-15T17:36:25+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "19c04a00ba8fbe",
       "title": "Best RMM tools for MSPs: features, AI and buying criteria",
       "category": "AI·생산성",
@@ -1774,6 +2152,36 @@
       ]
     },
     {
+      "id": "bfa7cd35ee6be1",
+      "title": "집 있다고 포기할 필요 없다…기초연금, 월급보다 ‘소득인정액’ 확인해야",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "집 있다고 포기할 필요 없다…기초연금, 월급보다 ‘소득인정액’ 확인해야 - CBC뉴스",
+          "publisher": "CBC뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9nRjlsUXljNTBxV0VFYjFDcVJiTnpsR2NqTlJnYll5WjFERFM0aXlqRzlxeF9XalZocUFveW11VkVNRlR1V21jRWNsN2hnS0FnMzBtYUFKbjdqQmwyR0U0WUp0QXhIOG9s?oc=5",
+          "publishedAt": "2026-11-15T15:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "a94a36240e906f",
       "title": "Earnings call transcript: Youdao Q3 2026 revenue falls as stock drops 8.7%",
       "category": "AI·생산성",
@@ -1789,6 +2197,36 @@
       "scores": {
         "editorialPriority": 24,
         "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "163dd64fd1d19c",
+      "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의 - 캐어유 뉴스",
+          "publisher": "캐어유 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1femN6bjFzdEVqM09qR1J0dUhsSVhjdjc4LVV1cG5ZM0ZYb3RxLU9KMkdOZEs0Q1VCaWlNLWNzYmdrRTEzajZQcExiaENCc1ZYdExaQ0Q2UF9KMnB0ZHQ5WVNaTEttYS1LYXpEeWRR?oc=5",
+          "publishedAt": "2026-11-15T03:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
@@ -1834,6 +2272,36 @@
       ]
     },
     {
+      "id": "f22494eafd0ecf",
+      "title": "기초연금에 ‘국내 거주기간’ 요건 검토…외국인 연금 추납도 손질",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "기초연금에 ‘국내 거주기간’ 요건 검토…외국인 연금 추납도 손질 - 쿠키뉴스",
+          "publisher": "쿠키뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9SODh5Q2duNGhNaHMzOU1BNHR0eHNfVjhOUXRsOGk0QlE2YXBUM19RQjFWbjI0bjY3aFViMnotZEM5QXMwYXIyU1hMRGJMaU5YbmhmTlNPYmZXTFZsTVBvYUJYWQ?oc=5",
+          "publishedAt": "2026-11-15T02:17:07+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "5df40a2a775487",
       "title": "vivo V80 Malaysia launch - ZEISS portrait cameras and a 7,200mAh battery, starting at RM2,399",
       "category": "AI·생산성",
@@ -1849,6 +2317,36 @@
       "scores": {
         "editorialPriority": 24,
         "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "16d44e5d5799db",
+      "title": "[남기찬 칼럼] 부모님 퇴원 날짜는 잡혔는데, 집에서의 돌봄은 준비됐을까?",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "[남기찬 칼럼] 부모님 퇴원 날짜는 잡혔는데, 집에서의 돌봄은 준비됐을까? - 캐어유 뉴스",
+          "publisher": "캐어유 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9iQzVoWUdwOHAta1BOLVRhMzI1dzlyTFlkMzZpZ0ZXYXpkQjhSOUF5SzY2X25ULVktZXJMSWVOWjZ6UnB3ZlFzNzBRX2FLT004YWo3c09BR010aGtFX3p1N053RGlQT1Qwc1hFX0Fn?oc=5",
+          "publishedAt": "2026-11-15T00:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
@@ -1894,6 +2392,36 @@
       ]
     },
     {
+      "id": "4fe1015048d37a",
+      "title": "요양보호사는 ‘가정부’ 아닙니다…재가서비스 제대로 이용하려면",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "요양보호사는 ‘가정부’ 아닙니다…재가서비스 제대로 이용하려면 - 농민신문",
+          "publisher": "농민신문",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kUzgyWGtCSm9NM2RrVk1VVC04QUJUSDVvdnhaNTFqSVBkTUFSOE1Edm0waWt6aWFSRndVd21QdHk2SjhNUGtodzlqT2YtaDUteW16eHA1OWduZw?oc=5",
+          "publishedAt": "2026-11-13T08:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "5f377cf98d0fde",
       "title": "What to know when shopping for an AI laptop",
       "category": "AI·생산성",
@@ -1909,6 +2437,36 @@
       "scores": {
         "editorialPriority": 24,
         "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "6b840a214e97d9",
+      "title": "‘시설 입소’에서 ‘내 집 요양’으로…재가 돌봄 확대가 바꿀 '간병보험' 공식(영상+)",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "‘시설 입소’에서 ‘내 집 요양’으로…재가 돌봄 확대가 바꿀 '간병보험' 공식(영상+) - 보험저널",
+          "publisher": "보험저널",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1vSlRwTVEzWHh0SE91Z3ZpOUwxVXNEenZrSkpiWnhWOTE5Z2hqc1J5eWlXWU1hRVhXSGhPUkRlRXJEaFNmUlE2b3pyRTA3YVpZVGtvWGJWX1FRaFlEWkVGczFsRjZURjVjOWFobi1pYw?oc=5",
+          "publishedAt": "2026-11-13T08:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
@@ -1954,6 +2512,36 @@
       ]
     },
     {
+      "id": "f6dd5549d77ef8",
+      "title": "“시니어 케어의 경쟁력 핵심, 운영 표준화에 있어”",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "“시니어 케어의 경쟁력 핵심, 운영 표준화에 있어” - 이투데이",
+          "publisher": "이투데이",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5XRVRaOUlfTWUtQWZzME5OQkFkS2JnaENlZ2s4M2psUkF4YW9yQ2pZVG43WFRuNVlFdWticlQ5aWJJRW44T0JYT2dZMXpqZXYydFZoUjdiYnF3QQ?oc=5",
+          "publishedAt": "2026-11-12T22:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "5c731c53e8c883",
       "title": "Microsoft and Salesforce Launch Powerful AI Integrations for Businesses",
       "category": "AI·생산성",
@@ -1984,6 +2572,36 @@
       ]
     },
     {
+      "id": "3c673016fb8ccd",
+      "title": "AI 돌봄, 공공 체계에 묶어야 작동한다 — 삼성생명 동탄 실증과 세계 시장의 경고",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "AI 돌봄, 공공 체계에 묶어야 작동한다 — 삼성생명 동탄 실증과 세계 시장의 경고 - 한국공공정책신문",
+          "publisher": "한국공공정책신문",
+          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBLLWxqamNiY0c0MUNReXJjdTBVR3V5bjZXSFFNajR0ZW9IcTdhNF9rcWswTEhUa0NPX2JlaDYwMEhGbXc?oc=5",
+          "publishedAt": "2026-11-12T17:24:45+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "bbc0ce6dbde6bb",
       "title": "At Ignite 2026, Microsoft reinvents Copilot as the autonomous engine of enterprise work",
       "category": "AI·생산성",
@@ -1999,6 +2617,36 @@
       "scores": {
         "editorialPriority": 24,
         "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "d21d8b32732d72",
+      "title": "장애인 통합돌봄, 15만 명 수요에 연계된 건 709명뿐",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "장애인 통합돌봄, 15만 명 수요에 연계된 건 709명뿐 - 유스연합",
+          "publisher": "유스연합",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9CZHpnX0FyWERId090RE9qS1NKd2g5ODhxNTBYdmpELWVDSElyaXRMdGJKczBhRjJSMHVpbzRCNnBucVJ1enV4OTdFNW5ZbmktZGlJ?oc=5",
+          "publishedAt": "2026-11-12T16:06:07+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
