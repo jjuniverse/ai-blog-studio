@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/collect_news.py'
       - 'scripts/analyze_news.py'
+      - 'scripts/collect_published.py'
+      - 'tests/test_collect_published.py'
       - 'tests/test_collect_news.py'
       - 'tests/test_analyze_news.py'
       - '.github/workflows/collect-news.yml'
@@ -30,11 +32,13 @@ jobs:
         run: python scripts/collect_news.py
       - name: Group headlines and score candidates
         run: python scripts/analyze_news.py
+      - name: Read published public blog RSS
+        run: python scripts/collect_published.py
       - name: Commit changed JSON
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/news.json public/data/candidates.json
+          git add public/data/news.json public/data/candidates.json public/data/published.json
           if ! git diff --staged --quiet; then
             git commit -m "data: update public RSS headlines"
             git push
