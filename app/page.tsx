@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
 import PostImagePackage from './components/PostImagePackage';
-import { normalizeArticleTags, normalizeEnglishArticleTags, paragraphLines, imagePositions, withImageMarkers } from './lib/postPackage';
+import { normalizeArticleTags, normalizeEnglishArticleTags, paragraphLines, imagePositions, withImageMarkers, articleReadiness } from './lib/postPackage';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
 type Channel = 'naver' | 'tistory' | 'tistoryEn' | 'shortform';
@@ -76,6 +76,9 @@ type LocalEdit = {
   imageNotes: string[];
   verified: boolean;
   publishedUrls: Partial<Record<'naver' | 'tistory' | 'tistoryEn', string>>;
+  publishedManually?: boolean;
+  publishedTopicTitle?: string;
+  publishedSourceUrls?: string[];
   updatedAt: string;
   generatedVersion?: number;
   evidenceReview?: Partial<Record<Channel, EvidenceReview>>;
@@ -153,6 +156,7 @@ export default function Home() {
   const [category, setCategory] = useState('전체');
   const [languageFilter, setLanguageFilter] = useState<'all' | 'KO' | 'EN'>('all');
   const [showExcluded, setShowExcluded] = useState(false);
+  const [showPublished, setShowPublished] = useState(false);
   const [channel, setChannel] = useState<Channel>('naver');
   const [localEdits, setLocalEdits] = useState<Record<string, LocalEdit>>({});
   const [hydrated, setHydrated] = useState(false);
@@ -361,6 +365,9 @@ export default function Home() {
             imageNotes: payload.draft.imageNotes,
             verified: false,
             publishedUrls: old[selected.id]?.publishedUrls || {},
+            publishedManually: old[selected.id]?.publishedManually ?? false,
+            publishedTopicTitle: old[selected.id]?.publishedTopicTitle,
+            publishedSourceUrls: old[selected.id]?.publishedSourceUrls,
             updatedAt: new Date().toISOString(),
             generatedVersion: DRAFT_VERSION,
             evidenceReview: {},
@@ -387,13 +394,30 @@ export default function Home() {
     } finally { setGenerating(false); }
   }
   const categories = useMemo(() => ['전체', ...Array.from(new Set(candidates.map(x => x.category)))], [candidates]);
+  const isPublishedTopic = (candidate: Candidate) => {
+    // Avoid hiding unrelated topics; only use exact topic identity, exact normalized title
+    // or source URLs recorded when the topic was published.
+    const canonicalTitle = (title: string) => title.toLowerCase().normalize('NFKC')
+      .replace(/[\\s\\p{P}\\p{S}]/gu, '');
+    const candidateTitle = canonicalTitle(candidate.title);
+    return Object.entries(localEdits).some(([id, edit]) => {
+      const published = !!edit.publishedManually || Object.values(edit.publishedUrls || {}).some(Boolean);
+      if (!published) return false;
+      if (id === candidate.id) return true;
+      if (edit.publishedTopicTitle && canonicalTitle(edit.publishedTopicTitle) === candidateTitle) return true;
+      const urls = new Set(edit.publishedSourceUrls || []);
+      return candidate.headlines.some(headline => urls.has(headline.url));
+    });
+  };
+  const publishedTopicsCount = candidates.filter(isPublishedTopic).length;
   const visible = useMemo(() => candidates.filter(x => {
     if (!showExcluded && (x.status === 'excluded_promotion' || x.status === 'sensitive_review')) return false;
     if (category !== '전체' && x.category !== category) return false;
     if (languageFilter !== 'all' && x.region !== languageFilter) return false;
+    if (!showPublished && isPublishedTopic(x)) return false;
     if (query.trim() && !(x.title + ' ' + x.category).toLowerCase().includes(query.toLowerCase().trim())) return false;
     return true;
-  }), [candidates, category, languageFilter, showExcluded, query]);
+  }), [candidates, category, languageFilter, showExcluded, showPublished, localEdits, query]);
   const selected = candidates.find(x => x.id === selectedId);
   const activeResearch = researchLeads.find(x => x.candidateId === selectedId);
   const matchingDraft = selected && (
@@ -422,6 +446,7 @@ export default function Home() {
   const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
   const previewLines = paragraphLines(text);
   const cardPositions = imagePositions(previewLines);
+  const readiness = articleReadiness(text, channel === 'tistoryEn');
   const reviewed = saved?.evidenceReview?.[channel];
   const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
   const selectedImages = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
@@ -444,6 +469,9 @@ export default function Home() {
       imageNotes: patch.imageNotes || old[editId]?.imageNotes || imagePrompts(selected),
       verified: patch.verified ?? old[editId]?.verified ?? false,
       publishedUrls: { ...(old[editId]?.publishedUrls || {}), ...(patch.publishedUrls || {}) },
+      publishedManually: patch.publishedManually ?? old[editId]?.publishedManually ?? false,
+      publishedTopicTitle: patch.publishedTopicTitle ?? old[editId]?.publishedTopicTitle,
+      publishedSourceUrls: patch.publishedSourceUrls ?? old[editId]?.publishedSourceUrls,
       updatedAt: new Date().toISOString(),
       generatedVersion: patch.generatedVersion ?? old[editId]?.generatedVersion,
       evidenceReview: { ...(old[editId]?.evidenceReview || {}), ...(patch.evidenceReview || {}) },
@@ -590,8 +618,10 @@ export default function Home() {
   function savePublished(channelId: 'naver' | 'tistory' | 'tistoryEn', value: string) {
     if (!value.trim()) { updateEdit({ publishedUrls: { [channelId]: '' } }); setNotice('기록된 게시 URL을 비웠어.'); return; }
     if (!safePublishedUrl(value, channelId)) { setNotice('오늘의 픽 블로그에서 발행한 https 주소를 입력해 줘.'); return; }
-    updateEdit({ publishedUrls: { [channelId]: value.trim() } });
-    setNotice('이 브라우저에만 게시 URL을 저장했어.');
+    updateEdit({ publishedUrls: { [channelId]: value.trim() },
+      publishedTopicTitle: selected?.title,
+      publishedSourceUrls: selected?.headlines.map(item=>item.url) || [] });
+    setNotice('발행 URL 저장 완료. 이 주제는 탐색 추천에서 자동 제외돼.');
   }
   const [urlInput, setUrlInput] = useState<Record<'naver'|'tistory'|'tistoryEn', string>>({naver: '', tistory: '', tistoryEn: ''});
   useEffect(() => { setUrlInput({ naver: saved?.publishedUrls?.naver || '', tistory: saved?.publishedUrls?.tistory || '', tistoryEn: saved?.publishedUrls?.tistoryEn || '' }); }, [selectedId, saved?.publishedUrls?.naver, saved?.publishedUrls?.tistory, saved?.publishedUrls?.tistoryEn]);
@@ -619,8 +649,8 @@ export default function Home() {
             <div className="metric"><small>자동 조사 완료 후보</small><strong>{researchLeads.filter(x=>x.status==='needs_human_review').length}</strong><span>사람이 근거를 확인할 후보</span></div>
           </div>
           <div className="section-title"><div><h2>수집된 콘텐츠 후보</h2><p>{updatedAt ? '마지막 분석 ' + new Date(updatedAt).toLocaleString('ko-KR') : '뉴스 수집 후 목록이 업데이트돼.'}</p></div><span className="small-label">점수는 검색량·수익 예측이 아닌 내부 편집 기준</span></div>
-          <div className="filters"><select aria-label="콘텐츠 언어 선택" value={languageFilter} onChange={e => setLanguageFilter(e.target.value as 'all' | 'KO' | 'EN')}><option value="all">전체 언어</option><option value="KO">한국어 콘텐츠</option><option value="EN">영어 콘텐츠 · Shorts/Reels</option></select><input value={query} onChange={e => setQuery(e.target.value)} placeholder="기사나 키워드 검색" aria-label="키워드 검색"/><select value={category} onChange={e => setCategory(e.target.value)} aria-label="카테고리 필터">{categories.map(v => <option key={v}>{v}</option>)}</select><label className="inline-check"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)}/> 제외된 주제 보기</label></div>
-          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '영어 Shorts·Reels' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span></div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' || c.status === 'needs_sources' ? '자료 조사 →' : '제외 사유 보기 →'}</button></div></article>)}</div>}
+          <div className="filters"><select aria-label="콘텐츠 언어 선택" value={languageFilter} onChange={e => setLanguageFilter(e.target.value as 'all' | 'KO' | 'EN')}><option value="all">전체 언어</option><option value="KO">한국어 콘텐츠</option><option value="EN">영어 콘텐츠 · Shorts/Reels</option></select><input value={query} onChange={e => setQuery(e.target.value)} placeholder="기사나 키워드 검색" aria-label="키워드 검색"/><select value={category} onChange={e => setCategory(e.target.value)} aria-label="카테고리 필터">{categories.map(v => <option key={v}>{v}</option>)}</select><label className="inline-check"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)}/> 제외된 주제 보기</label><label className="inline-check"><input type="checkbox" checked={showPublished} onChange={e => setShowPublished(e.target.checked)}/> 발행 완료 포함 ({publishedTopicsCount})</label></div>
+          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '영어 블로그·Shorts' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span></div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' || c.status === 'needs_sources' ? '자료 조사 →' : '제외 사유 보기 →'}</button></div></article>)}</div>}
         </>}
         {section === 'editor' && <div className="studio-grid">
           <div className="editor-main">
@@ -720,6 +750,13 @@ export default function Home() {
               </div> : null}
               {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
               {currentDraft && !legacyStored && !!text.trim() ? <>
+                {channel !== 'shortform' && readiness.publishBlocked && <div className="draft-warning" role="alert">
+                  <strong>발행 보류 · 본문이 너무 빈약해</strong>
+                  <p>태그와 참고자료를 제외한 본문은 {readiness.bodyLength}자야. 원고는 보존했지만, 이 상태로 게시하는 건 추천하지 않아.</p>
+                  <ul>{readiness.reasons.map((reason,i)=><li key={i}>{reason}</li>)}</ul>
+                  <p>공식 자료로 핵심 사실과 구체적인 설명을 보강하거나 다른 주제를 선택해 줘.</p>
+                </div>}
+
                 <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
                 {channel !== 'shortform' && <div className="notes-label">
                   <label htmlFor="editor-post-title">검색형 게시 제목</label>
@@ -840,6 +877,15 @@ export default function Home() {
         </div>}
         {section === 'publish' && <div className="publish-grid">
           <div className="panel"><div className="panel-heading"><h2>발행 관리</h2><span>이 브라우저 전용 기록</span></div><div className="metric-grid compact"><div className="metric"><small>수정한 주제</small><strong>{editCount}</strong></div><div className="metric"><small>등록된 게시 URL</small><strong>{publishedCount}</strong></div></div><p className="muted">발행할 주제를 선택하고 실제 게시 후 주소를 입력해. 이 기록은 계정 연동이 아니라 브라우저에만 보관돼.</p><select className="wide-select" value={selectedId} aria-label="발행 관리 주제 선택" onChange={e => setSelectedId(e.target.value)}><option value="">발행할 주제를 선택해 줘</option>{candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}</select>
+            {selected && <div className="publish-completion">
+              <div><strong>이미 발행한 주제인가?</strong><p className="muted">발행 완료로 표시하거나 아래 게시 URL을 저장하면, 주제 탐색의 기본 추천에서 제외돼. 글과 원고는 삭제되지 않아.</p></div>
+              <button type="button" className={(saved?.publishedManually ? 'btn btn-primary' : 'btn btn-light')} onClick={() => {
+                const next = !saved?.publishedManually;
+                updateEdit({publishedManually:next,publishedTopicTitle:selected.title,publishedSourceUrls:selected.headlines.map(x=>x.url)});
+                setNotice(next ? '발행 완료로 표시했어. 추천에서 숨겨질 거야.' : '수동 발행 완료 표시를 해제했어. 발행 URL이 남아 있으면 계속 추천에서 제외돼.');
+              }}>{saved?.publishedManually?'✓ 발행 완료 · 표시 해제':'발행 완료로 표시'}</button>
+              {isPublishedTopic(selected) && <small>이 주제는 발행 기록이 있어서 기본 추천에서 제외돼.</small>}
+            </div>}
             {(['naver','tistory','tistoryEn'] as const).map(c => <div className="publish-row" key={c}><div><h3>{c === 'naver' ? '네이버 블로그' : c === 'tistoryEn' ? '티스토리 English' : '티스토리 한국어'}</h3><a target="_blank" rel="noreferrer" href={c === 'tistoryEn' ? links.tistory : links[c]}>블로그 열기 ↗</a></div><input aria-label={(c === 'naver' ? '네이버' : '티스토리')+' 발행 URL'} placeholder="발행된 글 URL" value={urlInput[c]} onChange={e => setUrlInput(old => ({...old,[c]:e.target.value}))}/><button className="btn btn-primary" disabled={!selected} onClick={() => savePublished(c,urlInput[c])}>저장</button></div>)}
             <div className="editor-toolbar"><button className="btn btn-light" onClick={() => download('todaypick-local-backup.json',JSON.stringify(localEdits,null,2),'application/json')}>기기 내 작업 백업 (JSON)</button><button className="btn btn-light" onClick={() => setSection('editor')}>원고 검수하기 →</button></div>
           </div>
