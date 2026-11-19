@@ -1,20 +1,76 @@
 {
-  "fetchedAt": "2026-11-19T09:34:02.935753+00:00",
+  "fetchedAt": "2026-11-19T12:29:47.817208+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
   "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
   "categoryCounts": {
-    "연예/KO": 15,
+    "연예/KO": 16,
     "K-pop/KO": 11,
     "IT·AI/KO": 4,
-    "생활 정보/KO": 3,
+    "생활 정보/KO": 4,
     "K-pop/EN": 10,
-    "K-드라마/EN": 5,
-    "AI·생산성/EN": 25
+    "K-드라마/EN": 4,
+    "AI·생산성/EN": 24
   },
   "retainedFromPrevious": 0,
   "items": [
+    {
+      "title": "이민호·박규영, SBS '버츄얼 러브' 주연 확정…버추얼 아이돌 된 상사와 로맨스, 2027년 하반기 편성 - 톱셀럽뉴스",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TQVFpdUd5dmNERVZZX0swNDJfaVBKYy16V2FhSnJxM3FKeXhtNzRlVEZkY1lXa296cklnSnZGYlgzMGd1akEtQ3FLQ0dTaFhWeDJrQ2dneWVaekNPZmNHODJlaG1DZFVhOEFV?oc=5",
+      "publisher": "톱셀럽뉴스",
+      "publishedAt": "2026-11-19T11:46:30+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "플레이브, 2027년 1월 고척돔서 월드투어 '킵 잇 매닉' 앙코르 3회 공연 - 톱셀럽뉴스",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE56dkNwSVYxYU1mdDJobHczaE1XLVpQYi16MnBKVGdPamZtYWVEaTh4LTYtQTZFQWZxWWtGVUFKY0M2Mmh0WFRsZktGZWdsd09SVzNVcnRsTEhxLWY4TFJRdS1lcUZFdFItSERV?oc=5",
+      "publisher": "톱셀럽뉴스",
+      "publishedAt": "2026-11-19T11:46:10+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "Earnings call transcript: Youdao Q3 2026 revenue falls as stock drops 8.7% - Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWWYwS3pHVThadWE0UzBPMVhDQ1NYWkZzS3dsMVhnY2NOUV94TTN0cGxiYU1mUUxkVTBsU3FDSURiZEdFNUZBSHVEYzNIaWVyZXcyaGtEVk0zQ0IzTlMxUTFvU2FpN2I4bV9OanJiUGc4MGVCcVpHSkdVWHk0WTF6S0lRLUN3REpSUHAtT3pwNXh4Nmd3V05iZ1ZNWlNwWGd5TDg5WTRUaVVMdUNOamZfU2czUEJxOGlqOXN1aVhGbTFJVW5WbUE?oc=5",
+      "publisher": "Investing.com",
+      "publishedAt": "2026-11-19T11:36:34+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "When AI Starts Spending Money: The Challenge of Secure Automated Payments - The Detroit News",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYUY1eVU2UXozVkRsTVNBSXczd1F5MmQ1aTlYNDRLcVF3LUR0RF9tOTYyMVJMVjZJUXB0YzBrTzBQbnNOLUx3TG1panNUdDVnQjFpTnB2X3JKazM1eDhqdnJDX1VqZnZkc1FYU3RGdXlaYUxpcTl0NWtJbVhOSEJ1TFhRLTZQNmo5Tl9wcTM5dnhiZHNOZUtvcjRrenhaVlpwT0UxR3BjVGRraHQzRFJZZmlQRmRRUVNSbzk1UlBhMG5tdjZvRmlz?oc=5",
+      "publisher": "The Detroit News",
+      "publishedAt": "2026-11-19T11:17:21+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Stray Kids Announce 2027 Tour: See Dates - Ticketmaster Blog",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5cHZhY1RCWEtQeGdIcXNKQUJCNTV4VWxMYktpU1ZRTlVkbk9xXzE4aHdCeDh1dUtLQWpiMlQ0SURlRUxWX3hOSUhyTkN0bWNkT05oNnF4RFRQOVM1emtNa093U0N1WVI0?oc=5",
+      "publisher": "Ticketmaster Blog",
+      "publishedAt": "2026-11-19T11:03:14+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "vivo V80 Malaysia launch - ZEISS portrait cameras and a 7,200mAh battery, starting at RM2,399 - TechNave",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWEpOcnhWVUVFN1dUQXp2SXU3aHJ5NVYtMVVtSXBIM3ctRHRlRC10dmJBX2tFbE9BT3NIVHMxN1RuenJ1SEpSY2JjSXU3ZUJOMVhaaHBtRzZkS0hGTWZfS0NrVkNoMGVzTnRiWDk1cXJxYlFveDBVWkJKQXJjZ2NzVFQ5a05jNG5KODJ4eVJHbk1rRU9TSWUyZWFYOTZqY2VsZWRid2JXY0xoeXBJTjJ3dkFCSVBvYWo4NkhtZ0tPdVNFbkoxM0pUUA?oc=5",
+      "publisher": "TechNave",
+      "publishedAt": "2026-11-19T10:34:32+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets - Netflix",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanJZMDRJdnNyZlR0cFFQQXgzNnNteDlsbUFqS3NOT0Y4aE5JeTNBMFZHV1RfbHR5SWZjaGtPTGw4dzBNNWZqVnVkem5OX1NCM0FEWHJjbU1BTFJmSFBiUjg3VlBnLWN2eDBZcUptcm0yd2VPZjgteVlWTXViX3ZSeDd4bzBUWm5qYUZr?oc=5",
+      "publisher": "Netflix",
+      "publishedAt": "2026-11-19T10:17:48+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
     {
       "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5 - Pirates and Princesses",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQc0VuWUcxdDBqaXlRb3JuV2d1OE16NlVlVDJ6YlRWVWlOZUJmeTdqSFFhNVRHeG1fNmlfeEhhU2FTcEhEOEFEaGtDWXFpTlNZekRYOUZlTTJpUHk3RnVYc1pmYTJtTTJjZE9nVG0yU1JZcHdlb0xVVWdQcHRpSEc0b0s2cGJTTXV1TDlHWFVNbGk3SHFqUXc?oc=5",
@@ -28,6 +84,14 @@
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hWE1RLUFhcDFoSGRfMG5TbEZTZ1NPaEZtT3FQRS1OZDlSM1hzcEU2QzBPMlN3SE1ZdnFyMjU4Vkg1LUpUdFdYUmU5eTB6MTU2TDVIdjhFbDNYRHM?oc=5",
       "publisher": "씨네플레이",
       "publishedAt": "2026-11-19T09:01:00+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "플레이브, 고척돔 앙코르 공연 | - 한스경제",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1KM0oyNzBkTFJ1YzN3QUNGblRoYnJSYWxGcXYzUXZCSVFtYUZ3d214OHdVaG1SOWE1dEN5ZFdMNUx0U2dxQUFOb3VaWFVEemZ1QTk5V2Z3bkNhWGxvOW42RTJhb1RhT1Nabm45S0ZEVQ?oc=5",
+      "publisher": "한스경제",
+      "publishedAt": "2026-11-19T08:20:06+00:00",
       "category": "K-pop",
       "region": "KO"
     },
@@ -49,7 +113,7 @@
     },
     {
       "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식 - 뉴시스",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9KVUZtX291aVVNelB5NWxiZWZjcGRKdm1LNW50Y3Fzd0dfNE1IRFdwWkluV1RsNnhGSW5IVHBHRXFyXzB6ZUktVTQ5R0hOMi00eWs4NnIxTE9MYzlRa253VtIBeEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NdIBeEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NQ?oc=5",
       "publisher": "뉴시스",
       "publishedAt": "2026-11-19T07:40:56+00:00",
       "category": "K-pop",
@@ -72,44 +136,12 @@
       "region": "EN"
     },
     {
-      "title": "KPop Demon Hunters Announces Golden World Tour Dates — Here’s How to Get Tickets - Netflix",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanJZMDRJdnNyZlR0cFFQQXgzNnNteDlsbUFqS3NOT0Y4aE5JeTNBMFZHV1RfbHR5SWZjaGtPTGw4dzBNNWZqVnVkem5OX1NCM0FEWHJjbU1BTFJmSFBiUjg3VlBnLWN2eDBZcUptcm0yd2VPZjgteVlWTXViX3ZSeDd4bzBUWm5qYUZr?oc=5",
-      "publisher": "Netflix",
-      "publishedAt": "2026-11-19T05:49:29+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "고척돔 사흘 연속 채운다…플레이브, 1월 월드투어 앙코르 콘서트 확정 - 스포츠동아",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBPQjh3NDhvbmg1U1dDUjEwYzRScm9GQ2N4S2NYV1BkLUVZUUVSV1FiZjFmdXIzNDlxZjNkbC01czZIT2dhb21QQWdEejJ4TGxENW9Ibllrei1raHdqMXVrZHY3MmJkZkRrQWhkZUZ3?oc=5",
-      "publisher": "스포츠동아",
-      "publishedAt": "2026-11-19T05:23:04+00:00",
-      "category": "K-pop",
-      "region": "KO"
-    },
-    {
-      "title": "Stray Kids Announce 2027 Tour: See Dates - Ticketmaster Blog",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5cHZhY1RCWEtQeGdIcXNKQUJCNTV4VWxMYktpU1ZRTlVkbk9xXzE4aHdCeDh1dUtLQWpiMlQ0SURlRUxWX3hOSUhyTkN0bWNkT05oNnF4RFRQOVM1emtNa093U0N1WVI0?oc=5",
-      "publisher": "Ticketmaster Blog",
-      "publishedAt": "2026-11-19T04:56:10+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
       "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다. - Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hUmRhUjd1T05ZLTdjbkc3SV9wNi1fbDhEMVlndXYxQlY3NzQxN0RBczloMzd6b0xoODFMYWwySE1RNXNtbHVZR2M0ek5feGZZX1pBdlVmRVZFWE5CX2RvWnVyTngweEtWbGtJbG5UbkwxNkt5b0hF?oc=5",
       "publisher": "Vietnam.vn",
       "publishedAt": "2026-11-19T03:26:11+00:00",
       "category": "생활 정보",
       "region": "KO"
-    },
-    {
-      "title": "Best Data Labeling Platform in 2026: 7 Tools Compared for AI Teams - Memeburn",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9TLUh6RWZEcjlhNERmTk9WaTB5VzlUa3dhSmYxbjY3clltTmtZOTJIak1uOU1wNTRUZTZEOTJ5cXFBSGtzUEtPN19aZjZUVFd5UXBZenliTUw3VldoOWc?oc=5",
-      "publisher": "Memeburn",
-      "publishedAt": "2026-11-19T01:15:32+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     },
     {
       "title": "빅뱅도 블랙핑크도 ‘명단 밖’…전속 4팀 남은 YG의 숙제 [가요 뷰] - 데일리안",
@@ -232,14 +264,6 @@
       "region": "KO"
     },
     {
-      "title": "태연 체조서 새 투어 시작…2027년 4월까지 바쁜 행보 - 스포츠동아",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iVndNZmxwd1UtZlc5ODl6emhhM1VtY0ZDQ2Y4VEhwUmVKTjhBODllX0FIMEYtYWxsckU2anBmYkVNQjFWZTQ3MWxrNEFqc09KU2YxU1ppbTdHbkxUc01FMDIzODNmVHVQNU0zbURB?oc=5",
-      "publisher": "스포츠동아",
-      "publishedAt": "2026-11-18T07:49:04+00:00",
-      "category": "K-pop",
-      "region": "KO"
-    },
-    {
       "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최 - 톱스타뉴스",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2TWFEOW9icWVKTldIb0UyNmRIYXlPM0E3QXQwMFdDNEljRENORVdPZ2NhZjd3X2VZRUlkbUFhWFlxVFZmcTkwcnUwU1BKZjhEMlF2SkpaXzZacGRPZnMxaHVOdG1uTGVkbGhRTjdKcXBLQQ?oc=5",
       "publisher": "톱스타뉴스",
@@ -294,6 +318,14 @@
       "publishedAt": "2026-11-18T02:27:36+00:00",
       "category": "연예",
       "region": "KO"
+    },
+    {
+      "title": "BLACKPINK Weverse Membership Sales Paused as YG Addresses Group Activity Questions - Music Times",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYlJnSzFIdGw4U29WUUJMeE1OZ1drd1BWUHNuYXdwZWxOeHJnRXJ4YVFkOEJsM0p4bmJ6aW12eWp0ejVGam83Sl9BX280UXhkdmVINGhNNnFXMXpFdENaZGcyQ3NJcC1MYUxkaEl0dUJEdHFmUjdaT3JuY3VBUm9wMm9KdjdUR01RRW9FZzM5SGFhNi1jWl9tcXl0YjhlTXNkV3M3anpJLXdvX0RHU2xRVE1PeVdXNHQyUU0yVUF0dUpqbkV4YnNPT1FSVTJweDVs?oc=5",
+      "publisher": "Music Times",
+      "publishedAt": "2026-11-18T01:50:41+00:00",
+      "category": "K-pop",
+      "region": "EN"
     },
     {
       "title": "시청률X화제성 다 잡은 ‘100일’ 김유정♥박진영, 3주 연속 1·2위 싹쓸이 - 뉴스엔",
@@ -352,14 +384,6 @@
       "region": "EN"
     },
     {
-      "title": "Microsoft's Outage Barely Moved Its Stock, But a Bigger Risk May Be Building - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOLUgtbEtHTXV4UnFmSmVQUWd1akJwa05VQ1hEQ24xUldobnBqWldra3ZRTlVNbXd1SWxJX19jcGtZR19jRld1QUNyMjhCT2c4LWswWXFmeWR0SUJOcHFTQ2h6MG1zNTRpVDBtbWt4VEotZXNRTGhXTF9LVzNZQ0JIemFhZ0R6OGp1aVE2b0lkbHY1c0hRMHhCWXpxRE01bmdSb0F3dFVtU2dqdmY2TjA4Z2pXaU9ncHktb0hhdXlRbUtyakxlQk1XVWctWjM4bGJSVVE?oc=5",
-      "publisher": "TradingView",
-      "publishedAt": "2026-11-17T13:10:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "'100일의 거짓말' 김유정-박진영, 출연자 화제성 1·2위…TV·OTT 화제성도 1위 - 톱스타뉴스",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBvc3dTdGRVZU1ETGhXLUhUMDdObnBVZlNtTEFYWTVyZ2M2alRQaE1BMkg5VDIyWVZCUzFHaDRucHJPQzY4dkNwMjgzZnFyY3VkVVRVeHdONWdPc1VkZF9kQnBzQTFobzMyamJadnhKWXR6UQ?oc=5",
       "publisher": "톱스타뉴스",
@@ -381,6 +405,14 @@
       "publisher": "스타뉴스",
       "publishedAt": "2026-11-17T09:43:25+00:00",
       "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "부산 북구, 부산 최초 AI 기반 대형폐기물 배출 ‘가져가’ 서비스 시범 운영 - 국제신문",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOV3hFVkRTQ1Jsc0lnalhtdkZQTU1lV0s1UU9YaXpQTEFaYjljM1UtZWZJV3hnc0MtMDJ1UDJjaS1ZWUdKanQyakdVRW9tUFJNVDF5NmxuUGdDNmJ1S1FabzZSbVh6el9mTGV2QjVXQllfdVFLRzQxdWlETGdRNlVyeHYzcGJjTzdGb01kamZ3?oc=5",
+      "publisher": "국제신문",
+      "publishedAt": "2026-11-17T09:36:00+00:00",
+      "category": "생활 정보",
       "region": "KO"
     },
     {
@@ -472,14 +504,6 @@
       "region": "EN"
     },
     {
-      "title": "Here is the best photo editing software to use in 2026 - Amateur Photographer",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA1UElqV0RMOXB2OXB1WEVwR0pPeEl1S3hMdV8xS2FURFZ3TW5BSkhBdndUSGozOW5SaUNyS1N6UDFTLXhWUno4Y0FrN0hFY1JMRUw2WkFTVktYSHBVY1M3NmJTZlhlekN2VU9ud05ZN0xrMFNLVElYcA?oc=5",
-      "publisher": "Amateur Photographer",
-      "publishedAt": "2026-11-16T15:56:32+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "Iress rolls out AI tools to boost adviser productivity - Money Marketing",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQ282UjMyVERpQ29QRTMwYkZhYTZ2UFBVMXRTMjdQX0xScUZMZ25ocVdkZFk1eGN2MU5UUEw1SmpydXR3UmFXTGRick10VDRHeDRGb0VwOXdhOXhhTEVOWnJ1OG0wRmhfeHVseEVSSUg4NncySzFtc0FBQmQzQjc0VWdkSVVBT29aU19aVFJ3YW45bzRneHlsVQ?oc=5",
       "publisher": "Money Marketing",
@@ -501,22 +525,6 @@
       "publisher": "Rolling Stone",
       "publishedAt": "2026-11-16T14:50:47+00:00",
       "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "TXT Unleashes 'PERFECT STORM': \"Angel Bite\" Signals a New Era for TOMORROW X TOGETHER - Dojeon Media",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQN09MZGdiekJhcnpJblBTSlZ3RzV0WDVnOFJ1SjAxcjNQcHpSVndiaXFCWURLcXlEd29UMzhiRUpfbm5XWWN5WVVDYUlLWDQzOFRGbGpnSHdyN215ZGRfSVU3WlNHUjdoZlpwNWxRSHkzei1Gd3JtTXRpOEdTdXhPYlc2Z1UwY25ROEN1S2NHOXpuSnM3dmtyZjJ4VHh6WTV4SU1Ia3RVQnpsZVVZSENyMVJTMA?oc=5",
-      "publisher": "Dojeon Media",
-      "publishedAt": "2026-11-16T14:04:34+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "Empress Reigns: Disney+’s Webtoon Bet Pays Off with K-Drama Record - DailyDrama",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdmpTQWNkaVprWERqSFFjaTJvRElPYW1mS2FzQkstdVAwUnNEdjJ6azZ3QUh4bU96SzMxMEMwa0JqcWxGTmloSEItVmtRUWZTbmVacWptOVZBRG1qai0tV0N2MUdkVFpvX05LaFFmeFF0Y3JZdFA1bjZVN3NPeEpVNWdvQ05iTm50OFNmTVc0dmRBdElp?oc=5",
-      "publisher": "DailyDrama",
-      "publishedAt": "2026-11-16T11:00:51+00:00",
-      "category": "K-드라마",
       "region": "EN"
     },
     {
@@ -548,14 +556,6 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd0lPUjJuVmRMT3RJTW9vc3U1R3ZvNTM0OXZpZWIwSXdKdjlTemIxb0cxSjlVcVpPUWt5RW9pVmo1bl9WT0VzX1ljTG5YRVJXS0hSNUpXM0hZb1dSNlVOalNOTTRaWDh3bnZrcmF3YUV4Q3VSMmhqLUgzbnRFcGVKRWRRYlAyZWpzVzRRelNYSjRadXM2N01SUmN2bzNMQTh1dVN6NFZkdHlUb3Jqa09aYg?oc=5",
       "publisher": "TradingKey",
       "publishedAt": "2026-11-15T06:22:51+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSmZFbFBPZ1U2ZGdqemxYUDYtZjF0TFNOOXFfcDRmUnBpS1k2WjZZWlhYU2hyNkhKSURhbFAzLXRCN0xJVHhla1BzdHFXZkJkVERsd21qRTJmZFhCcEZNeGJyR3ZjeHREYjNNYjlwY2JfMGViN3lWRllzNkpOaWl5UTBnRFJmZUtkekpmbGxvQnlCMU5EYmZBUjRGSGs1eVhVOUtCQVRrMEFkNGVkSDNvOTVkaVdEQTRZZEhQN0VlVVXSAcABQVVfeXFMTkpmRWxQT2dVNmRnanpsWFA2LWYxdExTTjlxX3A0ZlJwaUtZNlo2WVpYWFNocjZISklEYWxQMy10QjdMSVR4ZWtQc3RxV2ZCZFREbHdtakUyZmRYQnBGTXhickd2Y3h0RGIzTWI5cGNiXzBlYjd5VkZZczZKTmlpeVEwZ0RSZmVLZHpKZmxsb0J5QjFORGJmQVI0RkhrNXlYVTlLQkFUazBBZDRlZEgzbzk1ZGlXREE0WWRIUDdFZVVV?oc=5",
-      "publisher": "Simply Wall St",
-      "publishedAt": "2026-11-14T20:20:17+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },

@@ -1,22 +1,40 @@
 {
-  "generatedAt": "2026-11-19T09:34:03.082169+00:00",
+  "generatedAt": "2026-11-19T12:29:47.938493+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 6,
-      "lastSuccessAt": "2026-11-19T09:34:03.082169+00:00"
+      "count": 9,
+      "lastSuccessAt": "2026-11-19T12:29:47.938493+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
-      "count": 7,
-      "lastSuccessAt": "2026-11-19T09:34:03.082169+00:00"
+      "count": 10,
+      "lastSuccessAt": "2026-11-19T12:29:47.938493+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "건강보험 환급금 조회·신청 방법 — 3년 지나기 전에 챙기는 '숨은 돈' 정리 (2026년 11월 기준)",
+      "url": "https://blog.naver.com/todaypickkr/224483877338?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T12:02:34+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "직장인 가성비 냉동도시락 비교 — 한 끼 3,315원부터 5,280원까지 4종",
+      "url": "https://blog.naver.com/todaypickkr/224483801833?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T10:45:40+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "신의 구슬: Prime Video에서 12월 5일 방영 예정인 고려 전쟁 K-드라마",
+      "url": "https://blog.naver.com/todaypickkr/224483749536?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T09:51:36+00:00"
+    },
     {
       "channel": "naver",
       "title": "겨울 방한·건조 대비 꿀템 4종 비교 — 3만 원대 전기요부터 가열식 가습기까지",
@@ -55,6 +73,30 @@
     },
     {
       "channel": "tistory",
+      "title": "직장인 가성비 냉동도시락 비교 — 한 끼 3,315원부터 5,280원까지 4종",
+      "url": "https://blog83848.tistory.com/12",
+      "publishedAt": "2026-11-19T10:58:24+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "Sacred Jewel: Prime Video's Goryeo War K-Drama Premieres December 5",
+      "url": "https://blog83848.tistory.com/11",
+      "publishedAt": "2026-11-19T09:57:27+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "신의 구슬: Prime Video에서 12월 5일 방영 예정인 고려 전쟁 K-드라마",
+      "url": "https://blog83848.tistory.com/10",
+      "publishedAt": "2026-11-19T09:54:56+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "겨울 방한·건조 대비 꿀템 4종 비교 — 3만 원대 전기요부터 가열식 가습기까지",
+      "url": "https://blog83848.tistory.com/9",
+      "publishedAt": "2026-11-19T09:41:07+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "'The Devil's Plan: Dead Again' Tops Korea's Non-Drama Buzz Chart — Up 98.9% From Season 2's Debut",
       "url": "https://blog83848.tistory.com/8",
       "publishedAt": "2026-11-19T04:44:04+00:00"
@@ -88,12 +130,6 @@
       "title": "‘100일의 거짓말’ 김유정-박진영, 출연자 화제성 1·2위…TV·OTT 화제성도 1위",
       "url": "https://blog83848.tistory.com/3",
       "publishedAt": "2026-11-18T09:04:09+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "맥북 화면 녹화하는 방법 총정리｜단축키부터 녹화 중지, 저장 위치까지",
-      "url": "https://blog83848.tistory.com/2",
-      "publishedAt": "2026-11-16T09:44:34+00:00"
     }
   ]
 }
