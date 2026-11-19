@@ -1,13 +1,183 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18T01:18:40.681909+00:00",
+  "updatedAt": "2026-11-19T01:17:52.034858+00:00",
   "maxDailyCalls": 3,
   "dailyAttempts": {
     "2026-11-17": 3,
-    "2026-11-18": 3
+    "2026-11-18": 3,
+    "2026-11-19": 3
   },
   "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
   "entries": [
+    {
+      "candidateId": "7e6b52b0f71e90",
+      "title": "\"Good Partner\" Season 2 Premieres November 20: Cast, Storyline & Where to Watch",
+      "category": "K-드라마",
+      "region": "EN",
+      "researchedAt": "2026-11-19T01:17:49.125682+00:00",
+      "topic": "굿파트너 시즌 2",
+      "summary": "'굿파트너 시즌 2'는 2026년 11월 20일 SBS에서 첫 방송되며, 장나라와 김혜윤이 주연으로 출연합니다. 이 드라마는 복잡한 이혼 사건과 새로운 파트너십을 중심으로 한 법정 드라마입니다.",
+      "keyFacts": [
+        "첫 방송일: 2026년 11월 20일",
+        "방송 시간: 매주 금, 토요일 오후 9시 50분 KST",
+        "총 에피소드 수: 16",
+        "주요 출연진: 장나라(차은경 역), 김혜윤(강혜성 역), 박해진(박태수 역)",
+        "시즌 1 방영 기간: 2024년 7월 12일 ~ 9월 20일",
+        "시즌 1 최고 시청률: 17.7%"
+      ],
+      "openQuestions": [
+        "시즌 2의 전체적인 줄거리는 무엇인가?",
+        "시즌 2의 주요 테마나 메시지는 무엇인가?",
+        "시즌 2의 주요 촬영 장소는 어디인가?",
+        "시즌 2의 주요 제작진은 누구인가?",
+        "시즌 2의 주요 음악이나 사운드트랙은 무엇인가?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.dojeonmedia.com/post/good-partner-season-2-premieres-november-20-cast-storyline-where-to-watch?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.allkpop.com/article/2026/09/good-partner-2-confirms-kim-hye-yoon-and-park-hae-jin-joining-cast-premiering-november-20?auth=login&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.whats-on-netflix.com/news/k-dramas/good-partner-season-2-cast-kim-hye-yoon-release-date/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.bookmarkstream.com/news/good-partner-season-2-release-date-cast-where-to-watch?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.chosun.com/english/kpop-culture-en/2026/10/19/OCYSX46QDBDO5NDYXEKFEXOCOE/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://koreandramacalendar.com/dramas/good-partner-season-2/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://mydramadb.com/shows/good-partner-season-2?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://kdramaworlds.com/k-drama-guide/good-partner-season-2-2026-episode-guide-cast-ending-explained/?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "8eb7b83792f84d",
+      "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최",
+      "category": "K-pop",
+      "region": "KO",
+      "researchedAt": "2026-11-19T01:17:45.207684+00:00",
+      "topic": "태연의 정규 4집 발매 및 아시아 투어 'F.L.Y.' 개최",
+      "summary": "소녀시대의 태연이 2026년 11월 30일 정규 4집 앨범 'Unspecial'을 발매하며, 2027년 1월 15일부터 17일까지 서울 올림픽공원 KSPO DOME에서 일곱 번째 단독 콘서트 'F.L.Y. in Seoul'을 개최한다. 이후 마카오, 방콕, 홍콩, 타이베이, 도쿄 등 아시아 6개 도시에서 투어를 진행할 예정이다. ([fnnews.com](https://www.fnnews.com/news/202611181711005650?utm_source=openai))",
+      "keyFacts": [
+        "태연의 정규 4집 앨범 'Unspecial'은 12곡으로 구성되어 있으며, 타이틀곡은 동명의 'Unspecial'이다. ([newspim.com](https://www.newspim.com/news/view/20261109000218?utm_source=openai))",
+        "서울 공연 티켓 예매는 멜론티켓을 통해 진행되며, 공식 팬클럽 회원을 대상으로 한 국내 선예매는 12월 1일 오후 8시부터 시작된다. ([tenasia.co.kr](https://www.tenasia.co.kr/article/2026111847514?utm_source=openai))",
+        "서울 공연 이후 아시아 투어는 마카오(1월 30~31일), 방콕(2월 27일), 홍콩(3월 27~29일), 타이베이(4월 3일), 도쿄(4월 17~18일)에서 진행된다. ([tenasia.co.kr](https://www.tenasia.co.kr/article/2026111847514?utm_source=openai))"
+      ],
+      "openQuestions": [
+        "아시아 투어의 정확한 공연 장소와 세부 일정은 아직 공개되지 않았다.",
+        "신곡 무대와 기존 곡들의 세트리스트는 아직 공개되지 않았다."
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16279937&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.fnnews.com/news/202611181711005650?utm_source=openai",
+          "title": "태연, 컴백 이어 콘서트까지…내년 1월 KSPO돔서 개최"
+        },
+        {
+          "url": "https://www.tenasia.co.kr/article/2026111847514?utm_source=openai",
+          "title": "소녀시대 태연, 새 앨범 내고 콘서트까지…아시아 6개 도시 투어 돌입 | 텐아시아"
+        },
+        {
+          "url": "https://www.alphabiz.co.kr/news/articleView.html?idxno=198787&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.newspim.com/news/view/20261109000218?utm_source=openai",
+          "title": "태연, 4년 10개월 만에 정규 4집 '언스페셜' 발매…30일 컴백"
+        },
+        {
+          "url": "https://www.bntnews.co.kr/Culture/article/view/bnt202611180231?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.ajunews.com/view/20261109103951876?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.slist.kr/news/articleView.html?idxno=782840&utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 12,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "16bef504dfbec3",
+      "title": "‘데블스 플랜: 데드 어게인’ 공개 일주일 만에 통했다…넷플릭스 1위·화제성 정상",
+      "category": "연예",
+      "region": "KO",
+      "researchedAt": "2026-11-19T01:17:40.904562+00:00",
+      "topic": "‘데블스 플랜: 데드 어게인’ 공개 일주일 만에 통했다…넷플릭스 1위·화제성 정상",
+      "summary": "넷플릭스 예능 프로그램 '데블스 플랜: 데드 어게인'이 공개 첫 주부터 높은 화제성을 보이며 넷플릭스 1위와 화제성 1위를 차지했습니다. 굿데이터코퍼레이션 펀덱스(FUNdex)의 조사에 따르면, 이 프로그램은 TV-OTT 비드라마 부문에서 13.04%의 점유율로 1위를 기록했으며, 통합 순위에서도 6.93%로 2위를 차지했습니다. 또한, 출연자 장동민은 비드라마 출연자 화제성 1위를, 정현규는 4위를 차지하며 높은 관심을 입증했습니다. ([tenasia.co.kr](https://www.tenasia.co.kr/article/2026111719644?utm_source=openai))",
+      "keyFacts": [
+        "'데블스 플랜: 데드 어게인'은 공개 첫 주에 넷플릭스 1위와 화제성 1위를 달성했습니다.",
+        "굿데이터코퍼레이션 펀덱스 조사에서 TV-OTT 비드라마 부문 1위(13.04%)를 기록했습니다.",
+        "통합 순위에서도 2위(6.93%)를 차지했습니다.",
+        "출연자 장동민은 비드라마 출연자 화제성 1위, 정현규는 4위를 차지했습니다."
+      ],
+      "openQuestions": [],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.tenasia.co.kr/article/2026111719644?utm_source=openai",
+          "title": "'데블스 플랜3', 첫 주부터 정상 찍었다…비드라마 화제성 단숨에 1위 | 텐아시아"
+        },
+        {
+          "url": "https://www.tenasia.co.kr/article/2026111715434?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.gpkorea.com/news/articleView.html?idxno=148763&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.fnnews.com/news/202611181714127279?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://m.wikitree.co.kr/articles/1175738?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://v.isplus.com/article/view/isp202611180133?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://isplus.com/article/view/isp202611180099?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://news.jtbc.co.kr/article/NB12328691?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
     {
       "candidateId": "285fcc08e628c4",
       "title": "건강보험 환급금, 3년 지나면 못 받는다…조회·신청 방법",
