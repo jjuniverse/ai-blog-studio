@@ -20,6 +20,13 @@ class CollectorTests(unittest.TestCase):
     def test_categories_include_domestic_and_international(self):
         groups = {(item[0], item[1]) for item in collect_news.FEEDS}
         self.assertIn(("생활 정보", "KO"), groups)
+        self.assertIn(("시니어·복지", "KO"), groups)
+        senior = [feed for feed in collect_news.FEEDS if feed[0] == "시니어·복지"]
+        self.assertGreaterEqual(len(senior), 4)
+        self.assertTrue(all(feed[1] == "KO" for feed in senior))
+        self.assertTrue(any("기초연금" in feed[2] for feed in senior))
+        self.assertTrue(any("장기요양" in feed[2] for feed in senior))
+        self.assertTrue(any("노인일자리" in feed[2] for feed in senior))
         self.assertIn(("K-pop", "KO"), groups)
         self.assertIn(("K-pop", "EN"), groups)
         self.assertIn(("AI·생산성", "EN"), groups)
