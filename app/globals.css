@@ -169,3 +169,11 @@ html,body{max-width:100%;overflow-x:clip}
 .post-image-item strong{font-size:12px;color:#31485f}
 .post-image-package>.btn{width:100%;white-space:normal;text-align:center}
 @media(max-width:560px){.post-image-item{grid-template-columns:1fr}.post-image-item>div{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}}
+
+/* Publication status is local to this browser and excludes finished stories by default. */
+.publish-completion{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:15px;margin:16px 0;border:1px solid #cfe5db;border-radius:12px;background:#f3faf6}
+.publish-completion>div{flex:1;min-width:180px}
+.publish-completion strong{font-size:13px;color:#2b6457}
+.publish-completion p{margin:6px 0 0}
+.publish-completion>small{flex-basis:100%;color:#307d69}
+@media(max-width:760px){.publish-completion{align-items:stretch}.publish-completion>.btn{width:100%}}
