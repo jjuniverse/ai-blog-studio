@@ -29,20 +29,21 @@ export function normalizeArticleTags(article: string, title: string, category = 
     if (!tags.some(x => x.toLowerCase() === tag.toLowerCase())) tags.push(tag);
   };
   for (const tag of existing.match(/#[^\s#]+/g) || []) add(tag.slice(1));
-  for (const match of title.matchAll(/['"‘“]([^'"’”]{2,55})['"’”]/g)) add(match[1]);
+  for (const match of (title + ' ' + body.slice(0, 900)).matchAll(/['"‘“]([^'"’”]{2,30})['"’”]/g)) add(match[1]);
   const words = (title + ' ' + (body.match(/^#{1,3}\s+[^\n]+/gm) || []).join(' ')).match(/[\p{L}\p{N}.]{2,}/gu) || [];
   const useful = words.map(x => x.replace(/(?:까지|으로|에서|부터|만에|이어|개최)$/u, ''))
-    .filter(x => x.length >= 2 && !TAG_STOPWORDS.has(x) && !/^\d+$/.test(x));
+    .filter(x => x.length >= 2 && !TAG_STOPWORDS.has(x) && !/^\d+(?:년|개월|일|월)?$/.test(x));
+  const subject = useful.find(x => /^[가-힣]{2,6}$/.test(x)) || useful[0] || '';
+  if (subject) add(subject);
+  for (const suffix of ['컴백', '콘서트', '아시아투어', '정규4집', '투어', '앨범', '시청률', '화제성', '예매', '공연', '출연자']) {
+    if (tags.length >= 9) break;
+    if (subject && (title + body).includes(suffix === '정규4집' ? '정규 4집' : suffix) && !subject.includes(suffix)) add(subject + suffix);
+  }
   for (const word of useful) add(word);
   const articleWords = body.match(/[\p{L}\p{N}.]{2,}/gu) || [];
   for (const word of articleWords) {
     if (tags.length >= 8) break;
     if (/[A-Z]/.test(word) || word.length >= 3) add(word);
-  }
-  const subject = useful.find(x => /^[가-힣]{2,6}$/.test(x)) || useful[0] || '';
-  for (const suffix of ['컴백', '콘서트', '투어', '아시아투어', '정규4집', '앨범', '시청률', '화제성', '예매', '공연', '출연자']) {
-    if (tags.length >= 10) break;
-    if (subject && body.includes(suffix) && !subject.includes(suffix)) add(subject + suffix);
   }
   for (const fallback of ['오늘의이슈', '핵심정리', category]) {
     if (tags.length >= 8) break;
