@@ -9,7 +9,7 @@ type Props = {
   category: string;
   article: string;
   referenceAppendix: string;
-  channel: 'naver' | 'tistory';
+  channel: 'naver' | 'tistory' | 'tistoryEn';
 };
 type GeneratedAsset = { kind: ImageKind; blob: Blob; url: string; label: string };
 
@@ -70,7 +70,7 @@ export default function PostImagePackage({title,category,article,referenceAppend
       }
       files['원고-이미지배치.txt'] = strToU8(title+'\n\n'+withImageMarkers(article)+referenceAppendix);
       files['사용안내.txt'] = strToU8(
-        '오늘의 픽 · '+(channel==='naver'?'네이버':'티스토리')+' 포스팅 패키지\n\n'+
+        '오늘의 픽 · '+(channel==='naver'?'네이버':channel==='tistoryEn'?'티스토리 English':'티스토리')+' 포스팅 패키지\n\n'+
         '1. 이 ZIP에는 새로 렌더링한 오리지널 PNG 3장이 포함돼.\n'+
         '2. 원고-이미지배치.txt의 [이미지 삽입] 위치에 해당 PNG 파일을 직접 업로드해 줘.\n'+
         '3. 제목 아래에는 대표 썸네일, 3줄 요약 근처에는 요약 카드, 핵심 정보 섹션에는 정보 카드가 배치돼.\n'+
