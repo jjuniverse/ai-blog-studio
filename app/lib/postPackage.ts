@@ -110,3 +110,19 @@ export function withImageMarkers(article: string): string {
   });
   return output.join('\n\n');
 }
+
+/** Editorial floor for drafts: excludes hashtags and reference appendices entirely. */
+export function articleReadiness(article: string, english = false): { publishBlocked: boolean; reasons: string[]; bodyLength: number; sections: number } {
+  const raw = String(article || '').split(/(?:^|\n)#{1,3}\s*(?:관련\s*태그|Related Tags|Tags)\s*\n/i)[0]
+    .split(/(?:^|\n)참고자료\s*(?:\([^)]*\))?\s*\n/)[0];
+  const meaningful = raw.split(/\n+/).map(x=>x.trim()).filter(x=>x &&
+    !/^#{1,3}\s/.test(x) && !/^#\S+/.test(x) && !/^\[이미지 삽입:/.test(x));
+  const joined = meaningful.join(' ').replace(/^\s*[-*•]\s*/gm, '');
+  const sections = (raw.match(/^#{1,3}\s+(?!관련\s*태그|Related Tags).+/gm) || []).length;
+  const len = joined.replace(/\s+/g,' ').trim().length;
+  const reasons:string[]=[];
+  if (len < (english ? 450 : 350)) reasons.push('태그를 제외한 본문 정보량이 지나치게 적어');
+  if (sections < 2) reasons.push('본문에 서로 다른 내용을 설명하는 소제목이 2개 미만이야');
+  if (meaningful.length < 4) reasons.push('독자가 얻을 구체적 정보나 요약이 부족해');
+  return { publishBlocked: reasons.length > 0, reasons, bodyLength: len, sections };
+}
