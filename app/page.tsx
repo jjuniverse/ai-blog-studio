@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
+import PostImagePackage from './components/PostImagePackage';
+import { normalizeArticleTags, paragraphLines, imagePositions, withImageMarkers } from './lib/postPackage';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
 type Channel = 'naver' | 'tistory' | 'shortform';
@@ -115,14 +117,6 @@ const imagePrompts = (topic: Candidate | undefined) => [
     : '본문 설명 — 확인된 공개 일정·사실을 바탕으로 직접 제작한 정보 카드 삽입.',
   '핵심 정리 — 출처 확인 후 요점 3개를 독자적인 인포그래픽으로 제작. 기사 사진 및 방송 장면 무단 사용 금지.',
 ];
-function withBrandHashtag(body: string): string {
-  if (!body.trim() || /(^|\s)#오늘의픽(?=\s|$)/m.test(body)) return body;
-  const value = body.trimEnd();
-  const lastLine = value.split('\n').at(-1)?.trim() || '';
-  return /^#[^#\s]+(?:\s+#[^#\s]+)*$/.test(lastLine)
-    ? value + ' #오늘의픽'
-    : value + '\n\n## 관련 태그\n#오늘의픽';
-}
 function download(filename: string, content: string, mime: string) {
   const url = URL.createObjectURL(new Blob([content], { type: mime }));
   const el = document.createElement('a');
@@ -411,13 +405,16 @@ export default function Home() {
   const storedText = matchingDraft?.mode === 'research_brief' ? '' :
     legacyStored ? (saved?.fields?.[channel] || '') :
     legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
-  const text = channel === 'shortform' ? storedText : withBrandHashtag(storedText);
+  const text = channel === 'shortform' ? storedText : normalizeArticleTags(storedText,
+    saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '', selected?.category || '');
   const articleTitle = channel === 'shortform' ? (matchingDraft?.title || selected?.title || '') :
     (saved?.titles?.[channel] || (channel === 'naver' ? matchingDraft?.naverTitle : matchingDraft?.tistoryTitle) || matchingDraft?.title || selected?.title || '');
   const referenceAppendix = matchingDraft?.mode === 'article' && matchingDraft?.sourceLinks?.length
     ? '\n\n참고자료 (내용·저작권 확인 후 발행)\n' + matchingDraft.sourceLinks.map((source, i) => (i + 1) + '. ' + (source.title || '원문') + ' — ' + source.url).join('\n')
     : '';
   const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
+  const previewLines = paragraphLines(text);
+  const cardPositions = imagePositions(previewLines);
   const reviewed = saved?.evidenceReview?.[channel];
   const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
   const selectedImages = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
@@ -576,6 +573,10 @@ export default function Home() {
   async function copyText() {
     return copyToClipboard(copyableArticle, 'article');
   }
+  async function copyWithImagePositions() {
+    if (channel === 'shortform' || !text.trim()) return;
+    return copyToClipboard(articleTitle.trim() + '\n\n' + withImageMarkers(text) + referenceAppendix, 'article');
+  }
   function exportText() {
     download('todaypick-' + channel + '-draft.txt', copyableArticle + '\n\n' + images.map((n,i) => '[이미지 ' + (i + 1) + '] ' + n).join('\n'), 'text/plain;charset=utf-8');
   }
@@ -725,20 +726,20 @@ export default function Home() {
                 {previewMode ? <div className="post-preview">
                   <div className="post-preview-label">오늘의 픽 · {channel === 'naver'?'네이버 블로그':channel==='tistory'?'티스토리':'숏폼 대본'} 발행 전 미리보기</div>
                   <h1>{articleTitle || '새 글'}</h1>
-                  {text.split(/\n+/).filter(Boolean).map((paragraph, i) => <div key={i}>
+                  {channel !== 'shortform' && selected && <>
+                    <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>
+                    {selectedImages.map(img=><figure className="post-selected-image" key={img.id}>
+                      <img src={img.imageUrl} alt={img.title} loading="lazy" referrerPolicy="no-referrer" />
+                      <figcaption>{img.title} · {img.creator} · {img.license}
+                        {' · '}<a href={img.sourceUrl} target="_blank" rel="noopener noreferrer">원본/사용 조건 확인 ↗</a>
+                      </figcaption>
+                    </figure>)}
+                  </>}
+                  {previewLines.map((paragraph, i) => <div key={i}>
                     {/^#{1,3}\s+/.test(paragraph) ? <h2>{paragraph.replace(/^#{1,3}\s+/, '')}</h2> : <p>{paragraph}</p>}
-                    {i === 0 && channel !== 'shortform' && selected && <>
-                      {selectedImages.map(img=><figure className="post-selected-image" key={img.id}>
-                        <img src={img.imageUrl} alt={img.title} loading="lazy" referrerPolicy="no-referrer" />
-                        <figcaption>{img.title} · {img.creator} · {img.license}
-                          {' · '}<a href={img.sourceUrl} target="_blank" rel="noopener noreferrer">원본/사용 조건 확인 ↗</a>
-                        </figcaption>
-                      </figure>)}
-                      <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[0]} variant="cover" index={0}/>
-                    </>}
-                    {i === 4 && channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={1}/>}
+                    {i === cardPositions.summary && channel !== 'shortform' && selected && <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[2]} excerpt={text} variant="summary" index={1}/>}
+                    {i === cardPositions.detail && channel !== 'shortform' && selected && <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={2}/>}
                   </div>)}
-                  {channel !== 'shortform' && selected && <ImageCard title={matchingDraft?.title||selected.title} category={selected.category} description={images[2]} excerpt={text} variant="summary" index={2}/>}
                 </div> : <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
                 {channel !== 'shortform' && matchingDraft?.sourceLinks?.length ? <div className="research-sources">
                   <strong>본문과 분리한 참고 출처</strong>
@@ -750,7 +751,8 @@ export default function Home() {
                   {copyFeedback?.target==='article' && <span className={'copy-tooltip '+(copyFeedback.kind==='error'?'copy-tooltip-error':'')} role="status" aria-live="polite">
                     {copyFeedback.kind==='success'?'✓ 복사됐어!':'복사에 실패했어'}
                   </span>}
-                </span><button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
+                </span>{channel !== 'shortform' && <button className="btn btn-light" onClick={copyWithImagePositions} disabled={!text.trim()}>이미지 위치 포함 복사</button>}
+                <button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {channel !== 'shortform' && <div className="evidence-panel">
                   <div className="panel-heading"><div><h3>원고 근거 대조</h3><p>현재 편집 중인 본문의 핵심 수치·날짜·순위를 추가 웹 검색으로 점검해.</p></div>
                     <button className="btn btn-light" onClick={verifyCurrentDraft} disabled={verifying || !text.trim() || !studioPassphrase}>
@@ -779,7 +781,11 @@ export default function Home() {
             </div>
           </div>
           <aside className="studio-side">
-            <div className="panel"><div className="panel-heading"><h2>이미지 배치 계획</h2><span>이미지 생성 전</span></div><p className="muted">글을 읽기 쉽게 만드는 세 가지 이미지 슬롯이야. 실제 이미지는 아직 생성되지 않아.</p>{images.map((img,i) => <div key={i} className="image-slot"><div className="image-placeholder"><span>{i === 0 ? '▣' : i === 1 ? '▤' : '☰'}</span><small>이미지 {i+1}</small></div><label><strong>{['대표 이미지', '본문 설명', '핵심 요약'][i]}</strong><textarea rows={3} aria-label={'이미지 '+(i+1)+' 설명'} value={img} onChange={e => updateEdit({imageNotes:images.map((v,k) => k === i ? e.target.value : v)})}/></label></div>)}</div>
+            {selected && currentDraft && channel !== 'shortform' && text.trim() && <div className="panel">
+              <PostImagePackage key={selected.id + '-' + channel + '-' + articleTitle + '-' + text}
+                title={articleTitle} category={selected.category} article={text} channel={channel}/>
+            </div>}
+            <div className="panel"><div className="panel-heading"><h2>이미지 배치 계획</h2><span>자체 제작 PNG</span></div><p className="muted">위의 PNG 3장 제작 버튼으로 실제 파일을 생성하고 묶음 다운로드할 수 있어. 이 설명은 각 이미지의 기본 기획이야.</p>{images.map((img,i) => <div key={i} className="image-slot"><div className="image-placeholder"><span>{i === 0 ? '▣' : i === 1 ? '▤' : '☰'}</span><small>이미지 {i+1}</small></div><label><strong>{['대표 이미지', '본문 설명', '핵심 요약'][i]}</strong><textarea rows={3} aria-label={'이미지 '+(i+1)+' 설명'} value={img} onChange={e => updateEdit({imageNotes:images.map((v,k) => k === i ? e.target.value : v)})}/></label></div>)}</div>
             <div className="panel">
               <div className="panel-heading"><h2>이미지 후보 찾기·저장</h2><span>최대 8장 · 이 브라우저 보관</span></div>
               <p className="muted">구글 이미지를 새 탭에서 검색하거나, 라이선스 정보가 있는 Wikimedia Commons 후보를 바로 확인해. 구글 검색 결과가 곧 사용 허가를 뜻하진 않아.</p>
