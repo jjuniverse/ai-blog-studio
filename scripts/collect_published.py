@@ -5,6 +5,7 @@ No login, page scraping, publish actions or secrets. Failed fetches never
 silently turn a previously successful snapshot into an empty published list.
 """
 import json
+import html
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -77,7 +78,7 @@ def parse_feed(xml, channel):
             link_node = item.find("{http://www.w3.org/2005/Atom}link")
             link = link_node.attrib.get("href", "") if link_node is not None else ""
         date = text(item, "pubDate") or text(item, "{http://www.w3.org/2005/Atom}published") or text(item, "{http://www.w3.org/2005/Atom}updated")
-        title = re.sub(r"\s+", " ", title)[:220].strip()
+        title = re.sub(r"\s+", " ", html.unescape(title))[:220].strip()
         if not title or len(title) < 4 or not allowed_link(link, channel) or link in seen:
             continue
         seen.add(link)
