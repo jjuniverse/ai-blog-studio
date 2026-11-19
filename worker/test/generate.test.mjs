@@ -104,6 +104,10 @@ test('short imperfect articles remain visible for revision instead of becoming e
     assert.equal(response.status,200,JSON.stringify(result));
     assert.equal(result.draft.mode,'article');
     assert.equal(result.status,'revision_required');
+    // The short paid result stays intact, while factual content remains below publishability threshold.
+    assert.equal(result.draft.qualityAudit.channelReadiness.naver.ready, false);
+    assert.equal(result.draft.qualityAudit.channelReadiness.tistory.ready, false);
+    assert.ok(result.draft.qualityAudit.channelReadiness.naver.bodyLength < 350);
     assert.ok(result.draft.naver.startsWith(body));
     assert.ok(result.draft.tistory.startsWith(body));
     assert.match(result.draft.naver, /## 관련 태그\n#오늘의픽/);
