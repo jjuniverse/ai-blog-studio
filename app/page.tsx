@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
 import PostImagePackage from './components/PostImagePackage';
+import { matchPublished, type PublicFeed } from './lib/publishedMatch';
 import { normalizeArticleTags, normalizeEnglishArticleTags, paragraphLines, imagePositions, withImageMarkers, articleReadiness } from './lib/postPackage';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
@@ -147,6 +148,8 @@ export default function Home() {
   const [drafts, setDrafts] = useState<Draft[]>([]);
   const [localDrafts, setLocalDrafts] = useState<Draft[]>([]);
   const [researchLeads, setResearchLeads] = useState<ResearchLead[]>([]);
+  const [publishedFeed, setPublishedFeed] = useState<PublicFeed | null>(null);
+  const [publishedFeedError, setPublishedFeedError] = useState('');
   const [researchDailyLimit, setResearchDailyLimit] = useState(3);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState('');
@@ -198,8 +201,8 @@ export default function Home() {
       }
     } catch { /* private mode or disabled local storage */ }
     setHydrated(true);
-    Promise.allSettled([publicFile('/data/candidates.json'), publicFile('/data/drafts.json'), publicFile('/data/research.json')])
-      .then(([a, b, research]) => {
+    Promise.allSettled([publicFile('/data/candidates.json'), publicFile('/data/drafts.json'), publicFile('/data/research.json'), publicFile('/data/published.json')])
+      .then(([a, b, research, published]) => {
         if (a.status === 'fulfilled') {
           const list = (a.value.candidates || []) as Candidate[];
           setCandidates(list);
@@ -210,6 +213,11 @@ export default function Home() {
         if (research.status === 'fulfilled') {
           setResearchLeads((research.value.entries || []) as ResearchLead[]);
           setResearchDailyLimit(research.value.maxDailyCalls || 3);
+        }
+        if (published.status === 'fulfilled' && Array.isArray(published.value.posts) && Array.isArray(published.value.sources)) {
+          setPublishedFeed(published.value as PublicFeed);
+        } else {
+          setPublishedFeedError('공개 블로그 발행 목록을 아직 읽지 못했어. 기존 수동 발행 기록만 적용돼.');
         }
       }).finally(() => setLoading(false));
   }, []);
@@ -394,13 +402,14 @@ export default function Home() {
     } finally { setGenerating(false); }
   }
   const categories = useMemo(() => ['전체', ...Array.from(new Set(candidates.map(x => x.category)))], [candidates]);
+  const publicMatchFor = (candidate: Candidate) => matchPublished(candidate, publishedFeed?.posts || []);
   const isPublishedTopic = (candidate: Candidate) => {
     // Avoid hiding unrelated topics; only use exact topic identity, exact normalized title
     // or source URLs recorded when the topic was published.
     const canonicalTitle = (title: string) => title.toLowerCase().normalize('NFKC')
       .replace(/[\s\p{P}\p{S}]/gu, '');
     const candidateTitle = canonicalTitle(candidate.title);
-    return Object.entries(localEdits).some(([id, edit]) => {
+    return (publicMatchFor(candidate)?.type === 'confirmed') || Object.entries(localEdits).some(([id, edit]) => {
       const published = !!edit.publishedManually || Object.values(edit.publishedUrls || {}).some(Boolean);
       if (!published) return false;
       if (id === candidate.id) return true;
@@ -417,7 +426,7 @@ export default function Home() {
     if (!showPublished && isPublishedTopic(x)) return false;
     if (query.trim() && !(x.title + ' ' + x.category).toLowerCase().includes(query.toLowerCase().trim())) return false;
     return true;
-  }), [candidates, category, languageFilter, showExcluded, showPublished, localEdits, query]);
+  }), [candidates, category, languageFilter, showExcluded, showPublished, localEdits, publishedFeed, query]);
   const selected = candidates.find(x => x.id === selectedId);
   const activeResearch = researchLeads.find(x => x.candidateId === selectedId);
   const matchingDraft = selected && (
@@ -649,8 +658,23 @@ export default function Home() {
             <div className="metric"><small>자동 조사 완료 후보</small><strong>{researchLeads.filter(x=>x.status==='needs_human_review').length}</strong><span>사람이 근거를 확인할 후보</span></div>
           </div>
           <div className="section-title"><div><h2>수집된 콘텐츠 후보</h2><p>{updatedAt ? '마지막 분석 ' + new Date(updatedAt).toLocaleString('ko-KR') : '뉴스 수집 후 목록이 업데이트돼.'}</p></div><span className="small-label">점수는 검색량·수익 예측이 아닌 내부 편집 기준</span></div>
+          <div className="published-feed-status">
+            <strong>내 블로그 자동 발행 확인 (공개 RSS)</strong>
+            {publishedFeed ? <>
+              <span>네이버 {publishedFeed.sources.find(x=>x.channel==='naver')?.count ?? 0}건 · 티스토리 {publishedFeed.sources.find(x=>x.channel==='tistory')?.count ?? 0}건 조회</span>
+              <span>마지막 확인: {new Date(publishedFeed.generatedAt).toLocaleString('ko-KR')}</span>
+              {publishedFeed.sources.some(source => source.status !== 'ok') && <span className="warning-line">일부 피드 조회에 실패해 이전 기록을 유지했어. RSS 미노출 글은 자동 판별하지 못해.</span>}
+            </> : <span>{publishedFeedError || '공개 발행 기록을 확인하는 중…'}</span>}
+            <small>확실히 같은 주제만 자동 제외하고, 비슷한 글은 중복 의심으로 표시해. 공개 RSS 최신 글만 확인할 수 있어.</small>
+          </div>
           <div className="filters"><select aria-label="콘텐츠 언어 선택" value={languageFilter} onChange={e => setLanguageFilter(e.target.value as 'all' | 'KO' | 'EN')}><option value="all">전체 언어</option><option value="KO">한국어 콘텐츠</option><option value="EN">영어 콘텐츠 · Shorts/Reels</option></select><input value={query} onChange={e => setQuery(e.target.value)} placeholder="기사나 키워드 검색" aria-label="키워드 검색"/><select value={category} onChange={e => setCategory(e.target.value)} aria-label="카테고리 필터">{categories.map(v => <option key={v}>{v}</option>)}</select><label className="inline-check"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)}/> 제외된 주제 보기</label><label className="inline-check"><input type="checkbox" checked={showPublished} onChange={e => setShowPublished(e.target.checked)}/> 발행 완료 포함 ({publishedTopicsCount})</label></div>
-          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '영어 블로그·Shorts' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span></div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' || c.status === 'needs_sources' ? '자료 조사 →' : '제외 사유 보기 →'}</button></div></article>)}</div>}
+          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => { const rssMatch = publicMatchFor(c); return <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '영어 블로그·Shorts' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span>{rssMatch?.type === 'suspected' && <span className="pill yellow">중복 의심</span>}</div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' || c.status === 'needs_sources' ? '자료 조사 →' : '제외 사유 보기 →'}</button></div>
+                    {rssMatch && <div className={'published-match '+rssMatch.type}>
+                      <strong>{rssMatch.type==='confirmed'?'공개 RSS에서 발행 확인':'중복 의심 · 직접 확인 필요'}</strong>
+                      <span>{rssMatch.reason} · {rssMatch.post.channel==='naver'?'네이버':'티스토리'}</span>
+                      <a href={rssMatch.post.url} target="_blank" rel="noopener noreferrer">{rssMatch.post.title} ↗</a>
+                    </div>}
+                  </article>; })}</div>}
         </>}
         {section === 'editor' && <div className="studio-grid">
           <div className="editor-main">
@@ -660,6 +684,11 @@ export default function Home() {
                 <option value="">주제를 선택해 줘</option>
                 {candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}
               </select>
+              {selected && publicMatchFor(selected) && <div className="published-match suspected">
+                <strong>{publicMatchFor(selected)?.type === 'confirmed' ? '이미 발행된 주제야' : '기존 발행 글과 비슷한 주제야'}</strong>
+                <p>새 기사를 작성하기 전에 아래 발행 글과 중복 여부를 확인해 줘.</p>
+                <a href={publicMatchFor(selected)?.post.url} target="_blank" rel="noopener noreferrer">{publicMatchFor(selected)?.post.title} ↗</a>
+              </div>}
               {selected && <div className="source-summary"><div className="pill-row"><span className="pill">{selected.category}</span><span className={'pill ' + (selected.status === 'research_required' ? 'green' : 'yellow')}>{statusLabel[selected.status || 'needs_sources']}</span></div><p>{selected.reasons?.join(' · ')}</p><details><summary>참고 뉴스 {selected.headlines.length}개와 출처 보기</summary><ul>{selected.headlines.map((h,i) => <li key={i}><a href={h.url} target="_blank" rel="noreferrer">{h.publisher || '출처'} — {h.title} ↗</a></li>)}</ul></details></div>}
             </div>
             <div className="panel">
