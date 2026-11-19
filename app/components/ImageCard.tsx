@@ -2,8 +2,19 @@
 import { useEffect, useRef } from 'react';
 
 type Variant = 'cover' | 'detail' | 'summary';
-type Props = { title: string; category: string; description: string; variant: Variant; index: number; excerpt?: string };
+type Props = { title: string; category: string; description: string; variant: Variant; index: number; excerpt?: string; english?: boolean };
 const FONT = '"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif';
+const englishOnly = (value:string) => value.replace(/[^\x20-\x7E\n]/g,' ').replace(/\s+/g,' ').trim();
+const englishCategory = (value:string) => {
+  const raw=value.toLowerCase();
+  if (/연예|드라마|엔터|k-pop|k-drama|음악/.test(raw)) return 'ENTERTAINMENT';
+  if (/기술|테크|ai|인공지능|디지털|it/.test(raw)) return 'TECHNOLOGY';
+  if (/경제|금융|비즈니스/.test(raw)) return 'BUSINESS';
+  if (/여행|관광/.test(raw)) return 'TRAVEL';
+  if (/생활|라이프/.test(raw)) return 'LIFESTYLE';
+  return englishOnly(value).toUpperCase() || 'WORLD NEWS';
+};
+const visible = (value:string, english?:boolean) => english ? englishOnly(value) : value;
 const C = { navy:'#152439', ink:'#14243C', gray:'#637085', mint:'#A6F1D6', cream:'#F6F5F0', line:'#DFE4E5', white:'#FFF' };
 function rect(ctx:CanvasRenderingContext2D,x:number,y:number,w:number,h:number,r:number,fill:string){
   ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();
@@ -21,22 +32,22 @@ function wrap(ctx:CanvasRenderingContext2D,content:string,width:number,maxLines:
 }
 function print(ctx:CanvasRenderingContext2D,lines:string[],x:number,y:number,gap:number){lines.forEach((line,i)=>ctx.fillText(line,x,y+i*gap));}
 function clean(value:string){return value.replace(/\[([^\]]+)\]\(https?:\/\/[^)]+\)/g,'$1').replace(/https?:\/\/\S+/g,'').replace(/[#*_]/g,'').replace(/\s+/g,' ').trim();}
-function facts(article:string,variant:Variant){
+function facts(article:string,variant:Variant,english=false){
   // Prefer the actual three summary bullets for the summary card.
   // Prevent generic truncated introductory prose from replacing the useful headline facts.
   if(variant==='summary'){
-    const match=article.match(/(?:^|\n)#{1,3}\s*3줄\s*요약\s*\n([\s\S]*?)(?=\n#{1,3}\s|$)/);
-    const bullets=match?.[1].split(/\n+/).map(x=>x.replace(/^\s*[-•*]\s*/,'').trim()).filter(Boolean).map(clean).slice(0,3)||[];
+    const match=article.match(english ? /(?:^|\n)#{1,3}\s*Three Key Takeaways\s*\n([\s\S]*?)(?=\n#{1,3}\s|$)/i : /(?:^|\n)#{1,3}\s*3줄\s*요약\s*\n([\s\S]*?)(?=\n#{1,3}\s|$)/);
+    const bullets=match?.[1].split(/\n+/).map(x=>x.replace(/^\s*[-•*]\s*/,'').trim()).filter(Boolean).map(x=>visible(clean(x),english)).filter(Boolean).slice(0,3)||[];
     if(bullets.length>=2)return bullets;
   }
   const paragraphs=article.split(/\n\s*\n/).map(p=>p.trim()).filter(p=>p&&!/^#{1,3}\s/.test(p)&&!/^#\S/.test(p));
-  return paragraphs.map(clean).filter(p=>p.length>20).slice(0,3);
+  return paragraphs.map(p=>visible(clean(p),english)).filter(p=>p.length>20).slice(0,3);
 }
-function header(ctx:CanvasRenderingContext2D,cat:string,dark:boolean){
+function header(ctx:CanvasRenderingContext2D,cat:string,dark:boolean,english=false){
   rect(ctx,80,76,154,47,23,dark?C.mint:C.navy);
-  ctx.fillStyle=dark?C.navy:C.white;ctx.font='700 22px '+FONT;ctx.fillText('오늘의 픽',103,107);
+  ctx.fillStyle=dark?C.navy:C.white;ctx.font='700 22px '+FONT;ctx.fillText(english?'TODAY PICK':'오늘의 픽',english?94:103,107);
   ctx.font='600 22px '+FONT;ctx.fillStyle=dark?'#DAEEE7':C.gray;
-  ctx.textAlign='right';ctx.fillText(cat.toUpperCase(),1120,107);ctx.textAlign='left';
+  ctx.textAlign='right';ctx.fillText(english?englishCategory(cat):cat.toUpperCase(),1120,107);ctx.textAlign='left';
 }
 function footer(ctx:CanvasRenderingContext2D,h:number,dark:boolean,index:number){
   ctx.fillStyle=dark?'#B7D4CF':'#7D8A97';ctx.font='600 20px '+FONT;ctx.fillText('TODAYPICKKR',80,h-53);
@@ -57,26 +68,26 @@ function cover(ctx:CanvasRenderingContext2D,props:Props){
     rect(ctx,934,270,150,150,36,C.mint);
     ctx.fillStyle=C.navy;ctx.font='700 64px '+FONT;ctx.fillText('AI',971,368);
   }
-  header(ctx,props.category,true);
+  header(ctx,props.category,true,props.english);
   rect(ctx,80,169,192,39,9,'#355266');
   ctx.fillStyle='#CBEFE1';ctx.font='700 19px '+FONT;ctx.fillText('TODAY’S TOPIC',96,195);
   ctx.fillStyle=C.white;ctx.font='800 57px '+FONT;
-  print(ctx,wrap(ctx,clean(props.title),750,4),80,286,77);
+  print(ctx,wrap(ctx,visible(clean(props.title),props.english)||'Today\'s Topic',750,4),80,286,77);
   ctx.strokeStyle=C.mint;ctx.lineWidth=7;ctx.beginPath();ctx.moveTo(80,548);ctx.lineTo(270,548);ctx.stroke();
-  ctx.font='500 25px '+FONT;ctx.fillStyle='#CFDED9';ctx.fillText('핵심만 정리한 오늘의 이슈',80,597);
+  ctx.font='500 25px '+FONT;ctx.fillStyle='#CFDED9';ctx.fillText(props.english?'Today\'s News, Clearly Explained':'핵심만 정리한 오늘의 이슈',80,597);
   footer(ctx,h,true,props.index);
 }
 function information(ctx:CanvasRenderingContext2D,props:Props){
   const h=900;ctx.fillStyle=C.cream;ctx.fillRect(0,0,1200,h);
-  ctx.fillStyle=C.mint;ctx.fillRect(0,0,1200,16);header(ctx,props.category,false);
+  ctx.fillStyle=C.mint;ctx.fillRect(0,0,1200,16);header(ctx,props.category,false,props.english);
   ctx.fillStyle=C.navy;ctx.font='800 55px '+FONT;
-  ctx.fillText(props.variant==='detail'?'이슈 핵심 살펴보기':'오늘의 이슈, 3줄 정리',80,208);
-  ctx.fillStyle=C.gray;ctx.font='500 23px '+FONT;ctx.fillText('AI 초안 기반 · 발행 전 사실 확인 필요',80,256);
-  const snippets=facts(props.excerpt||'',props.variant);
+  ctx.fillText(props.english ? (props.variant==='detail'?'Key Facts at a Glance':'Three Key Takeaways') : (props.variant==='detail'?'이슈 핵심 살펴보기':'오늘의 이슈, 3줄 정리'),80,208);
+  ctx.fillStyle=C.gray;ctx.font='500 23px '+FONT;ctx.fillText(props.english?'AI draft · Verify facts before publishing':'AI 초안 기반 · 발행 전 사실 확인 필요',80,256);
+  const snippets=facts(props.excerpt||'',props.variant,props.english);
   if(!snippets.length){
     rect(ctx,80,320,1040,380,23,C.white);ctx.fillStyle=C.ink;ctx.font='700 39px '+FONT;
-    print(ctx,wrap(ctx,clean(props.title),930,3),124,410,59);
-    ctx.fillStyle=C.gray;ctx.font='500 25px '+FONT;ctx.fillText('본문 내용이 준비되면 핵심 정보가 표시돼.',124,636);
+    print(ctx,wrap(ctx,visible(clean(props.title),props.english)||'Today\'s Topic',930,3),124,410,59);
+    ctx.fillStyle=C.gray;ctx.font='500 25px '+FONT;ctx.fillText(props.english?'Key details appear when the article is ready.':'본문 내용이 준비되면 핵심 정보가 표시돼.',124,636);
   }else{
     snippets.forEach((snippet,i)=>{
       const y=304+i*168;
