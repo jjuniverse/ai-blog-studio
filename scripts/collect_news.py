@@ -24,6 +24,11 @@ FEEDS = [
     ("IT·AI", "KO", "AI 신기능 출시 공식 업데이트 생산성 when:3d", "ko", "KR"),
     ("IT·AI", "KO", "AI 업무 자동화 사용법 활용 가이드 when:7d", "ko", "KR"),
     ("생활 정보", "KO", "생활 서비스 신청 방법 공식 안내 when:7d", "ko", "KR"),
+    # Senior living and welfare: practical, time-sensitive public-service information.
+    ("시니어·복지", "KO", "기초연금 국민연금 수급 신청 안내 보건복지부 when:7d", "ko", "KR"),
+    ("시니어·복지", "KO", "노인장기요양보험 방문요양 돌봄 서비스 신청 안내 when:7d", "ko", "KR"),
+    ("시니어·복지", "KO", "노인일자리 시니어 일자리 모집 신청 지자체 when:7d", "ko", "KR"),
+    ("시니어·복지", "KO", "어르신 복지 지원사업 교통비 디지털 교육 신청 when:7d", "ko", "KR"),
     # Overseas channels
     ("K-pop", "EN", "K-pop comeback album concert official announcement when:3d", "en-US", "US"),
     ("K-드라마", "EN", "Korean drama streaming premiere Netflix Disney official when:3d", "en-US", "US"),
