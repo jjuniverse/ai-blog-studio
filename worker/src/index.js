@@ -508,7 +508,7 @@ export default {
         const allKeywords = [title, ...result.imageKeywords, ...((base.match(/#{1,3}\s+[^\n]+/g) || []).map(x=>x.replace(/^#+\s*/, "")))];
         const words = allKeywords.join(" ").match(/[\p{L}\p{N}.]{2,}/gu) || [];
         const useful = words.map(x => x.replace(/(?:까지|으로|에서|부터|만에|이어|개최)$/u, ""))
-          .filter(x => x.length >= 2 && !ignored.has(x) && !/^\\d+(?:년|개월|일|월)?$/.test(x));
+          .filter(x => x.length >= 2 && !ignored.has(x) && !/^\d+(?:년|개월|일|월)?$/.test(x));
         const subject = useful.find(x => /^[가-힣]{2,6}$/.test(x)) || useful[0] || "";
         if (subject) add(subject);
         // Search-intent combinations before generic component words.
@@ -519,7 +519,7 @@ export default {
           if (detected && subject && !subject.includes(token)) add(subject + token);
         }
         for (const word of useful) add(word);
-        const articleWords = base.match(/[\\p{L}\\p{N}.]{2,}/gu) || [];
+        const articleWords = base.match(/[\p{L}\p{N}.]{2,}/gu) || [];
         for (const word of articleWords) if (tags.length < 8 && (/[A-Z]/.test(word) || word.length >= 3)) add(word);
         for (const fallback of ["오늘의이슈", "핵심정리", result.category || ""]) {
           if (tags.length >= 8) break;
