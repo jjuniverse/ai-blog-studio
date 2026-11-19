@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-11-19T09:31:41.070147+00:00",
+  "sources": [
+    {
+      "channel": "naver",
+      "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
+      "status": "ok",
+      "count": 6,
+      "lastSuccessAt": "2026-11-19T09:31:41.070147+00:00"
+    },
+    {
+      "channel": "tistory",
+      "feedUrl": "https://blog83848.tistory.com/rss",
+      "status": "ok",
+      "count": 7,
+      "lastSuccessAt": "2026-11-19T09:31:41.070147+00:00"
+    }
+  ],
+  "posts": [
+    {
+      "channel": "naver",
+      "title": "겨울 방한·건조 대비 꿀템 4종 비교 — 3만 원대 전기요부터 가열식 가습기까지",
+      "url": "https://blog.naver.com/todaypickkr/224483723372?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T09:26:53+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "데블스 플랜3 '데드 어게인', 첫 주부터 화제성 1위…전 시즌보다 98.9% 올랐다",
+      "url": "https://blog.naver.com/todaypickkr/224483373623?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T05:00:14+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "태연, 정규 4집 발매 후 1년 10개월 만에 단독 콘서트 개최…아시아 투어 ‘F.L.Y.’ 시작",
+      "url": "https://blog.naver.com/todaypickkr/224483300581?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T04:02:06+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "앤트로픽 '클로드 페이블 5.2' 프롬프트 가이드, 핵심만 정리",
+      "url": "https://blog.naver.com/todaypickkr/224483269032?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T03:34:54+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "‘100일의 거짓말’ 김유정-박진영, 출연자 화제성 1·2위…TV·OTT 화제성도 1위",
+      "url": "https://blog.naver.com/todaypickkr/224482296913?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-18T08:59:05+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "맥북 화면 녹화하는 방법 총정리｜단축키부터 녹화 중지, 저장 위치까지",
+      "url": "https://blog.naver.com/todaypickkr/224479286806?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-16T07:28:31+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "'The Devil's Plan: Dead Again' Tops Korea's Non-Drama Buzz Chart &mdash; Up 98.9% From Season 2's Debut",
+      "url": "https://blog83848.tistory.com/8",
+      "publishedAt": "2026-11-19T04:44:04+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "데블스 플랜3 '데드 어게인', 첫 주부터 화제성 1위&hellip;전 시즌보다 98.9% 올랐다",
+      "url": "https://blog83848.tistory.com/7",
+      "publishedAt": "2026-11-19T04:18:49+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "태연, 정규 4집 발매 후 1년 10개월 만에 단독 콘서트 개최&hellip;아시아 투어 &lsquo;F.L.Y.&rsquo; 시작",
+      "url": "https://blog83848.tistory.com/6",
+      "publishedAt": "2026-11-19T04:04:36+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "Anthropic's Claude Fable 5.2 Prompting Guide: The Rules That Actually Change Output",
+      "url": "https://blog83848.tistory.com/5",
+      "publishedAt": "2026-11-19T02:40:16+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "앤트로픽 '클로드 페이블 5.2' 프롬프트 가이드, 핵심만 정리",
+      "url": "https://blog83848.tistory.com/4",
+      "publishedAt": "2026-11-19T00:09:58+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "&lsquo;100일의 거짓말&rsquo; 김유정-박진영, 출연자 화제성 1&middot;2위&hellip;TV&middot;OTT 화제성도 1위",
+      "url": "https://blog83848.tistory.com/3",
+      "publishedAt": "2026-11-18T09:04:09+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "맥북 화면 녹화하는 방법 총정리｜단축키부터 녹화 중지, 저장 위치까지",
+      "url": "https://blog83848.tistory.com/2",
+      "publishedAt": "2026-11-16T09:44:34+00:00"
+    }
+  ]
+}
