@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-11-19T09:31:40.915594+00:00",
+  "fetchedAt": "2026-11-19T09:34:02.935753+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
   "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
   "categoryCounts": {
-    "연예/KO": 14,
-    "K-pop/KO": 10,
+    "연예/KO": 15,
+    "K-pop/KO": 11,
     "IT·AI/KO": 4,
     "생활 정보/KO": 3,
     "K-pop/EN": 10,
@@ -30,14 +30,6 @@
       "publishedAt": "2026-11-19T09:01:00+00:00",
       "category": "K-pop",
       "region": "KO"
-    },
-    {
-      "title": "Stray Kids Announce 2027 Tour: See Dates - Ticketmaster Blog",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5cHZhY1RCWEtQeGdIcXNKQUJCNTV4VWxMYktpU1ZRTlVkbk9xXzE4aHdCeDh1dUtLQWpiMlQ0SURlRUxWX3hOSUhyTkN0bWNkT05oNnF4RFRQOVM1emtNa093U0N1WVI0?oc=5",
-      "publisher": "Ticketmaster Blog",
-      "publishedAt": "2026-11-19T07:59:44+00:00",
-      "category": "K-pop",
-      "region": "EN"
     },
     {
       "title": "데이식스 연말 클콘 선예매 티켓 오픈…체조서 만나요 - 스포츠동아",
@@ -94,6 +86,14 @@
       "publishedAt": "2026-11-19T05:23:04+00:00",
       "category": "K-pop",
       "region": "KO"
+    },
+    {
+      "title": "Stray Kids Announce 2027 Tour: See Dates - Ticketmaster Blog",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5cHZhY1RCWEtQeGdIcXNKQUJCNTV4VWxMYktpU1ZRTlVkbk9xXzE4aHdCeDh1dUtLQWpiMlQ0SURlRUxWX3hOSUhyTkN0bWNkT05oNnF4RFRQOVM1emtNa093U0N1WVI0?oc=5",
+      "publisher": "Ticketmaster Blog",
+      "publishedAt": "2026-11-19T04:56:10+00:00",
+      "category": "K-pop",
+      "region": "EN"
     },
     {
       "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다. - Vietnam.vn",
@@ -232,6 +232,14 @@
       "region": "KO"
     },
     {
+      "title": "태연 체조서 새 투어 시작…2027년 4월까지 바쁜 행보 - 스포츠동아",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iVndNZmxwd1UtZlc5ODl6emhhM1VtY0ZDQ2Y4VEhwUmVKTjhBODllX0FIMEYtYWxsckU2anBmYkVNQjFWZTQ3MWxrNEFqc09KU2YxU1ppbTdHbkxUc01FMDIzODNmVHVQNU0zbURB?oc=5",
+      "publisher": "스포츠동아",
+      "publishedAt": "2026-11-18T07:49:04+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
       "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최 - 톱스타뉴스",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2TWFEOW9icWVKTldIb0UyNmRIYXlPM0E3QXQwMFdDNEljRENORVdPZ2NhZjd3X2VZRUlkbUFhWFlxVFZmcTkwcnUwU1BKZjhEMlF2SkpaXzZacGRPZnMxaHVOdG1uTGVkbGhRTjdKcXBLQQ?oc=5",
       "publisher": "톱스타뉴스",
@@ -241,7 +249,7 @@
     },
     {
       "title": "'그룹·솔로 케이스포돔 매진시킨 첫 女가수' 태연, 또 같은 곳서 콘서트 - 뉴시스",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBRVWJoVGxUZV8xZzhLaUN4Vlg2RTRHWEppOXZQekJEUXF0VFFrZjlqWXc0bmR3aVE1SktQcW9PVzNhSk0wRW5zYkx5YnQ2OW1ya2NlQ1MtRlVuSUVmanBnYnJObWVUaGVtS2pQZTNmSkNqemvSAXhBVV95cUxPSFQxbFZoN3FQcWxVMlpvbTZIdEhpekU1VHhyZlJmbEdRYV9GSF93Rmo1ZGlUeVF0T0kyX0pPenB1YVpJSHgwaTd4OFViWnpkbm1fUWJBX1lFNTBRY0xXYVVTN2kxcnk5OFJ1WEQ3dThjNFhjZVM2QjI?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBJd1RTZzVBNFpUTmFCaDRNMGU4U1d3aDFHR3Q5NGpxVndSSENWeUNRalJjMXJSeU5wcVVQam83ckwxb2VOUzhFZ1QwWlBacy1IbHNDWm5JejZDN04wbUFVRNIBeEFVX3lxTE9IVDFsVmg3cVBxbFUyWm9tNkh0SGl6RTVUeHJmUmZsR1FhX0ZIX3dGajVkaVR5UXRPSTJfSk96cHVhWklIeDBpN3g4VWJaemRubV9RYkFfWUU1MFFjTFdhVVM3aTFyeTk4UnVYRDd1OGM0WGNlUzZCMg?oc=5",
       "publisher": "뉴시스",
       "publishedAt": "2026-11-18T06:58:20+00:00",
       "category": "K-pop",
@@ -292,6 +300,14 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5GMzJwZ1I3YTY2YmlTNnFINXdnalZobm5WbVBRUkd4WlYwMk1Ja0FiZHpVVUNpYTVpcUMxbkh3Si1wMklOOVNOWWZ6VlVBWXRlZ2ozREtvbGN3TzBLSTNienhib2NpazMxYUxv?oc=5",
       "publisher": "뉴스엔",
       "publishedAt": "2026-11-18T00:30:13+00:00",
+      "category": "연예",
+      "region": "KO"
+    },
+    {
+      "title": "'광고 블루칩' 남주연, 새 둥지 틀고 연기 핫페이스 부각 - 미디어펜",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB5OEJQU0dkNlNEQ2w3T0lJbktRR0pCTklqTGZySDhRM09OQ2tla3FGUnR4SlV0eEZPb25ob2RrdEVoS1JyRG9ia3pPNGFWdGxhOHVxa1hrb0bSAVhBVV95cUxQeThCUFNHZDZTRENsN09JSW5LUUdKQk5Jakxmckg4UTNPTkNrZWtxRlJ0eEpVdHhGT29uaG9ka3RFaEtSckRvYmt6TzRhVnRsYTh1cWtYa29G?oc=5",
+      "publisher": "미디어펜",
+      "publishedAt": "2026-11-17T23:40:27+00:00",
       "category": "연예",
       "region": "KO"
     },
@@ -537,7 +553,7 @@
     },
     {
       "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm5NcHNJZVhLUERaNW5uN2pzd0RVMkM2X0szT28tc0J4c3ZaaXdBX3laSUhIVDFIOGdUM01adnVkbEkxT25sS1BIRWZqZFNqOFhpbk03c05LZ1Q2LUNYSlM4LTB3LS1JX2JpUklNbklPajNDdDFGVV9mMkR5UWtmWmVxZ1FjV3pESHB1aEkyZ25qcGttWURfcTdEVWM3X3JFZTd6S2JlZVk0Z0hQY1J6LUpfaHRkdFh5LTln0gHAAUFVX3lxTE5KZkVsUE9nVTZkZ2p6bFhQNi1mMXRMU045cV9wNGZScGlLWTZaNllaWFhTaHI2SEpJRGFsUDMtdEI3TElUeGVrUHN0cVdmQmRURGx3bWpFMmZkWEJwRk14YnJHdmN4dERiM01iOXBjYl8wZWI3eVZGWXM2Sk5paXlRMGdEUmZlS2R6SmZsbG9CeUIxTkRiZkFSNEZIazV5WFU5S0JBVGswQWQ0ZWRIM285NWRpV0RBNFlkSFA3RWVVVQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSmZFbFBPZ1U2ZGdqemxYUDYtZjF0TFNOOXFfcDRmUnBpS1k2WjZZWlhYU2hyNkhKSURhbFAzLXRCN0xJVHhla1BzdHFXZkJkVERsd21qRTJmZFhCcEZNeGJyR3ZjeHREYjNNYjlwY2JfMGViN3lWRllzNkpOaWl5UTBnRFJmZUtkekpmbGxvQnlCMU5EYmZBUjRGSGs1eVhVOUtCQVRrMEFkNGVkSDNvOTVkaVdEQTRZZEhQN0VlVVXSAcABQVVfeXFMTkpmRWxQT2dVNmRnanpsWFA2LWYxdExTTjlxX3A0ZlJwaUtZNlo2WVpYWFNocjZISklEYWxQMy10QjdMSVR4ZWtQc3RxV2ZCZFREbHdtakUyZmRYQnBGTXhickd2Y3h0RGIzTWI5cGNiXzBlYjd5VkZZczZKTmlpeVEwZ0RSZmVLZHpKZmxsb0J5QjFORGJmQVI0RkhrNXlYVTlLQkFUazBBZDRlZEgzbzk1ZGlXREE0WWRIUDdFZVVV?oc=5",
       "publisher": "Simply Wall St",
       "publishedAt": "2026-11-14T20:20:17+00:00",
       "category": "AI·생산성",
