@@ -35,8 +35,10 @@ const schema = {
     title: { type: "string" },
     naverTitle: { type: "string" },
     tistoryTitle: { type: "string" },
+    tistoryEnTitle: { type: "string" },
     naver: { type: "string" },
     tistory: { type: "string" },
+    tistoryEn: { type: "string" },
     shortform: { type: "string" },
     verificationChecklist: { type: "array", items: { type: "string" } },
     imageNotes: { type: "array", items: { type: "string" } },
@@ -51,7 +53,7 @@ const schema = {
       }
     }
   },
-  required: ["mode", "title", "naverTitle", "tistoryTitle", "naver", "tistory", "shortform", "verificationChecklist", "imageNotes", "imageKeywords", "sourceLinks"],
+  required: ["mode", "title", "naverTitle", "tistoryTitle", "tistoryEnTitle", "naver", "tistory", "tistoryEn", "shortform", "verificationChecklist", "imageNotes", "imageKeywords", "sourceLinks"],
 };
 function cleanInput(input) {
   if (!input || typeof input !== "object" || typeof input.title !== "string" || input.title.trim().length < 8 || input.title.length > 250) return null;
@@ -358,10 +360,11 @@ export default {
       "If you cannot identify adequate reliable supporting material, return mode='research_brief', set naver/tistory/shortform to empty strings, and provide precise verificationChecklist instead of filler text. Never repeat 'needs verification' as a fake article.",
       "Create distinct naverTitle and tistoryTitle optimized for real search intent: lead with the exact subject and key search terms, then a concrete answer or verified news angle. Make the title attractive but truthful: no unsupported superlatives, fake urgency, fabricated ranks or bait-and-switch. Keep title as the underlying researched topic and do not repeat the title inside body.",
       "If reliable sources exist, produce two concise but useful and DISTINCT Korean blog posts designed for readers scanning a search result. Naver: target about 650-1100 Korean characters in a personable voice. Tistory: target about 850-1350 Korean characters with stronger informational headings and optional useful FAQ when substantiated. Each should start immediately with a clear 2-3 sentence answer and include ## 3줄 요약 with exactly three concise source-grounded bullet points, followed by 2-4 short skimmable sections explaining the verified what/why it matters or steps, and a practical final takeaway. Include related hashtags including #오늘의픽. Skip a section if supporting facts are unavailable: never pad for a word count. Do not duplicate the two channels' entire texts.",
+      "ALWAYS write an independently useful English Tistory version in tistoryEn, titled tistoryEnTitle, even if the source news is Korean. Make natural search-friendly English for international readers, not literal sentence-for-sentence translation. Use 2-3 sentence quick answer, ## Three Key Takeaways (three bullets), 2-4 concise English subsections, and a factual takeaway. Use internationally recognizable spellings for artist and work titles. If mode is research_brief, leave tistoryEn empty and supply a short English title only. English Tistory is separate from English Shorts/Reels and separate from Korean Tistory.",
       "Never conflate different metrics: TV/OTT topic buzz, cast-member buzz, personal brand reputation and television ratings are distinct. Give each metric its measurement organization, period, population and basis (e.g. share vs rating) when these are confirmed; otherwise omit that metric or mark it as an explicit research question. Never combine percentages or attribute brand-reputation indices to a buzz ranking.",
       "Conclude with a specific, reader-useful takeaway tied to sourced facts: for example exactly what is known, where to check official schedules or what important data remains uncertain. Avoid generic predictions like high expectations, growing excitement or exciting developments.",
       "Write clean text with ## section headings and plain paragraphs, not Markdown source-link syntax. Do not include ([publisher](url)), raw hyperlinks, [citation] markers or invented citations in the body. Put links ONLY in sourceLinks; the application renders a separate reference section. Do not plagiarize article passages.",
-      "At the very end of EACH blog article body, add a ## 관련 태그 section with 8-12 accurate topic-specific search hashtags and ALWAYS include #오늘의픽 exactly once. Prioritize people, work names, tour/event names, ticketing and venues explicitly present in credible sources. Avoid generic filler or fabricated entities. No hashtags in shortform spoken script.",
+      "At the very end of EACH Korean blog body, add ## 관련 태그 with 8-12 topical Korean hashtags including #오늘의픽 exactly once. For the English Tistory blog, add ## Related Tags with 8-12 English search hashtags and #TodaysPick exactly once. Only use verified named people, works, events, venues and search combinations. Do not add hashtags to shortform spoken scripts.",
       "Prioritize fast comprehension and content efficiency: brief informative paragraphs, scannable fact bullets and 2-4 useful subheadings rather than ornate prose or generic filler. State only corroborated who/what/when and any important limits. For entertainment rankings, distinguish ranking organizations and periods and provide what changed if verified; never invent scenes, reactions or motives. The article must give an original synthesis, not a paraphrased reproduction of one article.",
       "If there is insufficient support for the central claim, use research_brief with precise unresolved questions. Otherwise keep a short useful article rather than inflating it. Quality is measured by relevance, clarity and factual integrity, not sheer length.",
       "Write a genuine 35-45 second vertical-video SCRIPT only if mode=article: short hook (0-3 seconds), 3-4 specific factual beats, clear on-screen captions/scenes and a closing takeaway. English when region is EN, otherwise Korean. Never copy the blog introduction or append raw citation URLs into spoken narration.",
@@ -446,7 +449,7 @@ export default {
       } catch {
         return reply({ error: "AI returned invalid or truncated JSON", code: "AI_INVALID_JSON", stage: "parse_openai_result" }, 502);
       }
-      if (!["article", "research_brief"].includes(result.mode) || !["naver", "tistory", "shortform", "title", "naverTitle", "tistoryTitle"].every(key => typeof result[key] === "string") ||
+      if (!["article", "research_brief"].includes(result.mode) || !["naver", "tistory", "tistoryEn", "shortform", "title", "naverTitle", "tistoryTitle", "tistoryEnTitle"].every(key => typeof result[key] === "string") ||
           !Array.isArray(result.imageNotes) || result.imageNotes.length !== 3 ||
           !Array.isArray(result.verificationChecklist) || !Array.isArray(result.sourceLinks)) throw Error("Invalid draft schema");
       const verifiedLinks = (result.sourceLinks || []).filter(src => src && typeof src.url === "string" &&
@@ -531,9 +534,33 @@ export default {
       };
       result.naver = result.mode === "article" ? normalizePostTags(stripInlineLinks(result.naver), result.naverTitle || result.title) : stripInlineLinks(result.naver);
       result.tistory = result.mode === "article" ? normalizePostTags(stripInlineLinks(result.tistory), result.tistoryTitle || result.title) : stripInlineLinks(result.tistory);
+      const normalizeEnglishTags = body => {
+        const raw = String(body || "").trim();
+        if (!raw) return raw;
+        const tagHeader = /(?:^|\n)#{1,3}\s*(?:Related Tags|Tags)\s*\n/i;
+        const match = tagHeader.exec(raw);
+        const base = (match ? raw.slice(0, match.index) : raw).trimEnd();
+        const tail = match ? raw.slice(match.index + match[0].length) : "";
+        const tags = [];
+        const add = value => {
+          const clean = String(value || "").replace(/[^A-Za-z0-9]/g, "").slice(0, 30);
+          if (!clean || /^\d+$/.test(clean) || /^(news|latest|update|review|information)$/i.test(clean)) return;
+          const tag = "#" + clean;
+          if (!tags.some(x => x.toLowerCase() === tag.toLowerCase())) tags.push(tag);
+        };
+        for (const hash of tail.match(/#[^\s#]+/g) || []) add(hash.slice(1));
+        for (const quoted of [...String(result.tistoryEnTitle || "").matchAll(/['"‘“]([^'"’”]{2,40})['"’”]/g)]) add(quoted[1]);
+        const words = (String(result.tistoryEnTitle || "")+" "+base.slice(0,900)).match(/\b[A-Za-z][A-Za-z0-9]{2,}\b/g) || [];
+        const stop = new Set(["the","and","for","with","from","that","this","their","have","will","after","over","when","what","where","about","which","more","than","into","also","today","could","three","key","takeaways","related","tags"]);
+        for (const word of words) if (!stop.has(word.toLowerCase())) add(word);
+        if (tags.length < 8) for (const word of ["Entertainment","Music","Trending","Kpop","TodaysPick"]) add(word);
+        return base + "\n\n## Related Tags\n" + ["#TodaysPick", ...tags.filter(x => x.toLowerCase() !== "#todayspick")].slice(0, 12).join(" ");
+      };
+      result.tistoryEn = result.mode === "article" ? normalizeEnglishTags(stripInlineLinks(result.tistoryEn)) : stripInlineLinks(result.tistoryEn);
       result.imageKeywords = [...new Set((result.imageKeywords || []).filter(x => typeof x === "string").map(x => x.trim().slice(0, 90)).filter(Boolean))].slice(0, 4);
       result.naverTitle = result.naverTitle.trim().slice(0, 110);
       result.tistoryTitle = result.tistoryTitle.trim().slice(0, 110);
+      result.tistoryEnTitle = result.tistoryEnTitle.trim().slice(0, 120);
       const titleIsMissing = !result.naverTitle || !result.tistoryTitle;
       const titlesAreCopies = result.naverTitle === result.tistoryTitle;
       const closingParagraphs = [result.naver, result.tistory].map(body =>
@@ -580,6 +607,7 @@ export default {
       if (distinctDomains < 2) failReasons.push("서로 다른 웹사이트 출처가 2곳 미만");
       if (!substantive(result.naver)) failReasons.push("네이버 원고에 최소한의 요약·구체적 근거·소제목이 부족");
       if (!substantive(result.tistory)) failReasons.push("티스토리 원고에 최소한의 요약·구체적 근거·소제목이 부족");
+      if (result.mode === "article" && result.tistoryEn.trim().length < 300) failReasons.push("티스토리 영어 원고의 정보량이 부족");
       if (result.shortform.trim().length < 80) failReasons.push("숏폼 대본 분량 부족");
       if (result.mode === "research_brief") failReasons.push("AI가 조사 자료 부족으로 판단");
       if (result.mode === "article") {
