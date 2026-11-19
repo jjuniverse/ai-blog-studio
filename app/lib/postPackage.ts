@@ -51,20 +51,47 @@ export function normalizeArticleTags(article: string, title: string, category = 
   }
   return body + '\n\n## 관련 태그\n' + ['#오늘의픽', ...tags].slice(0, 12).join(' ');
 }
+export function normalizeEnglishArticleTags(article: string, title: string): string {
+  const raw = article.trim();
+  if (!raw) return raw;
+  const match = /(?:^|\n)#{1,3}\s*(?:Related Tags|Tags)\s*\n/i.exec(raw);
+  const body = match ? raw.slice(0,match.index).trimEnd() : raw;
+  const existing = match ? raw.slice(match.index + match[0].length) : '';
+  const tags: string[]=[];
+  const add = (token:string) => {
+    const value = token.replace(/[^A-Za-z0-9]/g,'').slice(0,30);
+    if (!value || /^(news|latest|update|review|information)$/i.test(value)) return;
+    const tag='#'+value;
+    if (!tags.some(t=>t.toLowerCase()===tag.toLowerCase())) tags.push(tag);
+  };
+  for (const tag of existing.match(/#[^\s#]+/g)||[]) add(tag.slice(1));
+  for (const x of title.match(/[A-Za-z][A-Za-z0-9]{2,}/g)||[]) {
+    if (!/^(the|and|for|with|from|that|this|their|when|what|after)$/i.test(x)) add(x);
+  }
+  for (const x of body.slice(0,900).match(/[A-Za-z][A-Za-z0-9]{2,}/g)||[]) {
+    if (tags.length>=8) break;
+    if (!/^(the|and|for|with|from|that|this|their|when|what|after|have|been|will|was|are)$/i.test(x)) add(x);
+  }
+  for (const x of ['Entertainment','Music','Kpop','WorldNews']) {
+    if (tags.length>=8) break;
+    add(x);
+  }
+  return body+'\n\n## Related Tags\n'+['#TodaysPick',...tags.filter(t=>t.toLowerCase()!=='#todayspick')].slice(0,12).join(' ');
+}
 export function paragraphLines(article: string): string[] {
   return article.split(/\n+/).map(x => x.trim()).filter(Boolean);
 }
 export type ImagePositions = { summary: number; detail: number };
 export function imagePositions(lines: string[]): ImagePositions {
-  const lastBody = Math.max(0, lines.findIndex(x => /^#{1,3}\s*관련\s*태그/.test(x)) - 1);
+  const lastBody = Math.max(0, lines.findIndex(x => /^#{1,3}\s*(?:관련\s*태그|Related Tags)/i.test(x)) - 1);
   const limit = lastBody > 0 ? lastBody : Math.max(0, lines.length - 1);
-  const summaryHeading = lines.findIndex(x => /^#{1,3}\s*3줄\s*요약/.test(x));
+  const summaryHeading = lines.findIndex(x => /^#{1,3}\s*(?:3줄\s*요약|Three Key Takeaways)/i.test(x));
   const summary = summaryHeading >= 0
     ? Math.min(limit, summaryHeading + 3)
     : Math.min(limit, Math.max(0, Math.floor(limit * .36)));
   const headings = lines.map((x,i)=>({x,i})).filter(x=>x.i<=limit && x.i>summaryHeading && /^#{1,3}\s/.test(x.x)
-    && !/관련\s*태그|3줄\s*요약/.test(x.x));
-  const preferred = headings.find(x => /일정|예매|공연|콘서트|핵심|시청률|화제성|앨범|컴백|투어|순위|출연/.test(x.x)) || headings[0];
+    && !/관련\s*태그|3줄\s*요약|Related Tags|Three Key Takeaways/i.test(x.x));
+  const preferred = headings.find(x => /일정|예매|공연|콘서트|핵심|시청률|화제성|앨범|컴백|투어|순위|출연|Schedule|Tickets|Concert|Rankings|Release|Highlights|Timeline/i.test(x.x)) || headings[0];
   const next = preferred ? lines.findIndex((x,i)=>i>preferred.i && /^#{1,3}\s/.test(x)) : -1;
   let detail = preferred ? Math.min(limit, next > 0 ? next - 1 : preferred.i + 1)
     : Math.min(limit, Math.max(0, Math.floor(limit * .72)));
