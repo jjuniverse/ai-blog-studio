@@ -783,7 +783,7 @@ export default function Home() {
           <aside className="studio-side">
             {selected && currentDraft && channel !== 'shortform' && text.trim() && <div className="panel">
               <PostImagePackage key={selected.id + '-' + channel + '-' + articleTitle + '-' + text}
-                title={articleTitle} category={selected.category} article={text} channel={channel}/>
+                title={articleTitle} category={selected.category} article={text} referenceAppendix={referenceAppendix} channel={channel}/>
             </div>}
             <div className="panel"><div className="panel-heading"><h2>이미지 배치 계획</h2><span>자체 제작 PNG</span></div><p className="muted">위의 PNG 3장 제작 버튼으로 실제 파일을 생성하고 묶음 다운로드할 수 있어. 이 설명은 각 이미지의 기본 기획이야.</p>{images.map((img,i) => <div key={i} className="image-slot"><div className="image-placeholder"><span>{i === 0 ? '▣' : i === 1 ? '▤' : '☰'}</span><small>이미지 {i+1}</small></div><label><strong>{['대표 이미지', '본문 설명', '핵심 요약'][i]}</strong><textarea rows={3} aria-label={'이미지 '+(i+1)+' 설명'} value={img} onChange={e => updateEdit({imageNotes:images.map((v,k) => k === i ? e.target.value : v)})}/></label></div>)}</div>
             <div className="panel">
