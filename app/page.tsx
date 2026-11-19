@@ -398,7 +398,7 @@ export default function Home() {
     // Avoid hiding unrelated topics; only use exact topic identity, exact normalized title
     // or source URLs recorded when the topic was published.
     const canonicalTitle = (title: string) => title.toLowerCase().normalize('NFKC')
-      .replace(/[\\s\\p{P}\\p{S}]/gu, '');
+      .replace(/[\s\p{P}\p{S}]/gu, '');
     const candidateTitle = canonicalTitle(candidate.title);
     return Object.entries(localEdits).some(([id, edit]) => {
       const published = !!edit.publishedManually || Object.values(edit.publishedUrls || {}).some(Boolean);
