@@ -148,6 +148,7 @@ export default function Home() {
   const [selectedId, setSelectedId] = useState('');
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('전체');
+  const [languageFilter, setLanguageFilter] = useState<'all' | 'KO' | 'EN'>('all');
   const [showExcluded, setShowExcluded] = useState(false);
   const [channel, setChannel] = useState<Channel>('naver');
   const [localEdits, setLocalEdits] = useState<Record<string, LocalEdit>>({});
@@ -386,9 +387,10 @@ export default function Home() {
   const visible = useMemo(() => candidates.filter(x => {
     if (!showExcluded && (x.status === 'excluded_promotion' || x.status === 'sensitive_review')) return false;
     if (category !== '전체' && x.category !== category) return false;
+    if (languageFilter !== 'all' && x.region !== languageFilter) return false;
     if (query.trim() && !(x.title + ' ' + x.category).toLowerCase().includes(query.toLowerCase().trim())) return false;
     return true;
-  }), [candidates, category, showExcluded, query]);
+  }), [candidates, category, languageFilter, showExcluded, query]);
   const selected = candidates.find(x => x.id === selectedId);
   const activeResearch = researchLeads.find(x => x.candidateId === selectedId);
   const matchingDraft = selected && (
@@ -612,8 +614,8 @@ export default function Home() {
             <div className="metric"><small>자동 조사 완료 후보</small><strong>{researchLeads.filter(x=>x.status==='needs_human_review').length}</strong><span>사람이 근거를 확인할 후보</span></div>
           </div>
           <div className="section-title"><div><h2>수집된 콘텐츠 후보</h2><p>{updatedAt ? '마지막 분석 ' + new Date(updatedAt).toLocaleString('ko-KR') : '뉴스 수집 후 목록이 업데이트돼.'}</p></div><span className="small-label">점수는 검색량·수익 예측이 아닌 내부 편집 기준</span></div>
-          <div className="filters"><input value={query} onChange={e => setQuery(e.target.value)} placeholder="기사나 키워드 검색" aria-label="키워드 검색"/><select value={category} onChange={e => setCategory(e.target.value)} aria-label="카테고리 필터">{categories.map(v => <option key={v}>{v}</option>)}</select><label className="inline-check"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)}/> 제외된 주제 보기</label></div>
-          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '해외 / 영어' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span></div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' || c.status === 'needs_sources' ? '자료 조사 →' : '제외 사유 보기 →'}</button></div></article>)}</div>}
+          <div className="filters"><select aria-label="콘텐츠 언어 선택" value={languageFilter} onChange={e => setLanguageFilter(e.target.value as 'all' | 'KO' | 'EN')}><option value="all">전체 언어</option><option value="KO">한국어 콘텐츠</option><option value="EN">영어 콘텐츠 · Shorts/Reels</option></select><input value={query} onChange={e => setQuery(e.target.value)} placeholder="기사나 키워드 검색" aria-label="키워드 검색"/><select value={category} onChange={e => setCategory(e.target.value)} aria-label="카테고리 필터">{categories.map(v => <option key={v}>{v}</option>)}</select><label className="inline-check"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)}/> 제외된 주제 보기</label></div>
+          {loading ? <div className="state-card">콘텐츠 후보를 불러오는 중...</div> : loadError ? <div className="state-card">{loadError}</div> : visible.length === 0 ? <div className="state-card">조건에 맞는 후보가 없어. 필터를 변경하거나 뉴스 수집을 실행해 줘.</div> : <div className="recommend-list">{visible.slice(0, 30).map(c => <article className="recommend-card" key={c.id}><div className="topic-main"><div className="pill-row"><span className="pill">{c.category}</span><span className="pill subtle">{c.region === 'EN' ? '영어 Shorts·Reels' : '국내 / 한국어'}</span><span className={'pill ' + (c.status === 'research_required' ? 'green' : c.status === 'needs_sources' ? 'yellow' : 'red')}>{statusLabel[c.status || 'needs_sources']}</span></div><h3>{c.title}</h3><p className="muted">{c.headlines.length}개 기사 · {c.scores.independentPublisherCount}개 매체 · {c.reasons?.[0] || '출처 검증 필요'}</p></div><div className="topic-actions"><span className="priority">검토 우선순위 <strong>{c.scores.editorialPriority}</strong></span><button className="btn btn-primary" onClick={() => choose(c.id)}>{c.status === 'research_required' || c.status === 'needs_sources' ? '자료 조사 →' : '제외 사유 보기 →'}</button></div></article>)}</div>}
         </>}
         {section === 'editor' && <div className="studio-grid">
           <div className="editor-main">
@@ -684,6 +686,7 @@ export default function Home() {
                   <button className="btn btn-light" onClick={archiveOldDraft}>백업 후 초기화</button>
                 </div> : <span>서버에서 가져온 과거 초안은 자동 표시하지 않아.</span>}
               </div>}
+              {selected?.region === 'EN' && <div className="research-lead"><strong>해외 영어 콘텐츠</strong><p>이 주제의 영어 원고는 숏폼 대본 탭에서 확인해 줘. 영어는 해외 YouTube Shorts·Instagram Reels용으로 제작하며, 네이버·티스토리는 한국어 중심 운영이야.</p></div>}
               <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
               {matchingDraft?.qualityAudit?.warnings?.length ? <div className="draft-warning" role="alert">
