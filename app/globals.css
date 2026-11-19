@@ -177,3 +177,16 @@ html,body{max-width:100%;overflow-x:clip}
 .publish-completion p{margin:6px 0 0}
 .publish-completion>small{flex-basis:100%;color:#307d69}
 @media(max-width:760px){.publish-completion{align-items:stretch}.publish-completion>.btn{width:100%}}
+
+/* Public RSS publication history + conservative duplicate review */
+.published-feed-status{display:flex;align-items:center;flex-wrap:wrap;gap:7px 14px;background:#eef7f4;border:1px solid #cde4da;border-radius:12px;padding:12px 15px;margin-bottom:14px;color:#346956;font-size:12px;line-height:1.6}
+.published-feed-status>strong{font-size:13px;color:#235844}
+.published-feed-status>small{width:100%;font-size:11px;color:#627e75}
+.published-match{background:#fffbef;border:1px solid #eadfac;border-radius:9px;padding:10px 12px;display:grid;gap:4px;min-width:0;font-size:12px;line-height:1.55;color:#765b31;overflow-wrap:anywhere}
+.published-match.confirmed{background:#effaf5;border-color:#bedecd;color:#2d7655}
+.published-match>strong{font-size:12px}
+.published-match a{color:#336ba7;text-decoration:underline;overflow-wrap:anywhere}
+.recommend-card:has(>.published-match){flex-wrap:wrap}
+.recommend-card>.published-match{flex:1 0 100%}
+.source-summary+.published-match{margin-top:12px}
+@media(max-width:760px){.published-feed-status{align-items:flex-start;flex-direction:column}.recommend-card>.published-match{width:100%}}
