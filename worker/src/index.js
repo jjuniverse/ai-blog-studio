@@ -361,7 +361,7 @@ export default {
       "Never conflate different metrics: TV/OTT topic buzz, cast-member buzz, personal brand reputation and television ratings are distinct. Give each metric its measurement organization, period, population and basis (e.g. share vs rating) when these are confirmed; otherwise omit that metric or mark it as an explicit research question. Never combine percentages or attribute brand-reputation indices to a buzz ranking.",
       "Conclude with a specific, reader-useful takeaway tied to sourced facts: for example exactly what is known, where to check official schedules or what important data remains uncertain. Avoid generic predictions like high expectations, growing excitement or exciting developments.",
       "Write clean text with ## section headings and plain paragraphs, not Markdown source-link syntax. Do not include ([publisher](url)), raw hyperlinks, [citation] markers or invented citations in the body. Put links ONLY in sourceLinks; the application renders a separate reference section. Do not plagiarize article passages.",
-      "At the very end of EACH blog article body, add a ## 관련 태그 section with 5-8 relevant topic hashtags and ALWAYS include #오늘의픽 exactly once. No hashtags in shortform spoken script.",
+      "At the very end of EACH blog article body, add a ## 관련 태그 section with 8-12 accurate topic-specific search hashtags and ALWAYS include #오늘의픽 exactly once. Prioritize people, work names, tour/event names, ticketing and venues explicitly present in credible sources. Avoid generic filler or fabricated entities. No hashtags in shortform spoken script.",
       "Prioritize fast comprehension and content efficiency: brief informative paragraphs, scannable fact bullets and 2-4 useful subheadings rather than ornate prose or generic filler. State only corroborated who/what/when and any important limits. For entertainment rankings, distinguish ranking organizations and periods and provide what changed if verified; never invent scenes, reactions or motives. The article must give an original synthesis, not a paraphrased reproduction of one article.",
       "If there is insufficient support for the central claim, use research_brief with precise unresolved questions. Otherwise keep a short useful article rather than inflating it. Quality is measured by relevance, clarity and factual integrity, not sheer length.",
       "Write a genuine 35-45 second vertical-video SCRIPT only if mode=article: short hook (0-3 seconds), 3-4 specific factual beats, clear on-screen captions/scenes and a closing takeaway. English when region is EN, otherwise Korean. Never copy the blog introduction or append raw citation URLs into spoken narration.",
@@ -481,17 +481,53 @@ export default {
         .replace(/https?:\/\/[^\s)]+/g, "")
         .replace(/\(\s*\)/g, "")
         .replace(/[ \t]+\n/g, "\n");
-      const ensureBrandHashtag = body => {
-        const value = String(body || "").trimEnd();
-        if (!value.trim() || /(^|\s)#오늘의픽(?=\s|$)/m.test(value)) return value;
-        const lines = value.split("\n");
-        const lastLine = lines[lines.length - 1]?.trim() || "";
-        return /^#[^#\s]+(?:\s+#[^#\s]+)*$/.test(lastLine)
-          ? value + " #오늘의픽"
-          : value + "\n\n## 관련 태그\n#오늘의픽";
+      // Tags are part of the published article body, not a separate metadata-only field.
+      // A deterministic final pass protects Naver/Tistory against one-tag model output.
+      const normalizePostTags = (article, title) => {
+        const raw = String(article || "").trim();
+        if (!raw) return raw;
+        const tagHeading = /(?:^|\n)#{1,3}\s*관련\s*태그\s*\n/i;
+        const headingMatch = tagHeading.exec(raw);
+        const base = (headingMatch ? raw.slice(0, headingMatch.index) : raw).trimEnd();
+        const tail = headingMatch ? raw.slice(headingMatch.index + headingMatch[0].length) : "";
+        const tags = [];
+        const ignored = new Set(["오늘","오늘의","오늘의픽","뉴스","정보","소식","관련","발표","정리","확인",
+          "시작","진행","예정","대한","이번","해당","그리고","오는","올해","지난","내년","개월",
+          "이어","까지","만에","단독","개최","동시에","이후","기록","공개","통해","아시아"]);
+        const add = value => {
+          const cleaned = String(value || "").replace(/[^\p{L}\p{N}]/gu, "").slice(0, 24);
+          if (cleaned.length < 2 || ignored.has(cleaned) || /^\d+$/.test(cleaned)) return;
+          const tag = "#" + cleaned;
+          if (!tags.some(x => x.toLowerCase() === tag.toLowerCase())) tags.push(tag);
+        };
+        // Preserve actual topical tags from the model before deriving anything.
+        for (const tag of (tail.match(/#[^\s#]+/g) || [])) add(tag.slice(1));
+        const quoted = [...String(title).matchAll(/['"‘“]([^'"’”]{2,55})['"’”]/g)].map(x => x[1]);
+        for (const phrase of quoted) add(phrase);
+        const allKeywords = [title, ...result.imageKeywords, ...((base.match(/#{1,3}\s+[^\n]+/g) || []).map(x=>x.replace(/^#+\s*/, "")))];
+        const words = allKeywords.join(" ").match(/[\p{L}\p{N}.]{2,}/gu) || [];
+        const useful = words.map(x => x.replace(/(?:까지|으로|에서|부터|만에|이어|개최)$/u, ""))
+          .filter(x => x.length >= 2 && !ignored.has(x) && !/^\d+$/.test(x));
+        for (const word of useful) add(word);
+        const articleWords = base.match(/[\p{L}\p{N}.]{2,}/gu) || [];
+        for (const word of articleWords) if (tags.length < 8 && (/[A-Z]/.test(word) || word.length >= 3)) add(word);
+        const subject = useful.find(x => /^[가-힣]{2,6}$/.test(x)) || useful[0] || "";
+        const focus = ["컴백","콘서트","투어","아시아투어","정규","정규4집","신곡","앨범","시청률","화제성","예매","공연","일정","방송","출연자"];
+        for (const token of focus) {
+          if (tags.length >= 10) break;
+          const detected = [title,base].some(x => String(x).includes(token));
+          if (detected && subject && !subject.includes(token)) add(subject + token);
+        }
+        for (const fallback of ["오늘의이슈", "핵심정리", result.category || ""]) {
+          if (tags.length >= 8) break;
+          add(fallback);
+        }
+        // Brand tag has an explicit fixed position and appears exactly once.
+        const visible = ["#오늘의픽", ...tags.filter(t => t !== "#오늘의픽")].slice(0, 12);
+        return base + "\n\n## 관련 태그\n" + visible.join(" ");
       };
-      result.naver = result.mode === "article" ? ensureBrandHashtag(stripInlineLinks(result.naver)) : stripInlineLinks(result.naver);
-      result.tistory = result.mode === "article" ? ensureBrandHashtag(stripInlineLinks(result.tistory)) : stripInlineLinks(result.tistory);
+      result.naver = result.mode === "article" ? normalizePostTags(stripInlineLinks(result.naver), result.naverTitle || result.title) : stripInlineLinks(result.naver);
+      result.tistory = result.mode === "article" ? normalizePostTags(stripInlineLinks(result.tistory), result.tistoryTitle || result.title) : stripInlineLinks(result.tistory);
       result.imageKeywords = [...new Set((result.imageKeywords || []).filter(x => typeof x === "string").map(x => x.trim().slice(0, 90)).filter(Boolean))].slice(0, 4);
       result.naverTitle = result.naverTitle.trim().slice(0, 110);
       result.tistoryTitle = result.tistoryTitle.trim().slice(0, 110);
