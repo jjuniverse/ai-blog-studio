@@ -367,6 +367,7 @@ export default {
       "At the very end of EACH Korean blog body, add ## 관련 태그 with 8-12 topical Korean hashtags including #오늘의픽 exactly once. For the English Tistory blog, add ## Related Tags with 8-12 English search hashtags and #TodaysPick exactly once. Only use verified named people, works, events, venues and search combinations. Do not add hashtags to shortform spoken scripts.",
       "Prioritize fast comprehension and content efficiency: brief informative paragraphs, scannable fact bullets and 2-4 useful subheadings rather than ornate prose or generic filler. State only corroborated who/what/when and any important limits. For entertainment rankings, distinguish ranking organizations and periods and provide what changed if verified; never invent scenes, reactions or motives. The article must give an original synthesis, not a paraphrased reproduction of one article.",
       "If there is insufficient support for the central claim, use research_brief with precise unresolved questions. Otherwise keep a short useful article rather than inflating it. Quality is measured by relevance, clarity and factual integrity, not sheer length.",
+      "Do not return an article with only one or two generic paragraphs followed by hashtags or dozens of unrelated source links. If credible articles do not establish topic-specific facts, return research_brief. Avoid citing unrelated districts, organizations or events as proof of the selected topic. At least two distinct explanatory sections and four substantive lines should be supported by relevant sources.",
       "Write a genuine 35-45 second vertical-video SCRIPT only if mode=article: short hook (0-3 seconds), 3-4 specific factual beats, clear on-screen captions/scenes and a closing takeaway. English when region is EN, otherwise Korean. Never copy the blog introduction or append raw citation URLs into spoken narration.",
       "Provide exactly 3 imageNotes oriented to fast original visual production and clear previews: a bold high-contrast search-friendly headline thumbnail, a verified-facts comparison/ranking card, and a compact 3-point summary card. Make them readable on mobile in the same Today Pick navy/mint brand. Never invent numerical facts in a chart or create fake photos resembling programme stills. Do not use copyrighted posters, press photos, celebrity likenesses or third-party images without confirmed permission.",
       "Return imageKeywords as 1 to 4 SHORT, specific image search terms based on the actual article and its entities, not previous topics or generic placeholders. Prefer the original Korean title, named subject and specific scene or officially announced assets. Avoid fictional photos, unverifiable historical claims and rights claims. Separate keywords from imageNotes.",
@@ -471,10 +472,23 @@ export default {
       distinctDomains = new Set(sourceLinks.map(src => { try { return new URL(src.url).hostname.replace(/^www\./, ""); } catch { return ""; } }).filter(Boolean)).size;
       // Growth-oriented short-form blog posts should not be penalized for being concise.
       // Check structural usefulness, not arbitrary 1000-character article length.
+      // A source appendix or hashtags cannot compensate for a two-sentence article.
+      // Keep any generated text for editing but explicitly block low-information drafts.
+      const editorialFloor = (value, english = false) => {
+        const base = String(value || "")
+          .split(/(?:^|\n)#{1,3}\s*(?:관련\s*태그|Related Tags|Tags)\s*\n/i)[0]
+          .split(/(?:^|\n)참고자료\s*(?:\([^)]*\))?\s*\n/)[0];
+        const lines = base.split(/\n+/).map(x => x.trim()).filter(Boolean);
+        const paragraphs = lines.filter(x => !/^#{1,3}\s/.test(x) && !/^#\S+/.test(x));
+        const length = paragraphs.join(" ").replace(/\s+/g, " ").trim().length;
+        const headings = (base.match(/^#{1,3}\s+.+/gm) || []).length;
+        const minLength = english ? 450 : 350;
+        return { bodyLength: length, headings, paragraphs: paragraphs.length,
+          ready: length >= minLength && headings >= 2 && paragraphs.length >= 4 };
+      };
       const substantive = value => typeof value === "string" &&
-        value.trim().length >= 350 &&
-        (value.match(/^#{1,3}\s+.+/gm) || []).length >= 2 &&
-        (value.match(/\[확인 필요\]|\[추가 독립 출처 필요\]/g) || []).length === 0;
+        editorialFloor(value).ready &&
+        !/\[확인 필요\]|\[추가 독립 출처 필요\]/.test(value);
       generatedMode = result.mode;
       failReasons = [];
       // Remove raw source-link syntax from publication copy; sourceLinks are shown separately.
@@ -603,17 +617,23 @@ export default {
       // Flag imperfect output for human editing. Never erase paid-generated text.
       if (blogsAreCopies) result.verificationChecklist.unshift("네이버와 티스토리가 동일한 원고야. 한쪽은 구조와 관점을 바꿔 별도로 작성하고 발행해.");
       if (shortformCopiesBlog) result.verificationChecklist.unshift("숏폼 대본이 블로그 서론과 동일해. 영상용 훅·장면·자막으로 다시 작성해야 해.");
-      result.qualityAudit = { blogsAreCopies, shortformCopiesBlog, visualRightsWarning, titleIsMissing, titlesAreCopies, weakConclusion, metricContextMissing, warnings: editorialWarnings };
+      result.qualityAudit = { blogsAreCopies, shortformCopiesBlog, visualRightsWarning, titleIsMissing, titlesAreCopies, weakConclusion, metricContextMissing, warnings: editorialWarnings,
+        channelReadiness: {
+          naver: editorialFloor(result.naver),
+          tistory: editorialFloor(result.tistory),
+          tistoryEn: editorialFloor(result.tistoryEn, true),
+        },
+      };
       if (distinctDomains < 2) failReasons.push("서로 다른 웹사이트 출처가 2곳 미만");
       if (!substantive(result.naver)) failReasons.push("네이버 원고에 최소한의 요약·구체적 근거·소제목이 부족");
       if (!substantive(result.tistory)) failReasons.push("티스토리 원고에 최소한의 요약·구체적 근거·소제목이 부족");
-      if (result.mode === "article" && result.tistoryEn.trim().length < 300) failReasons.push("티스토리 영어 원고의 정보량이 부족");
+      if (result.mode === "article" && !editorialFloor(result.tistoryEn, true).ready) failReasons.push("티스토리 영어 원고의 소제목·본문 정보가 부족");
       if (result.shortform.trim().length < 80) failReasons.push("숏폼 대본 분량 부족");
       if (result.mode === "research_brief") failReasons.push("AI가 조사 자료 부족으로 판단");
       if (result.mode === "article") {
         // Source count, lengths and headings are editorial REVIEW signals, never deletion triggers.
         // Only switch to research_brief when the model supplied no usable article body at all.
-        const hasAnyDraft = [result.naver, result.tistory].some(value =>
+        const hasAnyDraft = [result.naver, result.tistory, result.tistoryEn].some(value =>
           typeof value === "string" && value.trim().length >= 80);
         for (const reason of failReasons) {
           if (!result.verificationChecklist.includes(reason)) result.verificationChecklist.push(reason);
