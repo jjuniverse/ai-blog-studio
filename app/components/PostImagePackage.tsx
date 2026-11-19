@@ -45,7 +45,7 @@ export default function PostImagePackage({title,category,article,referenceAppend
           const canvas = document.createElement('canvas');
           drawInfoCard(canvas,{
             title,category,excerpt:article,description:descriptions[kind.kind],
-            variant:kind.variant,index:kind.index,
+            variant:kind.variant,index:kind.index,english:channel==='tistoryEn',
           });
           const blob = await pngBlob(canvas);
           next.push({kind:kind.kind,blob,url:URL.createObjectURL(blob),label:kind.label});
