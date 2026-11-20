@@ -112,17 +112,28 @@ export function withImageMarkers(article: string): string {
 }
 
 /** Editorial floor for drafts: excludes hashtags and reference appendices entirely. */
-export function articleReadiness(article: string, english = false): { publishBlocked: boolean; reasons: string[]; bodyLength: number; sections: number } {
+export type ArticleChannel = 'naver' | 'tistory' | 'tistoryEn';
+export function articleReadiness(article: string, channel: ArticleChannel | boolean = 'naver'): {
+  publishBlocked: boolean; reasons: string[]; bodyLength: number; sections: number;
+  minimum: number; targetMax: number; units: string;
+} {
+  const kind: ArticleChannel = typeof channel === 'boolean' ? (channel ? 'tistoryEn' : 'naver') : channel;
   const raw = String(article || '').split(/(?:^|\n)#{1,3}\s*(?:관련\s*태그|Related Tags|Tags)\s*\n/i)[0]
     .split(/(?:^|\n)참고자료\s*(?:\([^)]*\))?\s*\n/)[0];
-  const meaningful = raw.split(/\n+/).map(x=>x.trim()).filter(x=>x &&
-    !/^#{1,3}\s/.test(x) && !/^#\S+/.test(x) && !/^\[이미지 삽입:/.test(x));
-  const joined = meaningful.join(' ').replace(/^\s*[-*•]\s*/gm, '');
-  const sections = (raw.match(/^#{1,3}\s+(?!관련\s*태그|Related Tags).+/gm) || []).length;
-  const len = joined.replace(/\s+/g,' ').trim().length;
+  const meaningful = raw.split(/\n+/).map(x=>x.trim()).filter(x =>
+    x && !/^#{1,3}\s/.test(x) && !/^#\S+/.test(x) && !/^\[이미지 삽입:/.test(x));
+  const joined = meaningful.join(' ').replace(/^\s*[-*•]\s*/gm, '').replace(/\s+/g,' ').trim();
+  const len = kind === 'tistoryEn' ? (joined.match(/\b[\w]+(?:['’-][\w]+)*\b/g) || []).length : joined.length;
+  const minimum = kind === 'naver' ? 1200 : kind === 'tistory' ? 1500 : 800;
+  const targetMax = kind === 'naver' ? 2000 : kind === 'tistory' ? 2500 : 1200;
+  const units = kind === 'tistoryEn' ? '단어' : '자';
+  const sections = (raw.match(/^#{1,3}\s+.+/gm) || []).length;
+  const summary = kind === 'tistoryEn' ? /(?:^|\n)#{1,3}\s*Three Key Takeaways/i.test(raw)
+    : /(?:^|\n)#{1,3}\s*3줄\s*요약/.test(raw);
   const reasons:string[]=[];
-  if (len < (english ? 450 : 350)) reasons.push('태그를 제외한 본문 정보량이 지나치게 적어');
-  if (sections < 2) reasons.push('본문에 서로 다른 내용을 설명하는 소제목이 2개 미만이야');
-  if (meaningful.length < 4) reasons.push('독자가 얻을 구체적 정보나 요약이 부족해');
-  return { publishBlocked: reasons.length > 0, reasons, bodyLength: len, sections };
+  if (len < minimum) reasons.push('본문 분량 부족: '+len+units+' / 최소 '+minimum+units);
+  if (!summary) reasons.push('핵심 요약 섹션이 없어');
+  if (sections < 4) reasons.push('설명 소제목이 부족해 (요약 포함 최소 4개)');
+  if (meaningful.length < 7) reasons.push('근거와 구체적인 설명이 부족해 (실질 문단 최소 7개)');
+  return { publishBlocked: reasons.length > 0, reasons, bodyLength: len, sections, minimum, targetMax, units };
 }
