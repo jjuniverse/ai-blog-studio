@@ -1,22 +1,28 @@
 {
-  "generatedAt": "2026-11-19T18:27:45.638819+00:00",
+  "generatedAt": "2026-11-20T00:41:56.561962+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 15,
-      "lastSuccessAt": "2026-11-19T18:27:45.638819+00:00"
+      "count": 16,
+      "lastSuccessAt": "2026-11-20T00:41:56.561962+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-19T18:27:45.638819+00:00"
+      "lastSuccessAt": "2026-11-20T00:41:56.561962+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "2027 수능 등급컷·가채점 확인법과 수험표 할인 총정리 — 12월 11일 성적 통지 전에 챙길 것",
+      "url": "https://blog.naver.com/todaypickkr/224484327226?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-19T23:46:50+00:00"
+    },
     {
       "channel": "naver",
       "title": "시니어 보이스피싱 예방법 총정리! 부모님이 꼭 알아야 할 사기 수법과 신고 방법",
@@ -109,6 +115,12 @@
     },
     {
       "channel": "tistory",
+      "title": "2027 수능 등급컷·가채점 확인법과 수험표 할인 총정리 — 12월 11일 성적 통지 전에 챙길 것",
+      "url": "https://blog83848.tistory.com/21",
+      "publishedAt": "2026-11-19T23:38:19+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "Voice Phishing Scams Targeting Seniors in South Korea: Prevention Tips and What to Do",
       "url": "https://blog83848.tistory.com/20",
       "publishedAt": "2026-11-19T15:58:48+00:00"
@@ -160,12 +172,6 @@
       "title": "직장인 가성비 냉동도시락 비교 — 한 끼 3,315원부터 5,280원까지 4종",
       "url": "https://blog83848.tistory.com/12",
       "publishedAt": "2026-11-19T10:58:24+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "Sacred Jewel: Prime Video's Goryeo War K-Drama Premieres December 5",
-      "url": "https://blog83848.tistory.com/11",
-      "publishedAt": "2026-11-19T09:57:27+00:00"
     }
   ]
 }
