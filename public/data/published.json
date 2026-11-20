@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-20T12:30:25.728758+00:00",
+  "generatedAt": "2026-11-20T18:27:36.602572+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
       "count": 18,
-      "lastSuccessAt": "2026-11-20T12:30:25.728758+00:00"
+      "lastSuccessAt": "2026-11-20T18:27:36.602572+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-20T12:30:25.728758+00:00"
+      "lastSuccessAt": "2026-11-20T18:27:36.602572+00:00"
     }
   ],
   "posts": [
