@@ -470,6 +470,20 @@ export default {
         sourceLinks = Array.from(unique.values()).slice(0, 10);
       }
       distinctDomains = new Set(sourceLinks.map(src => { try { return new URL(src.url).hostname.replace(/^www\./, ""); } catch { return ""; } }).filter(Boolean)).size;
+      // Heuristic only: title overlap helps identify unrelated search hits, never establishes factual support.
+      const sourceSubjectTokens = text => new Set(
+        (String(text || "").toLowerCase().match(/[a-z0-9]{3,}|[가-힣]{2,}/g) || [])
+          .filter(w => !new Set(["news","update","latest","guide","about","with","today","report",
+            "정보","공식","뉴스","발표","안내","관련","정리","방법"]).has(w))
+      );
+      const subjectTokens = sourceSubjectTokens(input.title);
+      const titledSources = sourceLinks.filter(x => x.title && x.title.trim().length >= 6);
+      const plausiblyRelevantSources = titledSources.filter(source => {
+        const tokens = sourceSubjectTokens(source.title);
+        return [...subjectTokens].some(token => tokens.has(token));
+      });
+      const sourceRelevanceWarning = titledSources.length > 0 &&
+        subjectTokens.size > 0 && plausiblyRelevantSources.length === 0;
       // Growth-oriented short-form blog posts should not be penalized for being concise.
       // Check structural usefulness, not arbitrary 1000-character article length.
       // A source appendix or hashtags cannot compensate for a two-sentence article.
@@ -649,6 +663,7 @@ export default {
       if (blogsAreCopies) editorialWarnings.push("네이버·티스토리 원고가 동일해 채널별 재작성 필요");
       if (shortformCopiesBlog) editorialWarnings.push("숏폼 대본이 블로그 서론을 복사해 별도 대본 작성 필요");
       if (visualRightsWarning) editorialWarnings.push("이미지 제안에 제3자 저작물이 포함돼 자체 제작 카드로 교체");
+      if (sourceRelevanceWarning) editorialWarnings.push("참고자료 제목과 원고 주제의 연관성이 낮아 출처 재확인 필요");
       if (visualRightsWarning) result.imageNotes = [
         "대표 이미지 — 검증한 주제명과 핵심 메시지를 타이포그래피로 표현한 자체 제작 카드. 오늘의 픽 네이비·민트 색상",
         "본문 이미지 — 확인한 날짜·숫자·순위를 출처 표기와 함께 직접 그린 간단한 타임라인 또는 그래프",
