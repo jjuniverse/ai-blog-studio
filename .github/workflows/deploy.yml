@@ -26,6 +26,7 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: node --check worker/src/index.js
       - run: node --experimental-strip-types --test tests/test_published_match.mjs
+      - run: node --experimental-strip-types --test tests/test_post_quality.mjs
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
