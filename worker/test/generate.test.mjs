@@ -113,9 +113,13 @@ test('short imperfect articles remain visible for revision instead of becoming e
     assert.match(result.draft.naver, /## 관련 태그\n#오늘의픽/);
     assert.match(result.draft.tistory, /## 관련 태그\n#오늘의픽/);
     assert.equal((result.draft.naver.match(/#오늘의픽/g) || []).length, 1);
-    assert.ok((result.draft.naver.split('## 관련 태그')[1].match(/#[^\s#]+/g) || []).length >= 8);
+    assert.ok((result.draft.naver.split('## 관련 태그')[1].match(/#[^\\s#]+/g) || []).length <= 10);
+    assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('1200자')));
+    assert.equal(result.draft.qualityAudit.channelReadiness.naver.minimum,1200);
+    assert.equal(result.draft.qualityAudit.channelReadiness.tistory.minimum,1500);
+    assert.equal(result.draft.qualityAudit.channelReadiness.tistoryEn.minimum,800);
     assert.ok(result.draft.shortform.length>0);
-    assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('요약·구체적 근거·소제목')));
+    assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('보완 필요')));
   } finally {
     globalThis.fetch=originalFetch;
   }
