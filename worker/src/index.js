@@ -576,6 +576,40 @@ export default {
         return base + "\n\n## Related Tags\n" + ["#TodaysPick", ...tags.filter(x => x.toLowerCase() !== "#todayspick")].slice(0, 10).join(" ");
       };
       result.tistoryEn = result.mode === "article" ? normalizeEnglishTags(stripInlineLinks(result.tistoryEn)) : stripInlineLinks(result.tistoryEn);
+      // Deterministic editorial SEO: remove generic single-word tags and prioritize exact search subjects.
+      const refineSeoTags = (article, title, english = false) => {
+        if (!article) return article;
+        const header = english ? /(?:^|\n)## Related Tags\s*\n/i : /(?:^|\n)## 관련 태그\s*\n/i;
+        const m = header.exec(article);
+        const base = (m ? article.slice(0, m.index) : article).trimEnd();
+        const generic = new Set(["news","latest","new","low","price","deal","black","friday","laptop","ram",
+          "equipped","today","review","information","guide","the","for","with","about","more",
+          "기사","정보","관련","오늘","최신","정리","소식","발표","총정리"]);
+        const terms = (english ? title.match(/[A-Za-z][A-Za-z0-9-]*/g) : title.match(/[\p{L}\p{N}-]{2,}/gu)) || [];
+        const significant = terms.filter(t => t.length >= 2 && !generic.has(t.toLowerCase()));
+        const tags = [], add = raw => {
+          const token = english ? raw.replace(/[^A-Za-z0-9]/g,"").slice(0,35)
+            : raw.replace(/[^\p{L}\p{N}]/gu,"").slice(0,30);
+          if (token.length < 2 || generic.has(token.toLowerCase()) || /^\d+$/.test(token)) return;
+          const tag = "#" + token;
+          if (!tags.some(t => t.toLowerCase() === tag.toLowerCase())) tags.push(tag);
+        };
+        add(significant.slice(0,3).join(""));
+        add(significant.slice(0,2).join(""));
+        for (const term of significant.slice(0,6)) add(term);
+        const current = m ? article.slice(m.index + m[0].length).match(/#[^\s#]+/g) || [] : [];
+        for (const token of current) {
+          if (tags.length >= 9) break;
+          if (significant.some(term => token.toLowerCase().includes(term.toLowerCase()))) add(token.slice(1));
+        }
+        return base + "\n\n## " + (english ? "Related Tags" : "관련 태그") + "\n" +
+          [english ? "#TodaysPick" : "#오늘의픽",...tags.filter(x => !/^#(?:TodaysPick|오늘의픽)$/i.test(x)).slice(0,9)].join(" ");
+      };
+      if (result.mode === "article") {
+        result.naver = refineSeoTags(result.naver, result.naverTitle || result.title);
+        result.tistory = refineSeoTags(result.tistory, result.tistoryTitle || result.title);
+        result.tistoryEn = refineSeoTags(result.tistoryEn, result.tistoryEnTitle || result.title, true);
+      }
       result.imageKeywords = [...new Set((result.imageKeywords || []).filter(x => typeof x === "string").map(x => x.trim().slice(0, 90)).filter(Boolean))].slice(0, 4);
       result.naverTitle = result.naverTitle.trim().slice(0, 110);
       result.tistoryTitle = result.tistoryTitle.trim().slice(0, 110);
