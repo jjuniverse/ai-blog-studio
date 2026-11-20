@@ -16,7 +16,7 @@ function cleanTag(raw: string): string {
   return raw.replace(/[^\p{L}\p{N}]/gu, '').slice(0, 24);
 }
 const KOREAN_GENERIC = new Set(['오늘','오늘의','오늘의픽','뉴스','정보','관련','기사','발표','공개','소식','정리','이번','시작','이후','지난','예정','방법','총정리','최신']);
-const ENGLISH_GENERIC = new Set(['the','with','from','this','that','news','latest','update','review','information','new','low','price','deal','equipped','packing','drops','black','friday','best','guide','how','what','when','where','more','than','about','laptop','ram']);
+const ENGLISH_GENERIC = new Set(['the','with','from','this','that','news','latest','update','review','information','new','low','price','deal','equipped','packing','drops','black','friday','best','guide','how','what','when','where','more','than','about','laptop','ram','at','in','on','of','by','to','is','are','an','a','and','or','its','your']);
 function seoTitleTerms(title:string, english:boolean): string[] {
   const trimmed=title.split(/[|:!?—–]/)[0].trim();
   const words=(english ? trimmed.match(/[A-Za-z][A-Za-z0-9-]*/g) : trimmed.match(/[\p{L}\p{N}-]{2,}/gu)) || [];
