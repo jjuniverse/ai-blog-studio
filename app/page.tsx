@@ -455,7 +455,7 @@ export default function Home() {
   const copyableArticle = channel === 'shortform' ? text : articleTitle.trim() + '\n\n' + text + referenceAppendix;
   const previewLines = paragraphLines(text);
   const cardPositions = imagePositions(previewLines);
-  const readiness = articleReadiness(text, channel === 'tistoryEn');
+  const readiness = articleReadiness(text, channel === 'tistoryEn' ? 'tistoryEn' : channel === 'tistory' ? 'tistory' : 'naver');
   const reviewed = saved?.evidenceReview?.[channel];
   const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
   const selectedImages = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
@@ -780,10 +780,10 @@ export default function Home() {
               {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
               {currentDraft && !legacyStored && !!text.trim() ? <>
                 {channel !== 'shortform' && readiness.publishBlocked && <div className="draft-warning" role="alert">
-                  <strong>발행 보류 · 본문이 너무 빈약해</strong>
-                  <p>태그와 참고자료를 제외한 본문은 {readiness.bodyLength}자야. 원고는 보존했지만, 이 상태로 게시하는 건 추천하지 않아.</p>
+                  <strong>보완 필요 · 발행 보류</strong>
+                  <p>태그와 참고자료를 제외한 본문은 {readiness.bodyLength}{readiness.units}야. 최소 {readiness.minimum}{readiness.units}, 권장 {readiness.minimum}~{readiness.targetMax}{readiness.units}를 목표로 해. 부족한 원고도 삭제하지 않고 보존해.</p>
                   <ul>{readiness.reasons.map((reason,i)=><li key={i}>{reason}</li>)}</ul>
-                  <p>공식 자료로 핵심 사실과 구체적인 설명을 보강하거나 다른 주제를 선택해 줘.</p>
+                  <p>출처에 근거한 구체적인 설명을 보강해 줘. 출처가 모자라면 원고를 억지로 늘리지 말고 추가 조사 후 발행해.</p>
                 </div>}
 
                 <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
