@@ -584,7 +584,8 @@ export default {
         const base = (m ? article.slice(0, m.index) : article).trimEnd();
         const generic = new Set(["news","latest","new","low","price","deal","black","friday","laptop","ram",
           "equipped","today","review","information","guide","the","for","with","about","more",
-          "기사","정보","관련","오늘","최신","정리","소식","발표","총정리"]);
+          "기사","정보","관련","오늘","최신","정리","소식","발표","총정리",
+          "at","in","on","of","by","to","is","are","an","a","and","or","its","your"]);
         const terms = (english ? title.match(/[A-Za-z][A-Za-z0-9-]*/g) : title.match(/[\p{L}\p{N}-]{2,}/gu)) || [];
         const significant = terms.filter(t => t.length >= 2 && !generic.has(t.toLowerCase()));
         const tags = [], add = raw => {
