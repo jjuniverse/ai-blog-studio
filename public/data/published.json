@@ -1,22 +1,46 @@
 {
-  "generatedAt": "2026-11-21T00:42:06.486852+00:00",
+  "generatedAt": "2026-11-21T06:32:02.060761+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 18,
-      "lastSuccessAt": "2026-11-21T00:42:06.486852+00:00"
+      "count": 22,
+      "lastSuccessAt": "2026-11-21T06:32:02.060761+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-21T00:42:06.486852+00:00"
+      "lastSuccessAt": "2026-11-21T06:32:02.060761+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "[쿠팡] 제철 노지감귤·꿀고구마·겨울 간식 BEST 4 비교",
+      "url": "https://blog.naver.com/todaypickkr/224485991551?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T05:48:10+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2027 노인일자리 모집 — 월 최대 77만 원, 유형별 조건과 신청법",
+      "url": "https://blog.naver.com/todaypickkr/224485962570?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T05:17:31+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 MAMA 오늘(11/21) 2일차 라인업·생중계 시간 총정리 — 빅뱅×둘리 무대와 1일차 수상 결과",
+      "url": "https://blog.naver.com/todaypickkr/224485937690?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T04:48:11+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "구글 제미나이 '태스크' 한국 무료 출시 & 제미나이 4 네온 총정리",
+      "url": "https://blog.naver.com/todaypickkr/224485901200?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T04:09:07+00:00"
+    },
     {
       "channel": "naver",
       "title": "2026 난방비 지원금 총정리 — 에너지바우처 29만~70만 원, 도시가스·전기요금 감면까지",
@@ -127,6 +151,42 @@
     },
     {
       "channel": "tistory",
+      "title": "[쿠팡] 제철 노지감귤·꿀고구마·겨울 간식 BEST 4 비교",
+      "url": "https://blog83848.tistory.com/29",
+      "publishedAt": "2026-11-21T05:54:51+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2027 노인일자리 모집 — 월 최대 77만 원, 유형별 조건과 신청법",
+      "url": "https://blog83848.tistory.com/28",
+      "publishedAt": "2026-11-21T05:26:00+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 MAMA Awards Day 2: Start Time, Livestream Channels, Lineup and How to Watch BIGBANG's 20th-Anniversary Stage",
+      "url": "https://blog83848.tistory.com/27",
+      "publishedAt": "2026-11-21T05:00:27+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 MAMA 오늘(11/21) 2일차 라인업·생중계 시간 총정리 — 빅뱅×둘리 무대와 1일차 수상 결과",
+      "url": "https://blog83848.tistory.com/26",
+      "publishedAt": "2026-11-21T04:55:00+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "Gemini Tasks Goes Free in Korea — and Gemini 4 Neon Arrives",
+      "url": "https://blog83848.tistory.com/25",
+      "publishedAt": "2026-11-21T04:28:24+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "구글 제미나이 '태스크' 한국 무료 출시 & 제미나이 4 네온 총정리",
+      "url": "https://blog83848.tistory.com/24",
+      "publishedAt": "2026-11-21T04:21:50+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "2026 난방비 지원금 총정리 — 에너지바우처 29만~70만 원, 도시가스·전기요금 감면까지",
       "url": "https://blog83848.tistory.com/23",
       "publishedAt": "2026-11-20T03:08:22+00:00"
@@ -148,42 +208,6 @@
       "title": "Voice Phishing Scams Targeting Seniors in South Korea: Prevention Tips and What to Do",
       "url": "https://blog83848.tistory.com/20",
       "publishedAt": "2026-11-19T15:58:48+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "시니어 보이스피싱 예방법 5가지｜60대·70대 부모님을 위한 피해 신고 가이드",
-      "url": "https://blog83848.tistory.com/19",
-      "publishedAt": "2026-11-19T15:54:48+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "대방어 제철은 언제? 방어와 대방어 차이부터 부위별 맛까지 총정리",
-      "url": "https://blog83848.tistory.com/18",
-      "publishedAt": "2026-11-19T15:24:04+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "과메기 제철은 언제? 맛있게 먹는 법부터 효능·보관법까지 총정리",
-      "url": "https://blog83848.tistory.com/17",
-      "publishedAt": "2026-11-19T13:49:53+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "어르신 숨은 돈 찾기 — 미수령 국민연금·휴면예금 조회 방법과 보이스피싱 예방법 (2026년 11월 기준)",
-      "url": "https://blog83848.tistory.com/16",
-      "publishedAt": "2026-11-19T13:46:22+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2026년 기초연금 수급자격·선정기준액과 신청 방법 — 만 65세 전에 꼭 확인할 핵심 정리",
-      "url": "https://blog83848.tistory.com/15",
-      "publishedAt": "2026-11-19T13:26:47+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "숨은 카드포인트·통신비 미환급금 한 번에 현금화하는 법 (2026년 11월 최신 기준)",
-      "url": "https://blog83848.tistory.com/14",
-      "publishedAt": "2026-11-19T12:53:10+00:00"
     }
   ]
 }

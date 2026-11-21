@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T00:42:06.417321+00:00",
+  "generatedAt": "2026-11-21T06:32:02.008638+00:00",
   "disclaimer": "Editorial-only heuristics; no measured traffic, revenue or factual verification. Promotional topics are excluded from recommendations.",
   "candidates": [
     {
@@ -21,12 +21,6 @@
           "publishedAt": "2026-11-20T07:27:52+00:00"
         },
         {
-          "title": "국민연금공단, 기초연금 온라인 신청 간소화 알린다… 퀴즈 이벤트 진행 - 천지일보",
-          "publisher": "천지일보",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9hXzBJM014RU9TR0Zkd3l0V01xdjhBWnNFdm1RTDUtVXN5ZzFVeHN0dkRmeTc3OS1ZNFRCeXV5eW9Ea2JxbkZibFFZcExxZmhRSjJMU1RHQjZrMVYtZWFtVzRrMmMybG5qbnc?oc=5",
-          "publishedAt": "2026-11-20T04:59:46+00:00"
-        },
-        {
           "title": "국민연금공단, 기초연금 온라인 신청 한층 더 간편하게 ‘퀴즈 이벤트’ 실시 - 사회적경제뉴스",
           "publisher": "사회적경제뉴스",
           "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBYVkx0c1hXVHdrbTFCSEFsdkhZTGQtX1RiZ005WTRCWk01WS04SHhXaUJzcHZVQ2JWNWdDU3hwWQ?oc=5",
@@ -45,9 +39,9 @@
           "publishedAt": "2026-11-20T01:30:48+00:00"
         },
         {
-          "title": "국민연금, 기초연금 온라인 신청 퀴즈 이벤트…400명에게 상품권 - 뉴스1",
-          "publisher": "뉴스1",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE92V2JjVmFyeUpKdlJ5VGVXeHZnRVZVb2NZN0tnRWU2THVKM1dPUEwyckpGbHRSTHkzTlJqTVcyOHQtaTJqNmpsWEJlYUFlZ0lmWFIyaURpOGNBUlda?oc=5",
+          "title": "국민연금, 기초연금 온라인 신청 퀴즈 이벤트…400명에게 상품권 - 스포탈코리아",
+          "publisher": "스포탈코리아",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdDk0MlYzQVpDQkV0YTJrWVBzVFh3VzZkUDRZeGYzNEpNOU9Za0VvMGlqVnVRMFdmZHN1a1FGRXdHeUNfNTNVN2FrVVVSY1FCeGJlRUNhMkl5eVNQcjFBNnZWdHpQQUl0WHVLdDc1S2JJSURLU2ZZOUc0aTJBWk9iUTRn?oc=5",
           "publishedAt": "2026-11-20T01:21:26+00:00"
         }
       ],
@@ -56,7 +50,7 @@
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 75,
-        "independentPublisherCount": 7,
+        "independentPublisherCount": 6,
         "riskFlag": false,
         "promotionFlag": false,
         "measuredTraffic": null,
@@ -105,6 +99,49 @@
       ]
     },
     {
+      "id": "c93ac990f30682",
+      "title": "Superhuman expands Go AI assistant across its apps",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Superhuman expands Go AI assistant across its apps - The American Bazaar",
+          "publisher": "The American Bazaar",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTURGZkdoZ19aOUpRSWNhdWxNT3NIR1oxREh0aEN4OVNkQTQxM3YyUERENmlmRWxOZEF3UlFSMWQtVjBUU1hQeDFoWTU1SVM4S2Z6anVmQ1FUdUVjbDN6MjdWNkxpTWlCNDJOdjF6UGF1dHBMMFBCaVppR2dPZTNHSW5NOFZXNDVZWEYxXzBDcHJLT01yMXR3QUpFTVRIY2c?oc=5",
+          "publishedAt": "2026-11-20T00:19:59+00:00"
+        },
+        {
+          "title": "Superhuman Expands Go Across the Suite, Unveils Personal AI Assistant - Business Wire",
+          "publisher": "Business Wire",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQV2RxWXNGbUJROHdsdEw2ZkJrZHluMi1YTTVCN2dBQ2dBRlNKOTdVTlY1Rnp3SWYwckFSQUdjanpaNEJjZFdBY3JEY1lmbUlUT3gzaEdhSkJsdjZFWXh5Tk1PVUZMZmpBU29WZW9MOG84dFQwckhDVmltZDE3c3pMcWRGVUFDWGI0OWVvVVI1a2xiRnNtSEhoTmdDVGFXVFNYOWR6aU1QWWtfdUsxRTNPcFM0R0dCcGZONlVGQ21HTjYtd3c?oc=5",
+          "publishedAt": "2026-11-19T14:00:00+00:00"
+        },
+        {
+          "title": "Superhuman pushes its Go assistant everywhere - TechCrunch",
+          "publisher": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTVM1emxkTUdNN1hYVzBuWXlUTEdtWDVVaThDamY0NU9jdVgwMUhiejhjTTl0T3pqVlNpXzU2OHZhdV9DSjhlWFZ6VF9fbkFyVGYzZE8wWlJwbmthYUNBMm1VdXZPaG1qZWFoS3IyWmlPWnNwLXhTaXg1TFpzMVZrc3NkcnJxRHc?oc=5",
+          "publishedAt": "2026-11-19T14:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 40,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 60,
+        "independentPublisherCount": 3,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "research_required",
+      "reasons": [
+        "복수 매체 헤드라인 확인: 원문 및 공식 발표 추가 검증 필요",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
       "id": "662d835cb9771d",
       "title": "넷플릭스 '데블스 플랜: 데드 어게인' 비드라마 화제성 1위",
       "category": "연예",
@@ -121,20 +158,14 @@
           "publisher": "위키트리",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5IdXk5cDdHZ19EOEgwRlVRc1AtVFNHM3lJNjhnd3lpbnFaVTB2UmlnWml2bE1RRzRGaVV5N0xUNEJWRVA1a3l1cG90Q0JzOWxWQUZDbEFn?oc=5",
           "publishedAt": "2026-11-18T11:05:00+00:00"
-        },
-        {
-          "title": "‘데블스 플랜: 데드 어게인’, 터졌다…장동민도 화제성 1위 쌍끌이 - 일간스포츠",
-          "publisher": "일간스포츠",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE82MDREYkVBSjkxSUdQWTJBQ1BKeWk0SXpoRzBPczZIbDhGdFBmbjFWbERIcERnb2E4X3NKRXdXV2cxX1otRmU1ZWl1TnNlZnd0eVFxMklPZm5IcDQ?oc=5",
-          "publishedAt": "2026-11-18T05:58:00+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 36,
+        "editorialPriority": 30,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 38,
-        "coverageHeuristic": 60,
-        "independentPublisherCount": 3,
+        "coverageHeuristic": 45,
+        "independentPublisherCount": 2,
         "riskFlag": false,
         "promotionFlag": false,
         "measuredTraffic": null,
@@ -147,6 +178,36 @@
       ]
     },
     {
+      "id": "97c679aa9d5317",
+      "title": "[장기요양 기획특집] 2027년 장기요양제도 달라진다…1등급 방문요양 월 최대 48회로 확대",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "[장기요양 기획특집] 2027년 장기요양제도 달라진다…1등급 방문요양 월 최대 48회로 확대 - 뉴스N연합",
+          "publisher": "뉴스N연합",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9aY0o4ZjdGMVFmTzVOMlJ5LUV4ZmVQWGpseThMYVlRWmtCYnVGSVdwLW1zZ3JWVEE3Qzg0VFBBaW1KM3NPeXRvaTQzTjRlXzg?oc=5",
+          "publishedAt": "2026-11-21T04:38:26+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "40d399632cc6da",
       "title": "2026 지역사랑 휴가지원사업 반값여행: 여행경비 50% 환급 조건과 신청방법",
       "category": "생활 정보",
@@ -156,7 +217,7 @@
           "title": "2026 지역사랑 휴가지원사업 반값여행: 여행경비 50% 환급 조건과 신청방법 - 고향사랑기부제 위기브",
           "publisher": "고향사랑기부제 위기브",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5lSThLdDFHbEZoWmJVajlreXNnMk1mTk92VFI2RDVFVl9CdkprOG1oS2ZSR2xzU25XRmtLVFBhWVh3cHZKRlBya2RvWWk1aWJ3Zy1KdjJR?oc=5",
-          "publishedAt": "2026-11-20T21:34:21+00:00"
+          "publishedAt": "2026-11-21T03:30:46+00:00"
         }
       ],
       "scores": {
@@ -238,22 +299,22 @@
       ]
     },
     {
-      "id": "58bbdd91f702cf",
-      "title": "MSI laptop packing 32GB of RAM drops to a new low price in Amazon Black Friday deal",
+      "id": "e916d0b26e77cc",
+      "title": "iFLYTEK Australia Outlines AI Note-Taking Applications for Work and Education",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "MSI laptop packing 32GB of RAM drops to a new low price in Amazon Black Friday deal - PC Guide",
-          "publisher": "PC Guide",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNQTY4M3ZPYW5qY2Y2SG5MOGRJSG1ocGMzLTZJMGRHa21hOU9JT2NjQ05BN2xZSWpLMktoMVc1a2Z6X3dweUl2RG9yRlZwX05LSzFISjllY3BCd2dyU1Ryb25HdGVDY0xJSW5HMHNhR2ZOd0FtLUpYSVVaM3pOaTY0V3M1NjVqbXlBMG1KRTJXUlRQSWh6R1RTbl9ZdDRJakZMSllpRGJpY3BTbmMxX1lnYmZmWWE?oc=5",
-          "publishedAt": "2026-11-19T15:49:08+00:00"
+          "title": "iFLYTEK Australia Outlines AI Note-Taking Applications for Work and Education - The National Law Review",
+          "publisher": "The National Law Review",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTE8yZlE4b01GTUlEb1o3WTNNWGZ3TnlQYklDOWpuMVZGU3pVa0tDWkhXbV9EX2NsUDJfc25CNDcxQkJUWmJ5TXU3WUd4aWlSdEpDWnYxLVVqWlNra1hTeXBkeF9NRjRncEtQSC01bGowejIxaFEzLVEzcnVlZ0lPMENfNUYzd2Jqa1B1emdySWRnTlluZFBjVVVWMU5DdFNleURqaVNmOFpXQWpVRW82am5WYw?oc=5",
+          "publishedAt": "2026-11-20T00:56:56+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 36,
-        "commercialFitHeuristic": 30,
-        "shortformFitHeuristic": 52,
+        "editorialPriority": 34,
+        "commercialFitHeuristic": 42,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -265,7 +326,8 @@
       "status": "needs_sources",
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "사용법·비교 등 정보 탐색 의도 단서"
+        "사용법·비교 등 정보 탐색 의도 단서",
+        "도구·생산성 관련 키워드"
       ]
     },
     {
@@ -331,36 +393,6 @@
       ]
     },
     {
-      "id": "61171169fade12",
-      "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜?",
-      "category": "시니어·복지",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜? - 오아시스뉴스",
-          "publisher": "오아시스뉴스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wVXNVTTRhRGtoR0JBX2J1dlF1eHJmZmJQbmR5VnhidzVaUGd5RTZPQXFvS0FNQnRwRUMtVlExU0ZPNkFFblFVNUhvOUNyWm9FMkxlbkVjTUo3Zi1mdERMakdEeC12bUlRNnlfdFVXaGbSAXRBVV95cUxPMzJfWnlwQnRvczF3YTZPbHJJLVkwLWJJenBBQUh5eDctOEtTckRCZmZVVFJmVW1VVGRDZ1VEcnRvb3lsTWh0TVdnTWlTVUNaeUVyY1pCa3g4SGwtbW0wUE0tTDNzSklrMzV4SzFyNk5ma1dZbg?oc=5",
-          "publishedAt": "2026-11-20T04:34:01+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "6c8076c2640dd7",
       "title": "방송콘텐츠 대상 전체 대상까지 품었다…김유정·박진영의 한국 드라마",
       "category": "연예",
@@ -377,6 +409,36 @@
         "editorialPriority": 24,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "61171169fade12",
+      "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜?",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜? - 오아시스뉴스",
+          "publisher": "오아시스뉴스",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wVXNVTTRhRGtoR0JBX2J1dlF1eHJmZmJQbmR5VnhidzVaUGd5RTZPQXFvS0FNQnRwRUMtVlExU0ZPNkFFblFVNUhvOUNyWm9FMkxlbkVjTUo3Zi1mdERMakdEeC12bUlRNnlfdFVXaGbSAXRBVV95cUxPMzJfWnlwQnRvczF3YTZPbHJJLVkwLWJJenBBQUh5eDctOEtTckRCZmZVVFJmVW1VVGRDZ1VEcnRvb3lsTWh0TVdnTWlTVUNaeUVyY1pCa3g4SGwtbW0wUE0tTDNzSklrMzV4SzFyNk5ma1dZbg?oc=5",
+          "publishedAt": "2026-11-20T04:34:01+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -451,16 +513,16 @@
       ]
     },
     {
-      "id": "a1ac814c1b7684",
-      "title": "CL Talks New Songs ‘ICONIC’ and ‘Say It to My Face’: ‘None of the K-Pop Songs Are Talking About That’",
+      "id": "5f41300da75692",
+      "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER'",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "CL Talks New Songs ‘ICONIC’ and ‘Say It to My Face’: ‘None of the K-Pop Songs Are Talking About That’ - Billboard",
-          "publisher": "Billboard",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOOER4WmVYRHNZNmxON0VwaE10V3lfNG5WbW4teEJKUHR0RlgydlFKbnpTMHdPbmJrXzRYSzZzaHBxa05Fem9hNjFtRHhsd0c4d09XUDZXUk9SUllvZHdlZkdSYWRKcUYtOVJYZDdLTE41bkQxSm94aXdrWmtRb1kxVE8xbFNTbFZaVnM1QlNER1cxLWZaS1lWSFhCRQ?oc=5",
-          "publishedAt": "2026-11-20T20:56:19+00:00"
+          "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER' - Latin Times",
+          "publisher": "Latin Times",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSmhuUVo5b2RHT1J6VXdjM2lGOTZ6amFuejE3ZGlJRW96T0h4QW9HMjRxWkdoS1hoRVdkdm5YTGp4MkhibUpTeWktWEtqcHZSck9acDBSQ2oyQTl6V1pZWHJ4WkFCNXRLOGM1SjFWYmxHMkJydG1tZ2V1LTNTcFViM2QwTDhpaXkxdzZqUktLZ2oxZE1YLWFEQTUxaHM?oc=5",
+          "publishedAt": "2026-11-20T17:02:14+00:00"
         }
       ],
       "scores": {
@@ -544,52 +606,22 @@
       ]
     },
     {
-      "id": "8eb7b83792f84d",
-      "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최",
+      "id": "15d3f4a886513d",
+      "title": "빅뱅, 오늘(20일) 기습 신곡 발표…3개월 컴백 확정",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최 - 톱스타뉴스",
-          "publisher": "톱스타뉴스",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2TWFEOW9icWVKTldIb0UyNmRIYXlPM0E3QXQwMFdDNEljRENORVdPZ2NhZjd3X2VZRUlkbUFhWFlxVFZmcTkwcnUwU1BKZjhEMlF2SkpaXzZacGRPZnMxaHVOdG1uTGVkbGhRTjdKcXBLQQ?oc=5",
-          "publishedAt": "2026-11-18T07:30:41+00:00"
+          "title": "빅뱅, 오늘(20일) 기습 신곡 발표…3개월 컴백 확정 - MHN스포츠",
+          "publisher": "MHN스포츠",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5icHY1T1lkcDNFSXdkcXVYODU2c3lERlcxZ1dOaGJydFhvMVNFVkNld2pUVktEbFk1TjdDTDJnREZ3YXdncHc2RTdTYS1xTjY0QlN5dGk5YlhvbDVwS0hfMWJwZw?oc=5",
+          "publishedAt": "2026-11-20T01:14:49+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 30,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 60,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "813b9a74327234",
-      "title": "기초연금 신청 더 간편하게…배우자 동의도 모바일로",
-      "category": "시니어·복지",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "기초연금 신청 더 간편하게…배우자 동의도 모바일로 - 데일리안",
-          "publisher": "데일리안",
-          "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOTHBEZ3RWNlZkOFVYYnZXS0Q2bzNva3JzaG1ieW9ITWc3U2xnQ2ZYeXZYTGc5SkhDMHZHYjVTTlBCZ2lLN3dFU3BiUFlVVXdYSi10V1VrSDQ5ZTFSa1VHY2hqR1pSZ2tTN3hVSnJQbjZKS1FjMHFIQnZ4SmdHMWFRZ0V5QjlRTjE1SkRfbXh0VmI0Q1psaHNIc2Y2UzJkTWg1WDdiLWxtN1gwaTRrcExxN29kTEx5QWkzQnVpRG5SYUk0cVV5cmJMOEo2WVh5ODAyODE5TWZuS3NPZnZBX2FRS2hJaGJFdUY0N2dTejFZNS00SFFfN3ZBNVpGSThoZjJ5VC1HT1JtOU5OaHJLdFdhdUhLVU9XbldGVHF0dnI2bFdBRm8?oc=5",
-          "publishedAt": "2026-11-20T04:28:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -620,6 +652,36 @@
         "editorialPriority": 24,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "813b9a74327234",
+      "title": "기초연금 신청 더 간편하게…배우자 동의도 모바일로",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "기초연금 신청 더 간편하게…배우자 동의도 모바일로 - 데일리안",
+          "publisher": "데일리안",
+          "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOTHBEZ3RWNlZkOFVYYnZXS0Q2bzNva3JzaG1ieW9ITWc3U2xnQ2ZYeXZYTGc5SkhDMHZHYjVTTlBCZ2lLN3dFU3BiUFlVVXdYSi10V1VrSDQ5ZTFSa1VHY2hqR1pSZ2tTN3hVSnJQbjZKS1FjMHFIQnZ4SmdHMWFRZ0V5QjlRTjE1SkRfbXh0VmI0Q1psaHNIc2Y2UzJkTWg1WDdiLWxtN1gwaTRrcExxN29kTEx5QWkzQnVpRG5SYUk0cVV5cmJMOEo2WVh5ODAyODE5TWZuS3NPZnZBX2FRS2hJaGJFdUY0N2dTejFZNS00SFFfN3ZBNVpGSThoZjJ5VC1HT1JtOU5OaHJLdFdhdUhLVU9XbldGVHF0dnI2bFdBRm8?oc=5",
+          "publishedAt": "2026-11-20T04:28:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -694,16 +756,16 @@
       ]
     },
     {
-      "id": "a8ccf614e686aa",
-      "title": "New album alert for K-pop group ENHYPEN! Read more in the comments section.",
+      "id": "1f58a1816bce68",
+      "title": "TWICE’s Nayeon Gets Flirty in 3 New Pop Tracks Introducing Her Upcoming 2027 Solo Album NA-stier (Exclusive)",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "New album alert for K-pop group ENHYPEN! Read more in the comments section. - Facebook",
-          "publisher": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcGZIcjBlTFJEd3lvWVZDeVp6RUpKdnI5Z1V2QXUxSDllNjhVV0IyNy1nV1JrbjNuRGhGZVpUQnF5WlZRYzVaWEdXdHVueFR3bF9Oa0YtbDZZQlVCV2RYVmhIWHdiSHZEVTladFJlMVRHSHo5TVhqY1JUZ2RSQ2l4YmRvTzVOem1oWExpamxGejI2bUVGMkd3TVNWdThsa2JPLThDOGlZaDZFdVFuWVJvbE9jbjRLRVhFYlZSMEJ0SVpJOUREVkZpMUlNdFg?oc=5",
-          "publishedAt": "2026-11-20T19:33:03+00:00"
+          "title": "TWICE’s Nayeon Gets Flirty in 3 New Pop Tracks Introducing Her Upcoming 2027 Solo Album NA-stier (Exclusive) - People.com",
+          "publisher": "People.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPU05rLVJDdWZYVWZVR0FCTlZ3WER1MU5MdzBaQ0U3cXRFbEJhN2RhdUdIenhHa0J1aUhTTHFvWHlaZjhjOVdUbXVPbzh1akgteV9NeVRTcXRXdFNSQzVKWXV4aGxNVDVBdFVyblBCZEdwNGI2X3AtdVpZMFRFOG5QZGotU3E2N0tWX0dXc1lqa2lsZmhvek04?oc=5",
+          "publishedAt": "2026-11-20T17:00:00+00:00"
         }
       ],
       "scores": {
@@ -786,16 +848,46 @@
       ]
     },
     {
-      "id": "dfe138b94789fc",
-      "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌'",
+      "id": "8eb7b83792f84d",
+      "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌' - 위키트리",
-          "publisher": "위키트리",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5tR1FkeGY1LW8wbnFabGxKeFBieUZmRVpEaHpVbzVZRV9tNmVrZ2t2LW1MWnNCQjg3OHdqYlJ5WTJOby1DbWJwYjM2cEhIQjJyWHh5bmxn?oc=5",
-          "publishedAt": "2026-11-19T23:25:00+00:00"
+          "title": "태연, 정규 4집 컴백 이어 1년 10개월 만에 단독 콘서트까지…아시아 투어 ‘F.L.Y.’ 개최 - 톱스타뉴스",
+          "publisher": "톱스타뉴스",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2TWFEOW9icWVKTldIb0UyNmRIYXlPM0E3QXQwMFdDNEljRENORVdPZ2NhZjd3X2VZRUlkbUFhWFlxVFZmcTkwcnUwU1BKZjhEMlF2SkpaXzZacGRPZnMxaHVOdG1uTGVkbGhRTjdKcXBLQQ?oc=5",
+          "publishedAt": "2026-11-18T07:30:41+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "c60a41e095fc23",
+      "title": "이민호·박규영, SBS '버츄얼 러브' 주연 확정…버추얼 아이돌 된 상사와 로맨스, 2027년 하반기 편성",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "이민호·박규영, SBS '버츄얼 러브' 주연 확정…버추얼 아이돌 된 상사와 로맨스, 2027년 하반기 편성 - 톱셀럽뉴스",
+          "publisher": "톱셀럽뉴스",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TQVFpdUd5dmNERVZZX0swNDJfaVBKYy16V2FhSnJxM3FKeXhtNzRlVEZkY1lXa296cklnSnZGYlgzMGd1akEtQ3FLQ0dTaFhWeDJrQ2dneWVaekNPZmNHODJlaG1DZFVhOEFV?oc=5",
+          "publishedAt": "2026-11-19T11:46:30+00:00"
         }
       ],
       "scores": {
@@ -846,46 +938,16 @@
       ]
     },
     {
-      "id": "c60a41e095fc23",
-      "title": "이민호·박규영, SBS '버츄얼 러브' 주연 확정…버추얼 아이돌 된 상사와 로맨스, 2027년 하반기 편성",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "이민호·박규영, SBS '버츄얼 러브' 주연 확정…버추얼 아이돌 된 상사와 로맨스, 2027년 하반기 편성 - 톱셀럽뉴스",
-          "publisher": "톱셀럽뉴스",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TQVFpdUd5dmNERVZZX0swNDJfaVBKYy16V2FhSnJxM3FKeXhtNzRlVEZkY1lXa296cklnSnZGYlgzMGd1akEtQ3FLQ0dTaFhWeDJrQ2dneWVaekNPZmNHODJlaG1DZFVhOEFV?oc=5",
-          "publishedAt": "2026-11-19T11:46:30+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "fdbfb91f0829b9",
-      "title": "개인 간 거래도 반품·교환 신청… 본인인증 P2P 마켓 ‘생활의 달인’ 오픈",
+      "id": "d1663f9095f0b9",
+      "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다.",
       "category": "생활 정보",
       "region": "KO",
       "headlines": [
         {
-          "title": "개인 간 거래도 반품·교환 신청… 본인인증 P2P 마켓 ‘생활의 달인’ 오픈 - 유스연합",
-          "publisher": "유스연합",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBYdHMzZTNqbzlRQi1ZeDdlNjM2OXNYQWp0dHczZE5rdDl4VWUtMGJhTGVoeHFzaGtocjk4Z1ZqTUhBMDBhdmpDM0lrdlhNMWlsVncw?oc=5",
-          "publishedAt": "2026-11-19T22:30:40+00:00"
+          "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다. - Vietnam.vn",
+          "publisher": "Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hUmRhUjd1T05ZLTdjbkc3SV9wNi1fbDhEMVlndXYxQlY3NzQxN0RBczloMzd6b0xoODFMYWwySE1RNXNtbHVZR2M0ek5feGZZX1pBdlVmRVZFWE5CX2RvWnVyTngweEtWbGtJbG5UbkwxNkt5b0hF?oc=5",
+          "publishedAt": "2026-11-19T03:26:11+00:00"
         }
       ],
       "scores": {
@@ -906,46 +968,16 @@
       ]
     },
     {
-      "id": "8d16caa6e6b562",
-      "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN",
-      "category": "K-드라마",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "GIFT: Kim Woo Bin’s baseball K-drama premieres Dec. 5 on tvN - Pirates and Princesses",
-          "publisher": "Pirates and Princesses",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQWFlqVFRmVy1ZUjFYNlJZWjNrSWJqeUoyX3FwV2s0SjlPSFRtaVBaWjhKcHBRLUFXZy1NQmZDUVZCR01YVG1iYUhlN0FMbUM2eXFWa05vNExJWnVSenNfdTF5cmFZWmV4dDZzXzYxTllZallGTkVsb0RnUkhiRWxTOWZYYmVKTVhpbDBmUzNBRXFlOWd1QlE?oc=5",
-          "publishedAt": "2026-11-18T11:03:48+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "5f41300da75692",
-      "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER'",
+      "id": "a8ccf614e686aa",
+      "title": "New album alert for K-pop group ENHYPEN! Read more in the comments section.",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER' - Latin Times",
-          "publisher": "Latin Times",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSmhuUVo5b2RHT1J6VXdjM2lGOTZ6amFuejE3ZGlJRW96T0h4QW9HMjRxWkdoS1hoRVdkdm5YTGp4MkhibUpTeWktWEtqcHZSck9acDBSQ2oyQTl6V1pZWHJ4WkFCNXRLOGM1SjFWYmxHMkJydG1tZ2V1LTNTcFViM2QwTDhpaXkxdzZqUktLZ2oxZE1YLWFEQTUxaHM?oc=5",
-          "publishedAt": "2026-11-20T17:02:14+00:00"
+          "title": "New album alert for K-pop group ENHYPEN! Read more in the comments section. - Facebook",
+          "publisher": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcGZIcjBlTFJEd3lvWVZDeVp6RUpKdnI5Z1V2QXUxSDllNjhVV0IyNy1nV1JrbjNuRGhGZVpUQnF5WlZRYzVaWEdXdHVueFR3bF9Oa0YtbDZZQlVCV2RYVmhIWHdiSHZEVTladFJlMVRHSHo5TVhqY1JUZ2RSQ2l4YmRvTzVOem1oWExpamxGejI2bUVGMkd3TVNWdThsa2JPLThDOGlZaDZFdVFuWVJvbE9jbjRLRVhFYlZSMEJ0SVpJOUREVkZpMUlNdFg?oc=5",
+          "publishedAt": "2026-11-20T13:40:02+00:00"
         }
       ],
       "scores": {
@@ -966,16 +998,16 @@
       ]
     },
     {
-      "id": "cc8d4f80f4b2db",
-      "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth",
+      "id": "ff567cfb62dd3a",
+      "title": "Runway says its AI-led software workflow cut approval waits to five minutes",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth - Simply Wall St",
-          "publisher": "Simply Wall St",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRkM1QlBMT1Q0UHA1UGtfX2xLSVVlX2FOYlk2YVYwbFZlblBoaEowWGdBQmdfcFhyYW1NRTE0em44ZnZHeG9lN3hyd0VqNEhBWTE2Q2VzRkxKSWd2QkhsdHZjT0VaejlkbnRCbGdLckx1cUZTdmxOZE5Rd0ZmMjV1NUE2ZjFZUmdOdzZWd2ZDY2p2bWNab3p3Qklqb3ZESGxPU05vSEdUYi1EZG1zcE1SX0NvaGxsa05WVEM3NlVGckVRaW9qQ3cxUkhzbjJjcVF6ckJOVXdaNHYxSkRs?oc=5",
-          "publishedAt": "2026-11-20T21:16:52+00:00"
+          "title": "Runway says its AI-led software workflow cut approval waits to five minutes - Superpower Daily",
+          "publisher": "Superpower Daily",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORGF4WW1lR2RzQzJkcXNDalhVdFhDUVNJWF9FdzJMWXZudXRjWFVia1QyOHc3NWxZcHczQklOMnpneUZ6aU9nWmxQY0VuTzVzcXlVWVRqb1F1cG1ScVF0SkxlRHY4T0RJTzc2dVJTdkZJczdpUlZNOExiVnI5V1dKcm5KamtqYWFTdEp1bVlOQnN5YTdHTkdPZXVwQV9qdGlfRkdwdnJTeEhKQlkyd2c?oc=5",
+          "publishedAt": "2026-11-20T21:51:00+00:00"
         }
       ],
       "scores": {
@@ -1027,16 +1059,46 @@
       ]
     },
     {
-      "id": "6cf7d2324b92e5",
-      "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레",
+      "id": "dfe138b94789fc",
+      "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌'",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레 - 씨네플레이",
-          "publisher": "씨네플레이",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hWE1RLUFhcDFoSGRfMG5TbEZTZ1NPaEZtT3FQRS1OZDlSM1hzcEU2QzBPMlN3SE1ZdnFyMjU4Vkg1LUpUdFdYUmU5eTB6MTU2TDVIdjhFbDNYRHM?oc=5",
-          "publishedAt": "2026-11-19T09:01:00+00:00"
+          "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌' - 위키트리",
+          "publisher": "위키트리",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5tR1FkeGY1LW8wbnFabGxKeFBieUZmRVpEaHpVbzVZRV9tNmVrZ2t2LW1MWnNCQjg3OHdqYlJ5WTJOby1DbWJwYjM2cEhIQjJyWHh5bmxn?oc=5",
+          "publishedAt": "2026-11-19T23:25:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "1f70f703fdae14",
+      "title": "‘재혼황후’ 웹툰 글로벌 조회수 35배·웹소설 45배, 신민아·주지훈 드라마 효과",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "‘재혼황후’ 웹툰 글로벌 조회수 35배·웹소설 45배, 신민아·주지훈 드라마 효과 - 위키트리",
+          "publisher": "위키트리",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Ja1FWOHlKcktOXzRnMjZrOHB1VVFGQUwtVmJhenhZdEU5NXVRLUtmdFhwcnYwZTBSYnJIQlJSa3ZfUFlkQ0FUNE84TW1rRm9GY0ZtXzl3?oc=5",
+          "publishedAt": "2026-11-19T07:32:00+00:00"
         }
       ],
       "scores": {
@@ -1087,46 +1149,16 @@
       ]
     },
     {
-      "id": "1f70f703fdae14",
-      "title": "‘재혼황후’ 웹툰 글로벌 조회수 35배·웹소설 45배, 신민아·주지훈 드라마 효과",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "‘재혼황후’ 웹툰 글로벌 조회수 35배·웹소설 45배, 신민아·주지훈 드라마 효과 - 위키트리",
-          "publisher": "위키트리",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Ja1FWOHlKcktOXzRnMjZrOHB1VVFGQUwtVmJhenhZdEU5NXVRLUtmdFhwcnYwZTBSYnJIQlJSa3ZfUFlkQ0FUNE84TW1rRm9GY0ZtXzl3?oc=5",
-          "publishedAt": "2026-11-19T07:32:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "d1663f9095f0b9",
-      "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다.",
+      "id": "50a039eb8336c4",
+      "title": "신혼부부 임차보증금 이자지원 사업 안내",
       "category": "생활 정보",
       "region": "KO",
       "headlines": [
         {
-          "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다. - Vietnam.vn",
-          "publisher": "Vietnam.vn",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hUmRhUjd1T05ZLTdjbkc3SV9wNi1fbDhEMVlndXYxQlY3NzQxN0RBczloMzd6b0xoODFMYWwySE1RNXNtbHVZR2M0ek5feGZZX1pBdlVmRVZFWE5CX2RvWnVyTngweEtWbGtJbG5UbkwxNkt5b0hF?oc=5",
-          "publishedAt": "2026-11-19T03:26:11+00:00"
+          "title": "신혼부부 임차보증금 이자지원 사업 안내 - 분야별 정보",
+          "publisher": "분야별 정보",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KVTlXOUFETFEyQlF5Q0pkZ3dKeHFFZWVRZWRwYjd4ejdqY0k1Nks1Qldtb3ZYRmN0R0c1dHR0YkFGTlNFeEdpbjFPU04tV2JKOVhiQTRaME9tLVBKcEJn?oc=5",
+          "publishedAt": "2026-11-18T08:00:00+00:00"
         }
       ],
       "scores": {
@@ -1147,16 +1179,167 @@
       ]
     },
     {
-      "id": "1f58a1816bce68",
-      "title": "TWICE’s Nayeon Gets Flirty in 3 New Pop Tracks Introducing Her Upcoming 2027 Solo Album NA-stier (Exclusive)",
+      "id": "5ee0a9c095cf86",
+      "title": "CL Makes Her Long-Awaited Solo Comeback With \"ICONIC\"",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "TWICE’s Nayeon Gets Flirty in 3 New Pop Tracks Introducing Her Upcoming 2027 Solo Album NA-stier (Exclusive) - People.com",
-          "publisher": "People.com",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPU05rLVJDdWZYVWZVR0FCTlZ3WER1MU5MdzBaQ0U3cXRFbEJhN2RhdUdIenhHa0J1aUhTTHFvWHlaZjhjOVdUbXVPbzh1akgteV9NeVRTcXRXdFNSQzVKWXV4aGxNVDVBdFVyblBCZEdwNGI2X3AtdVpZMFRFOG5QZGotU3E2N0tWX0dXc1lqa2lsZmhvek04?oc=5",
-          "publishedAt": "2026-11-20T17:00:00+00:00"
+          "title": "CL Makes Her Long-Awaited Solo Comeback With \"ICONIC\" - Complex",
+          "publisher": "Complex",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOTG8yckFIRjhSZy1vcVFSMzZjSl9DUUJ5eXVOMVFudmV5eDMyYU5sa1cxa0lwODJ0ZU80TEltekZYMmdVbV9qY0JBX1F1TTRka3Y5Vjh2T2RmYW1sazVRSG1ZNzJwRlZwcUN0VGJMbHROdWNfUnBXLVhfQWVzQy11NQ?oc=5",
+          "publishedAt": "2026-11-20T12:32:15+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "cc8d4f80f4b2db",
+      "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth - Simply Wall St",
+          "publisher": "Simply Wall St",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRkM1QlBMT1Q0UHA1UGtfX2xLSVVlX2FOYlk2YVYwbFZlblBoaEowWGdBQmdfcFhyYW1NRTE0em44ZnZHeG9lN3hyd0VqNEhBWTE2Q2VzRkxKSWd2QkhsdHZjT0VaejlkbnRCbGdLckx1cUZTdmxOZE5Rd0ZmMjV1NUE2ZjFZUmdOdzZWd2ZDY2p2bWNab3p3Qklqb3ZESGxPU05vSEdUYi1EZG1zcE1SX0NvaGxsa05WVEM3NlVGckVRaW9qQ3cxUkhzbjJjcVF6ckJOVXdaNHYxSkRs?oc=5",
+          "publishedAt": "2026-11-20T21:16:52+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "6cf7d2324b92e5",
+      "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레 - 씨네플레이",
+          "publisher": "씨네플레이",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hWE1RLUFhcDFoSGRfMG5TbEZTZ1NPaEZtT3FQRS1OZDlSM1hzcEU2QzBPMlN3SE1ZdnFyMjU4Vkg1LUpUdFdYUmU5eTB6MTU2TDVIdjhFbDNYRHM?oc=5",
+          "publishedAt": "2026-11-19T09:01:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "6e3088e707ba6d",
+      "title": "‘사운드:트랙’ 신인 감독들 “OTT 못지않게” 외쳤다…KBS 단막극 첫 방송 맞아",
+      "category": "연예",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "‘사운드:트랙’ 신인 감독들 “OTT 못지않게” 외쳤다…KBS 단막극 첫 방송 맞아 - 위키트리",
+          "publisher": "위키트리",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1RRl9zV1k5Z0l0NTZsb1NOTXcyX0x0X0UxdFl6SWZPaC1sVVhGQ2VTRnlmaG9jS2Q1LWpTd09vV013Yl9QX19IVDBJWUF6OXpCRVRBaWdn?oc=5",
+          "publishedAt": "2026-11-18T22:26:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "b926a4e2fa526c",
+      "title": "장기요양보험 이용 가족 절반 이상 “돌봄 여전히 부담”",
+      "category": "시니어·복지",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "장기요양보험 이용 가족 절반 이상 “돌봄 여전히 부담” - 애드뉴스인천",
+          "publisher": "애드뉴스인천",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjTnVzM3ljWmFCWWJmMzljMExFSm9ibkpWNjdYU0hvOVpjTHE2WVhqVUd0Yk9fU2ZGQUVSVjRiNG55ZGZ4eG91bGpzOE5PRjBKbDZNaFo5d25BTXE2eUZwdjNWQk9LcG1rd1Z3?oc=5",
+          "publishedAt": "2026-11-17T06:42:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 22,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "b6e88cdbac3371",
+      "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
+          "publisher": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQbWx6VzU1YnhrdWY5eElWdUg4aXJySTBvaXJzeldBOGhKamV0ZVhLSVVNa1NKaENiQ21KeGdVR2xCZy1RdTFQS0t0RjZpZ2xvNVVUOXViUURPcHhJbUJhcDREaFI4dDNkRzdfTzNGTmFpaTJGUnR2MDdxQV9wWkwtV3BxTTNpQmJCUjJ4bEJhWVpwYm5JcEszQUZ3dmplM2c3SlluYmh0NVd4VFIyMzJCb0lMU0hNNGV3RWNUdlhCWmxBRWtoQUFhSkNxWDgwa1JNX3U2Q0xBR2pIeWJKRWc?oc=5",
+          "publishedAt": "2026-11-20T07:07:49+00:00"
         }
       ],
       "scores": {
@@ -1238,384 +1421,22 @@
       ]
     },
     {
-      "id": "7ecd35b27a5ca6",
-      "title": "“퇴원 뒤에도 살던 집에서” 통합돌봄 우선 지원 노인 98만 명 추산",
+      "id": "163dd64fd1d19c",
+      "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의",
       "category": "시니어·복지",
       "region": "KO",
       "headlines": [
         {
-          "title": "“퇴원 뒤에도 살던 집에서” 통합돌봄 우선 지원 노인 98만 명 추산 - 이투데이",
-          "publisher": "이투데이",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ubWhMRlRGNHFuZEl2ZUtodUJoeC1VbFBSSlNZYU1ZUVZ4Y3UtdklJcHlFeGl4U1VJUklsVG5zNFZoMUNmNFlIMTRXVlZQcW90OXluUjNxYkthQQ?oc=5",
-          "publishedAt": "2026-11-19T14:30:00+00:00"
+          "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의 - 캐어유 뉴스",
+          "publisher": "캐어유 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1femN6bjFzdEVqM09qR1J0dUhsSVhjdjc4LVV1cG5ZM0ZYb3RxLU9KMkdOZEs0Q1VCaWlNLWNzYmdrRTEzajZQcExiaENCc1ZYdExaQ0Q2UF9KMnB0ZHQ5WVNaTEttYS1LYXpEeWRR?oc=5",
+          "publishedAt": "2026-11-15T03:00:00+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "6e3088e707ba6d",
-      "title": "‘사운드:트랙’ 신인 감독들 “OTT 못지않게” 외쳤다…KBS 단막극 첫 방송 맞아",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "‘사운드:트랙’ 신인 감독들 “OTT 못지않게” 외쳤다…KBS 단막극 첫 방송 맞아 - 위키트리",
-          "publisher": "위키트리",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1RRl9zV1k5Z0l0NTZsb1NOTXcyX0x0X0UxdFl6SWZPaC1sVVhGQ2VTRnlmaG9jS2Q1LWpTd09vV013Yl9QX19IVDBJWUF6OXpCRVRBaWdn?oc=5",
-          "publishedAt": "2026-11-18T22:26:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "50a039eb8336c4",
-      "title": "신혼부부 임차보증금 이자지원 사업 안내",
-      "category": "생활 정보",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "신혼부부 임차보증금 이자지원 사업 안내 - 분야별 정보",
-          "publisher": "분야별 정보",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KVTlXOUFETFEyQlF5Q0pkZ3dKeHFFZWVRZWRwYjd4ejdqY0k1Nks1Qldtb3ZYRmN0R0c1dHR0YkFGTlNFeEdpbjFPU04tV2JKOVhiQTRaME9tLVBKcEJn?oc=5",
-          "publishedAt": "2026-11-18T08:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "5ee0a9c095cf86",
-      "title": "CL Makes Her Long-Awaited Solo Comeback With \"ICONIC\"",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "CL Makes Her Long-Awaited Solo Comeback With \"ICONIC\" - Complex",
-          "publisher": "Complex",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOTG8yckFIRjhSZy1vcVFSMzZjSl9DUUJ5eXVOMVFudmV5eDMyYU5sa1cxa0lwODJ0ZU80TEltekZYMmdVbV9qY0JBX1F1TTRka3Y5Vjh2T2RmYW1sazVRSG1ZNzJwRlZwcUN0VGJMbHROdWNfUnBXLVhfQWVzQy11NQ?oc=5",
-          "publishedAt": "2026-11-20T12:32:15+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "c93ac990f30682",
-      "title": "Superhuman expands Go AI assistant across its apps",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Superhuman expands Go AI assistant across its apps - The American Bazaar",
-          "publisher": "The American Bazaar",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTURGZkdoZ19aOUpRSWNhdWxNT3NIR1oxREh0aEN4OVNkQTQxM3YyUERENmlmRWxOZEF3UlFSMWQtVjBUU1hQeDFoWTU1SVM4S2Z6anVmQ1FUdUVjbDN6MjdWNkxpTWlCNDJOdjF6UGF1dHBMMFBCaVppR2dPZTNHSW5NOFZXNDVZWEYxXzBDcHJLT01yMXR3QUpFTVRIY2c?oc=5",
-          "publishedAt": "2026-11-20T00:19:59+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "9d39a76268bf7f",
-      "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식",
-      "category": "K-pop",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식 - 뉴시스",
-          "publisher": "뉴시스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NdIBeEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NQ?oc=5",
-          "publishedAt": "2026-11-19T07:40:56+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "d34a18f0b9c601",
-      "title": "예방이냐 절감이냐 — 유럽 요양 개혁이 한국에 보내는 경고장",
-      "category": "시니어·복지",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "예방이냐 절감이냐 — 유럽 요양 개혁이 한국에 보내는 경고장 - https://www.didimkorea.net/",
-          "publisher": "https://www.didimkorea.net/",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBDZVVmVk1pNkRXZUlMNVJRSTlxd3ZYQXgwWTgyYWN0Ml95N0NGS09ySnc4dGxUZkhlYkhseUhYcVZIRWdJaTlhRDREOEg2anc?oc=5",
-          "publishedAt": "2026-11-19T09:42:55+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "4500daf9e39a85",
-      "title": "11월 2주차, 화제성 1위는 `데블스 플랜3`…출연자는 `장동민` [공식]",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "11월 2주차, 화제성 1위는 `데블스 플랜3`…출연자는 `장동민` [공식] - 마이데일리",
-          "publisher": "마이데일리",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5KWWtZYk0tSm1DZ19Lc203ZVBBZUY5dFU5ZThubERVSFRxOURaa2Zua2s5dDI5U3hLdWtFdHRMYXVXWVYtUlIxVWpRcU1IVks3RzN6NmVfNWcxUTdvbzZpLQ?oc=5",
-          "publishedAt": "2026-11-18T05:42:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "b6e88cdbac3371",
-      "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
-          "publisher": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQbWx6VzU1YnhrdWY5eElWdUg4aXJySTBvaXJzeldBOGhKamV0ZVhLSVVNa1NKaENiQ21KeGdVR2xCZy1RdTFQS0t0RjZpZ2xvNVVUOXViUURPcHhJbUJhcDREaFI4dDNkRzdfTzNGTmFpaTJGUnR2MDdxQV9wWkwtV3BxTTNpQmJCUjJ4bEJhWVpwYm5JcEszQUZ3dmplM2c3SlluYmh0NVd4VFIyMzJCb0lMU0hNNGV3RWNUdlhCWmxBRWtoQUFhSkNxWDgwa1JNX3U2Q0xBR2pIeWJKRWc?oc=5",
-          "publishedAt": "2026-11-20T07:07:49+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "8e7b6c9eb64f68",
-      "title": "Google adds Tool Retrieval to the Gemini API to tame tool-heavy AI agents",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Google adds Tool Retrieval to the Gemini API to tame tool-heavy AI agents - Crypto Briefing",
-          "publisher": "Crypto Briefing",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE81QmJON3M0a2ppaVRqRTNYaUlmQzlILS1yNkZTLXRWWWJQXzFvXzZVTjVKUktkZTZybWZyS2NHWjNqN3ZldlR0djVxSVZGMm05V2k3aGhBeERlWnRSb3ZSRElnRjRaNGNmckdzc29B?oc=5",
-          "publishedAt": "2026-11-19T18:38:27+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "a93223a674e995",
-      "title": "빅뱅도 블랙핑크도 ‘명단 밖’…전속 4팀 남은 YG의 숙제 [가요 뷰]",
-      "category": "K-pop",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "빅뱅도 블랙핑크도 ‘명단 밖’…전속 4팀 남은 YG의 숙제 [가요 뷰] - 데일리안",
-          "publisher": "데일리안",
-          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPSFNBZmttcUwyTHV4eGtJZ1RwaDdDRzN2R09DcXhGOEQ5RzBRTFNCVUlLSHozWjJfdTM1RWMxeTd5RG52Sy1kbzNNelVLRFMxZWxnc2NWd2k5bmdZYzRTWFpBQkxZVV80a0hIaWJNNy0tazhRTTlKMzRFbVZXaTFJZGhvS3Q4cjBNLWVybUhMT2VBaWRvUjBoazJBRzk0U2lNbUdkclZQR1JZNjhkampkSjNqc1hiZS1XcnZHLXBMc3RmT0ZVd3J0QWxteXhKSVcxU2VUYkFHYXRpZXUxUUV4emN1Z3RjOFpGOEdJVzQ1RVBJeG5wZ1A0WXFnZUpkWWIxdlp6c1RIUUphZHpxQTRnN09GQnZqOUxj?oc=5",
-          "publishedAt": "2026-11-18T23:37:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "3f9db8271a6c65",
-      "title": "집에서 살고 싶은 장기요양 수급자, 돌봄은 부족",
-      "category": "시니어·복지",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "집에서 살고 싶은 장기요양 수급자, 돌봄은 부족 - 이투데이",
-          "publisher": "이투데이",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE00QWYteV9TSUpHRjk5ODdOMjdUYmtLX25qQ3VTaEZOcUdmTDA0YWdFQ2FIZTBnQTRoNWRpNElncm5PV0lEVzNISnQwWEg3YS12Sl9ybDFfU0xxdw?oc=5",
-          "publishedAt": "2026-11-19T07:21:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "1969e1c235f0f7",
-      "title": "[공식]장동민의 위엄..'데블스 플랜3' 이끌고 화제성 단숨에 '1위'",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "[공식]장동민의 위엄..'데블스 플랜3' 이끌고 화제성 단숨에 '1위' - 스타뉴스",
-          "publisher": "스타뉴스",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8wNThpRDZxSXh1ZzlGYi1ZakRjNkE5d3VQN1AzQ09yU2JoVGt2bTYyTXhGNmtXaVRqMFJGRHZFQTRoSjZiemJpdmxyVUFPdWp1cWlfeGZMUFRMOWlvLUV6clUybEtmcFg0RDVVWGRnZnRKR28?oc=5",
-          "publishedAt": "2026-11-18T05:31:44+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -1691,16 +1512,16 @@
       ]
     },
     {
-      "id": "43a5cecd1f0422",
-      "title": "'그룹·솔로 케이스포돔 매진시킨 첫 女가수' 태연, 또 같은 곳서 콘서트",
+      "id": "9d39a76268bf7f",
+      "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "'그룹·솔로 케이스포돔 매진시킨 첫 女가수' 태연, 또 같은 곳서 콘서트 - 뉴시스",
+          "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식 - 뉴시스",
           "publisher": "뉴시스",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBRVWJoVGxUZV8xZzhLaUN4Vlg2RTRHWEppOXZQekJEUXF0VFFrZjlqWXc0bmR3aVE1SktQcW9PVzNhSk0wRW5zYkx5YnQ2OW1ya2NlQ1MtRlVuSUVmanBnYnJObWVUaGVtS2pQZTNmSkNqemvSAXhBVV95cUxPSFQxbFZoN3FQcWxVMlpvbTZIdEhpekU1VHhyZlJmbEdRYV9GSF93Rmo1ZGlUeVF0T0kyX0pPenB1YVpJSHgwaTd4OFViWnpkbm1fUWJBX1lFNTBRY0xXYVVTN2kxcnk5OFJ1WEQ3dThjNFhjZVM2QjI?oc=5",
-          "publishedAt": "2026-11-18T06:58:20+00:00"
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NdIBeEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NQ?oc=5",
+          "publishedAt": "2026-11-19T07:40:56+00:00"
         }
       ],
       "scores": {
@@ -1721,52 +1542,22 @@
       ]
     },
     {
-      "id": "6034baceb1355e",
-      "title": "[단독]“필요한 서비스 못받고, 본인부담금도 발생”… 장기요양등급 포기 5년새 1만5000명",
+      "id": "16d44e5d5799db",
+      "title": "[남기찬 칼럼] 부모님 퇴원 날짜는 잡혔는데, 집에서의 돌봄은 준비됐을까?",
       "category": "시니어·복지",
       "region": "KO",
       "headlines": [
         {
-          "title": "[단독]“필요한 서비스 못받고, 본인부담금도 발생”… 장기요양등급 포기 5년새 1만5000명 - 동아일보",
-          "publisher": "동아일보",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBOdV9hNkI0V0lxSzRCakRYQ0xPYWNId2tlMWNITS1NVkNjLTRJcnZxbHlyay1PTVY0S1MyTndMV0ZaWHJfeE53d052NlUxdEw4WlFKajZRNG56QXplZ1hhSzdrQ29KSXp3Y0lrbFpPRm4zY3NIdmfSAWZBVV95cUxOR3ZSVk1zNm8yNmZxdkxycWFlMl9ZeWl2RVhKSGNfZTI2aGZGZkZUa3VZOHZ3bklVeUNiMHJWcF9QMTZteUhrUWUyM3cxalJzMWtodDltTTVMY1EzelJOa21Vbi1ya3c?oc=5",
-          "publishedAt": "2026-11-18T19:30:00+00:00"
+          "title": "[남기찬 칼럼] 부모님 퇴원 날짜는 잡혔는데, 집에서의 돌봄은 준비됐을까? - 캐어유 뉴스",
+          "publisher": "캐어유 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9iQzVoWUdwOHAta1BOLVRhMzI1dzlyTFlkMzZpZ0ZXYXpkQjhSOUF5SzY2X25ULVktZXJMSWVOWjZ6UnB3ZlFzNzBRX2FLT004YWo3c09BR010aGtFX3p1N053RGlQT1Qwc1hFX0Fn?oc=5",
+          "publishedAt": "2026-11-15T00:00:00+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "5f6aba90ba6517",
-      "title": "“장혁 포스 후덜덜” 300억 대작 ‘문무’ 풀렸다‥시청률은 4%대인데 OTT 올킬",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "“장혁 포스 후덜덜” 300억 대작 ‘문무’ 풀렸다‥시청률은 4%대인데 OTT 올킬 - 뉴스엔",
-          "publisher": "뉴스엔",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBUTERNak4tWWF6c2gwLXJNZEJ4MUdiQkJmdjhPbEdJdC1QZlhLdWxnS1VrZHlaV0g2dElzemxiT2NCMm5zRzBDVjJOelZtUk9vU09wMDllNEhrRllES1Etb2ZYNWoyQzNp?oc=5",
-          "publishedAt": "2026-11-18T02:27:36+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -1791,6 +1582,67 @@
           "publisher": "Ticketmaster Blog",
           "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5cHZhY1RCWEtQeGdIcXNKQUJCNTV4VWxMYktpU1ZRTlVkbk9xXzE4aHdCeDh1dUtLQWpiMlQ0SURlRUxWX3hOSUhyTkN0bWNkT05oNnF4RFRQOVM1emtNa093U0N1WVI0?oc=5",
           "publishedAt": "2026-11-18T08:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "23070b1dfe0370",
+      "title": "Vericut Optimizer 3.0 introduces AI assistant and cost savings tools",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Vericut Optimizer 3.0 introduces AI assistant and cost savings tools - Aerospace Manufacturing magazine",
+          "publisher": "Aerospace Manufacturing magazine",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSm5TVTJOcjUyRFNFSkpjNnh6UGdvaVdFeTdTSm16VXVob1pjVEpFd0RFNUpUVEZXY1BUc0F2cEo5MW14TFR5WE9jN3E0MWFKc0NsWlFNMWJwTW1INTdsZHFpbjNfY1ZsenBIS1FfNmRnSWx0NnRCSXk3WkR6VnIxMXltdmd6cW1zSm5VQWlJVWJxTUV0dHZiWA?oc=5",
+          "publishedAt": "2026-11-19T16:51:37+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "a93223a674e995",
+      "title": "빅뱅도 블랙핑크도 ‘명단 밖’…전속 4팀 남은 YG의 숙제 [가요 뷰]",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "빅뱅도 블랙핑크도 ‘명단 밖’…전속 4팀 남은 YG의 숙제 [가요 뷰] - 데일리안",
+          "publisher": "데일리안",
+          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPSFNBZmttcUwyTHV4eGtJZ1RwaDdDRzN2R09DcXhGOEQ5RzBRTFNCVUlLSHozWjJfdTM1RWMxeTd5RG52Sy1kbzNNelVLRFMxZWxnc2NWd2k5bmdZYzRTWFpBQkxZVV80a0hIaWJNNy0tazhRTTlKMzRFbVZXaTFJZGhvS3Q4cjBNLWVybUhMT2VBaWRvUjBoazJBRzk0U2lNbUdkclZQR1JZNjhkampkSjNqc1hiZS1XcnZHLXBMc3RmT0ZVd3J0QWxteXhKSVcxU2VUYkFHYXRpZXUxUUV4emN1Z3RjOFpGOEdJVzQ1RVBJeG5wZ1A0WXFnZUpkWWIxdlp6c1RIUUphZHpxQTRnN09GQnZqOUxj?oc=5",
+          "publishedAt": "2026-11-18T23:37:00+00:00"
         }
       ],
       "scores": {
@@ -1842,22 +1694,22 @@
       ]
     },
     {
-      "id": "b926a4e2fa526c",
-      "title": "장기요양보험 이용 가족 절반 이상 “돌봄 여전히 부담”",
-      "category": "시니어·복지",
+      "id": "43a5cecd1f0422",
+      "title": "'그룹·솔로 케이스포돔 매진시킨 첫 女가수' 태연, 또 같은 곳서 콘서트",
+      "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "장기요양보험 이용 가족 절반 이상 “돌봄 여전히 부담” - 애드뉴스인천",
-          "publisher": "애드뉴스인천",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjTnVzM3ljWmFCWWJmMzljMExFSm9ibkpWNjdYU0hvOVpjTHE2WVhqVUd0Yk9fU2ZGQUVSVjRiNG55ZGZ4eG91bGpzOE5PRjBKbDZNaFo5d25BTXE2eUZwdjNWQk9LcG1rd1Z3?oc=5",
-          "publishedAt": "2026-11-17T06:42:00+00:00"
+          "title": "'그룹·솔로 케이스포돔 매진시킨 첫 女가수' 태연, 또 같은 곳서 콘서트 - 뉴시스",
+          "publisher": "뉴시스",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBRVWJoVGxUZV8xZzhLaUN4Vlg2RTRHWEppOXZQekJEUXF0VFFrZjlqWXc0bmR3aVE1SktQcW9PVzNhSk0wRW5zYkx5YnQ2OW1ya2NlQ1MtRlVuSUVmanBnYnJObWVUaGVtS2pQZTNmSkNqemvSAXhBVV95cUxPSFQxbFZoN3FQcWxVMlpvbTZIdEhpekU1VHhyZlJmbEdRYV9GSF93Rmo1ZGlUeVF0T0kyX0pPenB1YVpJSHgwaTd4OFViWnpkbm1fUWJBX1lFNTBRY0xXYVVTN2kxcnk5OFJ1WEQ3dThjNFhjZVM2QjI?oc=5",
+          "publishedAt": "2026-11-18T06:58:20+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 22,
+        "editorialPriority": 24,
         "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
+        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -1872,16 +1724,16 @@
       ]
     },
     {
-      "id": "7b3a979d32d604",
-      "title": "Best AI CRM in 2026: 8 Tools Compared for Growing Teams",
+      "id": "aa37bea5388ef2",
+      "title": "Too Many AI Apps, Too Many Tabs: Can One Tool Handle Everything?",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Best AI CRM in 2026: 8 Tools Compared for Growing Teams - Memeburn",
-          "publisher": "Memeburn",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE56amhNWGpNa2xuMEl5UXlWNDhFUUZsV21DNEpLckNoc3hRSkpqenNrd01oZjJFWnBkOW1kd3U0bkZqZFBDZkxaaQ?oc=5",
-          "publishedAt": "2026-11-17T08:00:00+00:00"
+          "title": "Too Many AI Apps, Too Many Tabs: Can One Tool Handle Everything? - MensXP",
+          "publisher": "MensXP",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNjhRZlFZbnVRcXprUU5ZNWRrejNwUFJITnhzRHNjSUU4OUxQTG1ZUDFzb2pQeVNheWxSVmtuQVVNdlBHb043SG5mMzRYNVgwNk52U3E1TzlqcmdJMjZRZVV1S1Jkb0VUcEFmVVdkVUJ0RWZoTXRMS3dLbGJDd0RLWjM1X2dJRWVYWjM3c0t6RzJWLVlMdUtjUjBEN0NDX1pnVVdUM0E1dVF6WVluYXd3RU9tYmVzV3PSAbcBQVVfeXFMUDY4UWZRWW51UXF6a1FOWTVka3ozcFBSSE54c0RzY0lFODlMUExtWVAxc29qUHlTYXlsUlZrbkFVTXZQR29ON0huZjM0WDVYMDZOdlNxNU85anJnSTI2UWVVdUtSZG9FVHBBZlVXZFVCdEVmaE10TEt3S2xiQ3dES1ozNV9nSUVlWFozN3NLekcyVi1ZTHVLY1IwRDdDQ19aZ1VXVDNBNXVRellZbmF3d0VPbWJlc1dz?oc=5",
+          "publishedAt": "2026-11-18T12:54:57+00:00"
         }
       ],
       "scores": {
@@ -1903,21 +1755,21 @@
       ]
     },
     {
-      "id": "821d6de8e2d81b",
-      "title": "송파구의사회 \"퇴원 후 돌봄 공백…지역의료 연계가 답\"",
-      "category": "시니어·복지",
-      "region": "KO",
+      "id": "70bf3d6b01eade",
+      "title": "Galaxy A57 5G and A37 5G Give Young Users AI Tools for Photo-Editing, Productivity and Social Media",
+      "category": "AI·생산성",
+      "region": "EN",
       "headlines": [
         {
-          "title": "송파구의사회 \"퇴원 후 돌봄 공백…지역의료 연계가 답\" - 보건신문",
-          "publisher": "보건신문",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOcWtKMWdCODhuVU5xbWpRYU9MelB5OUpJdTNjc0tCUXNJdWtkck1Hak90SWJaRnpXNTRTVjM5X2xDbkpaVlFxaVNyUW5vVEhNQjkwaWQxT0VqR3FnOXdNajVjYw?oc=5",
-          "publishedAt": "2026-11-16T01:20:27+00:00"
+          "title": "Galaxy A57 5G and A37 5G Give Young Users AI Tools for Photo-Editing, Productivity and Social Media - samsung.com",
+          "publisher": "samsung.com",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNeGd6dkpHdlJFQ1NQakQyRDFzM1NfeWFJbzZXS2FwNkIwOWg4NHhJVUt5eUQyMnVoSHQ3bW1raHk0SE9mQ0wycHN0dTFNbm56V01mMmM5Q2hFY1FlUDlXWlRYa1hieTM5MDdGYjQwRHRuZmJ4SmZBTVo2enliSGR2YWplNDF5MFlXWnQ4M25yaDdPQmNRbVQ5bmNyTXQ2MlhYMlRNRmtDZld0RGlfMy1SOUI1eGJWNTdMTDdJdWNjcW1jZjlQ?oc=5",
+          "publishedAt": "2026-11-18T11:15:44+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
@@ -1929,7 +1781,8 @@
       },
       "status": "needs_sources",
       "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
       ]
     },
     {
@@ -1964,36 +1817,6 @@
       ]
     },
     {
-      "id": "cd272db042f8dc",
-      "title": "퇴원 후 집에서 간호받도록… 병원 평가·수가 개선 제안",
-      "category": "시니어·복지",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "퇴원 후 집에서 간호받도록… 병원 평가·수가 개선 제안 - 이투데이",
-          "publisher": "이투데이",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9tNHZlWHU2alljc1NSZjZTcUVtN1IyMTNieWZsSDYtT21aeWpVVjNfNll4bWZaWURCbjRucktmbmNZTFNzemZJMkdxRUxhaDh2YjVwRVZzOUVZUQ?oc=5",
-          "publishedAt": "2026-11-16T00:34:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "5380b38b5c4e2f",
       "title": "12 Workload Automation Tools: Vendor Benchmark",
       "category": "AI·생산성",
@@ -2025,36 +1848,6 @@
       ]
     },
     {
-      "id": "163dd64fd1d19c",
-      "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의",
-      "category": "시니어·복지",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의 - 캐어유 뉴스",
-          "publisher": "캐어유 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1femN6bjFzdEVqM09qR1J0dUhsSVhjdjc4LVV1cG5ZM0ZYb3RxLU9KMkdOZEs0Q1VCaWlNLWNzYmdrRTEzajZQcExiaENCc1ZYdExaQ0Q2UF9KMnB0ZHQ5WVNaTEttYS1LYXpEeWRR?oc=5",
-          "publishedAt": "2026-11-15T03:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "435a382d0e4ed3",
       "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors?",
       "category": "AI·생산성",
@@ -2083,36 +1876,6 @@
       "reasons": [
         "서로 다른 매체 2곳 미만: 검증 근거 부족",
         "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "16d44e5d5799db",
-      "title": "[남기찬 칼럼] 부모님 퇴원 날짜는 잡혔는데, 집에서의 돌봄은 준비됐을까?",
-      "category": "시니어·복지",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "[남기찬 칼럼] 부모님 퇴원 날짜는 잡혔는데, 집에서의 돌봄은 준비됐을까? - 캐어유 뉴스",
-          "publisher": "캐어유 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9iQzVoWUdwOHAta1BOLVRhMzI1dzlyTFlkMzZpZ0ZXYXpkQjhSOUF5SzY2X25ULVktZXJMSWVOWjZ6UnB3ZlFzNzBRX2FLT004YWo3c09BR010aGtFX3p1N053RGlQT1Qwc1hFX0Fn?oc=5",
-          "publishedAt": "2026-11-15T00:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
@@ -2177,46 +1940,16 @@
       ]
     },
     {
-      "id": "6fd03355f1e7a7",
-      "title": "AI in Education Market to Reach USD 136.79 Billion by 2035",
+      "id": "9b591660741684",
+      "title": "Send one prompt to 6 AI models and compare their answers with AskAnyModel for $31.99",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "AI in Education Market to Reach USD 136.79 Billion by 2035 - GlobeNewswire",
-          "publisher": "GlobeNewswire",
-          "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQQmFJeHh6cm45UFhPb3ByUUdIVGJ5Y0FHMnNnNjVIQXFzRGplS3ZOaXNkRklJXzBSRVg3VXdYeWhhY3JKbmZ4S0syeHZjRDJQMzdYSENMbWdJWVV5Z0JXYnAtSnA4cFRpejl3LUFJVDFoWVpaVFlueURsR1Q1THlMUEVoeU50aGZ1cFJ3NzZ0UWI5Vndjc3ZvLTNOYzFiNkhmNHI3a0dGa2F0WGw1dkZIb2FvOUg4cW5XVXpCWHowUGJJVVBZNC1DNFBEY05leDRHcW9KNWsxbWNnRjlrdWV1WDN1VWtUSGhVWThQeEZJZ2pfTzN1eEs3aFo1U0Z1QlRpRkJ0OWJGTWhjY28wYnN1QlJHd2xnZHhYbi1yNjhBVTU4SW5mQjV6dVRaM1ZpLUlIeV81eEhYS2VsYnpDclVvN1dFOWgtNEFVY3BPT2gycFFHZDA?oc=5",
-          "publishedAt": "2026-11-20T15:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "a7dfecac564326",
-      "title": "OVHcloud confirms AI shift with pre-release of OVHai Workspace",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "OVHcloud confirms AI shift with pre-release of OVHai Workspace - Telecompaper",
-          "publisher": "Telecompaper",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSXA5WDQzWE05X25pMUhCbUFGZmU3Q0I0WUt4aVhGOXhCQUtuZFdpMUdJNGJvbUptSHFvUUdNME91RkQ4TUJhX3huRXpWRjZPcUV5enJnOHJwUTVaMVRqYi1RRS04WEJRM1QzVWl1ZlpESXhjdnFJeF9qWXJhaWd2UHBXbVNsSEpZRHRWSUpLbjcyaDRPTDNILU9tZ2lGTF9UaURXeDk3XzU?oc=5",
-          "publishedAt": "2026-11-20T11:26:28+00:00"
+          "title": "Send one prompt to 6 AI models and compare their answers with AskAnyModel for $31.99 - Mashable",
+          "publisher": "Mashable",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVFhxeWVNMjY0WWhlamR4WEN4TzBEWU51OF9VWUIxYUs1cUxxczJPZllCeFZpTXFhZmRIQ3hvMUNQbUl4WFA3NVByODlSWjR1VzVrXzFkZjM3UF9kcktKU2VOQW1yc0RhbFBGd0hrNlg4dzhVT2N6bTJLNVZQS2VMQkFnNXM?oc=5",
+          "publishedAt": "2026-11-20T05:59:40+00:00"
         }
       ],
       "scores": {
@@ -2277,36 +2010,6 @@
           "publisher": "Comics Gaming Magazine",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBZTDdHUHpTTHJIenRoYWFFcTdFa09fVTFMMmljak9YNjVQZWpLM2dPX2JHRjNhYXhfQ09pbnp0UWJsZmJtOWVtX2U0UUlMclItOWhIVDlUMUZlYXEwa0d3MXl2S0NmYlNtZzdnUXNiYmxqZ3k4a3lnNFcwMVhjRnM?oc=5",
           "publishedAt": "2026-11-19T13:42:34+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "a94a36240e906f",
-      "title": "Earnings call transcript: Youdao Q3 2026 revenue falls as stock drops 8.7%",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Earnings call transcript: Youdao Q3 2026 revenue falls as stock drops 8.7% - Investing.com",
-          "publisher": "Investing.com",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWWYwS3pHVThadWE0UzBPMVhDQ1NYWkZzS3dsMVhnY2NOUV94TTN0cGxiYU1mUUxkVTBsU3FDSURiZEdFNUZBSHVEYzNIaWVyZXcyaGtEVk0zQ0IzTlMxUTFvU2FpN2I4bV9OanJiUGc4MGVCcVpHSkdVWHk0WTF6S0lRLUN3REpSUHAtT3pwNXh4Nmd3V05iZ1ZNWlNwWGd5TDg5WTRUaVVMdUNOamZfU2czUEJxOGlqOXN1aVhGbTFJVW5WbUE?oc=5",
-          "publishedAt": "2026-11-19T11:36:34+00:00"
         }
       ],
       "scores": {
@@ -2447,46 +2150,16 @@
       ]
     },
     {
-      "id": "80c7c650b7c4e1",
-      "title": "I Predicted This Siri Paywall Months Ago. iOS 27.3 Just Proved Me Right",
+      "id": "5c731c53e8c883",
+      "title": "Microsoft and Salesforce Launch Powerful AI Integrations for Businesses",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "I Predicted This Siri Paywall Months Ago. iOS 27.3 Just Proved Me Right - PCMag",
-          "publisher": "PCMag",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVnVHM0dCaGYtNW9tcE96WlJHdXN2NDlQRmkwNDV3eUFDb2d1a1hJX1g2MW5fU3ppNHd5bldIbTBsdzhSdjVhQnNGYnhVbXNRSXdJSWpqNXN5QU5Jb2laRnktZ29QekZtVGpxZFRRLVQxendPOGNQVzhsODNzaXdZMlpIZFI2NEEtRjBreWhMc0xZTTRjNGRoNzg2bF9nTnJzMnFz?oc=5",
-          "publishedAt": "2026-11-18T08:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "057b6935a898ff",
-      "title": "Ryzen AI Halo vs DGX Spark: 192 GB vs 128 GB [2026]",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Ryzen AI Halo vs DGX Spark: 192 GB vs 128 GB [2026] - shattered.io",
-          "publisher": "shattered.io",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ncE5LMWtBczZJMEJqWWpKOG91ank3NVBZTVRZZXRCU0UxbHBjZ2VaRHB3d1llOG1VRWRyYUdtczFEYWN2cnB0SmJuYWZZQ1RCTWVSQVROYzhMUWJUeU5BNUNXZzRSU3FQYktha0liUzhEZ2ZTMXVr?oc=5",
-          "publishedAt": "2026-11-17T19:57:28+00:00"
+          "title": "Microsoft and Salesforce Launch Powerful AI Integrations for Businesses - Small Business Trends",
+          "publisher": "Small Business Trends",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVNPbGdXWnlacHBNTlpMc2syQXVSWFJMSjBRWkRRVnBaUTFONE1CSHJiVkp1YUFpSVFNTF9vNXJSUGtmenlNSGt1NUQwUzN6OHBTVmdCYTA0dU1oVUNGemFfZ3pPN2N6VWIzYlJlRDlRVUJQN1FLMFA4LVpUNXRPYW1VZ2JqSHFUYjA1cXV0ejJIVlExY2RnaGJIQnRiZGxD?oc=5",
+          "publishedAt": "2026-11-18T14:19:00+00:00"
         }
       ],
       "scores": {
@@ -2517,36 +2190,6 @@
           "publisher": "ETMM",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY0Y5dzYxQ3BnVDFqMjRROTE1bFo1Ykk5VWZwSTJJNWlGTlEtUHViUkN0TnlKNnk0blFJTmdpWGs4dUVuOEVtdURER2VqcUswY2JsYXVsSUk0UWJDRUxYeDBqZUVkdm1LaG1mR2xYX3MxX2xkQTdLeEY2MnpsZ0MyM21uMF9iZ19YTV94RWctYnAxYkhSS3JIbUNObWxSZEQ4dzdieThyVVhsNnV6SktrN3hR?oc=5",
           "publishedAt": "2026-11-16T20:56:37+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "4fab4cc8816509",
-      "title": "Intel Xeon and GPU D-Series: HPC and AI in a Unified System",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Intel Xeon and GPU D-Series: HPC and AI in a Unified System - igor´sLAB",
-          "publisher": "igor´sLAB",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVNpNlZwaG5fSGpmekVDR0w2dlRySnFvSDNPU2NPbXh0YkdDWjlqTHd5LWM0YnhWWXdKNTJmLXVNTnNrMnJhR08teE44SjZSV0dLbnp6MWNoa0JfanR4eUxSbDBQWHpFa0gwME1SVjNOLVV6LURxZTVWd2JmSndROEpRcXBuQQ?oc=5",
-          "publishedAt": "2026-11-16T14:00:00+00:00"
         }
       ],
       "scores": {
