@@ -1,22 +1,70 @@
 {
-  "generatedAt": "2026-11-21T06:32:02.060761+00:00",
+  "generatedAt": "2026-11-21T12:28:14.050165+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 22,
-      "lastSuccessAt": "2026-11-21T06:32:02.060761+00:00"
+      "count": 30,
+      "lastSuccessAt": "2026-11-21T12:28:14.050165+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-21T06:32:02.060761+00:00"
+      "lastSuccessAt": "2026-11-21T12:28:14.050165+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "전기요·탄소매트 가성비 BEST 4 — 25,330원부터 퀸 사이즈까지 실제 가격 비교",
+      "url": "https://blog.naver.com/todaypickkr/224486321397?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T12:06:21+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 블랙프라이데이 삼성 vs LG 가전 — 삼성위크·엘지닷 쿠폰·카드 혜택 비교",
+      "url": "https://blog.naver.com/todaypickkr/224486279514?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T11:16:07+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 무신사 무진장 블랙프라이데이 총정리 — 11월 22일 오후 7시 오픈, 쿠폰 6회·최대 80% 공략법",
+      "url": "https://blog.naver.com/todaypickkr/224486262783?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T10:55:30+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 연말정산 신용카드·체크카드 소득공제 차이 — 공제율 15% vs 30%, 한도와 황금 비율",
+      "url": "https://blog.naver.com/todaypickkr/224486243338?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T10:30:24+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 크리스마스 케이크 사전예약 총정리 — 브랜드별 마감일·가격·할인 한 표",
+      "url": "https://blog.naver.com/todaypickkr/224486234999?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T10:19:52+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 MAMA 2일차 최종 결과 총정리 — 방탄소년단 '올해의 앨범', 코르티스 '올해의 노래', 태양 오열과 빅뱅×둘리 무대",
+      "url": "https://blog.naver.com/todaypickkr/224486219923?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T10:00:47+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "12월 1일 마감! 2026 근로·자녀장려금 기한 후 신청 — 5% 감액 기준과 가구별 최대액",
+      "url": "https://blog.naver.com/todaypickkr/224486208599?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T09:46:35+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "앤트로픽 상장 이틀 만에 급락, 서학개미 연말정산 '100만 원' 함정 — 12월 31일 전에 확인할 것",
+      "url": "https://blog.naver.com/todaypickkr/224486197502?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-21T09:32:35+00:00"
+    },
     {
       "channel": "naver",
       "title": "[쿠팡] 제철 노지감귤·꿀고구마·겨울 간식 BEST 4 비교",
@@ -151,63 +199,63 @@
     },
     {
       "channel": "tistory",
+      "title": "Best Black Friday Laptop Deals 2026: What to Buy",
+      "url": "https://blog83848.tistory.com/38",
+      "publishedAt": "2026-11-21T11:28:22+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 블랙프라이데이 삼성 vs LG 가전 — 삼성위크·엘지닷 쿠폰·카드 혜택 비교",
+      "url": "https://blog83848.tistory.com/37",
+      "publishedAt": "2026-11-21T11:20:25+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 무신사 무진장 블랙프라이데이 총정리 — 11월 22일 오후 7시 오픈, 쿠폰 6회·최대 80% 공략법",
+      "url": "https://blog83848.tistory.com/36",
+      "publishedAt": "2026-11-21T10:59:20+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 연말정산 신용카드·체크카드 소득공제 차이 — 공제율 15% vs 30%, 한도와 황금 비율",
+      "url": "https://blog83848.tistory.com/35",
+      "publishedAt": "2026-11-21T10:47:51+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 크리스마스 케이크 사전예약 총정리 — 브랜드별 마감일·가격·할인 한 표",
+      "url": "https://blog83848.tistory.com/34",
+      "publishedAt": "2026-11-21T10:23:33+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 MAMA Awards Day 2 Winners: BTS Takes Album of the Year, CORTIS Wins Song of the Year, and BIGBANG Brings Dooly to the Stage",
+      "url": "https://blog83848.tistory.com/33",
+      "publishedAt": "2026-11-21T10:12:20+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "2026 MAMA 2일차 최종 결과 총정리 — 방탄소년단 '올해의 앨범', 코르티스 '올해의 노래', 태양 오열과 빅뱅×둘리 무대",
+      "url": "https://blog83848.tistory.com/32",
+      "publishedAt": "2026-11-21T10:08:22+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "12월 1일 마감! 2026 근로·자녀장려금 기한 후 신청 — 5% 감액 기준과 가구별 최대액",
+      "url": "https://blog83848.tistory.com/31",
+      "publishedAt": "2026-11-21T09:50:13+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "앤트로픽 상장 이틀 만에 급락, 서학개미 연말정산 '100만 원' 함정 — 12월 31일 전에 확인할 것",
+      "url": "https://blog83848.tistory.com/30",
+      "publishedAt": "2026-11-21T09:38:29+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "[쿠팡] 제철 노지감귤·꿀고구마·겨울 간식 BEST 4 비교",
       "url": "https://blog83848.tistory.com/29",
       "publishedAt": "2026-11-21T05:54:51+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2027 노인일자리 모집 — 월 최대 77만 원, 유형별 조건과 신청법",
-      "url": "https://blog83848.tistory.com/28",
-      "publishedAt": "2026-11-21T05:26:00+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2026 MAMA Awards Day 2: Start Time, Livestream Channels, Lineup and How to Watch BIGBANG's 20th-Anniversary Stage",
-      "url": "https://blog83848.tistory.com/27",
-      "publishedAt": "2026-11-21T05:00:27+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2026 MAMA 오늘(11/21) 2일차 라인업·생중계 시간 총정리 — 빅뱅×둘리 무대와 1일차 수상 결과",
-      "url": "https://blog83848.tistory.com/26",
-      "publishedAt": "2026-11-21T04:55:00+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "Gemini Tasks Goes Free in Korea — and Gemini 4 Neon Arrives",
-      "url": "https://blog83848.tistory.com/25",
-      "publishedAt": "2026-11-21T04:28:24+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "구글 제미나이 '태스크' 한국 무료 출시 & 제미나이 4 네온 총정리",
-      "url": "https://blog83848.tistory.com/24",
-      "publishedAt": "2026-11-21T04:21:50+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2026 난방비 지원금 총정리 — 에너지바우처 29만~70만 원, 도시가스·전기요금 감면까지",
-      "url": "https://blog83848.tistory.com/23",
-      "publishedAt": "2026-11-20T03:08:22+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "한파 대비 난방비 절약 4종 — 문풍지 5,350원부터 방한 커튼까지 실제 가격 비교",
-      "url": "https://blog83848.tistory.com/22",
-      "publishedAt": "2026-11-20T01:27:04+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2027 수능 등급컷·가채점 확인법과 수험표 할인 총정리 — 12월 11일 성적 통지 전에 챙길 것",
-      "url": "https://blog83848.tistory.com/21",
-      "publishedAt": "2026-11-19T23:38:19+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "Voice Phishing Scams Targeting Seniors in South Korea: Prevention Tips and What to Do",
-      "url": "https://blog83848.tistory.com/20",
-      "publishedAt": "2026-11-19T15:58:48+00:00"
     }
   ]
 }
