@@ -1,15 +1,180 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T01:17:13.339738+00:00",
+  "updatedAt": "2026-11-21T01:17:56.991663+00:00",
   "maxDailyCalls": 3,
   "dailyAttempts": {
     "2026-11-17": 3,
     "2026-11-18": 3,
     "2026-11-19": 3,
-    "2026-11-20": 3
+    "2026-11-20": 3,
+    "2026-11-21": 3
   },
   "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
   "entries": [
+    {
+      "candidateId": "40d399632cc6da",
+      "title": "2026 지역사랑 휴가지원사업 반값여행: 여행경비 50% 환급 조건과 신청방법",
+      "category": "생활 정보",
+      "region": "KO",
+      "researchedAt": "2026-11-21T01:17:51.627551+00:00",
+      "topic": "2026 지역사랑 휴가지원사업 반값여행: 여행경비 50% 환급 조건과 신청방법",
+      "summary": "2026년부터 시행되는 지역사랑 휴가지원사업(반값여행)은 인구감소지역의 관광 활성화를 위해 여행경비의 50%를 모바일 지역사랑상품권으로 환급해주는 제도입니다. 지원 대상은 해당 지역과 공고에서 정한 인접지역을 제외한 관외 거주자로, 신청 전 주민등록상 주소지를 기준으로 지원 제외지역에 해당하는지 확인해야 합니다. 지원 혜택은 일반 유형의 경우 인정 여행경비의 50%를 개인 최대 10만 원, 2인 이상 팀 최대 20만 원까지 환급하며, 청년은 70%·개인 최대 14만 원, 가족 유형은 최대 50만 원까지 지원하는 지역도 있습니다. 환급금은 계좌 현금 이체가 아니라 해당 지자체의 모바일 지역사랑상품권(지역화폐)으로 지급됩니다. ([prd-test.wegive.co.kr](https://prd-test.wegive.co.kr/wezine/detail/2351?utm_source=openai)) 반값여행은 여행을 다녀온 뒤 영수증만 올린다고 지원받을 수 있는 구조가 아닙니다. 반드시 정해진 순서를 따라야 합니다. 먼저 한국관광공사의 '대한민국 반값여행' 공식 안내 페이지나 각 지자체 누리집을 통해 현재 참여 가능한 대상 지역을 먼저 확인합니다. 방문할 지역이 모집 ",
+      "keyFacts": [
+        "2026년부터 시행되는 지역사랑 휴가지원사업은 인구감소지역의 관광 활성화를 위해 여행경비의 50%를 모바일 지역사랑상품권으로 환급해주는 제도입니다.",
+        "지원 대상은 해당 지역과 공고에서 정한 인접지역을 제외한 관외 거주자로, 신청 전 주민등록상 주소지를 기준으로 지원 제외지역에 해당하는지 확인해야 합니다.",
+        "지원 혜택은 일반 유형의 경우 인정 여행경비의 50%를 개인 최대 10만 원, 2인 이상 팀 최대 20만 원까지 환급하며, 청년은 70%·개인 최대 14만 원, 가족 유형은 최대 50만 원까지 지원하는 지역도 있습니다.",
+        "환급금은 계좌 현금 이체가 아니라 해당 지자체의 모바일 지역사랑상품권(지역화폐)으로 지급됩니다.",
+        "반값여행은 여행을 다녀온 뒤 영수증만 올린다고 지원받을 수 있는 구조가 아닙니다.",
+        "여행 전 사전 신청 및 승인을 받아야 하며, 여행 기간 중 지자체가 지정한 관광지 방문 인증이 필요합니다."
+      ],
+      "openQuestions": [
+        "각 지자체별로 지원 대상 지역과 신청 방법이 다를 수 있으므로, 여행 계획 전 해당 지역의 공식 공고를 반드시 확인해야 합니다."
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://prd-test.wegive.co.kr/wezine/detail/2351?utm_source=openai",
+          "title": "2026 지역사랑 휴가지원사업 반값여행: 여행경비 50% 환급 조건과 신청방법"
+        },
+        {
+          "url": "https://www.wakation.kr/programs/support/half-price-travel?utm_source=openai",
+          "title": "반값여행 신청 전 확인할 조건과 환급 절차"
+        },
+        {
+          "url": "https://ktopland.kr/2026-%EB%B0%98%EA%B0%92%EC%97%AC%ED%96%89-%EC%A7%80%EC%97%AD%EC%82%AC%EB%9E%91-%ED%9C%B4%EA%B0%80%EC%A7%80%EC%9B%90-%EC%8B%A0%EC%B2%AD/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://regolith.kr/news/article/2026-%EC%A7%80%EC%97%AD%EC%82%AC%EB%9E%91-%ED%9C%B4%EA%B0%80%EC%A7%80%EC%9B%90-%EC%88%99%EB%B0%95%EB%B9%84%EB%8F%84-%ED%99%98%EA%B8%89-%EB%8C%80%EC%83%81-%EC%9D%BC%EB%B0%98-10%EB%A7%8C%EC%9B%90%EC%B2%AD%EB%85%84-14%EB%A7%8C%EC%9B%90-%EB%B0%9B%EB%8A%94-%EC%A1%B0%EA%B1%B4-f59b95ed?recent_limit=10&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148962566&pWise=main&pWiseMain=L1&utm_source=openai",
+          "title": "'반값여행' 신청 서두르세요…지역사랑상품권으로 50% 환급 - 정책뉴스 | 뉴스 | 대한민국 정책브리핑"
+        },
+        {
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148960443&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://prosimin.tistory.com/entry/2026-%EC%A7%80%EC%97%AD%EC%82%AC%EB%9E%91-%ED%9C%B4%EA%B0%80%EC%A7%80%EC%9B%90-%EB%B0%98%EA%B0%92%EC%97%AC%ED%96%89-%EC%8B%A0%EC%B2%AD%EB%B0%A9%EB%B2%95-%EC%B4%9D%EC%A0%95%EB%A6%AC?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://dodogung.tistory.com/37?category=852504&utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "55cac43c5efdb3",
+      "title": "아이돌 그룹 플레이브, ‘2026 플레이브 월드투어 킵 잇 매닉’ 앙코르 공연",
+      "category": "K-pop",
+      "region": "KO",
+      "researchedAt": "2026-11-21T01:17:48.725415+00:00",
+      "topic": "플레이브 월드투어 앙코르 공연",
+      "summary": "버추얼 아이돌 그룹 플레이브(PLAVE)는 2027년 1월 22일부터 24일까지 서울 고척 스카이돔에서 첫 월드투어 '킵 잇 매닉'(KEEP IT MANIC)의 앙코르 공연을 개최한다. 이번 공연은 총 3회로 진행되며, 팬클럽 선예매는 12월 1일 오후 8시부터, 일반 예매는 12월 4일 오후 8시부터 NOL을 통해 가능하다.",
+      "keyFacts": [
+        "2027년 1월 22일부터 24일까지 서울 고척 스카이돔에서 앙코르 공연 개최",
+        "공연은 총 3회로 진행되며, 팬클럽 선예매는 12월 1일 오후 8시부터, 일반 예매는 12월 4일 오후 8시부터 NOL을 통해 가능",
+        "첫 월드투어의 대미를 한국에서 장식하는 자리"
+      ],
+      "openQuestions": [],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.fnnews.com/news/202611191436480104?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.bntnews.co.kr/article/view/bnt202611190234?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://sports.khan.co.kr/article/202611191522003?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.cineplay.co.kr/ko-kr/articles/30879?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.topstarnews.net/news/articleView.html?idxno=16280706&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.tenasia.co.kr/article/2026111975194?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://sports.donga.com/ent/article/all/20261119/135054063/1?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=487653&utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 15,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "704858a531a94f",
+      "title": "국민연금공단, 기초연금 온라인 신청 '퀴즈 이벤트' 실시",
+      "category": "시니어·복지",
+      "region": "KO",
+      "researchedAt": "2026-11-21T01:17:44.877627+00:00",
+      "topic": "국민연금공단 기초연금 온라인 신청 퀴즈 이벤트",
+      "summary": "국민연금공단은 기초연금 온라인 신청 절차 개선을 홍보하기 위해 대한노인회와 협력하여 '온라인 간편 신청 퀴즈 이벤트'를 진행합니다. 이벤트는 2026년 11월 20일부터 12월 4일까지 진행되며, 참여자 중 추첨을 통해 400명에게 1만 원 상당의 모바일 상품권을 지급합니다. ([news.mtn.co.kr](https://news.mtn.co.kr/article/2026112010173722714?utm_source=openai))",
+      "keyFacts": [
+        "이벤트 기간: 2026년 11월 20일 ~ 12월 4일",
+        "참여 방법: 대한노인회 시도연합회 및 지회에 부착된 포스터의 QR코드 또는 대한노인회 홈페이지를 통해 참여",
+        "추첨을 통해 400명에게 1만 원 상당의 모바일 상품권 지급"
+      ],
+      "openQuestions": [
+        "이벤트 참여 방법에 대한 자세한 안내는 어디에서 확인할 수 있나요?",
+        "당첨자 발표는 언제 이루어지며, 당첨자는 어떻게 통보받게 되나요?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://news.mtn.co.kr/article/2026112010173722714?utm_source=openai",
+          "title": "어르신~ '복지로' 간편해졌어요! | MTN 머니투데이방송"
+        },
+        {
+          "url": "https://www.shop.or.kr/bbs/board.php?bo_table=report&wr_id=9355&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.newscj.com/news/articleView.html?idxno=3450673&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.factlog.kr/%EA%B8%B0%EC%B4%88%EC%97%B0%EA%B8%88-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%8B%A0%EC%B2%AD-%ED%95%9C%EC%B8%B5-%EB%8D%94-%EA%B0%84%ED%8E%B8%ED%95%98%EA%B2%8C-%ED%80%B4%EC%A6%88-%EC%9D%B4%EB%B2%A4%ED%8A%B8/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://biz.heraldcorp.com/article/10944076?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=728843&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.newsis.com/view/NISX20230503_0002289379?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.safemoney.co.kr/news/articleView.html?idxno=31451&utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 12,
+      "status": "needs_human_review"
+    },
     {
       "candidateId": "f9766d878b1023",
       "title": "아동수당 자동지급 등 복지급여 신청 절차 바뀐다…복지부, 새 정책 이름 공모",
