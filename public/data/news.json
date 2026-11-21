@@ -1,24 +1,32 @@
 {
-  "fetchedAt": "2026-11-21T12:28:13.915668+00:00",
+  "fetchedAt": "2026-11-21T18:25:11.918863+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
   "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
   "categoryCounts": {
     "연예/KO": 7,
-    "K-pop/KO": 10,
+    "K-pop/KO": 9,
     "IT·AI/KO": 4,
     "생활 정보/KO": 4,
     "시니어·복지/KO": 11,
-    "K-pop/EN": 9,
-    "K-드라마/EN": 3,
+    "K-pop/EN": 8,
+    "K-드라마/EN": 2,
     "AI·생산성/EN": 28
   },
   "retainedFromPrevious": 0,
   "items": [
     {
+      "title": "Send one prompt to 6 AI models and compare their answers with AskAnyModel for $31.99 - Mashable",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVFhxeWVNMjY0WWhlamR4WEN4TzBEWU51OF9VWUIxYUs1cUxxczJPZllCeFZpTXFhZmRIQ3hvMUNQbUl4WFA3NVByODlSWjR1VzVrXzFkZjM3UF9kcktKU2VOQW1yc0RhbFBGd0hrNlg4dzhVT2N6bTJLNVZQS2VMQkFnNXM?oc=5",
+      "publisher": "Mashable",
+      "publishedAt": "2026-11-21T12:37:56+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
       "title": "이민기·곽선영, ‘놀라운 토요일’ 443회 출연 - 제주교통복지신문",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE15SzBNdlVwYVV4eXFLZDBpdEQydUloSnZXRHFqVF9NeXNqdWNUR19NcGdjSGJmTW9wZzNHM2UteWtsVVFMdHI0dk8xUHN2X3pJb29qNS1Nb09NZTB3bFI0?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1iMjhkcC1zOGdlNkUtRTB4MElxX2k1WWJzaVBRTmp5dTFRaFp3dGZqN1JNUW5MWFVUdUhxZ2UxczRVOFF3V1FPMmh2ME4wNDEzQ2JVU1Ezb2hWaDZwN0dZNg?oc=5",
       "publisher": "제주교통복지신문",
       "publishedAt": "2026-11-21T11:14:47+00:00",
       "category": "연예",
@@ -26,25 +34,17 @@
     },
     {
       "title": "국민연금공단, 기초연금 온라인 신청 퀴즈 이벤트 - 전민일보",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1nREpoWDZ3STA4Y2FMQWhJbEpCQTd0MHNKSThVM2FyQVV3b3Vlak16YWNiYXdJLTIycnNQSTFhd3RJN3djYUk4bWFlX25FZTRJVlN1S3dCcHRHU2ZYTGlwSDJoazYzZw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1EcXVwMWZzOTc3d09fMFkxdU9aNWdjY2ktbVlQbGgtZzB6OXBheGFRbm04bGpCX1ZYWVJIYzBQUGpKbHBZUjhiVnk5Q25wdGNVa0tVcGFuV1UtU0E0eU96SmkxcmJmdjQyd0dETg?oc=5",
       "publisher": "전민일보",
       "publishedAt": "2026-11-21T10:51:38+00:00",
       "category": "시니어·복지",
       "region": "KO"
     },
     {
-      "title": "Ayuda para sa mga Jimin stan! 🤭 WATCH: BTS held their soundcheck ahead of its second-day concert in Kaohsiung, Taiwan. Taiwan is the first stop of the Asia leg of the group’s \"ARIRANG\" World Tour. BTS will perform in the Philippines on Marc",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNU05qSEFxNjJ4V21kZ3ZiYVJ2dFFrc0lxTlRyNjZfMm01SzBVSW8wbG5qbUpwUnFzSU1OLVRXMi1xSnpkbEplTlZfbno5NlgzVHFsUEhjSzdKanp4ejBlc1MtcTZsUzFPYkc3QlZWOTE0dy1YdDFReEVoa2dWYnJTWEJJZ0x5YzdsM3o3WVFsYUZiOHFfRHdaRVNlMUdlTlE2NFg0amVuTjFlbnpJbzBnVHdKME9BSTNESE1YQjBiNDFZdjZfM3B0eVRSRlVWUTA2cW5jRHdzaw?oc=5",
-      "publisher": "Facebook",
-      "publishedAt": "2026-11-21T08:56:48+00:00",
-      "category": "K-pop",
-      "region": "EN"
-    },
-    {
-      "title": "[장기요양 기획특집] 2027년 장기요양제도 달라진다…1등급 방문요양 월 최대 48회로 확대 - 패트론타임스",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1waHYtbzUzQ3hkNGdUSnFfajUwaEJzU2JKdU83VlRZemduRkFNaF9tX0FzQUNQUmswOWRXal9ERzVTdi1GVC1PYVljNWYzcEtjZS1V?oc=5",
-      "publisher": "패트론타임스",
-      "publishedAt": "2026-11-21T04:20:11+00:00",
+      "title": "[장기요양 기획특집] 2027년 장기요양제도 달라진다…1등급 방문요양 월 최대 48회로 확대 - 뉴스N연합",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE03LS1YN3dSZ2YtUjhtYkV6MENrNnUydk0xZjBGaVYtYVAxQzJjR1RkNHJwVUhyTWp2RWlhaUtnLVh0UWFoQUZ6NGJR?oc=5",
+      "publisher": "뉴스N연합",
+      "publishedAt": "2026-11-21T04:46:43+00:00",
       "category": "시니어·복지",
       "region": "KO"
     },
@@ -62,14 +62,6 @@
       "publisher": "Sweety High",
       "publishedAt": "2026-11-20T22:45:46+00:00",
       "category": "K-드라마",
-      "region": "EN"
-    },
-    {
-      "title": "From LISA of BLACKPINK & Gracie Abrams to the ‘GTA VI’ Album, Which Music Release Is Your Favorite This Week? Vote! - Billboard",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOODJJTnRzU2RjNUxJRzNNQWtia3pReThWMFAySzR0cnkzLTJDbExUcF90NWxIUTY4X1R3YkxmM0hTS2p5SVRVVDAtMkpIRkpUak9Ba3lfUUtDUjdOSXZORHg5RDhwdXYtUlVjbm9Zb2V2a2xTRzRwMEhBMWdQdml1SlQ4dWZCdWZtRUw5aXNiZ21neFc4VGdQZVh3Qm5vWGtlTzg0aFY2UVFmTTBRNEZV?oc=5",
-      "publisher": "Billboard",
-      "publishedAt": "2026-11-20T22:12:39+00:00",
-      "category": "K-pop",
       "region": "EN"
     },
     {
@@ -129,14 +121,6 @@
       "region": "EN"
     },
     {
-      "title": "플레이브, 2027년 1월 고척돔 앙코르 콘서트…첫 월드투어 대미 장식 - 뉴스아이이에스",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB2OEtmcGM3SXllOGxyOWJNSEJyNzdkTmtlS0Y0eWFrcXpTT1I4VkNLSy1HQ3JUR1Q5Y3JteXoyWkVxcjAybDQxS0ExcWViSWN5MzZOSVNFM2tHZVVUckt2M1Y3a1NIVXBRS1h1ZkZ30gFyQVVfeXFMUEQzOW9UeWpKTGFETzBLTmZ6N3hWcHczb1NaZDZwTnhQX09sbVFMR3hHU0Z1Ukd5RFV1OG9CWURWMzV1ZFhVcHQ3S3ptcUtwMnZwN2pkOHRNdVQxdlRmdnNOVzRyS2Y3XzZTTWx3QTAzdTRB?oc=5",
-      "publisher": "뉴스아이이에스",
-      "publishedAt": "2026-11-20T15:30:46+00:00",
-      "category": "K-pop",
-      "region": "KO"
-    },
-    {
       "title": "기업 AI 교육, 사용법 교육만으론 부족...직원 판단력·교육 품질·조직 역할 재설계 필요 - 지티티코리아",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9GN3Bra253TTNOYVRJdzI4WjgtMzV2TC1iWl9nNkdKX3VESWpmRVJNNmozSzNBMURiSnliTTBsV3A5VDhzTFcwRHJrbFR4amt3UDVHQXFqT3ZQTHlCcG5OQnNobUg2U2NkMUE?oc=5",
       "publisher": "지티티코리아",
@@ -165,6 +149,14 @@
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOTG8yckFIRjhSZy1vcVFSMzZjSl9DUUJ5eXVOMVFudmV5eDMyYU5sa1cxa0lwODJ0ZU80TEltekZYMmdVbV9qY0JBX1F1TTRka3Y5Vjh2T2RmYW1sazVRSG1ZNzJwRlZwcUN0VGJMbHROdWNfUnBXLVhfQWVzQy11NQ?oc=5",
       "publisher": "Complex",
       "publishedAt": "2026-11-20T12:32:15+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts - Britannica",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82a0hoSTFZVFNVaXlsNjlXZjZVQ1dyTEZBeWtfZEVjeGoyLTIxcHJqTFF5eGwydTZERUtHUHd0SnM5MDBCZmUzVXRQbHk?oc=5",
+      "publisher": "Britannica",
+      "publishedAt": "2026-11-20T08:00:00+00:00",
       "category": "K-pop",
       "region": "EN"
     },
@@ -205,14 +197,6 @@
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNd1A2QlNKbE1zSGtYUlF2dmVjNDZEYnlnaUtHQks5eGNGQ0VDbWdqMEIxdkRiMGNMTm1OVWw0WlRpVFE3TjZPMzFEM2JxZ0Vpbm9vTnh4YTNfZGFLX1l6MkxtOTBHVEFMQmJYUUlHMk9CemJOcEU4a05uQXZkekpiLVRDcmV1R2l3VmhGT2FUbw?oc=5",
       "publisher": "The Tech Buzz",
       "publishedAt": "2026-11-20T07:02:38+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Send one prompt to 6 AI models and compare their answers with AskAnyModel for $31.99 - Mashable",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVFhxeWVNMjY0WWhlamR4WEN4TzBEWU51OF9VWUIxYUs1cUxxczJPZllCeFZpTXFhZmRIQ3hvMUNQbUl4WFA3NVByODlSWjR1VzVrXzFkZjM3UF9kcktKU2VOQW1yc0RhbFBGd0hrNlg4dzhVT2N6bTJLNVZQS2VMQkFnNXM?oc=5",
-      "publisher": "Mashable",
-      "publishedAt": "2026-11-20T05:59:40+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -321,10 +305,10 @@
       "region": "EN"
     },
     {
-      "title": "Vericut Optimizer 3.0 introduces AI assistant and cost savings tools - Aerospace Manufacturing magazine",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSm5TVTJOcjUyRFNFSkpjNnh6UGdvaVdFeTdTSm16VXVob1pjVEpFd0RFNUpUVEZXY1BUc0F2cEo5MW14TFR5WE9jN3E0MWFKc0NsWlFNMWJwTW1INTdsZHFpbjNfY1ZsenBIS1FfNmRnSWx0NnRCSXk3WkR6VnIxMXltdmd6cW1zSm5VQWlJVWJxTUV0dHZiWA?oc=5",
-      "publisher": "Aerospace Manufacturing magazine",
-      "publishedAt": "2026-11-19T16:51:37+00:00",
+      "title": "MSI laptop packing 32GB of RAM drops to a new low price in Amazon Black Friday deal - PC Guide",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNQTY4M3ZPYW5qY2Y2SG5MOGRJSG1ocGMzLTZJMGRHa21hOU9JT2NjQ05BN2xZSWpLMktoMVc1a2Z6X3dweUl2RG9yRlZwX05LSzFISjllY3BCd2dyU1Ryb25HdGVDY0xJSW5HMHNhR2ZOd0FtLUpYSVVaM3pOaTY0V3M1NjVqbXlBMG1KRTJXUlRQSWh6R1RTbl9ZdDRJakZMSllpRGJpY3BTbmMxX1lnYmZmWWE?oc=5",
+      "publisher": "PC Guide",
+      "publishedAt": "2026-11-19T15:49:08+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -345,14 +329,6 @@
       "region": "KO"
     },
     {
-      "title": "Superhuman Expands Go Across the Suite, Unveils Personal AI Assistant - Business Wire",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQV2RxWXNGbUJROHdsdEw2ZkJrZHluMi1YTTVCN2dBQ2dBRlNKOTdVTlY1Rnp3SWYwckFSQUdjanpaNEJjZFdBY3JEY1lmbUlUT3gzaEdhSkJsdjZFWXh5Tk1PVUZMZmpBU29WZW9MOG84dFQwckhDVmltZDE3c3pMcWRGVUFDWGI0OWVvVVI1a2xiRnNtSEhoTmdDVGFXVFNYOWR6aU1QWWtfdUsxRTNPcFM0R0dCcGZONlVGQ21HTjYtd3c?oc=5",
-      "publisher": "Business Wire",
-      "publishedAt": "2026-11-19T14:00:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "Superhuman pushes its Go assistant everywhere - TechCrunch",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTVM1emxkTUdNN1hYVzBuWXlUTEdtWDVVaThDamY0NU9jdVgwMUhiejhjTTl0T3pqVlNpXzU2OHZhdV9DSjhlWFZ6VF9fbkFyVGYzZE8wWlJwbmthYUNBMm1VdXZPaG1qZWFoS3IyWmlPWnNwLXhTaXg1TFpzMVZrc3NkcnJxRHc?oc=5",
       "publisher": "TechCrunch",
@@ -361,10 +337,18 @@
       "region": "EN"
     },
     {
-      "title": "Why an Intel-Powered AI PC Should Be On Your Holiday Shopping List - Comics Gaming Magazine",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBZTDdHUHpTTHJIenRoYWFFcTdFa09fVTFMMmljak9YNjVQZWpLM2dPX2JHRjNhYXhfQ09pbnp0UWJsZmJtOWVtX2U0UUlMclItOWhIVDlUMUZlYXEwa0d3MXl2S0NmYlNtZzdnUXNiYmxqZ3k4a3lnNFcwMVhjRnM?oc=5",
-      "publisher": "Comics Gaming Magazine",
-      "publishedAt": "2026-11-19T13:42:34+00:00",
+      "title": "Rimini Street to Host Investor Day on January 14, 2027, in New York City - Via TT",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNc3d0ak90dzZRcjZZY2VWbGoxN1QtLWdGcHI1akpnTFlPOXNiWV9obTVJSkJweVR3Q3J4THVNWW0zcld3T2lTT25JSlMza2NtOTVSZWxva0dnNU9rTDhROGZDdkt1bTZ2QTlNUC11WmpEUl8zdVk1ejREV1prRTJKOXRuem44c3ZtX2xHbG55cDFiMGNsbXZFU3ZPYjJVUzR1R3QtZFlhOUVQWVVQMGlELWJsZTQ2LVNkMjNtbkh6TXBDVUhmczNrZVYyaTlsV2tDU0J6cXBB?oc=5",
+      "publisher": "Via TT",
+      "publishedAt": "2026-11-19T14:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Superhuman Expands Go Across the Suite, Unveils Personal AI Assistant - Business Wire",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQV2RxWXNGbUJROHdsdEw2ZkJrZHluMi1YTTVCN2dBQ2dBRlNKOTdVTlY1Rnp3SWYwckFSQUdjanpaNEJjZFdBY3JEY1lmbUlUT3gzaEdhSkJsdjZFWXh5Tk1PVUZMZmpBU29WZW9MOG84dFQwckhDVmltZDE3c3pMcWRGVUFDWGI0OWVvVVI1a2xiRnNtSEhoTmdDVGFXVFNYOWR6aU1QWWtfdUsxRTNPcFM0R0dCcGZONlVGQ21HTjYtd3c?oc=5",
+      "publisher": "Business Wire",
+      "publishedAt": "2026-11-19T14:00:00+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -457,6 +441,14 @@
       "region": "KO"
     },
     {
+      "title": "Best Data Labeling Platform in 2026: 7 Tools Compared for AI Teams - Memeburn",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9TLUh6RWZEcjlhNERmTk9WaTB5VzlUa3dhSmYxbjY3clltTmtZOTJIak1uOU1wNTRUZTZEOTJ5cXFBSGtzUEtPN19aZjZUVFd5UXBZenliTUw3VldoOWc?oc=5",
+      "publisher": "Memeburn",
+      "publishedAt": "2026-11-19T01:15:32+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
       "title": "Here is the best photo editing software to use in 2026 - Amateur Photographer",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA1UElqV0RMOXB2OXB1WEVwR0pPeEl1S3hMdV8xS2FURFZ3TW5BSkhBdndUSGozOW5SaUNyS1N6UDFTLXhWUno4Y0FrN0hFY1JMRUw2WkFTVktYSHBVY1M3NmJTZlhlekN2VU9ud05ZN0xrMFNLVElYcA?oc=5",
       "publisher": "Amateur Photographer",
@@ -479,14 +471,6 @@
       "publishedAt": "2026-11-18T23:37:00+00:00",
       "category": "K-pop",
       "region": "KO"
-    },
-    {
-      "title": "\"Good Partner\" Season 2 Premieres November 20: Cast, Storyline & Where to Watch - Dojeon Media",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMFNsUTBscWNoMUJ4WjZMbXYzdHUyanlRdko1a3U5U25md21JTXJaUXcyc2t2RkRBVTBWOTh2SG5KdWhuNVR2Y0Z0bEJQS2hHY1dXWEhfUVZXU3pHa1VoMG9EbU5hYkN0SXFLTFB6VGI0aTFQejZjZEtoMF85UlZyT3NsYWVRRUpsTkdnaXQyVjREZUdxSDFJWHVBYVZjU0tQeXdKcTJFNVkxQQ?oc=5",
-      "publisher": "Dojeon Media",
-      "publishedAt": "2026-11-18T22:51:52+00:00",
-      "category": "K-드라마",
-      "region": "EN"
     },
     {
       "title": "‘사운드:트랙’ 신인 감독들 “OTT 못지않게” 외쳤다…KBS 단막극 첫 방송 맞아 - 위키트리",
@@ -521,6 +505,14 @@
       "region": "EN"
     },
     {
+      "title": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor - TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbUpvMjV0Ul9PZEo2OWRRcVdPeVRBQTkxZUtlUndoZllpRVlua2ZXWlpzbFZHMVVPWWVvWXhYTlhDQ2o5WEVVQ2l6U1ZwRTNTd21zNTg4S0tWZzFDWVlzNl9tRTQzcVg4MmJpQzJqdFRNU3JzLW1QeFlnN0FTQlBUYWw4SjU0bGxaY2owYkdDOHJpSTVMcFYtSTNvYzdvelk3N0tTSHhBd09qU1haZnY2dVRud2dqa3NmU3Zrd2YzY0xBRHNDLTJDNGN2c3htQQ?oc=5",
+      "publisher": "TechCrunch",
+      "publishedAt": "2026-11-18T19:56:39+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
       "title": "Apple Creator Studio gets major AI upgrade with many new tools - Cult of Mac",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPYzFpU2w1WnVWSDNMdkROaUpBTzdWV0h2ZzNFRUJyVGZtTkdpdGV6RFV0OXR3NHYxcjROY1lZc3JMc0tuR2E5cUhKU3dGa0Z5WEhNTERVRjBqX2NjaVhFWUg0UnowMmZEaF9Ibjhjb3BCUE05cTlubHVfTE5STjlnWlhOYnFPYldUOFNvWDZUWTZYYUVQTDBIRkdrUjc1dw?oc=5",
       "publisher": "Cult of Mac",
@@ -537,34 +529,10 @@
       "region": "EN"
     },
     {
-      "title": "I Predicted This Siri Paywall Months Ago. iOS 27.3 Just Proved Me Right - PCMag UK",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOM1Y4OVRhT0dGT0dtVkVvZldtNzd6eHpVQW5femhDSTFQMHRPRkpPWTlBT3BWLUlpRHhPZHFWMFFUeGZBRkIyYnpuSmRjSFRHTHBBLXZmYmdHVkFtTE85LUo5Q3pFaXhmQUNUMFQ5V2g2N1BIeVhPS3dFbkhrUm42VFdxU2MxdzJJRjVpUTFUSEUyUEM0MGI1cFR5NHJmU0dUM1Q5Mg?oc=5",
-      "publisher": "PCMag UK",
-      "publishedAt": "2026-11-18T14:40:27+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Microsoft and Salesforce Launch Powerful AI Integrations for Businesses - Small Business Trends",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVNPbGdXWnlacHBNTlpMc2syQXVSWFJMSjBRWkRRVnBaUTFONE1CSHJiVkp1YUFpSVFNTF9vNXJSUGtmenlNSGt1NUQwUzN6OHBTVmdCYTA0dU1oVUNGemFfZ3pPN2N6VWIzYlJlRDlRVUJQN1FLMFA4LVpUNXRPYW1VZ2JqSHFUYjA1cXV0ejJIVlExY2RnaGJIQnRiZGxD?oc=5",
-      "publisher": "Small Business Trends",
-      "publishedAt": "2026-11-18T14:19:00+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "Quorum Qnect AI Puts Agents in 4 Energy Workflows - shattered.io",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV2c5LXEyOS1JSTJ2SEF4OHNnZEFRa18xR2M5bzdQalhldW9iRkU4di1RMXQtUEVvWTFyN3hQVmp3UnoxVW96WHNSbWlOZnFSSFRqVzZNa2ZmWXdlbEV1ekZKRUZLVXBnelRXZVNYX1dsczVNcXFGbFcxRlMxVVVFYlZhY3NEUnpTMVVJ?oc=5",
       "publisher": "shattered.io",
       "publishedAt": "2026-11-18T14:04:43+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Too Many AI Apps, Too Many Tabs: Can One Tool Handle Everything? - MensXP",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNjhRZlFZbnVRcXprUU5ZNWRrejNwUFJITnhzRHNjSUU4OUxQTG1ZUDFzb2pQeVNheWxSVmtuQVVNdlBHb043SG5mMzRYNVgwNk52U3E1TzlqcmdJMjZRZVV1S1Jkb0VUcEFmVVdkVUJ0RWZoTXRMS3dLbGJDd0RLWjM1X2dJRWVYWjM3c0t6RzJWLVlMdUtjUjBEN0NDX1pnVVdUM0E1dVF6WVluYXd3RU9tYmVzV3PSAbcBQVVfeXFMUDY4UWZRWW51UXF6a1FOWTVka3ozcFBSSE54c0RzY0lFODlMUExtWVAxc29qUHlTYXlsUlZrbkFVTXZQR29ON0huZjM0WDVYMDZOdlNxNU85anJnSTI2UWVVdUtSZG9FVHBBZlVXZFVCdEVmaE10TEt3S2xiQ3dES1ozNV9nSUVlWFozN3NLekcyVi1ZTHVLY1IwRDdDQ19aZ1VXVDNBNXVRellZbmF3d0VPbWJlc1dz?oc=5",
-      "publisher": "MensXP",
-      "publishedAt": "2026-11-18T12:54:57+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -589,6 +557,14 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMDRFbXpZWm85T3hDa051Q2otcGk5V2JTNEtYT29TR1ZjeXBmZFRxdVQxVkVudXVUWUZyaDA4czlUcmh2VU00ZnNNUG5VUk5BVHVQSDR1MmZ2bUQ3LWpERzJTZXFlVFRpXzN2YmZ6aUVrOXhTZkVRN0Zzb1hkYkZLcUNOam52Qm1rRGoyQTJpbWNoWHVIWWFJc2pFVzJURWM?oc=5",
       "publisher": "Yahoo Finance",
       "publishedAt": "2026-11-16T15:40:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Siemens Demonstrates Agentic AI Workflow for Prompt-Based Engineering of 3D Printed Robotic Grippers - https://3dprinting.com/",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLVBPc012eVVYaGRfVnllSWZPMV91aGRFdEsxV3BobW1STzJ2T1ZFMmFYRFVDZS1TMXNVeU1STS1PdUprcmQ3clI1Tk1OaWtubjl5UkxhN1hlZms3SDVmOVdEZGU1Q3gwUGZmelBOckVORTJRbmJ3MDZUVXlhUkVTcTRZRFRzTnZ6azB2U0duelVSZzNTNW9sZ2o5OE9NeTZJSGlpSTJvWU1kVUFmMnhnMzh0Vi13U0dfZEZxaEN6SnZpTzRiUG1aWQ?oc=5",
+      "publisher": "https://3dprinting.com/",
+      "publishedAt": "2026-11-16T15:10:24+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
