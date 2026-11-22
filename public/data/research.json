@@ -1,16 +1,186 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21T01:17:56.991663+00:00",
+  "updatedAt": "2026-11-22T01:17:15.741849+00:00",
   "maxDailyCalls": 3,
   "dailyAttempts": {
     "2026-11-17": 3,
     "2026-11-18": 3,
     "2026-11-19": 3,
     "2026-11-20": 3,
-    "2026-11-21": 3
+    "2026-11-21": 3,
+    "2026-11-22": 3
   },
   "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
   "entries": [
+    {
+      "candidateId": "c95ab2c6bad80f",
+      "title": "UK dates go on sale for KPop Demon Hunters concert tour",
+      "category": "K-pop",
+      "region": "EN",
+      "researchedAt": "2026-11-22T01:17:12.798635+00:00",
+      "topic": "KPop Demon Hunters 2027 'GOLDEN' 월드 투어 영국 공연 일정",
+      "summary": "KPop Demon Hunters는 2027년 6월부터 시작되는 'GOLDEN' 월드 투어의 일환으로 영국에서 7회의 아레나 공연을 발표했습니다. 이 투어는 애니메이션 그룹 HUNTR/X의 음악과 공연을 실시간으로 선보이며, 2027년 10월에 글래스고, 버밍엄, 맨체스터, 런던에서 진행됩니다. ([kpopfwd.com](https://kpopfwd.com/articles/kpop-demon-hunters-golden-world-tour-2027/?utm_source=openai))",
+      "keyFacts": [
+        "투어 시작일: 2027년 6월",
+        "영국 공연 일정: 2027년 10월 12일 글래스고 OVO Hydro, 10월 16일 버밍엄 Utilita Arena(오후 및 저녁 공연), 10월 19일 맨체스터 AO Arena, 10월 22일 및 23일 런던 The O2(총 3회 공연, 23일에는 오후 공연 포함)",
+        "공연 내용: 애니메이션 캐릭터 Rumi, Mira, Zoey의 실시간 공연, 댄스, 스턴트, 관객 참여 등",
+        "티켓 판매 시작일: 2026년 11월 20일 오전 10시(현지 시간)"
+      ],
+      "openQuestions": [
+        "공연에 참여하는 실제 가수들(EJAE, Audrey Nuna, Rei Ami)의 출연 여부는 아직 확인되지 않았습니다.",
+        "티켓 가격은 아직 발표되지 않았습니다."
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://kpopfwd.com/articles/kpop-demon-hunters-golden-world-tour-2027/?utm_source=openai",
+          "title": "‘KPop Demon Hunters’ Announces 2027 ‘GOLDEN’ World Tour, With Seven UK Arena Shows | kpop/fwd"
+        },
+        {
+          "url": "https://www.independent.co.uk/arts-entertainment/music/news/kpop-demon-hunters-world-tour-uk-b3084639.html?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.independent.co.uk/bulletin/culture/kpop-demon-hunters-tour-tickets-dates-b3084653.html?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.nme.com/news/music/kpop-demon-hunters-2027-golden-world-tour-uk-dates-tickets-3975892?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://about.netflix.com/en/news/aeg-presents-netflix-kpop-demon-hunters-golden-world-tour?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.fanatix.com/news/kpop-demon-hunters-announce-2027-uk-tour-dates-for-golden-world-tour?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.glitterbeam.co.uk/news/kpop-demon-hunters-tour-uk?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.powerpopradio.com/news/music-news/2026/11/13/kpop-demon-hunters-announces-2027-golden-world-tour-including-uk-dates?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "c93ac990f30682",
+      "title": "Superhuman expands Go AI assistant across its apps",
+      "category": "AI·생산성",
+      "region": "EN",
+      "researchedAt": "2026-11-22T01:17:10.427751+00:00",
+      "topic": "Superhuman Go AI Assistant Expansion",
+      "summary": "Superhuman, formerly known as Grammarly, has expanded its Go AI assistant across its entire suite of productivity tools, including Docs and Mail. This expansion introduces a personalized AI assistant that proactively manages tasks, drafts content, and integrates with over 20 new partner agents. The Go platform SDK is now generally available, enabling partners to build their own agents within the Go ecosystem. ([blog.superhuman.com](https://blog.superhuman.com/superhuman-expands-go-unveils-personal-ai-assistant/?utm_source=openai))",
+      "keyFacts": [
+        "Superhuman's Go AI assistant now operates within Docs and Mail.",
+        "Users can personalize their Go assistant and manage a team of AI agents.",
+        "Over 20 new partner agents have been integrated into the Go platform.",
+        "The Go platform SDK is now generally available for partners to build their own agents."
+      ],
+      "openQuestions": [
+        "How will the integration of Go AI assistant impact user productivity?",
+        "What specific tasks can the personalized AI assistant handle within Docs and Mail?",
+        "Which 20 new partner agents have been integrated into the Go platform?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://blog.superhuman.com/superhuman-expands-go-unveils-personal-ai-assistant/?utm_source=openai",
+          "title": "Superhuman Expands Go Across the Suite, Unveils Personal AI Assistant"
+        },
+        {
+          "url": "https://blog.superhuman.com/superhuman-go-cross-platform/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://help.superhuman.com/hc/en-us/articles/48484443909517-Get-started-with-Superhuman-Go-for-Android?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://aishunos.uz/en/news/superhuman-go-assistant-expands-suite?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://wisevoter.com/world/us/2026/11/19/superhuman-expands-go-ai-agents-suite?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://theworldofai.org/ai-news/c408b239/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://techamerica.ai/apps/superhuman-go-ai-assistant-expands-across-docs-email-and-apps?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "f6da3ab9785de5",
+      "title": "국민연금공단, 기초연금 온라인 신청 퀴즈 이벤트",
+      "category": "시니어·복지",
+      "region": "KO",
+      "researchedAt": "2026-11-22T01:17:06.815953+00:00",
+      "topic": "국민연금공단 기초연금 온라인 신청 퀴즈 이벤트",
+      "summary": "국민연금공단은 대한노인회와 협력하여 기초연금 온라인 신청 절차 개선을 홍보하기 위해 2026년 11월 20일부터 12월 4일까지 '온라인 간편 신청 퀴즈 이벤트'를 진행합니다. 이벤트 참여자는 대한노인회 시도연합회 및 지회에 부착된 포스터의 QR코드나 대한노인회 홈페이지를 통해 신청할 수 있으며, 추첨을 통해 총 400명에게 1만 원 상당의 모바일 상품권을 지급합니다. 당첨자는 12월 8일에 발표될 예정입니다. ([news.mtn.co.kr](https://news.mtn.co.kr/article/2026112010173722714?utm_source=openai))",
+      "keyFacts": [
+        "이벤트 기간: 2026년 11월 20일 ~ 12월 4일",
+        "참여 방법: 대한노인회 포스터 QR코드 또는 홈페이지 링크",
+        "추첨을 통해 400명에게 1만 원 모바일 상품권 지급",
+        "당첨자 발표일: 2026년 12월 8일"
+      ],
+      "openQuestions": [
+        "이벤트 참여 방법에 대한 자세한 안내는 어디에서 확인할 수 있나요?",
+        "모바일 상품권은 어떤 방식으로 지급되며, 사용 가능한 장소는 어디인가요?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://news.mtn.co.kr/article/2026112010173722714?utm_source=openai",
+          "title": "어르신~ '복지로' 간편해졌어요! | MTN 머니투데이방송"
+        },
+        {
+          "url": "https://www.jeollailbo.com/news/articleView.html?idxno=817372&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.factlog.kr/%EA%B8%B0%EC%B4%88%EC%97%B0%EA%B8%88-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%8B%A0%EC%B2%AD-%ED%95%9C%EC%B8%B5-%EB%8D%94-%EA%B0%84%ED%8E%B8%ED%95%98%EA%B2%8C-%ED%80%B4%EC%A6%88-%EC%9D%B4%EB%B2%A4%ED%8A%B8/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.shop.or.kr/bbs/board.php?bo_table=report&wr_id=9355&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.newscj.com/news/articleView.html?idxno=3450673&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.cstimes.com/news/articleView.html?idxno=728843&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://biz.heraldcorp.com/article/10944076?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.newsis.com/view/NISX20230503_0002289379?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 12,
+      "status": "needs_human_review"
+    },
     {
       "candidateId": "40d399632cc6da",
       "title": "2026 지역사랑 휴가지원사업 반값여행: 여행경비 50% 환급 조건과 신청방법",
