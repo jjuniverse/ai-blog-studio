@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T18:25:11.970675+00:00",
+  "generatedAt": "2026-11-22T00:45:34.263706+00:00",
   "disclaimer": "Editorial-only heuristics; no measured traffic, revenue or factual verification. Promotional topics are excluded from recommendations.",
   "candidates": [
     {
@@ -145,6 +145,67 @@
       "reasons": [
         "복수 매체 헤드라인 확인: 원문 및 공식 발표 추가 검증 필요",
         "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "c95ab2c6bad80f",
+      "title": "UK dates go on sale for KPop Demon Hunters concert tour",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "UK dates go on sale for KPop Demon Hunters concert tour - Rayo",
+          "publisher": "Rayo",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYU9sWkdxYVRzRXJXLTl4dzhRT21NbjlQZE8zVjA4WTVDX0lCR0VVUkhvYWJpV2FjRktrYWtzZUlsMC1XS2JzV3o3bnlUVnpwUzBZQ2FwQjZxczZvMUdoOHF4WkcxMTRfa045ZlQ5S3B0NG9qaE9MVEZ0YnhmblBUV1NjdkZhaVZPZFpv?oc=5",
+          "publishedAt": "2026-11-20T21:13:58+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "5673ff60ddad0c",
+      "title": "에이티즈 콘서트 예매 4일 차이…해외 팬 트럭 시위, 韓 누리꾼 “대만 팬이 문제” 비난",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "에이티즈 콘서트 예매 4일 차이…해외 팬 트럭 시위, 韓 누리꾼 “대만 팬이 문제” 비난 - Kagit",
+          "publisher": "Kagit",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA4R05OT3REUHNfYzJ0ampUTDBTb0ZyblV4ZTFwQm9teElPTVRreFAyUnh6T2dHekFVYXVUTzJjTnhsTmFvYVJTOTFaa2R0QVU1bW9WaE9R?oc=5",
+          "publishedAt": "2026-11-21T18:14:21+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 31,
+        "commercialFitHeuristic": 26,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "사용법·비교 등 정보 탐색 의도 단서"
       ]
     },
     {
@@ -300,36 +361,6 @@
       ]
     },
     {
-      "id": "c95ab2c6bad80f",
-      "title": "UK dates go on sale for KPop Demon Hunters concert tour",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "UK dates go on sale for KPop Demon Hunters concert tour - Rayo",
-          "publisher": "Rayo",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYU9sWkdxYVRzRXJXLTl4dzhRT21NbjlQZE8zVjA4WTVDX0lCR0VVUkhvYWJpV2FjRktrYWtzZUlsMC1XS2JzV3o3bnlUVnpwUzBZQ2FwQjZxczZvMUdoOHF4WkcxMTRfa045ZlQ5S3B0NG9qaE9MVEZ0YnhmblBUV1NjdkZhaVZPZFpv?oc=5",
-          "publishedAt": "2026-11-20T21:13:58+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 30,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 60,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
       "id": "b975998bc9010c",
       "title": "기업 AI 교육, 사용법 교육만으론 부족...직원 판단력·교육 품질·조직 역할 재설계 필요",
       "category": "IT·AI",
@@ -361,21 +392,21 @@
       ]
     },
     {
-      "id": "5673ff60ddad0c",
-      "title": "에이티즈 콘서트 예매 4일 차이…해외 팬 트럭 시위, 韓 누리꾼 “대만 팬이 문제” 비난",
+      "id": "6824f1a6454a2a",
+      "title": "ZEROBASEONE surprises fans with a January 18, 2027 comeback date at MAMA",
       "category": "K-pop",
-      "region": "KO",
+      "region": "EN",
       "headlines": [
         {
-          "title": "에이티즈 콘서트 예매 4일 차이…해외 팬 트럭 시위, 韓 누리꾼 “대만 팬이 문제” 비난 - Kagit",
-          "publisher": "Kagit",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA4R05OT3REUHNfYzJ0ampUTDBTb0ZyblV4ZTFwQm9teElPTVRreFAyUnh6T2dHekFVYXVUTzJjTnhsTmFvYVJTOTFaa2R0QVU1bW9WaE9R?oc=5",
-          "publishedAt": "2026-11-20T07:42:13+00:00"
+          "title": "ZEROBASEONE surprises fans with a January 18, 2027 comeback date at MAMA - Latin Times",
+          "publisher": "Latin Times",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMi1TZ1BrOVBoZXlVanozQmxyRHdQcEJsLWRsVndyUnJ4dnFJTDFscTdUZ01qcXV0dTJuZkFNTmJvZExVOVFTMFN4NlNNeDlmc01GVXloVnpkejQ3VFRObDdMVUtmV1FSWVk0N3BRcF93Z0RuUXhkM1ExRW0wV21haUo4eVdIb1N0bWZYSWpDbmRxSFVwQTc2eHR3Vk4wSzZXdnZoUl9OMUdIdw?oc=5",
+          "publishedAt": "2026-11-21T18:49:56+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 31,
-        "commercialFitHeuristic": 26,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
@@ -387,8 +418,37 @@
       },
       "status": "needs_sources",
       "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "사용법·비교 등 정보 탐색 의도 단서"
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "15d3f4a886513d",
+      "title": "빅뱅, 오늘(20일) 기습 신곡 발표…3개월 컴백 확정",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "빅뱅, 오늘(20일) 기습 신곡 발표…3개월 컴백 확정 - MHN스포츠",
+          "publisher": "MHN스포츠",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5icHY1T1lkcDNFSXdkcXVYODU2c3lERlcxZ1dOaGJydFhvMVNFVkNld2pUVktEbFk1TjdDTDJnREZ3YXdncHc2RTdTYS1xTjY0QlN5dGk5YlhvbDVwS0hfMWJwZw?oc=5",
+          "publishedAt": "2026-11-20T01:14:49+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 30,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 60,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
       ]
     },
     {
@@ -454,16 +514,16 @@
       ]
     },
     {
-      "id": "61171169fade12",
-      "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜?",
+      "id": "f2b816a589e237",
+      "title": "공주시, 2027년 노인일자리사업 참여자 5,026명 모집",
       "category": "시니어·복지",
       "region": "KO",
       "headlines": [
         {
-          "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜? - 오아시스뉴스",
-          "publisher": "오아시스뉴스",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wVXNVTTRhRGtoR0JBX2J1dlF1eHJmZmJQbmR5VnhidzVaUGd5RTZPQXFvS0FNQnRwRUMtVlExU0ZPNkFFblFVNUhvOUNyWm9FMkxlbkVjTUo3Zi1mdERMakdEeC12bUlRNnlfdFVXaGbSAXRBVV95cUxPMzJfWnlwQnRvczF3YTZPbHJJLVkwLWJJenBBQUh5eDctOEtTckRCZmZVVFJmVW1VVGRDZ1VEcnRvb3lsTWh0TVdnTWlTVUNaeUVyY1pCa3g4SGwtbW0wUE0tTDNzSklrMzV4SzFyNk5ma1dZbg?oc=5",
-          "publishedAt": "2026-11-20T04:34:01+00:00"
+          "title": "공주시, 2027년 노인일자리사업 참여자 5,026명 모집 - 메가충청뉴스",
+          "publisher": "메가충청뉴스",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04bTRqT19aY2xoVUhvb0k3amtsVnVtTllRQjdZYVhIWE9BMWhkSDZFZ2w0MGxsd3FFa3RHdm91V0dCWGJTaHZZU0o3bUk1TVJaWDhMTGZDZkx2V2MtWUF5bnAtSEFxdkoxSTEyRQ?oc=5",
+          "publishedAt": "2026-11-20T00:06:47+00:00"
         }
       ],
       "scores": {
@@ -484,82 +544,22 @@
       ]
     },
     {
-      "id": "d57051b8cccdca",
-      "title": "가야2동, ‘찾아가는 보건복지 이동상담실’ 운영",
+      "id": "d1663f9095f0b9",
+      "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다.",
       "category": "생활 정보",
       "region": "KO",
       "headlines": [
         {
-          "title": "가야2동, ‘찾아가는 보건복지 이동상담실’ 운영 - 국제신문",
-          "publisher": "국제신문",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQa2J6ajBCNTJoUGg0OWVVX25ON0REcnRZbnl2SHU3ZXNGS2lodElBbDNONEVZclBJeUh6SFZMakF1WUVNQ1lOcDNxOF9JMzNhQXl0aEIzckpZUDh0UjlxcW0zWWxadVRUd3FvWXREODJyRWtlbTJHVHJJemRibzZIVE5saFZFcmFuR1NpaTZ3?oc=5",
-          "publishedAt": "2026-11-20T04:58:00+00:00"
+          "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다. - Vietnam.vn",
+          "publisher": "Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hUmRhUjd1T05ZLTdjbkc3SV9wNi1fbDhEMVlndXYxQlY3NzQxN0RBczloMzd6b0xoODFMYWwySE1RNXNtbHVZR2M0ek5feGZZX1pBdlVmRVZFWE5CX2RvWnVyTngweEtWbGtJbG5UbkwxNkt5b0hF?oc=5",
+          "publishedAt": "2026-11-19T03:26:11+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "b9cb376cecc44d",
-      "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5",
-      "category": "K-드라마",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Sacred Jewel: Prime Video’s Goryeo war K-drama starts Dec. 5 - IMDb",
-          "publisher": "IMDb",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84LTFZWmN3NDd3RG1HUmYxVzc5Sjl4S3l5cE8tNlIzaHRlQWFueVpJclJuSjJvRkNibERWYUlYT19MZkFieVZyajZLdUR1bWZnQ1VMMVFQQXZTeGtMY2otZw?oc=5",
-          "publishedAt": "2026-11-19T10:27:24+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "a1ac814c1b7684",
-      "title": "CL Talks New Songs ‘ICONIC’ and ‘Say It to My Face’: ‘None of the K-Pop Songs Are Talking About That’",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "CL Talks New Songs ‘ICONIC’ and ‘Say It to My Face’: ‘None of the K-Pop Songs Are Talking About That’ - Billboard",
-          "publisher": "Billboard",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOOER4WmVYRHNZNmxON0VwaE10V3lfNG5WbW4teEJKUHR0RlgydlFKbnpTMHdPbmJrXzRYSzZzaHBxa05Fem9hNjFtRHhsd0c4d09XUDZXUk9SUllvZHdlZkdSYWRKcUYtOVJYZDdLTE41bkQxSm94aXdrWmtRb1kxVE8xbFNTbFZaVnM1QlNER1cxLWZaS1lWSFhCRQ?oc=5",
-          "publishedAt": "2026-11-20T20:56:19+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -605,16 +605,46 @@
       ]
     },
     {
-      "id": "dfe138b94789fc",
-      "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌'",
+      "id": "a1ac814c1b7684",
+      "title": "CL Talks New Songs ‘ICONIC’ and ‘Say It to My Face’: ‘None of the K-Pop Songs Are Talking About That’",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "CL Talks New Songs ‘ICONIC’ and ‘Say It to My Face’: ‘None of the K-Pop Songs Are Talking About That’ - Billboard",
+          "publisher": "Billboard",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOOER4WmVYRHNZNmxON0VwaE10V3lfNG5WbW4teEJKUHR0RlgydlFKbnpTMHdPbmJrXzRYSzZzaHBxa05Fem9hNjFtRHhsd0c4d09XUDZXUk9SUllvZHdlZkdSYWRKcUYtOVJYZDdLTE41bkQxSm94aXdrWmtRb1kxVE8xbFNTbFZaVnM1QlNER1cxLWZaS1lWSFhCRQ?oc=5",
+          "publishedAt": "2026-11-20T20:56:19+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "5f233754372e1f",
+      "title": "플레이브, 2027년 1월 고척돔 앙코르 콘서트…첫 월드투어 대미 장식",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌' - 위키트리",
-          "publisher": "위키트리",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5tR1FkeGY1LW8wbnFabGxKeFBieUZmRVpEaHpVbzVZRV9tNmVrZ2t2LW1MWnNCQjg3OHdqYlJ5WTJOby1DbWJwYjM2cEhIQjJyWHh5bmxn?oc=5",
-          "publishedAt": "2026-11-19T23:25:00+00:00"
+          "title": "플레이브, 2027년 1월 고척돔 앙코르 콘서트…첫 월드투어 대미 장식 - 뉴스아이이에스",
+          "publisher": "뉴스아이이에스",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB2OEtmcGM3SXllOGxyOWJNSEJyNzdkTmtlS0Y0eWFrcXpTT1I4VkNLSy1HQ3JUR1Q5Y3JteXoyWkVxcjAybDQxS0ExcWViSWN5MzZOSVNFM2tHZVVUckt2M1Y3a1NIVXBRS1h1ZkZ30gFyQVVfeXFMUEQzOW9UeWpKTGFETzBLTmZ6N3hWcHczb1NaZDZwTnhQX09sbVFMR3hHU0Z1Ukd5RFV1OG9CWURWMzV1ZFhVcHQ3S3ptcUtwMnZwN2pkOHRNdVQxdlRmdnNOVzRyS2Y3XzZTTWx3QTAzdTRB?oc=5",
+          "publishedAt": "2026-11-20T15:30:46+00:00"
         }
       ],
       "scores": {
@@ -697,16 +727,16 @@
       ]
     },
     {
-      "id": "f2b816a589e237",
-      "title": "공주시, 2027년 노인일자리사업 참여자 5,026명 모집",
+      "id": "163dd64fd1d19c",
+      "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의",
       "category": "시니어·복지",
       "region": "KO",
       "headlines": [
         {
-          "title": "공주시, 2027년 노인일자리사업 참여자 5,026명 모집 - 메가충청뉴스",
-          "publisher": "메가충청뉴스",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04bTRqT19aY2xoVUhvb0k3amtsVnVtTllRQjdZYVhIWE9BMWhkSDZFZ2w0MGxsd3FFa3RHdm91V0dCWGJTaHZZU0o3bUk1TVJaWDhMTGZDZkx2V2MtWUF5bnAtSEFxdkoxSTEyRQ?oc=5",
-          "publishedAt": "2026-11-20T00:06:47+00:00"
+          "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의 - 캐어유 뉴스",
+          "publisher": "캐어유 뉴스",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1femN6bjFzdEVqM09qR1J0dUhsSVhjdjc4LVV1cG5ZM0ZYb3RxLU9KMkdOZEs0Q1VCaWlNLWNzYmdrRTEzajZQcExiaENCc1ZYdExaQ0Q2UF9KMnB0ZHQ5WVNaTEttYS1LYXpEeWRR?oc=5",
+          "publishedAt": "2026-11-15T03:00:00+00:00"
         }
       ],
       "scores": {
@@ -727,52 +757,22 @@
       ]
     },
     {
-      "id": "d1663f9095f0b9",
-      "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다.",
+      "id": "50a039eb8336c4",
+      "title": "신혼부부 임차보증금 이자지원 사업 안내",
       "category": "생활 정보",
       "region": "KO",
       "headlines": [
         {
-          "title": "치엥멍은 디지털 전환을 일상생활에 접목합니다. - Vietnam.vn",
-          "publisher": "Vietnam.vn",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9hUmRhUjd1T05ZLTdjbkc3SV9wNi1fbDhEMVlndXYxQlY3NzQxN0RBczloMzd6b0xoODFMYWwySE1RNXNtbHVZR2M0ek5feGZZX1pBdlVmRVZFWE5CX2RvWnVyTngweEtWbGtJbG5UbkwxNkt5b0hF?oc=5",
-          "publishedAt": "2026-11-19T03:26:11+00:00"
+          "title": "신혼부부 임차보증금 이자지원 사업 안내 - 분야별 정보",
+          "publisher": "분야별 정보",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KVTlXOUFETFEyQlF5Q0pkZ3dKeHFFZWVRZWRwYjd4ejdqY0k1Nks1Qldtb3ZYRmN0R0c1dHR0YkFGTlNFeEdpbjFPU04tV2JKOVhiQTRaME9tLVBKcEJn?oc=5",
+          "publishedAt": "2026-11-18T08:00:00+00:00"
         }
       ],
       "scores": {
         "editorialPriority": 22,
         "commercialFitHeuristic": 8,
         "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "5f41300da75692",
-      "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER'",
-      "category": "K-pop",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER' - Latin Times",
-          "publisher": "Latin Times",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSmhuUVo5b2RHT1J6VXdjM2lGOTZ6amFuejE3ZGlJRW96T0h4QW9HMjRxWkdoS1hoRVdkdm5YTGp4MkhibUpTeWktWEtqcHZSck9acDBSQ2oyQTl6V1pZWHJ4WkFCNXRLOGM1SjFWYmxHMkJydG1tZ2V1LTNTcFViM2QwTDhpaXkxdzZqUktLZ2oxZE1YLWFEQTUxaHM?oc=5",
-          "publishedAt": "2026-11-20T17:02:14+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -818,16 +818,46 @@
       ]
     },
     {
-      "id": "f22593fc12e467",
-      "title": "'문학 입성' 플레이브, 내년 1월 22~24일 고척돔에서 앙코르 콘서트",
+      "id": "5f41300da75692",
+      "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER'",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Nayeon's 'NA-sty' marks her boldest solo creative step yet, including self-written track 'SHiVER' - Latin Times",
+          "publisher": "Latin Times",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSmhuUVo5b2RHT1J6VXdjM2lGOTZ6amFuejE3ZGlJRW96T0h4QW9HMjRxWkdoS1hoRVdkdm5YTGp4MkhibUpTeWktWEtqcHZSck9acDBSQ2oyQTl6V1pZWHJ4WkFCNXRLOGM1SjFWYmxHMkJydG1tZ2V1LTNTcFViM2QwTDhpaXkxdzZqUktLZ2oxZE1YLWFEQTUxaHM?oc=5",
+          "publishedAt": "2026-11-20T17:02:14+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "dfe138b94789fc",
+      "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌'",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "'문학 입성' 플레이브, 내년 1월 22~24일 고척돔에서 앙코르 콘서트 - 노컷뉴스",
-          "publisher": "노컷뉴스",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PQWJtZ1E4cHhSMmQ0dVBRMGthcnVrZlJnTE9pZlJ6ZDRJZ3dBN0dsTE56N1BNNnhPUFpOTWtkUjBmQVB4YzFQRzFfU29pX19xMm9jUg?oc=5",
-          "publishedAt": "2026-11-19T20:00:00+00:00"
+          "title": "아무 예고도 없었는데… 오늘 오후 2시 깜짝 신곡 발표하는 '레전드 아이돌' - 위키트리",
+          "publisher": "위키트리",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5tR1FkeGY1LW8wbnFabGxKeFBieUZmRVpEaHpVbzVZRV9tNmVrZ2t2LW1MWnNCQjg3OHdqYlJ5WTJOby1DbWJwYjM2cEhIQjJyWHh5bmxn?oc=5",
+          "publishedAt": "2026-11-19T23:25:00+00:00"
         }
       ],
       "scores": {
@@ -909,51 +939,21 @@
       ]
     },
     {
-      "id": "163dd64fd1d19c",
-      "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의",
-      "category": "시니어·복지",
+      "id": "d7b9cb2544be79",
+      "title": "옴니사 플랫폼, 단말·접속·데이터 통합 보호...AI 에이전트 권한 관리까지 확대",
+      "category": "IT·AI",
       "region": "KO",
       "headlines": [
         {
-          "title": "[기획] 돌봄이 시작된 뒤에는 늦을까: 요양비 18년 새 2.4배, 중산층 시니어의 비용 마련법과 '즉시형 장기요양연금' 논의 - 캐어유 뉴스",
-          "publisher": "캐어유 뉴스",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1femN6bjFzdEVqM09qR1J0dUhsSVhjdjc4LVV1cG5ZM0ZYb3RxLU9KMkdOZEs0Q1VCaWlNLWNzYmdrRTEzajZQcExiaENCc1ZYdExaQ0Q2UF9KMnB0ZHQ5WVNaTEttYS1LYXpEeWRR?oc=5",
-          "publishedAt": "2026-11-15T03:00:00+00:00"
+          "title": "옴니사 플랫폼, 단말·접속·데이터 통합 보호...AI 에이전트 권한 관리까지 확대 - 지티티코리아",
+          "publisher": "지티티코리아",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9neTc0RmU1M1hTQTc0TnFUVVl1cmdpVTR3eFdXT1NRajFOMDAzUU1WNmtrNDl0MnFGYmRDQWpDODlKTFVXQzQ1NngtdDRNSlNsS3hzdE5UODE2YWc4OFBLSThZRWp0a0NIMVE?oc=5",
+          "publishedAt": "2026-11-19T00:00:00+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "50a039eb8336c4",
-      "title": "신혼부부 임차보증금 이자지원 사업 안내",
-      "category": "생활 정보",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "신혼부부 임차보증금 이자지원 사업 안내 - 분야별 정보",
-          "publisher": "분야별 정보",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KVTlXOUFETFEyQlF5Q0pkZ3dKeHFFZWVRZWRwYjd4ejdqY0k1Nks1Qldtb3ZYRmN0R0c1dHR0YkFGTlNFeEdpbjFPU04tV2JKOVhiQTRaME9tLVBKcEJn?oc=5",
-          "publishedAt": "2026-11-18T08:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 22,
-        "commercialFitHeuristic": 8,
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
         "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
@@ -999,46 +999,16 @@
       ]
     },
     {
-      "id": "d7b9cb2544be79",
-      "title": "옴니사 플랫폼, 단말·접속·데이터 통합 보호...AI 에이전트 권한 관리까지 확대",
-      "category": "IT·AI",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "옴니사 플랫폼, 단말·접속·데이터 통합 보호...AI 에이전트 권한 관리까지 확대 - 지티티코리아",
-          "publisher": "지티티코리아",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9neTc0RmU1M1hTQTc0TnFUVVl1cmdpVTR3eFdXT1NRajFOMDAzUU1WNmtrNDl0MnFGYmRDQWpDODlKTFVXQzQ1NngtdDRNSlNsS3hzdE5UODE2YWc4OFBLSThZRWp0a0NIMVE?oc=5",
-          "publishedAt": "2026-11-19T00:00:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "6cf7d2324b92e5",
-      "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레",
+      "id": "f22593fc12e467",
+      "title": "'문학 입성' 플레이브, 내년 1월 22~24일 고척돔에서 앙코르 콘서트",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레 - 씨네플레이",
-          "publisher": "씨네플레이",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hWE1RLUFhcDFoSGRfMG5TbEZTZ1NPaEZtT3FQRS1OZDlSM1hzcEU2QzBPMlN3SE1ZdnFyMjU4Vkg1LUpUdFdYUmU5eTB6MTU2TDVIdjhFbDNYRHM?oc=5",
-          "publishedAt": "2026-11-19T09:01:00+00:00"
+          "title": "'문학 입성' 플레이브, 내년 1월 22~24일 고척돔에서 앙코르 콘서트 - 노컷뉴스",
+          "publisher": "노컷뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PQWJtZ1E4cHhSMmQ0dVBRMGthcnVrZlJnTE9pZlJ6ZDRJZ3dBN0dsTE56N1BNNnhPUFpOTWtkUjBmQVB4YzFQRzFfU29pX19xMm9jUg?oc=5",
+          "publishedAt": "2026-11-19T20:00:00+00:00"
         }
       ],
       "scores": {
@@ -1059,16 +1029,16 @@
       ]
     },
     {
-      "id": "ff567cfb62dd3a",
-      "title": "Runway says its AI-led software workflow cut approval waits to five minutes",
+      "id": "9541c964d038bc",
+      "title": "AI Deals 2026: Every Way to Save on AI Tools That Works",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "Runway says its AI-led software workflow cut approval waits to five minutes - Superpower Daily",
-          "publisher": "Superpower Daily",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORGF4WW1lR2RzQzJkcXNDalhVdFhDUVNJWF9FdzJMWXZudXRjWFVia1QyOHc3NWxZcHczQklOMnpneUZ6aU9nWmxQY0VuTzVzcXlVWVRqb1F1cG1ScVF0SkxlRHY4T0RJTzc2dVJTdkZJczdpUlZNOExiVnI5V1dKcm5KamtqYWFTdEp1bVlOQnN5YTdHTkdPZXVwQV9qdGlfRkdwdnJTeEhKQlkyd2c?oc=5",
-          "publishedAt": "2026-11-20T21:51:00+00:00"
+          "title": "AI Deals 2026: Every Way to Save on AI Tools That Works - Fello AI",
+          "publisher": "Fello AI",
+          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1kWE1SWWNyNmpsUGpIV0FnajZ6VklZYU5TTktyNGs1UVFvZlo4LXdrcE5uVkxnWi1saDN0Z2pUclNMX0k?oc=5",
+          "publishedAt": "2026-11-21T08:57:58+00:00"
         }
       ],
       "scores": {
@@ -1150,16 +1120,16 @@
       ]
     },
     {
-      "id": "8d1c92b48bb5af",
-      "title": "데이식스 연말 클콘 선예매 티켓 오픈…체조서 만나요",
+      "id": "6cf7d2324b92e5",
+      "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "데이식스 연말 클콘 선예매 티켓 오픈…체조서 만나요 - 스포츠동아",
-          "publisher": "스포츠동아",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9WNm1yYi11STlrZkVxbGUxYXZiUV9OOUJhZjFrRHZwOV9FWDEyVmNrUWRzdWxlZm1fVU9CLXR5SU5odldpbW40cEU3ck56ZXI3ei1CdHlmdnpvUm8xdURFblB5MG9YUUltYnRNTkp3?oc=5",
-          "publishedAt": "2026-11-19T07:46:00+00:00"
+          "title": "플레이브 첫 월드투어 '킵 잇 매닉', 1월 고척돔 3일간 피날레 - 씨네플레이",
+          "publisher": "씨네플레이",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1hWE1RLUFhcDFoSGRfMG5TbEZTZ1NPaEZtT3FQRS1OZDlSM1hzcEU2QzBPMlN3SE1ZdnFyMjU4Vkg1LUpUdFdYUmU5eTB6MTU2TDVIdjhFbDNYRHM?oc=5",
+          "publishedAt": "2026-11-19T09:01:00+00:00"
         }
       ],
       "scores": {
@@ -1180,16 +1150,16 @@
       ]
     },
     {
-      "id": "cc8d4f80f4b2db",
-      "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth",
+      "id": "ff567cfb62dd3a",
+      "title": "Runway says its AI-led software workflow cut approval waits to five minutes",
       "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth - Simply Wall St",
-          "publisher": "Simply Wall St",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRkM1QlBMT1Q0UHA1UGtfX2xLSVVlX2FOYlk2YVYwbFZlblBoaEowWGdBQmdfcFhyYW1NRTE0em44ZnZHeG9lN3hyd0VqNEhBWTE2Q2VzRkxKSWd2QkhsdHZjT0VaejlkbnRCbGdLckx1cUZTdmxOZE5Rd0ZmMjV1NUE2ZjFZUmdOdzZWd2ZDY2p2bWNab3p3Qklqb3ZESGxPU05vSEdUYi1EZG1zcE1SX0NvaGxsa05WVEM3NlVGckVRaW9qQ3cxUkhzbjJjcVF6ckJOVXdaNHYxSkRs?oc=5",
-          "publishedAt": "2026-11-20T21:16:52+00:00"
+          "title": "Runway says its AI-led software workflow cut approval waits to five minutes - Superpower Daily",
+          "publisher": "Superpower Daily",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORGF4WW1lR2RzQzJkcXNDalhVdFhDUVNJWF9FdzJMWXZudXRjWFVia1QyOHc3NWxZcHczQklOMnpneUZ6aU9nWmxQY0VuTzVzcXlVWVRqb1F1cG1ScVF0SkxlRHY4T0RJTzc2dVJTdkZJczdpUlZNOExiVnI5V1dKcm5KamtqYWFTdEp1bVlOQnN5YTdHTkdPZXVwQV9qdGlfRkdwdnJTeEhKQlkyd2c?oc=5",
+          "publishedAt": "2026-11-20T21:51:00+00:00"
         }
       ],
       "scores": {
@@ -1271,16 +1241,107 @@
       ]
     },
     {
-      "id": "9d39a76268bf7f",
-      "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식",
+      "id": "f69f610d2a696f",
+      "title": "플레이브, 내년 1월 고척돔서 월드투어 ‘킵 잇 매닉’ 앙코르 콘서트 개최. “12월 1일 선예매 오픈”",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식 - 뉴시스",
-          "publisher": "뉴시스",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NdIBeEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NQ?oc=5",
-          "publishedAt": "2026-11-19T07:40:56+00:00"
+          "title": "플레이브, 내년 1월 고척돔서 월드투어 ‘킵 잇 매닉’ 앙코르 콘서트 개최. “12월 1일 선예매 오픈” - RNX뉴스",
+          "publisher": "RNX뉴스",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5QTmFnZWNDLVIzNzFfYVJ5dm5oTnlTQUcwWkVRbTNSajV3eGMwT2x5SWNSMXpuYXI5bXlQS2dBZmc0cGdndmgySldIcnBIWWVNSXgyVDR1WEhRXzlHcmFIM1JaSQ?oc=5",
+          "publishedAt": "2026-11-19T08:06:59+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "cc8d4f80f4b2db",
+      "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "3 UK AI Stocks Investors May Want To Watch For Productivity Growth - Simply Wall St",
+          "publisher": "Simply Wall St",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRkM1QlBMT1Q0UHA1UGtfX2xLSVVlX2FOYlk2YVYwbFZlblBoaEowWGdBQmdfcFhyYW1NRTE0em44ZnZHeG9lN3hyd0VqNEhBWTE2Q2VzRkxKSWd2QkhsdHZjT0VaejlkbnRCbGdLckx1cUZTdmxOZE5Rd0ZmMjV1NUE2ZjFZUmdOdzZWd2ZDY2p2bWNab3p3Qklqb3ZESGxPU05vSEdUYi1EZG1zcE1SX0NvaGxsa05WVEM3NlVGckVRaW9qQ3cxUkhzbjJjcVF6ckJOVXdaNHYxSkRs?oc=5",
+          "publishedAt": "2026-11-20T21:16:52+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
+      ]
+    },
+    {
+      "id": "5e098ebef8244e",
+      "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts",
+      "category": "K-pop",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts - Britannica",
+          "publisher": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82a0hoSTFZVFNVaXlsNjlXZjZVQ1dyTEZBeWtfZEVjeGoyLTIxcHJqTFF5eGwydTZERUtHUHd0SnM5MDBCZmUzVXRQbHk?oc=5",
+          "publishedAt": "2026-11-20T08:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 8,
+        "shortformFitHeuristic": 38,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
+      "id": "8d1c92b48bb5af",
+      "title": "데이식스 연말 클콘 선예매 티켓 오픈…체조서 만나요",
+      "category": "K-pop",
+      "region": "KO",
+      "headlines": [
+        {
+          "title": "데이식스 연말 클콘 선예매 티켓 오픈…체조서 만나요 - 스포츠동아",
+          "publisher": "스포츠동아",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9WNm1yYi11STlrZkVxbGUxYXZiUV9OOUJhZjFrRHZwOV9FWDEyVmNrUWRzdWxlZm1fVU9CLXR5SU5odldpbW40cEU3ck56ZXI3ei1CdHlmdnpvUm8xdURFblB5MG9YUUltYnRNTkp3?oc=5",
+          "publishedAt": "2026-11-19T07:46:00+00:00"
         }
       ],
       "scores": {
@@ -1332,46 +1393,16 @@
       ]
     },
     {
-      "id": "6e3088e707ba6d",
-      "title": "‘사운드:트랙’ 신인 감독들 “OTT 못지않게” 외쳤다…KBS 단막극 첫 방송 맞아",
-      "category": "연예",
-      "region": "KO",
-      "headlines": [
-        {
-          "title": "‘사운드:트랙’ 신인 감독들 “OTT 못지않게” 외쳤다…KBS 단막극 첫 방송 맞아 - 위키트리",
-          "publisher": "위키트리",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1RRl9zV1k5Z0l0NTZsb1NOTXcyX0x0X0UxdFl6SWZPaC1sVVhGQ2VTRnlmaG9jS2Q1LWpTd09vV013Yl9QX19IVDBJWUF6OXpCRVRBaWdn?oc=5",
-          "publishedAt": "2026-11-18T22:26:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "5e098ebef8244e",
-      "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts",
+      "id": "b6e88cdbac3371",
+      "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
       "category": "K-pop",
       "region": "EN",
       "headlines": [
         {
-          "title": "BTS | Songs, Members, Meaning, Albums, K-Pop, Army, & Facts - Britannica",
-          "publisher": "Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE82a0hoSTFZVFNVaXlsNjlXZjZVQ1dyTEZBeWtfZEVjeGoyLTIxcHJqTFF5eGwydTZERUtHUHd0SnM5MDBCZmUzVXRQbHk?oc=5",
-          "publishedAt": "2026-11-20T08:00:00+00:00"
+          "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
+          "publisher": "Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQbWx6VzU1YnhrdWY5eElWdUg4aXJySTBvaXJzeldBOGhKamV0ZVhLSVVNa1NKaENiQ21KeGdVR2xCZy1RdTFQS0t0RjZpZ2xvNVVUOXViUURPcHhJbUJhcDREaFI4dDNkRzdfTzNGTmFpaTJGUnR2MDdxQV9wWkwtV3BxTTNpQmJCUjJ4bEJhWVpwYm5JcEszQUZ3dmplM2c3SlluYmh0NVd4VFIyMzJCb0lMU0hNNGV3RWNUdlhCWmxBRWtoQUFhSkNxWDgwa1JNX3U2Q0xBR2pIeWJKRWc?oc=5",
+          "publishedAt": "2026-11-20T07:07:49+00:00"
         }
       ],
       "scores": {
@@ -1392,16 +1423,16 @@
       ]
     },
     {
-      "id": "a93223a674e995",
-      "title": "빅뱅도 블랙핑크도 ‘명단 밖’…전속 4팀 남은 YG의 숙제 [가요 뷰]",
+      "id": "9d39a76268bf7f",
+      "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식",
       "category": "K-pop",
       "region": "KO",
       "headlines": [
         {
-          "title": "빅뱅도 블랙핑크도 ‘명단 밖’…전속 4팀 남은 YG의 숙제 [가요 뷰] - 데일리안",
-          "publisher": "데일리안",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1BZTc0dnJiQUN1ZS1ENEtULUI1VXEzN2FjZ1pTOF9ZVENCSXVXcDc5anlua0F5bk9jcEFXUGpwYURkQjM1TEZFT0hvVVIxUFpTSFVz?oc=5",
-          "publishedAt": "2026-11-18T23:37:00+00:00"
+          "title": "플레이브, 내년 1월 고척스카이돔 재입성…첫 월드투어 대미 장식 - 뉴시스",
+          "publisher": "뉴시스",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9KVUZtX291aVVNelB5NWxiZWZjcGRKdm1LNW50Y3Fzd0dfNE1IRFdwWkluV1RsNnhGSW5IVHBHRXFyXzB6ZUktVTQ5R0hOMi00eWs4NnIxTE9MYzlRa253VtIBeEFVX3lxTE0yZU5TMzVHY09Ba05PT2ZwYzJhengtQjNKX3NlUDVfb3ZzclVCWlVzcFBMQnhzdHF5TDdaTzVSc24xVm1fcUFlM0dxNlJkS1ZLVzYzaHpFT1gzNHZ1OHhfWnFSZDB1blFfeUhLTEh3TkZ2NnZrRHQ3NQ?oc=5",
+          "publishedAt": "2026-11-19T07:40:56+00:00"
         }
       ],
       "scores": {
@@ -1453,22 +1484,22 @@
       ]
     },
     {
-      "id": "b6e88cdbac3371",
-      "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
-      "category": "K-pop",
+      "id": "6394fd6c5d8e93",
+      "title": "The Best CRM Software We've Tested for 2026",
+      "category": "AI·생산성",
       "region": "EN",
       "headlines": [
         {
-          "title": "A Pinay Army is one lucky fan as she spotted members of K-pop group BTS in a night market in Kaohsiung, Taiwan on Wednesday, November 18, 2026, ahead of its first concert stop in Asia. “Natulala na lang! Surreal feels kasi we didn’t really ",
-          "publisher": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQbWx6VzU1YnhrdWY5eElWdUg4aXJySTBvaXJzeldBOGhKamV0ZVhLSVVNa1NKaENiQ21KeGdVR2xCZy1RdTFQS0t0RjZpZ2xvNVVUOXViUURPcHhJbUJhcDREaFI4dDNkRzdfTzNGTmFpaTJGUnR2MDdxQV9wWkwtV3BxTTNpQmJCUjJ4bEJhWVpwYm5JcEszQUZ3dmplM2c3SlluYmh0NVd4VFIyMzJCb0lMU0hNNGV3RWNUdlhCWmxBRWtoQUFhSkNxWDgwa1JNX3U2Q0xBR2pIeWJKRWc?oc=5",
-          "publishedAt": "2026-11-20T07:07:49+00:00"
+          "title": "The Best CRM Software We've Tested for 2026 - PCMag",
+          "publisher": "PCMag",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5GMmJSVjM5RU9TSmt6LVdTZWR6MjVmYUprbmg3YXpyMnI1Yjl0NDIwdHNOOEtuV1g4RW9WemptQkVVZXRNX3VEUkdBVVV2bk40aTVvYUFRemdZbVRKS2c?oc=5",
+          "publishedAt": "2026-11-19T08:00:00+00:00"
         }
       ],
       "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 8,
-        "shortformFitHeuristic": 38,
+        "editorialPriority": 28,
+        "commercialFitHeuristic": 24,
+        "shortformFitHeuristic": 30,
         "coverageHeuristic": 30,
         "independentPublisherCount": 1,
         "riskFlag": false,
@@ -1479,7 +1510,8 @@
       },
       "status": "needs_sources",
       "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+        "서로 다른 매체 2곳 미만: 검증 근거 부족",
+        "도구·생산성 관련 키워드"
       ]
     },
     {
@@ -1524,37 +1556,6 @@
           "publisher": "Amateur Photographer",
           "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA1UElqV0RMOXB2OXB1WEVwR0pPeEl1S3hMdV8xS2FURFZ3TW5BSkhBdndUSGozOW5SaUNyS1N6UDFTLXhWUno4Y0FrN0hFY1JMRUw2WkFTVktYSHBVY1M3NmJTZlhlekN2VU9ud05ZN0xrMFNLVElYcA?oc=5",
           "publishedAt": "2026-11-19T00:15:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
-      "id": "a22d905342f40d",
-      "title": "Apple Creator Studio gets major AI upgrade with many new tools",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Apple Creator Studio gets major AI upgrade with many new tools - Cult of Mac",
-          "publisher": "Cult of Mac",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPYzFpU2w1WnVWSDNMdkROaUpBTzdWV0h2ZzNFRUJyVGZtTkdpdGV6RFV0OXR3NHYxcjROY1lZc3JMc0tuR2E5cUhKU3dGa0Z5WEhNTERVRjBqX2NjaVhFWUg0UnowMmZEaF9Ibjhjb3BCUE05cTlubHVfTE5STjlnWlhOYnFPYldUOFNvWDZUWTZYYUVQTDBIRkdrUjc1dw?oc=5",
-          "publishedAt": "2026-11-18T19:39:57+00:00"
         }
       ],
       "scores": {
@@ -1669,37 +1670,6 @@
       ]
     },
     {
-      "id": "435a382d0e4ed3",
-      "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors?",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Should AI Workflow Launches Require Action From Box (BOX) Investors? - Simply Wall St",
-          "publisher": "Simply Wall St",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm5NcHNJZVhLUERaNW5uN2pzd0RVMkM2X0szT28tc0J4c3ZaaXdBX3laSUhIVDFIOGdUM01adnVkbEkxT25sS1BIRWZqZFNqOFhpbk03c05LZ1Q2LUNYSlM4LTB3LS1JX2JpUklNbklPajNDdDFGVV9mMkR5UWtmWmVxZ1FjV3pESHB1aEkyZ25qcGttWURfcTdEVWM3X3JFZTd6S2JlZVk0Z0hQY1J6LUpfaHRkdFh5LTln0gHAAUFVX3lxTE5KZkVsUE9nVTZkZ2p6bFhQNi1mMXRMU045cV9wNGZScGlLWTZaNllaWFhTaHI2SEpJRGFsUDMtdEI3TElUeGVrUHN0cVdmQmRURGx3bWpFMmZkWEJwRk14YnJHdmN4dERiM01iOXBjYl8wZWI3eVZGWXM2Sk5paXlRMGdEUmZlS2R6SmZsbG9CeUIxTkRiZkFSNEZIazV5WFU5S0JBVGswQWQ0ZWRIM285NWRpV0RBNFlkSFA3RWVVVQ?oc=5",
-          "publishedAt": "2026-11-14T20:20:17+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 28,
-        "commercialFitHeuristic": 24,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족",
-        "도구·생산성 관련 키워드"
-      ]
-    },
-    {
       "id": "9b591660741684",
       "title": "Send one prompt to 6 AI models and compare their answers with AskAnyModel for $31.99",
       "category": "AI·생산성",
@@ -1790,6 +1760,36 @@
       ]
     },
     {
+      "id": "9dbb42ad9d102f",
+      "title": "Six AI-powered gadgets that could make your home office smarter",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Six AI-powered gadgets that could make your home office smarter - TechCrunch",
+          "publisher": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxORERlb2FMdmFnQldTY2x1VGFLNlpZTjI1UzNlelR1eVBvWFVHVlVJSWJtQnRfNDAwUVZkTUNSNG1mSERZS2o0Ql9aNGZjczdhSHJzVGRiR3ZQdXd4Z3VlbnBNa1dpUkhBcTdlU0Y2ZTl4a29taHJvZE1oT0JqOVZiUU1LNVBGU25SbmtJYzJDek9vR0t0cDNuRV91bVA?oc=5",
+          "publishedAt": "2026-11-20T14:00:00+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "1c93d7af18c7bf",
       "title": "Microsoft positions Copilot as a hub for team collaboration",
       "category": "AI·생산성",
@@ -1850,6 +1850,36 @@
       ]
     },
     {
+      "id": "a94a36240e906f",
+      "title": "Earnings call transcript: Youdao Q3 2026 revenue falls as stock drops 8.7%",
+      "category": "AI·생산성",
+      "region": "EN",
+      "headlines": [
+        {
+          "title": "Earnings call transcript: Youdao Q3 2026 revenue falls as stock drops 8.7% - Investing.com",
+          "publisher": "Investing.com",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQWWYwS3pHVThadWE0UzBPMVhDQ1NYWkZzS3dsMVhnY2NOUV94TTN0cGxiYU1mUUxkVTBsU3FDSURiZEdFNUZBSHVEYzNIaWVyZXcyaGtEVk0zQ0IzTlMxUTFvU2FpN2I4bV9OanJiUGc4MGVCcVpHSkdVWHk0WTF6S0lRLUN3REpSUHAtT3pwNXh4Nmd3V05iZ1ZNWlNwWGd5TDg5WTRUaVVMdUNOamZfU2czUEJxOGlqOXN1aVhGbTFJVW5WbUE?oc=5",
+          "publishedAt": "2026-11-19T11:36:34+00:00"
+        }
+      ],
+      "scores": {
+        "editorialPriority": 24,
+        "commercialFitHeuristic": 12,
+        "shortformFitHeuristic": 30,
+        "coverageHeuristic": 30,
+        "independentPublisherCount": 1,
+        "riskFlag": false,
+        "promotionFlag": false,
+        "measuredTraffic": null,
+        "estimatedRevenue": null,
+        "evidenceLevel": "headlines_only"
+      },
+      "status": "needs_sources",
+      "reasons": [
+        "서로 다른 매체 2곳 미만: 검증 근거 부족"
+      ]
+    },
+    {
       "id": "02bcc1c20f8a19",
       "title": "When AI Starts Spending Money: The Challenge of Secure Automated Payments",
       "category": "AI·생산성",
@@ -1890,66 +1920,6 @@
           "publisher": "blog.google",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNemJ2dmlaaUw0Vm9IWnV2N3JiaXg4a3BNcVVqZjEtNnlVTnExYzk0d2tzcEZ4SGhqY1MyQ0c5LVpYN2ZKdGJ6d1FTMmhWZ0J0VVJkcGhqOHk1eHB1SFA3M3NLNEdRZEhhbnNzekhRb2E1RnRVSjJFQmNRWC05ckI1NjlybWpvVzJUeWdwaURROFhOcmoySS03UllmRWJJMUk?oc=5",
           "publishedAt": "2026-11-18T21:35:21+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "5f377cf98d0fde",
-      "title": "What to know when shopping for an AI laptop",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "What to know when shopping for an AI laptop - New York Post",
-          "publisher": "New York Post",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9CZ014Z284MFlBYlFRZDBpdnJmajZ6V3FIRHY1ZUk1S0s5WTJMQWpmdDFKZFVZakR3UUNzcnNlckZaWmdpMjhET3U0d205VnZBT1RJN05uV0U5WTVTMFE?oc=5",
-          "publishedAt": "2026-11-18T20:09:00+00:00"
-        }
-      ],
-      "scores": {
-        "editorialPriority": 24,
-        "commercialFitHeuristic": 12,
-        "shortformFitHeuristic": 30,
-        "coverageHeuristic": 30,
-        "independentPublisherCount": 1,
-        "riskFlag": false,
-        "promotionFlag": false,
-        "measuredTraffic": null,
-        "estimatedRevenue": null,
-        "evidenceLevel": "headlines_only"
-      },
-      "status": "needs_sources",
-      "reasons": [
-        "서로 다른 매체 2곳 미만: 검증 근거 부족"
-      ]
-    },
-    {
-      "id": "4aa702216ad928",
-      "title": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor",
-      "category": "AI·생산성",
-      "region": "EN",
-      "headlines": [
-        {
-          "title": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor - TechCrunch",
-          "publisher": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbUpvMjV0Ul9PZEo2OWRRcVdPeVRBQTkxZUtlUndoZllpRVlua2ZXWlpzbFZHMVVPWWVvWXhYTlhDQ2o5WEVVQ2l6U1ZwRTNTd21zNTg4S0tWZzFDWVlzNl9tRTQzcVg4MmJpQzJqdFRNU3JzLW1QeFlnN0FTQlBUYWw4SjU0bGxaY2owYkdDOHJpSTVMcFYtSTNvYzdvelk3N0tTSHhBd09qU1haZnY2dVRud2dqa3NmU3Zrd2YzY0xBRHNDLTJDNGN2c3htQQ?oc=5",
-          "publishedAt": "2026-11-18T19:56:39+00:00"
         }
       ],
       "scores": {
