@@ -1,22 +1,47 @@
 {
-  "generatedAt": "2026-11-22T00:45:34.311768+00:00",
+  "generatedAt": "2026-11-22T06:32:08.357583+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 30,
-      "lastSuccessAt": "2026-11-22T00:45:34.311768+00:00"
+      "count": 34,
+      "lastSuccessAt": "2026-11-22T06:32:08.357583+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
-      "status": "ok",
+      "status": "error",
       "count": 10,
-      "lastSuccessAt": "2026-11-22T00:45:34.311768+00:00"
+      "lastSuccessAt": "2026-11-22T00:45:34.311768+00:00",
+      "error": "URLError (RSS 조회 실패, 이전 기록 유지)"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "겨울 고보습 바디케어 BEST 4 — 세타필 로션 12,360원부터 아토팜 스틱밤까지 실제 가격 비교",
+      "url": "https://blog.naver.com/todaypickkr/224486967372?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-22T04:31:44+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 연말정산 막판 전략 — 미리보기 12월 18일 마감, 12월 31일 전에 해야 할 5가지",
+      "url": "https://blog.naver.com/todaypickkr/224486947083?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-22T04:10:27+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "월 소득 519만 원 미만이면 노령연금 전액 — 감액 폐지와 지난해 감액분 환급 정리",
+      "url": "https://blog.naver.com/todaypickkr/224486931673?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-22T03:53:50+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "삼성·구글 AI 안경 완판, 샤오미 18 프로 맥스 — 65만 원과 210만 원 사이에서 고르기",
+      "url": "https://blog.naver.com/todaypickkr/224486911989?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-22T03:30:01+00:00"
+    },
     {
       "channel": "naver",
       "title": "전기요·탄소매트 가성비 BEST 4 — 25,330원부터 퀸 사이즈까지 실제 가격 비교",
