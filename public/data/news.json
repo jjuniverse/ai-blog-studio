@@ -1,21 +1,133 @@
 {
-  "fetchedAt": "2026-11-23T00:46:24.640993+00:00",
+  "fetchedAt": "2026-11-23T06:44:30.560088+00:00",
   "source": "Google News RSS search",
   "sourceType": "headline_discovery_only",
   "collectionVersion": 2,
   "note": "Headlines are not verified facts. Verify official sources, article content and rights before publishing.",
   "categoryCounts": {
     "연예/KO": 2,
-    "K-pop/KO": 6,
+    "K-pop/KO": 8,
     "IT·AI/KO": 3,
-    "생활 정보/KO": 5,
-    "시니어·복지/KO": 18,
-    "K-pop/EN": 8,
+    "생활 정보/KO": 7,
+    "시니어·복지/KO": 17,
+    "K-pop/EN": 10,
     "K-드라마/EN": 1,
     "AI·생산성/EN": 26
   },
   "retainedFromPrevious": 0,
   "items": [
+    {
+      "title": "‘첫 하프 밀리언셀러’ 리센느 첫 단콘, 쿠팡플레이서 치열한 티켓팅 예고 - 스포츠동아",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1FT2I3RWt6OExIX05Sd0MxeUNjZzYwSl9CeTdRdmhzaWhFOUNNSFZRTXpJS09vN0ZORVQwSnkzaXFIaXp2aTgyVjFjOWRKZThGNGFvdGIwRHNuYmJ3MFJKMjZUVWE2UVdKbnZEQ0Jn?oc=5",
+      "publisher": "스포츠동아",
+      "publishedAt": "2026-11-23T05:50:35+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "Weekly Recap: 2026 outlook holds and AI drives headcount, cost cuts - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPSDBSaWpxWUJiZlE0X0I2cF8ydHRZMkNnX01PeG1DalBhU19icjd0OF9CalFQNUZ4Vll2dE5HSUlMR2hZRERTSng3ZEdaTEJTdlNQazQyZXlmeFdIV25vWGtHLXNpVFdqWnRzeUptUmJOc09XMWdfTEpoYVNNNG9QR3JoQU1GbEw1dDZWbkhRQk9UdlliRlpaeE5wdVdnZGxia1VxSml6dmhMRUtBMEN4ZGotTlgxOGZZVjA3dlhWSDU4RFZtUUE?oc=5",
+      "publisher": "TradingView",
+      "publishedAt": "2026-11-23T05:00:00+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "음성시니어클럽, 2026년 노인일자리 성과대회 개최 - 음성타임즈",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE02SjZFeUMtUXBrdEdmYUxvcXZqTGh3aGZpMHlsejBuT1h0ZzFTRDdYT2g1bWwzM3JYWU1lX09GREVTT3JqcWhIRVB0eFdYZllxSUNrREdqV2F5bVdDVGcwYzd5REpONENfQVE?oc=5",
+      "publisher": "음성타임즈",
+      "publishedAt": "2026-11-23T04:49:45+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "연지동, 맞춤형 복지교육 ‘연·보·라’ 4분기 운영 - 국제신문",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaGJ5V3NjRXNoZFplZll0OEFNQ1lyOTdCWjRvMjA1aGVkcXk3SElEZi1SMDY1bmJrbWtjZ2Q3Q2pPLVI1bjlsM1kxNHB1ZjRBRGxEeDlueGNKNkc1bUdRdUQ5bmtZZmpINWtRdjJ2RUJJUDV1VTRfV3ZaMTltaG9xcnlaOU9iNGhLR1p3OEVB?oc=5",
+      "publisher": "국제신문",
+      "publishedAt": "2026-11-23T04:48:00+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "생활법령정보 서비스 18년 만에 전면 개편…고령자도 쉽게 이용할 수 있을까 - 한국공공정책신문",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1aQUViZlBVampSQm91WGw4U2lqR0hkX1liYWx5S1RjOXAtdzlmVTV1RWkyZjFwZ1lJdi1kSk81TmZhc0E?oc=5",
+      "publisher": "한국공공정책신문",
+      "publishedAt": "2026-11-23T04:17:43+00:00",
+      "category": "생활 정보",
+      "region": "KO"
+    },
+    {
+      "title": "부천시, '2026년 기초연금 유공' 보건복지부 장관 기관표창 선정 - 경인신문",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBQb2VmdEhyY01PdlJsaFJBbWlCT0VpTWRNQ1RYUlVXUDZsRGhGU3d3ek01NllPV3g4YU9UMnN6WlJ1QW9ybGktU0lfazF0VWh5em1jbFZKOFVlS3U3SXBEa2ZQRFhVbk0?oc=5",
+      "publisher": "경인신문",
+      "publishedAt": "2026-11-23T03:32:30+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "ATEEZ Funeral Wreath Protest Sparks Debate: Whose Access Should K-POP Prioritize? [HT Focus] - Hanteo News",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB1NWZmWHNnX3ZDWHJGSUtlZzJqZ0dBSmVNNC1ERFh0TzlBbGhkZDlHSlJ4RkFySmdOaGF2VHlCcXJ0bFlGSE1HMGQycU44VklqVjd2aW1B?oc=5",
+      "publisher": "Hanteo News",
+      "publishedAt": "2026-11-23T03:15:22+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Here’s The Setlist For BTS’ World Tour Arirang Comeback Concert - FZINE Singapore",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9yZFJ6cS1wblM3b3FEa3FNTjAybzB2LUJJYUkwTzZkTXJLOFFNMWwyQ1ktSm1GbEhQSW9NY2huWGNKTWZSNHB5cTh0TDUxVDJxT3hJMWtVVjM1eUZxUHY2SFpIVTdsM3pMMUZaRA?oc=5",
+      "publisher": "FZINE Singapore",
+      "publishedAt": "2026-11-23T03:01:50+00:00",
+      "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "부천시, 기초연금 유공 평가서 보건복지부 장관 표창 선정 - 매일일보",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9paXc0dElNZEdwRFIxY2dSdFgwZGZpVTBkdnhxYTR6NDdTc1JVdXM2cF9PYkc1aEtETW9EbzM2YnBFRkxSd3ExZDZLcnZTc3AtajNPZFVzR1F2Si1FcmZvSHZUalo?oc=5",
+      "publisher": "매일일보",
+      "publishedAt": "2026-11-23T02:32:32+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "이븐, 서울 팬콘서트 'ONE TAKE' 성료 - www.bntnews.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8zb2VKRTFTLWN1TXpsMFMxZXU1WWlkMlNIV09QY2t5Z3VzNDBGZXhCclozbkZXZVhncGNBT2ZaTWdyYzVYN2dDTHJjOGVTUnpXWUppby1JYVp1cGctbjdaSkFkU1c?oc=5",
+      "publisher": "www.bntnews.co.kr",
+      "publishedAt": "2026-11-23T02:07:08+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "세븐틴 정한·조슈아, 日 공연 6만2000명 동원 - www.bntnews.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5Nb093bWV0S09DYXlJLXNHRGhNdHEwbF95UlJiWEVXV2xoRnI3NUdxV01vajFGZ2FoSmJQa2VUY2VkMlRNT3JiRndlaWc2SkVYNlc1MW01RXBHc0hCSm9xemxmU0M?oc=5",
+      "publisher": "www.bntnews.co.kr",
+      "publishedAt": "2026-11-23T02:06:23+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "Send one prompt to 6 AI models and compare their answers with AskAnyModel for $31.99 - Mashable",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVFhxeWVNMjY0WWhlamR4WEN4TzBEWU51OF9VWUIxYUs1cUxxczJPZllCeFZpTXFhZmRIQ3hvMUNQbUl4WFA3NVByODlSWjR1VzVrXzFkZjM3UF9kcktKU2VOQW1yc0RhbFBGd0hrNlg4dzhVT2N6bTJLNVZQS2VMQkFnNXM?oc=5",
+      "publisher": "Mashable",
+      "publishedAt": "2026-11-23T01:17:30+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "제로베이스원, 2027년 첫 활동은 완전체 컴백…1월 18일 확정 [공식] - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yRFNyZGJTb1JON1p2eWJCdTBwSGt4UnVrVnRnckhNS282VFU2bTlkeUsyQ3FsUVRtMHFSRHQ3d3ZCR2JNRndkN25ROHZwQl82TVdwZjExVQ?oc=5",
+      "publisher": "매일경제",
+      "publishedAt": "2026-11-23T01:11:59+00:00",
+      "category": "K-pop",
+      "region": "KO"
+    },
+    {
+      "title": "용인특례시, ‘2027년 노인일자리’ 참여자 5984명 모집 - 인천일보",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CYmVlYzRIRHZrenFRVnBWR1hsQkVfbVhWTDlVVlk1OHdqckdKOFRhSlNabm4yTmJFZUhqYUp2YmFwQkRReVpPMHdhX08tMWZiVE0wVnpna3hzb3BvU2FsWnpjOHJxZWJabXNweWhjZlA?oc=5",
+      "publisher": "인천일보",
+      "publishedAt": "2026-11-23T01:03:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
     {
       "title": "유앤비, 7년 만에 전격 재결합…이준영 등 제외 6인조로 컴백 [공식] - 뉴스엔",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0wV2ppYTBZT1k1SkFCUGxkQUdBcndmbldxS2JoRkJiRTIyT051VjNzb2FQU2dEU0NMZTJnTDJROTA1NFNIcVNZWm5nN0Q3YzdGWDRKWkpXS0tfOFlsNEpzWXN2VU8tT3lF?oc=5",
@@ -25,11 +137,19 @@
       "region": "KO"
     },
     {
-      "title": "보령시니어클럽, 2027년도 노인 일자리 참여자 1,572명 모집 - 메가충청뉴스",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9nSjNTTnBxSXdFU2tDNEc0elJqZ01KaDF2dFVZVm8xdktRazlPY2RYLTNiUkJIN1FoZ0hSU1k4VWxCV3ZvVHhZNERESUtuTEZaV3NRQkd5Q2pYNF9OamVGdzNhNEx2Qi1Ha2pnTg?oc=5",
-      "publisher": "메가충청뉴스",
-      "publishedAt": "2026-11-22T22:36:23+00:00",
+      "title": "보령시니어클럽, 2027년도 노인 일자리 참여자 1,572명 모집 - 미디어투데이",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9MYkFqZGt5dzBFbzc0Nk52c1NhNWpvUld3WGgxdVZCU0hoSjA1bXI3aGVIZnJuNkNuS1c4ZmR2VllKTU4xTmpvVW1n?oc=5",
+      "publisher": "미디어투데이",
+      "publishedAt": "2026-11-22T23:13:00+00:00",
       "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
+      "title": "정형돈 21kg 감량했는데…누리꾼 '뭐가 달라졌지?' - BNT뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5iMTNYVjdITXRHa3hOWEQyQVROOWh4eGJ1U2hYNHoyU1QzMzhvcXRVSE1YYnljSFRQck96YUlMQ3I5VUJzRHdkS1dkUnZnVFYwSk9pbzdVenNiaXZVUGZNNWU3NHo?oc=5",
+      "publisher": "BNT뉴스",
+      "publishedAt": "2026-11-22T21:05:33+00:00",
+      "category": "K-pop",
       "region": "KO"
     },
     {
@@ -97,14 +217,6 @@
       "region": "KO"
     },
     {
-      "title": "Send one prompt to 6 AI models and compare their answers with AskAnyModel for $31.99 - Mashable",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVFhxeWVNMjY0WWhlamR4WEN4TzBEWU51OF9VWUIxYUs1cUxxczJPZllCeFZpTXFhZmRIQ3hvMUNQbUl4WFA3NVByODlSWjR1VzVrXzFkZjM3UF9kcktKU2VOQW1yc0RhbFBGd0hrNlg4dzhVT2N6bTJLNVZQS2VMQkFnNXM?oc=5",
-      "publisher": "Mashable",
-      "publishedAt": "2026-11-21T23:21:47+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "ZEROBASEONE surprises fans with a January 18, 2027 comeback date at MAMA - Latin Times",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMi1TZ1BrOVBoZXlVanozQmxyRHdQcEJsLWRsVndyUnJ4dnFJTDFscTdUZ01qcXV0dTJuZkFNTmJvZExVOVFTMFN4NlNNeDlmc01GVXloVnpkejQ3VFRObDdMVUtmV1FSWVk0N3BRcF93Z0RuUXhkM1ExRW0wV21haUo4eVdIb1N0bWZYSWpDbmRxSFVwQTc2eHR3Vk4wSzZXdnZoUl9OMUdIdw?oc=5",
       "publisher": "Latin Times",
@@ -153,14 +265,6 @@
       "region": "KO"
     },
     {
-      "title": "\"요양원 안 가도 된다\" 2027년 중증 어르신 집에서 월 48회 돌봄·65만 명 낙상 치료비 전격 지원 - 한국IT산업뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE14eEY1OGg0SmhBQnFxLVMzUEVfS0ZmNU1ydFBLYXBIbFNFdHNZSVZZNUZZNkI5bW45eGpmcU04UUh4Qml3Yk5kOU1KYW0?oc=5",
-      "publisher": "한국IT산업뉴스",
-      "publishedAt": "2026-11-21T01:41:13+00:00",
-      "category": "시니어·복지",
-      "region": "KO"
-    },
-    {
       "title": "Meet the Cast of Netflix’s 'The Blue Road,' Led by Son Suk-ku - Sweety High",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ZV1EtbWVpV1pseWZSUHByMVp5Z2Y2OFpYdHNRUXpxY0loSnRRMlJ0b3cyMWh1MktlOTZzdURQejZicjRHWkJMbktJbEhCelFqZEZhdXUyY3Z6alBJRUE3cGhmZEN2NFM2MlZHekZR?oc=5",
       "publisher": "Sweety High",
@@ -189,14 +293,6 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRkM1QlBMT1Q0UHA1UGtfX2xLSVVlX2FOYlk2YVYwbFZlblBoaEowWGdBQmdfcFhyYW1NRTE0em44ZnZHeG9lN3hyd0VqNEhBWTE2Q2VzRkxKSWd2QkhsdHZjT0VaejlkbnRCbGdLckx1cUZTdmxOZE5Rd0ZmMjV1NUE2ZjFZUmdOdzZWd2ZDY2p2bWNab3p3Qklqb3ZESGxPU05vSEdUYi1EZG1zcE1SX0NvaGxsa05WVEM3NlVGckVRaW9qQ3cxUkhzbjJjcVF6ckJOVXdaNHYxSkRs?oc=5",
       "publisher": "Simply Wall St",
       "publishedAt": "2026-11-20T21:16:52+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
-      "title": "Google Cloud latest news and announcements - Google Cloud",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNREwxdGg2aXlreXo5blo4WENaSFZEV2NGckE3MzBTbk1WeDQ5eVJsMkdjdlNnVUx5R1QxbHJSMmVRUmRHbkZWeV9PY2ExYXhxZ19tQnpjTFlPTWtPZy1VWmdxUFBKV2dFZmt2WHR0NmQtUlR6bzRVUVZpcHpVOGVuYnR5UHBUdw?oc=5",
-      "publisher": "Google Cloud",
-      "publishedAt": "2026-11-20T17:21:23+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -281,11 +377,27 @@
       "region": "KO"
     },
     {
+      "title": "방문목욕과 방문간호, 다양한 재가급여서비스 - 농민신문",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBZaXRWSlV2VGp5YVViaUxDUGZKamdKZGRBRDlsZE5pQUNUaHVVeXd3X3FnUURFMVlwVzdxc183ZHhzOEVsRVpWeFB6Wmh2cEhaczVDWVU0dlNNUQ?oc=5",
+      "publisher": "농민신문",
+      "publishedAt": "2026-11-20T08:00:00+00:00",
+      "category": "시니어·복지",
+      "region": "KO"
+    },
+    {
       "title": "KPop Demon Hunters Announces Golden World Tour Dates — Get Your Tickets Now - Netflix",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanJZMDRJdnNyZlR0cFFQQXgzNnNteDlsbUFqS3NOT0Y4aE5JeTNBMFZHV1RfbHR5SWZjaGtPTGw4dzBNNWZqVnVkem5OX1NCM0FEWHJjbU1BTFJmSFBiUjg3VlBnLWN2eDBZcUptcm0yd2VPZjgteVlWTXViX3ZSeDd4bzBUWm5qYUZr?oc=5",
       "publisher": "Netflix",
       "publishedAt": "2026-11-20T08:00:00+00:00",
       "category": "K-pop",
+      "region": "EN"
+    },
+    {
+      "title": "Google Cloud latest news and announcements - Google Cloud",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNREwxdGg2aXlreXo5blo4WENaSFZEV2NGckE3MzBTbk1WeDQ5eVJsMkdjdlNnVUx5R1QxbHJSMmVRUmRHbkZWeV9PY2ExYXhxZ19tQnpjTFlPTWtPZy1VWmdxUFBKV2dFZmt2WHR0NmQtUlR6bzRVUVZpcHpVOGVuYnR5UHBUdw?oc=5",
+      "publisher": "Google Cloud",
+      "publishedAt": "2026-11-20T08:00:00+00:00",
+      "category": "AI·생산성",
       "region": "EN"
     },
     {
@@ -297,15 +409,7 @@
       "region": "EN"
     },
     {
-      "title": "에이티즈 콘서트 예매 4일 차이…해외 팬 트럭 시위, 韓 누리꾼 “대만 팬이 문제” 비난 - Kagit",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA4R05OT3REUHNfYzJ0ampUTDBTb0ZyblV4ZTFwQm9teElPTVRreFAyUnh6T2dHekFVYXVUTzJjTnhsTmFvYVJTOTFaa2R0QVU1bW9WaE9R?oc=5",
-      "publisher": "Kagit",
-      "publishedAt": "2026-11-20T07:42:13+00:00",
-      "category": "K-pop",
-      "region": "KO"
-    },
-    {
-      "title": "국민연금공단 '기초연금 온라인 신청' 개편 알린다 - 세이프머니",
+      "title": "기초연금 온라인 신청 간소화 … 국민연금공단 퀴즈 행사 - 세이프머니",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5LaUo1ZGluYUFkN29pZEh1ajNiWGl6VEF2STM5UUNndmtLbFo0N3ZUQkNlT1pSZ21aa0RxSTF0b251RHlHX0EybFNnb3IwVWNfNXN1ZnJxbjk2QW9wZ1lmc1k5SHNfU1BKeWt1d2ZR?oc=5",
       "publisher": "세이프머니",
       "publishedAt": "2026-11-20T07:27:52+00:00",
@@ -329,19 +433,11 @@
       "region": "KO"
     },
     {
-      "title": "아이돌 그룹 플레이브, ‘2026 플레이브 월드투어 킵 잇 매닉’ 앙코르 공연 - 세계문화신문",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1vci1QOExCVjZoLV9WbDQzd2ZtajFpNnRVWDdVcXczX0dtLWZQNFZ0cUlmQ2N2VFZ4M0ROZGZDZENhSXJBamN4d19PN0lnVEJmZ3NKeUtyRlpGYUVfdktEblBCckFGWmtPRWpHX1BVTTV4Q1lF0gF0QVVfeXFMTW9yLVA4TEJWNmgtX1ZsNDN3Zm1qMWk2dFVYN1VxdzNfR20tZlA0VnRxSWZDY3ZUVngzRE5kZkNkQ2FJckFqY3h3X083SWdUQmZnc0p5S3JGWkZhRV92S0RuUEJyQUZaa09FakdfUFVNNXhDWUU?oc=5",
-      "publisher": "세계문화신문",
-      "publishedAt": "2026-11-20T03:08:39+00:00",
-      "category": "K-pop",
-      "region": "KO"
-    },
-    {
-      "title": "데이식스, KSPO DOME 360도 꽉 채운다…연말 콘서트 3일 개최 - https://www.ppss.kr/",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBTSVRKRnBkN2pHUWREMFhPclFRT19mVjcwbEJFX2xBVkhhZ1JuTG9MYlNHQTJveEkxS2hMeUJPc0ZLMXM3UEFwZmRoZ3V2V1ZMUnR2RUFRQVlxM1Z5RVRUY3oycFo?oc=5",
-      "publisher": "https://www.ppss.kr/",
-      "publishedAt": "2026-11-20T01:58:11+00:00",
-      "category": "K-pop",
+      "title": "기초연금 신청 더 간편하게…배우자 동의도 모바일로 - 데일리안",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOTHBEZ3RWNlZkOFVYYnZXS0Q2bzNva3JzaG1ieW9ITWc3U2xnQ2ZYeXZYTGc5SkhDMHZHYjVTTlBCZ2lLN3dFU3BiUFlVVXdYSi10V1VrSDQ5ZTFSa1VHY2hqR1pSZ2tTN3hVSnJQbjZKS1FjMHFIQnZ4SmdHMWFRZ0V5QjlRTjE1SkRfbXh0VmI0Q1psaHNIc2Y2UzJkTWg1WDdiLWxtN1gwaTRrcExxN29kTEx5QWkzQnVpRG5SYUk0cVV5cmJMOEo2WVh5ODAyODE5TWZuS3NPZnZBX2FRS2hJaGJFdUY0N2dTejFZNS00SFFfN3ZBNVpGSThoZjJ5VC1HT1JtOU5OaHJLdFdhdUhLVU9XbldGVHF0dnI2bFdBRm8?oc=5",
+      "publisher": "데일리안",
+      "publishedAt": "2026-11-20T04:28:00+00:00",
+      "category": "시니어·복지",
       "region": "KO"
     },
     {
@@ -349,14 +445,6 @@
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBNZE9BRkZydHpLOV9EVjZVcjJuRUIzdEZ3OGV5NkFaWVB4MW9CTUJESWlPOTA2aW1xN1JUMnNyMlJWUG0zUFpGQjNiMmxvSExoY0RRYXNWNElOVzYwODFMQjduaHJpXzV3QkE?oc=5",
       "publisher": "투데이안",
       "publishedAt": "2026-11-20T01:30:48+00:00",
-      "category": "시니어·복지",
-      "region": "KO"
-    },
-    {
-      "title": "노인 그렌델…독거 어르신 안부 확인과 돌봄 제도의 구조 - 한국사회복지저널",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5CeVczWFVRNkRTa3FxdC1KM0c5Yi1ORmlEaFpGVF9vZUZYejRXNmhWeFVlUks5WmxEZFVwdV93WGhvcFFGV21tZ25LcnJUd0NFVS13NS1NQTlHNmFpdzFVRnZiOU9OVVFrU2ZR?oc=5",
-      "publisher": "한국사회복지저널",
-      "publishedAt": "2026-11-20T01:22:21+00:00",
       "category": "시니어·복지",
       "region": "KO"
     },
@@ -369,28 +457,12 @@
       "region": "KO"
     },
     {
-      "title": "iFLYTEK Australia Outlines AI Note-Taking Applications for Work and Education - The National Law Review",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTE8yZlE4b01GTUlEb1o3WTNNWGZ3TnlQYklDOWpuMVZGU3pVa0tDWkhXbV9EX2NsUDJfc25CNDcxQkJUWmJ5TXU3WUd4aWlSdEpDWnYxLVVqWlNra1hTeXBkeF9NRjRncEtQSC01bGowejIxaFEzLVEzcnVlZ0lPMENfNUYzd2Jqa1B1emdySWRnTlluZFBjVVVWMU5DdFNleURqaVNmOFpXQWpVRW82am5WYw?oc=5",
-      "publisher": "The National Law Review",
-      "publishedAt": "2026-11-20T00:56:56+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
-    },
-    {
       "title": "공주시, 2027년 노인일자리사업 참여자 5,026명 모집 - 메가충청뉴스",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04bTRqT19aY2xoVUhvb0k3amtsVnVtTllRQjdZYVhIWE9BMWhkSDZFZ2w0MGxsd3FFa3RHdm91V0dCWGJTaHZZU0o3bUk1TVJaWDhMTGZDZkx2V2MtWUF5bnAtSEFxdkoxSTEyRQ?oc=5",
       "publisher": "메가충청뉴스",
       "publishedAt": "2026-11-20T00:06:47+00:00",
       "category": "시니어·복지",
       "region": "KO"
-    },
-    {
-      "title": "Square 9 Outlines Five Keys to Faster, Better-Informed Contract Renewals with AI-Powered Review - The Cannata Report -",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5RbHIwcXRpQjFpY0ZJZWljOElFNXFfM1U5bE1oRmFwYlptcFNwUmtfaDBsMkRkcnUyYk1kZl83NkhKeDZDaHpqSkxPNTItbTdvRnpGcktSSGdfTlUydzBxOVpSZlRPVEpKQXoyU2FldF8yWEIyVUxERg?oc=5",
-      "publisher": "The Cannata Report -",
-      "publishedAt": "2026-11-19T20:47:11+00:00",
-      "category": "AI·생산성",
-      "region": "EN"
     },
     {
       "title": "Best AI Policy Management Software by Use Case (2026) - JD Supra",
@@ -401,28 +473,12 @@
       "region": "EN"
     },
     {
-      "title": "“퇴원 뒤에도 살던 집에서” 통합돌봄 우선 지원 노인 98만 명 추산 - 이투데이",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ubWhMRlRGNHFuZEl2ZUtodUJoeC1VbFBSSlNZYU1ZUVZ4Y3UtdklJcHlFeGl4U1VJUklsVG5zNFZoMUNmNFlIMTRXVlZQcW90OXluUjNxYkthQQ?oc=5",
-      "publisher": "이투데이",
-      "publishedAt": "2026-11-19T14:30:00+00:00",
-      "category": "시니어·복지",
-      "region": "KO"
-    },
-    {
       "title": "When AI Starts Spending Money: The Challenge of Secure Automated Payments - The Detroit News",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYUY1eVU2UXozVkRsTVNBSXczd1F5MmQ1aTlYNDRLcVF3LUR0RF9tOTYyMVJMVjZJUXB0YzBrTzBQbnNOLUx3TG1panNUdDVnQjFpTnB2X3JKazM1eDhqdnJDX1VqZnZkc1FYU3RGdXlaYUxpcTl0NWtJbVhOSEJ1TFhRLTZQNmo5Tl9wcTM5dnhiZHNOZUtvcjRrenhaVlpwT0UxR3BjVGRraHQzRFJZZmlQRmRRUVNSbzk1UlBhMG5tdjZvRmlz?oc=5",
       "publisher": "The Detroit News",
       "publishedAt": "2026-11-19T11:17:21+00:00",
       "category": "AI·생산성",
       "region": "EN"
-    },
-    {
-      "title": "예방이냐 절감이냐 — 유럽 요양 개혁이 한국에 보내는 경고장 - 패트론타임스",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE11cWVJZnZURFNzRU1RM2d3UGF3SkNhZXRnMHVNTnBwNEw3dFI2N2FhOE9rMkJiTnV3NzVqVlAtN3Rfdi12UjhkbzdnWHFkTEpvdjBB?oc=5",
-      "publisher": "패트론타임스",
-      "publishedAt": "2026-11-19T09:44:52+00:00",
-      "category": "시니어·복지",
-      "region": "KO"
     },
     {
       "title": "Best AI Agents in 2026: 30 Tools Tested and Compared - Fello AI",
@@ -453,6 +509,14 @@
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9TLUh6RWZEcjlhNERmTk9WaTB5VzlUa3dhSmYxbjY3clltTmtZOTJIak1uOU1wNTRUZTZEOTJ5cXFBSGtzUEtPN19aZjZUVFd5UXBZenliTUw3VldoOWc?oc=5",
       "publisher": "Memeburn",
       "publishedAt": "2026-11-19T01:15:32+00:00",
+      "category": "AI·생산성",
+      "region": "EN"
+    },
+    {
+      "title": "Here is the best photo editing software to use in 2026 - Amateur Photographer",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA1UElqV0RMOXB2OXB1WEVwR0pPeEl1S3hMdV8xS2FURFZ3TW5BSkhBdndUSGozOW5SaUNyS1N6UDFTLXhWUno4Y0FrN0hFY1JMRUw2WkFTVktYSHBVY1M3NmJTZlhlekN2VU9ud05ZN0xrMFNLVElYcA?oc=5",
+      "publisher": "Amateur Photographer",
+      "publishedAt": "2026-11-19T00:15:00+00:00",
       "category": "AI·생산성",
       "region": "EN"
     },
@@ -489,14 +553,6 @@
       "region": "EN"
     },
     {
-      "title": "[단독]“필요한 서비스 못받고, 본인부담금도 발생”… 장기요양등급 포기 5년새 1만5000명 - 동아일보",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBOdV9hNkI0V0lxSzRCakRYQ0xPYWNId2tlMWNITS1NVkNjLTRJcnZxbHlyay1PTVY0S1MyTndMV0ZaWHJfeE53d052NlUxdEw4WlFKajZRNG56QXplZ1hhSzdrQ29KSXp3Y0lrbFpPRm4zY3NIdmfSAWZBVV95cUxOR3ZSVk1zNm8yNmZxdkxycWFlMl9ZeWl2RVhKSGNfZTI2aGZGZkZUa3VZOHZ3bklVeUNiMHJWcF9QMTZteUhrUWUyM3cxalJzMWtodDltTTVMY1EzelJOa21Vbi1ya3c?oc=5",
-      "publisher": "동아일보",
-      "publishedAt": "2026-11-18T19:30:00+00:00",
-      "category": "시니어·복지",
-      "region": "KO"
-    },
-    {
       "title": "Best AI Contract Review Software in 2026 (Top-Rated Tools Reviewed & Compared) - Quasa.io",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNa0x4OTlJdUdlcXZJc0xDVmp4TkZrVDh6eUxNRUJPNHZYdEhacVBCSXNxUW1QTGFMZFVGeVVJdEFiWXk0WWVhRjZDTHpVdmpYWHVIN1VzMDJXa0lSUy1ndG1ZaXVYaURjZ3hocDJxTFBWcE5Qb1k0RVVrTHRibHhRaUxqbnBjUW1reUNMcFVJQkJwN2hGX3lGUjZEYkpxZEVyclRj?oc=5",
       "publisher": "Quasa.io",
@@ -518,14 +574,6 @@
       "publisher": "분야별 정보",
       "publishedAt": "2026-11-18T08:00:00+00:00",
       "category": "생활 정보",
-      "region": "KO"
-    },
-    {
-      "title": "장기요양보험 이용 가족 절반 이상 “돌봄 여전히 부담” - 애드뉴스인천",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjTnVzM3ljWmFCWWJmMzljMExFSm9ibkpWNjdYU0hvOVpjTHE2WVhqVUd0Yk9fU2ZGQUVSVjRiNG55ZGZ4eG91bGpzOE5PRjBKbDZNaFo5d25BTXE2eUZwdjNWQk9LcG1rd1Z3?oc=5",
-      "publisher": "애드뉴스인천",
-      "publishedAt": "2026-11-17T06:42:00+00:00",
-      "category": "시니어·복지",
       "region": "KO"
     },
     {
@@ -559,14 +607,6 @@
       "publishedAt": "2026-11-16T15:10:24+00:00",
       "category": "AI·생산성",
       "region": "EN"
-    },
-    {
-      "title": "송파구의사회 \"퇴원 후 돌봄 공백…지역의료 연계가 답\" - 보건신문",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBOcWtKMWdCODhuVU5xbWpRYU9MelB5OUpJdTNjc0tCUXNJdWtkck1Hak90SWJaRnpXNTRTVjM5X2xDbkpaVlFxaVNyUW5vVEhNQjkwaWQxT0VqR3FnOXdNajVjYw?oc=5",
-      "publisher": "보건신문",
-      "publishedAt": "2026-11-16T01:20:27+00:00",
-      "category": "시니어·복지",
-      "region": "KO"
     }
   ],
   "errors": []
