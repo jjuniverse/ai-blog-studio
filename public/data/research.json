@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T01:17:15.741849+00:00",
+  "updatedAt": "2026-11-23T01:19:41.186185+00:00",
   "maxDailyCalls": 3,
   "dailyAttempts": {
     "2026-11-17": 3,
@@ -8,10 +8,176 @@
     "2026-11-19": 3,
     "2026-11-20": 3,
     "2026-11-21": 3,
-    "2026-11-22": 3
+    "2026-11-22": 3,
+    "2026-11-23": 3
   },
   "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
   "entries": [
+    {
+      "candidateId": "e916d0b26e77cc",
+      "title": "iFLYTEK Australia Outlines AI Note-Taking Applications for Work and Education",
+      "category": "AI·생산성",
+      "region": "EN",
+      "researchedAt": "2026-11-23T01:19:38.697424+00:00",
+      "topic": "iFLYTEK Australia의 AI 노트 필기 애플리케이션",
+      "summary": "iFLYTEK Australia는 AINOTE 2와 AINOTE Air 2 디지털 노트북 시리즈를 통해 업무와 교육 분야에서 AI 기반 노트 필기 솔루션을 제공하고 있습니다. 이 디바이스들은 음성 인식, 필기 인식, AI 요약 기능을 갖추고 있으며, Harvey Norman Australia를 통해 구매할 수 있습니다. ([natlawreview.com](https://natlawreview.com/press-releases/iflytek-australia-outlines-ai-note-taking-applications-work-and-education?utm_source=openai))",
+      "keyFacts": [
+        "AINOTE 2는 10.65인치 E Ink 디스플레이와 실시간 음성 전사, AI 회의 요약 기능을 제공하며, 업무 전문가와 연구원에게 적합합니다.",
+        "AINOTE Air 2는 8.2인치 E Ink 디스플레이와 휴대성이 뛰어나며, 학생과 일상적인 노트 필기를 선호하는 사용자에게 적합합니다.",
+        "두 디바이스 모두 필기 인식, 번역 기능, 문서 스캔 및 디지털 독서 기능을 지원합니다."
+      ],
+      "openQuestions": [
+        "AINOTE 2와 AINOTE Air 2의 가격은 얼마인가요?",
+        "이 디바이스들은 한국어를 지원하나요?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://natlawreview.com/press-releases/iflytek-australia-outlines-ai-note-taking-applications-work-and-education?utm_source=openai",
+          "title": "iFLYTEK Australia Outlines AI Note-Taking Applications for Work a"
+        },
+        {
+          "url": "https://natlawreview.com/press-releases/iflytek-ainote-air-2-gets-major-noteos-upgrade-expanding-ai-productivity?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://companies.einnews.com/pr_news/957174263/iflytek-australia-outlines-ai-note-taking-applications-for-work-and-education?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://world.einnews.com/pr_news/957174263/iflytek-australia-outlines-ai-note-taking-applications-for-work-and-education?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://software.einnews.com/pr_news/923813050/iflytek-launches-ainote-2-and-ainote-air-2-across-australia-bringing-smarter-note-taking-to-modern-work?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://businesstimesaustralia.com/agp-article/957814338-iflytek-pushes-ai-note-taking-devices-in-australia?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://iflytekau.com/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.australianconsumerproducts.com/article/957174263-iflytek-australia-outlines-ai-note-taking-applications-for-work-and-education?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "5673ff60ddad0c",
+      "title": "에이티즈 콘서트 예매 4일 차이…해외 팬 트럭 시위, 韓 누리꾼 “대만 팬이 문제” 비난",
+      "category": "K-pop",
+      "region": "KO",
+      "researchedAt": "2026-11-23T01:19:35.835258+00:00",
+      "topic": "에이티즈 콘서트 예매 일정 논란",
+      "summary": "그룹 에이티즈의 콘서트 티켓 예매 일정에 대한 논란이 일고 있습니다. 소속사 KQ엔터테인먼트는 국내 팬클럽 회원 예매를 12월 3일에 시작하고, 글로벌 팬클럽 회원 예매를 12월 7일에 시작하는 등 4일의 차이를 두었습니다. 이로 인해 일부 해외 팬들은 차별 대우를 주장하며 소속사 앞에 근조 화환과 항의 트럭을 보내는 등 시위를 벌였습니다. 그러나 이러한 항의 방식이 과도하다는 비판도 제기되고 있습니다. ([sportschosun.com](https://www.sportschosun.com/entertainment/2026-11-20/202611200100128590012005?utm_source=openai))",
+      "keyFacts": [
+        "에이티즈의 콘서트 티켓 예매 일정에 국내 팬클럽과 글로벌 팬클럽 간 4일의 차이가 있음.",
+        "일부 해외 팬들이 소속사 앞에 근조 화환과 항의 트럭을 보내는 등 시위를 벌임.",
+        "이러한 항의 방식이 과도하다는 비판이 제기됨."
+      ],
+      "openQuestions": [
+        "소속사의 예매 일정 차이에 대한 공식적인 해명이 필요한 상황입니다.",
+        "해외 팬들의 항의 방식에 대한 적절성에 대한 논의가 필요합니다."
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://kagit.kr/ko/posts/ateez-fan-protest?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://kagit.kr/en/posts/ateez-fan-protest?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.tenasia.co.kr/article/2026112094724?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://kppost.com/fandom/%EC%97%90%EC%9D%B4%ED%8B%B0%EC%A6%88-%EC%84%A0%EC%98%88%EB%A7%A4-%EB%B6%84%EB%A6%AC%EC%97%90/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.chosun.com/english/kpop-culture-en/2026/11/20/H76S4NCWF5EE3EWXOTLWV5HSRM/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.sportschosun.com/entertainment/2026-11-20/202611200100128590012005?utm_source=openai",
+          "title": "에이티즈, K팝 대표가 국내팬 보호한게 잘못?…황당한 해외팬 근조화환 논란[SC이슈]"
+        },
+        {
+          "url": "https://www.sportschosun.com/en/celebrity/2026-11-20/202611200100128590012005?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://idolnewsonline.com/ko/%EC%97%90%EC%9D%B4%ED%8B%B0%EC%A6%88-%EC%BD%98%EC%84%9C%ED%8A%B8-%EC%84%A0%EC%98%88%EB%A7%A4-%EC%9D%BC%EC%A0%95-%EB%85%BC%EB%9E%80%EC%9C%BC%EB%A1%9C-%EC%86%8C%EC%86%8D%EC%82%AC-%EC%95%9E-%EA%B7%BC%EC%A1%B0-%ED%99%94%ED%99%98-%EC%8B%9C%EC%9C%84-%EB%B0%9C%EC%83%9D?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 10,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "52d8ac1b3be40d",
+      "title": "기초연금 온라인 신청, 한층 더 간편하게 '퀴즈 이벤트' 실시",
+      "category": "시니어·복지",
+      "region": "KO",
+      "researchedAt": "2026-11-23T01:19:32.526042+00:00",
+      "topic": "기초연금 온라인 신청 퀴즈 이벤트",
+      "summary": "국민연금공단은 대한노인회와 협력하여 기초연금 온라인 신청 절차 개선을 홍보하기 위한 '온라인 간편 신청 퀴즈 이벤트'를 진행합니다. 이벤트는 2026년 11월 20일부터 12월 4일까지 진행되며, 참여자 중 추첨을 통해 총 400명에게 1만 원 상당의 모바일 상품권을 지급합니다. ([m.nps.or.kr](https://m.nps.or.kr/pnsgdnc/nscvrgdata/getOHAE0002M1.do?hmpgBbsCd=BS20240145&hmpgCd=01&menuId=MN24000898&pageIndex=1&pstId=ZZ202600000000001275&searchGbu=&searchText=&sortSe=FR&utm_source=openai))",
+      "keyFacts": [
+        "이벤트 기간: 2026년 11월 20일 ~ 12월 4일",
+        "참여 방법: 대한노인회 시도연합회 및 지회에 부착된 포스터의 QR코드 또는 대한노인회 홈페이지를 통해 참여",
+        "추첨을 통해 총 400명에게 1만 원 상당의 모바일 상품권 지급"
+      ],
+      "openQuestions": [
+        "이벤트 참여 방법에 대한 자세한 안내는 어디에서 확인할 수 있나요?",
+        "당첨자 발표는 언제 이루어지며, 당첨자는 어떻게 통보받게 되나요?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.factlog.kr/%EA%B8%B0%EC%B4%88%EC%97%B0%EA%B8%88-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%8B%A0%EC%B2%AD-%ED%95%9C%EC%B8%B5-%EB%8D%94-%EA%B0%84%ED%8E%B8%ED%95%98%EA%B2%8C-%ED%80%B4%EC%A6%88-%EC%9D%B4%EB%B2%A4%ED%8A%B8/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.shop.or.kr/bbs/board.php?bo_table=report&page=1&sod=desc&sop=and&sst=wr_datetime&wr_id=9355&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://news.mtn.co.kr/article/2026112010173722714?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.jbyonhap.com/news/articleView.html?idxno=478300&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://biz.heraldcorp.com/article/10944076?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://biz.heraldcorp.com/article/3117845?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.jeollailbo.com/news/articleView.html?idxno=817372&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://m.nps.or.kr/pnsgdnc/nscvrgdata/getOHAE0002M1.do?hmpgBbsCd=BS20240145&hmpgCd=01&menuId=MN24000898&pageIndex=1&pstId=ZZ202600000000001275&searchGbu=&searchText=&sortSe=FR&utm_source=openai",
+          "title": "국민연금공단"
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
     {
       "candidateId": "c95ab2c6bad80f",
       "title": "UK dates go on sale for KPop Demon Hunters concert tour",
