@@ -61,3 +61,12 @@ test('saved non-empty text wins without an empty cached editor hiding a generate
   assert.equal(resolveDraftBody('naver', { naver: 'My edit' }, { naver: 'Generated body' }), 'My edit');
   assert.equal(resolveDraftBody('tistoryEn', { naver: 'My edit' }, {}), '');
 });
+
+test('an older cached corrupted preview stays hidden while real text still opens', async () => {
+  const { firstWrittenChannel, isUnreadableDraftText, resolveDraftBody } = await import('../app/lib/draftDisplay.ts');
+  const broken = '2026 eb c7 e4 e4 e4 e4 e4 e4\n\n## 관련 태그\n#오늘의픽';
+  assert.equal(isUnreadableDraftText(broken), true);
+  assert.equal(isUnreadableDraftText('EB C7 오류가 나면 공식 준비 단계부터 확인하세요.'), false);
+  assert.equal(firstWrittenChannel({ naver: broken, tistory: '정상 원고' }), 'tistory');
+  assert.equal(resolveDraftBody('naver',{}, {naver:broken}), '');
+});

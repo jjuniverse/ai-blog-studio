@@ -9,6 +9,7 @@ test('complete OpenAI response yields a research audit and draft without a scope
   const title = 'Useful productivity news for users';
   const article = ['# Article', '## What happened', 'Detailed information '.repeat(70),
                    '## How to use', 'Specific steps '.repeat(70), '## Notes', 'Reader guidance '.repeat(70)].join('\n');
+  const articleKo = article.replaceAll('Detailed information ', '새 기능의 구체적인 사용 단계를 정리해요. ').replaceAll('Specific steps ', '실행 전 필요한 설정을 확인해요. ').replaceAll('Reader guidance ', '공식 안내에서 지원 여부를 확인해요. ');
   const sourceLinks = [
     { title: 'Announcement', url: 'https://example.org/announcement' },
     { title: 'Other coverage', url: 'https://reputable.example/news' },
@@ -20,9 +21,9 @@ test('complete OpenAI response yields a research audit and draft without a scope
       { type: 'message', content: [{
         type: 'output_text',
         text: JSON.stringify({
-          mode: 'article', title, naverTitle: 'Useful AI software announcement and how to use it',
-          tistoryTitle: 'AI software release: features and detailed setup', tistoryEnTitle: 'AI Software Release and Setup Guide', naver: article, tistory: article, tistoryEn: article,
-          shortform: 'An informative script that has enough content to pass the short-form length requirement.',
+          mode: 'article', title, naverTitle: 'AI 소프트웨어 업데이트와 사용 방법',
+          tistoryTitle: 'AI 소프트웨어 최신 기능과 설정 단계', tistoryEnTitle: 'AI Software Release and Setup Guide', naver: articleKo, tistory: articleKo, tistoryEn: article,
+          shortform: '새로운 기능을 어떻게 쓸 수 있을까요? 먼저 공식 안내에서 지원 여부를 확인합니다. 화면에 설정 방법을 순서대로 보여주고 마지막에 유의할 점을 안내합니다.',
           verificationChecklist: [], imageNotes: ['Cover','Illustration','Summary'], imageKeywords: ['Useful productivity news','software release'],
           sourceLinks,
         }),
@@ -53,8 +54,8 @@ test('complete OpenAI response yields a research audit and draft without a scope
     assert.match(result.draft.naver, /#오늘의픽/);
     assert.match(result.draft.tistory, /#오늘의픽/);
     assert.equal((result.draft.naver.match(/#오늘의픽/g)||[]).length, 1);
-    assert.equal(result.draft.naverTitle, 'Useful AI software announcement and how to use it');
-    assert.equal(result.draft.tistoryTitle, 'AI software release: features and detailed setup');
+    assert.equal(result.draft.naverTitle, 'AI 소프트웨어 업데이트와 사용 방법');
+    assert.equal(result.draft.tistoryTitle, 'AI 소프트웨어 최신 기능과 설정 단계');
     assert.equal(result.draft.tistoryEnTitle, 'AI Software Release and Setup Guide');
     assert.match(result.draft.tistoryEn, /## Related Tags\n#TodaysPick/);
     assert.equal((result.draft.tistoryEn.match(/#TodaysPick/g) || []).length, 1);
@@ -134,8 +135,8 @@ async function generatePensionDraft({ body, tistory = body, english = '', shortf
   globalThis.fetch = async (_url, options) => {
     requestCount++;
     const payload = JSON.parse(options.body);
-    assert.match(payload.instructions, /responsible agency/);
-    assert.match(payload.instructions, /quiz or giveaway belongs in its own final section/);
+    assert.match(payload.instructions, /responsible authority/);
+    assert.match(payload.instructions, /quiz\/giveaway information at the end/);
     return Response.json({
       status: 'completed',
       output: [
@@ -303,4 +304,28 @@ test('unfinished first article stays an error and a refusal is not parsed as a d
     assistantMessage([{type:'refusal',refusal:'No result'}],{phase:'final_answer'}),
   ]);
   assert.equal(refused.body.code,'AI_REFUSAL');
+});
+
+test('hexadecimal noise shown in the Studio screenshot is not displayed as a draft or checklist', async () => {
+  const broken='2026 eb c7 e4 e4 e4 e4 e4 e4 e4 e4 e4 e4\n\n## 관련 태그\n#오늘의픽';
+  const response=structuredResponseFixture;
+  const out={...response, title:broken, naver:broken,tistory:broken,shortform:broken, tistoryEn:broken,
+    verificationChecklist:[broken,'복지로 공식 안내에서 신청일을 확인하세요.']};
+  const result=await generateFromResponsesShape([assistantMessage([outputText(JSON.stringify(out))])]);
+  assert.equal(result.http,200);
+  assert.equal(result.body.status,'research_required');
+  assert.equal(result.body.draft.naver,'');
+  assert.equal(result.body.draft.reviewBodies?.naver, undefined);
+  assert.ok(result.body.draft.verificationChecklist.some(note=>note.includes('읽을 수 없는')));
+  assert.doesNotMatch(JSON.stringify(result.body.draft), /c7 e4/);
+});
+
+test('a broken language channel never hides a separate good channel or technical references', async () => {
+  const out={...structuredResponseFixture, tistory:'c7 e4 e4 e4 e4 e4 e4 e4 e4 e4',
+    naver:reviewBody.replace('배우자가','복지로 앱의 EB C7 안내처럼, 배우자가')};
+  const result=await generateFromResponsesShape([assistantMessage([outputText(JSON.stringify(out))])]);
+  assert.equal(result.body.status,'revision_required');
+  assert.equal(result.body.draft.tistory,'');
+  assert.match(result.body.draft.naver,/EB C7/);
+  assert.deepEqual(result.body.draft.sourceLinks,[official]);
 });

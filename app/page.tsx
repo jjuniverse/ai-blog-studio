@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
 import PostImagePackage from './components/PostImagePackage';
 import { matchPublished, type PublicFeed } from './lib/publishedMatch';
-import { firstWrittenChannel, resolveDraftBody } from './lib/draftDisplay';
+import { firstWrittenChannel, isUnreadableDraftText, resolveDraftBody } from './lib/draftDisplay';
 import { normalizeArticleTags, normalizeEnglishArticleTags, paragraphLines, imagePositions, withImageMarkers, articleReadiness } from './lib/postPackage';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
@@ -460,6 +460,8 @@ export default function Home() {
   // When latest research cannot produce an article, never mix its new sources with an old cached body.
   const showingPrevious = !!editId && fallbackDraftId === editId && matchingDraft?.mode === 'research_brief';
   const researchOnly = matchingDraft?.mode === 'research_brief' && !showingPrevious;
+  const researchReviewBody = matchingDraft?.reviewBodies?.[channel];
+  const unreadableResearchReview = isUnreadableDraftText(researchReviewBody);
   const currentDraft = !legacyStored && !legacyPublic && !researchOnly &&
     (matchingDraft?.mode === 'article' || !!saved?.fields?.[channel]);
   const storedText = researchOnly ? '' :
@@ -801,7 +803,7 @@ export default function Home() {
                   <ul>{matchingDraft.researchAudit.reasons.map((x,i)=><li key={i}>{x}</li>)}</ul>
                 </div>}
                 <strong>추가 검증할 내용</strong>
-                <ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul>
+                <ul>{(matchingDraft.verificationChecklist||[]).filter(note => !isUnreadableDraftText(note)).map((x,i)=><li key={i}>{x}</li>)}</ul>
                 <p>충분한 공식 자료를 찾지 못했다면 다른 주제를 선택하는 게 좋아.</p>
                 {saved?.fields && Object.values(saved.fields).some(value => !!value?.trim()) && <div className="editor-toolbar">
                   <button className="btn btn-light" onClick={() => {
@@ -814,10 +816,10 @@ export default function Home() {
                   <p className="muted">이 버튼은 이번 실패 결과가 아니라 이 브라우저에 이전부터 남아 있던 원고를 저장해.</p>
                 </div>}
               </div> : null}
-              {researchOnly && matchingDraft?.reviewBodies?.[channel]?.trim() ? <div className="research-lead">
+              {researchOnly && researchReviewBody?.trim() && !unreadableResearchReview ? <div className="research-lead">
                 <strong>이번에 받은 검수용 본문 · 발행 보류</strong>
-                <textarea className="draft-text" readOnly rows={12} aria-label="이번에 받은 검수용 본문" value={matchingDraft.reviewBodies[channel]}/>
-              </div> : researchOnly ? <div className="empty-editor"><h3>이 채널에 표시할 본문이 없어</h3><p>이전 원고가 저장돼 있으면 위 버튼으로 볼 수 있어. 같은 내용을 반복 생성하지 말고 먼저 조사 결과를 확인해 줘.</p></div> : null}
+                <textarea className="draft-text" readOnly rows={12} aria-label="이번에 받은 검수용 본문" value={researchReviewBody}/>
+              </div> : researchOnly ? <div className="empty-editor"><h3>이 채널에 표시할 본문이 없어</h3><p>{unreadableResearchReview ? "이전 생성에서 읽을 수 없는 문자열만 받아서 숨겼어. 그 결과는 원고로 복구할 수 없어." : "이전 원고가 저장돼 있으면 위 버튼으로 볼 수 있어. 같은 내용을 반복 생성하지 말고 먼저 조사 결과를 확인해 줘."}</p></div> : null}
               {showingPrevious && <div className="draft-warning"><strong>이전 저장 원고</strong><p>이번 조사에서 새로 작성된 글이 아니야. 새 출처는 이 원고에 붙이지 않았어.</p></div>}
               {currentDraft && !legacyStored && !!text.trim() ? <>
                 {channel !== 'shortform' && readiness.publishBlocked && <div className="draft-warning" role="alert">
