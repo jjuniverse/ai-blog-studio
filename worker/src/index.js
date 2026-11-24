@@ -55,6 +55,95 @@ const schema = {
   },
   required: ["mode", "title", "naverTitle", "tistoryTitle", "tistoryEnTitle", "naver", "tistory", "tistoryEn", "shortform", "verificationChecklist", "imageNotes", "imageKeywords", "sourceLinks"],
 };
+const bodyKeys = ["naver", "tistory", "tistoryEn", "shortform"];
+const draftTextKeys = ["title", "naverTitle", "tistoryTitle", "tistoryEnTitle", ...bodyKeys];
+function isEditorialDraft(value) {
+  return !!value && ["article", "research_brief"].includes(value.mode) &&
+    draftTextKeys.every(key => typeof value[key] === "string") &&
+    Array.isArray(value.imageNotes) && value.imageNotes.length === 3 &&
+    value.imageNotes.every(note => typeof note === "string") &&
+    Array.isArray(value.imageKeywords) && value.imageKeywords.every(keyword => typeof keyword === "string") &&
+    Array.isArray(value.verificationChecklist) && value.verificationChecklist.every(item => typeof item === "string") &&
+    Array.isArray(value.sourceLinks);
+}
+function finalEditorialTexts(data) {
+  const messages = (Array.isArray(data.output) ? data.output : []).filter(item =>
+    item?.type === "message" && (!item.role || item.role === "assistant") && item.phase !== "commentary" &&
+    Array.isArray(item.content));
+  // A search response may include a preamble or separate output blocks. Never join
+  // text across messages: that produces invalid JSON even if the final message is valid.
+  const ordered = [...messages].reverse().sort((a, b) =>
+    Number(b.phase === "final_answer") - Number(a.phase === "final_answer"));
+  const final = ordered.filter(item => item.phase === "final_answer");
+  return (final.length ? final : ordered).map(item => ({
+    refused: item.content.some(part => part?.type === "refusal"),
+    incomplete: item.status === "incomplete" || item.status === "in_progress",
+    parts: item.content.flatMap(part => part?.type === "output_text" && typeof part.text === "string" &&
+      part.text.trim() ? [part.text] : []),
+  }));
+}
+function jsonCandidates(parts) {
+  // Prefer a complete object in one part. Join parts within a single
+  // message only as a fallback for split JSON. Accept a single JSON fence.
+  const candidates = [];
+  for (const text of [...parts].reverse().concat(parts.length > 1 ? [parts.join("")] : [])) {
+    const value = text.trim();
+    const fences = [...value.matchAll(/\x60\x60\x60(?:json)?[ \t]*\r?\n([\s\S]*?)\r?\n[ \t]*\x60\x60\x60/gi)];
+    if (fences.length === 1) candidates.push(fences[0][1].trim());
+    candidates.push(value.replace(/^\x60\x60\x60(?:json)?[ \t]*\r?\n/i, ""));
+  }
+  return [...new Set(candidates)];
+}
+function closedEditorialFields(text) {
+  // Walk top-level properties only. Keep complete string values, never infer
+  // a missing quote or promote an incomplete field to a finished article.
+  if (!text.startsWith("{")) return {};
+  let i = 1;
+  const fields = Object.create(null);
+  const skip = () => { while (i < text.length && /\s/.test(text[i])) i++; };
+  const readString = () => {
+    if (text[i] !== '"') return undefined;
+    const start = i++;
+    while (i < text.length) {
+      if (text[i] === "\\") i += 2;
+      else if (text[i++] === '"') {
+        try { return JSON.parse(text.slice(start, i)); } catch { return undefined; }
+      }
+    }
+  };
+  while (i < text.length) {
+    skip();
+    const key = readString();
+    if (key === undefined) break;
+    skip();
+    if (text[i++] !== ":") break;
+    skip();
+    if (text[i] === '"') {
+      const value = readString();
+      if (value === undefined) break;
+      if (draftTextKeys.includes(key)) fields[key] = value;
+    } else if (text[i] === "[" || text[i] === "{") {
+      const stack = [];
+      do {
+        if (text[i] === '"') {
+          if (readString() === undefined) return fields;
+        } else {
+          const ch = text[i++];
+          if (ch === "[" || ch === "{") stack.push(ch === "[" ? "]" : "}");
+          if ((ch === "]" || ch === "}") && stack.pop() !== ch) return fields;
+        }
+      } while (stack.length && i < text.length);
+      if (stack.length) break;
+    } else {
+      const literal = /^(?:true|false|null|-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?)(?=[\s,}])/.exec(text.slice(i));
+      if (!literal) break;
+      i += literal[0].length;
+    }
+    skip();
+    if (text[i++] !== ",") break;
+  }
+  return fields;
+}
 function cleanInput(input) {
   if (!input || typeof input !== "object" || typeof input.title !== "string" || input.title.trim().length < 8 || input.title.length > 250) return null;
   const region = input.region === "EN" ? "EN" : "KO";
@@ -306,7 +395,7 @@ export default {
       if (origin !== ALLOWED_ORIGIN) return fail("Origin not allowed", 403);
       return new Response(null, { status: 204, headers: cors(ALLOWED_ORIGIN) });
     }
-    if (url.pathname === "/health" && request.method === "GET") return reply({ ok: true, editorialVersion: 5, configured: Boolean(env.OPENAI_API_KEY && env.STUDIO_PASSWORD && env.STUDIO_PASSWORD.length >= 16) });
+    if (url.pathname === "/health" && request.method === "GET") return reply({ ok: true, editorialVersion: 6, configured: Boolean(env.OPENAI_API_KEY && env.STUDIO_PASSWORD && env.STUDIO_PASSWORD.length >= 16) });
     // Probe the same CORS preflight and POST transport as /generate, without credentials or OpenAI costs.
     // It does not authenticate or authorize generation; never return private settings here.
     if (url.pathname === "/probe" && request.method === "POST") return reply({ ok: true, transport: "post", version: 1 });
@@ -409,28 +498,25 @@ export default {
     let failReasons = [];
     try {
       const data = await upstream.json();
-      // A successful HTTP response can still be incomplete due to output-token budget.
-      // Report the precise non-sensitive category, rather than collapsing everything to "incomplete data".
-      if (data.status === "incomplete") {
-        const reason = data.incomplete_details?.reason || "unknown";
-        console.warn("OpenAI result incomplete", { reason });
+      const incompleteReason = data.status === "incomplete" ? data.incomplete_details?.reason : null;
+      const outputLimited = incompleteReason === "max_output_tokens";
+      if (data.status && data.status !== "completed" && !outputLimited) {
         return reply({
-          error: "AI output stopped before completing the article",
-          code: reason === "max_output_tokens" ? "AI_OUTPUT_LIMIT" : "AI_INCOMPLETE",
+          error: "AI did not finish its response",
+          code: data.status === "incomplete" ? "AI_INCOMPLETE" : "AI_NOT_COMPLETED",
           stage: "openai_response",
         }, 502);
       }
-      if (data.status && data.status !== "completed") {
-        console.warn("OpenAI response unexpected status", { status: data.status });
-        return reply({ error: "AI did not finish its response", code: "AI_NOT_COMPLETED", stage: "openai_response" }, 502);
+      if (!Array.isArray(data.output)) {
+        return reply({ error: "AI response has no output messages", code: "AI_EMPTY_OUTPUT", stage: "openai_response" }, 502);
       }
-      const webCalls = (data.output || []).filter(item => item.type === "web_search_call");
+      const webCalls = data.output.filter(item => item?.type === "web_search_call" && (!item.status || item.status === "completed"));
       const sourceData = webCalls.flatMap(item => item.action?.sources || []);
       // Web-search results can also cite URLs via message annotations.
-      const citations = (data.output || []).flatMap(message => (message.content || [])
-        .flatMap(part => (part.annotations || []).filter(a => a.type === "url_citation")));
+      const citations = data.output.flatMap(message => Array.isArray(message?.content) ? message.content : [])
+        .flatMap(part => Array.isArray(part?.annotations) ? part.annotations : []).filter(a => a?.type === "url_citation");
       const retrieved = [...sourceData, ...citations]
-        .filter(src => typeof src.url === "string" && /^https:\/\//.test(src.url));
+        .filter(src => typeof src?.url === "string" && /^https:\/\//.test(src.url));
       const normalize = raw => {
         if (!validUrl(raw)) return "";
         const u = new URL(raw);
@@ -443,17 +529,51 @@ export default {
       const retrievedByUrl = new Map(retrieved.filter(src => normalize(src.url)).map(src => [normalize(src.url), src]));
       visitedUrls = new Set(retrievedByUrl.keys());
       if (!webCalls.length) return reply({ error: "Web research did not run; no draft was created", code: "AI_NO_WEB_SEARCH", stage: "openai_response" }, 502);
-      const parts = (data.output || []).flatMap(message => (message.content || [])
-        .filter(part => part.type === "output_text").map(part => part.text));
-      if (!parts.length) return reply({ error: "AI returned no article text", code: "AI_EMPTY_OUTPUT", stage: "parse_openai_result" }, 502);
-      try {
-        result = JSON.parse(parts.join(""));
-      } catch {
-        return reply({ error: "AI returned invalid or truncated JSON", code: "AI_INVALID_JSON", stage: "parse_openai_result" }, 502);
+      const finalMessages = finalEditorialTexts(data);
+      if (finalMessages[0]?.refused) {
+        return reply({ error: "AI declined to write this article", code: "AI_REFUSAL", stage: "openai_response" }, 422);
       }
-      if (!["article", "research_brief"].includes(result.mode) || !["naver", "tistory", "tistoryEn", "shortform", "title", "naverTitle", "tistoryTitle", "tistoryEnTitle"].every(key => typeof result[key] === "string") ||
-          !Array.isArray(result.imageNotes) || result.imageNotes.length !== 3 ||
-          !Array.isArray(result.verificationChecklist) || !Array.isArray(result.sourceLinks)) throw Error("Invalid draft schema");
+      const candidates = finalMessages.flatMap(message => jsonCandidates(message.parts)
+        .map(text => ({ text, incomplete: message.incomplete || outputLimited })));
+      let parseable = false;
+      for (const { text, incomplete } of candidates) {
+        if (incomplete) continue;
+        let parsed;
+        try { parsed = JSON.parse(text); parseable = true; } catch { continue; }
+        if (isEditorialDraft(parsed)) { result = parsed; break; }
+      }
+      if (!result) {
+        const recovered = candidates.map(({ text }) => closedEditorialFields(text))
+          .find(fields => bodyKeys.some(key => !!fields[key]?.trim()));
+        if (recovered) {
+          const reason = outputLimited || finalMessages.some(message => message.incomplete)
+            ? "AI 작성이 중간에 끝났어. 완전히 수신된 채널만 검수용으로 남겼어."
+            : "AI 응답 형식이 불완전했어. 완전히 수신된 본문만 검수용으로 남겼어.";
+          const reviewBodies = Object.fromEntries(bodyKeys.filter(key => recovered[key]?.trim())
+            .map(key => [key, recovered[key].trim()]));
+          return reply({
+            draft: {
+              mode: "research_brief", title: recovered.title?.trim() || input.title,
+              naver: "", tistory: "", tistoryEn: "", shortform: "", reviewBodies,
+              sourceLinks: [...retrievedByUrl.values()].slice(0, 5).map(src => ({ title: src.title || "", url: src.url })),
+              verificationChecklist: ["이 결과는 발행용이 아니야. 본문의 주장과 출처를 따로 대조해 줘."],
+              researchAudit: {
+                searchedSourceCount: visitedUrls.size, returnedSourceCount: Math.min(5, visitedUrls.size),
+                distinctSourceDomains: new Set([...retrievedByUrl.values()].slice(0, 5).map(src => new URL(src.url).hostname)).size,
+                initiallyGeneratedMode: "unknown", reasons: [reason],
+              },
+            },
+            status: "research_required",
+          });
+        }
+        const code = outputLimited ? "AI_OUTPUT_LIMIT" : !candidates.length ? "AI_EMPTY_OUTPUT" :
+          parseable ? "AI_DRAFT_FORMAT_ERROR" : "AI_INVALID_JSON";
+        console.warn("Editorial response could not be used", { code, outputMessages: finalMessages.length,
+          textParts: finalMessages.reduce((total, message) => total + message.parts.length, 0) });
+        const error = outputLimited ? "AI output stopped before completing a channel" :
+          !candidates.length ? "AI returned no article text" : "AI returned no intact editorial draft";
+        return reply({ error, code, stage: "parse_openai_result" }, 502);
+      }
       const curated = new Map();
       for (const src of result.sourceLinks) {
         const key = normalize(src?.url);

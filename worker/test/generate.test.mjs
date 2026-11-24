@@ -222,3 +222,85 @@ test('three structurally complete and separately written articles can still pass
   assert.ok(Object.values(result.draft.qualityAudit.channelReadiness).every(audit=>audit.ready));
   assert.deepEqual(result.draft.sourceLinks, [official]);
 });
+
+const structuredResponseFixture = {
+  mode: 'article', title: '기초연금 온라인 신청 개선',
+  naverTitle: '기초연금 신청 방법', tistoryTitle: '기초연금 신청 서류와 기준',
+  tistoryEnTitle: 'Apply for the Korean basic pension', naver: reviewBody,
+  tistory: reviewBody, tistoryEn: '', shortform: '검수용 대본입니다.',
+  imageNotes: ['cover','detail','summary'], imageKeywords: ['기초연금'],
+  verificationChecklist: [], sourceLinks: [official],
+};
+const outputText = text => ({type:'output_text',text});
+const assistantMessage = (content, more={}) => ({type:'message',role:'assistant',content,...more});
+
+async function generateFromResponsesShape(output, extra={}) {
+  const source = await readFile(new URL('../src/index.js', import.meta.url), 'utf8');
+  const worker = (await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'))).default;
+  const original = globalThis.fetch;
+  let calls=0;
+  globalThis.fetch = async () => {
+    calls++;
+    return Response.json({status:'completed', ...extra, output:[
+      {type:'web_search_call', status:'completed', action:{sources:[official]}},
+      ...output,
+    ]});
+  };
+  const env = { OPENAI_API_KEY:'dummy', STUDIO_PASSWORD:'a-password-long-enough',
+    AUTH_LIMIT:{limit:async()=>({success:true})}, GEN_LIMIT:{limit:async()=>({success:true})} };
+  try {
+    const response = await worker.fetch(new Request('https://worker.example/generate',{
+      method:'POST', headers:{Origin:'https://jjuniverse.github.io', 'X-Studio-Passphrase':env.STUDIO_PASSWORD},
+      body:JSON.stringify({title:structuredResponseFixture.title, region:'KO', status:'needs_sources',
+        sources:[{title:structuredResponseFixture.title,publisher:'Example',url:official.url}]}),
+    }),env);
+    assert.equal(calls,1);
+    return {http:response.status, body:await response.json()};
+  } finally {
+    globalThis.fetch=original;
+  }
+}
+
+test('a valid final editorial message is not concatenated with earlier preamble or a text block', async () => {
+  const json=JSON.stringify(structuredResponseFixture);
+  const result=await generateFromResponsesShape([
+    assistantMessage([outputText('I will look up the official source.')]),
+    assistantMessage([outputText('Almost ready.')],{phase:'commentary'}),
+    assistantMessage([outputText('Draft:'),outputText(json)],{phase:'final_answer'}),
+  ]);
+  assert.equal(result.http,200);
+  assert.equal(result.body.draft.mode,'article');
+  assert.match(result.body.draft.naver,/행정복지센터/);
+});
+
+test('one fenced JSON message and a JSON object split within one message both work', async () => {
+  const json=JSON.stringify(structuredResponseFixture);
+  const fence=String.fromCharCode(96).repeat(3);
+  const fenced=await generateFromResponsesShape([assistantMessage([outputText('Here is the result:\n'+fence+'json\n'+json+'\n'+fence)])]);
+  assert.equal(fenced.body.draft.mode,'article');
+  const split=await generateFromResponsesShape([assistantMessage([outputText(json.slice(0,400)),outputText(json.slice(400))])]);
+  assert.equal(split.body.draft.mode,'article');
+});
+
+test('a truncated response preserves only complete top-level draft bodies for review', async () => {
+  const intact='공식 안내에 따르면 "배우자 동의"는 모바일로 할 수 있습니다.\n다음 단계는 공식 안내를 확인하세요.';
+  const prefix=JSON.stringify({mode:'article',title:structuredResponseFixture.title,nested:{naver:'wrong'},naver:intact}).slice(0,-1);
+  for(const extra of [{},{status:'incomplete',incomplete_details:{reason:'max_output_tokens'}}]){
+    const result=await generateFromResponsesShape([assistantMessage([outputText(prefix+', "tistory":"중간에 끊긴 원고')])],extra);
+    assert.equal(result.http,200);
+    assert.equal(result.body.status,'research_required');
+    assert.equal(result.body.draft.naver,'');
+    assert.deepEqual(result.body.draft.reviewBodies,{naver:intact});
+  }
+});
+
+test('unfinished first article stays an error and a refusal is not parsed as a draft', async () => {
+  const partial=await generateFromResponsesShape([assistantMessage([outputText('{"mode":"article","naver":"unfinished')])],
+    {status:'incomplete',incomplete_details:{reason:'max_output_tokens'}});
+  assert.equal(partial.body.code,'AI_OUTPUT_LIMIT');
+  const refused=await generateFromResponsesShape([
+    assistantMessage([outputText(JSON.stringify(structuredResponseFixture))]),
+    assistantMessage([{type:'refusal',refusal:'No result'}],{phase:'final_answer'}),
+  ]);
+  assert.equal(refused.body.code,'AI_REFUSAL');
+});
