@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T01:19:41.186185+00:00",
+  "updatedAt": "2026-11-24T01:18:16.875162+00:00",
   "maxDailyCalls": 3,
   "dailyAttempts": {
     "2026-11-17": 3,
@@ -9,10 +9,133 @@
     "2026-11-20": 3,
     "2026-11-21": 3,
     "2026-11-22": 3,
-    "2026-11-23": 3
+    "2026-11-23": 3,
+    "2026-11-24": 3
   },
   "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
   "entries": [
+    {
+      "candidateId": "6a6e4dea74dcb4",
+      "title": "Disney+ Finds Its New #2 Show In The Perfect K-Drama To Binge",
+      "category": "K-드라마",
+      "region": "EN",
+      "researchedAt": "2026-11-24T01:18:14.119295+00:00",
+      "topic": "디즈니+의 인기 한국 드라마",
+      "summary": "디즈니+는 최근 한국 드라마 라인업을 확장하며, 특히 '사운드트랙 #2'와 '이혼 황후' 등의 작품이 주목받고 있습니다. '사운드트랙 #2'는 2023년 12월에 공개된 로맨스 음악 드라마로, 주연 배우로 노상현, 금새록, 손정혁이 출연합니다. 이 드라마는 6개의 에피소드로 구성되어 있으며, 디즈니+에서 시청할 수 있습니다. 또한, '이혼 황후'는 2026년 11월에 공개된 드라마로, 공개 일주일 만에 32개국에서 1위를 차지하며 큰 인기를 얻었습니다. 이 드라마는 동명의 네이버 웹툰을 원작으로 하며, 궁중의 사랑과 배신, 음모를 그린 작품입니다.",
+      "keyFacts": [
+        "'사운드트랙 #2'는 2023년 12월에 공개된 로맨스 음악 드라마로, 디즈니+에서 시청 가능",
+        "'이혼 황후'는 2026년 11월에 공개된 드라마로, 공개 일주일 만에 32개국에서 1위를 차지",
+        "'이혼 황후'는 동명의 네이버 웹툰을 원작으로 하며, 궁중의 사랑과 배신, 음모를 그린 작품"
+      ],
+      "openQuestions": [
+        "'사운드트랙 #2'와 '이혼 황후'의 시청자 평가는 어떠한가?",
+        "디즈니+의 한국 드라마 라인업에 다른 어떤 작품들이 포함되어 있는가?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.kstartrend.com/2026/11/18/disney-reveals-moving-2-the-koreans-and-more-korean-dramas-in-major-2027-lineup-update?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.chosun.com/english/kpop-culture-en/2026/11/18/FKEVPDAFMNAEVN3GGIWCINJAVU/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.chosun.com/english/kpop-culture-en/2026/11/18/GVXWICPJ3BFIPHDS7RTQG7KIFI/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.sportschosun.com/en/drama/2026-11-18/202611180100117360010812?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.disneyplus.com/browse/entity-0a090656-1ec6-4e2d-a614-1be2aa85acd4?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.disneyplus.com/pt-br/explore/articles/disney-plus-announces-new-korean-series-slate-for-2026?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.disneyplus.com/en-sg/explore/articles/made-in-korea-2?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.disneyplus.com/en-sg/explore/articles/disney-plus-announces-new-korean-series-slate-for-2026?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 8,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "e462ccf9c1ed63",
+      "title": "부천시, ‘2026년 기초연금 유공’ 보건복지부 장관 기관표창 선정",
+      "category": "시니어·복지",
+      "region": "KO",
+      "researchedAt": "2026-11-24T01:18:11.348156+00:00",
+      "topic": "부천시, 2026년 기초연금 유공 보건복지부 장관 기관표창 선정",
+      "summary": "부천시는 보건복지부 주관 '2026년 기초연금 유공 평가'에서 기초연금 제도의 안정적 운영과 수급률 향상에 기여한 공로를 인정받아 보건복지부 장관 기관표창 대상 기관으로 선정됐다. 부천시는 상·하반기 정기적으로 기초연금 미신청자를 발굴하고, 수급 가능성이 있는 어르신들에게 신청을 안내하는 등 기초연금 수급률 향상을 위해 노력해 왔다. 특히 기초연금 수급 대상자가 혜택을 놓치지 않도록 선제적으로 대응하고, 복지 사각지대 해소를 위한 적극행정을 펼친 점에서 높은 평가를 받았다. 시는 앞으로도 기초연금 미신청자를 지속적으로 발굴하고, 제도 홍보와 신청 안내를 강화해 더 많은 어르신이 안정적인 노후생활을 누릴 수 있도록 지원할 계획이다.",
+      "keyFacts": [
+        "부천시, 2026년 기초연금 유공 평가에서 보건복지부 장관 기관표창 대상 기관으로 선정",
+        "정기적으로 기초연금 미신청자 발굴 및 수급 가능 어르신에게 신청 안내 실시",
+        "기초연금 수급 대상자 혜택 선제적 대응 및 복지 사각지대 해소를 위한 적극행정 펼침",
+        "앞으로도 기초연금 미신청자 발굴과 제도 홍보 및 신청 안내 강화 계획"
+      ],
+      "openQuestions": [],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.efocus.co.kr/news/articleView.html?idxno=57577&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.ggjapp.com/news/articleView.html?idxno=245510&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.newsro.kr/articles/1936909?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.fnnews.com/news/202611231116558995?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.fnnews.com/news/202611230924091596?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.m-i.kr/news/articleView.html?idxno=2022027&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://news.bucheon.go.kr/home/kor/M337742440/board.do?act=detail&idx=cb00d1a0008a85e71a41b8741facbffe4f7a681285171cfb59d03d78a54b43d7&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://premium.inews24.com/view/2029334?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 11,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "b8f76d8784b7e0",
+      "title": "Best AI Policy Management Software by Use Case (2026)",
+      "category": "AI·생산성",
+      "region": "EN",
+      "researchedAt": "2026-11-24T01:18:04.245717+00:00",
+      "status": "research_failed",
+      "keyFacts": [],
+      "openQuestions": [
+        "조사 API 오류로 근거를 수집하지 못했어."
+      ],
+      "sources": [],
+      "summary": ""
+    },
     {
       "candidateId": "e916d0b26e77cc",
       "title": "iFLYTEK Australia Outlines AI Note-Taking Applications for Work and Education",
