@@ -70,3 +70,31 @@ test('an older cached corrupted preview stays hidden while real text still opens
   assert.equal(firstWrittenChannel({ naver: broken, tistory: '정상 원고' }), 'tistory');
   assert.equal(resolveDraftBody('naver',{}, {naver:broken}), '');
 });
+
+test('a channel result never replaces another channel or the bundled legacy result', async () => {
+  const { saveChannelDraft, findChannelDraft, retainDraftTopics } = await import('../app/lib/draftDisplay.ts');
+  const legacy = { id:'topic', naver:'네이버 이전 글', tistory:'티스토리 이전 글', shortform:'기존 대본' };
+  const naver = { id:'topic', generationChannel:'naver', naver:'네이버 새 글' };
+  const english = { id:'topic', generationChannel:'tistoryEn', tistoryEn:'New English post' };
+  const failedEnglish = { id:'topic', generationChannel:'tistoryEn', tistoryEn:'', mode:'research_brief' };
+  const input = [legacy];
+  const stored = saveChannelDraft(saveChannelDraft(saveChannelDraft(input, naver), english), failedEnglish);
+  assert.equal(stored.length, 3);
+  assert.deepEqual(input, [legacy]);
+  assert.equal(findChannelDraft(stored, 'topic', 'naver'), naver);
+  assert.equal(findChannelDraft(stored, 'topic', 'tistory'), legacy);
+  assert.equal(findChannelDraft(stored, 'topic', 'shortform'), legacy);
+  assert.equal(findChannelDraft(stored, 'topic', 'tistoryEn'), failedEnglish);
+  assert.equal(findChannelDraft(stored, 'unrelated', 'naver'), undefined);
+  assert.deepEqual(retainDraftTopics([naver, {id:'older'}, legacy], 1), [naver, legacy]);
+});
+
+test('regenerating one article replaces only its body, title and stale evidence review', async () => {
+  const { mergeGeneratedFields } = await import('../app/lib/draftDisplay.ts');
+  const edits = { fields:{naver:'keep', tistory:'replace', shortform:'keep script'},
+    titles:{naver:'keep title', tistory:'replace title'}, evidenceReview:{naver:'keep review',tistory:'stale'} };
+  const changed = mergeGeneratedFields(edits,'tistory','new body','new title');
+  assert.deepEqual(changed, {fields:{naver:'keep', tistory:'new body', shortform:'keep script'},
+    titles:{naver:'keep title',tistory:'new title'}, evidenceReview:{naver:'keep review'}});
+  assert.equal(edits.evidenceReview.tistory, 'stale');
+});

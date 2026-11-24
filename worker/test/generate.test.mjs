@@ -59,7 +59,7 @@ test('complete OpenAI response yields a research audit and draft without a scope
       headers: { Origin: 'https://jjuniverse.github.io', 'Content-Type': 'application/json',
                  'X-Studio-Passphrase': env.STUDIO_PASSWORD },
       body: JSON.stringify({
-        title, category: 'IT·AI', region: 'KO', status: 'needs_sources',
+        title, category: 'IT·AI', region: 'KO', status: 'needs_sources', channel: 'naver',
         sources: [{ url: 'https://news.example/story', publisher: 'Example Media', title }],
       }),
     });
@@ -69,19 +69,18 @@ test('complete OpenAI response yields a research audit and draft without a scope
     assert.equal(result.draft.mode, 'article');
     assert.equal(result.draft.imageKeywords.length, 2);
     assert.match(result.draft.naver, /#오늘의픽/);
-    assert.match(result.draft.tistory, /#오늘의픽/);
+    assert.equal(result.draft.tistory, '');
     assert.equal((result.draft.naver.match(/#오늘의픽/g)||[]).length, 1);
     assert.equal(result.draft.naverTitle, 'AI 소프트웨어 업데이트와 사용 방법');
-    assert.equal(result.draft.tistoryTitle, 'AI 소프트웨어 최신 기능과 설정 단계');
-    assert.equal(result.draft.tistoryEnTitle, 'AI Software Release and Setup Guide');
-    assert.match(result.draft.tistoryEn, /## Related Tags\n#TodaysPick/);
-    assert.equal((result.draft.tistoryEn.match(/#TodaysPick/g) || []).length, 1);
+    assert.equal(result.draft.tistoryTitle, undefined);
+    assert.equal(result.draft.tistoryEn, '');
+    assert.equal(result.draft.shortform, '');
+    assert.equal(result.draft.generationChannel, 'naver');
     assert.equal(result.draft.researchAudit.distinctSourceDomains, 2);
     assert.equal(result.draft.researchAudit.returnedSourceCount, 2);
     assert.equal(result.draft.researchAudit.initiallyGeneratedMode, 'article');
     assert.equal(result.status, 'revision_required');
-    assert.equal(result.draft.qualityAudit.blogsAreCopies, true);
-    assert.ok(result.draft.qualityAudit.warnings.some(x => x.includes('동일')));
+    assert.deepEqual(Object.keys(result.draft.qualityAudit.channelReadiness), ['naver']);
 
   } finally {
     globalThis.fetch = originalFetch;
@@ -116,7 +115,7 @@ test('short imperfect articles remain visible for revision instead of becoming e
       method:'POST',headers:{Origin:'https://jjuniverse.github.io',
         'Content-Type':'application/json','X-Studio-Passphrase':env.STUDIO_PASSWORD},
       body:JSON.stringify({title:'Good research topic title',category:'IT·AI',region:'KO',
-        status:'needs_sources',sources:[{title:'Good research topic title',publisher:'Example',url:'https://news.example/test'}]}),
+        status:'needs_sources',channel:'naver',sources:[{title:'Good research topic title',publisher:'Example',url:'https://news.example/test'}]}),
     }),env);
     const result=await response.json();
     assert.equal(response.status,200,JSON.stringify(result));
@@ -124,26 +123,23 @@ test('short imperfect articles remain visible for revision instead of becoming e
     assert.equal(result.status,'revision_required');
     // The short paid result stays intact, while factual content remains below publishability threshold.
     assert.equal(result.draft.qualityAudit.channelReadiness.naver.ready, false);
-    assert.equal(result.draft.qualityAudit.channelReadiness.tistory.ready, false);
+    assert.equal(result.draft.qualityAudit.channelReadiness.tistory, undefined);
     assert.ok(result.draft.qualityAudit.channelReadiness.naver.bodyLength < 350);
     assert.ok(result.draft.naver.startsWith(body));
-    assert.ok(result.draft.tistory.startsWith(body));
+    assert.equal(result.draft.tistory, '');
     assert.match(result.draft.naver, /## 관련 태그\n#오늘의픽/);
-    assert.match(result.draft.tistory, /## 관련 태그\n#오늘의픽/);
     assert.equal((result.draft.naver.match(/#오늘의픽/g) || []).length, 1);
     assert.ok((result.draft.naver.split('## 관련 태그')[1].match(/#[^\\s#]+/g) || []).length <= 10);
     assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('1200자')));
     assert.equal(result.draft.qualityAudit.channelReadiness.naver.minimum,1200);
-    assert.equal(result.draft.qualityAudit.channelReadiness.tistory.minimum,1500);
-    assert.equal(result.draft.qualityAudit.channelReadiness.tistoryEn.minimum,800);
-    assert.ok(result.draft.shortform.length>0);
+    assert.equal(result.draft.shortform, '');
     assert.ok(result.draft.qualityAudit.warnings.some(x=>x.includes('보완 필요')));
   } finally {
     globalThis.fetch=originalFetch;
   }
 });
 
-async function generatePensionDraft({ body, tistory = body, english = '', shortform = 'A short draft for review', requestedSources, retrievedSources, mode = 'article' }) {
+async function generatePensionDraft({ body, tistory = body, english = '', shortform = 'A short draft for review', requestedSources, retrievedSources, mode = 'article', channel = 'naver' }) {
   const source = await readFile(new URL('../src/index.js', import.meta.url), 'utf8');
   const worker = (await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'))).default;
   const original = globalThis.fetch;
@@ -179,7 +175,7 @@ async function generatePensionDraft({ body, tistory = body, english = '', shortf
   try {
     const response = await worker.fetch(new Request('https://worker.example/generate', {
       method:'POST', headers:{Origin:'https://jjuniverse.github.io', 'Content-Type':'application/json', 'X-Studio-Passphrase':env.STUDIO_PASSWORD},
-      body:JSON.stringify({title, status:'needs_sources', region:'KO', category:'시니어·복지', sources:[{title,publisher:'example',url:'https://news.example/pension'}]}),
+      body:JSON.stringify({title, channel, status:'needs_sources', region:'KO', category:'시니어·복지', sources:[{title,publisher:'example',url:'https://news.example/pension'}]}),
     }), env);
     const result = await response.json();
     assert.equal(response.status, 200, JSON.stringify(result));
@@ -229,7 +225,7 @@ test('different query IDs are not evidence for the same article', async () => {
   assert.ok(result.draft.researchAudit.reasons.some(reason=>reason.includes('실제 검색 출처')));
 });
 
-test('three structurally complete and separately written articles can still pass to human review', async () => {
+test('each structurally complete single-channel article can pass to human review', async () => {
   // Long distinct paragraphs are synthetic; this checks shape, not factual accuracy.
   const makeArticle = (summary, paragraph, prefix = '') => [
     prefix + paragraph.repeat(18),
@@ -242,10 +238,19 @@ test('three structurally complete and separately written articles can still pass
   const tistory = makeArticle('3줄 요약', '배우자 동의와 추가 서류 제출은 상황에 맞게 필요한 절차를 확인하고 진행합니다. ');
   const english = makeArticle('Three Key Takeaways', 'Always consult the responsible public agency for the latest instructions and current application details before proceeding. ');
   const shortform = '부모님 연금 신청을 준비하고 있나요? 먼저 접수 방법을 확인하세요. 화면에는 공식 서비스 이름을 표시하고, 방문이 필요하면 주민센터 문의 방법을 소개하세요. 마지막으로 필요한 서류를 미리 확인해 보세요.';
-  const result = await generatePensionDraft({body, tistory, english, shortform, requestedSources:[official], retrievedSources:[official, other]});
-  assert.equal(result.status, 'review_required', JSON.stringify(result.draft.qualityAudit));
-  assert.ok(Object.values(result.draft.qualityAudit.channelReadiness).every(audit=>audit.ready));
-  assert.deepEqual(result.draft.sourceLinks, [official]);
+  for (const channel of ['naver','tistory','tistoryEn']) {
+    const result = await generatePensionDraft({channel, body, tistory, english, shortform, requestedSources:[official], retrievedSources:[official, other]});
+    assert.equal(result.status, 'review_required', JSON.stringify(result.draft.qualityAudit));
+    assert.equal(result.draft.generationChannel, channel);
+    assert.deepEqual(Object.keys(result.draft.qualityAudit.channelReadiness), [channel]);
+    assert.ok(result.draft.qualityAudit.channelReadiness[channel].ready);
+    assert.deepEqual(result.draft.sourceLinks, [official]);
+    for (const other of ['naver','tistory','tistoryEn','shortform'].filter(key => key !== channel)) {
+      assert.equal(result.draft[other], '');
+      assert.equal(result.draft[other + 'Title'], undefined);
+    }
+    assert.match(result.draft[channel], channel === 'tistoryEn' ? /## Related Tags\n#TodaysPick/ : /## 관련 태그\n#오늘의픽/);
+  }
 });
 
 const structuredResponseFixture = {
@@ -280,9 +285,9 @@ async function generateFromResponsesShape(output, extra={}, opts={}) {
   const env = { OPENAI_API_KEY:'dummy', STUDIO_PASSWORD:'a-password-long-enough',
     AUTH_LIMIT:{limit:async()=>({success:true})}, GEN_LIMIT:{limit:async()=>({success:true})} };
   try {
-    const response = await worker.fetch(new Request('https://worker.example/generate',{
+    const response = await worker.fetch(new Request('https://worker.example/generate-channel',{
       method:'POST', headers:{Origin:'https://jjuniverse.github.io', 'X-Studio-Passphrase':env.STUDIO_PASSWORD},
-      body:JSON.stringify({title:structuredResponseFixture.title, region:'KO', status:'needs_sources',
+      body:JSON.stringify({title:structuredResponseFixture.title, channel:'naver', ...opts.input, region:'KO', status:'needs_sources',
         sources:[{title:structuredResponseFixture.title,publisher:'Example',url:official.url}]}),
     }),env);
     assert.equal(calls,opts.expectedCalls ?? 2);
@@ -351,7 +356,7 @@ test('hexadecimal noise shown in the Studio screenshot is not displayed as a dra
   assert.doesNotMatch(JSON.stringify(result.body.draft), /c7 e4/);
 });
 
-test('a broken language channel never hides a separate good channel or technical references', async () => {
+test('an unwanted channel is ignored without hiding the selected article or technical references', async () => {
   const out={...structuredResponseFixture, tistory:'c7 e4 e4 e4 e4 e4 e4 e4 e4 e4',
     naver:reviewBody.replace('배우자가','복지로 앱의 EB C7 안내처럼, 배우자가')};
   const result=await generateFromResponsesShape([assistantMessage([outputText(JSON.stringify(out))])]);
@@ -366,7 +371,7 @@ test('writer receives only vetted evidence, never the original HTML or independe
   assert.equal(result.body.draft.mode,'article');
   const [research,writer]=result.requests;
   assert.equal(research.max_tool_calls,3);
-  assert.equal(research.max_output_tokens+writer.max_output_tokens,12000);
+  assert.ok(research.max_output_tokens+writer.max_output_tokens <= 6500);
   assert.equal(writer.tools,undefined);
   const data=JSON.parse(writer.input);
   assert.ok(data.evidenceFacts.some(fact=>fact.section==='documents' && fact.sourceUrl===official.url));
@@ -396,4 +401,31 @@ test('writer outage keeps the already gathered facts and does not run a third ca
   assert.deepEqual(result.body.draft.sourceLinks,[official]);
   assert.equal(result.body.draft.evidenceFacts.length,3);
   assert.equal(result.body.draft.naver,'');
+});
+
+test('the writer schema permits exactly the selected article title and body', async () => {
+  for (const channel of ['naver', 'tistory', 'tistoryEn']) {
+    const expected = ['mode', channel, channel + 'Title', 'verificationChecklist', 'imageNotes', 'imageKeywords', 'sourceLinks'].sort();
+    const result = await generateFromResponsesShape(
+      [assistantMessage([outputText(JSON.stringify({...structuredResponseFixture, tistoryEn:'An English body reserved for review.'}))])],
+      {}, { input: { channel } },
+    );
+    const writer = result.requests[1];
+    assert.equal(result.body.draft.generationChannel, channel);
+    assert.deepEqual(Object.keys(writer.text.format.schema.properties).sort(), expected);
+    assert.deepEqual([...writer.text.format.schema.required].sort(), expected);
+    assert.match(writer.instructions, /Write exactly one Today Pick article/);
+    for (const other of ['naver','tistory','tistoryEn','shortform'].filter(key => key !== channel)) {
+      assert.equal(result.body.draft[other], '');
+      assert.equal(result.body.draft.reviewBodies?.[other], undefined);
+    }
+  }
+});
+
+test('missing, multiple, and unsupported channels never trigger a paid API request', async () => {
+  for (const channel of [undefined, ['naver','tistory'], 'shortform', 'constructor']) {
+    const result = await generateFromResponsesShape([], {}, { input: {channel}, expectedCalls:0 });
+    assert.equal(result.http, 400);
+    assert.equal(result.body.code, 'GEN_CHANNEL_REQUIRED');
+  }
 });

@@ -4,11 +4,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
 import PostImagePackage from './components/PostImagePackage';
 import { matchPublished, type PublicFeed } from './lib/publishedMatch';
-import { firstWrittenChannel, isUnreadableDraftText, resolveDraftBody } from './lib/draftDisplay';
+import { ARTICLE_CHANNELS, findChannelDraft, firstWrittenChannel, isUnreadableDraftText, mergeGeneratedFields, resolveDraftBody, retainDraftTopics, saveChannelDraft } from './lib/draftDisplay';
 import { normalizeArticleTags, normalizeEnglishArticleTags, paragraphLines, imagePositions, withImageMarkers, articleReadiness } from './lib/postPackage';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
-type Channel = 'naver' | 'tistory' | 'tistoryEn' | 'shortform';
+type ArticleChannel = (typeof ARTICLE_CHANNELS)[number]['id'];
+type Channel = ArticleChannel | 'shortform';
 type Section = 'discover' | 'editor' | 'publish';
 type Candidate = {
   id: string;
@@ -55,6 +56,8 @@ type Draft = {
   mode?: "article" | "research_brief";
   generatedAt?: string;
   generationVersion?: number;
+  generationChannel?: ArticleChannel;
+  imageNotes?: string[];
   topicSnapshot?: { title: string; category: string; region: string };
   reviewBodies?: Partial<Record<Channel, string>>;
   evidenceFacts?: { section: string; statement: string; sourceUrl: string; sourceTitle: string }[];
@@ -62,7 +65,7 @@ type Draft = {
   sourceLinks?: { title: string; url: string }[];
   imageKeywords?: string[];
   researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
-  qualityAudit?: { blogsAreCopies: boolean; shortformCopiesBlog: boolean; visualRightsWarning: boolean; warnings: string[] };
+  qualityAudit?: { warnings: string[] };
   title: string;
   naverTitle?: string;
   tistoryTitle?: string;
@@ -171,7 +174,8 @@ export default function Home() {
   const [copyFeedback, setCopyFeedback] = useState<{ id: number; kind: 'success' | 'error'; target: 'title' | 'article' } | null>(null);
   const [studioPassphrase, setStudioPassphrase] = useState('');
   const [verifiedNotes, setVerifiedNotes] = useState('');
-  const [generating, setGenerating] = useState(false);
+  const [generating, setGenerating] = useState<ArticleChannel | null>(null);
+  const generationInProgress = useRef(false);
   const [verifying, setVerifying] = useState(false);
   const [verifyError, setVerifyError] = useState('');
   const [imageQuery, setImageQuery] = useState('');
@@ -200,9 +204,9 @@ export default function Home() {
       const generated = window.localStorage.getItem(GENERATED_DRAFTS_KEY);
       if (generated) {
         const parsed: unknown = JSON.parse(generated);
-        if (Array.isArray(parsed)) setLocalDrafts(parsed.filter((entry): entry is Draft =>
+        if (Array.isArray(parsed)) setLocalDrafts(retainDraftTopics(parsed.filter((entry): entry is Draft =>
           !!entry && typeof entry === 'object' && typeof entry.id === 'string' &&
-          (entry.mode === 'article' || entry.mode === 'research_brief')).slice(0, 40));
+          (entry.mode === 'article' || entry.mode === 'research_brief'))));
       }
     } catch { /* private mode or disabled local storage */ }
     setHydrated(true);
@@ -232,7 +236,7 @@ export default function Home() {
   }, [localEdits, hydrated]);
   useEffect(() => {
     if (!hydrated) return;
-    try { window.localStorage.setItem(GENERATED_DRAFTS_KEY, JSON.stringify(localDrafts.slice(0, 40))); }
+    try { window.localStorage.setItem(GENERATED_DRAFTS_KEY, JSON.stringify(localDrafts)); }
     catch { setNotice('생성 결과 보관 공간이 부족해. 중요한 원고는 텍스트 파일로 저장해 줘.'); }
   }, [localDrafts, hydrated]);
 
@@ -332,21 +336,22 @@ export default function Home() {
       return false;
     }
   }
-  async function generateHere() {
-    if (!liveSelected || !selected || generating) return;
+  async function generateHere(target: ArticleChannel) {
+    if (!liveSelected || !selected || generationInProgress.current) return;
     setGenerateError('');
     if (selected.status === 'sensitive_review' || selected.status === 'excluded_promotion') { setGenerateError('이 주제는 민감하거나 광고성으로 분류돼 생성하지 않아.'); return; }
     if (!studioPassphrase) { setGenerateError('관리자 암호를 입력해 줘.'); return; }
-    setGenerating(true);
+    generationInProgress.current = true;
+    setGenerating(target);
     try {
       // Check reachability before sending a paid OpenAI request.
       if (!(await checkWorkerConnection())) return;
-      const response = await fetch(WORKER_URL + '/generate', {
+      const response = await fetch(WORKER_URL + '/generate-channel', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'X-Studio-Passphrase': studioPassphrase },
         body: JSON.stringify({
           title: selected.title, category: selected.category, region: selected.region,
-          status: selected.status, verifiedNotes,
+          status: selected.status, verifiedNotes, channel: target,
           sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })).slice(0,5),
         }),
       });
@@ -355,54 +360,48 @@ export default function Home() {
         const detail = [payload.error || 'HTTP ' + response.status, payload.code, payload.stage].filter(Boolean).join(' · ');
         throw new Error(detail + (response.status >= 500 ? ' · 서버 내부 오류야. 추가 생성은 누르지 말고 이 오류 문구를 알려줘.' : ''));
       }
-      if (!payload.draft || !['naver','tistory','tistoryEn','shortform'].every(k => typeof payload.draft[k] === 'string')) throw new Error('AI 응답 형식이 잘못됐어.');
-      const previousText = saved?.fields?.naver || matchingDraft?.naver || '';
-      const newText = String(payload.draft.naver || '');
-      const comparedToPrevious = payload.draft.mode !== 'article' ? 'brief' :
-        !previousText.trim() ? 'first' :
+      if (!payload.draft || payload.draft.generationChannel !== target || typeof payload.draft[target] !== 'string') {
+        throw new Error('선택한 채널의 원고 응답을 확인하지 못했어.');
+      }
+      const incoming = payload.draft as Draft;
+      const previousDraft = findChannelDraft(localDrafts, selected.id, target);
+      const previousText = resolveDraftBody(target, saved?.fields, previousDraft);
+      const newText = incoming[target] || '';
+      const hasArticle = incoming.mode === 'article' && !!newText.trim() && !isUnreadableDraftText(newText);
+      const comparedToPrevious = !hasArticle ? 'brief' : !previousText.trim() ? 'first' :
         previousText.trim() === newText.trim() ? 'same' : 'changed';
-      const writtenChannel = firstWrittenChannel(payload.draft);
-      const hasArticle = payload.draft.mode === 'article' && !!writtenChannel;
       const draft: Draft = {
-        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 8,
+        ...incoming, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 9,
         mode: hasArticle ? 'article' : 'research_brief',
         topicSnapshot: { title: selected.title, category: selected.category, region: selected.region },
         comparedToPrevious,
         status: payload.status || 'unverified_review_required',
         sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })),
       };
-      // Preserve the most recent paid response separately from bundled public files.
-      setLocalDrafts(old => [draft, ...old.filter(x => x.id !== selected.id)]);
-      if (draft.mode === 'article') {
-        setLocalEdits(old => ({
-          ...old,
-          [selected.id]: {
-            fields: { naver: draft.naver, tistory: draft.tistory, tistoryEn: draft.tistoryEn || '', shortform: draft.shortform },
-            titles: { naver: draft.naverTitle || draft.title, tistory: draft.tistoryTitle || draft.title, tistoryEn: draft.tistoryEnTitle || draft.title },
-            imageNotes: payload.draft.imageNotes,
+      setLocalDrafts(old => saveChannelDraft(old, draft));
+      if (hasArticle) {
+        const titleField = `${target}Title` as const;
+        setLocalEdits(old => {
+          const current = old[selected.id];
+          return { ...old, [selected.id]: {
+            ...current,
+            ...mergeGeneratedFields(current, target, newText, draft[titleField] || draft.title),
+            imageNotes: current?.imageNotes ?? draft.imageNotes ?? imagePrompts(selected),
             verified: false,
-            publishedUrls: old[selected.id]?.publishedUrls || {},
-            publishedManually: old[selected.id]?.publishedManually ?? false,
-            publishedTopicTitle: old[selected.id]?.publishedTopicTitle,
-            publishedSourceUrls: old[selected.id]?.publishedSourceUrls,
+            publishedUrls: current?.publishedUrls || {},
             updatedAt: new Date().toISOString(),
-            generatedVersion: DRAFT_VERSION,
-            evidenceReview: {},
-            selectedImage: old[selected.id]?.selectedImage,
-            selectedImages: old[selected.id]?.selectedImages,
-            imageRightsApproved: old[selected.id]?.imageRightsApproved || [],
-            imageKeywords: draft.imageKeywords || [],
-          },
-        }));
+            generatedVersion: current?.generatedVersion ?? DRAFT_VERSION,
+          } };
+        });
       }
       setImageGroups([]);
       setImageSourceNotice('');
       setFallbackDraftId('');
       setSelectedId(draft.id);
-      setChannel(writtenChannel ?? firstWrittenChannel(draft.reviewBodies) ?? 'naver');
+      setChannel(target);
       setPreviewMode(true);
       setNotice(draft.mode === 'research_brief'
-        ? firstWrittenChannel(draft.reviewBodies) ? '발행 기준에 미달했지만 AI가 쓴 텍스트는 검수용으로 남겼어.' : '본문 대신 조사 결과를 열었어. 확인한 자료와 작성하지 못한 이유를 볼 수 있어.'
+        ? draft.reviewBodies?.[target]?.trim() ? '발행 기준에 미달했지만 AI가 쓴 텍스트는 검수용으로 남겼어.' : '본문 대신 조사 결과를 열었어. 확인한 자료와 작성하지 못한 이유를 볼 수 있어.'
         : draft.status === 'revision_required' ? '검수용 본문을 열었어. 보완 항목을 확인해 줘.'
         : '생성된 본문을 열었어. 출처와 내용을 확인한 뒤 편집해 줘.');
       requestAnimationFrame(() => document.getElementById('draft-output')?.scrollIntoView({ block: 'start' }));
@@ -412,7 +411,7 @@ export default function Home() {
       } else {
         setGenerateError(e instanceof Error ? e.message : '원고 생성 중 오류가 발생했어.');
       }
-    } finally { setGenerating(false); }
+    } finally { generationInProgress.current = false; setGenerating(null); }
   }
   const categories = useMemo(() => ['전체', ...Array.from(new Set(candidates.map(x => x.category)))], [candidates]);
   const publicMatchFor = (candidate: Candidate) => matchPublished(candidate, publishedFeed?.posts || []);
@@ -451,15 +450,16 @@ export default function Home() {
   } : undefined);
   const activeResearch = researchLeads.find(x => x.candidateId === selectedId);
   const matchingDraft = selected && (
-    localDrafts.find(d => d.id === selected.id) ||
+    findChannelDraft(localDrafts, selected.id, channel) ||
     drafts.find(d => d.id === selected.id || (d.sources || []).some(s => selected.headlines.some(h => h.url === s.url)))
   );
   const editId = selected?.id || '';
   const saved = localEdits[editId];
-  const legacyStored = !!saved && saved.generatedVersion !== DRAFT_VERSION && Object.values(saved.fields || {}).some(value => !!value?.trim());
+  const legacyStored = !!saved?.fields?.[channel]?.trim() && saved.generatedVersion !== DRAFT_VERSION && !matchingDraft?.generationChannel;
   const legacyPublic = !!matchingDraft && matchingDraft.mode !== 'article' && matchingDraft.mode !== 'research_brief';
   // When latest research cannot produce an article, never mix its new sources with an old cached body.
-  const showingPrevious = !!editId && fallbackDraftId === editId && matchingDraft?.mode === 'research_brief';
+  const fallbackKey = editId + ':' + channel;
+  const showingPrevious = !!editId && fallbackDraftId === fallbackKey && matchingDraft?.mode === 'research_brief';
   const researchOnly = matchingDraft?.mode === 'research_brief' && !showingPrevious;
   const researchReviewBody = matchingDraft?.reviewBodies?.[channel];
   const unreadableResearchReview = isUnreadableDraftText(researchReviewBody);
@@ -491,7 +491,8 @@ export default function Home() {
   const imageRightsApproved = saved?.imageRightsApproved || [];
   const approvedImages = selectedImages.filter(image => imageRightsApproved.includes(image.imageUrl));
   const verified = !!saved?.verified;
-  const images = saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
+  const images = matchingDraft?.mode === 'article' && matchingDraft.imageNotes?.length === 3 ? matchingDraft.imageNotes :
+    saved?.imageNotes?.length === 3 ? saved.imageNotes : imagePrompts(selected);
   const reviewCount = candidates.filter(x => x.status === 'research_required' || x.status === 'needs_sources').length;
   const excludedCount = candidates.filter(x => ['excluded_promotion', 'sensitive_review'].includes(x.status || '')).length;
   const editCount = Object.values(localEdits).filter(x => Object.values(x.fields || {}).some(s => s?.trim())).length;
@@ -531,7 +532,7 @@ export default function Home() {
       delete copy[editId];
       return copy;
     });
-    setNotice('기존 초안을 백업한 뒤 이 화면에서 초기화했어. 새 자료 조사 버튼으로 다시 생성해 줘.');
+    setNotice('기존 초안을 백업한 뒤 이 화면에서 초기화했어. 원하는 채널의 원고 작성 버튼으로 다시 생성해 줘.');
   }
   function choose(id: string, next: Section = 'editor') {
     imageRequestId.current += 1;
@@ -549,7 +550,7 @@ export default function Home() {
       const response = await fetch(WORKER_URL + '/verify', {
         method:'POST',
         headers:{ 'Content-Type':'application/json', 'X-Studio-Passphrase':studioPassphrase },
-        body:JSON.stringify({title: articleTitle, article:text, sources:matchingDraft?.sourceLinks || []}),
+        body:JSON.stringify({title: articleTitle, article:text, sources:showingPrevious ? [] : matchingDraft?.sourceLinks || []}),
       });
       const value = await response.json().catch(()=>({}));
       if (!response.ok || !value.result) throw Error(value.error || '검증 API 요청 실패 (HTTP '+response.status+')');
@@ -730,7 +731,7 @@ export default function Home() {
               </div> : <div className="research-lead"><p>이 주제의 자동 조사 결과가 아직 없어. 매일 선별된 일부 후보만 조사하므로 모두 조사되지는 않아.</p></div>}
             </div>
             <div className="panel editor-panel">
-              <div className="panel-heading"><div><h2>원고 편집 · AI 생성</h2><p>검토 후보와 추가 출처 필요 주제도 생성할 수 있어. 단일 출처는 사실 검증용 초안만 제공해.</p></div></div>
+              <div className="panel-heading"><div><h2>원고 편집 · AI 생성</h2><p>채널을 하나씩 선택해 검수용 원고를 만들 수 있어.</p></div></div>
               <div className="inline-generator">
                 <div className="panel-heading"><strong>AI 연결</strong><span>Worker 주소 자동 연결됨</span></div>
                 <div className="generator-inputs">
@@ -738,19 +739,25 @@ export default function Home() {
                   <label>관리자 암호 (저장되지 않음)<input type="password" autoComplete="off" placeholder="Cloudflare에 등록한 STUDIO_PASSWORD" value={studioPassphrase} onChange={e=>setStudioPassphrase(e.target.value)}/></label>
                 </div>
                 <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="직접 확인한 내용과 공식 자료 링크가 있으면 추가해 줘. 비워도 AI가 자료를 조사해."/></label>
-                <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'제목만 수집한 단계야. 자료 조사 버튼으로 공식 발표·관련 자료를 추가로 찾아봐. 검증 후 글을 만들 수 있어.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
+                <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'제목만 수집한 단계야. 원고 버튼을 누르면 공식 발표와 관련 자료부터 찾아.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
                 <div className="worker-health">
-                  <button type="button" className="btn btn-light" disabled={connectionState==='checking'||generating} onClick={checkWorkerConnection}>{connectionState==='checking'?'연결 확인 중…':'통신 + 관리자 인증 검사 (무료)'}</button>
+                  <button type="button" className="btn btn-light" disabled={connectionState==='checking'||!!generating} onClick={checkWorkerConnection}>{connectionState==='checking'?'연결 확인 중…':'통신 + 관리자 인증 검사 (무료)'}</button>
                   <span className={connectionState==='ready'?'worker-health-ok':connectionState==='unreachable'||connectionState==='unconfigured'?'worker-health-bad':'worker-health-idle'}>{connectionState==='ready'?'정상':connectionState==='unreachable'?'연결 불가':connectionState==='unconfigured'?'서버 설정 필요':'검사 전'}</span>
                   {connectionDetails&&<p role="status">{connectionDetails}</p>}
                 </div>
-                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!liveSelected} onClick={generateHere}>{generating?'자료 조사·원고 작성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>1단계 자료 조사 · 2단계 원고 작성 (근거가 충분할 때만). 각 단계에 OpenAI 사용료가 발생하며 자동 재시도하지 않아.</span></div>
+                <div className="generator-actions" role="group" aria-label="채널별 원고 작성">
+                  {ARTICLE_CHANNELS.map(({id, label}) => <button type="button" key={id} className="btn btn-primary"
+                    disabled={!!generating || !liveSelected} onClick={() => void generateHere(id)}>
+                    {generating === id ? label + ' 작성 중…' : label + ' 원고 작성'}
+                  </button>)}
+                </div>
+                <p className="generator-help">누른 채널만 작성해. 매번 자료 조사 후 근거가 충분할 때만 해당 원고를 작성하며, OpenAI 사용료가 발생해. 자동 재시도는 없어.</p>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
               {!selected && <div className="empty-editor"><h3>아직 선택한 주제가 없어</h3><p>위에서 제작할 주제를 고르거나 아래 저장된 초안을 선택하면 해당 원고를 표시할게.</p></div>}
               <div className="draft-selector"><strong>AI 초안 · 내 브라우저 {localDrafts.length}건 / 서버 제공 {drafts.length}건</strong>
-                {localDrafts.length+drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : [...localDrafts, ...drafts.filter(d => !localDrafts.some(local => local.id === d.id))].map((d,i)=>{
+                {localDrafts.length+drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : [...localDrafts, ...drafts.filter(d => !localDrafts.some(local => local.id === d.id && !local.generationChannel))].map((d,i)=>{
                   const corresponding=candidates.find(c=>c.id===d.id||(d.sources||[]).some(src=>c.headlines.some(h=>h.url===src.url)));
                   const local = localDrafts.some(x => x.id === d.id);
                   const targetId = local ? d.id : corresponding?.id;
@@ -758,11 +765,11 @@ export default function Home() {
                     if(!targetId) return;
                     setFallbackDraftId('');
                     setSelectedId(targetId);
-                    setChannel(firstWrittenChannel(d) ?? firstWrittenChannel(d.reviewBodies) ?? 'naver');
+                    setChannel(d.generationChannel ?? firstWrittenChannel(d) ?? firstWrittenChannel(d.reviewBodies) ?? 'naver');
                     setNotice(d.mode === 'research_brief' ? '저장된 조사 결과를 열었어.' : '저장된 본문을 열었어. 다시 생성할 필요 없어.');
                     requestAnimationFrame(() => document.getElementById('draft-output')?.scrollIntoView({ block: 'start' }));
                   }}>
-                    <span><b>{d.title}</b><small>{targetId ? (d.mode === 'research_brief' ? '저장된 조사 결과 보기' : '저장된 원고 보기') : '현재 뉴스 목록에서 해당 주제를 찾을 수 없어'}</small></span><span>보기 →</span>
+                    <span><b>{d.title}</b><small>{d.generationChannel ? ARTICLE_CHANNELS.find(c => c.id === d.generationChannel)?.label + ' · ' : ''}{targetId ? (d.mode === 'research_brief' ? '저장된 조사 결과 보기' : '저장된 원고 보기') : '현재 뉴스 목록에서 해당 주제를 찾을 수 없어'}</small></span><span>보기 →</span>
                   </button>;
                 })}
                 <p className="muted">초안은 발행용 완성 글이 아니라 출처 검증이 필요한 준비 자료야.</p>
@@ -787,7 +794,6 @@ export default function Home() {
                 </div> : <span>서버에서 가져온 과거 초안은 자동 표시하지 않아.</span>}
               </div>}
               {selected?.region === 'EN' && <div className="research-lead"><strong>해외 콘텐츠</strong><p>티스토리 English 탭에서 영어 블로그 원고를, 숏폼 대본 탭에서 해외 Shorts·Reels 대본을 확인할 수 있어.</p></div>}
-              {channel === 'tistoryEn' && matchingDraft?.mode==='article' && !storedText.trim() && <div className="draft-warning">이전에 생성된 초안에는 영문 원고가 없어. 이전 원고를 영어로 자동 표시하지 않으며, 새 생성 결과부터 별도 영어 버전이 저장돼.</div>}
               <div className="tabs" id="draft-output" style={{scrollMarginTop: 20}}>{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {!!matchingDraft?.evidenceFacts?.length && <details className="research-lead">
                 <summary><strong>원고의 바탕이 된 조사 내용 {matchingDraft.evidenceFacts.length}건</strong></summary>
@@ -813,10 +819,9 @@ export default function Home() {
                 <strong>추가 검증할 내용</strong>
                 <ul>{(matchingDraft.verificationChecklist||[]).filter(note => !isUnreadableDraftText(note)).map((x,i)=><li key={i}>{x}</li>)}</ul>
                 <p>충분한 공식 자료를 찾지 못했다면 다른 주제를 선택하는 게 좋아.</p>
-                {saved?.fields && Object.values(saved.fields).some(value => !!value?.trim()) && <div className="editor-toolbar">
+                {!!saved?.fields?.[channel]?.trim() && <div className="editor-toolbar">
                   <button className="btn btn-light" onClick={() => {
-                    setFallbackDraftId(showingPrevious ? '' : editId);
-                    if (!showingPrevious) setChannel(firstWrittenChannel(saved.fields) ?? 'naver');
+                    setFallbackDraftId(showingPrevious ? '' : fallbackKey);
                   }}>{showingPrevious ? '이전 원고 닫기' : '이전 저장 원고 화면에서 보기 (무료)'}</button>
                   <button className="btn btn-light" onClick={() => download('todaypick-previous-local-draft.json', JSON.stringify({
                     title: selected?.title, savedAt: saved.updatedAt, previousDraft: saved.fields, previousTitles: saved.titles,
@@ -867,7 +872,7 @@ export default function Home() {
                     {i === cardPositions.detail && channel !== 'shortform' && selected && <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={2}/>}
                   </div>)}
                 </div> : <textarea className="draft-text" value={saved?.fields?.[channel] ?? text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
-                {channel !== 'shortform' && matchingDraft?.sourceLinks?.length ? <div className="research-sources">
+                {channel !== 'shortform' && !showingPrevious && matchingDraft?.sourceLinks?.length ? <div className="research-sources">
                   <strong>본문과 분리한 참고 출처</strong>
                   <ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul>
                   <p className="muted">글에 적힌 개별 주장과 자료가 실제로 일치하는지 발행 전에 확인해 줘.</p>
@@ -900,10 +905,10 @@ export default function Home() {
                     {!!reviewed.correctionSuggestions?.length && <><strong>수정 제안</strong><ul>{reviewed.correctionSuggestions.map((suggestion,i)=><li key={i}>{suggestion}</li>)}</ul></>}
                   </> : <p className="muted">아직 대조하지 않았어. 필요한 주제만 검사해서 API 비용을 줄여 줘.</p>}
                 </div>}
-                {matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
+                {!showingPrevious && matchingDraft?.verificationChecklist?.length ? <details className="checklist"><summary>AI가 제안한 사실 검증 항목 {matchingDraft.verificationChecklist.length}개</summary><ul>{matchingDraft.verificationChecklist.map((t,i) => <li key={i}>{t}</li>)}</ul></details> : null}
               </> : null}
-              {matchingDraft?.mode==='article' && !text.trim() && <div className="empty-editor"><h3>이 채널 원고는 품질 검사를 통과하지 못했어.</h3><p>다른 채널 탭에는 사용 가능한 원고가 있을 수 있어. 빈 글은 게시하지 마.</p></div>}
-              {(!matchingDraft || legacyPublic) && !saved?.fields?.[channel] && <div className="empty-editor"><span className="empty-symbol">✦</span><h3>이 주제의 원고는 아직 없어</h3><p>위에서 자료 조사 버튼을 눌러 줘. 신뢰할 만한 근거가 부족하면 글 대신 확인할 항목을 표시해.</p></div>}
+              {matchingDraft?.mode==='article' && !text.trim() && <div className="empty-editor"><h3>이 채널에 저장된 본문이 없어</h3><p>다른 채널 탭에 저장한 원고가 있을 수 있어.</p></div>}
+              {(!matchingDraft || legacyPublic) && !saved?.fields?.[channel] && <div className="empty-editor"><span className="empty-symbol">✦</span><h3>이 채널의 원고는 아직 없어</h3><p>{channel === 'shortform' ? '기존에 저장한 숏폼 대본만 여기서 볼 수 있어.' : '위에서 해당 채널의 원고 작성 버튼을 눌러 줘. 근거가 부족하면 글 대신 확인할 항목을 표시해.'}</p></div>}
             </div>
           </div>
           <aside className="studio-side">
