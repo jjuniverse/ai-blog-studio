@@ -6,16 +6,7 @@ export const IMAGE_FILENAMES: Record<ImageKind, string> = {
   detail: '03-핵심정보.png',
 };
 
-const TAG_STOPWORDS = new Set([
-  '오늘', '오늘의', '오늘의픽', '뉴스', '정보', '관련', '기사', '발표', '공개',
-  '소식', '정리', '대해', '대한', '시작', '이번', '이후', '지난', '내년',
-  '그리고', '이어', '까지', '만에', '개최', '단독', '예정', '기록', '통해',
-  '아시아', '개월',
-]);
-function cleanTag(raw: string): string {
-  return raw.replace(/[^\p{L}\p{N}]/gu, '').slice(0, 24);
-}
-const KOREAN_GENERIC = new Set(['오늘','오늘의','오늘의픽','뉴스','정보','관련','기사','발표','공개','소식','정리','이번','시작','이후','지난','예정','방법','총정리','최신']);
+const KOREAN_GENERIC = new Set(['오늘','오늘의','오늘의픽','뉴스','정보','관련','기사','발표','공개','소식','정리','이번','시작','이후','지난','예정','방법','총정리','최신','온라인','신청','한층','간편','간편하게','이벤트','퀴즈','대상','진행','출처','가이드']);
 const ENGLISH_GENERIC = new Set(['the','with','from','this','that','news','latest','update','review','information','new','low','price','deal','equipped','packing','drops','black','friday','best','guide','how','what','when','where','more','than','about','laptop','ram','at','in','on','of','by','to','is','are','an','a','and','or','its','your']);
 function seoTitleTerms(title:string, english:boolean): string[] {
   const trimmed=title.split(/[|:!?—–]/)[0].trim();
@@ -27,32 +18,29 @@ function addSeoTag(tags:string[], candidate:string, english:boolean) {
   if(cleaned.length < 2 || /^\d+$/.test(cleaned))return;
   if(english && ENGLISH_GENERIC.has(cleaned.toLowerCase()))return;
   if(!english && KOREAN_GENERIC.has(cleaned))return;
+  if (/^(?:TodaysPick|오늘의픽)$/i.test(cleaned)) return;
   const tag='#'+cleaned;
   if(!tags.some(t=>t.toLowerCase()===tag.toLowerCase()))tags.push(tag);
 }
-function normalizedTags(article:string,title:string,english:boolean,category=''):string{
+function normalizedTags(article:string,title:string,english:boolean):string{
   const raw=article.trim();if(!raw)return raw;
   const heading=english ? /(?:^|\n)#{1,3}\s*(?:Related Tags|Tags)\s*\n/i : /(?:^|\n)#{1,3}\s*관련\s*태그\s*\n/i;
   const match=heading.exec(raw);
   const body=match?raw.slice(0,match.index).trimEnd():raw;
   const existing=match?raw.slice(match.index+match[0].length):'';
   const tags:string[]=[];
-  const titleTerms=seoTitleTerms(title,english);
-  // Prioritize the actual search subject and natural search phrases, not independent generic words.
-  for(const phrase of [titleTerms.slice(0,3).join(''),titleTerms.slice(0,2).join('')])addSeoTag(tags,phrase,english);
-  for(const token of titleTerms.slice(0,6))addSeoTag(tags,token,english);
-  for(const phrase of (existing.match(/#[^\s#]+/g)||[]).map(t=>t.slice(1))){
-    if(tags.length>=9)break;
-    const titleRelated=titleTerms.some(t=>phrase.toLowerCase().includes(t.toLowerCase())||t.toLowerCase().includes(phrase.toLowerCase()));
-    if(titleRelated)addSeoTag(tags,phrase,english);
+  // Keep researched tags (including related services or agencies not in the title).
+  for(const hash of existing.match(/#[^\s#]+/g)||[])addSeoTag(tags,hash.slice(1),english);
+  if(!tags.length){
+    const terms=seoTitleTerms(title,english);
+    addSeoTag(tags,terms[0]||'',english);
+    if(terms.length>1)addSeoTag(tags,terms.slice(0,2).join(''),english);
   }
-  if(!english)addSeoTag(tags,category,false);
-  // Never fill a quota with unrelated trending words or generic fallback tags.
   const brand=english?'#TodaysPick':'#오늘의픽';
   return body+'\n\n## '+(english?'Related Tags':'관련 태그')+'\n'+[brand,...tags.slice(0,9)].join(' ');
 }
-export function normalizeArticleTags(article:string,title:string,category=''):string{
-  return normalizedTags(article,title,false,category);
+export function normalizeArticleTags(article:string,title:string,_category=''):string{
+  return normalizedTags(article,title,false);
 }
 export function normalizeEnglishArticleTags(article:string,title:string):string{
   return normalizedTags(article,title,true);
@@ -97,11 +85,14 @@ export function articleReadiness(article: string, channel: ArticleChannel | bool
   minimum: number; targetMax: number; units: string;
 } {
   const kind: ArticleChannel = typeof channel === 'boolean' ? (channel ? 'tistoryEn' : 'naver') : channel;
-  const raw = String(article || '').split(/(?:^|\n)#{1,3}\s*(?:관련\s*태그|Related Tags|Tags)\s*\n/i)[0]
-    .split(/(?:^|\n)참고자료\s*(?:\([^)]*\))?\s*\n/)[0];
-  const meaningful = raw.split(/\n+/).map(x=>x.trim()).filter(x =>
-    x && !/^#{1,3}\s/.test(x) && !/^#\S+/.test(x) && !/^\[이미지 삽입:/.test(x));
-  const joined = meaningful.join(' ').replace(/^\s*[-*•]\s*/gm, '').replace(/\s+/g,' ').trim();
+  const raw = String(article || '')
+    .split(/(?:^|\n)\s*(?:#{1,6}\s*)?(?:관련\s*태그|Related Tags|Tags|참고자료|출처|Sources|References)(?:\s*[:：]|\s*\([^\n]*\))?[^\S\n]*(?=\n|$)/i)[0]
+    .replace(/https?:\/\/[^\s)]+/g, '');
+  const meaningful = [...new Set(raw.split(/\n+/).map(x=>x.trim()).filter(x =>
+    x && !/^#{1,6}\s|^#\S+|^\[이미지 삽입:/.test(x))
+    .map(x => x.replace(/^(?:[-*•]|\d+[.)])\s*/, '').trim())
+    .filter(x => x.length >= 12))];
+  const joined = meaningful.join(' ').replace(/\s+/g,' ').trim();
   const len = kind === 'tistoryEn' ? (joined.match(/\b[\w]+(?:['’-][\w]+)*\b/g) || []).length : joined.length;
   const minimum = kind === 'naver' ? 1200 : kind === 'tistory' ? 1500 : 800;
   const targetMax = kind === 'naver' ? 2000 : kind === 'tistory' ? 2500 : 1200;

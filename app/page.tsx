@@ -357,7 +357,7 @@ export default function Home() {
         !previousText.trim() ? 'first' :
         previousText.trim() === newText.trim() ? 'same' : 'changed';
       const draft: Draft = {
-        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 3,
+        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 4,
         comparedToPrevious,
         status: payload.status || 'unverified_review_required',
         sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })),
@@ -390,7 +390,7 @@ export default function Home() {
       setImageSourceNotice('');
       setChannel('naver');
       setPreviewMode(true);
-      setNotice(draft.status === 'revision_required' ? '원고는 생성됐지만 중복 본문이나 숏폼·이미지 문제로 수정이 필요해.' : draft.mode === 'research_brief'
+      setNotice(draft.status === 'revision_required' ? '검수용 초안은 저장했어. 분량, 출처, 채널별 구성 등 보완 항목을 확인해 줘.' : draft.mode === 'research_brief'
         ? '참고 자료가 부족해서 글을 억지로 생성하지 않았어. 조사 항목을 확인해 줘.'
         : '자료를 조사해 AI 원고를 작성했어. 출처와 내용을 확인한 뒤 편집해 줘.');
     } catch (e) {
@@ -456,6 +456,7 @@ export default function Home() {
   const previewLines = paragraphLines(text);
   const cardPositions = imagePositions(previewLines);
   const readiness = articleReadiness(text, channel === 'tistoryEn' ? 'tistoryEn' : channel === 'tistory' ? 'tistory' : 'naver');
+  const articleCopyBlocked = channel !== 'shortform' && readiness.publishBlocked;
   const reviewed = saved?.evidenceReview?.[channel];
   const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
   const selectedImages = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
@@ -710,7 +711,7 @@ export default function Home() {
                   <div className="worker-endpoint"><small>연결된 Worker</small><span>https://todaypick-studio-api.jjuniverse-plant-lens.workers.dev</span></div>
                   <label>관리자 암호 (저장되지 않음)<input type="password" autoComplete="off" placeholder="Cloudflare에 등록한 STUDIO_PASSWORD" value={studioPassphrase} onChange={e=>setStudioPassphrase(e.target.value)}/></label>
                 </div>
-                <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="공식 발표에서 확인한 내용과 출처를 입력해. 입력하지 않으면 검수용 구조만 생성해."/></label>
+                <label className="notes-label">직접 확인한 사실 메모 (선택)<textarea rows={3} value={verifiedNotes} onChange={e=>setVerifiedNotes(e.target.value)} placeholder="직접 확인한 내용과 공식 자료 링크가 있으면 추가해 줘. 비워도 AI가 자료를 조사해."/></label>
                 <p className="generator-help">{!selected?'주제를 먼저 선택해 줘.':!studioPassphrase?'관리자 암호를 입력한 뒤 생성 버튼을 눌러 줘.':selected.status==='needs_sources'?'제목만 수집한 단계야. 자료 조사 버튼으로 공식 발표·관련 자료를 추가로 찾아봐. 검증 후 글을 만들 수 있어.':selected.status!=='research_required'?'이 주제는 홍보성·민감 이슈로 제한돼.':'생성 준비 완료 · 검수용 초안이며 실제 발행 전 사실 확인이 필요해.'}</p>
                 <div className="worker-health">
                   <button type="button" className="btn btn-light" disabled={connectionState==='checking'||generating} onClick={checkWorkerConnection}>{connectionState==='checking'?'연결 확인 중…':'통신 + 관리자 인증 검사 (무료)'}</button>
@@ -783,7 +784,7 @@ export default function Home() {
                   <strong>보완 필요 · 발행 보류</strong>
                   <p>태그와 참고자료를 제외한 본문은 {readiness.bodyLength}{readiness.units}야. 최소 {readiness.minimum}{readiness.units}, 권장 {readiness.minimum}~{readiness.targetMax}{readiness.units}를 목표로 해. 부족한 원고도 삭제하지 않고 보존해.</p>
                   <ul>{readiness.reasons.map((reason,i)=><li key={i}>{reason}</li>)}</ul>
-                  <p>출처에 근거한 구체적인 설명을 보강해 줘. 출처가 모자라면 원고를 억지로 늘리지 말고 추가 조사 후 발행해.</p>
+                  <p>발행용 복사는 본문을 보완한 뒤 사용할 수 있어. 지금은 원고를 편집하거나 검수용 초안으로 저장할 수 있어.</p>
                 </div>}
 
                 <div className="draft-warning">이 원고는 AI가 작성한 검수용 자료야. 중요한 사실·출처·이미지 권리를 직접 확인하고 발행해 줘.</div>
@@ -822,12 +823,12 @@ export default function Home() {
                   <p className="muted">글에 적힌 개별 주장과 자료가 실제로 일치하는지 발행 전에 확인해 줘.</p>
                 </div> : null}
                 <div className="editor-toolbar"><span className="copy-button-wrap">
-                  <button className="btn btn-light" onClick={copyText} disabled={!text.trim()}>원고 복사</button>
+                  <button className="btn btn-light" onClick={copyText} disabled={!text.trim() || articleCopyBlocked}>원고 복사</button>
                   {copyFeedback?.target==='article' && <span className={'copy-tooltip '+(copyFeedback.kind==='error'?'copy-tooltip-error':'')} role="status" aria-live="polite">
                     {copyFeedback.kind==='success'?'✓ 복사됐어!':'복사에 실패했어'}
                   </span>}
-                </span>{channel !== 'shortform' && <button className="btn btn-light" onClick={copyWithImagePositions} disabled={!text.trim()}>이미지 위치 포함 복사</button>}
-                <button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>텍스트 저장</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
+                </span>{channel !== 'shortform' && <button className="btn btn-light" onClick={copyWithImagePositions} disabled={!text.trim() || articleCopyBlocked}>이미지 위치 포함 복사</button>}
+                <button className="btn btn-light" onClick={exportText} disabled={!text.trim()}>{articleCopyBlocked ? '검수용 초안 저장' : '텍스트 저장'}</button><label className="review-toggle"><input type="checkbox" checked={verified} onChange={e => updateEdit({verified:e.target.checked})}/> 직접 사실·저작권 검수 완료</label></div>
                 {channel !== 'shortform' && <div className="evidence-panel">
                   <div className="panel-heading"><div><h3>원고 근거 대조</h3><p>현재 편집 중인 본문의 핵심 수치·날짜·순위를 추가 웹 검색으로 점검해.</p></div>
                     <button className="btn btn-light" onClick={verifyCurrentDraft} disabled={verifying || !text.trim() || !studioPassphrase}>

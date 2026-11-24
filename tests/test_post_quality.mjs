@@ -35,3 +35,15 @@ test('Korean tags keep brand and category without generic filler', () => {
   assert.ok(result.includes('#오늘의픽'));
   assert.ok(!result.includes('#뉴스'));
 });
+
+test('Korean preview preserves meaningful tags without copying individual words from the headline', () => {
+  const text = normalizeArticleTags('본문 내용\n\n## 관련 태그\n#한층 #간편하게 #복지로 #기초연금온라인신청 #오늘의픽 #온라인 #신청', '기초연금 온라인 신청, 한층 더 간편하게');
+  assert.equal(text.split('## 관련 태그\n')[1], '#오늘의픽 #복지로 #기초연금온라인신청');
+});
+
+test('reference lists and repeated lines do not raise body length', () => {
+  const line = '기초연금 신청 절차와 신청 대상은 복지로 안내에서 확인할 수 있습니다.';
+  const text = [line, ...Array(100).fill(line), '## 참고자료', ...Array(50).fill('https://www.bokjiro.go.kr/very-long-article-url')].join('\n');
+  assert.equal(articleReadiness(text).bodyLength, line.length);
+  assert.equal(articleReadiness(text).publishBlocked, true);
+});
