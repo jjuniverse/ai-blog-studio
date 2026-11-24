@@ -306,7 +306,7 @@ export default {
       if (origin !== ALLOWED_ORIGIN) return fail("Origin not allowed", 403);
       return new Response(null, { status: 204, headers: cors(ALLOWED_ORIGIN) });
     }
-    if (url.pathname === "/health" && request.method === "GET") return reply({ ok: true, editorialVersion: 4, configured: Boolean(env.OPENAI_API_KEY && env.STUDIO_PASSWORD && env.STUDIO_PASSWORD.length >= 16) });
+    if (url.pathname === "/health" && request.method === "GET") return reply({ ok: true, editorialVersion: 5, configured: Boolean(env.OPENAI_API_KEY && env.STUDIO_PASSWORD && env.STUDIO_PASSWORD.length >= 16) });
     // Probe the same CORS preflight and POST transport as /generate, without credentials or OpenAI costs.
     // It does not authenticate or authorize generation; never return private settings here.
     if (url.pathname === "/probe" && request.method === "POST") return reply({ ok: true, transport: "post", version: 1 });
@@ -609,6 +609,13 @@ export default {
         }
       }
       if (result.mode === "research_brief") {
+        // Keep any returned article text for inspection without populating the
+        // publishable channel fields. Search leads below are not its citations.
+        if (generatedMode === "article") {
+          result.reviewBodies = Object.fromEntries(["naver", "tistory", "tistoryEn", "shortform"]
+            .filter(channel => typeof result[channel] === "string" && result[channel].trim())
+            .map(channel => [channel, stripInlineLinks(result[channel]).trim()]));
+        }
         for (const channel of ["naver", "tistory", "tistoryEn", "shortform"]) result[channel] = "";
         // Research leads are useful for investigation, but never promoted into an article’s references.
         if (!sourceLinks.length) {

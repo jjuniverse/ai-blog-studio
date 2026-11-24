@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import ImageCard from './components/ImageCard';
 import PostImagePackage from './components/PostImagePackage';
 import { matchPublished, type PublicFeed } from './lib/publishedMatch';
+import { firstWrittenChannel, resolveDraftBody } from './lib/draftDisplay';
 import { normalizeArticleTags, normalizeEnglishArticleTags, paragraphLines, imagePositions, withImageMarkers, articleReadiness } from './lib/postPackage';
 
 type Status = 'research_required' | 'needs_sources' | 'sensitive_review' | 'excluded_promotion';
@@ -54,6 +55,8 @@ type Draft = {
   mode?: "article" | "research_brief";
   generatedAt?: string;
   generationVersion?: number;
+  topicSnapshot?: { title: string; category: string; region: string };
+  reviewBodies?: Partial<Record<Channel, string>>;
   comparedToPrevious?: 'changed' | 'same' | 'first' | 'brief';
   sourceLinks?: { title: string; url: string }[];
   imageKeywords?: string[];
@@ -184,6 +187,7 @@ export default function Home() {
   const [connectionState, setConnectionState] = useState<'idle' | 'checking' | 'ready' | 'unconfigured' | 'unreachable'>('idle');
   const [connectionDetails, setConnectionDetails] = useState('');
   const [previewMode, setPreviewMode] = useState(true);
+  const [fallbackDraftId, setFallbackDraftId] = useState('');
 
   useEffect(() => {
     try {
@@ -328,7 +332,7 @@ export default function Home() {
     }
   }
   async function generateHere() {
-    if (!selected || generating) return;
+    if (!liveSelected || !selected || generating) return;
     setGenerateError('');
     if (selected.status === 'sensitive_review' || selected.status === 'excluded_promotion') { setGenerateError('이 주제는 민감하거나 광고성으로 분류돼 생성하지 않아.'); return; }
     if (!studioPassphrase) { setGenerateError('관리자 암호를 입력해 줘.'); return; }
@@ -356,8 +360,12 @@ export default function Home() {
       const comparedToPrevious = payload.draft.mode !== 'article' ? 'brief' :
         !previousText.trim() ? 'first' :
         previousText.trim() === newText.trim() ? 'same' : 'changed';
+      const writtenChannel = firstWrittenChannel(payload.draft);
+      const hasArticle = payload.draft.mode === 'article' && !!writtenChannel;
       const draft: Draft = {
-        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 4,
+        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 5,
+        mode: hasArticle ? 'article' : 'research_brief',
+        topicSnapshot: { title: selected.title, category: selected.category, region: selected.region },
         comparedToPrevious,
         status: payload.status || 'unverified_review_required',
         sources: selected.headlines.map(h => ({ publisher: h.publisher, url: h.url, title: h.title })),
@@ -388,11 +396,15 @@ export default function Home() {
       }
       setImageGroups([]);
       setImageSourceNotice('');
-      setChannel('naver');
+      setFallbackDraftId('');
+      setSelectedId(draft.id);
+      setChannel(writtenChannel ?? firstWrittenChannel(draft.reviewBodies) ?? 'naver');
       setPreviewMode(true);
-      setNotice(draft.status === 'revision_required' ? '검수용 초안은 저장했어. 분량, 출처, 채널별 구성 등 보완 항목을 확인해 줘.' : draft.mode === 'research_brief'
-        ? '참고 자료가 부족해서 글을 억지로 생성하지 않았어. 조사 항목을 확인해 줘.'
-        : '자료를 조사해 AI 원고를 작성했어. 출처와 내용을 확인한 뒤 편집해 줘.');
+      setNotice(draft.mode === 'research_brief'
+        ? firstWrittenChannel(draft.reviewBodies) ? '발행 기준에 미달했지만 AI가 쓴 텍스트는 검수용으로 남겼어.' : '조사는 끝났지만 생성된 본문은 없어. 조사 결과를 확인해 줘.'
+        : draft.status === 'revision_required' ? '검수용 본문을 열었어. 보완 항목을 확인해 줘.'
+        : '생성된 본문을 열었어. 출처와 내용을 확인한 뒤 편집해 줘.');
+      requestAnimationFrame(() => document.getElementById('draft-output')?.scrollIntoView({ block: 'start' }));
     } catch (e) {
       if (e instanceof TypeError) {
         setGenerateError('Worker 요청을 보내거나 응답을 받지 못했어 (Failed to fetch). CORS 사전 요청, 네트워크 차단, Worker 연결 또는 장시간 응답 중단 가능성이 있어. API 요청이 이미 처리됐을 수도 있으니 바로 다시 누르지 말고 Cloudflare 요청 기록을 확인해 줘.');
@@ -427,7 +439,15 @@ export default function Home() {
     if (query.trim() && !(x.title + ' ' + x.category).toLowerCase().includes(query.toLowerCase().trim())) return false;
     return true;
   }), [candidates, category, languageFilter, showExcluded, showPublished, localEdits, publishedFeed, query]);
-  const selected = candidates.find(x => x.id === selectedId);
+  const liveSelected = candidates.find(x => x.id === selectedId);
+  const offlineDraft = localDrafts.find(d => d.id === selectedId);
+  // RSS rotates independently of the paid results stored on this device.
+  const selected: Candidate | undefined = liveSelected ?? (offlineDraft ? {
+    id: offlineDraft.id, title: offlineDraft.topicSnapshot?.title || offlineDraft.title,
+    category: offlineDraft.topicSnapshot?.category || '저장된 주제', region: offlineDraft.topicSnapshot?.region || 'KO',
+    headlines: offlineDraft.sources || [],
+    scores: { editorialPriority: 0, commercialFitHeuristic: 0, shortformFitHeuristic: 0, independentPublisherCount: 0, riskFlag: false },
+  } : undefined);
   const activeResearch = researchLeads.find(x => x.candidateId === selectedId);
   const matchingDraft = selected && (
     localDrafts.find(d => d.id === selected.id) ||
@@ -438,11 +458,13 @@ export default function Home() {
   const legacyStored = !!saved && saved.generatedVersion !== DRAFT_VERSION && Object.values(saved.fields || {}).some(value => !!value?.trim());
   const legacyPublic = !!matchingDraft && matchingDraft.mode !== 'article' && matchingDraft.mode !== 'research_brief';
   // When latest research cannot produce an article, never mix its new sources with an old cached body.
-  const currentDraft = !legacyStored && !legacyPublic && matchingDraft?.mode !== 'research_brief' &&
+  const showingPrevious = !!editId && fallbackDraftId === editId && matchingDraft?.mode === 'research_brief';
+  const researchOnly = matchingDraft?.mode === 'research_brief' && !showingPrevious;
+  const currentDraft = !legacyStored && !legacyPublic && !researchOnly &&
     (matchingDraft?.mode === 'article' || !!saved?.fields?.[channel]);
-  const storedText = matchingDraft?.mode === 'research_brief' ? '' :
-    legacyStored ? (saved?.fields?.[channel] || '') :
-    legacyPublic ? '' : (saved?.fields?.[channel] ?? matchingDraft?.[channel] ?? '');
+  const storedText = researchOnly ? '' :
+    legacyStored || showingPrevious ? (saved?.fields?.[channel] || '') :
+    legacyPublic ? '' : resolveDraftBody(channel, saved?.fields, matchingDraft);
   const text = channel === 'shortform' ? storedText : channel === 'tistoryEn'
     ? normalizeEnglishArticleTags(storedText, saved?.titles?.tistoryEn || matchingDraft?.tistoryEnTitle || matchingDraft?.title || '')
     : normalizeArticleTags(storedText,
@@ -456,7 +478,7 @@ export default function Home() {
   const previewLines = paragraphLines(text);
   const cardPositions = imagePositions(previewLines);
   const readiness = articleReadiness(text, channel === 'tistoryEn' ? 'tistoryEn' : channel === 'tistory' ? 'tistory' : 'naver');
-  const articleCopyBlocked = channel !== 'shortform' && readiness.publishBlocked;
+  const articleCopyBlocked = showingPrevious || (channel !== 'shortform' && readiness.publishBlocked);
   const reviewed = saved?.evidenceReview?.[channel];
   const reviewIsStale = !!reviewed && reviewed.reviewedText !== text;
   const selectedImages = saved?.selectedImages || (saved?.selectedImage ? [saved.selectedImage] : []);
@@ -684,6 +706,7 @@ export default function Home() {
               <select className="wide-select" aria-label="주제 선택" value={selectedId} onChange={e => { setSelectedId(e.target.value); setNotice(''); }}>
                 <option value="">주제를 선택해 줘</option>
                 {candidates.map(c => <option value={c.id} key={c.id}>{c.title}</option>)}
+                {offlineDraft && !liveSelected && <option value={offlineDraft.id}>{selected?.title} (저장된 주제)</option>}
               </select>
               {selected && publicMatchFor(selected) && <div className="published-match suspected">
                 <strong>{publicMatchFor(selected)?.type === 'confirmed' ? '이미 발행된 주제야' : '기존 발행 글과 비슷한 주제야'}</strong>
@@ -718,7 +741,7 @@ export default function Home() {
                   <span className={connectionState==='ready'?'worker-health-ok':connectionState==='unreachable'||connectionState==='unconfigured'?'worker-health-bad':'worker-health-idle'}>{connectionState==='ready'?'정상':connectionState==='unreachable'?'연결 불가':connectionState==='unconfigured'?'서버 설정 필요':'검사 전'}</span>
                   {connectionDetails&&<p role="status">{connectionDetails}</p>}
                 </div>
-                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!selected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>OpenAI 웹 검색 + 원고 작성 비용 발생 · 먼저 무료 연결 테스트 권장</span></div>
+                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!liveSelected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>OpenAI 웹 검색 + 원고 작성 비용 발생 · 먼저 무료 연결 테스트 권장</span></div>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
@@ -726,8 +749,17 @@ export default function Home() {
               <div className="draft-selector"><strong>AI 초안 · 내 브라우저 {localDrafts.length}건 / 서버 제공 {drafts.length}건</strong>
                 {localDrafts.length+drafts.length===0 ? <p className="muted">현재 저장된 초안이 없어.</p> : [...localDrafts, ...drafts.filter(d => !localDrafts.some(local => local.id === d.id))].map((d,i)=>{
                   const corresponding=candidates.find(c=>c.id===d.id||(d.sources||[]).some(src=>c.headlines.some(h=>h.url===src.url)));
-                  return <button type="button" key={d.id+'-'+i} className="saved-draft" disabled={!corresponding} onClick={()=>{if(corresponding){setSelectedId(corresponding.id);setChannel('naver');setNotice('기존 AI 검수 초안을 불러왔어.');}}}>
-                    <span><b>{d.title}</b><small>{corresponding?'네이버·티스토리·숏폼 초안 보기':'현재 뉴스 목록에서 해당 주제를 찾을 수 없어'}</small></span><span>보기 →</span>
+                  const local = localDrafts.some(x => x.id === d.id);
+                  const targetId = local ? d.id : corresponding?.id;
+                  return <button type="button" key={d.id+'-'+i} className="saved-draft" disabled={!targetId} onClick={()=>{
+                    if(!targetId) return;
+                    setFallbackDraftId('');
+                    setSelectedId(targetId);
+                    setChannel(firstWrittenChannel(d) ?? firstWrittenChannel(d.reviewBodies) ?? 'naver');
+                    setNotice(d.mode === 'research_brief' ? '저장된 조사 결과를 열었어.' : '저장된 본문을 열었어. 다시 생성할 필요 없어.');
+                    requestAnimationFrame(() => document.getElementById('draft-output')?.scrollIntoView({ block: 'start' }));
+                  }}>
+                    <span><b>{d.title}</b><small>{targetId ? (d.mode === 'research_brief' ? '저장된 조사 결과 보기' : '저장된 원고 보기') : '현재 뉴스 목록에서 해당 주제를 찾을 수 없어'}</small></span><span>보기 →</span>
                   </button>;
                 })}
                 <p className="muted">초안은 발행용 완성 글이 아니라 출처 검증이 필요한 준비 자료야.</p>
@@ -753,7 +785,7 @@ export default function Home() {
               </div>}
               {selected?.region === 'EN' && <div className="research-lead"><strong>해외 콘텐츠</strong><p>티스토리 English 탭에서 영어 블로그 원고를, 숏폼 대본 탭에서 해외 Shorts·Reels 대본을 확인할 수 있어.</p></div>}
               {channel === 'tistoryEn' && matchingDraft?.mode==='article' && !storedText.trim() && <div className="draft-warning">이전에 생성된 초안에는 영문 원고가 없어. 이전 원고를 영어로 자동 표시하지 않으며, 새 생성 결과부터 별도 영어 버전이 저장돼.</div>}
-              <div className="tabs">{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
+              <div className="tabs" id="draft-output" style={{scrollMarginTop: 20}}>{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
               {matchingDraft?.qualityAudit?.warnings?.length ? <div className="draft-warning" role="alert">
                 <strong>원고 품질 검사 · 수정 필요</strong>
@@ -772,13 +804,21 @@ export default function Home() {
                 <ul>{(matchingDraft.verificationChecklist||[]).map((x,i)=><li key={i}>{x}</li>)}</ul>
                 <p>충분한 공식 자료를 찾지 못했다면 다른 주제를 선택하는 게 좋아.</p>
                 {saved?.fields && Object.values(saved.fields).some(value => !!value?.trim()) && <div className="editor-toolbar">
+                  <button className="btn btn-light" onClick={() => {
+                    setFallbackDraftId(showingPrevious ? '' : editId);
+                    if (!showingPrevious) setChannel(firstWrittenChannel(saved.fields) ?? 'naver');
+                  }}>{showingPrevious ? '이전 원고 닫기' : '이전 저장 원고 화면에서 보기 (무료)'}</button>
                   <button className="btn btn-light" onClick={() => download('todaypick-previous-local-draft.json', JSON.stringify({
                     title: selected?.title, savedAt: saved.updatedAt, previousDraft: saved.fields, previousTitles: saved.titles,
                   }, null, 2), 'application/json')}>이전 저장 원고 백업 (무료)</button>
                   <p className="muted">이 버튼은 이번 실패 결과가 아니라 이 브라우저에 이전부터 남아 있던 원고를 저장해.</p>
                 </div>}
               </div> : null}
-              {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="empty-editor"><h3>발행용 본문 없음</h3><p>공식 발표나 독립된 추가 자료를 확인한 뒤 다시 생성해 줘.</p></div> : null}
+              {researchOnly && matchingDraft?.reviewBodies?.[channel]?.trim() ? <div className="research-lead">
+                <strong>이번에 받은 검수용 본문 · 발행 보류</strong>
+                <textarea className="draft-text" readOnly rows={12} aria-label="이번에 받은 검수용 본문" value={matchingDraft.reviewBodies[channel]}/>
+              </div> : researchOnly ? <div className="empty-editor"><h3>이 채널에 표시할 본문이 없어</h3><p>이전 원고가 저장돼 있으면 위 버튼으로 볼 수 있어. 같은 내용을 반복 생성하지 말고 먼저 조사 결과를 확인해 줘.</p></div> : null}
+              {showingPrevious && <div className="draft-warning"><strong>이전 저장 원고</strong><p>이번 조사에서 새로 작성된 글이 아니야. 새 출처는 이 원고에 붙이지 않았어.</p></div>}
               {currentDraft && !legacyStored && !!text.trim() ? <>
                 {channel !== 'shortform' && readiness.publishBlocked && <div className="draft-warning" role="alert">
                   <strong>보완 필요 · 발행 보류</strong>
@@ -816,7 +856,7 @@ export default function Home() {
                     {i === cardPositions.summary && channel !== 'shortform' && selected && <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[2]} excerpt={text} variant="summary" index={1}/>}
                     {i === cardPositions.detail && channel !== 'shortform' && selected && <ImageCard title={articleTitle || selected.title} category={selected.category} description={images[1]} excerpt={text} variant="detail" index={2}/>}
                   </div>)}
-                </div> : <textarea className="draft-text" value={text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
+                </div> : <textarea className="draft-text" value={saved?.fields?.[channel] ?? text} onChange={e => updateEdit({fields:{[channel]:e.target.value}, verified:false})} rows={17} placeholder="원고를 입력하거나 생성된 초안을 수정해 줘." aria-label="원고 편집"/>}
                 {channel !== 'shortform' && matchingDraft?.sourceLinks?.length ? <div className="research-sources">
                   <strong>본문과 분리한 참고 출처</strong>
                   <ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul>

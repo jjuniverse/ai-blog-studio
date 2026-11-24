@@ -183,6 +183,7 @@ test('a one-paragraph welfare headline with tags and many search hits becomes a 
   assert.equal(result.draft.mode, 'research_brief');
   for(const channel of ['naver','tistory','tistoryEn','shortform']) assert.equal(result.draft[channel], '');
   assert.ok(result.draft.researchAudit.reasons.some(reason=>reason.includes('한두 문장')));
+  assert.match(result.draft.reviewBodies.naver, /국민연금공단/);
 });
 
 test('an editable welfare draft keeps topical tags and curated official sources only', async () => {

@@ -47,3 +47,17 @@ test('reference lists and repeated lines do not raise body length', () => {
   assert.equal(articleReadiness(text).bodyLength, line.length);
   assert.equal(articleReadiness(text).publishBlocked, true);
 });
+
+test('display starts in a populated tab when Naver is blank', async () => {
+  const { firstWrittenChannel } = await import('../app/lib/draftDisplay.ts');
+  assert.equal(firstWrittenChannel({ naver: '  ', tistory: 'Korean draft', tistoryEn: 'English draft' }), 'tistory');
+  assert.equal(firstWrittenChannel({ naver: '', shortform: 'Script' }), 'shortform');
+  assert.equal(firstWrittenChannel({ tistory: ' \n' }), undefined);
+});
+
+test('saved non-empty text wins without an empty cached editor hiding a generated body', async () => {
+  const { resolveDraftBody } = await import('../app/lib/draftDisplay.ts');
+  assert.equal(resolveDraftBody('naver', { naver: '' }, { naver: 'Generated body' }), 'Generated body');
+  assert.equal(resolveDraftBody('naver', { naver: 'My edit' }, { naver: 'Generated body' }), 'My edit');
+  assert.equal(resolveDraftBody('tistoryEn', { naver: 'My edit' }, {}), '');
+});
