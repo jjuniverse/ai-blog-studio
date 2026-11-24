@@ -1,22 +1,28 @@
 {
-  "generatedAt": "2026-11-24T00:40:01.080324+00:00",
+  "generatedAt": "2026-11-24T06:35:04.209852+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 40,
-      "lastSuccessAt": "2026-11-24T00:40:01.080324+00:00"
+      "count": 41,
+      "lastSuccessAt": "2026-11-24T06:35:04.209852+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-24T00:40:01.080324+00:00"
+      "lastSuccessAt": "2026-11-24T06:35:04.209852+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "쿠블프 로켓직구 블랙프라이데이 총정리 | 12월 1일까지, 지금 담아야 할 직구템 4종",
+      "url": "https://blog.naver.com/todaypickkr/224489942014?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-24T05:33:45+00:00"
+    },
     {
       "channel": "naver",
       "title": "서울 지하철 25일 총파업 기로 — 출근길 영향·노선별 운행률·우회 노선 총정리",
@@ -259,6 +265,18 @@
     },
     {
       "channel": "tistory",
+      "title": "쿠블프 로켓직구 블랙프라이데이 총정리 | 12월 1일까지, 지금 담아야 할 직구템 4종",
+      "url": "https://blog83848.tistory.com/53",
+      "publishedAt": "2026-11-24T05:52:37+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "Black Friday 2026 AI Deals: Google AI Pro at 50% Off, Adobe at 57–60%, and the Tools That Aren't Discounted",
+      "url": "https://blog83848.tistory.com/52",
+      "publishedAt": "2026-11-24T00:53:19+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "2026 블프 AI 툴 할인 총정리 — 구글 AI 프로 50%, 어도비 60%, LoroNote 평생권 (11월 27일 마감)",
       "url": "https://blog83848.tistory.com/51",
       "publishedAt": "2026-11-24T00:35:24+00:00"
@@ -304,18 +322,6 @@
       "title": "2026 연말정산 막판 전략 — 미리보기 12월 18일 마감, 12월 31일 전에 해야 할 5가지",
       "url": "https://blog83848.tistory.com/44",
       "publishedAt": "2026-11-22T04:15:45+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "월 소득 519만 원 미만이면 노령연금 전액 — 감액 폐지와 지난해 감액분 환급 정리",
-      "url": "https://blog83848.tistory.com/43",
-      "publishedAt": "2026-11-22T03:57:39+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "AI Glasses vs. a 200-Megapixel Phone: Samsung's Sold-Out Intelligent Eyewear and the Xiaomi 18 Pro Max",
-      "url": "https://blog83848.tistory.com/42",
-      "publishedAt": "2026-11-22T03:38:49+00:00"
     }
   ]
 }
