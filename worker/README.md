@@ -66,7 +66,7 @@ The initial workflow run **fails clearly** if either GitHub Secret is missing. T
 
 ## Research-first blog drafting (quality update)
 
-Inline generation now uses the OpenAI Responses API **web_search** tool before writing. This costs more than the earlier headline-only call; review the [OpenAI API usage dashboard](https://platform.openai.com/usage) and use rate/spend limits. Results must cite web-search-returned URLs; an article with insufficient grounded sources or thin text is suppressed and presented as a research brief instead of being represented as ready-to-publish content.
+Inline generation separates **evidence collection** from **writing**. The first Responses API call searches the web (maximum three built-in tool calls) and extracts distinct facts bound to URLs actually returned by search. With fewer than three usable facts or fewer than two non-event categories, it skips the writing call. Otherwise a second Responses API call writes from the extracted facts alone, without web tools. There are no automatic retries. The total output-token cap is 12,000 across both stages, although both requests incur usage. If writing fails or the editorial checks block publication, the UI keeps the collected facts and their links available for review. Search matching is provenance, not a guarantee that any individual claim is true. Monitor costs in the [OpenAI API usage dashboard](https://platform.openai.com/usage).
 
 For an existing Worker, **prefer the GitHub Actions auto-deploy workflow above**. Manual redeployment remains a fallback when CI deployment is not configured:
 

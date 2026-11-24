@@ -2,6 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
+function evidenceFixture(sources, facts) {
+  const samples = [
+    ["change","온라인으로 신청하면 배우자 동의를 모바일로 받을 수 있습니다."],
+    ["steps","공식 서비스에서 복지 급여 신청 메뉴를 선택한 뒤 기초연금을 찾습니다."],
+    ["documents","준비되지 않은 추가 증빙은 신청서를 낸 다음 별도로 제출할 수 있습니다."],
+    ["support","직접 방문이 필요하면 가까운 행정복지센터나 국민연금공단에 문의하세요."],
+  ];
+  return Response.json({status:'completed',output:[
+    {type:'web_search_call',status:'completed',action:{sources}},
+    {type:'message',content:[{type:'output_text',text:JSON.stringify({
+      facts:facts ?? samples.map(([section,statement],i)=>({section,statement,sourceUrl:sources[i % sources.length].url})),
+      openQuestions:['최종 공지의 적용 범위를 확인해 주세요.'],
+    })}]},
+  ]});
+}
+const isResearch = options => JSON.parse(options.body).text.format.name === 'editorial_evidence';
+
 test('complete OpenAI response yields a research audit and draft without a scope error', async () => {
   const source = await readFile(new URL('../src/index.js', import.meta.url), 'utf8');
   const worker = (await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'))).default;
@@ -14,7 +31,7 @@ test('complete OpenAI response yields a research audit and draft without a scope
     { title: 'Announcement', url: 'https://example.org/announcement' },
     { title: 'Other coverage', url: 'https://reputable.example/news' },
   ];
-  globalThis.fetch = async () => Response.json({
+  globalThis.fetch = async (_url, options) => isResearch(options) ? evidenceFixture(sourceLinks) : Response.json({
     status: 'completed',
     output: [
       { type: 'web_search_call', action: { sources: sourceLinks } },
@@ -80,7 +97,7 @@ test('short imperfect articles remain visible for revision instead of becoming e
     { title:'Media 1', url:'https://news-one.example/article' },
     { title:'Media 2', url:'https://news-two.example/article' },
   ];
-  globalThis.fetch = async () => Response.json({
+  globalThis.fetch = async (_url, options) => isResearch(options) ? evidenceFixture(sources) : Response.json({
     status:'completed', output:[
       {type:'web_search_call',action:{sources}},
       {type:'message',content:[{type:'output_text',text:JSON.stringify({
@@ -136,7 +153,14 @@ async function generatePensionDraft({ body, tistory = body, english = '', shortf
     requestCount++;
     const payload = JSON.parse(options.body);
     assert.match(payload.instructions, /responsible authority/);
+    if (isResearch(options)) {
+      assert.deepEqual(payload.tools,[{type:'web_search',search_context_size:'medium'}]);
+      assert.equal(payload.max_tool_calls,3);
+      return evidenceFixture(retrievedSources);
+    }
     assert.match(payload.instructions, /quiz\/giveaway information at the end/);
+    assert.equal(payload.tools,undefined);
+    assert.ok(JSON.parse(payload.input).evidenceFacts.length >= 3);
     return Response.json({
       status: 'completed',
       output: [
@@ -159,7 +183,7 @@ async function generatePensionDraft({ body, tistory = body, english = '', shortf
     }), env);
     const result = await response.json();
     assert.equal(response.status, 200, JSON.stringify(result));
-    assert.equal(requestCount, 1, 'do not make an extra paid request');
+    assert.equal(requestCount, 2, 'research and writing only, no retry');
     return result;
   } finally {
     globalThis.fetch = original;
@@ -235,17 +259,23 @@ const structuredResponseFixture = {
 const outputText = text => ({type:'output_text',text});
 const assistantMessage = (content, more={}) => ({type:'message',role:'assistant',content,...more});
 
-async function generateFromResponsesShape(output, extra={}) {
+async function generateFromResponsesShape(output, extra={}, opts={}) {
   const source = await readFile(new URL('../src/index.js', import.meta.url), 'utf8');
   const worker = (await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'))).default;
   const original = globalThis.fetch;
   let calls=0;
-  globalThis.fetch = async () => {
+  const requests = [];
+  globalThis.fetch = async (_url,options) => {
     calls++;
-    return Response.json({status:'completed', ...extra, output:[
-      {type:'web_search_call', status:'completed', action:{sources:[official]}},
-      ...output,
-    ]});
+    requests.push(JSON.parse(options.body));
+    if (isResearch(options)) return evidenceFixture([official, other], opts.researchFacts ??
+      [
+        {section:'change',statement:'배우자가 본인 휴대전화에서 금융정보 제출에 동의할 수 있습니다.',sourceUrl:official.url},
+        {section:'documents',statement:'필요한 추가 증빙은 먼저 신청서를 낸 후 제출할 수 있습니다.',sourceUrl:official.url},
+        {section:'steps',statement:'복지로에 로그인한 뒤 노년 항목에서 해당 서비스를 선택하세요.',sourceUrl:official.url},
+      ]);
+    if (opts.writerError) return new Response('',{status:opts.writerError});
+    return Response.json({status:'completed', ...extra, output});
   };
   const env = { OPENAI_API_KEY:'dummy', STUDIO_PASSWORD:'a-password-long-enough',
     AUTH_LIMIT:{limit:async()=>({success:true})}, GEN_LIMIT:{limit:async()=>({success:true})} };
@@ -255,8 +285,8 @@ async function generateFromResponsesShape(output, extra={}) {
       body:JSON.stringify({title:structuredResponseFixture.title, region:'KO', status:'needs_sources',
         sources:[{title:structuredResponseFixture.title,publisher:'Example',url:official.url}]}),
     }),env);
-    assert.equal(calls,1);
-    return {http:response.status, body:await response.json()};
+    assert.equal(calls,opts.expectedCalls ?? 2);
+    return {http:response.status, body:await response.json(), requests};
   } finally {
     globalThis.fetch=original;
   }
@@ -298,12 +328,13 @@ test('a truncated response preserves only complete top-level draft bodies for re
 test('unfinished first article stays an error and a refusal is not parsed as a draft', async () => {
   const partial=await generateFromResponsesShape([assistantMessage([outputText('{"mode":"article","naver":"unfinished')])],
     {status:'incomplete',incomplete_details:{reason:'max_output_tokens'}});
-  assert.equal(partial.body.code,'AI_OUTPUT_LIMIT');
+  assert.match(partial.body.draft.researchAudit.reasons[0],/끝까지 작성하지 못했어/);
+  assert.ok(partial.body.draft.evidenceFacts.length>=3);
   const refused=await generateFromResponsesShape([
     assistantMessage([outputText(JSON.stringify(structuredResponseFixture))]),
     assistantMessage([{type:'refusal',refusal:'No result'}],{phase:'final_answer'}),
   ]);
-  assert.equal(refused.body.code,'AI_REFUSAL');
+  assert.match(refused.body.draft.researchAudit.reasons[0],/본문을 작성하지 않았어/);
 });
 
 test('hexadecimal noise shown in the Studio screenshot is not displayed as a draft or checklist', async () => {
@@ -328,4 +359,41 @@ test('a broken language channel never hides a separate good channel or technical
   assert.equal(result.body.draft.tistory,'');
   assert.match(result.body.draft.naver,/EB C7/);
   assert.deepEqual(result.body.draft.sourceLinks,[official]);
+});
+
+test('writer receives only vetted evidence, never the original HTML or independent search tools', async () => {
+  const result=await generateFromResponsesShape([assistantMessage([outputText(JSON.stringify(structuredResponseFixture))])]);
+  assert.equal(result.body.draft.mode,'article');
+  const [research,writer]=result.requests;
+  assert.equal(research.max_tool_calls,3);
+  assert.equal(research.max_output_tokens+writer.max_output_tokens,12000);
+  assert.equal(writer.tools,undefined);
+  const data=JSON.parse(writer.input);
+  assert.ok(data.evidenceFacts.some(fact=>fact.section==='documents' && fact.sourceUrl===official.url));
+  assert.equal(data.sources,undefined);
+  assert.equal(data.verifiedNotes,undefined);
+  assert.ok(result.body.draft.evidenceFacts.every(fact=>fact.sourceUrl===official.url));
+});
+
+test('unseen sources, duplicated statements and event-only facts do not trigger a paid writer', async () => {
+  const event={section:'event',statement:'참여 기간은 공지에서 별도로 안내한 기간을 기준으로 합니다.',sourceUrl:official.url};
+  const result=await generateFromResponsesShape([],{},{
+    researchFacts:[event,{...event,section:'steps'}, {section:'eligibility',
+      statement:'대상 기준은 공공기관 공식 홈페이지 안내에서 확인하세요.',sourceUrl:'https://unseen.example/file'}],
+    expectedCalls:1,
+  });
+  assert.equal(result.body.status,'research_required');
+  assert.equal(result.body.draft.evidenceFacts.length,1);
+  assert.equal(result.body.draft.evidenceFacts[0].section,'event');
+  assert.equal(result.body.draft.naver,'');
+  assert.match(result.body.draft.researchAudit.reasons[0],/작성 요청은 보내지 않았어/);
+});
+
+test('writer outage keeps the already gathered facts and does not run a third call', async () => {
+  const result=await generateFromResponsesShape([],{}, {writerError:502});
+  assert.equal(result.http,200);
+  assert.equal(result.body.draft.mode,'research_brief');
+  assert.deepEqual(result.body.draft.sourceLinks,[official]);
+  assert.equal(result.body.draft.evidenceFacts.length,3);
+  assert.equal(result.body.draft.naver,'');
 });

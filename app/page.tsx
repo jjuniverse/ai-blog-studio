@@ -57,6 +57,7 @@ type Draft = {
   generationVersion?: number;
   topicSnapshot?: { title: string; category: string; region: string };
   reviewBodies?: Partial<Record<Channel, string>>;
+  evidenceFacts?: { section: string; statement: string; sourceUrl: string; sourceTitle: string }[];
   comparedToPrevious?: 'changed' | 'same' | 'first' | 'brief';
   sourceLinks?: { title: string; url: string }[];
   imageKeywords?: string[];
@@ -363,7 +364,7 @@ export default function Home() {
       const writtenChannel = firstWrittenChannel(payload.draft);
       const hasArticle = payload.draft.mode === 'article' && !!writtenChannel;
       const draft: Draft = {
-        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 5,
+        ...payload.draft, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 8,
         mode: hasArticle ? 'article' : 'research_brief',
         topicSnapshot: { title: selected.title, category: selected.category, region: selected.region },
         comparedToPrevious,
@@ -401,7 +402,7 @@ export default function Home() {
       setChannel(writtenChannel ?? firstWrittenChannel(draft.reviewBodies) ?? 'naver');
       setPreviewMode(true);
       setNotice(draft.mode === 'research_brief'
-        ? firstWrittenChannel(draft.reviewBodies) ? '발행 기준에 미달했지만 AI가 쓴 텍스트는 검수용으로 남겼어.' : '조사는 끝났지만 생성된 본문은 없어. 조사 결과를 확인해 줘.'
+        ? firstWrittenChannel(draft.reviewBodies) ? '발행 기준에 미달했지만 AI가 쓴 텍스트는 검수용으로 남겼어.' : '본문 대신 조사 결과를 열었어. 확인한 자료와 작성하지 못한 이유를 볼 수 있어.'
         : draft.status === 'revision_required' ? '검수용 본문을 열었어. 보완 항목을 확인해 줘.'
         : '생성된 본문을 열었어. 출처와 내용을 확인한 뒤 편집해 줘.');
       requestAnimationFrame(() => document.getElementById('draft-output')?.scrollIntoView({ block: 'start' }));
@@ -743,7 +744,7 @@ export default function Home() {
                   <span className={connectionState==='ready'?'worker-health-ok':connectionState==='unreachable'||connectionState==='unconfigured'?'worker-health-bad':'worker-health-idle'}>{connectionState==='ready'?'정상':connectionState==='unreachable'?'연결 불가':connectionState==='unconfigured'?'서버 설정 필요':'검사 전'}</span>
                   {connectionDetails&&<p role="status">{connectionDetails}</p>}
                 </div>
-                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!liveSelected} onClick={generateHere}>{generating?'AI 생성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>OpenAI 웹 검색 + 원고 작성 비용 발생 · 먼저 무료 연결 테스트 권장</span></div>
+                <div className="generator-actions"><button className="btn btn-primary" disabled={generating||!liveSelected} onClick={generateHere}>{generating?'자료 조사·원고 작성 중…':'✦ 자료 조사하고 원고 생성'}</button><span>1단계 자료 조사 · 2단계 원고 작성 (근거가 충분할 때만). 각 단계에 OpenAI 사용료가 발생하며 자동 재시도하지 않아.</span></div>
                 {generateError&&<p className="generator-error" role="alert">{generateError}</p>}
                 <p className="muted">Worker URL은 자동 연결했어. 관리자 암호는 브라우저에 저장하지 않아. Cloudflare Secrets 등록이 완료돼야 실제 생성돼.</p>
               </div>
@@ -788,6 +789,13 @@ export default function Home() {
               {selected?.region === 'EN' && <div className="research-lead"><strong>해외 콘텐츠</strong><p>티스토리 English 탭에서 영어 블로그 원고를, 숏폼 대본 탭에서 해외 Shorts·Reels 대본을 확인할 수 있어.</p></div>}
               {channel === 'tistoryEn' && matchingDraft?.mode==='article' && !storedText.trim() && <div className="draft-warning">이전에 생성된 초안에는 영문 원고가 없어. 이전 원고를 영어로 자동 표시하지 않으며, 새 생성 결과부터 별도 영어 버전이 저장돼.</div>}
               <div className="tabs" id="draft-output" style={{scrollMarginTop: 20}}>{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
+              {!!matchingDraft?.evidenceFacts?.length && <details className="research-lead">
+                <summary><strong>원고의 바탕이 된 조사 내용 {matchingDraft.evidenceFacts.length}건</strong></summary>
+                <p>자료의 해당 부분과 사실이 일치하는지는 발행 전에 직접 확인해 줘.</p>
+                <ul>{matchingDraft.evidenceFacts.map((fact,i)=><li key={i}>
+                  {fact.statement}{' '}<a href={fact.sourceUrl} target="_blank" rel="noopener noreferrer">{fact.sourceTitle || '출처 확인'} ↗</a>
+                </li>)}</ul>
+              </details>}
               {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
               {matchingDraft?.qualityAudit?.warnings?.length ? <div className="draft-warning" role="alert">
                 <strong>원고 품질 검사 · 수정 필요</strong>
