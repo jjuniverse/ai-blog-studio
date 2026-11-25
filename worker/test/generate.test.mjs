@@ -148,7 +148,7 @@ async function generatePensionDraft({ body, tistory = body, english = '', shortf
   globalThis.fetch = async (_url, options) => {
     requestCount++;
     const payload = JSON.parse(options.body);
-    assert.match(payload.instructions, /responsible authority/);
+    assert.match(payload.instructions, /(?:administering agency|responsible authority)/);
     if (isResearch(options)) {
       assert.deepEqual(payload.tools,[{type:'web_search',search_context_size:'medium'}]);
       assert.equal(payload.max_tool_calls,3);
@@ -451,8 +451,12 @@ test('a culture-card headline uses a short search focus and accepts a completed 
     ]},
   });
   assert.equal(JSON.parse(result.requests[0].input).title,cultureTitle);
-  assert.equal(JSON.parse(result.requests[0].input).searchFocus,'2026 문화누리카드 15만원 아직 신청 안 했다면?');
-  assert.match(result.requests[0].instructions,/Never search the whole SEO headline/);
+  assert.equal(JSON.parse(result.requests[0].input).searchFocus,'2026 문화누리카드');
+  assert.match(result.requests[0].instructions,/FIRST SEARCH.*공식 안내/);
+  assert.match(result.requests[0].instructions,/Do not use query quotes around the whole SEO headline/);
+  assert.match(result.requests[0].instructions,/change the search terms/);
+  assert.match(result.requests[0].instructions,/distinguish application or card issuance from spending/);
+  assert.equal(result.requests[0].max_tool_calls,3);
   assert.equal(result.body.draft.researchAudit.searchedSourceCount,1);
   assert.equal(result.body.draft.researchAudit.linkedFactCount,3);
   assert.ok(JSON.parse(result.requests[1].input).evidenceFacts.every(fact=>fact.sourceUrl===cultureGuide));
