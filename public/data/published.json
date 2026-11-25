@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-25T00:44:28.393907+00:00",
+  "generatedAt": "2026-11-25T02:13:57.316070+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
       "count": 43,
-      "lastSuccessAt": "2026-11-25T00:44:28.393907+00:00"
+      "lastSuccessAt": "2026-11-25T02:13:57.316070+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-25T00:44:28.393907+00:00"
+      "lastSuccessAt": "2026-11-25T02:13:57.316070+00:00"
     }
   ],
   "posts": [
@@ -277,6 +277,12 @@
     },
     {
       "channel": "tistory",
+      "title": "미니 온풍기·세라믹 히터·발난로 추천 | 전기요금 비교 & 블프 특가 (~11/29)",
+      "url": "https://blog83848.tistory.com/56",
+      "publishedAt": "2026-11-25T01:12:16+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "10 Hidden AI Features Every Office Worker Should Be Using (November 2026)",
       "url": "https://blog83848.tistory.com/55",
       "publishedAt": "2026-11-25T00:31:27+00:00"
@@ -328,12 +334,6 @@
       "title": "Seoul Christmas 2026: 5 Markets and Tree Spots, With Booking Dates That Actually Matter",
       "url": "https://blog83848.tistory.com/47",
       "publishedAt": "2026-11-22T23:20:16+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2026 서울 크리스마스 마켓·트리 명소 TOP 5 — 예약 일정·입장료 한 표 정리",
-      "url": "https://blog83848.tistory.com/46",
-      "publishedAt": "2026-11-22T10:48:25+00:00"
     }
   ]
 }
