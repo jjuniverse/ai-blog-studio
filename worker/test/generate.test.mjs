@@ -13,7 +13,7 @@ function evidenceFixture(sources, facts) {
   return Response.json({status:'completed',output:[
     {type:'web_search_call',status:'completed',action:{sources}},
     {type:'message',content:[{type:'output_text',text:JSON.stringify({
-      facts:facts ?? samples.map(([section,statement],i)=>({section,statement,sourceUrl:sources[i % sources.length].url})),
+      facts:facts ?? samples.map(([section,statement],i)=>({section,statement,sourceUrl:sources[i % sources.length].url,sourcePassage:statement})),
       openQuestions:['최종 공지의 적용 범위를 확인해 주세요.'],
     })}]},
   ]});
@@ -501,7 +501,7 @@ test('culture card uses the welfare search plan and writes only with a supported
   const input={title:cultureTitle,category:'시니어·복지'};
   const makeResponse=facts=>({status:'completed',output:[
     webCall('completed',{type:'open_page',url:cultureGuide}),
-    assistantMessage([outputText(JSON.stringify({facts,openQuestions:[]}))]),
+    assistantMessage([outputText(JSON.stringify({facts:facts.map(fact=>({...fact,sourcePassage:fact.statement})),openQuestions:[]}))]),
   ]});
   const result=await generateFromResponsesShape([],{},{
     input,researchResponse:makeResponse([...cultureFacts,steps]),writerError:502,
@@ -555,4 +555,20 @@ test('non-pilot categories retain the general research prompt and unchanged budg
   assert.match(request.instructions,/1\. FIRST SEARCH/);
   assert.doesNotMatch(request.instructions,/PROFILE:/);
   assert.equal(request.max_tool_calls,3);
+});
+
+test('welfare URLs without source passages never trigger the writer', async () => {
+  const result=await generateFromResponsesShape([],{},{
+    input:{title:cultureTitle,category:'시니어·복지'},expectedCalls:1,
+    researchResponse:{status:'completed',output:[
+      webCall('completed',{type:'open_page',url:cultureGuide}),assistantMessage([cultureBrief()]),
+    ]},
+  });
+  const audit=result.body.draft.researchAudit;
+  assert.equal(audit.searchedSourceCount,1);
+  assert.equal(audit.missingPassageCount,3);
+  assert.equal(audit.code,'RESEARCH_MISSING_PASSAGE');
+  assert.equal(result.body.draft.naver,'');
+  assert.deepEqual(Object.keys(result.requests[0].text.format.schema.properties.facts.items.properties).sort(),
+    ['section','sourcePassage','sourceUrl','statement']);
 });

@@ -39,7 +39,7 @@ type EvidenceReview = {
   reviewedText?: string;
   checkedAt: string;
   status: string;
-  claims: { claim: string; status: 'supported' | 'uncertain' | 'conflicting'; explanation: string;
+  claims: { claim: string; status: 'supported' | 'uncertain' | 'conflicting'; explanation: string; supportingPassage?: string;
     sourceOrganization: string; measurementPeriod: string; measurementBasis: string;
     evidence: { url: string; title: string }[] }[];
   freshnessNotes: string[];
@@ -60,7 +60,7 @@ type Draft = {
   imageNotes?: string[];
   topicSnapshot?: { title: string; category: string; region: string };
   reviewBodies?: Partial<Record<Channel, string>>;
-  evidenceFacts?: { section: string; statement: string; sourceUrl: string; sourceTitle: string }[];
+  evidenceFacts?: { section: string; statement: string; sourceUrl: string; sourceTitle: string; sourcePassage?: string }[];
   comparedToPrevious?: 'changed' | 'same' | 'first' | 'brief';
   sourceLinks?: { title: string; url: string }[];
   imageKeywords?: string[];
@@ -371,7 +371,7 @@ export default function Home() {
       const comparedToPrevious = !hasArticle ? 'brief' : !previousText.trim() ? 'first' :
         previousText.trim() === newText.trim() ? 'same' : 'changed';
       const draft: Draft = {
-        ...incoming, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 12,
+        ...incoming, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 13,
         mode: hasArticle ? 'article' : 'research_brief',
         topicSnapshot: { title: selected.title, category: selected.category, region: selected.region },
         comparedToPrevious,
@@ -550,7 +550,7 @@ export default function Home() {
       const response = await fetch(WORKER_URL + '/verify', {
         method:'POST',
         headers:{ 'Content-Type':'application/json', 'X-Studio-Passphrase':studioPassphrase },
-        body:JSON.stringify({title: articleTitle, article:text, sources:showingPrevious ? [] : matchingDraft?.sourceLinks || []}),
+        body:JSON.stringify({title: articleTitle, article:text, category:selected.category, sources:showingPrevious ? [] : matchingDraft?.sourceLinks || []}),
       });
       const value = await response.json().catch(()=>({}));
       if (!response.ok || !value.result) throw Error(value.error || '검증 API 요청 실패 (HTTP '+response.status+')');
@@ -797,10 +797,11 @@ export default function Home() {
               <div className="tabs" id="draft-output" style={{scrollMarginTop: 20}}>{channels.map(c => <button key={c.id} className={channel === c.id ? 'tab active' : 'tab'} onClick={() => setChannel(c.id)}>{c.label}</button>)}</div>
               {!!matchingDraft?.evidenceFacts?.length && <details className="research-lead">
                 <summary><strong>원고의 바탕이 된 조사 내용 {matchingDraft.evidenceFacts.length}건</strong></summary>
-                <p>자료의 해당 부분과 사실이 일치하는지는 발행 전에 직접 확인해 줘.</p>
+                <p>아래 원문 구절은 AI가 찾은 검토 단서야. 링크를 열어 실제 원문과 일치하는지 확인해 줘.</p>
                 {matchingDraft.researchAudit?.firstSearchQuery && <p className="muted">첫 검색어 계획: {matchingDraft.researchAudit.firstSearchQuery}</p>}
                 <ul>{matchingDraft.evidenceFacts.map((fact,i)=><li key={i}>
                   {fact.statement}{' '}<a href={fact.sourceUrl} target="_blank" rel="noopener noreferrer">{fact.sourceTitle || '출처 확인'} ↗</a>
+                  {fact.sourcePassage && <div className="muted">원문 구절 후보: {fact.sourcePassage}</div>}
                 </li>)}</ul>
               </details>}
               {!legacyPublic && matchingDraft?.sourceLinks?.length ? <div className="research-sources"><strong>AI 검색에서 찾은 참고 링크 · 내용과 출처 직접 확인</strong><ul>{matchingDraft.sourceLinks.map((src,i)=><li key={i}><a href={src.url} rel="noopener noreferrer" target="_blank">{src.title || src.url} ↗</a></li>)}</ul></div> : null}
@@ -900,6 +901,7 @@ export default function Home() {
                       <span className={'evidence-status '+claim.status}>{claim.status==='supported'?'근거 후보 있음':claim.status==='conflicting'?'상충 가능성':'확인 필요'}</span>
                       <strong>{claim.claim}</strong>
                       <p>{claim.explanation}</p>
+                      {claim.supportingPassage && <p className="muted">원문 구절 후보: {claim.supportingPassage}</p>}
                       {(claim.sourceOrganization||claim.measurementPeriod||claim.measurementBasis) && <small>조사: {claim.sourceOrganization || '불명'} · 기간: {claim.measurementPeriod || '불명'} · 기준: {claim.measurementBasis || '불명'}</small>}
                       {!!claim.evidence?.length && <div className="evidence-links">{claim.evidence.map((link,j)=><a key={j} href={link.url} target="_blank" rel="noopener noreferrer">{link.title || '확인한 출처'} ↗</a>)}</div>}
                     </div>)}
