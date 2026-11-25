@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T01:18:16.875162+00:00",
+  "updatedAt": "2026-11-25T01:18:18.601800+00:00",
   "maxDailyCalls": 3,
   "dailyAttempts": {
     "2026-11-17": 3,
@@ -10,10 +10,181 @@
     "2026-11-21": 3,
     "2026-11-22": 3,
     "2026-11-23": 3,
-    "2026-11-24": 3
+    "2026-11-24": 3,
+    "2026-11-25": 3
   },
   "note": "Public AI-assisted research leads; not verified facts, not automatic publication approval.",
   "entries": [
+    {
+      "candidateId": "700929d3b5356a",
+      "title": "Netflix Officially Releases A 3-Part K-Drama Event Series In December",
+      "category": "K-드라마",
+      "region": "EN",
+      "researchedAt": "2026-11-25T01:18:16.138959+00:00",
+      "topic": "Netflix의 3부작 K-드라마 이벤트 시리즈 '탄타라'",
+      "summary": "넷플릭스는 2026년 12월 11일부터 3주간 주말마다 3부작으로 공개되는 22부작 K-드라마 '탄타라'를 공개할 예정이다. 이 드라마는 1950년대 한국 전쟁 이후 음악 산업에 뛰어든 여성 주인공의 이야기를 그린다.",
+      "keyFacts": [
+        "'탄타라'는 송혜교와 공유가 주연하는 1950년대 배경의 드라마로, 12월 11일 첫 공개를 시작으로 매주 금요일에 새로운 에피소드가 공개된다.",
+        "주인공 민자는 가난한 어린 시절을 극복하고 음악 산업에 발을 들여놓으며, 그녀의 어린 시절 친구 동구와 함께 꿈을 쫓는 이야기를 담고 있다.",
+        "공유는 민자의 어린 시절 친구이자 함께 꿈을 쫓는 동구 역을 맡았다.",
+        "김설현, 차승원, 이하늬 등도 주요 캐스트로 참여한다.",
+        "이 드라마는 넷플릭스에서 전 세계에 공개될 예정이다."
+      ],
+      "openQuestions": [
+        "'탄타라'의 정확한 공개 시간대는 언제인가?",
+        "이 드라마의 감독과 작가는 누구인가?",
+        "'탄타라'의 제작사는 어디인가?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.whats-on-netflix.com/news/netflix-sets-december-2026-release-date-gong-yoo-k-drama-tantara/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.whats-on-netflix.com/news/k-dramas/netflix-k-dramas-december-2026-preview-tantara/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.whats-on-netflix.com/news/k-dramas/gift-k-drama-netflix-december-2026-release-date/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.whats-on-netflix.com/news/k-dramas/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.whats-on-netflix.com/k-dramas/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://movified.co/netflix-december-2026-k-drama-preview-tantara/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.kstartrend.com/2026/11/14/kim-woo-bin-kim-hye-soo-and-song-hye-kyo-set-for-major-k-drama-comeback-as-three-new-series-arrive-within-one-week?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.kculture-insider.com/2026/11/december-kdrama-release-schedule.html?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 8,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "fb342e9ddfbb12",
+      "title": "Stray Kids — Gocheok Sky Dome Special Concert Announced for New Year",
+      "category": "K-pop",
+      "region": "EN",
+      "researchedAt": "2026-11-25T01:18:12.791977+00:00",
+      "topic": "Stray Kids Gocheok Sky Dome Special Concert Announcement",
+      "summary": "Stray Kids has announced a special two-day concert titled 'RUN IT SEOUL SPECIAL' at Seoul's Gocheok Sky Dome on January 1 and 2, 2027. This follows their successful world tour, including sold-out shows at the KSPO Dome in Seoul earlier this year. Tickets will be available through fan club pre-sales on December 7 and 8, with general sales starting on December 9. The group has also achieved significant global success, including topping the US Billboard 200 with their mini-album 'THIS & THAT' and headlining the 'STRAYCITY' festival in Latin America. Additionally, member Lee Know has announced pla",
+      "keyFacts": [
+        "Stray Kids will hold 'RUN IT SEOUL SPECIAL' concerts at Gocheok Sky Dome on January 1 and 2, 2027.",
+        "Fan club pre-sales begin on December 7 and 8; general sales start on December 9.",
+        "The group topped the US Billboard 200 with 'THIS & THAT' and headlined 'STRAYCITY' in Latin America.",
+        "Member Lee Know plans to release a solo album in early 2027."
+      ],
+      "openQuestions": [
+        "What are the ticket prices for the upcoming concerts?",
+        "Will there be any special guest performances during the concerts?",
+        "How can international fans access the concerts if they cannot attend in person?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://en.koreadaily.com/stray-kids-gocheok-sky-dome-special-concert/?utm_source=openai",
+          "title": "Stray Kids — Gocheok Sky Dome Special Concert Announced for New Year"
+        },
+        {
+          "url": "https://www.mk.co.kr/en/musics/12217724?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.dipe.co.kr/2351319?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://biz.chosun.com/en/en-entertainment/2026/11/25/J5JHDGDBOBEF5B5XTIB27HRHAQ/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://straykids.concertguides.com/venues/gocheok-sky-dome/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.concertarchives.org/concerts/stray-kids-5-star-dome-tour-seoul-special-unveil-13-day-1?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.concertarchives.org/concerts/stray-kids--6198116?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.concertarchives.org/concerts/stray-kids-121479a0-f61d-43ba-b3ba-10970bdd40d8?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 7,
+      "status": "needs_human_review"
+    },
+    {
+      "candidateId": "f46e14f6d3cf3a",
+      "title": "김해시, 2027년 노인일자리사업 참여자 7,305명 모집",
+      "category": "시니어·복지",
+      "region": "KO",
+      "researchedAt": "2026-11-25T01:18:09.322156+00:00",
+      "topic": "김해시 2027년 노인일자리사업 참여자 모집",
+      "summary": "김해시는 2027년 노인일자리 및 사회활동 지원사업 참여자를 모집합니다. 모집 인원은 총 7,305명으로, 노인공익활동사업 4,453명, 노인역량활용사업 1,738명, 공동체사업단 540명, 취업지원사업 574명입니다. 참여 대상은 만 60세 이상으로, 사업 유형에 따라 자격 요건이 다릅니다. 신청 기간은 12월 7일부터 15일까지이며, 자세한 사항은 김해시 공식 웹사이트를 참고하시기 바랍니다.",
+      "keyFacts": [
+        "모집 인원: 총 7,305명",
+        "신청 기간: 12월 7일 ~ 12월 15일",
+        "참여 대상: 만 60세 이상"
+      ],
+      "openQuestions": [
+        "각 사업 유형별 상세 자격 요건은 무엇인가요?",
+        "신청 방법은 온라인과 오프라인 중 어떤 방식이 가능한가요?"
+      ],
+      "officialSourceSuggested": true,
+      "sources": [
+        {
+          "url": "https://www.timenews.co.kr/article/1726822?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://gimhaetoday.co.kr/gimhae-2027-disabled-persons-jobs-212-recruit/?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://vster.kr/programs/71801?utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://gnmaeil.com/news/articleView.html?idxno=597573&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.ynnews.kr/news/articleView.html?idxno=247086&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.ynnews.kr/news/articleView.html?idxno=242432&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.ynnews.kr/news/articleView.html?idxno=237266&utm_source=openai",
+          "title": ""
+        },
+        {
+          "url": "https://www.wellbeingcare.co.kr/2026/11/2027-senior-jobs.html?utm_source=openai",
+          "title": ""
+        }
+      ],
+      "distinctSourceDomains": 10,
+      "status": "needs_human_review"
+    },
     {
       "candidateId": "6a6e4dea74dcb4",
       "title": "Disney+ Finds Its New #2 Show In The Perfect K-Drama To Binge",
@@ -1055,134 +1226,6 @@
       "sources": [],
       "distinctSourceDomains": 0,
       "status": "insufficient_evidence"
-    },
-    {
-      "candidateId": "582f78fe1d74e4",
-      "title": "'크래시2: 분노의 도로' 오늘(16일) 밤 10시 첫 방송…출연진·OTT 보기",
-      "category": "연예",
-      "region": "KO",
-      "researchedAt": "2026-11-17T09:25:31.383286+00:00",
-      "status": "research_failed",
-      "keyFacts": [],
-      "openQuestions": [
-        "조사 API 오류로 근거를 수집하지 못했어."
-      ],
-      "sources": [],
-      "summary": ""
-    },
-    {
-      "candidateId": "ac45b356875cf5",
-      "title": "2NE1's CL announces solo comeback",
-      "category": "K-pop",
-      "region": "EN",
-      "researchedAt": "2026-11-17T09:25:28.075705+00:00",
-      "topic": "CL의 솔로 컴백 발표",
-      "summary": "2NE1의 리더이자 솔로 아티스트인 CL이 5년 만에 새로운 디지털 싱글 'ICONIC'을 발표하며 솔로 컴백을 예고했습니다. 이번 싱글은 11월 20일 오후 6시에 발매될 예정이며, 그녀의 새로운 소속사인 THEBLACKLABEL과의 첫 작품입니다.",
-      "keyFacts": [
-        "CL, 5년 만에 새로운 디지털 싱글 'ICONIC' 발표 예정",
-        "'ICONIC'은 11월 20일 오후 6시 발매 예정",
-        "THEBLACKLABEL과의 첫 작품으로 기대감 증대",
-        "컨셉 사진에서 흰색 의상과 뱀 무늬의 의상, 길게 늘어뜨린 흰색 머리로 강렬한 이미지 연출",
-        "'ICONIC'은 CL의 첫 솔로 싱글로 5년 만의 컴백을 의미"
-      ],
-      "openQuestions": [
-        "'ICONIC'의 음악 스타일과 장르는 무엇일까?",
-        "싱글 발매와 함께 뮤직비디오도 공개될 예정인가?",
-        "CL의 향후 활동 계획은 어떻게 될까?"
-      ],
-      "officialSourceSuggested": true,
-      "sources": [
-        {
-          "url": "https://www.gmanetwork.com/news/showbiz/showbizabroad/1009793/2ne1-s-cl-announces-solo-comeback/story/?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://kpopfizz.com/news/cl-announces-solo-comeback-with-new-digital-single-iconic-on/?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://www.starnewskorea.com/en/music/2026/11/17/2026111708045217181?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://www.allkpop.com/article/2026/11/cl-showcases-her-signature-charisma-in-new-teaser-images-for-comeback-single-iconic?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://www.allkpop.com/article/2026/11/cl-signs-with-theblacklabel-to-release-new-music-in-november?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://www.allkpop.com/video/2026/11/cl-sets-november-20-comeback-date-with-first-teaser-for-new-single-iconic?auth=login&utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://www.kpopworld.com/news/cl-iconic-solo-comeback?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://kpopfwd.com/articles/cl-iconic-comeback-november-20/?utm_source=openai",
-          "title": ""
-        }
-      ],
-      "distinctSourceDomains": 10,
-      "status": "needs_human_review"
-    },
-    {
-      "candidateId": "a75d110be59742",
-      "title": "씨엘, 5년 만에 솔로 컴백… 20일 신곡 \\'아이코닉\\' 발표",
-      "category": "K-pop",
-      "region": "KO",
-      "researchedAt": "2026-11-17T09:25:24.479074+00:00",
-      "topic": "씨엘, 5년 만에 솔로 컴백…20일 신곡 '아이코닉' 발표",
-      "summary": "가수 씨엘(CL)이 5년 만에 솔로 신곡 '아이코닉(ICONIC)'을 발표한다. 소속사 더블랙레이블은 17일 공식 SNS를 통해 씨엘의 새 디지털 싱글 콘셉트 포토를 공개하며, 신곡 발매를 예고했다. 씨엘은 지난 13일 더블랙레이블과 전속계약을 체결하며, 오랜 시간 음악적 호흡을 맞춘 프로듀서 테디와의 재회를 알렸다. 신곡 '아이코닉'은 오는 20일 오후 6시에 발매될 예정이다. ([newspim.com](https://www.newspim.com/news/view/20261117000072?utm_source=openai))",
-      "keyFacts": [
-        "씨엘, 5년 만에 솔로 신곡 '아이코닉' 발표 예정",
-        "더블랙레이블과 전속계약 체결",
-        "프로듀서 테디와 재회",
-        "신곡 '아이코닉' 20일 오후 6시 발매"
-      ],
-      "openQuestions": [
-        "신곡 '아이코닉'의 음악 스타일은 무엇인가?",
-        "씨엘의 신곡 발매 이후 활동 계획은 어떻게 되는가?"
-      ],
-      "officialSourceSuggested": true,
-      "sources": [
-        {
-          "url": "https://www.newspim.com/news/view/20261117000072?utm_source=openai",
-          "title": "씨엘, 5년 만에 솔로 컴백…20일 '아이코닉' 발매"
-        },
-        {
-          "url": "https://www.tenasia.co.kr/article/2026111708224?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://m.tvdaily.co.kr/article.php?aid=17948738421809940010&utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=486470&utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://v.isplus.com/article/view/isp202611170025?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://img.bntnews.co.kr/Music/article/view/bnt202611170074?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://www.mt.co.kr/amp/entertainment/2026/11/17/2026111709297291163?utm_source=openai",
-          "title": ""
-        },
-        {
-          "url": "https://stoo.com/article.php?aid=109941172209&utm_source=openai",
-          "title": ""
-        }
-      ],
-      "distinctSourceDomains": 12,
-      "status": "needs_human_review"
     }
   ]
 }
