@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 
 function evidenceFixture(sources, facts) {
   const samples = [
+    ["eligibility","기초연금 신청 대상은 공식 안내에서 정한 자격을 충족해야 합니다."],
     ["change","온라인으로 신청하면 배우자 동의를 모바일로 받을 수 있습니다."],
     ["steps","공식 서비스에서 복지 급여 신청 메뉴를 선택한 뒤 기초연금을 찾습니다."],
     ["documents","준비되지 않은 추가 증빙은 신청서를 낸 다음 별도로 제출할 수 있습니다."],
@@ -493,4 +494,65 @@ test('absent metadata, missing searches, incomplete searches, and unreadable JSO
     assert.equal(result.body.draft.researchAudit.linkedFactCount,0);
     assert.equal(result.body.draft.naver,'');
   }
+});
+
+test('culture card uses the welfare search plan and writes only with a supported deadline and application route', async () => {
+  const steps={section:'steps',statement:'문화누리카드는 주민센터 또는 공식 누리집에서 발급을 신청할 수 있습니다.',sourceUrl:cultureGuide};
+  const input={title:cultureTitle,category:'시니어·복지'};
+  const makeResponse=facts=>({status:'completed',output:[
+    webCall('completed',{type:'open_page',url:cultureGuide}),
+    assistantMessage([outputText(JSON.stringify({facts,openQuestions:[]}))]),
+  ]});
+  const result=await generateFromResponsesShape([],{},{
+    input,researchResponse:makeResponse([...cultureFacts,steps]),writerError:502,
+  });
+  const payload=result.requests[0];
+  const plan=JSON.parse(payload.input);
+  assert.equal(plan.researchProfile,'welfare_program');
+  assert.equal(plan.firstSearchQuery,'2026 문화누리카드 발급 안내');
+  assert.equal(plan.title,cultureTitle);
+  assert.match(payload.instructions,/issue\/application window versus use\/expiry/);
+  assert.match(payload.instructions,/change the second query/);
+  assert.equal(payload.max_tool_calls,3);
+  assert.equal(result.body.draft.researchAudit.firstSearchQuery,plan.firstSearchQuery);
+  for(const facts of [cultureFacts,[...cultureFacts.slice(1),steps]]) {
+    const blocked=await generateFromResponsesShape([],{},{
+      input,researchResponse:makeResponse(facts),expectedCalls:1,
+    });
+    assert.equal(blocked.body.draft.researchAudit.code,'RESEARCH_CORE_GAP');
+    assert.equal(blocked.body.draft.evidenceFacts.length,3);
+  }
+});
+
+test('senior living and other community welfare do not require artificial eligibility or application facts', async () => {
+  const facts = [
+    {section:'context',statement:'서울시가 어르신을 위한 무료 스마트폰 교육을 종로구에서 운영합니다.',sourceUrl:official.url},
+    {section:'support',statement:'교육 장소와 시간표는 해당 구청의 교육 안내에서 확인할 수 있습니다.',sourceUrl:official.url},
+    {section:'context',statement:'운영 기관은 첫 수업에서 기본 설정과 문자 사용법을 안내합니다.',sourceUrl:official.url},
+  ];
+  for(const [title,profile] of [
+    ['어르신 스마트폰 교육｜가까운 교실 찾는 법과 수업 내용','senior_living'],
+    ['지역사회 복지센터 무장애 공간 운영 확대 안내','community_welfare'],
+  ]) {
+    const result=await generateFromResponsesShape([],{},{
+      input:{title,category:'시니어·복지'},researchFacts:facts,writerError:502,
+    });
+    const query=JSON.parse(result.requests[0].input);
+    assert.equal(query.researchProfile,profile);
+    assert.match(query.firstSearchQuery,/운영 안내$/);
+    assert.equal(result.requests.length,2);
+    assert.equal(result.body.draft.evidenceFacts.length,3);
+  }
+});
+
+test('non-pilot categories retain the general research prompt and unchanged budget', async () => {
+  const input={title:'새 AI 생산성 도구의 공식 기능 발표',category:'IT·AI'};
+  const result=await generateFromResponsesShape([],{}, {input,writerError:502});
+  const request=result.requests[0];
+  const data=JSON.parse(request.input);
+  assert.equal(data.researchProfile,undefined);
+  assert.equal(data.firstSearchQuery,undefined);
+  assert.match(request.instructions,/1\. FIRST SEARCH/);
+  assert.doesNotMatch(request.instructions,/PROFILE:/);
+  assert.equal(request.max_tool_calls,3);
 });

@@ -196,6 +196,49 @@ const researchInstructions = [
   "Return 5–10 distinct, brief facts if supported, in the topic language. Use one section and the exact HTTPS source URL from web results, a successfully opened official page, or its citation for every fact. Never invent or rewrite a URL, mix years, promote a headline into evidence, or copy source prose. Keep facts from sources already verified even if other items are unconfirmed. Put concrete missing or conflicting claims in openQuestions. Return only the JSON object.",
 ].join("\n");
 
+const seniorWelfareCategory = /^시니어[\s·ㆍ/+&-]*복지$/u;
+const namedBenefit = /문화누리\s*카드|기초\s*연금|노인\s*일자리|노인\s*장기\s*요양(?:보험)?|장애인\s*연금|긴급\s*복지(?:\s*지원)?|청년\s*월세(?:\s*지원)?|아동\s*수당|부모\s*급여|(?:주거|생계|의료|교육)\s*급여/u;
+const benefitSignal = /(?:지원금|바우처|수당|급여|수급|복지급여|공공지원사업|복지\s*지원사업)/u;
+const applicationGuide = /신청|발급|접수|(?:신규|참여자)\s*모집|재충전|지급\s*대상/u;
+const seniorSignal = /시니어|어르신|노년|노인|고령(?:층|자|화|사회)/u;
+const researchProfiles = {
+  welfare_program: [
+    "PROFILE: public welfare program. Use firstSearchQuery for the first web search. Prefer the program site, official application portal, responsible agency or municipality. Prefer the current program year; a prior-year page cannot confirm this year's dates or amounts.",
+    "If the first result is not official or lacks the correct year, change the second query: program name + administering agency or a known official domain + year. Otherwise search only an unresolved item, e.g. program/year + 추가지원 대상, 잔액 합산 or 신청 서류. Use any remaining search for a conflicting deadline, amount, or local exception that changes what the reader should do. Do not repeat the first query.",
+    "Prioritize eligibility, base amount versus supplemental eligibility, issue/application window versus use/expiry, and actionable application steps or official channels. Check scope and funding caveats where relevant. For a how-to, put application instructions in steps, official contact in support, eligibility in eligibility, and each deadline in timeline. Never invent a universal deadline or amount.",
+  ],
+  senior_living: [
+    "PROFILE: senior living or community service. Use firstSearchQuery for the first web search. Start with the organizer, relevant local government, public institution or operator. Look for the actual program or service guide, not generic articles about aging.",
+    "If the first result misses the original organizer or locality, change the query to the program/service and organizer or locality. Otherwise search only the biggest remaining practical gap, e.g. operating location, usage details or published fees. Use the remaining budget for a conflict affecting access, not for repeating the first query.",
+    "Prioritize who can use it, where it operates, availability, cost if published, and the next action. Report application only if one exists. Coverage of senior trends or service news without an application should explain what changed, where, and why it matters instead.",
+  ],
+  community_welfare: [
+    "PROFILE: other welfare or community news. Run firstSearchQuery first. Identify the actual local authority, provider, or issuing organization. If you find only secondary coverage, change the search terms to look for the original announcement. Otherwise use follow-up searches only on missing practical details or a consequential contradiction. Do not assume this news has application steps, a uniform deadline, or eligibility requirements.",
+  ],
+};
+function planEditorialResearch(input) {
+  const searchFocus = editorialResearchFocus(input.title);
+  if (!seniorWelfareCategory.test(input.category.trim())) return { searchFocus, profile: "general" };
+  const benefit = input.title.match(namedBenefit)?.[0];
+  const profile = benefit || benefitSignal.test(input.title) ? "welfare_program" :
+    seniorSignal.test(input.title) ? "senior_living" : "community_welfare";
+  const year = input.title.match(/(?:^|[^\d])(20\d{2})(?:년)?(?!\d)/)?.[1];
+  // Named programs get a short stable entity query rather than the headline.
+  // Keep locality in local-program queries so similarly named programs don't mix.
+  const local = searchFocus.match(/^(?:20\d{2}년?\s+)?([가-힣]{2,9}(?:특별시|광역시|특례시|시|군|구))(?=[\s,·]|$)/u)?.[1];
+  const subject = benefit ? [year, local, benefit].filter(Boolean).join(" ") :
+    searchFocus.replace(/[?!“”"'「」『』,]/gu, " ").trim().split(/\s+/).slice(0, 8).join(" ");
+  const suffix = profile === "welfare_program" ? (/문화누리/.test(benefit || "") ? "발급 안내" : "공식 안내") : "운영 안내";
+  return { profile, searchFocus: subject || searchFocus, firstSearchQuery: (subject || searchFocus) + " " + suffix,
+    needsApplicationFacts: profile === "welfare_program" && applicationGuide.test(input.title),
+    needsDeadlineFact: profile === "welfare_program" && /마감|기한|(?:신청|발급|접수|사용)\s*기간/u.test(input.title) };
+}
+function instructionsForResearch(plan) {
+  if (plan.profile === "general") return researchInstructions;
+  const common = researchInstructions.split("\n");
+  return [common[0], ...researchProfiles[plan.profile], common.at(-1)].join("\n");
+}
+
 function evidenceBrief(data) {
   const byUrl = new Map();
   const items = Array.isArray(data?.output) ? data.output : [];
@@ -271,6 +314,7 @@ const researchReasons = {
   RESEARCH_NO_SOURCE_METADATA: "웹 검색은 실행됐지만 AI 응답에 확인할 출처 링크가 없었어. 공개 자료가 없다는 뜻은 아니야.",
   RESEARCH_BRIEF_UNREADABLE: "검색 출처는 받았지만 AI가 반환한 조사 요약을 읽지 못했어.",
   RESEARCH_FACT_SOURCE_MISMATCH: "검색 출처는 받았지만 조사 요약의 사실을 해당 링크와 연결하지 못했어.",
+  RESEARCH_CORE_GAP: "이 글의 핵심인 신청 경로나 대상·기한·지원 조건을 출처로 확인하지 못했어.",
   RESEARCH_EVIDENCE_TOO_THIN: "원문과 연결되는 사실이 충분하지 않아 조사 결과만 보관했어.",
 };
 function evidenceSources(facts) {
@@ -545,7 +589,7 @@ export default {
       if (origin !== ALLOWED_ORIGIN) return fail("Origin not allowed", 403);
       return new Response(null, { status: 204, headers: cors(ALLOWED_ORIGIN) });
     }
-    if (url.pathname === "/health" && request.method === "GET") return reply({ ok: true, editorialVersion: 11, configured: Boolean(env.OPENAI_API_KEY && env.STUDIO_PASSWORD && env.STUDIO_PASSWORD.length >= 16) });
+    if (url.pathname === "/health" && request.method === "GET") return reply({ ok: true, editorialVersion: 12, configured: Boolean(env.OPENAI_API_KEY && env.STUDIO_PASSWORD && env.STUDIO_PASSWORD.length >= 16) });
     // Probe the same CORS preflight and POST transport as /generate, without credentials or OpenAI costs.
     // It does not authenticate or authorize generation; never return private settings here.
     if (url.pathname === "/probe" && request.method === "POST") return reply({ ok: true, transport: "post", version: 1 });
@@ -613,10 +657,12 @@ export default {
       signal: AbortSignal.timeout(timeoutMs),
     });
     stage = "research_openai_request";
-    const researchInput = { searchFocus: editorialResearchFocus(input.title), ...input };
+    const plan = planEditorialResearch(input);
+    const researchInput = plan.profile === "general" ? { searchFocus: plan.searchFocus, ...input } :
+      { searchFocus: plan.searchFocus, firstSearchQuery: plan.firstSearchQuery, researchProfile: plan.profile, ...input };
     const researchResponse = await requestOpenAI({
       model: "gpt-4.1-mini", temperature: 0.2, store: false,
-      instructions: researchInstructions,
+      instructions: instructionsForResearch(plan),
       input: JSON.stringify(researchInput),
       tools: [{ type: "web_search", search_context_size: "medium" }],
       tool_choice: "required", max_tool_calls: 3,
@@ -630,10 +676,18 @@ export default {
     }
     stage = "parse_research_result";
     const evidence = evidenceBrief(await researchResponse.json().catch(() => null));
+    evidence.diagnostics.researchProfile = plan.profile;
+    if (plan.firstSearchQuery) evidence.diagnostics.firstSearchQuery = plan.firstSearchQuery;
     const contentSections = new Set(evidence.facts.filter(f => f.section !== "event").map(f => f.section));
-    if (evidence.facts.length < 3 || contentSections.size < 2) {
+    // Avoid charging for a practical benefits guide missing its actionable core.
+    // No application requirement is imposed on senior-life or community coverage.
+    const coreMissing = (plan.needsApplicationFacts &&
+      (!(contentSections.has("steps") || contentSections.has("support")) ||
+       !["eligibility", "timeline", "limits"].some(section => contentSections.has(section)))) ||
+      (plan.needsDeadlineFact && !contentSections.has("timeline"));
+    if (evidence.facts.length < 3 || contentSections.size < 2 || coreMissing) {
       const code = evidence.code || (evidence.diagnostics.unmatchedFactCount > 0 && evidence.facts.length === 0
-        ? "RESEARCH_FACT_SOURCE_MISMATCH" : "RESEARCH_EVIDENCE_TOO_THIN");
+        ? "RESEARCH_FACT_SOURCE_MISMATCH" : evidence.facts.length >= 3 && coreMissing ? "RESEARCH_CORE_GAP" : "RESEARCH_EVIDENCE_TOO_THIN");
       return researchOnlyDraft(input, evidence, researchReasons[code] + " 추가 유료 작성 요청은 보내지 않았어.", undefined, code);
     }
     stage = "write_openai_request";

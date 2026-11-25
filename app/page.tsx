@@ -64,7 +64,7 @@ type Draft = {
   comparedToPrevious?: 'changed' | 'same' | 'first' | 'brief';
   sourceLinks?: { title: string; url: string }[];
   imageKeywords?: string[];
-  researchAudit?: { code?: string; searchCallCount?: number; linkedFactCount?: number; searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
+  researchAudit?: { firstSearchQuery?: string; code?: string; searchCallCount?: number; linkedFactCount?: number; searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
   qualityAudit?: { warnings: string[] };
   title: string;
   naverTitle?: string;
@@ -371,7 +371,7 @@ export default function Home() {
       const comparedToPrevious = !hasArticle ? 'brief' : !previousText.trim() ? 'first' :
         previousText.trim() === newText.trim() ? 'same' : 'changed';
       const draft: Draft = {
-        ...incoming, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 10,
+        ...incoming, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 12,
         mode: hasArticle ? 'article' : 'research_brief',
         topicSnapshot: { title: selected.title, category: selected.category, region: selected.region },
         comparedToPrevious,
@@ -798,6 +798,7 @@ export default function Home() {
               {!!matchingDraft?.evidenceFacts?.length && <details className="research-lead">
                 <summary><strong>원고의 바탕이 된 조사 내용 {matchingDraft.evidenceFacts.length}건</strong></summary>
                 <p>자료의 해당 부분과 사실이 일치하는지는 발행 전에 직접 확인해 줘.</p>
+                {matchingDraft.researchAudit?.firstSearchQuery && <p className="muted">첫 검색어 계획: {matchingDraft.researchAudit.firstSearchQuery}</p>}
                 <ul>{matchingDraft.evidenceFacts.map((fact,i)=><li key={i}>
                   {fact.statement}{' '}<a href={fact.sourceUrl} target="_blank" rel="noopener noreferrer">{fact.sourceTitle || '출처 확인'} ↗</a>
                 </li>)}</ul>
@@ -813,6 +814,7 @@ export default function Home() {
                 <p>자료 조사 또는 원고 검수 단계에서 작성을 마치지 못했어. 같은 주제를 반복 생성하기 전에 아래 이유를 확인해 줘.</p>
                 {matchingDraft.researchAudit && <div className="research-audit">
                   <p>{typeof matchingDraft.researchAudit.searchCallCount === 'number' && <>웹 검색 기록 {matchingDraft.researchAudit.searchCallCount}건 · </>}검색 응답에서 받은 링크 {matchingDraft.researchAudit.searchedSourceCount}개 · 표시된 참고 링크 {matchingDraft.researchAudit.returnedSourceCount}개</p>
+                  {!matchingDraft.evidenceFacts?.length && matchingDraft.researchAudit.firstSearchQuery && <p>첫 검색어 계획: {matchingDraft.researchAudit.firstSearchQuery}</p>}
                   <strong>생성 보류 사유</strong>
                   <ul>{matchingDraft.researchAudit.reasons.map((x,i)=><li key={i}>{x}</li>)}</ul>
                 </div>}
