@@ -273,6 +273,7 @@ async function generateFromResponsesShape(output, extra={}, opts={}) {
   globalThis.fetch = async (_url,options) => {
     calls++;
     requests.push(JSON.parse(options.body));
+    if (isResearch(options) && opts.researchResponse) return Response.json(opts.researchResponse);
     if (isResearch(options)) return evidenceFixture([official, other], opts.researchFacts ??
       [
         {section:'change',statement:'배우자가 본인 휴대전화에서 금융정보 제출에 동의할 수 있습니다.',sourceUrl:official.url},
@@ -427,5 +428,65 @@ test('missing, multiple, and unsupported channels never trigger a paid API reque
     const result = await generateFromResponsesShape([], {}, { input: {channel}, expectedCalls:0 });
     assert.equal(result.http, 400);
     assert.equal(result.body.code, 'GEN_CHANNEL_REQUIRED');
+  }
+});
+
+const cultureTitle = '2026 문화누리카드 15만원 아직 신청 안 했다면?｜11월 30일 최종 마감·16만원 대상·가족 합산·잔액 소멸·사용처 완벽 가이드';
+const cultureGuide = 'https://www.mnuri.kr/munhwa/cardIssueGuide.do';
+const cultureFacts = [
+  {section:'timeline', statement:'2026년 문화누리카드 발급은 11월 30일까지 가능합니다.', sourceUrl:cultureGuide},
+  {section:'eligibility', statement:'대상은 6세 이상 기초생활수급자 및 차상위계층입니다.', sourceUrl:cultureGuide},
+  {section:'limits', statement:'2026년도 지원금은 12월 31일까지 사용할 수 있습니다.', sourceUrl:cultureGuide},
+];
+const cultureBrief = () => outputText(JSON.stringify({facts:cultureFacts,openQuestions:['올해 공지에서 발급 마감 시각을 확인해 주세요.']}));
+const webCall = (status, action) => ({type:'web_search_call',status,action});
+
+test('a culture-card headline uses a short search focus and accepts a completed official open_page without a sources array', async () => {
+  const result=await generateFromResponsesShape([],{},{
+    input:{title:cultureTitle}, writerError:502,
+    researchResponse:{status:'completed',output:[
+      webCall('completed',{type:'search',query:'2026 문화누리카드 발급 안내'}),
+      webCall('completed',{type:'open_page',url:cultureGuide}),
+      assistantMessage([cultureBrief()]),
+    ]},
+  });
+  assert.equal(JSON.parse(result.requests[0].input).title,cultureTitle);
+  assert.equal(JSON.parse(result.requests[0].input).searchFocus,'2026 문화누리카드 15만원 아직 신청 안 했다면?');
+  assert.match(result.requests[0].instructions,/Never search the whole SEO headline/);
+  assert.equal(result.body.draft.researchAudit.searchedSourceCount,1);
+  assert.equal(result.body.draft.researchAudit.linkedFactCount,3);
+  assert.ok(JSON.parse(result.requests[1].input).evidenceFacts.every(fact=>fact.sourceUrl===cultureGuide));
+});
+
+test('official URL annotations can ground facts even when the tool record is omitted', async () => {
+  const result=await generateFromResponsesShape([],{},{
+    writerError:502,
+    researchResponse:{status:'completed',output:[
+      assistantMessage([{...cultureBrief(),annotations:[{type:'url_citation',url:cultureGuide,title:'2026 문화누리카드 발급 안내'}]}]),
+    ]},
+  });
+  assert.equal(result.body.draft.researchAudit.citedSourceCount,1);
+  assert.equal(result.body.draft.researchAudit.searchCallCount,0);
+  assert.equal(result.body.draft.evidenceFacts.length,3);
+});
+
+test('absent metadata, missing searches, incomplete searches, and unreadable JSON get distinct research statuses', async () => {
+  const cases = [
+    {output:[webCall('completed',{type:'search'}),assistantMessage([cultureBrief()])], code:'RESEARCH_NO_SOURCE_METADATA', count:0},
+    {output:[assistantMessage([cultureBrief()])], code:'RESEARCH_SEARCH_NOT_RETURNED', count:0},
+    {output:[webCall('failed',{type:'open_page',url:cultureGuide}),assistantMessage([cultureBrief()])], code:'RESEARCH_SEARCH_INCOMPLETE', count:0},
+    {output:[webCall('completed',{type:'open_page',url:cultureGuide}),assistantMessage([outputText('invalid')])], code:'RESEARCH_BRIEF_UNREADABLE', count:1},
+    {status:'incomplete',output:[webCall('completed',{type:'open_page',url:cultureGuide}),assistantMessage([cultureBrief()])], code:'RESEARCH_RESPONSE_INCOMPLETE', count:1},
+    {output:[webCall('completed',{type:'open_page',url:other.url}),assistantMessage([cultureBrief()])], code:'RESEARCH_FACT_SOURCE_MISMATCH', count:1},
+  ];
+  for (const {status='completed',output,code,count} of cases) {
+    const result=await generateFromResponsesShape([],{},{
+      researchResponse:{status,output}, expectedCalls:1,
+      input:{verifiedNotes:cultureGuide,sources:[{title:cultureTitle,publisher:'Example',url:cultureGuide}]},
+    });
+    assert.equal(result.body.draft.researchAudit.code,code);
+    assert.equal(result.body.draft.researchAudit.searchedSourceCount,count);
+    assert.equal(result.body.draft.researchAudit.linkedFactCount,0);
+    assert.equal(result.body.draft.naver,'');
   }
 });

@@ -64,7 +64,7 @@ type Draft = {
   comparedToPrevious?: 'changed' | 'same' | 'first' | 'brief';
   sourceLinks?: { title: string; url: string }[];
   imageKeywords?: string[];
-  researchAudit?: { searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
+  researchAudit?: { code?: string; searchCallCount?: number; linkedFactCount?: number; searchedSourceCount: number; returnedSourceCount: number; distinctSourceDomains: number; initiallyGeneratedMode: string; reasons: string[] };
   qualityAudit?: { warnings: string[] };
   title: string;
   naverTitle?: string;
@@ -371,7 +371,7 @@ export default function Home() {
       const comparedToPrevious = !hasArticle ? 'brief' : !previousText.trim() ? 'first' :
         previousText.trim() === newText.trim() ? 'same' : 'changed';
       const draft: Draft = {
-        ...incoming, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 9,
+        ...incoming, id: selected.id, generatedAt: new Date().toISOString(), generationVersion: 10,
         mode: hasArticle ? 'article' : 'research_brief',
         topicSnapshot: { title: selected.title, category: selected.category, region: selected.region },
         comparedToPrevious,
@@ -810,15 +810,15 @@ export default function Home() {
               </div> : null}
               {!legacyStored && matchingDraft?.mode==='research_brief' ? <div className="draft-warning">
                 <strong>원고 보류 · 원인을 확인해 줘</strong>
-                <p>기사 내용이 부족하거나 품질 검사에서 탈락했어. 같은 주제를 반복 생성하면 API 비용만 발생할 수 있으니, 먼저 아래 결과를 확인해 줘.</p>
+                <p>자료 조사 또는 원고 검수 단계에서 작성을 마치지 못했어. 같은 주제를 반복 생성하기 전에 아래 이유를 확인해 줘.</p>
                 {matchingDraft.researchAudit && <div className="research-audit">
-                  <p>검색에서 발견된 링크 {matchingDraft.researchAudit.searchedSourceCount}개 · 반환된 참고 링크 {matchingDraft.researchAudit.returnedSourceCount}개 · 사이트 {matchingDraft.researchAudit.distinctSourceDomains}곳</p>
+                  <p>{typeof matchingDraft.researchAudit.searchCallCount === 'number' && <>웹 검색 기록 {matchingDraft.researchAudit.searchCallCount}건 · </>}검색 응답에서 받은 링크 {matchingDraft.researchAudit.searchedSourceCount}개 · 표시된 참고 링크 {matchingDraft.researchAudit.returnedSourceCount}개</p>
                   <strong>생성 보류 사유</strong>
                   <ul>{matchingDraft.researchAudit.reasons.map((x,i)=><li key={i}>{x}</li>)}</ul>
                 </div>}
                 <strong>추가 검증할 내용</strong>
                 <ul>{(matchingDraft.verificationChecklist||[]).filter(note => !isUnreadableDraftText(note)).map((x,i)=><li key={i}>{x}</li>)}</ul>
-                <p>충분한 공식 자료를 찾지 못했다면 다른 주제를 선택하는 게 좋아.</p>
+                {matchingDraft.researchAudit?.code && <p className="muted">조사 상태: {matchingDraft.researchAudit.code}</p>}
                 {!!saved?.fields?.[channel]?.trim() && <div className="editor-toolbar">
                   <button className="btn btn-light" onClick={() => {
                     setFallbackDraftId(showingPrevious ? '' : fallbackKey);
