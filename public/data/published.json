@@ -1,22 +1,28 @@
 {
-  "generatedAt": "2026-11-25T18:26:10.371485+00:00",
+  "generatedAt": "2026-11-26T00:43:14.573686+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 43,
-      "lastSuccessAt": "2026-11-25T18:26:10.371485+00:00"
+      "count": 44,
+      "lastSuccessAt": "2026-11-26T00:43:14.573686+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-25T18:26:10.371485+00:00"
+      "lastSuccessAt": "2026-11-26T00:43:14.573686+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "한전 무료 신용보호 1년, 나이스지키미 이용권 등록 방법과 1,000만 원 보상 조건",
+      "url": "https://blog.naver.com/todaypickkr/224492576001?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-25T23:49:13+00:00"
+    },
     {
       "channel": "naver",
       "title": "직장인 AI 숨은 기능 10가지｜엑셀·슬라이드·예약 자동화 총정리",
@@ -277,6 +283,12 @@
     },
     {
       "channel": "tistory",
+      "title": "한전 '무료 신용보호' 1년 총정리 | 나이스지키미 지키미케어십 등록·차단 설정·보상 조건",
+      "url": "https://blog83848.tistory.com/57",
+      "publishedAt": "2026-11-26T00:19:21+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "미니 온풍기·세라믹 히터·발난로 추천 | 전기요금 비교 & 블프 특가 (~11/29)",
       "url": "https://blog83848.tistory.com/56",
       "publishedAt": "2026-11-25T01:12:16+00:00"
@@ -328,12 +340,6 @@
       "title": "청년형 ISA vs 청년 주택드림 청약통장 — 2027년에 열리는 계좌, 지금은 무엇부터?",
       "url": "https://blog83848.tistory.com/48",
       "publishedAt": "2026-11-22T23:44:17+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "Seoul Christmas 2026: 5 Markets and Tree Spots, With Booking Dates That Actually Matter",
-      "url": "https://blog83848.tistory.com/47",
-      "publishedAt": "2026-11-22T23:20:16+00:00"
     }
   ]
 }
