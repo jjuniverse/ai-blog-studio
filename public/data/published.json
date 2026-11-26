@@ -1,22 +1,28 @@
 {
-  "generatedAt": "2026-11-26T06:35:23.777650+00:00",
+  "generatedAt": "2026-11-26T12:31:34.719958+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 45,
-      "lastSuccessAt": "2026-11-26T06:35:23.777650+00:00"
+      "count": 46,
+      "lastSuccessAt": "2026-11-26T12:31:34.719958+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-26T06:35:23.777650+00:00"
+      "lastSuccessAt": "2026-11-26T12:31:34.719958+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "기준금리 3.25% 전격 인상 — 내 대출·예금·환율 영향",
+      "url": "https://blog.naver.com/todaypickkr/224493638444?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-26T12:10:42+00:00"
+    },
     {
       "channel": "naver",
       "title": "크리스마스 트리 풀세트 추천 4종 | 벽트리·미니트리·오너먼트 가격 비교 (11/26 기준)",
@@ -289,6 +295,18 @@
     },
     {
       "channel": "tistory",
+      "title": "Bank of Korea Hikes Rates to 3.25%: What It Means for Mortgages, Savings and the Won",
+      "url": "https://blog83848.tistory.com/60",
+      "publishedAt": "2026-11-26T12:22:51+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "기준금리 3.25% 전격 인상 — 내 대출·예금·환율 영향",
+      "url": "https://blog83848.tistory.com/59",
+      "publishedAt": "2026-11-26T12:17:15+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "크리스마스 트리·벽트리·오너먼트 풀세트 추천 4종 — 규격·구성·가격 한 번에 비교",
       "url": "https://blog83848.tistory.com/58",
       "publishedAt": "2026-11-26T01:53:48+00:00"
@@ -334,18 +352,6 @@
       "title": "2026 블프 AI 툴 할인 총정리 — 구글 AI 프로 50%, 어도비 60%, LoroNote 평생권 (11월 27일 마감)",
       "url": "https://blog83848.tistory.com/51",
       "publishedAt": "2026-11-24T00:35:24+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "서울 지하철 25일 총파업 기로 — 출근길 영향·노선별 운행률·우회 노선 총정리",
-      "url": "https://blog83848.tistory.com/50",
-      "publishedAt": "2026-11-24T00:34:29+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "한전 고객 152만 명 개인정보 유출 — 내 정보 조회·명의도용·스미싱 예방법",
-      "url": "https://blog83848.tistory.com/49",
-      "publishedAt": "2026-11-23T00:24:18+00:00"
     }
   ]
 }
