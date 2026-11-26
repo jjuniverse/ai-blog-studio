@@ -1,22 +1,28 @@
 {
-  "generatedAt": "2026-11-26T00:43:14.573686+00:00",
+  "generatedAt": "2026-11-26T06:35:23.777650+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 44,
-      "lastSuccessAt": "2026-11-26T00:43:14.573686+00:00"
+      "count": 45,
+      "lastSuccessAt": "2026-11-26T06:35:23.777650+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-26T00:43:14.573686+00:00"
+      "lastSuccessAt": "2026-11-26T06:35:23.777650+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "크리스마스 트리 풀세트 추천 4종 | 벽트리·미니트리·오너먼트 가격 비교 (11/26 기준)",
+      "url": "https://blog.naver.com/todaypickkr/224492732472?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-26T01:40:19+00:00"
+    },
     {
       "channel": "naver",
       "title": "한전 무료 신용보호 1년, 나이스지키미 이용권 등록 방법과 1,000만 원 보상 조건",
@@ -283,6 +289,12 @@
     },
     {
       "channel": "tistory",
+      "title": "크리스마스 트리·벽트리·오너먼트 풀세트 추천 4종 — 규격·구성·가격 한 번에 비교",
+      "url": "https://blog83848.tistory.com/58",
+      "publishedAt": "2026-11-26T01:53:48+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "한전 '무료 신용보호' 1년 총정리 | 나이스지키미 지키미케어십 등록·차단 설정·보상 조건",
       "url": "https://blog83848.tistory.com/57",
       "publishedAt": "2026-11-26T00:19:21+00:00"
@@ -334,12 +346,6 @@
       "title": "한전 고객 152만 명 개인정보 유출 — 내 정보 조회·명의도용·스미싱 예방법",
       "url": "https://blog83848.tistory.com/49",
       "publishedAt": "2026-11-23T00:24:18+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "청년형 ISA vs 청년 주택드림 청약통장 — 2027년에 열리는 계좌, 지금은 무엇부터?",
-      "url": "https://blog83848.tistory.com/48",
-      "publishedAt": "2026-11-22T23:44:17+00:00"
     }
   ]
 }
