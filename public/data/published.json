@@ -1,22 +1,46 @@
 {
-  "generatedAt": "2026-11-27T06:35:26.313577+00:00",
+  "generatedAt": "2026-11-27T12:31:27.619905+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
-      "count": 46,
-      "lastSuccessAt": "2026-11-27T06:35:26.313577+00:00"
+      "count": 50,
+      "lastSuccessAt": "2026-11-27T12:31:27.619905+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-27T06:35:26.313577+00:00"
+      "lastSuccessAt": "2026-11-27T12:31:27.619905+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "AI 안경·AR 안경·VR 헤드셋 비교 총정리 (2026년 11월 가격)",
+      "url": "https://blog.naver.com/todaypickkr/224494905318?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-27T09:28:47+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "크리스마스 선물 전자기기 추천 5종 | 이어폰·스피커·보조배터리·키보드·무드등 4~6만원 (11/27 기준)",
+      "url": "https://blog.naver.com/todaypickkr/224494839856?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-27T08:32:48+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "2026 서울 크리스마스 예약 총정리 | 더현대 H빌리지·롯데타운 마켓·명동 파사드 일정 (11/27 기준)",
+      "url": "https://blog.naver.com/todaypickkr/224494818827?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-27T08:16:15+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "1주택자 종부세 8만 명 급증 — 고지서 확인·감면·분납 총정리",
+      "url": "https://blog.naver.com/todaypickkr/224494710600?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-27T06:52:31+00:00"
+    },
     {
       "channel": "naver",
       "title": "기준금리 3.25% 전격 인상 — 내 대출·예금·환율 영향",
@@ -295,6 +319,36 @@
     },
     {
       "channel": "tistory",
+      "title": "AI Glasses vs Display Glasses vs VR Headsets: Late 2026 Buying Guide",
+      "url": "https://blog83848.tistory.com/65",
+      "publishedAt": "2026-11-27T09:53:31+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "AI 안경 vs AR 글라스 vs VR 헤드셋 — 2026년 11월 삼축 비교",
+      "url": "https://blog83848.tistory.com/64",
+      "publishedAt": "2026-11-27T09:36:50+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "크리스마스·연말 선물용 가성비 전자기기 TOP 5 — 4만~6만 원대 실속 비교",
+      "url": "https://blog83848.tistory.com/63",
+      "publishedAt": "2026-11-27T08:39:41+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "✨ 2026 서울 백화점 크리스마스 트리·팝업·마켓 예약 꿀팁 총정리 — 12/3·12/7 오픈 시각까지",
+      "url": "https://blog83848.tistory.com/62",
+      "publishedAt": "2026-11-27T08:25:27+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "1주택자 종부세 8만 명 급증 — 고지서 확인·감면·분납 총정리",
+      "url": "https://blog83848.tistory.com/61",
+      "publishedAt": "2026-11-27T06:41:51+00:00"
+    },
+    {
+      "channel": "tistory",
       "title": "Bank of Korea Hikes Rates to 3.25%: What It Means for Mortgages, Savings and the Won",
       "url": "https://blog83848.tistory.com/60",
       "publishedAt": "2026-11-26T12:22:51+00:00"
@@ -322,36 +376,6 @@
       "title": "미니 온풍기·세라믹 히터·발난로 추천 | 전기요금 비교 & 블프 특가 (~11/29)",
       "url": "https://blog83848.tistory.com/56",
       "publishedAt": "2026-11-25T01:12:16+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "10 Hidden AI Features Every Office Worker Should Be Using (November 2026)",
-      "url": "https://blog83848.tistory.com/55",
-      "publishedAt": "2026-11-25T00:31:27+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "직장인 AI 숨은 기능 10가지 총정리 — 제미나이·챗GPT·클로드 엑셀·슬라이드·예약 자동화",
-      "url": "https://blog83848.tistory.com/54",
-      "publishedAt": "2026-11-25T00:17:41+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "쿠블프 로켓직구 블랙프라이데이 총정리 | 12월 1일까지, 지금 담아야 할 직구템 4종",
-      "url": "https://blog83848.tistory.com/53",
-      "publishedAt": "2026-11-24T05:52:37+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "Black Friday 2026 AI Deals: Google AI Pro at 50% Off, Adobe at 57–60%, and the Tools That Aren't Discounted",
-      "url": "https://blog83848.tistory.com/52",
-      "publishedAt": "2026-11-24T00:53:19+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "2026 블프 AI 툴 할인 총정리 — 구글 AI 프로 50%, 어도비 60%, LoroNote 평생권 (11월 27일 마감)",
-      "url": "https://blog83848.tistory.com/51",
-      "publishedAt": "2026-11-24T00:35:24+00:00"
     }
   ]
 }
