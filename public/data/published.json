@@ -1,22 +1,40 @@
 {
-  "generatedAt": "2026-11-28T00:42:26.090329+00:00",
+  "generatedAt": "2026-11-28T06:32:19.065937+00:00",
   "sources": [
     {
       "channel": "naver",
       "feedUrl": "https://rss.blog.naver.com/todaypickkr.xml",
       "status": "ok",
       "count": 50,
-      "lastSuccessAt": "2026-11-28T00:42:26.090329+00:00"
+      "lastSuccessAt": "2026-11-28T06:32:19.065937+00:00"
     },
     {
       "channel": "tistory",
       "feedUrl": "https://blog83848.tistory.com/rss",
       "status": "ok",
       "count": 10,
-      "lastSuccessAt": "2026-11-28T00:42:26.090329+00:00"
+      "lastSuccessAt": "2026-11-28T06:32:19.065937+00:00"
     }
   ],
   "posts": [
+    {
+      "channel": "naver",
+      "title": "태연 정규 4집 컴백·베스티 역주행·아일릿 모카 복귀 총정리 (11월 K팝)",
+      "url": "https://blog.naver.com/todaypickkr/224495770815?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-28T03:38:41+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "난방비 줄이는 방법 — 보일러 외출모드의 진실 & 도시가스 캐시백",
+      "url": "https://blog.naver.com/todaypickkr/224495754250?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-28T03:23:29+00:00"
+    },
+    {
+      "channel": "naver",
+      "title": "6080 시니어 전용 어플 총정리 — 부모님 폰에 깔아드릴 앱 15개와 큰 글씨 설정",
+      "url": "https://blog.naver.com/todaypickkr/224495740793?fromRss=true&trackingCode=rss",
+      "publishedAt": "2026-11-28T03:12:12+00:00"
+    },
     {
       "channel": "naver",
       "title": "AI 안경·AR 안경·VR 헤드셋 비교 총정리 (2026년 11월 가격)",
@@ -300,22 +318,28 @@
       "publishedAt": "2026-11-19T04:02:06+00:00"
     },
     {
-      "channel": "naver",
-      "title": "앤트로픽 '클로드 페이블 5.2' 프롬프트 가이드, 핵심만 정리",
-      "url": "https://blog.naver.com/todaypickkr/224483269032?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-19T03:34:53+00:00"
+      "channel": "tistory",
+      "title": "Taeyeon's 'Unspecial,' BESTie's 13-Year-Old Hit, and ILLIT's Moka: K-Pop's Last Week of November",
+      "url": "https://blog83848.tistory.com/69",
+      "publishedAt": "2026-11-28T03:53:03+00:00"
     },
     {
-      "channel": "naver",
-      "title": "‘100일의 거짓말’ 김유정-박진영, 출연자 화제성 1·2위…TV·OTT 화제성도 1위",
-      "url": "https://blog.naver.com/todaypickkr/224482296913?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-18T08:59:05+00:00"
+      "channel": "tistory",
+      "title": "태연 'Unspecial' 컴백·베스티 13년 역주행·아일릿 모카 복귀 — 11월 마지막 주 K-팝 총정리",
+      "url": "https://blog83848.tistory.com/68",
+      "publishedAt": "2026-11-28T03:44:57+00:00"
     },
     {
-      "channel": "naver",
-      "title": "맥북 화면 녹화하는 방법 총정리｜단축키부터 녹화 중지, 저장 위치까지",
-      "url": "https://blog.naver.com/todaypickkr/224479286806?fromRss=true&trackingCode=rss",
-      "publishedAt": "2026-11-16T07:28:30+00:00"
+      "channel": "tistory",
+      "title": "난방비 줄이는 방법 8가지 — 보일러 외출모드의 진실 & 도시가스 캐시백",
+      "url": "https://blog83848.tistory.com/67",
+      "publishedAt": "2026-11-28T03:29:00+00:00"
+    },
+    {
+      "channel": "tistory",
+      "title": "6080 시니어 전용 어플 총정리 — 부모님 폰에 깔아드릴 앱 15개와 큰 글씨 설정",
+      "url": "https://blog83848.tistory.com/66",
+      "publishedAt": "2026-11-28T03:18:13+00:00"
     },
     {
       "channel": "tistory",
@@ -352,30 +376,6 @@
       "title": "Bank of Korea Hikes Rates to 3.25%: What It Means for Mortgages, Savings and the Won",
       "url": "https://blog83848.tistory.com/60",
       "publishedAt": "2026-11-26T12:22:51+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "기준금리 3.25% 전격 인상 — 내 대출·예금·환율 영향",
-      "url": "https://blog83848.tistory.com/59",
-      "publishedAt": "2026-11-26T12:17:15+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "크리스마스 트리·벽트리·오너먼트 풀세트 추천 4종 — 규격·구성·가격 한 번에 비교",
-      "url": "https://blog83848.tistory.com/58",
-      "publishedAt": "2026-11-26T01:53:48+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "한전 '무료 신용보호' 1년 총정리 | 나이스지키미 지키미케어십 등록·차단 설정·보상 조건",
-      "url": "https://blog83848.tistory.com/57",
-      "publishedAt": "2026-11-26T00:19:21+00:00"
-    },
-    {
-      "channel": "tistory",
-      "title": "미니 온풍기·세라믹 히터·발난로 추천 | 전기요금 비교 & 블프 특가 (~11/29)",
-      "url": "https://blog83848.tistory.com/56",
-      "publishedAt": "2026-11-25T01:12:16+00:00"
     }
   ]
 }
